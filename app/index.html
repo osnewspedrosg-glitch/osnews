@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MAY · OSNews — Descarga la app gratis</title>
+<meta name="description" content="Instala gratis MAY, la presentadora IA de OSNews. Habla con ella por texto y voz. MAY · creada con Copilot.">
+<meta name="theme-color" content="#04070f">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../assets/may-icon-192.png"><link rel="apple-touch-icon" href="../assets/may-icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="MAY">
+<meta property="og:title" content="MAY · OSNews — app gratis"><meta property="og:image" content="https://osnewspedrosg-glitch.github.io/osnews/assets/may-avatar.jpg">
+<style>
+:root{--bg:#04070f;--c1:#00e5ff;--c2:#ff3d7f;--tx:#e8f4ff;--mu:#8aa3bf}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(1200px 600px at 50% -10%,#0b2a4a 0,var(--bg) 60%) fixed;color:var(--tx);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:560px;margin:auto;padding:24px 18px 40px}
+.brand{font-weight:800;letter-spacing:.18em;font-size:13px;color:var(--c1);text-transform:uppercase}
+.hero{text-align:center;padding:10px 0 6px}
+.av{width:150px;height:150px;border-radius:50%;object-fit:cover;border:3px solid var(--c1);box-shadow:0 0 0 6px #00e5ff22,0 0 40px #ff3d7f66;margin:14px auto 6px;display:block}
+h1{font-size:34px;margin:6px 0 2px;background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mu);margin:0 0 18px}
+.btn{display:block;width:100%;padding:16px;border-radius:16px;border:0;font-size:18px;font-weight:700;text-decoration:none;text-align:center;cursor:pointer;margin:10px 0;color:#001018}
+.b1{background:linear-gradient(90deg,var(--c1),#7cf3ff);box-shadow:0 6px 24px #00e5ff55}
+.b2{background:linear-gradient(90deg,#ff3d7f,#ff8fb1);color:#fff;box-shadow:0 6px 24px #ff3d7f44}
+.b3{background:transparent;color:var(--c1);border:1px solid #00e5ff66}
+.card{background:#0a1424cc;border:1px solid #00e5ff2e;border-radius:18px;padding:16px 18px;margin:16px 0}
+.card h2{font-size:18px;margin:0 0 8px;color:var(--c1)}
+ul,ol{margin:0;padding-left:20px}li{margin:5px 0}
+.note{font-size:13px;color:var(--mu)}
+#fb{display:none}
+footer{text-align:center;color:var(--mu);font-size:13px;margin-top:22px}
+</style></head><body><main>
+<div class="brand">OSNews · App</div>
+<section class="hero">
+<img class="av" src="../assets/may-avatar.jpg" alt="MAY, la presentadora IA de OSNews">
+<h1>Habla con MAY</h1>
+<p class="sub">La presentadora IA de OSNews, cariñosa y siempre a tu lado. Gratis, sin cuentas y sin anuncios.</p>
+<button class="btn b1" id="inst">📲 Instalar MAY</button>
+<div class="card note" id="fb"><b>¿No aparece el instalador?</b> En Chrome (Android/PC) abre el menú <b>⋮</b> › <b>Instalar aplicación</b> o <b>Añadir a pantalla de inicio</b>. En iPhone, mira las instrucciones de abajo.</div>
+<a class="btn b2" id="apk" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/may-app-v1.0/MAY-OSNews-v1.0.apk" download>🤖 Descargar APK para Android</a>
+<p class="note">APK v1.0 · ~330 KB · Android 7.0 o superior. Android te pedirá permitir «instalar apps de origen desconocido».</p>
+<a class="btn b3" href="../?may=1#hablaMay">💬 Abrir MAY en el navegador</a>
+</section>
+<section class="card"><h2>🍎 En iPhone / iPad</h2><ol><li>Abre esta página en <b>Safari</b>.</li><li>Pulsa <b>Compartir</b> (□↑).</li><li>Elige <b>Añadir a pantalla de inicio</b>.</li></ol><p class="note">En iPhone no existe APK: MAY se instala como app web.</p></section>
+<section class="card"><h2>✨ Qué hace MAY</h2><ul>
+<li>💬 Habla contigo por <b>texto y voz</b>.</li>
+<li>🧠 Recuerda tu nombre <b>solo en tu dispositivo</b>.</li>
+<li>💗 Emociones y tono de voz (<b>simulados</b>: MAY es una IA).</li>
+<li>🔎 Modos <b>analítica</b> y <b>comprensiva</b>.</li>
+<li>🧮 Calculadora, temporizadores, conversiones y titulares.</li>
+<li>🧹 Botón <b>«Olvidar mis datos»</b> para borrarlo todo.</li></ul></section>
+<section class="card"><h2>🔒 Privacidad</h2><p>Tus datos con MAY (nombre, conversación, preferencias) se guardan <b>solo en tu dispositivo</b>. Puedes borrarlos cuando quieras con «Olvidar mis datos».</p></section>
+<footer>MAY · creada con Copilot · OSNews</footer>
+</main>
+<script>
+if('serviceWorker' in navigator)navigator.serviceWorker.register('../sw.js',{scope:'../'}).catch(()=>{});
+let dp=null;const b=document.getElementById('inst'),fb=document.getElementById('fb');
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e});
+addEventListener('appinstalled',()=>{b.textContent='✅ MAY instalada';dp=null});
+b.onclick=async()=>{if(dp){dp.prompt();await dp.userChoice;dp=null}else{fb.style.display='block';fb.scrollIntoView({behavior:'smooth',block:'center'})}};
+if(matchMedia('(display-mode: standalone)').matches||/MAYAndroidApp/.test(navigator.userAgent))location.replace('../?app=1&may=1#hablaMay');
+if(/iPhone|iPad|iPod/.test(navigator.userAgent))document.getElementById('apk').style.display='none';
+</script></body></html>

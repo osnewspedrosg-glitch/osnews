@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<script>/* MAY_ANDROID_BRIDGE_V1: en la app Android (WebView) usa la voz y el micrófono nativos del teléfono */(function(){var N=window.MAYNative;if(!N)return;
+window.SpeechSynthesisUtterance=function(t){this.text=t||'';this.lang='es-ES';this.pitch=1;this.rate=1;this.volume=1;this.voice=null};
+window.speechSynthesis={onvoiceschanged:null,getVoices:function(){return[]},speak:function(u){window.__mayU=u;try{u.onstart&&u.onstart()}catch(e){}N.speak(String(u.text),+u.pitch||1,+u.rate||1)},cancel:function(){N.stop()}};
+window.__mayTtsDone=function(){var u=window.__mayU;window.__mayU=null;try{u&&u.onend&&u.onend()}catch(e){}};
+var SR=function(){window.__mayRec=this;this.lang='es-ES';this.start=function(){N.listen(this.lang||'es-ES')};this.stop=function(){N.stopListen()}};
+try{window.SpeechRecognition=SR;window.webkitSpeechRecognition=SR}catch(e){}
+window.__mayRecResult=function(t){var r=window.__mayRec;try{r&&r.onresult&&r.onresult({results:[[{transcript:t}]]})}catch(e){}};
+window.__mayRecEnd=function(){var r=window.__mayRec;try{r&&r.onend&&r.onend()}catch(e){}};})();</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OSNews · Mesa de debate con MAY</title>
@@ -1061,5 +1070,7 @@ setInterval(poll, POLL_MS);
 let dp=null;const b=document.getElementById('mcInstall');window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e;b.hidden=false});
 b.onclick=async()=>{if(!dp)return;dp.prompt();await dp.userChoice.catch(()=>{});dp=null;b.hidden=true};window.addEventListener('appinstalled',()=>{b.hidden=true});
 const ios=/iphone|ipad|ipod/i.test(navigator.userAgent)&&!navigator.standalone;if(ios)document.getElementById('mcIosHint').hidden=false})();</script>
+<script>/* MAY_APP_FOCUS_V1 */(function(){const q=new URLSearchParams(location.search);if(q.has('may')||q.has('app')||/^#(may|hablaMay)$/.test(location.hash)||/MAYAndroidApp/.test(navigator.userAgent)){window.addEventListener('load',()=>{const p=document.getElementById('hablaMay'),i=document.getElementById('mcInput');if(p)p.scrollIntoView({block:'start'});if(i)setTimeout(()=>i.focus({preventScroll:true}),400)})}
+if(/MAYAndroidApp/.test(navigator.userAgent)){const b=document.getElementById('mcInstall');if(b)b.remove()}})();</script>
 </body>
 </html>
