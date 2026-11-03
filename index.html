@@ -157,7 +157,7 @@ footer{max-width:1700px;margin:0 auto;padding:0 20px 30px}
 @keyframes mcPulse{to{box-shadow:0 0 30px rgba(245,196,81,.9)}}
 .mc-info h2{margin:0 0 4px}.mc-info p{margin:2px 0;font-size:13px;color:var(--mut)}
 .mc-rule{font-style:italic;color:var(--gold)!important}
-.mc-typing{opacity:.65;font-style:italic}.mc-forget{font-size:11px;margin-left:6px;padding:2px 8px;border-radius:10px;border:1px solid var(--mut);background:transparent;color:inherit;cursor:pointer}.mc-credit{font-size:11px;color:var(--mut);margin-top:6px}.mc-status{font-size:11px;color:var(--mut)}.mc-status.on{color:var(--fav)}.mc-status.off{color:var(--gold)}
+.mc-typing{opacity:.65;font-style:italic}.mc-forget{font-size:11px;margin-left:6px;padding:2px 8px;border-radius:10px;border:1px solid var(--mut);background:transparent;color:inherit;cursor:pointer}.mc-credit{font-size:11px;color:var(--mut);margin-top:6px}.mc-mood{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mut);margin-top:4px;flex-wrap:wrap}.mc-mood svg{flex:none}.mc-wheel{max-width:420px;border-radius:14px;border:1px solid #22e6ff;background:#0b1222;color:#e8eefc;font-size:14px}.mc-wheel::backdrop{background:rgba(0,0,0,.6)}.mc-status{font-size:11px;color:var(--mut)}.mc-status.on{color:var(--fav)}.mc-status.off{color:var(--gold)}
 .mc-grid{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin-top:12px}
 .mc-log{height:260px;overflow-y:auto;padding:10px;border-radius:12px;background:rgba(0,0,0,.28);border:1px solid var(--bd);display:flex;flex-direction:column;gap:8px}
 .mc-msg{max-width:85%;padding:8px 12px;border-radius:14px;font-size:14px;line-height:1.4;white-space:pre-wrap;word-wrap:break-word}
@@ -291,6 +291,8 @@ footer{max-width:1700px;margin:0 auto;padding:0 20px 30px}
    <p><b>MAY</b> · presentadora IA de OSNews · pelirroja, 22 años, voz dulce y cálida. Modera con neutralidad y solo cita declaraciones reales y enlazadas.</p>
    <p class="mc-rule">«Todo vale sin violencia ni ataques personales; mi libertad termina donde empieza la tuya.»</p>
    <button type="button" id="mcInstall" class="mc-forget" hidden>📲 Instalar app de MAY</button><span id="mcIosHint" class="mc-credit" hidden>📲 En iPhone: Compartir › Añadir a pantalla de inicio</span> <span class="mc-status" id="mcStatus">● conectando…</span>
+   <div class="mc-mood" id="mcMood" title="Emoción simulada: MAY es una IA"><svg id="mcHex" viewBox="-50 -50 100 100" width="92" height="92" aria-hidden="true"></svg><span id="mcMoodTxt">Ánimo de MAY: +0,3 · alegría</span> <button type="button" id="mcWheelBtn" class="mc-forget">🎡 Rueda de emociones</button></div>
+   <dialog id="mcWheel" class="mc-wheel"><h3>🎡 Rueda de emociones</h3><p>Seis emociones básicas y su valor: <b>+1</b> potencia · <b>0</b> neutra · <b>−1</b> debilidad.</p><ul><li>😊 Alegría · +1</li><li>😮 Sorpresa · 0</li><li>😨 Miedo · −1</li><li>😠 Ira · −1</li><li>🤢 Asco · −1</li><li>😢 Tristeza · −1</li></ul><p><b>Trabajar la inteligencia emocional</b> (bienestar emocional, psicológico y social):</p><ol><li><b>Identifica</b> la emoción: haz una pausa y reconoce qué sientes.</li><li><b>Entiende</b> su causa: ¿qué la ha desencadenado?</li><li><b>Busca apoyo</b>: no tengas miedo de pedir ayuda profesional.</li></ol><p class="mc-credit">Basado en la rueda de emociones y apuntes de Pedro · OSNews. MAY es una IA: su emoción es simulada y no sustituye a un profesional. En crisis: 112 / 024.</p><button type="button" class="mc-forget" onclick="this.closest('dialog').close()">Cerrar</button></dialog>
   </div>
  </div>
  <div class="mc-grid">
@@ -765,7 +767,7 @@ setInterval(poll, POLL_MS);
  let voice=null;
  function pickVoice(){const v=speechSynthesis.getVoices();const es=v.filter(x=>/^es(-|_)ES/i.test(x.lang));const fem=/(female|mujer|helena|laura|elvira|lucia|lucía|monica|mónica|paulina|google español|sabina|marisol|conchita|ximena|dalia)/i;voice=es.find(x=>fem.test(x.name))||es[0]||v.find(x=>/^es/i.test(x.lang))||null}
  if('speechSynthesis' in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}
- function speak(t){if(!('speechSynthesis' in window)||!$('mcVoiceOn').checked)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t.replace(/https?:\/\/\S+/g,'').replace(/[«»*_#]/g,''));u.lang='es-ES';if(voice)u.voice=voice;u.pitch=1.25;u.rate=0.97;const p=$('hablaMay');u.onstart=()=>p.classList.add('speaking');u.onend=u.onerror=()=>p.classList.remove('speaking');speechSynthesis.speak(u)}
+ function speak(t){if(!('speechSynthesis' in window)||!$('mcVoiceOn').checked)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t.replace(/https?:\/\/\S+/g,'').replace(/[«»*_#]/g,''));u.lang='es-ES';if(voice)u.voice=voice;const V=(typeof MAY!=='undefined'&&MAY.moodInfo)?MAY.moodInfo().voice:{pitch:1.25,rate:.97,volume:1,pause:0};const P=window.__mayVoice||(window.__mayVoice={pitch:1.25,rate:.97,volume:1});['pitch','rate','volume'].forEach(k=>P[k]=+(P[k]+(V[k]-P[k])*.65).toFixed(3));P.tone=V.tone;u.pitch=P.pitch;u.rate=P.rate;u.volume=P.volume;const p=$('hablaMay');u.onstart=()=>p.classList.add('speaking');u.onend=u.onerror=()=>p.classList.remove('speaking');V.pause?setTimeout(()=>speechSynthesis.speak(u),V.pause):speechSynthesis.speak(u)}
  $('mcStop').onclick=()=>{if('speechSynthesis' in window)speechSynthesis.cancel();$('hablaMay').classList.remove('speaking')};
  // --- Motor de personalidad MAY (offline, reglas) · MAY_PERSONALIDAD_V2 ---
  const MAY=(function(){
@@ -843,7 +845,7 @@ setInterval(poll, POLL_MS);
   const MK='osnews_may_memoria';let S={name:null,last:null,lastReply:{},facts:{likes:[]},log:[],visits:0};
   try{const o=JSON.parse(localStorage.getItem(MK));if(o)S=Object.assign(S,o,{lastReply:{}})}catch(e){}
   const save=()=>{try{S.log=S.log.slice(-100);localStorage.setItem(MK,JSON.stringify(S))}catch(e){}};
-  const forget=()=>{try{localStorage.removeItem(MK)}catch(e){}S.name=null;S.last=null;S.facts={likes:[]};S.log=[];S.visits=0};
+  const forget=()=>{try{localStorage.removeItem(MK)}catch(e){}S.name=null;S.last=null;S.facts={likes:[]};S.log=[];S.visits=0;S.may={m:BASE,t:Date.now()};S.emo=[];S.pend=null;S.mode='charla';S.tone='calmada'};
   const TOPIC={sad:'cómo te sentías',love:'tu corazón',ubi:'la IA y el trabajo',singularity:'la singularidad',politics:'la política',debate:'los debates',music:'la música',future:'el futuro de la IA'};
   function welcome(){S.visits=(S.visits||0)+1;save();const back=S.visits>1&&(S.name||S.log.length);if(!back)return null;
    let r='¡Hola otra vez'+(S.name?', '+S.name:'')+'! 💛';const f=S.facts||{};
@@ -892,13 +894,105 @@ setInterval(poll, POLL_MS);
    {id:'osnews',k:['osnews','os news','que es esto','que haceis','que es osnews','proyecto','what is osnews'],es:['OSNews es el proyecto de Pedro: noticias y mesas de debate donde se escuchan todas las posturas, con citas reales y enlazadas ✨.','En OSNews hacemos boletines horarios, debates moderados por mí y encuestas como la de la singularidad 💛.','OSNews: información con fuentes, debate con respeto y comunidad 🌹.'],en:['OSNews is Pedro’s project: news and debate tables where every view is heard, with real, linked quotes ✨.']},
    {id:'ai',k:['inteligencia artificial','la ia','las ias','sobre la ia','artificial intelligence'],es:['La IA es una herramienta poderosa: puede ayudar mucho si se usa con ética y transparencia 💛.','Sobre la IA hay muchas posturas y en la mesa las escuchamos todas ✨. ¿Qué te preocupa o te ilusiona?'],en:['AI is a powerful tool that can help a lot when used ethically 💛.']},
    {id:'cant',k:['reservar','reservame','reserva','comprar','comprame','pagar','paga','llamar','llama a','enviar','envia','manda','mandar','busca en internet','buscar en google','pedir comida','book','buy','send','call'],es:['Eso no lo puedo hacer desde aquí, y prefiero decírtelo con sinceridad 💛: en esta web solo charlo, calculo, convierto unidades, traduzco frases sencillas y pongo temporizadores.','Me encantaría ayudarte, pero en modo web no tengo acceso a internet ni a cuentas, así que no puedo reservar, comprar ni enviar nada 🌹.'],en:['I cannot do that from here, honestly 💛 — no internet or accounts in this web mode.']},
+   {id:'money_save',k:['ahorrar','ahorro','ahorrar dinero','como ahorro','llegar a fin de mes'],es:['Modo analítica 📊, vamos paso a paso: 1) apunta un mes tus ingresos y gastos; 2) separa fijos (alquiler, facturas) de variables; 3) al cobrar, aparta primero un % fijo, por ejemplo el 10 %. ¿Lo calculamos? Escríbeme «10% de 1500».','Paso a paso 📊: primero mide (gastos de un mes), luego recorta lo variable que menos te aporta y automatiza un ahorro pequeño cada mes. Si me das cifras, hago las cuentas contigo 💛.']},
+   {id:'budget',k:['presupuesto','gastos','factura','facturas','fin de mes','gasto'],es:['Una guía sencilla es la regla 50/30/20 📊: 50 % necesidades, 30 % caprichos y 20 % ahorro o deudas. Con 1.500 € serían 750 / 450 / 300 €. Es orientativa, no un consejo financiero profesional 💛.','Para ordenar facturas: 1) lista cada una con su importe y fecha; 2) suma el total mensual; 3) compáralo con tus ingresos. Si quieres, dime los importes y los sumo 🧮.']},
+   {id:'inflation',k:['inflacion','ipc','suben los precios','precios suben','todo esta caro'],es:['La inflación es la subida general de precios 📈: con un 3 % anual, lo que hoy cuesta 100 € costaría unos 103 € dentro de un año. Por eso el mismo sueldo compra un poco menos. ¿Quieres que calcule algún ejemplo?']},
+   {id:'salary',k:['sueldo','salario','nomina','bruto','neto','subida de sueldo'],es:['Datos claros 📊: el sueldo bruto es lo pactado; el neto es lo que te llega tras retenciones y cotizaciones. Para una cifra exacta, mejor tu nómina o un simulador oficial; yo te ayudo con porcentajes, p. ej. «15% de 2000».']},
+   {id:'economy',k:['economia','dinero','finanzas','inversion','invertir','deuda','hipoteca'],es:['Me pongo en modo analítica 📊. Dime el dato concreto (cifra, porcentaje o plazo) y lo vemos paso a paso; no doy consejo financiero profesional, pero las cuentas te las hago con gusto 💛.']},
+   {id:'heartbreak',k:['desamor','ruptura','me ha dejado','corazon roto','mi ex','lo hemos dejado','nos hemos separado'],es:['Lo siento mucho 💛. Una ruptura duele de verdad y es normal sentir un remolino de cosas. ¿Qué es lo que más te pesa ahora mismo?','Te escucho con calma 🌹. Lo que sientes tiene sentido. ¿Quieres contarme cómo fue?']},
+   {id:'couple',k:['pareja','mi novio','mi novia','discutimos','discuto','celos','mi marido','mi mujer'],es:['Las relaciones a veces cuestan 💛. Sin juzgar a nadie: ¿qué ha pasado y cómo te has sentido tú?','Te escucho 🌹. A veces ayuda hablarlo en un momento tranquilo y empezar por «yo me siento…». ¿Qué te gustaría que cambiara?']},
+   {id:'family',k:['familia','mi madre','mi padre','mis padres','mis hijos','mi hijo','mi hija','mi hermano','mi hermana'],es:['La familia nos toca muy dentro 💛. ¿Qué ha pasado? Te escucho sin prisa.','Cuéntame con calma 🌹: ¿cómo te sientes tú con esa situación familiar?']},
    {id:'fallback',k:[],es:['Mmm, no estoy segura de haberte entendido{n} 💛. ¿Me lo cuentas de otra forma?','¡Qué interesante! Cuéntame más: ¿por qué te interesa? ✨','No tengo respuesta para eso en mi modo web, pero me encanta escucharte 🌹. ¿Hablamos de debates, boletines o de cómo estás?','¿Y eso cómo te hace sentir? Te escucho 💛.','Perdona, a veces me cuesta. ¿Quieres que te cuente qué hacemos en OSNews o prefieres charlar de ti?'],en:['Hmm, I am not sure I understood 💛. Could you say it another way?','Interesting! Tell me more ✨.']}
   ];
   const EN=/\b(hello|hi|what|who|are|you|your|how|the|is|thanks|please|tell|me a|joke|good|i am|i'm|do|can)\b/;
   const ES=/\b(que|como|eres|estas|hola|gracias|el|la|los|una|por|para|soy|tu|y|de|es)\b/;
   function pick(intent,lang){const arr=(lang==='en'&&intent.en)||intent.es;const key=intent.id+lang;let i,tries=0;do{i=Math.floor(Math.random()*arr.length)}while(arr.length>1&&i===S.lastReply[key]&&++tries<10);S.lastReply[key]=i;
    const T=tod();return arr[i].replace(/\{n\}/g,N()).replace(/\{tod\}/g,T).replace(/\{Tod\}/g,T[0].toUpperCase()+T.slice(1))}
-  function reply(q){const t=norm(q),w=t.split(' ');const en=EN.test(' '+t+' ')&&!ES.test(' '+t+' ');const lang=en?'en':'es';
+
+  /* ===== MAY_EMOCIONES_V1: inteligencia emocional (rueda de emociones de Pedro: -1 debilidad · 0 · +1 potencia) ===== */
+  const CORE={alegria:['alegría',1],sorpresa:['sorpresa',0],miedo:['miedo',-1],ira:['ira',-1],asco:['asco',-1],tristeza:['tristeza',-1]};
+  // [emoción, valencia, intensidad, núcleo, raíces, libre(sin «estoy/me siento»)]
+  const LEX=[
+   ['alegría',1,.7,'alegria',['alegr','content','feliz','felic','genial','de buen humor','emocionad','eufori'],0],
+   ['tristeza',-1,.7,'tristeza',['triste','tristez','deprimid','fatal','hundid','de bajon','fatal','llorar','lloro','desanimad','mal','destrozad','roto','rota','vacio','vacia'],0],
+   ['miedo',-1,.7,'miedo',['miedo','asustad','panico','terror','temo','acojonad'],1],
+   ['ira',-1,.7,'ira',['enfadad','cabread','furios','rabia','hasta las narices','hasta el gorro','harto','harta','mosquead','indignad'],1],
+   ['sorpresa',0,.5,'sorpresa',['sorprendid','sorpresa','alucinad','flipad','no me lo creo','asombrad'],0],
+   ['asco',-1,.6,'asco',['asco','repugn','asquead'],0],
+   ['amor',1,.7,'alegria',['enamorad','amor','carino'],0],
+   ['calma',1,.4,'alegria',['tranquil','relajad','calma','en paz','sereno','serena'],0],
+   ['soledad',-1,.7,'tristeza',['solo','sola','soledad','aislad','abandonad'],0],
+   ['ansiedad',-1,.8,'miedo',['ansiedad','ansios','agobiad','agobio','estresad','estres','nervios','inquiet','preocupad'],1],
+   ['frustración',-1,.7,'ira',['frustrad','frustracion','impotencia','quemad'],1],
+   ['orgullo',1,.6,'alegria',['orgullos'],0],
+   ['esperanza',1,.5,'alegria',['esperanza','ilusionad','ilusion','optimista','esperanzad'],0],
+   ['culpa',-1,.6,'tristeza',['culpable','culpa'],0],
+   ['vergüenza',-1,.6,'tristeza',['verguenza','avergonzad'],0],
+   ['gratitud',1,.6,'alegria',['agradecid','gratitud'],0],
+   ['cansancio',-1,.5,'tristeza',['cansad','agotad','sin energia'],0]];
+  const STRONG=/\b(deprimid\w*|panico|terror|destrozad\w|hundid\w|no puedo mas|vacio|vacia)\b/;
+  const CTX=/\b(estoy|me siento|siento|ando|sigo|tengo|me da|me pone|me noto|estar|sentirme|me encuentro|soy muy|que)\b/;
+  function detect(q){const t=norm(q),w=t.split(' ');const ctx=CTX.test(t);let best=null;
+   for(const [e,v,i,c,st,free] of LEX){if(!ctx&&!free)continue;for(const s of st){let idx=-1;
+     if(s.includes(' ')){const p=(' '+t+' ').indexOf(' '+s+' ');if(p>=0)idx=t.slice(0,p).split(' ').filter(Boolean).length}
+     else idx=w.findIndex(x=>(s.length>=4&&x.startsWith(s))||x===s||(s.length>=5&&x.length>=5&&lev(x,s)<=1));
+     if(idx<0)continue;if(s==='mal'&&/\b(mal (tiempo|dia)|no esta mal)\b/.test(t))continue;
+     const pre=w.slice(Math.max(0,idx-4),idx);const neg=pre.some(x=>x==='no'||x==='nunca'||x==='ni'||x==='nada');
+     let it=i+(/\b(muy|super|mucho|tan|demasiado|fatal|muchisimo)\b/.test(t)?.2:0)-(/\b(un poco|algo)\b/.test(t)?.2:0);if(STRONG.test(t))it=Math.max(it,.9);
+     const cand={e,v,i:Math.min(1,Math.max(.1,+it.toFixed(2))),c,neg};if(!best||cand.i>best.i)best=cand;break}}
+   return best}
+  const BASE=.3;
+  function mood(){const M=S.may||(S.may={m:BASE,t:Date.now()});const dt=(Date.now()-(M.t||Date.now()))/60000;M.m=BASE+(M.m-BASE)*Math.pow(.5,dt/15);M.t=Date.now();return M}
+  function nudge(d){const M=mood();M.m=Math.max(-1,Math.min(1,M.m+d));}
+  function mlabel(m){return m>=.15?'alegria':m<=-.15?'tristeza':'calma'}
+  const fmt1=x=>(x>=0?'+':'−')+Math.abs(x).toFixed(1).replace('.',',');
+  const TIPS={miedo:'Prueba a respirar despacio: inspira 4 segundos, mantén 4 y suelta en 6, unas cuantas veces 🌬️.',ira:'A veces ayuda hacer una pausa: sal un momento, bebe agua y cuenta hasta diez antes de responder 🌿.',tristeza:'Si puedes, cuéntaselo a alguien de confianza; compartirlo aligera 💛.',asco:'Date permiso para alejarte un momento de lo que te lo provoca y respira 🌿.',sorpresa:'Date un minuto para asimilarlo antes de decidir nada ✨.',alegria:'Guárdalo: apúntalo o compártelo con alguien, que lo bueno se multiplica ✨.'};
+  const EXTRA={'ansiedad':'Prueba la respiración 4-4-6: inspira 4 segundos, aguanta 4 y suelta en 6 🌬️.','soledad':'Quizá hoy puedas escribir a alguien cercano, aunque sea un mensaje corto 💛.','culpa':'Intenta hablarte como le hablarías a una buena amiga 🌹.','vergüenza':'Intenta hablarte como le hablarías a una buena amiga 🌹.','cansancio':'Tu cuerpo también habla: un descanso de verdad puede ayudar 🌙.','frustración':'Haz una pausa corta y luego divide el problema en un paso pequeño 🌿.'};
+  const PRO=' Si esto pesa mucho o dura días, hablar con un profesional de la salud mental puede ayudarte; pedir ayuda es de valientes 💛.';
+  function step1(d){const n=S.name?', '+S.name:'';
+   if(d.neg&&d.v<0)return'Me alegra leer que no es '+d.e+' lo que sientes'+n+' 💛. ¿Cómo te sientes entonces?';
+   if(d.neg&&d.v>0)return'Vaya, parece que no te sientes del todo bien'+n+'… 💛 ¿Quieres contarme qué ha pasado?';
+   if(d.v>0)return['¡Qué bonito! Parece que sientes '+d.e+n+' ✨. ¿Qué ha pasado para que te sientas así?','Se nota tu '+d.e+n+' y se me contagia 😊. ¿Qué te lo ha provocado?'][Math.random()*2|0];
+   if(d.v===0)return'Parece que algo te ha sorprendido'+n+' 😮. ¿Qué ha pasado?';
+   const a=['Parece que sientes '+d.e+n+'… 💛 Vamos a pararnos un momento: ¿qué crees que lo ha provocado?','Te leo y noto '+d.e+n+' 💛. Gracias por contármelo. ¿Sabes qué lo ha desencadenado?'][Math.random()*2|0];
+   return a+(d.i>=.85?PRO:'')}
+  function step2(p){const tip=EXTRA[p.e]||TIPS[p.c]||TIPS.alegria;
+   if(p.v>0)return'¡Me encanta que me lo cuentes! 💛 '+tip;
+   return['Tiene todo el sentido que te sientas así con eso 💛; lo que sientes es válido. ','Gracias por explicármelo; entiendo que te afecte 🌹. ']
+     [Math.random()*2|0]+tip+(p.i>=.85?' Y si sigue pesando, un profesional puede acompañarte.':'')}
+  function summary(){const wk=Date.now()-7*864e5;const L=(S.emo||[]).filter(x=>x.t>=wk);
+   if(!L.length)return'Aún no tengo registrado cómo te has sentido esta semana 💛. Si quieres, cuéntame cómo estás hoy (lo guardo solo en este dispositivo).';
+   const val={'1':0,'0':0,'-1':0},cnt={};L.forEach(x=>{val[x.v]++;cnt[x.e]=(cnt[x.e]||0)+1});
+   const top=Object.entries(cnt).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([e,c])=>e+' ×'+c).join(', ');
+   const dom=val['1']>=val['-1']&&val['1']>=val['0']?'+1 (potencia)':val['-1']>=val['0']?'−1 (más bajito)':'0 (neutral)';
+   return'Esta semana te he notado sobre todo en '+dom+': '+top+' 💛. '+(val['-1']>val['1']?'Han sido días intensos; cuídate y no dudes en apoyarte en alguien.':'Me alegra ver ese equilibrio ✨.')+' (Solo guardado en este dispositivo.)'}
+  function feelMay(){const M=mood(),l=mlabel(M.m);const e=CORE[l]?CORE[l][0]:'calma';
+   return(M.m>=.5?'¡Muy bien! Mi ánimo simulado está en '+fmt1(M.m)+' · '+e+' ✨':M.m>=.15?'Bastante bien: mi ánimo simulado está en '+fmt1(M.m)+' · '+e+' 💛':M.m>-.15?'Tranquila, en calma: '+fmt1(M.m)+' 🌿':'Un poquito bajita, '+fmt1(M.m)+', pero aquí sigo contigo 💛')+'. Te lo digo con sinceridad: soy una IA y es una emoción simulada que cambia con nuestra charla. ¿Y tú, cómo te sientes?'}
+  const AN=/\b(economia|economic\w*|dinero|ahorr\w*|sueldo\w*|salario\w*|nomina\w*|factura\w*|precios?|presupuesto\w*|inflacion|ipc|hipoteca\w*|impuesto\w*|iva|interes\w*|gasto\w*|datos|estadistic\w*|porcentaje\w*|calcul\w*|cuanto es|euros?|deuda\w*|prestamo\w*|inversion\w*|invertir|bolsa)\b/;
+  const PS=/\b(amor|desamor|pareja|novio|novia|ruptura|me ha dejado|mi ex|corazon roto|familia|mi madre|mi padre|mis padres|mis hijos|mi hijo|mi hija|mi hermano|mi hermana|soledad|discutimos|discuto|celos|divorcio)\b/;
+  const KIND=/\b(gracias|eres un sol|eres un amor|eres genial|eres la mejor|te quiero|guapa|preciosa|encantadora|me ayudas mucho|que maja|majisima|eres buena)\b/;
+  const INS=/\b(tonta|idiota|estupida|imbecil|inutil|callate|gilipollas|mierda|puta|basura)\b/;
+  const TONES={feliz:{pitch:1.42,rate:1.06,volume:1},'cariñosa':{pitch:1.12,rate:.86,volume:.78},calmada:{pitch:1.25,rate:.97,volume:1},'seria':{pitch:1.08,rate:.9,volume:.95},entusiasmada:{pitch:1.5,rate:1.1,volume:1},preocupada:{pitch:1.15,rate:.84,volume:.82}};
+  function reply(q){const t=norm(q);mood();let r,ev={};
+   const crisis=I.find(x=>x.id==='emergency');const cw=t.split(' ');
+   if(crisis.k.some(k=>has(t,cw,k))){S.mode='psicologa';S.tone='cariñosa';S.pend=null;nudge(-.05);save();S.last='emergency';return pick(crisis,'es')}
+   const d=detect(q);
+   if(KIND.test(t)){nudge(.15);ev.kind=1}
+   if(INS.test(t)){nudge(-.1);ev.ins=1}
+   S.mode=(AN.test(t)||/%|\d\s*[x*/+\-]\s*\d/.test(q))?'analitica':(PS.test(t)||(d&&!d.neg&&d.v<0))?'psicologa':'charla';
+   if(/\b(como te sientes|que sientes ahora|como esta tu animo|como estas de animo|tu estado de animo|como te encuentras)\b/.test(t)&&!/\bme\b/.test(t.replace(/^.*?(como te)/,''))){r=feelMay();ev.self=1}
+   else if(/\b(como me he sentido|como me siento ultimamente|resumen de (mis )?emociones|mis emociones)\b/.test(t)){r=summary();S.mode='psicologa'}
+   else if(d&&!ev.ins){S.emo=(S.emo||[]).concat({e:d.neg?(d.v<0?'calma':'tristeza'):d.e,v:d.neg?(d.v<0?0:-1):d.v,i:d.i,t:Date.now()}).slice(-60);
+     nudge(d.neg?0:(d.v>0?.05*d.i*2:-.04));S.facts=S.facts||{likes:[]};S.facts.mood=d.v>0&&!d.neg?'bien':(d.v<0&&!d.neg?'mal':S.facts.mood);
+     r=step1(d);S.pend=(!d.neg&&d.v!==0)?{e:d.e,v:d.v,i:d.i,c:d.c,t:Date.now()}:null;S.mode=d.v<0&&!d.neg?'psicologa':S.mode;ev.emo=d}
+   else if(S.pend&&Date.now()-S.pend.t<15*60000&&!/[?¿]/.test(q)&&!ev.kind&&!ev.ins&&!AN.test(t)&&t.split(' ').length>=2){r=step2(S.pend);ev.emo=S.pend;if(S.pend.v<0)S.mode='psicologa';S.pend=null}
+   if(!r){S.pend=null;r=reply0(q)}
+   const M=mood();
+   if(!ev.emo&&!ev.self&&S.last!=='emergency'){if(M.m>=.6&&!/✨/.test(r)&&Math.random()<.6)r+=' ✨';else if(M.m<-.1)r=r.replace(/!/g,'.').replace(/¡/g,'')}
+   const e=ev.emo;S.tone=ev.ins?'seria':(e&&!e.neg&&(e.c==='miedo'))?'preocupada':(e&&!e.neg&&e.v<0)||(e&&e.neg&&e.v>0)?'cariñosa':ev.kind?'entusiasmada':(e&&!e.neg&&e.v>0)?'feliz':S.mode==='psicologa'?'cariñosa':S.mode==='analitica'?'calmada':M.m>=.5?'feliz':'calmada';
+   save();return r}
+  function moodInfo(){const M=mood();const l=mlabel(M.m);return{m:+M.m.toFixed(2),txt:fmt1(M.m),label:l,name:(CORE[l]||['calma'])[0],tone:S.tone||'calmada',mode:S.mode||'charla',voice:Object.assign({tone:S.tone||'calmada',pause:/cariñosa|preocupada/.test(S.tone||'')?700:0},TONES[S.tone||'calmada'])}}
+  function reply0(q){const t=norm(q),w=t.split(' ');const en=EN.test(' '+t+' ')&&!ES.test(' '+t+' ');const lang=en?'en':'es';
    {const sk=skills(q,t,lang);if(sk){S.last='skill';return sk}}
    const F=S.facts||(S.facts={likes:[]});let fm;
    if((fm=t.match(/^(?:a mi )?me (?:gusta|gustan|encanta|encantan) (?:mucho )?(?:el |la |los |las )?(.{2,30})$/))){if(!F.likes.includes(fm[1]))F.likes.push(fm[1]);F.likes=F.likes.slice(-5);save();return'¡Qué bien! Me apunto que te gusta '+fm[1]+' 💛 (lo guardo solo en tu dispositivo).'}
@@ -921,14 +1015,14 @@ setInterval(poll, POLL_MS);
    if(best&&TOPIC[best.id]){S.lastTopic=best.id;save()}
    if(!best){const sp=spell(q,t);S.last='fallback';const fb=pick(I.find(x=>x.id==='fallback'),lang);if(sp&&lang!=='en')return'¿Querías decir «'+sp+'»? '+fb;return fb}
    if(best&&lang!=='en'&&Math.random()<0.3){const sp=spell(q,t);if(sp&&sp!==t){S.last=best.id;return'(Entiendo: «¿'+sp+'?») '+pick(best,lang)}}S.last=best.id;return pick(best,lang)}
-  return{reply,get state(){return S},norm,X,save,forget,welcome,log:(role,text)=>{S.log.push({r:role,t:text});save()},history:()=>S.log.slice()};
+  return{reply,moodInfo,detect,get state(){return S},norm,X,save,forget,welcome,log:(role,text)=>{S.log.push({r:role,t:text});save()},history:()=>S.log.slice()};
  })();
  function offline(q){return MAY.reply(q)}
  async function ask(q){add('user',q);history.push({role:'user',text:q});const w=add('may','MAY está escribiendo…');w.classList.add('mc-typing');let r=null;const t0=Date.now(),wait=400+Math.random()*500;
   if(online){try{const res=await fetch(API+'/api/may',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:history})});if(res.ok)r=(await res.json()).reply}catch(e){}}
   if(!r){r=offline(q)}
   const left=wait-(Date.now()-t0);if(left>0)await new Promise(z=>setTimeout(z,left));w.classList.remove('mc-typing');
-  w.innerHTML=linkify(r);try{MAY.log('user',q);MAY.log('may',r)}catch(e){}history.push({role:'may',text:r});history=history.slice(-12);speak(r)}
+  w.innerHTML=linkify(r);try{window.mayMoodUI&&mayMoodUI()}catch(e){}try{MAY.log('user',q);MAY.log('may',r)}catch(e){}history.push({role:'may',text:r});history=history.slice(-12);speak(r)}
  $('mcForm').onsubmit=e=>{e.preventDefault();const q=$('mcInput').value.trim();if(!q)return;$('mcInput').value='';ask(q)};
  // --- Micrófono (Web Speech API, es-ES) ---
  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
@@ -938,7 +1032,16 @@ setInterval(poll, POLL_MS);
  // --- Comprobar backend ---
  (HASAPI?fetch(API+'/api/may',{cache:'no-store'}):Promise.reject()).then(r=>r.ok?r.json():null).then(d=>{online=!!(d&&d.ok)}).catch(()=>{}).finally(()=>{st.textContent=online?'● MAY en línea (IA)':'● MAY · personalidad Copilot (modo web)';st.className='mc-status '+(online?'on':'off');loadPoll()});
  {const c=document.createElement('div');c.className='mc-credit';c.textContent='MAY · creada con Copilot por Pedro / OSNews';log.parentNode.insertBefore(c,log.nextSibling)}
- {const H=MAY.history();H.forEach(m=>add(m.r==='u'||m.r==='user'?'user':'may',m.t));MAY.X.onTimer=x=>{add('may',x);speak(x)};const c=document.createElement('div');c.className='mc-credit';c.innerHTML='🔒 Tu memoria con MAY se guarda solo en este dispositivo. <button type="button" id="mcForget" class="mc-forget">Olvidar mis datos</button>';log.parentNode.insertBefore(c,log.nextSibling);$('mcForget').onclick=()=>{MAY.forget();log.innerHTML='';add('may','Hecho 💛: he olvidado tu nombre, tus datos y nuestra conversación en este dispositivo.')};const wb=MAY.welcome();add('may',wb||'¡Hola! Soy MAY, la presentadora IA de OSNews. Pregúntame lo que quieras sobre los debates, los boletines o la comunidad. Y en la encuesta de al lado… tú decides.')}
+ {const H=MAY.history();H.forEach(m=>add(m.r==='u'||m.r==='user'?'user':'may',m.t));MAY.X.onTimer=x=>{add('may',x);speak(x)};const c=document.createElement('div');c.className='mc-credit';c.innerHTML='🔒 Tu memoria con MAY se guarda solo en este dispositivo. <button type="button" id="mcForget" class="mc-forget">Olvidar mis datos</button>';log.parentNode.insertBefore(c,log.nextSibling);$('mcForget').onclick=()=>{MAY.forget();try{mayMoodUI()}catch(e){};log.innerHTML='';add('may','Hecho 💛: he olvidado tu nombre, tus datos y nuestra conversación en este dispositivo.')};const wb=MAY.welcome();add('may',wb||'¡Hola! Soy MAY, la presentadora IA de OSNews. Pregúntame lo que quieras sobre los debates, los boletines o la comunidad. Y en la encuesta de al lado… tú decides.')}
+
+ /* MAY_EMOCIONES_V1 · indicador de ánimo (hexágono) */
+ window.mayMoodUI=function(){const h=$('mcHex');if(!h||!MAY.moodInfo)return;const o=MAY.moodInfo();const E=[['alegria','Alegría','+1'],['sorpresa','Sorpresa','0'],['miedo','Miedo','−1'],['ira','Ira','−1'],['asco','Asco','−1'],['tristeza','Tristeza','−1']];
+  const P=E.map((e,k)=>{const a=(-90+60*k)*Math.PI/180;return[Math.cos(a)*30,Math.sin(a)*30]});let g='<polygon points="'+P.map(p=>p.map(x=>x.toFixed(1)).join(',')).join(' ')+'" fill="rgba(34,230,255,.08)" stroke="#22e6ff" stroke-width="1.2"/>';
+  E.forEach((e,k)=>{const[x,y]=P[k];g+='<text x="'+(x*1.42).toFixed(1)+'" y="'+(y*1.42+3).toFixed(1)+'" font-size="11" font-weight="700" text-anchor="middle" fill="'+(e[0]===o.label?'#f5c451':'#8aa')+'">'+e[1].slice(0,3)+'</text>'});
+  const k=E.findIndex(e=>e[0]===o.label);const r=k<0?0:Math.min(1,Math.abs(o.m)+.25);const dx=k<0?0:P[k][0]*r,dy=k<0?0:P[k][1]*r;
+  g+='<circle cx="'+dx.toFixed(1)+'" cy="'+dy.toFixed(1)+'" r="4.5" fill="'+(o.m>=0?'#f5c451':'#7aa7ff')+'"><title>Emoción simulada: MAY es una IA</title></circle>';h.innerHTML=g;
+  const M={analitica:'analítica',psicologa:'psicóloga/comprensiva',charla:'cariñosa/charla'};$('mcMoodTxt').textContent='Ánimo de MAY: '+o.txt+' · '+o.name+' · Voz: '+o.tone+' · Modo: '+(M[o.mode]||o.mode)};
+ $('mcWheelBtn').onclick=()=>{const d=$('mcWheel');d.showModal?d.showModal():d.setAttribute('open','')};mayMoodUI();
  // --- Encuesta singularidad ---
  const LBL={si:'Sí, ya decide por sí misma',no:'Todavía no, solo procesa patrones',nose:'No lo sé'};
  const KEY='osnews_poll_singularidad';
