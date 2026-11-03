@@ -1,0 +1,15 @@
+/* OSNews · Regla del creador (CREADOR_V1) · prioridad sobre respuestas genéricas.
+   MAY y Asdrúbal: creados por Pedro Sánchez Gómez (Mar Menor) con Copilot y Grok. */
+(function(){
+var N=function(s){return ' '+String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9ñ\s]/g,' ').replace(/\s+/g,' ')+' '};
+var V='(creo|creaste|ha creado|han creado|hizo|ha hecho|programo|ha programado|desarrollo|ha desarrollado|diseno|ha disenado|invento|ha inventado|construyo|ha construido|fabrico|entreno|ha entrenado|dio vida)';
+var P={
+ es:[new RegExp(' quien(es)? (te|la|lo|os) '+V+' '),new RegExp(' quien(es)? '+V+' (a )?(ti|may|asdrubal|esta app|esta aplicacion|esta ia|este bot|esto) '),/ (tu|su) (creador|creadora|autor|autora|programador|programadora|desarrollador|desarrolladora|disenador|inventor|padre|papa|madre) /,/ quien(es)? (esta|estan|hay) (detras|tras) /,/ quien es el que te (creo|hizo|programo) /,/ por quien (fuiste|has sido) (creada|creado|hecha|hecho|programada|programado) /],
+ en:[/ who (made|created|built|programmed|coded|developed|designed|invented|trained|makes|created) (you|may|asdrubal|this app|this ai|this bot|this) /,/ who s behind /,/ who is behind /,/ who are behind /,/ your (creator|maker|author|developer|programmer|designer|inventor|father|dad|mother|mom) /,/ who (are|were) you (made|created|built|programmed) by /,/ (made|created|built|programmed) you /],
+ pt:[/ quem (te |o |a )?(criou|fez|programou|desenvolveu|inventou|construiu|projetou|treinou) /,/ quem (esta|estao) por tras /,/ (teu|seu|tua|sua) (criador|criadora|autor|autora|programador|desenvolvedor|pai|mae) /,/ quem e o (teu|seu) criador /],
+ fr:[/ qui (t|vous|l) (a|as|ont) (cree|creee|fait|faite|programme|programmee|developpe|developpee|concu|concue|invente|construit|entraine) /,/ qui (est|se cache|sont) derriere /,/ (ton|ta|votre) (createur|creatrice|auteur|programmeur|developpeur|concepteur|pere|papa|mere) /,/ par qui (as tu|avez vous) ete (cree|creee|fait|faite) /],
+ it:[/ chi (ti|vi|l) (ha|hanno) (creato|creata|fatto|fatta|programmato|programmata|sviluppato|sviluppata|inventato|costruito|progettato|addestrato) /,/ chi (c e|ce|sta|ci sta) dietro /,/ (il tuo|tuo|il vostro) (creatore|autore|programmatore|sviluppatore|inventore|papa|padre) /,/ da chi (sei stato|sei stata) (creato|creata|fatto|fatta) /]};
+var R={may:{es:'Me creó Pedro Sánchez Gómez, del Mar Menor, con la ayuda de Copilot y Grok 💛',en:'I was created by Pedro Sánchez Gómez, from the Mar Menor, with the help of Copilot and Grok 💛',pt:'Fui criada por Pedro Sánchez Gómez, do Mar Menor, com a ajuda do Copilot e do Grok 💛',fr:'J’ai été créée par Pedro Sánchez Gómez, de la Mar Menor, avec l’aide de Copilot et Grok 💛',it:'Mi ha creata Pedro Sánchez Gómez, del Mar Menor, con l’aiuto di Copilot e Grok 💛'}};
+window.OSN_CREATOR=function(q){var t=N(q);for(var l in P)for(var i=0;i<P[l].length;i++)if(P[l][i].test(t))return l;return null};
+window.OSN_CREATOR_REPLY=function(who,q,fallback){var l=window.OSN_CREATOR(q);if(!l)return null;return (R[who]&&R[who][l])||(R.may[l])};
+})();

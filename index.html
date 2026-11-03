@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<script src="creador.js"></script>
 <script>/* MAY_ANDROID_BRIDGE_V1: en la app Android (WebView) usa la voz y el micrófono nativos del teléfono */(function(){var N=window.MAYNative;if(!N)return;
 window.SpeechSynthesisUtterance=function(t){this.text=t||'';this.lang='es-ES';this.pitch=1;this.rate=1;this.volume=1;this.voice=null};
 window.speechSynthesis={onvoiceschanged:null,getVoices:function(){return[]},speak:function(u){window.__mayU=u;try{u.onstart&&u.onstart()}catch(e){}N.speak(String(u.text),+u.pitch||1,+u.rate||1)},cancel:function(){N.stop()}};
@@ -1029,7 +1030,8 @@ setInterval(poll, POLL_MS);
  })();
  function offline(q){return MAY.reply(q)}
  async function ask(q){add('user',q);history.push({role:'user',text:q});const w=add('may','MAY está escribiendo…');w.classList.add('mc-typing');let r=null;const t0=Date.now(),wait=400+Math.random()*500;
-  if(online){try{const res=await fetch(API+'/api/may',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:history})});if(res.ok)r=(await res.json()).reply}catch(e){}}
+  const CR=window.OSN_CREATOR_REPLY&&OSN_CREATOR_REPLY('may',q);if(CR)r=CR;/* CREADOR_V1: prioridad sobre API y reglas genéricas */
+  if(!r&&online){try{const res=await fetch(API+'/api/may',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:history})});if(res.ok)r=(await res.json()).reply}catch(e){}}
   if(!r){r=offline(q)}
   const left=wait-(Date.now()-t0);if(left>0)await new Promise(z=>setTimeout(z,left));w.classList.remove('mc-typing');
   w.innerHTML=linkify(r);try{window.mayMoodUI&&mayMoodUI()}catch(e){}try{MAY.log('user',q);MAY.log('may',r)}catch(e){}history.push({role:'may',text:r});history=history.slice(-12);speak(r)}

@@ -234,6 +234,8 @@ function reply(q){const t=norm(q),w=t.split(' ');mood();
  // 1) Seguridad primero: crisis, luego violencia de género
  if(CRISIS.some(k=>has(t,w,k))){S.pend=null;S.tone='tierno';nudge(-.05);S.last='crisis';save();return X.crisis}
  if(VIOL.some(k=>has(t,w,k))){S.pend=null;S.tone='preocupado';S.last='violence';save();return X.violence}
+ // 1b) Creador (CREADOR_V1): prioridad sobre respuestas genéricas
+ {const cl=window.OSN_CREATOR&&OSN_CREATOR(q);if(cl&&T[cl]&&T[cl].creator){S.pend=null;S.last='creator';save();return T[cl].creator}}
  // 2) Nombre
  let m=String(q).match(/(?:me llamo|mi nombre es|my name is|call me|je m'appelle|je m’appelle|mi chiamo|meu nome é|meu nome e|chamo-me|eu me chamo|llámame|llamame)\s+([A-Za-zÁÉÍÓÚÑÇáéíóúñüçàèìòâêôãõ]{2,20})/i)||String(q).match(/^\s*(?:soy|i am|i'm|sono|je suis|sou)\s+([A-ZÁÉÍÓÚÑ][a-záéíóúñü]{1,19})\s*[.!]?\s*$/);
  if(m&&!/^(una?|muy|triste|feliz|sola|cansada|sad|happy|fine|ok|tired|tres|molto)$/i.test(m[1])){S.name=m[1][0].toUpperCase()+m[1].slice(1).toLowerCase();S.last='name';nudge(.08);S.tone='feliz';save();return X.name(S.name)}
