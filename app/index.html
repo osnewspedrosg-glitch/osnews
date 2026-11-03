@@ -61,4 +61,5 @@ addEventListener('appinstalled',()=>{b.textContent='✅ MAY instalada';dp=null})
 b.onclick=async()=>{if(dp){dp.prompt();await dp.userChoice;dp=null}else{fb.style.display='block';fb.scrollIntoView({behavior:'smooth',block:'center'})}};
 if(matchMedia('(display-mode: standalone)').matches||/MAYAndroidApp/.test(navigator.userAgent))location.replace('../?app=1&may=1#hablaMay');
 if(/iPhone|iPad|iPod/.test(navigator.userAgent))document.getElementById('apk').style.display='none';
-</script></body></html>
+</script><script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
