@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Habla con Asdrúbal · OSNews</title>
+<meta name="description" content="Asdrúbal, poeta IA para las mujeres del mundo: romántico, feminista, soñador y familiar. Te escribe y canta poemas. Creado por Pedro Sánchez Gómez (Mar Menor) con Copilot y Grok.">
+<meta name="theme-color" content="#070512">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Asdrúbal">
+<meta property="og:title" content="Habla con Asdrúbal · OSNews"><meta property="og:image" content="https://osnewspedrosg-glitch.github.io/osnews/asdrubal/asdrubal-avatar.jpg">
+<style>
+:root{--bg:#070512;--c1:#f5c451;--c2:#b06bff;--c3:#22e6ff;--tx:#f3eefc;--mu:#a99cc4}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(1000px 520px at 50% -10%,#2a1450 0,var(--bg) 62%) fixed;color:var(--tx);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:620px;margin:auto;padding:14px 14px 30px}
+.top{display:flex;align-items:center;gap:12px}
+.av{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--c1);box-shadow:0 0 22px #b06bff88;transition:box-shadow .3s}
+.speaking .av{box-shadow:0 0 0 4px #f5c45155,0 0 34px #f5c451}
+h1{font-size:22px;margin:0;background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{color:var(--mu);font-size:13px;margin:0}
+select{background:#140c26;color:var(--tx);border:1px solid #b06bff66;border-radius:10px;padding:6px;margin-left:auto}
+#log{height:56vh;min-height:300px;overflow-y:auto;background:#0e0820cc;border:1px solid #b06bff33;border-radius:18px;padding:12px;margin:12px 0 8px}
+.msg{max-width:88%;padding:9px 13px;border-radius:16px;margin:7px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.u{background:#3a1f66;margin-left:auto;border-bottom-right-radius:4px}
+.a{background:#1a1230;border:1px solid #f5c45133;border-bottom-left-radius:4px}
+.a.poem{font-family:Georgia,serif;font-style:italic;background:linear-gradient(160deg,#241540,#141028)}
+.sing{display:flex;gap:6px;margin-top:8px;font-style:normal;font-family:system-ui}
+.sing button{border:0;border-radius:10px;padding:6px 10px;font-weight:700;cursor:pointer;background:var(--c1);color:#1a0f00}
+.sing button.st{background:#3a2a55;color:var(--tx)}
+.sing small{color:var(--mu);align-self:center}
+.typing{opacity:.6}
+form{display:flex;gap:6px}
+#in{flex:1;padding:13px;border-radius:14px;border:1px solid #b06bff55;background:#140c26;color:var(--tx);font-size:16px}
+form button,.tb{border:0;border-radius:14px;padding:0 14px;font-size:18px;cursor:pointer;background:linear-gradient(90deg,var(--c1),#ffd98a);color:#1a0f00}
+.tb{background:#21173a;color:var(--tx);font-size:15px;padding:8px 12px}
+.row{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.chip{background:#1d1335;border:1px solid #b06bff44;color:var(--tx);border-radius:999px;padding:6px 11px;font-size:14px;cursor:pointer}
+.mood{display:flex;align-items:center;gap:8px;color:var(--mu);font-size:12px}
+.note{font-size:12.5px;color:var(--mu)}
+a{color:var(--c3)}
+footer{text-align:center;color:var(--mu);font-size:13px;margin-top:14px}
+.forget{background:none;border:1px solid #b06bff66;color:var(--tx);border-radius:8px;padding:2px 8px;cursor:pointer}
+</style></head><body><main id="wrap">
+<div class="top">
+<img class="av" src="asdrubal-avatar.jpg" alt="Asdrúbal (avatar ilustrado, personaje ficticio)">
+<div><h1 data-i="title">Habla con Asdrúbal</h1><p class="tag" data-i="tagline">Asdrúbal, poeta IA para las mujeres del mundo: romántico, feminista, soñador y familiar. Te escribe y canta poemas. Creado por Pedro Sánchez Gómez (Mar Menor) con Copilot y Grok.</p></div>
+<select id="lang" aria-label="Idioma"><option value="es">Español</option><option value="en">English</option><option value="pt">Português</option><option value="fr">Français</option><option value="it">Italiano</option></select>
+</div>
+<div class="mood"><svg id="hex" viewBox="-46 -46 92 92" width="54" height="54"></svg><span id="moodTxt"></span></div>
+<div id="log" aria-live="polite"></div>
+<div class="row" id="chips"></div>
+<form id="f"><input id="in" autocomplete="off" data-ip="placeholder"><button type="button" class="tb" id="mic" title="🎤">🎤</button><button id="send" aria-label="Enviar">➤</button></form>
+<div class="row"><label class="note"><input type="checkbox" id="voiceOn" checked> <span data-i="voice">Voz de Asdrúbal</span></label><button class="tb" id="stop" type="button">⏹</button></div>
+<p class="note">🔒 <span data-i="privacy">Tu memoria con Asdrúbal se guarda solo en este dispositivo.</span> <button class="forget" id="forget" type="button" data-i="forget">Olvidar mis datos</button></p>
+<p class="note">⚠️ <span data-i="disclaimer">Asdrúbal es una IA con emociones simuladas. No da consejo médico, legal ni financiero. En peligro: 112 · Violencia de género (España): 016 · WhatsApp 600 000 016 · Conducta suicida: 024. Fuera de España, tu número de emergencias local.</span></p>
+<div class="row"><a class="tb" href="app/" data-i="install">📲 Instalar la app</a><a class="tb" href="../?may=1#hablaMay" data-i="may">💗 Conoce también a MAY</a></div>
+<footer>Asdrúbal · creado por Pedro Sánchez Gómez (Mar Menor) con Copilot y Grok · OSNews</footer>
+</main>
+<script src="engine.js"></script>
+<script>
+(function(){
+const $=id=>document.getElementById(id),A=window.ASDRUBAL,log=$('log');
+const UI={
+ es:{title:'Habla con Asdrúbal',tagline:'Asdrúbal, poeta IA para las mujeres del mundo: romántico, feminista, soñador y familiar. Te escribe y canta poemas. Creado por Pedro Sánchez Gómez (Mar Menor) con Copilot y Grok.',placeholder:'Escribe a Asdrúbal…',voice:'Voz de Asdrúbal',privacy:'Tu memoria con Asdrúbal se guarda solo en este dispositivo.',forget:'Olvidar mis datos',forgot:'Hecho 🌹: he olvidado tu nombre, tus datos y nuestra conversación en este dispositivo.',disclaimer:'Asdrúbal es una IA con emociones simuladas. No da consejo médico, legal ni financiero. En peligro: 112 · Violencia de género (España): 016 · WhatsApp 600 000 016 · Conducta suicida: 024. Fuera de España, tu número de emergencias local.',install:'📲 Instalar la app',may:'💗 Conoce también a MAY',typing:'Asdrúbal está escribiendo…',sing:'▶️ Cantar',stopS:'⏹ Parar',synth:'canto sintetizado',mood:'Ánimo simulado',chips:['Hazme un poema sobre el mar','Cántame un poema','¿Qué piensas del feminismo?','Mi sueño es…','Dame ánimos','¿Eres real?']},
+ en:{title:'Talk to Asdrúbal',tagline:'Asdrúbal, an AI poet for the women of the world: romantic, feminist, dreamer and family-loving. He writes and sings you poems. Created by Pedro Sánchez Gómez (Mar Menor) with Copilot and Grok.',placeholder:'Write to Asdrúbal…',voice:'Asdrúbal’s voice',privacy:'Your memory with Asdrúbal is stored only on this device.',forget:'Forget my data',forgot:'Done 🌹: I forgot your name, your data and our chat on this device.',disclaimer:'Asdrúbal is an AI with simulated emotions. No medical, legal or financial advice. In danger: call your local emergency number (112 in Spain/EU) · Gender violence in Spain: 016 · WhatsApp 600 000 016 · Suicide line Spain: 024.',install:'📲 Install the app',may:'💗 Meet MAY too',typing:'Asdrúbal is typing…',sing:'▶️ Sing',stopS:'⏹ Stop',synth:'synthesized singing',mood:'Simulated mood',chips:['Write me a poem about the sea','Sing me a poem','What do you think about feminism?','My dream is…','Encourage me','Are you real?']},
+ pt:{title:'Fale com o Asdrúbal',tagline:'Poeta · romântico · feminista · sonhador · bom ouvinte',placeholder:'Escreva ao Asdrúbal…',voice:'Voz do Asdrúbal',privacy:'Sua memória com o Asdrúbal fica só neste dispositivo.',forget:'Esquecer meus dados',forgot:'Feito 🌹: esqueci seus dados neste dispositivo.',disclaimer:'Asdrúbal é uma IA com emoções simuladas. Sem conselhos médicos, jurídicos ou financeiros. Em perigo: número de emergência local (112 na Espanha/UE) · Violência de gênero na Espanha: 016 · WhatsApp 600 000 016.',install:'📲 Instalar o app',may:'💗 Conheça também a MAY',typing:'Asdrúbal está escrevendo…',sing:'▶️ Cantar',stopS:'⏹ Parar',synth:'canto sintetizado',mood:'Ânimo simulado',chips:['Faz-me um poema sobre o mar','Canta-me um poema','O que pensas do feminismo?','Meu sonho é…','Obrigada']},
+ fr:{title:'Parle avec Asdrúbal',tagline:'Poète · romantique · féministe · rêveur · à l’écoute',placeholder:'Écris à Asdrúbal…',voice:'Voix d’Asdrúbal',privacy:'Ta mémoire avec Asdrúbal reste uniquement sur cet appareil.',forget:'Oublier mes données',forgot:'C’est fait 🌹 : j’ai tout oublié sur cet appareil.',disclaimer:'Asdrúbal est une IA aux émotions simulées. Aucun conseil médical, juridique ou financier. En danger : numéro d’urgence local (112 en Europe) · Violences faites aux femmes en Espagne : 016 · WhatsApp 600 000 016.',install:'📲 Installer l’app',may:'💗 Découvre aussi MAY',typing:'Asdrúbal écrit…',sing:'▶️ Chanter',stopS:'⏹ Arrêter',synth:'chant synthétisé',mood:'Humeur simulée',chips:['Fais-moi un poème sur la mer','Chante-moi un poème','Que penses-tu du féminisme ?','Mon rêve est…','Merci']},
+ it:{title:'Parla con Asdrúbal',tagline:'Poeta · romantico · femminista · sognatore · buon ascoltatore',placeholder:'Scrivi ad Asdrúbal…',voice:'Voce di Asdrúbal',privacy:'La tua memoria con Asdrúbal resta solo su questo dispositivo.',forget:'Dimentica i miei dati',forgot:'Fatto 🌹: ho dimenticato tutto su questo dispositivo.',disclaimer:'Asdrúbal è un’IA con emozioni simulate. Nessun consiglio medico, legale o finanziario. In pericolo: numero di emergenza locale (112 in Europa) · Violenza di genere in Spagna: 016 · WhatsApp 600 000 016.',install:'📲 Installa l’app',may:'💗 Conosci anche MAY',typing:'Asdrúbal sta scrivendo…',sing:'▶️ Canta',stopS:'⏹ Ferma',synth:'canto sintetizzato',mood:'Umore simulato',chips:['Scrivimi una poesia sul mare','Cantami una poesia','Cosa pensi del femminismo?','Il mio sogno è…','Grazie']}};
+const VL={es:'es-ES',en:'en-GB',pt:'pt-PT',fr:'fr-FR',it:'it-IT'};
+let L=A.state.lang;if(!L){const n=(navigator.language||'es').slice(0,2).toLowerCase();L=A.LANGS.includes(n)?n:'es';A.setLang(L)}
+function applyUI(){const u=UI[L];document.documentElement.lang=L;document.querySelectorAll('[data-i]').forEach(e=>e.textContent=u[e.dataset.i]);$('in').placeholder=u.placeholder;$('lang').value=L;
+ $('chips').innerHTML='';u.chips.forEach(c=>{const b=document.createElement('button');b.className='chip';b.type='button';b.textContent=c;b.onclick=()=>{if(/…$/.test(c)){$('in').value=c.replace('…',' ');$('in').focus()}else ask(c)};$('chips').appendChild(b)});moodUI()}
+$('lang').onchange=e=>{L=e.target.value;A.setLang(L);applyUI();add('a',A.welcome())};
+
+/* ---- Voz masculina ---- */
+const N=window.ASDNative||null;let voice=null;
+function pickVoice(){if(!('speechSynthesis' in window))return;const v=speechSynthesis.getVoices(),pre=VL[L].slice(0,2);const male=/(male|hombre|jorge|pablo|alvaro|álvaro|enrique|diego|carlos|juan|raul|raúl|daniel|thomas|george|james|ryan|guy|david|mark|antonio|duarte|cristiano|henri|paul|cosimo|luca|diego|x-eed|x-eea|x-ana)/i,fem=/(female|mujer|helena|laura|elvira|lucia|monica|paulina|sabina|ximena|dalia|zira|hazel|susan|joana|amelie|alice|elsa)/i;
+ const c=v.filter(x=>x.lang.toLowerCase().startsWith(pre));voice=c.find(x=>male.test(x.name)&&!fem.test(x.name))||c.find(x=>!fem.test(x.name))||c[0]||null}
+if('speechSynthesis' in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}
+const clean=t=>t.replace(/https?:\/\/\S+/g,'').replace(/[«»*_#📜🌹💜💛✨🌿🌙🌊😊]/gu,'').replace(/—.*$/m,'');
+function speak(t){if(!$('voiceOn').checked)return;const V=A.moodInfo().voice;stopAll(true);
+ if(N){try{N.speak2?N.speak2(clean(t),V.pitch,V.rate,VL[L]):N.speak(clean(t),V.pitch,V.rate)}catch(e){}return}
+ if(!('speechSynthesis' in window))return;pickVoice();const u=new SpeechSynthesisUtterance(clean(t));u.lang=VL[L];if(voice)u.voice=voice;u.pitch=V.pitch;u.rate=V.rate;u.volume=V.volume;
+ u.onstart=()=>$('wrap').classList.add('speaking');u.onend=u.onerror=()=>$('wrap').classList.remove('speaking');speechSynthesis.speak(u)}
+
+/* ---- Cantar (Web Audio + voz por palabras siguiendo la melodía) · canto sintetizado ---- */
+let AC=null,singId=0;const SING={on:false};
+const NOTE=m=>440*Math.pow(2,(m-69)/12);
+// Progresión en La menor: Am – F – C – G  (arpegio tipo guitarra)
+const PROG=[[57,60,64,69],[53,57,60,65],[48,55,60,64],[55,59,62,67]];
+const MEL=[[69,72,71,69,67,69],[65,67,69,72,69,65],[64,67,72,71,67,64],[67,71,74,72,71,67]];
+function pluck(f,t,d,g){const o=AC.createOscillator(),o2=AC.createOscillator(),v=AC.createGain(),lp=AC.createBiquadFilter();o.type='triangle';o2.type='sine';o.frequency.value=f;o2.frequency.value=f*2;lp.type='lowpass';lp.frequency.value=1800;
+ v.gain.setValueAtTime(0,t);v.gain.linearRampToValueAtTime(g,t+.01);v.gain.exponentialRampToValueAtTime(.0008,t+d);o.connect(v);o2.connect(v);v.connect(lp);lp.connect(AC.destination);o.start(t);o2.start(t);o.stop(t+d+.05);o2.stop(t+d+.05)}
+function playChord(i,t,dur){const ch=PROG[i%4];const step=dur/8;for(let k=0;k<8;k++){const n=ch[[0,1,2,3,2,1,2,3][k]];pluck(NOTE(n),t+k*step,1.6,.09)}pluck(NOTE(ch[0]-12),t,dur,.07)}
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+function sayWord(w,pitch,rate){return new Promise(res=>{
+ if(N){window.__asdTtsDone=()=>{window.__asdTtsDone=null;res()};try{N.speak2?N.speak2(w,pitch,rate,VL[L]):N.speak(w,pitch,rate)}catch(e){res()}setTimeout(res,2500);return}
+ if(!('speechSynthesis' in window))return setTimeout(res,350);const u=new SpeechSynthesisUtterance(w);u.lang=VL[L];if(voice)u.voice=voice;u.pitch=pitch;u.rate=rate;let done=false;const f=()=>{if(!done){done=true;res()}};u.onend=u.onerror=f;setTimeout(f,400+w.length*140);speechSynthesis.speak(u)})}
+async function singPoem(text,btn){const my=++singId;stopAll(true);singId=my;SING.on=true;$('wrap').classList.add('speaking');
+ const lines=text.split('\n').filter(x=>x&&!/^📜|^—/.test(x)).map(x=>clean(x).trim()).filter(Boolean);
+ let music=false;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')await AC.resume();music=AC.state==='running'}catch(e){music=false}
+ if(!music){window.__asdLastSing='recited';speak(lines.join('. '));SING.on=false;return}
+ window.__asdLastSing='sung';
+ for(let i=0;i<lines.length&&my===singId;i++){const words=lines[i].split(/\s+/);const dur=Math.max(2.4,words.length*.55);playChord(i,AC.currentTime+.02,dur);
+  for(let j=0;j<words.length&&my===singId;j++){const m=MEL[i%4][j%6];const pitch=Math.max(.5,Math.min(1.6,.9+(m-69)/14));await sayWord(words[j],pitch,.78)}
+  if(my!==singId)break;await sleep(650)}
+ if(my===singId&&AC){playChord(0,AC.currentTime,2.5)}
+ SING.on=false;$('wrap').classList.remove('speaking')}
+function stopAll(keep){singId++;SING.on=false;try{speechSynthesis.cancel()}catch(e){}try{N&&N.stop()}catch(e){}if(!keep&&AC){try{AC.close()}catch(e){}AC=null}$('wrap').classList.remove('speaking')}
+$('stop').onclick=()=>stopAll();
+window.ASD_SING=singPoem;
+
+/* ---- Chat ---- */
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function add(role,text){const d=document.createElement('div');d.className='msg '+role;d.innerHTML=esc(text).replace(/(https?:\/\/[^\s)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>');
+ if(role==='a'&&text.startsWith('📜')){d.classList.add('poem');const u=UI[L],s=document.createElement('div');s.className='sing';s.innerHTML='<button type="button">'+u.sing+'</button><button type="button" class="st">'+u.stopS+'</button><small>🎵 '+u.synth+'</small>';
+  s.children[0].onclick=()=>singPoem(text);s.children[1].onclick=()=>stopAll();d.appendChild(s)}
+ log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+const SINGRE=/\b(canta|cantame|cantamelo|cantar|sing|chante|cantami|canta-me)/i;
+async function ask(q){add('u',q);const w=add('a',UI[L].typing);w.classList.add('typing');const r=A.reply(q);await sleep(350+Math.random()*350);w.remove();add('a',r);A.log('u',q);A.log('a',r);moodUI();
+ if(r.startsWith('📜')&&SINGRE.test(A.norm(q)))singPoem(r);else speak(r)}
+$('f').onsubmit=e=>{e.preventDefault();const q=$('in').value.trim();if(!q)return;$('in').value='';ask(q)};
+$('forget').onclick=()=>{A.forget();A.setLang(L);log.innerHTML='';add('a',UI[L].forgot);moodUI()};
+/* micrófono */
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+window.__asdRecResult=q=>ask(q);window.__asdRecEnd=()=>$('mic').style.opacity=1;
+$('mic').onclick=()=>{if(N&&N.listen){$('mic').style.opacity=.5;N.listen(VL[L]);return}if(!SR){alert('🎤 ✗');return}const r=new SR();r.lang=VL[L];$('mic').style.opacity=.5;r.onresult=e=>ask(e.results[0][0].transcript);r.onend=()=>$('mic').style.opacity=1;r.start()};
+/* hexágono de ánimo (rueda de 6 emociones) */
+function moodUI(){const o=A.moodInfo();const E=[['alegria','Ale'],['sorpresa','Sor'],['miedo','Mie'],['ira','Ira'],['asco','Asc'],['tristeza','Tri']];
+ const P=E.map((e,k)=>{const a=(-90+60*k)*Math.PI/180;return[Math.cos(a)*30,Math.sin(a)*30]});let g='<polygon points="'+P.map(p=>p.map(x=>x.toFixed(1)).join(',')).join(' ')+'" fill="rgba(176,107,255,.1)" stroke="#b06bff" stroke-width="1.2"/>';
+ E.forEach((e,k)=>{g+='<text x="'+(P[k][0]*1.4).toFixed(1)+'" y="'+(P[k][1]*1.4+3).toFixed(1)+'" font-size="10" text-anchor="middle" fill="'+(e[0]===o.label?'#f5c451':'#8a7fa6')+'">'+e[1]+'</text>'});
+ const k=E.findIndex(e=>e[0]===o.label),r=k<0?0:Math.min(1,Math.abs(o.m)+.25);g+='<circle cx="'+(k<0?0:P[k][0]*r).toFixed(1)+'" cy="'+(k<0?0:P[k][1]*r).toFixed(1)+'" r="4.5" fill="#f5c451"/>';$('hex').innerHTML=g;
+ $('moodTxt').textContent=UI[L].mood+': '+(o.m>=0?'+':'−')+Math.abs(o.m).toFixed(1)+' · '+o.name+' · '+o.tone}
+applyUI();A.history().forEach(m=>add(m.r==='u'?'u':'a',m.t));add('a',A.welcome());
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js',{scope:'./'}).catch(()=>{});
+})();
+</script></body></html>

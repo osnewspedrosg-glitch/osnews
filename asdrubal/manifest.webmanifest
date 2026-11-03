@@ -1,0 +1,43 @@
+{
+ "id": "./?app=1",
+ "name": "Asdrúbal · OSNews",
+ "short_name": "Asdrúbal",
+ "description": "Asdrúbal, poeta IA para las mujeres del mundo: romántico, feminista, soñador y familiar. Te escribe y canta poemas. Creado por Pedro Sánchez Gómez (Mar Menor) con Copilot y Grok.",
+ "start_url": "./?app=1",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "portrait",
+ "background_color": "#070512",
+ "theme_color": "#070512",
+ "lang": "es",
+ "categories": [
+  "lifestyle",
+  "entertainment"
+ ],
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "maskable"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
