@@ -240,7 +240,7 @@ function reply(q){const t=norm(q),w=t.split(' ');mood();
  let m=String(q).match(/(?:me llamo|mi nombre es|my name is|call me|je m'appelle|je m’appelle|mi chiamo|meu nome é|meu nome e|chamo-me|eu me chamo|llámame|llamame)\s+([A-Za-zÁÉÍÓÚÑÇáéíóúñüçàèìòâêôãõ]{2,20})/i)||String(q).match(/^\s*(?:soy|i am|i'm|sono|je suis|sou)\s+([A-ZÁÉÍÓÚÑ][a-záéíóúñü]{1,19})\s*[.!]?\s*$/);
  if(m&&!/^(una?|muy|triste|feliz|sola|cansada|sad|happy|fine|ok|tired|tres|molto)$/i.test(m[1])){S.name=m[1][0].toUpperCase()+m[1].slice(1).toLowerCase();S.last='name';nudge(.08);S.tone='feliz';save();return X.name(S.name)}
  // 3) Recordar gustos / sueños
- if((m=t.match(/^(?:a mi )?me (?:gusta|gustan|encanta|encantan) (?:mucho )?(?:el |la |los |las )?(.{2,30})$/))||(m=t.match(/^i (?:love|like) (.{2,30})$/))){S.facts.likes=[...new Set(S.facts.likes.concat(m[1]))].slice(-5);save();return (L==='es'?'Qué bonito, me apunto que te gusta '+m[1]+' 🌹 (solo en tu dispositivo).':'Lovely, I will remember you like '+m[1]+' 🌹 (only on your device).')}
+ if((m=t.match(/^(?:a mi )?me (?:gusta|gustan|encanta|encantan) (?:mucho )?(?:el |la |los |las )?(.{2,30})$/))||(m=t.match(/^i (?:love|like) (.{2,30})$/))){S.facts.likes=[...new Set(S.facts.likes.concat(m[1]))].slice(-5);save();return (/ i (love|like) /.test(t)?'Lovely, I will remember you like '+m[1]+' 🌹 (only on your device).':'Qué bonito, me apunto que te gusta '+m[1]+' 🌹 (solo en tu dispositivo).')}
  if((m=String(q).match(/(?:mi sueño es|sueño con|my dream is|i dream of|meu sonho é|mon rêve est|il mio sogno è)\s+(.{3,80})/i))){const d=m[1].replace(/[.!?]+$/,'');S.facts.dreams=S.facts.dreams.concat(d).slice(-5);nudge(.1);S.tone='feliz';S.last='dream';save();return X.dreamSaved(d)}
  // 4) Emociones (3 pasos)
  const d=detect(t);const isQ=/[?¿]/.test(q);
@@ -267,7 +267,7 @@ function reply(q){const t=norm(q),w=t.split(' ');mood();
  S.tone=tone;save();return r}
 function welcome(){S.visits=(S.visits||0)+1;save();const L=uiLang();return (S.visits>1&&S.name)?T[L].back(S.name)+(S.facts.dreams.length?(L==='es'?' ¿Cómo va tu sueño de '+S.facts.dreams[S.facts.dreams.length-1]+'?':''):''):T[L].welcome}
 function moodInfo(){const M=mood();const l=mlabel(M.m);const tone=S.tone||'calido';return{m:+M.m.toFixed(2),label:l,name:(CORE[l]||['calma'])[0],tone,voice:Object.assign({tone},TONES[tone]||TONES.calido)}}
-G.ASDRUBAL={reply,welcome,moodInfo,forget,save,norm,detectLang,poem:(topic,L)=>poem(norm(topic||''),L||uiLang()),
+G.ASDRUBAL={isCrisis:q=>{const t=norm(q),w=t.split(' ');return CRISIS.some(k=>has(t,w,k))||VIOL.some(k=>has(t,w,k))},reply,welcome,moodInfo,forget,save,norm,detectLang,poem:(topic,L)=>poem(norm(topic||''),L||uiLang()),
  setLang:l=>{if(LANGS.includes(l)){S.lang=l;save()}},get lang(){return uiLang()},get state(){return S},
  log:(r,x)=>{S.log.push({r,t:x});save()},history:()=>S.log.slice(),LANGS};
 })(window);

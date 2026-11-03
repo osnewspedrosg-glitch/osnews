@@ -2,9 +2,10 @@
 <html lang="es">
 <head>
 <script src="creador.js"></script>
+<script src="charla.js"></script>
 <script>/* MAY_ANDROID_BRIDGE_V1: en la app Android (WebView) usa la voz y el micrófono nativos del teléfono */(function(){var N=window.MAYNative;if(!N)return;
 window.SpeechSynthesisUtterance=function(t){this.text=t||'';this.lang='es-ES';this.pitch=1;this.rate=1;this.volume=1;this.voice=null};
-window.speechSynthesis={onvoiceschanged:null,getVoices:function(){return[]},speak:function(u){window.__mayU=u;try{u.onstart&&u.onstart()}catch(e){}N.speak(String(u.text),+u.pitch||1,+u.rate||1)},cancel:function(){N.stop()}};
+window.speechSynthesis={onvoiceschanged:null,getVoices:function(){return[]},speak:function(u){window.__mayU=u;try{u.onstart&&u.onstart()}catch(e){}N.speak2?N.speak2(String(u.text),+u.pitch||1,+u.rate||1,String(u.lang||'es-ES')):N.speak(String(u.text),+u.pitch||1,+u.rate||1)},cancel:function(){N.stop()}};
 window.__mayTtsDone=function(){var u=window.__mayU;window.__mayU=null;try{u&&u.onend&&u.onend()}catch(e){}};
 var SR=function(){window.__mayRec=this;this.lang='es-ES';this.start=function(){N.listen(this.lang||'es-ES')};this.stop=function(){N.stopListen()}};
 try{window.SpeechRecognition=SR;window.webkitSpeechRecognition=SR}catch(e){}
@@ -778,7 +779,7 @@ setInterval(poll, POLL_MS);
  let voice=null;
  function pickVoice(){const v=speechSynthesis.getVoices();const es=v.filter(x=>/^es(-|_)ES/i.test(x.lang));const fem=/(female|mujer|helena|laura|elvira|lucia|lucía|monica|mónica|paulina|google español|sabina|marisol|conchita|ximena|dalia)/i;voice=es.find(x=>fem.test(x.name))||es[0]||v.find(x=>/^es/i.test(x.lang))||null}
  if('speechSynthesis' in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}
- function speak(t){if(!('speechSynthesis' in window)||!$('mcVoiceOn').checked)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t.replace(/https?:\/\/\S+/g,'').replace(/[«»*_#]/g,''));u.lang='es-ES';if(voice)u.voice=voice;const V=(typeof MAY!=='undefined'&&MAY.moodInfo)?MAY.moodInfo().voice:{pitch:1.25,rate:.97,volume:1,pause:0};const P=window.__mayVoice||(window.__mayVoice={pitch:1.25,rate:.97,volume:1});['pitch','rate','volume'].forEach(k=>P[k]=+(P[k]+(V[k]-P[k])*.65).toFixed(3));P.tone=V.tone;u.pitch=P.pitch;u.rate=P.rate;u.volume=P.volume;const p=$('hablaMay');u.onstart=()=>p.classList.add('speaking');u.onend=u.onerror=()=>p.classList.remove('speaking');V.pause?setTimeout(()=>speechSynthesis.speak(u),V.pause):speechSynthesis.speak(u)}
+ function speak(t){if(!('speechSynthesis' in window)||!$('mcVoiceOn').checked)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t.replace(/https?:\/\/\S+/g,'').replace(/[«»*_#]/g,''));const LGm={es:'es-ES',en:'en-GB',pt:'pt-PT',fr:'fr-FR',it:'it-IT'}[window.__mayLang||'es']||'es-ES';u.lang=LGm;if(LGm==='es-ES'){if(voice)u.voice=voice}else{try{const vv=speechSynthesis.getVoices().filter(x=>x.lang&&x.lang.slice(0,2)===LGm.slice(0,2));const fv=vv.find(x=>/(female|mujer|woman|samantha|serena|amelie|alice|luciana|joana|google)/i.test(x.name))||vv[0];if(fv)u.voice=fv}catch(e){}}const V=(typeof MAY!=='undefined'&&MAY.moodInfo)?MAY.moodInfo().voice:{pitch:1.25,rate:.97,volume:1,pause:0};const P=window.__mayVoice||(window.__mayVoice={pitch:1.25,rate:.97,volume:1});['pitch','rate','volume'].forEach(k=>P[k]=+(P[k]+(V[k]-P[k])*.65).toFixed(3));P.tone=V.tone;u.pitch=P.pitch;u.rate=P.rate;u.volume=P.volume;const p=$('hablaMay');u.onstart=()=>p.classList.add('speaking');u.onend=u.onerror=()=>p.classList.remove('speaking');V.pause?setTimeout(()=>speechSynthesis.speak(u),V.pause):speechSynthesis.speak(u)}
  $('mcStop').onclick=()=>{if('speechSynthesis' in window)speechSynthesis.cancel();$('hablaMay').classList.remove('speaking')};
  // --- Motor de personalidad MAY (offline, reglas) · MAY_PERSONALIDAD_V2 ---
  const MAY=(function(){
@@ -856,7 +857,7 @@ setInterval(poll, POLL_MS);
   const MK='osnews_may_memoria';let S={name:null,last:null,lastReply:{},facts:{likes:[]},log:[],visits:0};
   try{const o=JSON.parse(localStorage.getItem(MK));if(o)S=Object.assign(S,o,{lastReply:{}})}catch(e){}
   const save=()=>{try{S.log=S.log.slice(-100);localStorage.setItem(MK,JSON.stringify(S))}catch(e){}};
-  const forget=()=>{try{localStorage.removeItem(MK)}catch(e){}S.name=null;S.last=null;S.facts={likes:[]};S.log=[];S.visits=0;S.may={m:BASE,t:Date.now()};S.emo=[];S.pend=null;S.mode='charla';S.tone='calmada'};
+  const forget=()=>{try{localStorage.removeItem(MK)}catch(e){}S.name=null;S.last=null;S.facts={likes:[]};S.log=[];S.ch=null;S.visits=0;S.may={m:BASE,t:Date.now()};S.emo=[];S.pend=null;S.mode='charla';S.tone='calmada'};
   const TOPIC={sad:'cómo te sentías',love:'tu corazón',ubi:'la IA y el trabajo',singularity:'la singularidad',politics:'la política',debate:'los debates',music:'la música',future:'el futuro de la IA'};
   function welcome(){S.visits=(S.visits||0)+1;save();const back=S.visits>1&&(S.name||S.log.length);if(!back)return null;
    let r='¡Hola otra vez'+(S.name?', '+S.name:'')+'! 💛';const f=S.facts||{};
@@ -1026,11 +1027,13 @@ setInterval(poll, POLL_MS);
    if(best&&TOPIC[best.id]){S.lastTopic=best.id;save()}
    if(!best){const sp=spell(q,t);S.last='fallback';const fb=pick(I.find(x=>x.id==='fallback'),lang);if(sp&&lang!=='en')return'¿Querías decir «'+sp+'»? '+fb;return fb}
    if(best&&lang!=='en'&&Math.random()<0.3){const sp=spell(q,t);if(sp&&sp!==t){S.last=best.id;return'(Entiendo: «¿'+sp+'?») '+pick(best,lang)}}S.last=best.id;return pick(best,lang)}
-  return{reply,moodInfo,detect,get state(){return S},norm,X,save,forget,welcome,log:(role,text)=>{S.log.push({r:role,t:text});save()},history:()=>S.log.slice()};
+  return{reply,moodInfo,detect,isCrisis:q=>{const t=norm(q),w=t.split(' ');const c=I.find(x=>x.id==='emergency');return !!(c&&c.k.some(k=>has(t,w,k)))},get state(){return S},norm,X,save,forget,welcome,log:(role,text)=>{S.log.push({r:role,t:text});save()},history:()=>S.log.slice()};
  })();
  function offline(q){return MAY.reply(q)}
  async function ask(q){add('user',q);history.push({role:'user',text:q});const w=add('may','MAY está escribiendo…');w.classList.add('mc-typing');let r=null;const t0=Date.now(),wait=400+Math.random()*500;
-  const CR=window.OSN_CREATOR_REPLY&&OSN_CREATOR_REPLY('may',q);if(CR)r=CR;/* CREADOR_V1: prioridad sobre API y reglas genéricas */
+  const CH=window.__mayCharla||(window.OSN_CHARLA&&(window.__mayCharla=OSN_CHARLA({who:'may',state:()=>MAY.state,save:()=>MAY.save(),ui:()=>'es',isCrisis:x=>MAY.isCrisis(x)})));const LG=CH?CH.langOf(q):'es';window.__mayLang=LG;if(MAY.isCrisis(q)){r=offline(q);window.__mayLang='es'}/* CHARLA_V1: crisis con prioridad absoluta */
+  const CR=!r&&window.OSN_CREATOR_REPLY&&OSN_CREATOR_REPLY('may',q);if(CR)r=CR;
+  if(!r&&CH){const c=CH.turn(q);if(c){r=c.text;window.__mayLang=c.lang}}/* CREADOR_V1: prioridad sobre API y reglas genéricas */
   if(!r&&online){try{const res=await fetch(API+'/api/may',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:history})});if(res.ok)r=(await res.json()).reply}catch(e){}}
   if(!r){r=offline(q)}
   const left=wait-(Date.now()-t0);if(left>0)await new Promise(z=>setTimeout(z,left));w.classList.remove('mc-typing');
@@ -1039,12 +1042,12 @@ setInterval(poll, POLL_MS);
  // --- Micrófono (Web Speech API, es-ES) ---
  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
  if(!SR){$('mcMic').disabled=true;$('mcMic').title='Tu navegador no admite reconocimiento de voz'}
- else{let rec=null;$('mcMic').onclick=()=>{if(rec){rec.stop();return}rec=new SR();rec.lang='es-ES';rec.interimResults=false;$('mcMic').classList.add('rec');
+ else{let rec=null;$('mcMic').onclick=()=>{if(rec){rec.stop();return}rec=new SR();rec.lang={es:'es-ES',en:'en-GB',pt:'pt-PT',fr:'fr-FR',it:'it-IT'}[window.__mayLang||'es']||'es-ES';rec.interimResults=false;$('mcMic').classList.add('rec');
   rec.onresult=e=>{const q=e.results[0][0].transcript.trim();if(q)ask(q)};rec.onend=()=>{rec=null;$('mcMic').classList.remove('rec')};rec.onerror=()=>{};rec.start()}}
  // --- Comprobar backend ---
  (HASAPI?fetch(API+'/api/may',{cache:'no-store'}):Promise.reject()).then(r=>r.ok?r.json():null).then(d=>{online=!!(d&&d.ok)}).catch(()=>{}).finally(()=>{st.textContent=online?'● MAY en línea (IA)':'● MAY · personalidad Copilot (modo web)';st.className='mc-status '+(online?'on':'off');loadPoll()});
  {const c=document.createElement('div');c.className='mc-credit';c.innerHTML='MAY · creada por Pedro Sánchez Gómez (Mar Menor) con Copilot y Grok · OSNews · <a href="asdrubal/">🌹 Conoce a Asdrúbal</a>';log.parentNode.insertBefore(c,log.nextSibling)}
- {const H=MAY.history();H.forEach(m=>add(m.r==='u'||m.r==='user'?'user':'may',m.t));MAY.X.onTimer=x=>{add('may',x);speak(x)};const c=document.createElement('div');c.className='mc-credit';c.innerHTML='🔒 Tu memoria con MAY se guarda solo en este dispositivo. <button type="button" id="mcForget" class="mc-forget">Olvidar mis datos</button>';log.parentNode.insertBefore(c,log.nextSibling);$('mcForget').onclick=()=>{MAY.forget();try{mayMoodUI()}catch(e){};log.innerHTML='';add('may','Hecho 💛: he olvidado tu nombre, tus datos y nuestra conversación en este dispositivo.')};const wb=MAY.welcome();add('may',wb||'¡Hola! Soy MAY, la presentadora IA de OSNews. Pregúntame lo que quieras sobre los debates, los boletines o la comunidad. Y en la encuesta de al lado… tú decides.')}
+ {const H=MAY.history();H.forEach(m=>add(m.r==='u'||m.r==='user'?'user':'may',m.t));MAY.X.onTimer=x=>{add('may',x);speak(x)};const c=document.createElement('div');c.className='mc-credit';c.innerHTML='🔒 Tu memoria con MAY se guarda solo en este dispositivo. <button type="button" id="mcForget" class="mc-forget">Olvidar mis datos</button>';log.parentNode.insertBefore(c,log.nextSibling);$('mcForget').onclick=()=>{MAY.forget();try{mayMoodUI()}catch(e){};log.innerHTML='';add('may','Hecho 💛: he olvidado tu nombre, tus datos y nuestra conversación en este dispositivo.');if(window.__mayCharla)add('may',__mayCharla.welcome())};const wb=MAY.welcome();const CHw=window.OSN_CHARLA&&(window.__mayCharla=window.__mayCharla||OSN_CHARLA({who:'may',state:()=>MAY.state,save:()=>MAY.save(),ui:()=>'es',isCrisis:x=>MAY.isCrisis(x)}));add('may',(CHw&&CHw.welcome())||wb||'¡Hola! Soy MAY, la presentadora IA de OSNews. Pregúntame lo que quieras sobre los debates, los boletines o la comunidad. Y en la encuesta de al lado… tú decides.')}
 
  /* MAY_EMOCIONES_V1 · indicador de ánimo (hexágono) */
  window.mayMoodUI=function(){const h=$('mcHex');if(!h||!MAY.moodInfo)return;const o=MAY.moodInfo();const E=[['alegria','Alegría','+1'],['sorpresa','Sorpresa','0'],['miedo','Miedo','−1'],['ira','Ira','−1'],['asco','Asco','−1'],['tristeza','Tristeza','−1']];
@@ -1075,6 +1078,7 @@ b.onclick=async()=>{if(!dp)return;dp.prompt();await dp.userChoice.catch(()=>{});
 const ios=/iphone|ipad|ipod/i.test(navigator.userAgent)&&!navigator.standalone;if(ios)document.getElementById('mcIosHint').hidden=false})();</script>
 <script>/* MAY_APP_FOCUS_V1 */(function(){const q=new URLSearchParams(location.search);if(q.has('may')||q.has('app')||/^#(may|hablaMay)$/.test(location.hash)||/MAYAndroidApp/.test(navigator.userAgent)){window.addEventListener('load',()=>{const p=document.getElementById('hablaMay'),i=document.getElementById('mcInput');if(p)p.scrollIntoView({block:'start'});if(i)setTimeout(()=>i.focus({preventScroll:true}),400)})}
 if(/MAYAndroidApp/.test(navigator.userAgent)){const b=document.getElementById('mcInstall');if(b)b.remove()}})();</script>
-<script src="holograma.js" data-name="MAY" data-img="assets/may-avatar.jpg" data-after="mcStop" data-form="mcForm" data-input="mcInput" data-mic="mcMic" data-log="mcLog" data-bot=".mc-may" data-speaking="hablaMay" data-theme="cian"></script>
+<style>/* CHARLA_V1: evita desbordes horizontales del chat en móvil */.mc-grid>*{min-width:0}.mc-chatcol .holo-btn{display:block;margin:8px 0 0}.mc-log .mc-msg{overflow-wrap:anywhere}</style>
+<script src="holograma.js" data-name="MAY" data-img="assets/may-avatar.jpg" data-after="mcForm" data-form="mcForm" data-input="mcInput" data-mic="mcMic" data-log="mcLog" data-bot=".mc-may" data-speaking="hablaMay" data-theme="cian"></script>
 </body>
 </html>

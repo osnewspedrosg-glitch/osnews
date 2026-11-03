@@ -56,6 +56,7 @@ footer{text-align:center;color:var(--mu);font-size:13px;margin-top:14px}
 <footer>Asdrúbal · creado por Pedro Sánchez Gómez (Mar Menor) con Copilot y Grok · OSNews</footer>
 </main>
 <script src="creador.js"></script>
+<script src="charla.js"></script>
 <script src="engine.js"></script>
 <script>
 (function(){
@@ -79,8 +80,8 @@ function pickVoice(){if(!('speechSynthesis' in window))return;const v=speechSynt
 if('speechSynthesis' in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}
 const clean=t=>t.replace(/https?:\/\/\S+/g,'').replace(/[«»*_#📜🌹💜💛✨🌿🌙🌊😊]/gu,'').replace(/—.*$/m,'');
 function speak(t){if(!$('voiceOn').checked)return;const V=A.moodInfo().voice;stopAll(true);
- if(N){try{N.speak2?N.speak2(clean(t),V.pitch,V.rate,VL[L]):N.speak(clean(t),V.pitch,V.rate)}catch(e){}return}
- if(!('speechSynthesis' in window))return;pickVoice();const u=new SpeechSynthesisUtterance(clean(t));u.lang=VL[L];if(voice)u.voice=voice;u.pitch=V.pitch;u.rate=V.rate;u.volume=V.volume;
+ if(N){try{N.speak2?N.speak2(clean(t),V.pitch,V.rate,VL[window.__asdLang||L]):N.speak(clean(t),V.pitch,V.rate)}catch(e){}return}
+ if(!('speechSynthesis' in window))return;pickVoice();const u=new SpeechSynthesisUtterance(clean(t));u.lang=VL[window.__asdLang||L];if(voice)u.voice=voice;u.pitch=V.pitch;u.rate=V.rate;u.volume=V.volume;
  u.onstart=()=>$('wrap').classList.add('speaking');u.onend=u.onerror=()=>$('wrap').classList.remove('speaking');speechSynthesis.speak(u)}
 
 /* ---- Cantar (Web Audio + voz por palabras siguiendo la melodía) · canto sintetizado ---- */
@@ -117,21 +118,21 @@ function add(role,text){const d=document.createElement('div');d.className='msg '
   s.children[0].onclick=()=>singPoem(text);s.children[1].onclick=()=>stopAll();d.appendChild(s)}
  log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
 const SINGRE=/\b(canta|cantame|cantamelo|cantar|sing|chante|cantami|canta-me)/i;
-async function ask(q){add('u',q);const w=add('a',UI[L].typing);w.classList.add('typing');const r=A.reply(q);await sleep(350+Math.random()*350);w.remove();add('a',r);A.log('u',q);A.log('a',r);moodUI();
+async function ask(q){add('u',q);const w=add('a',UI[L].typing);w.classList.add('typing');const CH=window.__asdCharla;const c=CH&&CH.turn(q);const r=c?c.text:A.reply(q);window.__asdLang=c?c.lang:(A.isCrisis&&A.isCrisis(q)?null:(A.detectLang(A.norm(q),q,L)||L));await sleep(350+Math.random()*350);w.remove();add('a',r);A.log('u',q);A.log('a',r);moodUI();
  if(r.startsWith('📜')&&SINGRE.test(A.norm(q)))singPoem(r);else speak(r)}
 $('f').onsubmit=e=>{e.preventDefault();const q=$('in').value.trim();if(!q)return;$('in').value='';ask(q)};
-$('forget').onclick=()=>{A.forget();A.setLang(L);log.innerHTML='';add('a',UI[L].forgot);moodUI()};
+$('forget').onclick=()=>{A.forget();A.setLang(L);log.innerHTML='';add('a',UI[L].forgot);window.__asdLang=L;if(window.__asdCharla)add('a',__asdCharla.welcome());moodUI()};
 /* micrófono */
 const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
 window.__asdRecResult=q=>ask(q);window.__asdRecEnd=()=>$('mic').style.opacity=1;
-$('mic').onclick=()=>{if(N&&N.listen){$('mic').style.opacity=.5;N.listen(VL[L]);return}if(!SR){alert('🎤 ✗');return}const r=new SR();r.lang=VL[L];$('mic').style.opacity=.5;r.onresult=e=>ask(e.results[0][0].transcript);r.onend=()=>$('mic').style.opacity=1;r.start()};
+$('mic').onclick=()=>{if(N&&N.listen){$('mic').style.opacity=.5;N.listen(VL[window.__asdLang||L]);return}if(!SR){alert('🎤 ✗');return}const r=new SR();r.lang=VL[window.__asdLang||L];$('mic').style.opacity=.5;r.onresult=e=>ask(e.results[0][0].transcript);r.onend=()=>$('mic').style.opacity=1;r.start()};
 /* hexágono de ánimo (rueda de 6 emociones) */
 function moodUI(){const o=A.moodInfo();const E=[['alegria','Ale'],['sorpresa','Sor'],['miedo','Mie'],['ira','Ira'],['asco','Asc'],['tristeza','Tri']];
  const P=E.map((e,k)=>{const a=(-90+60*k)*Math.PI/180;return[Math.cos(a)*30,Math.sin(a)*30]});let g='<polygon points="'+P.map(p=>p.map(x=>x.toFixed(1)).join(',')).join(' ')+'" fill="rgba(176,107,255,.1)" stroke="#b06bff" stroke-width="1.2"/>';
  E.forEach((e,k)=>{g+='<text x="'+(P[k][0]*1.4).toFixed(1)+'" y="'+(P[k][1]*1.4+3).toFixed(1)+'" font-size="10" text-anchor="middle" fill="'+(e[0]===o.label?'#f5c451':'#8a7fa6')+'">'+e[1]+'</text>'});
  const k=E.findIndex(e=>e[0]===o.label),r=k<0?0:Math.min(1,Math.abs(o.m)+.25);g+='<circle cx="'+(k<0?0:P[k][0]*r).toFixed(1)+'" cy="'+(k<0?0:P[k][1]*r).toFixed(1)+'" r="4.5" fill="#f5c451"/>';$('hex').innerHTML=g;
  $('moodTxt').textContent=UI[L].mood+': '+(o.m>=0?'+':'−')+Math.abs(o.m).toFixed(1)+' · '+o.name+' · '+o.tone}
-applyUI();A.history().forEach(m=>add(m.r==='u'?'u':'a',m.t));add('a',A.welcome());
+applyUI();A.history().forEach(m=>add(m.r==='u'?'u':'a',m.t));window.__asdCharla=window.OSN_CHARLA&&OSN_CHARLA({who:'asdrubal',state:()=>A.state,save:()=>A.save(),ui:()=>L,isCrisis:x=>A.isCrisis(x)});add('a',(window.__asdCharla&&__asdCharla.welcome())||A.welcome());
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js',{scope:'./'}).catch(()=>{});
 })();
 </script><script src="holograma.js" data-name="Asdrúbal" data-img="asdrubal-avatar.jpg" data-after="stop" data-form="f" data-input="in" data-mic="mic" data-log="log" data-bot=".msg.a,.msg.poem" data-speaking="wrap" data-theme="violeta"></script></body></html>
