@@ -1073,5 +1073,6 @@ b.onclick=async()=>{if(!dp)return;dp.prompt();await dp.userChoice.catch(()=>{});
 const ios=/iphone|ipad|ipod/i.test(navigator.userAgent)&&!navigator.standalone;if(ios)document.getElementById('mcIosHint').hidden=false})();</script>
 <script>/* MAY_APP_FOCUS_V1 */(function(){const q=new URLSearchParams(location.search);if(q.has('may')||q.has('app')||/^#(may|hablaMay)$/.test(location.hash)||/MAYAndroidApp/.test(navigator.userAgent)){window.addEventListener('load',()=>{const p=document.getElementById('hablaMay'),i=document.getElementById('mcInput');if(p)p.scrollIntoView({block:'start'});if(i)setTimeout(()=>i.focus({preventScroll:true}),400)})}
 if(/MAYAndroidApp/.test(navigator.userAgent)){const b=document.getElementById('mcInstall');if(b)b.remove()}})();</script>
+<script src="holograma.js" data-name="MAY" data-img="assets/may-avatar.jpg" data-after="mcStop" data-form="mcForm" data-input="mcInput" data-mic="mcMic" data-log="mcLog" data-bot=".mc-may" data-speaking="hablaMay" data-theme="cian"></script>
 </body>
 </html>
