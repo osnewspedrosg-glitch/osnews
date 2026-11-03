@@ -1,0 +1,696 @@
+{
+ "_doc": "Curación manual: qué posts reales (por ID de X) entran en cada tema, a quién hacen referencia y la postura de las reacciones. build_dataset.py combina esto con raw/*.txt (respuestas literales de la API de X). No escribir aquí texto de citas: el texto sale SIEMPRE de la API.",
+ "countries": {
+  "ES": {
+   "name": "España",
+   "flag": "🇪🇸",
+   "status": "live",
+   "news_keywords": [
+    "Spain",
+    "Spanish",
+    "España",
+    "Sánchez",
+    "Vox",
+    "Madrid",
+    "Feijóo",
+    "Abascal"
+   ],
+   "politicians": [
+    {
+     "handle": "sanchezcastejon",
+     "short": "Sánchez",
+     "role": "Presidente del Gobierno · PSOE",
+     "color": "#ff3b5c"
+    },
+    {
+     "handle": "NunezFeijoo",
+     "short": "Feijóo",
+     "role": "Presidente del PP · líder de la oposición",
+     "color": "#3aa0ff"
+    },
+    {
+     "handle": "Santi_ABASCAL",
+     "short": "Abascal",
+     "role": "Presidente de VOX",
+     "color": "#5fdc5f"
+    },
+    {
+     "handle": "elonmusk",
+     "short": "Musk",
+     "role": "Empresario · dueño de X (invitado)",
+     "color": "#c0c8d8"
+    },
+    {
+     "handle": "IdiazAyuso",
+     "short": "Ayuso",
+     "role": "Presidenta de la Comunidad de Madrid · PP",
+     "color": "#ff8c3a"
+    }
+   ],
+   "topics": {
+    "redes": {
+     "label": "Redes sociales e IA",
+     "icon": "🤖",
+     "xsearch": "Sánchez redes sociales IA",
+     "intro": "Hoy debatimos sobre la regulación de las redes sociales y la inteligencia artificial en España.",
+     "quotes": [
+      {
+       "id": "2018649760580718738"
+      },
+      {
+       "id": "2018873150973612340",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "post_id": "2018649760580718738",
+         "kind": "responde a"
+        }
+       ]
+      },
+      {
+       "id": "2018746867056513207",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "post_id": "2018649760580718738",
+         "kind": "cita un post sobre"
+        }
+       ]
+      },
+      {
+       "id": "2019885983693463888"
+      },
+      {
+       "id": "2018773911907811678",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "menciona a"
+        }
+       ]
+      },
+      {
+       "id": "2018955531616985313",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "menciona a"
+        }
+       ]
+      },
+      {
+       "id": "2019346734791483392",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "menciona a"
+        },
+        {
+         "handle": "NunezFeijoo",
+         "kind": "menciona al partido de"
+        }
+       ]
+      },
+      {
+       "id": "1990754902143078460"
+      },
+      {
+       "id": "2084618279767736490",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "alude al presidente"
+        }
+       ]
+      },
+      {
+       "id": "2045062768009650479"
+      },
+      {
+       "id": "2103283495128662224"
+      },
+      {
+       "id": "2112500676345426227"
+      },
+      {
+       "id": "2008280669844095045"
+      },
+      {
+       "id": "2101965347137966085"
+      }
+     ],
+     "reactions": [
+      {
+       "id": "2018648933808169196",
+       "stance": "favor"
+      },
+      {
+       "id": "2018623574286668031",
+       "stance": "favor"
+      },
+      {
+       "id": "2018749023142965580",
+       "stance": "contra"
+      },
+      {
+       "id": "2029162221381603785",
+       "stance": "contra"
+      }
+     ]
+    },
+    "inmigracion": {
+     "label": "Inmigración",
+     "icon": "🌍",
+     "xsearch": "regularización inmigrantes España",
+     "intro": "Abrimos el bloque de inmigración: la regularización extraordinaria y el control de fronteras.",
+     "quotes": [
+      {
+       "id": "2043955258640957784"
+      },
+      {
+       "id": "2040375456248001010",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "critica al Gobierno de"
+        }
+       ]
+      },
+      {
+       "id": "2017688917655404924",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "se dirige a"
+        }
+       ]
+      },
+      {
+       "id": "2017928667230531671",
+       "refs": [
+        {
+         "handle": "NunezFeijoo",
+         "kind": "critica al partido de"
+        }
+       ]
+      },
+      {
+       "id": "2016868234918551872",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "menciona a"
+        }
+       ]
+      },
+      {
+       "id": "2082927356893683771",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "cita un post sobre"
+        }
+       ]
+      },
+      {
+       "id": "2044838963639156771"
+      },
+      {
+       "id": "2046201974597505101"
+      },
+      {
+       "id": "2044383016361902555"
+      },
+      {
+       "id": "2045812437719658544",
+       "refs": [
+        {
+         "handle": "NunezFeijoo",
+         "kind": "critica al partido de"
+        }
+       ]
+      },
+      {
+       "id": "2082108041349017984",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "menciona a"
+        },
+        {
+         "handle": "NunezFeijoo",
+         "kind": "critica al partido de"
+        }
+       ]
+      },
+      {
+       "id": "2083163473144434884"
+      },
+      {
+       "id": "2100135936940024232",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "se dirige a"
+        }
+       ]
+      },
+      {
+       "id": "2112589222855217167"
+      }
+     ],
+     "reactions": [
+      {
+       "id": "2045195640846557573",
+       "stance": "favor"
+      },
+      {
+       "id": "2044873263977836810",
+       "stance": "favor"
+      },
+      {
+       "id": "2045940994445660299",
+       "stance": "favor"
+      },
+      {
+       "id": "2046173397760053343",
+       "stance": "contra"
+      },
+      {
+       "id": "2044393179898638736",
+       "stance": "contra"
+      }
+     ]
+    },
+    "economia": {
+     "label": "Economía y vivienda",
+     "icon": "💶",
+     "xsearch": "decretos vivienda alquiler España",
+     "intro": "Pasamos a economía: empleo, impuestos y la crisis de la vivienda.",
+     "quotes": [
+      {
+       "id": "2082068708252352819"
+      },
+      {
+       "id": "2071684704634319260",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "menciona a"
+        }
+       ]
+      },
+      {
+       "id": "2104547388782199011"
+      },
+      {
+       "id": "2104968850710139016"
+      },
+      {
+       "id": "2105024363083006225",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "post_id": "2104968850710139016",
+         "kind": "cita y responde a"
+        }
+       ]
+      },
+      {
+       "id": "2101646387364434016",
+       "refs": [
+        {
+         "handle": "NunezFeijoo",
+         "kind": "menciona a"
+        }
+       ]
+      },
+      {
+       "id": "2108635520515678619"
+      },
+      {
+       "id": "2082927356893683771",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "cita un post sobre"
+        }
+       ]
+      },
+      {
+       "id": "2066822365757984981"
+      },
+      {
+       "id": "2067365288425730059",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "alude a"
+        }
+       ]
+      },
+      {
+       "id": "2105936009934352643"
+      }
+     ],
+     "reactions": [
+      {
+       "id": "2105669327798071747",
+       "stance": "favor"
+      },
+      {
+       "id": "2106607012595261790",
+       "stance": "favor"
+      },
+      {
+       "id": "2105713868831854725",
+       "stance": "contra"
+      },
+      {
+       "id": "2106275305900192022",
+       "stance": "contra"
+      },
+      {
+       "id": "2105589707572699560",
+       "stance": "contra"
+      }
+     ]
+    },
+    "madrid": {
+     "label": "Ayuso vs Sánchez",
+     "icon": "🏛️",
+     "xsearch": "Ayuso Sánchez",
+     "showcase": true,
+     "intro": "Duelo en la mesa: la presidenta madrileña Isabel Díaz Ayuso y el presidente Pedro Sánchez, con sus propias palabras en X.",
+     "quotes": [
+      {
+       "id": "2088575392370000144",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "menciona a"
+        }
+       ]
+      },
+      {
+       "id": "2094350392876228663",
+       "refs": [
+        {
+         "handle": "IdiazAyuso",
+         "kind": "menciona a"
+        }
+       ]
+      },
+      {
+       "id": "2097639378176639137",
+       "refs": [
+        {
+         "handle": "IdiazAyuso",
+         "kind": "menciona a"
+        },
+        {
+         "handle": "NunezFeijoo",
+         "kind": "menciona a"
+        }
+       ]
+      },
+      {
+       "id": "2097719449642012818",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "menciona a"
+        }
+       ]
+      },
+      {
+       "id": "2104183930081435787",
+       "refs": [
+        {
+         "handle": "IdiazAyuso",
+         "kind": "menciona a"
+        },
+        {
+         "handle": "NunezFeijoo",
+         "kind": "menciona a"
+        }
+       ]
+      },
+      {
+       "id": "2107724621264957698",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "menciona a"
+        }
+       ]
+      },
+      {
+       "id": "2108120769016606732",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "kind": "menciona a"
+        }
+       ]
+      }
+     ],
+     "reactions": [],
+     "max_per": 4
+    },
+    "ia": {
+     "label": "IA y futuro de la humanidad",
+     "icon": "🧠",
+     "xsearch": "Elon Musk AI humanity",
+     "showcase": true,
+     "intro": "Hablamos de inteligencia artificial y del futuro de la humanidad, con Elon Musk y lo que han publicado sobre ello.",
+     "quotes": [
+      {
+       "id": "2110695927312777466"
+      },
+      {
+       "id": "2099461843269906606"
+      },
+      {
+       "id": "2098935235446551022"
+      },
+      {
+       "id": "2097686835338375265"
+      },
+      {
+       "id": "2096288211962056736"
+      },
+      {
+       "id": "2094585397938475239"
+      },
+      {
+       "id": "2101011740574052697"
+      },
+      {
+       "id": "2103283495128662224"
+      },
+      {
+       "id": "2101965347137966085"
+      }
+     ],
+     "reactions": [],
+     "max_per": 4
+    },
+    "feminismo": {
+     "label": "Feminismo · campaña 29N",
+     "icon": "💜",
+     "xsearch": "Sánchez Feijóo feminismo",
+     "showcase": true,
+     "intro": "Cara a cara en campaña: Pedro Sánchez y Alberto Núñez Feijóo chocan en X por el feminismo, con sus propias palabras.",
+     "quotes": [
+      {
+       "id": "2113567032859939259",
+       "refs": [
+        {
+         "handle": "NunezFeijoo",
+         "kind": "menciona a"
+        }
+       ]
+      },
+      {
+       "id": "2113594169981596149",
+       "refs": [
+        {
+         "handle": "sanchezcastejon",
+         "post_id": "2113567032859939259",
+         "kind": "responde citando a"
+        }
+       ]
+      }
+     ],
+     "reactions": [],
+     "max_per": 4
+    }
+   }
+  },
+  "US": {
+   "name": "EE.UU.",
+   "flag": "🇺🇸",
+   "status": "live",
+   "news_keywords": [
+    "Trump"
+   ],
+   "politicians": [
+    {
+     "handle": "realDonaldTrump",
+     "short": "Trump",
+     "role": "Presidente de EE.UU. · X y Truth Social",
+     "color": "#ff5a36"
+    }
+   ],
+   "topics": {
+    "cuba": {
+     "label": "Trump sobre Cuba",
+     "icon": "🇨🇺",
+     "xsearch": "Trump Cuba",
+     "showcase": true,
+     "max_per": 4,
+     "intro": "Donald Trump sobre Cuba, con sus publicaciones literales en X y Truth Social.",
+     "quotes": [
+      {
+       "id": "1994438342403141889"
+      },
+      {
+       "id": "ts_115876460615555838"
+      },
+      {
+       "id": "ts_116561460158049642"
+      }
+     ],
+     "reactions": []
+    },
+    "china": {
+     "label": "Trump sobre China",
+     "icon": "🇨🇳",
+     "xsearch": "Trump China",
+     "showcase": true,
+     "max_per": 4,
+     "intro": "Donald Trump sobre China: de los aranceles a Xi Jinping, con sus publicaciones literales.",
+     "quotes": [
+      {
+       "id": "1909258777380974625"
+      },
+      {
+       "id": "ts_117383979597248683"
+      },
+      {
+       "id": "ts_117431307261297275"
+      }
+     ],
+     "reactions": []
+    }
+   }
+  },
+  "MX": {
+   "name": "México",
+   "flag": "🇲🇽",
+   "status": "soon"
+  },
+  "AR": {
+   "name": "Argentina",
+   "flag": "🇦🇷",
+   "status": "soon"
+  },
+  "FR": {
+   "name": "Francia",
+   "flag": "🇫🇷",
+   "status": "soon"
+  }
+ },
+ "news_files": {
+  "ES": "raw/news_es.txt"
+ },
+ "news_filter_categories": [
+  "News"
+ ],
+ "partners": [
+  {
+   "name": "MAY",
+   "desc": "Periodista IA de OSNews · MAY OS 13G (proyecto propio)",
+   "web": null,
+   "price": "Próximamente",
+   "x": null
+  },
+  {
+   "name": "Microsoft Copilot",
+   "desc": "Asistente IA de Microsoft (incluido en Microsoft 365)",
+   "web": "https://www.microsoft.com/es-es/microsoft-365/copilot",
+   "price": "Gratis (versión básica) · Microsoft 365 Personal 10,00 €/mes · Familia 13,00 €/mes · Premium 22,00 €/mes (219,00 €/año), IVA incl.",
+   "price_source": "https://www.microsoft.com/es-es/microsoft-365/buy/compare-all-microsoft-365-products",
+   "checked": "2026-10-24",
+   "x": "MSFTCopilot"
+  },
+  {
+   "name": "Grok",
+   "desc": "IA de xAI, incluida en The X Subscription",
+   "web": "https://grok.com",
+   "price": "Free 0 $ · Plus 8 $/mes · Premium 30 $/mes · Super 100 $/mes · Ultra 200 $/mes (USD, sin impuestos)",
+   "price_source": "https://x.ai/pricing",
+   "checked": "2026-10-24",
+   "x": "grok"
+  },
+  {
+   "name": "Starlink",
+   "desc": "Internet por satélite de SpaceX",
+   "web": "https://www.starlink.com/es",
+   "price": "Residencial 100 Mbps 35 €/mes · 200 Mbps 45 €/mes · Max 65 €/mes · Itinerante 100 GB 45 €/mes · Itinerante ilimitada 95 €/mes (España; kit/alquiler aparte)",
+   "price_source": "https://starlink.com/es/service-plans",
+   "checked": "2026-10-24",
+   "x": "Starlink"
+  }
+ ],
+ "osnews_x": {
+  "handle": "Osnewsmaygrok",
+  "name": "OSNews",
+  "url": "https://x.com/Osnewsmaygrok",
+  "status": "activa (verificada 2026-10-24, sin posts todavía)"
+ },
+ "external_posts": {
+  "ts_115876460615555838": {
+   "author": "realDonaldTrump",
+   "author_name": "Donald J. Trump",
+   "platform": "Truth Social",
+   "lang": "en",
+   "created_at": "2026-01-11T12:27:49Z",
+   "url": "https://truthsocial.com/@realDonaldTrump/posts/115876460615555838",
+   "corroboration": "https://www.bbc.co.uk/news/articles/cx2kv2gn62vo",
+   "text": "Cuba lived, for many years, on large amounts of OIL and MONEY from Venezuela. In return, Cuba provided “Security Services” for the last two Venezuelan dictators, BUT NOT ANYMORE! Most of those Cubans are DEAD from last weeks U.S.A. attack, and Venezuela doesn’t need protection anymore from the thugs and extortionists who held them hostage for so many years. Venezuela now has the United States of America, the most powerful military in the World (by far!), to protect them, and protect them we will. THERE WILL BE NO MORE OIL OR MONEY GOING TO CUBA - ZERO! I strongly suggest they make a deal, BEFORE IT IS TOO LATE. Thank you for your attention to this matter. President DJT"
+  },
+  "ts_116561460158049642": {
+   "author": "realDonaldTrump",
+   "author_name": "Donald J. Trump",
+   "platform": "Truth Social",
+   "lang": "en",
+   "created_at": "2026-05-12T11:52:13Z",
+   "url": "https://truthsocial.com/@realDonaldTrump/116561460158049642",
+   "corroboration": null,
+   "date_note": "fecha derivada del ID del post (formato snowflake de Truth Social)",
+   "text": "No Republican has ever spoken to me about Cuba, which is a failed country and only heading in one direction - down! Cuba is asking for help, and we are going to talk!!! In the meantime, I’m off to China! President DJT"
+  },
+  "ts_117383979597248683": {
+   "author": "realDonaldTrump",
+   "author_name": "Donald J. Trump",
+   "platform": "Truth Social",
+   "lang": "en",
+   "created_at": "2026-10-04T18:09:43Z",
+   "url": "https://truthsocial.com/@realDonaldTrump/117383979597248683",
+   "corroboration": "https://www.themirror.com/news/us-news/gallery/barrage-truth-social-posts-exposes-2053559",
+   "text": "A beautiful picture with the Great Leader of China, President Xi Jinping! President DONALD J. TRUMP"
+  },
+  "ts_117431307261297275": {
+   "author": "realDonaldTrump",
+   "author_name": "Donald J. Trump",
+   "platform": "Truth Social",
+   "lang": "en",
+   "created_at": "2026-10-13T02:45:46Z",
+   "url": "https://truthsocial.com/@realDonaldTrump/117431307261297275",
+   "corroboration": "https://www.trumpstruth.org/statuses/42300",
+   "text": "I see so many comments from the Radical Left Morons and Lunatics that China and Russia are helping the “wonderful” Islamic Republic of Iran. If they are, it’s at a very low level, but I don’t believe they are at all. They have too much to lose, and we would know about it, and know about it very fast! Thank you for your attention to this matter. President DONALD J. TRUMP"
+  }
+ }
+}
