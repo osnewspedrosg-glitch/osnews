@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>MAY · OSNews — Descarga la app gratis</title>
-<meta name="description" content="Instala gratis MAY, la presentadora IA de OSNews. Habla con ella por texto y voz. MAY · creada con Copilot.">
+<meta name="description" content="Instala gratis MAY, la presentadora IA de OSNews. Habla con ella por texto y voz. MAY · creada por Pedro Sánchez Gómez (Mar Menor) con Copilot y Grok.">
 <meta name="theme-color" content="#04070f">
 <link rel="manifest" href="../manifest.webmanifest">
 <link rel="icon" href="../assets/may-icon-192.png"><link rel="apple-touch-icon" href="../assets/may-icon-192.png">
@@ -26,12 +26,14 @@ h1{font-size:34px;margin:6px 0 2px;background:linear-gradient(90deg,var(--c1),va
 ul,ol{margin:0;padding-left:20px}li{margin:5px 0}
 .note{font-size:13px;color:var(--mu)}
 #fb{display:none}
-footer{text-align:center;color:var(--mu);font-size:13px;margin-top:22px}
+footer{text-align:center;color:var(--mu);font-size:13px;line-height:1.5;margin-top:22px;padding:0 6px calc(28px + env(safe-area-inset-bottom));overflow-wrap:anywhere}
+.creator{color:var(--tx);font-size:14px;font-weight:600;margin:0 0 6px}
 </style></head><body><main>
 <div class="brand">OSNews · App</div>
 <section class="hero">
 <img class="av" src="../assets/may-avatar.jpg" alt="MAY, la presentadora IA de OSNews">
 <h1>Habla con MAY</h1>
+<p class="creator">Creador: Pedro Sánchez Gómez (Mar Menor), con Copilot y Grok</p>
 <p class="sub">La presentadora IA de OSNews, cariñosa y siempre a tu lado. Gratis, sin cuentas y sin anuncios.</p>
 <button class="btn b1" id="inst">📲 Instalar MAY</button>
 <div class="card note" id="fb"><b>¿No aparece el instalador?</b> En Chrome (Android/PC) abre el menú <b>⋮</b> › <b>Instalar aplicación</b> o <b>Añadir a pantalla de inicio</b>. En iPhone, mira las instrucciones de abajo.</div>
@@ -48,7 +50,7 @@ footer{text-align:center;color:var(--mu);font-size:13px;margin-top:22px}
 <li>🧮 Calculadora, temporizadores, conversiones y titulares.</li>
 <li>🧹 Botón <b>«Olvidar mis datos»</b> para borrarlo todo.</li></ul></section>
 <section class="card"><h2>🔒 Privacidad</h2><p>Tus datos con MAY (nombre, conversación, preferencias) se guardan <b>solo en tu dispositivo</b>. Puedes borrarlos cuando quieras con «Olvidar mis datos».</p></section>
-<footer>MAY · creada con Copilot · OSNews</footer>
+<footer>MAY · creada por Pedro Sánchez Gómez (Mar Menor) con Copilot y Grok · OSNews</footer>
 </main>
 <script>
 if('serviceWorker' in navigator)navigator.serviceWorker.register('../sw.js',{scope:'../'}).catch(()=>{});
