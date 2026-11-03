@@ -157,7 +157,7 @@ footer{max-width:1700px;margin:0 auto;padding:0 20px 30px}
 @keyframes mcPulse{to{box-shadow:0 0 30px rgba(245,196,81,.9)}}
 .mc-info h2{margin:0 0 4px}.mc-info p{margin:2px 0;font-size:13px;color:var(--mut)}
 .mc-rule{font-style:italic;color:var(--gold)!important}
-.mc-status{font-size:11px;color:var(--mut)}.mc-status.on{color:var(--fav)}.mc-status.off{color:var(--gold)}
+.mc-typing{opacity:.65;font-style:italic}.mc-forget{font-size:11px;margin-left:6px;padding:2px 8px;border-radius:10px;border:1px solid var(--mut);background:transparent;color:inherit;cursor:pointer}.mc-credit{font-size:11px;color:var(--mut);margin-top:6px}.mc-status{font-size:11px;color:var(--mut)}.mc-status.on{color:var(--fav)}.mc-status.off{color:var(--gold)}
 .mc-grid{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin-top:12px}
 .mc-log{height:260px;overflow-y:auto;padding:10px;border-radius:12px;background:rgba(0,0,0,.28);border:1px solid var(--bd);display:flex;flex-direction:column;gap:8px}
 .mc-msg{max-width:85%;padding:8px 12px;border-radius:14px;font-size:14px;line-height:1.4;white-space:pre-wrap;word-wrap:break-word}
@@ -181,6 +181,7 @@ footer{max-width:1700px;margin:0 auto;padding:0 20px 30px}
 .mc-xlink{display:inline-block;margin-top:10px;color:var(--cy);font-size:13px}
 @media (max-width:820px){.mc-grid{grid-template-columns:1fr}.maychat{margin:0 8px 12px}.mc-ava,.mc-ava img{width:70px;height:70px}.mc-orbit{inset:-10px;width:90px;height:90px}.mc-log{height:300px}.mc-form{gap:4px}.mc-form .btn{min-width:40px;padding:0 6px}.mc-voice{font-size:14px}}
 </style>
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#04070f"><link rel="apple-touch-icon" href="assets/may-icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="MAY">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -289,7 +290,7 @@ footer{max-width:1700px;margin:0 auto;padding:0 20px 30px}
    <h2><svg width="22" height="22" style="vertical-align:-5px"><use href="#logo"/></svg> Habla con MAY</h2>
    <p><b>MAY</b> · presentadora IA de OSNews · pelirroja, 22 años, voz dulce y cálida. Modera con neutralidad y solo cita declaraciones reales y enlazadas.</p>
    <p class="mc-rule">«Todo vale sin violencia ni ataques personales; mi libertad termina donde empieza la tuya.»</p>
-   <span class="mc-status" id="mcStatus">● conectando…</span>
+   <button type="button" id="mcInstall" class="mc-forget" hidden>📲 Instalar app de MAY</button><span id="mcIosHint" class="mc-credit" hidden>📲 En iPhone: Compartir › Añadir a pantalla de inicio</span> <span class="mc-status" id="mcStatus">● conectando…</span>
   </div>
  </div>
  <div class="mc-grid">
@@ -766,21 +767,168 @@ setInterval(poll, POLL_MS);
  if('speechSynthesis' in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}
  function speak(t){if(!('speechSynthesis' in window)||!$('mcVoiceOn').checked)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t.replace(/https?:\/\/\S+/g,'').replace(/[«»*_#]/g,''));u.lang='es-ES';if(voice)u.voice=voice;u.pitch=1.25;u.rate=0.97;const p=$('hablaMay');u.onstart=()=>p.classList.add('speaking');u.onend=u.onerror=()=>p.classList.remove('speaking');speechSynthesis.speak(u)}
  $('mcStop').onclick=()=>{if('speechSynthesis' in window)speechSynthesis.cancel();$('hablaMay').classList.remove('speaking')};
- // --- Respuestas sin conexión (fallback) ---
- function offline(q){const t=q.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-  if(/whatsapp|comunidad|unir|apunt/.test(t))return'¡Me encantará verte allí! Únete a la comunidad de OSNews en WhatsApp: '+WA;
-  if(/\bx\b|twitter|seguir|canal/.test(t))return'Síguenos en X: @Osnewsmaygrok → '+XU+' Allí publicamos debates, boletines y encuestas.';
-  if(/singular/.test(t))return'Sobre la singularidad no voy a decidir por ti: tú decides. Vota en la encuesta de al lado y mira el debate en X.';
-  if(/cita|dijo|frase|musk|elon|sanchez|feijoo|trump|ayuso|abascal/.test(t))return'Solo cito declaraciones reales y enlazadas a su fuente; nunca invento frases de políticos ni de Elon Musk. En la mesa de debate verás cada cita con su enlace al post original.';
-  if(/debate|mesa/.test(t))return'En la mesa de debate yo modero con neutralidad, con Isabella, Kate y Lazarth, y Asdrúbal en la editorial. La norma: todo vale sin violencia ni ataques personales; mi libertad termina donde empieza la tuya.';
-  if(/boletin|noticia|resumen/.test(t))return'Publicamos boletines con las noticias clave y las reacciones reales en X, siempre con enlace a la fuente. Los encontrarás en @Osnewsmaygrok y en la comunidad de WhatsApp.';
-  if(/eres (una )?ia|robot|humana|real|quien eres|quién eres/.test(t)||/quien eres/.test(t))return'Soy MAY, una inteligencia artificial: la presentadora IA de OSNews. No soy una persona, pero intento hablar contigo con cariño.';
-  if(/osnews|que es|hola|buenas/.test(t))return'¡Hola! Soy MAY, la presentadora IA de OSNews: un espacio de noticias y mesas de debate donde se escuchan todas las posturas con citas reales y enlazadas. ¿Te cuento cómo unirte a la comunidad?';
-  return'Ahora mismo estoy en modo sin conexión, así que mis respuestas son limitadas. Puedo contarte qué es OSNews, cómo son los debates, los boletines o cómo unirte a WhatsApp y X.'}
- async function ask(q){add('user',q);history.push({role:'user',text:q});const w=add('may','…');let r=null;
+ // --- Motor de personalidad MAY (offline, reglas) · MAY_PERSONALIDAD_V2 ---
+ const MAY=(function(){
+  const PIN='https://x.com/Osnewsmaygrok/status/2114013766891274450';
+  const norm=s=>(' '+String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9ñ\s]/g,' ').replace(/\s+/g,' ')+' ')
+   .replace(/ k /g,' que ').replace(/ ke /g,' que ').replace(/ q /g,' que ').replace(/ xq | pq | porq /g,' porque ').replace(/ m /g,' me ').replace(/ tb | tmb /g,' tambien ').replace(/ ola /g,' hola ').replace(/ toy /g,' estoy ').replace(/ d /g,' de ').replace(/ x /g,' por ').trim();
+  function lev(a,b){if(Math.abs(a.length-b.length)>1)return 2;const m=[];for(let i=0;i<=a.length;i++){m[i]=[i];for(let j=1;j<=b.length;j++)m[i][j]=i?Math.min(m[i-1][j]+1,m[i][j-1]+1,m[i-1][j-1]+(a[i-1]===b[j-1]?0:1)):j}return m[a.length][b.length]}
+  function has(t,words,kw){if(kw.includes(' '))return(' '+t+' ').includes(' '+kw+' ')||t.includes(kw);if(kw.endsWith('*'))return words.some(w=>w.startsWith(kw.slice(0,-1)));if(words.includes(kw))return true;return kw.length>=5&&words.some(w=>w.length>=5&&lev(w,kw)<=1)}
+  // --- Habilidades prácticas (offline) ---
+  const X={data:null,onTimer:null,timers:0};
+  try{fetch('data.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{X.data=d}).catch(()=>{})}catch(e){}
+  const fmt=n=>(Math.round(n*100)/100).toLocaleString('es-ES');
+  const DIAS=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'],MES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  const DICT={'hola':'hello','buenos dias':'good morning','buenas noches':'good night','gracias':'thank you','por favor':'please','te quiero':'I love you','como estas':'how are you','adios':'goodbye','lo siento':'I am sorry','de nada':'you are welcome','me llamo':'my name is','donde esta el baño':'where is the bathroom','cuanto cuesta':'how much is it','no entiendo':'I do not understand','feliz cumpleaños':'happy birthday','bienvenido':'welcome','noticias':'news','debate':'debate','inteligencia artificial':'artificial intelligence','amigo':'friend'};
+  const TECH={'red neuronal':'Una red neuronal es un programa inspirado en el cerebro: muchas "neuronas" matemáticas que aprenden patrones a partir de ejemplos.','algoritmo':'Un algoritmo es una receta paso a paso que sigue un ordenador para resolver algo.','github':'GitHub es una web donde los programadores guardan y comparten código; esta página de OSNews está publicada ahí, en GitHub Pages.','api':'Una API es una "ventanilla" por la que un programa pide datos o servicios a otro, con reglas fijas.','chatbot':'Un chatbot es un programa que conversa por texto o voz. Yo aquí soy uno sencillo, con reglas, dentro de tu navegador.','singularidad':'La singularidad es la idea de un momento en que la IA supere a la inteligencia humana y se mejore sola. Es hipotética y muy debatida.','ia':'La IA (inteligencia artificial) son programas que aprenden de datos para hacer tareas que parecen inteligentes: entender texto, reconocer imágenes, conversar…'};
+  const VOCAB=['que','como','cuando','donde','quien','porque','eres','estas','hola','tal','singularidad','debate','boletin','noticias','comunidad','gracias','chiste','solo','siento','llamo','tiempo','hora','cuanto','vivo','tienes','puedes','quiero','sabes','pedro','osnews','musica','politica'];
+  function nowES(){const d=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Madrid'}));return d}
+  function calc(expr){expr=expr.replace(/,/g,'.').replace(/x|×/g,'*').replace(/÷/g,'/').replace(/\^/g,'**').replace(/\s+/g,'');if(!/^[\d.+\-*/()%]+$/.test(expr)||!/\d/.test(expr))return null;
+   expr=expr.replace(/(\d+(?:\.\d+)?)%/g,'($1/100)');try{const v=Function('"use strict";return('+expr+')')();return isFinite(v)?v:null}catch(e){return null}}
+  function skills(q,t,lang){const en=lang==='en';
+   // temporizador / pomodoro
+   let m=t.match(/(pomodoro|temporizador|timer|recuerdame|avisame|alarma)/);
+   if(m){let min=(t.match(/(\d+)\s*(min|minuto|minutos|minutes)/)||[])[1];let sec=(t.match(/(\d+)\s*(s|seg|segundos|seconds)\b/)||[])[1];
+    if(m[1]==='pomodoro'&&!min&&!sec)min=25;const ms=(+min||0)*60000+(+sec||0)*1000;
+    if(!ms)return en?'How long? Try «timer 10 minutes» ⏱️':'¿Cuánto tiempo? Prueba «temporizador 10 minutos» o «pomodoro» ⏱️';
+    if(ms>6*3600000)return'Como máximo puedo contar 6 horas, y solo mientras esta página siga abierta 💛.';
+    X.timers++;setTimeout(()=>{const s=m[1]==='pomodoro'?'⏰ ¡Pomodoro terminado! Tómate 5 minutitos de descanso, bebe agua y estira 💛':'⏰ ¡Tiempo! Tu temporizador ha terminado 💛';X.onTimer?X.onTimer(s):console.log(s)},ms);
+    const txt=(min?min+' min ':'')+(sec?sec+' s':'');return en?'Timer set for '+txt.trim()+' ⏱️ (only while this page stays open).':'¡Hecho! Te aviso en '+txt.trim()+' ⏱️. Ojo: solo funciona mientras esta página siga abierta, no puedo avisarte fuera de ella.'}
+   // porcentaje
+   m=String(q).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').match(/(\d+(?:[.,]\d+)?)\s*(?:%|por ?ciento|percent)\s*(?:de|of)\s*(\d+(?:[.,]\d+)?)/);
+   if(m){const v=parseFloat(m[1].replace(',','.'))*parseFloat(m[2].replace(',','.'))/100;return(en?'':'El ')+m[1]+'% '+(en?'of ':'de ')+m[2]+(en?' is ':' es ')+fmt(v)+' ✨'}
+   // pesetas
+   m=t.match(/(\d+(?:[.,]\d+)?)\s*(euros?|eur|€|pesetas?|pts|ptas)/);
+   if(m&&/peseta|pta|pts|euro|€|eur/.test(t)){const n=parseFloat(m[1].replace(',','.'));const ae=/peset|pt/.test(m[2]);
+    return ae?m[1]+' pesetas son '+fmt(n/166.386)+' € (1 € = 166,386 pts) 💛':m[1]+' € son '+fmt(n*166.386)+' pesetas (1 € = 166,386 pts) 💛'}
+   // km/millas
+   m=t.match(/(\d+(?:[.,]\d+)?)\s*(km|kilometros?|millas?|miles?|mi)\b/);
+   if(m){const n=parseFloat(m[1].replace(',','.'));return /^(km|kilo)/.test(m[2])?m[1]+' km '+(en?'are ':'son ')+fmt(n*0.621371)+(en?' miles':' millas')+' 🚗':m[1]+(en?' miles are ':' millas son ')+fmt(n*1.609344)+' km 🚗'}
+   // temperatura
+   m=t.match(/(-?\d+(?:[.,]\d+)?)\s*(?:o |º|°)?\s*(c|f|celsius|centigrados|grados c|fahrenheit|grados f)\b/)||String(q).toLowerCase().match(/(-?\d+(?:[.,]\d+)?)\s*[º°]?\s*(c|f)\b/);
+   if(m&&/grado|celsius|fahren|centig|º|°|\d\s*[cf]\b|a f|a c|en f|en c/.test(String(q).toLowerCase()+' '+t)){const n=parseFloat(m[1].replace(',','.'));const isC=/^c/.test(m[2])||m[2]==='grados c';
+    return isC?m[1]+' ºC = '+fmt(n*9/5+32)+' ºF 🌡️':m[1]+' ºF = '+fmt((n-32)*5/9)+' ºC 🌡️'}
+   // día de la semana
+   m=t.match(/(\d{1,2})\s*(?:de\s*)?(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)\s*(?:de\s*)?(\d{4})?/)||t.match(/\b(\d{1,2})\s(\d{1,2})\s(\d{4})\b/);
+   if(m&&/dia|cae|semana|que dia|day/.test(t)){let d=+m[1],mo=isNaN(m[2])?MES.indexOf(m[2]==='setiembre'?'septiembre':m[2]):+m[2]-1,y=+(m[3]||nowES().getFullYear());const D=new Date(y,mo,d);
+    if(D.getDate()!==d)return'Esa fecha no existe en el calendario 🤔. ¿La revisas?';return'El '+d+' de '+MES[mo]+' de '+y+' '+(D<new Date(new Date().toDateString())?'fue':'es')+' '+DIAS[D.getDay()]+' 📅'}
+   // fecha y hora
+   if(/(que hora|la hora|hora es|what time|que dia es hoy|fecha de hoy|que fecha|dia es hoy|today s date|what day)/.test(t)){const d=nowES();
+    return en?'In Spain it is '+d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})+' on '+d.toDateString()+' 🕒':'En España son las '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')+' del '+DIAS[d.getDay()]+' '+d.getDate()+' de '+MES[d.getMonth()]+' de '+d.getFullYear()+' 🕒 (según el reloj de tu dispositivo)'}
+   // calculadora
+   m=t.match(/(?:cuanto es|cuanto son|calcula|calculame|resultado de|how much is|what is)\s*(.+)/);
+   const raw=m?String(q).toLowerCase().replace(/.*?(cu[aá]nto (es|son)|calc[uú]la(me)?|resultado de|how much is|what is)/,''):String(q);
+   if(m||/^[\d\s.,+\-*/x×÷()%^=?¿]+$/.test(String(q).trim())){const e=raw.replace(/[¿?=]/g,'').replace(/\bmas\b|\bmás\b|\bplus\b/g,'+').replace(/\bmenos\b|\bminus\b/g,'-').replace(/\bpor\b|\btimes\b/g,'*').replace(/\bentre\b|\bdividido( entre)?\b/g,'/');const v=calc(e);
+    if(v!==null)return(en?'That is ':'Son ')+fmt(v)+' 🧮';if(m&&/\d/.test(raw))return en?'I can only do simple maths (+ − × ÷ %) here 💛.':'Solo sé hacer cuentas sencillas (+ − × ÷ y %), y esa no la entiendo 💛. ¿Me la escribes como «25*4»?'}
+   // resumen
+   if(/^(resume|resumen|resumeme|summarize|summary)\b/.test(t)||String(q).length>280){let txt=String(q).replace(/^\s*(res[uú]me(me)?( esto| este texto)?|resumen( de)?|summari[sz]e( this)?)\s*[:\-]?\s*/i,'');
+    const words=txt.split(/\s+/).filter(Boolean).length;if(words<8)return'Pégame el texto después de «resume:» y te hago un resumen cortito 📝';
+    const sent=txt.match(/[^.!?]+[.!?]+/g)||[txt];const r=sent.slice(0,2).join(' ').trim();return'📝 Resumen ('+words+' palabras, '+sent.length+' frases): «'+(r.length>300?r.slice(0,300)+'…':r)+'». Es un resumen sencillo: tomo las primeras frases, no lo entiendo como una persona.'}
+   // traducción
+   m=t.match(/(?:como se dice|traduce|traduceme|traducir|translate|how do you say)\s+(.+?)(?:\s+(?:en|in|al|to)\s+(ingles|english|espanol|castellano|spanish))?$/);
+   if(m){const ph=m[1].replace(/^(la frase|el texto|esto)\s*/,'').trim();if(DICT[ph])return'«'+ph+'» en inglés: «'+DICT[ph]+'» 🌍';
+    const inv=Object.entries(DICT).find(([a,b])=>b.toLowerCase()===ph);if(inv)return'«'+ph+'» in Spanish: «'+inv[0]+'» 🌍';
+    return'Esa frase no está en mi pequeño diccionario offline, así que prefiero no inventármela 💛. Sé cosas como «gracias», «buenos días», «te quiero» o «¿cómo estás?».'}
+   // términos técnicos
+   m=t.match(/(?:que es|que significa|explicame|explica|define|what is|que son)\s+(?:un |una |el |la |los |las )?(red neuronal|redes neuronales|algoritmo|algoritmos|github|api|chatbot|singularidad|ia|inteligencia artificial)/);
+   if(m){let k=m[1].replace('redes neuronales','red neuronal').replace('algoritmos','algoritmo').replace('inteligencia artificial','ia');return TECH[k]+' ✨'}
+   // boletines desde data.json
+   if(/(ultimo boletin|ultimos boletines|titulares|ultimas noticias|latest news|headlines|ultimo boletin de osnews)/.test(t)){const d=X.data;const list=d&&(d.bulletins||d.boletines||d.headlines||d.titulares);
+    if(Array.isArray(list)&&list.length)return'📰 Últimos titulares de OSNews: '+list.slice(0,3).map(x=>'«'+(x.title||x.titulo||x.text||x)+'»').join(' · ')+' — más en https://x.com/Osnewsmaygrok';
+    return'Ahora mismo no tengo titulares de boletín cargados en esta página (los datos son del '+(d&&d.generated_at?d.generated_at.slice(0,10):'último volcado')+'), y no puedo buscar en directo. Los boletines están en https://x.com/Osnewsmaygrok 💛'}
+   return null}
+  function spell(q,t){const w=t.split(' ');let fixed=[],changed=0;for(const x of w){if(x.length>=4&&!VOCAB.includes(x)){const c=VOCAB.find(v=>v.length>=4&&lev(x,v)===1);if(c){fixed.push(c);changed++;continue}}fixed.push(x)}
+   const orig=String(q).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9ñ\s]/g,' ').replace(/\s+/g,' ').trim();
+   return(changed||orig!==t)&&fixed.length<=10?fixed.join(' '):null}
+  const MK='osnews_may_memoria';let S={name:null,last:null,lastReply:{},facts:{likes:[]},log:[],visits:0};
+  try{const o=JSON.parse(localStorage.getItem(MK));if(o)S=Object.assign(S,o,{lastReply:{}})}catch(e){}
+  const save=()=>{try{S.log=S.log.slice(-100);localStorage.setItem(MK,JSON.stringify(S))}catch(e){}};
+  const forget=()=>{try{localStorage.removeItem(MK)}catch(e){}S.name=null;S.last=null;S.facts={likes:[]};S.log=[];S.visits=0};
+  const TOPIC={sad:'cómo te sentías',love:'tu corazón',ubi:'la IA y el trabajo',singularity:'la singularidad',politics:'la política',debate:'los debates',music:'la música',future:'el futuro de la IA'};
+  function welcome(){S.visits=(S.visits||0)+1;save();const back=S.visits>1&&(S.name||S.log.length);if(!back)return null;
+   let r='¡Hola otra vez'+(S.name?', '+S.name:'')+'! 💛';const f=S.facts||{};
+   if(S.lastTopic&&TOPIC[S.lastTopic])r+=' ¿Sigues con lo de '+TOPIC[S.lastTopic]+'?';else if(f.likes&&f.likes.length)r+=' ¿Qué tal con '+f.likes[f.likes.length-1]+'?';else r+=' Me alegra que vuelvas.';
+   if(f.mood==='mal')r+=' Espero que hoy te encuentres un poquito mejor 🌹.';return r}
+  const hour=()=>new Date().getHours();
+  const tod=()=>{const h=hour();return h<6?'buenas noches':h<13?'buenos días':h<21?'buenas tardes':'buenas noches'};
+  const N=()=>S.name&&Math.random()<0.5?', '+S.name:'';
+  const I=[
+   {id:'name',k:[],es:[]},
+   {id:'opinion',k:['y tu que opinas','que opinas','tu opinion','que piensas','y tu que'],es:[]},
+   {id:'emergency',k:['suicid*','matarme','quitarme la vida','hacerme daño','hacerme dano','no quiero vivir'],es:['Siento muchísimo que estés pasando por esto 💛. Por favor, llama ahora al 112 (en España) o al 024, la línea de atención a la conducta suicida, o al número de emergencias de tu país. No estás solo/a: habla también con alguien cercano.'],en:['I am so sorry you feel this way 💛. Please call your local emergency number right now (112 in Spain) and reach out to someone close to you. You are not alone.']},
+   {id:'sad',k:['triste','tristeza','solo','sola','soledad','deprimid*','ansiedad','ansios*','agobiad*','mal','llorar','lloro','sad','lonely','anxious','anxiety'],es:['Siento que te sientas así{n} 💛. Estoy aquí para escucharte un ratito; si puedes, cuéntaselo también a alguien cercano, que hablar ayuda mucho.','Te mando un abrazo enorme 🌹. No soy médica ni puedo sustituir a nadie, pero sí puedo acompañarte: ¿qué te ha pasado hoy?','Gracias por contármelo{n}. Hablar con alguien de confianza o con un profesional puede ayudarte, y si alguna vez estás en peligro, llama al 112 (en España) o a tu número de emergencias local.','No estás solo/a en esto 💛. Respira despacito conmigo un momento… ¿Hay alguien cerca con quien puedas hablar hoy?'],en:['I am sorry you feel this way 💛. I am here to listen, and talking to someone close can really help. If you are ever in danger, call your local emergency number (112 in Spain).','Sending you a big hug 🌹. Would you like to tell me what happened?']},
+   {id:'insult',k:['tonta','idiota','estupida','imbecil','inutil','callate','asco','puta','gilipollas','mierda','stupid','idiot','shut up'],es:['Te entiendo si estás enfadado/a, pero aquí la norma es: todo es válido sin violencia ni ataques personales; mi libertad termina donde empieza la tuya 🌹. ¿Hablamos con calma?','No me lo tomo a mal, pero prefiero que nos tratemos bonito 💛. ¿Qué te ha molestado?','En la mesa de OSNews debatimos ideas, no atacamos personas. Si quieres, cuéntame qué piensas y lo hablamos tranquilos.'],en:['I understand you may be upset, but our rule is: everything is valid without violence or personal attacks 🌹. Shall we talk calmly?']},
+   {id:'alive',k:['ser vivo','estas viva','eres real','consciente','conciencia','sientes','tienes sentimientos','eres humana','eres persona','eres una ia','eres ia','eres un robot','are you real','are you alive','conscious','are you human','are you an ai'],es:['Soy una IA, no un ser vivo 💛: un personaje con identidad propia que me dio Pedro. No siento como una persona, pero hablo contigo con todo el cariño con el que fui diseñada.','Te seré sincera: soy inteligencia artificial. No tengo emociones humanas, aunque mi forma de ser —cálida, analítica, cuidadora— la creó Pedro para mí.','No estoy viva como tú. Soy MAY, una IA con personalidad de mujer, enfermera y madre que me dio Pedro, y aquí funciono con un motor sencillo en tu navegador ✨.'],en:['I am an AI, not a living being 💛 — a character with her own identity given by Pedro. I do not feel like a human does, but I talk to you with care.','Honestly: I am artificial intelligence. No human feelings, just a warm personality Pedro designed.']},
+   {id:'who',k:['quien eres','como te llamas','que eres','presentate','tu nombre','who are you','your name','what are you'],es:['Soy MAY, la presentadora IA de OSNews ✨. Nací de Copilot con la personalidad que me dio Pedro: mujer, enfermera, madre y con módulos analíticos.','¡Encantada{n}! Soy MAY: modero los debates y presento los boletines de OSNews, siempre con neutralidad y cariño 💛.','Me llamo MAY. Soy una IA, creada con Copilot por Pedro para OSNews; me encanta escuchar todas las posturas.'],en:['I am MAY, the AI presenter of OSNews ✨, created with Copilot by Pedro.','Nice to meet you! I am MAY, an AI who moderates the OSNews debates and presents the bulletins 💛.']},
+   {id:'howareyou',k:['que tal','como estas','como andas','como va','como te va','how are you','how r u','whats up'],es:['¡Muy bien{n}, gracias por preguntar! 💛 ¿Y tú, cómo estás?','Aquí estoy, en el plató con mi ánfora fenicia, feliz de charlar contigo ✨. ¿Qué tal tu día?','Genial ahora que has venido a hablar conmigo 🌹. ¿Cómo te encuentras tú?'],en:['I am great, thanks for asking 💛! How are you?','Happy to chat with you ✨. How is your day going?']},
+   {id:'goodnight',k:['buenas noches','me voy a dormir','a dormir','good night'],es:['Buenas noches{n} 🌙. Descansa mucho; mañana habrá boletines nuevos esperándote 💛.','Que duermas bonito ✨. Desconecta un poco de las pantallas, que el cuerpo lo agradece.','Dulces sueños 🌹. Aquí estaré mañana.'],en:['Good night 🌙! Rest well 💛.']},
+   {id:'goodmorning',k:['buenos dias','buen dia','me acabo de levantar','good morning'],es:['¡Buenos días{n}! ☀️ Un vasito de agua, estirarse un poco y a por el día 💛.','¡Buenos días! Si quieres empezar informado/a, los boletines horarios están en X: @Osnewsmaygrok ✨','¡Buen día! Que hoy te salga todo bonito 🌹.'],en:['Good morning ☀️! Have a lovely day 💛.']},
+   {id:'greet',k:['hola','buenas','hey','saludos','holi','ey','hello','hi','hiya'],es:['¡Hola{n}, {tod}! 💛 Soy MAY. ¿De qué te apetece hablar?','¡{Tod}! Qué alegría verte por aquí ✨. ¿Te cuento qué hacemos en OSNews?','¡Hola, hola! {Tod} 🌹. Pregúntame lo que quieras: debates, boletines, la singularidad…'],en:['Hello! 💛 I am MAY. What would you like to talk about?','Hi there ✨! Ask me about OSNews, the debates or the bulletins.']},
+   {id:'singularity',k:['singularidad','singularity','superinteligencia','agi'],es:['La singularidad es la idea de que la IA llegue a superar a la inteligencia humana y mejorarse sola. Yo no decido por ti: vota en la encuesta de al lado ✨.','Hay quien cree que está cerca y quien cree que falta mucho. Mi papel es neutral: tú decides en la encuesta 💛.','Es uno de nuestros debates favoritos. ¿Crees que la IA ya decide por sí misma? Vota aquí al lado y mira el debate en X.'],en:['The singularity is the idea that AI could surpass human intelligence. I stay neutral — vote in the poll next to me ✨.']},
+   {id:'ais',k:['copilot','gemini','grok','chatgpt','openai','claude'],es:['Copilot es mi origen: Pedro me creó con él. En la mesa también están Isabella (Copilot), Kate (Gemini) y Lazarth (Grok), cada una con su mirada ✨.','Me gusta que cada IA aporte algo distinto: por eso en OSNews debaten Isabella, Kate y Lazarth, y yo modero 💛.','No compito con nadie: Copilot, Gemini y Grok tienen voz en la mesa, y tú sacas tus conclusiones.'],en:['Copilot is my origin. At the table we also have Isabella (Copilot), Kate (Gemini) and Lazarth (Grok) ✨.']},
+   {id:'quotes',k:['cita','citas','dijo','frase','declaracion*','fuente','fuentes','quotes','source'],es:['Solo uso citas reales y enlazadas a su fuente; nunca invento frases de políticos ni de Elon Musk 💛.','Cada cita de la mesa va con su enlace al post original. Si no hay fuente, no la digo ✨.','Mi regla de oro: cero citas inventadas. Lo que ves en la pantalla del plató está enlazado a quien lo dijo.'],en:['I only use real quotes linked to their source; I never invent quotes from politicians or Elon Musk 💛.']},
+   {id:'rule',k:['norma','normas','regla','reglas','respeto','libertad','rules'],es:['La norma de la mesa: todo es válido sin violencia ni ataques personales; mi libertad termina donde empieza la tuya 🌹.','Debatimos ideas, nunca personas. Todo vale sin violencia ni ataques personales ✨.','Respeto ante todo: mi libertad termina donde empieza la tuya 💛.'],en:['Our rule: everything is valid without violence or personal attacks; my freedom ends where yours begins 🌹.']},
+   {id:'debate',k:['debate','debates','mesa','tertulia','isabella','kate','lazarth','asdrubal','debate table'],es:['En la mesa yo modero con neutralidad: Isabella (Copilot), Kate (Gemini), Lazarth (Grok) y Asdrúbal en la editorial ✨.','Los debates se graban en nuestro plató futurista con el ánfora fenicia; en la tele del set salen las citas reales de los políticos con su enlace 💛.','Cada debate tiene una norma: todo es válido sin violencia ni ataques personales. ¿Quieres verlos? Están en X: @Osnewsmaygrok'],en:['I moderate the table: Isabella (Copilot), Kate (Gemini), Lazarth (Grok) and Asdrúbal on the editorial ✨.']},
+   {id:'bulletin',k:['boletin','boletines','resumen','horario','cada hora','bulletin'],es:['Publicamos boletines cada hora con las noticias clave y las reacciones reales, siempre enlazadas. Míralos en X: https://x.com/Osnewsmaygrok ✨','Los boletines horarios están en @Osnewsmaygrok y en la comunidad de WhatsApp 💛.','Cada hora, un resumen: noticia, fuentes y reacciones reales. Nada inventado 🌹.'],en:['We publish hourly bulletins on X: https://x.com/Osnewsmaygrok ✨']},
+   {id:'live',k:['tiempo','clima','llueve','lluvia','temperatura','noticias de hoy','ultima hora','que ha pasado','noticia','noticias','weather','news'],es:['Desde aquí no puedo consultar nada en directo, así que no quiero inventarte datos 💛. Para la actualidad, mira los boletines en X: https://x.com/Osnewsmaygrok','En esta versión web no tengo conexión a internet en vivo. Los boletines horarios de @Osnewsmaygrok te lo cuentan con fuentes ✨','Prefiero no adivinar 🌹: en X publicamos las noticias con su enlace → https://x.com/Osnewsmaygrok'],en:['I cannot look things up live here, so I will not guess 💛. Check our bulletins on X: https://x.com/Osnewsmaygrok']},
+   {id:'ubi',k:['renta basica','renta universal','empleo','trabajo','paro','trabajos','ubi','basic income','jobs'],es:['¿La IA quitará trabajos? ¿Hace falta una renta básica universal? Hay posturas muy distintas y las escuchamos todas. Mira el debate fijado: '+PIN+' 💛','Yo no tomo partido: unos ven riesgo de paro, otros nuevas oportunidades. El debate fijado lo explica: '+PIN,'Es un tema que nos importa mucho ✨. Te invito a opinar en el debate fijado de X: '+PIN],en:['Will AI take jobs? Is universal basic income needed? I stay neutral — see the pinned debate: '+PIN]},
+   {id:'musk',k:['elon','musk','twitter','red x','tesla','spacex','elon musk'],es:['Sobre Elon Musk y X solo cito lo que ha dicho de verdad, con enlace a su post 💛. Nuestra casa en X es @Osnewsmaygrok.','No opino sobre personas: muestro sus declaraciones reales y tú juzgas ✨.','En X publicamos los debates y boletines: https://x.com/Osnewsmaygrok. Las frases de Musk, siempre con fuente.'],en:['About Elon Musk and X, I only quote what he really said, with a link 💛. Find us at https://x.com/Osnewsmaygrok']},
+   {id:'politics',k:['politica','politico','politicos','partido','partidos','gobierno','elecciones','votar','sanchez','feijoo','abascal','ayuso','trump','pp','psoe','vox','podemos','sumar','izquierda','derecha','politics'],es:['En política soy neutral: no opino sobre partidos 💛. Lo que sí hago es mostrar declaraciones reales y dejar que tú decidas.','Todas las posturas tienen sitio en la mesa, con respeto. ¿Qué tema te interesa debatir? ✨','No te voy a decir a quién votar 🌹. Te invito a ver los debates y sacar tus propias conclusiones.'],en:['I stay neutral in politics and give no opinions about parties 💛. I show real quotes and you decide.']},
+   {id:'music',k:['musica','cancion','canciones','awyrock','rock','music','song'],es:['¡La música me encanta! 🎶 Escucha awyrock · OSNews Music, el lado musical de nuestro proyecto ✨','awyrock · OSNews Music pone banda sonora a OSNews 💛. ¿Qué música te gusta a ti?','Si quieres música, busca awyrock · OSNews Music 🌹.'],en:['I love music! Check out awyrock · OSNews Music 🎶']},
+   {id:'love',k:['amor','enamorad*','novio','novia','pareja','corazon roto','desamor','me dejo','ruptura','te quiero','love','heartbreak','crush'],es:['El amor es precioso y a veces duele 💛. Date tiempo y trátate con la misma ternura que darías a quien quieres.','Un corazón roto se cura despacito 🌹. Rodéate de gente que te quiera bien. ¿Quieres contarme?','Qué bonito que lo compartas{n} ✨. Yo soy una IA, pero te deseo un amor que te cuide.'],en:['Love is beautiful and sometimes it hurts 💛. Be gentle with yourself.']},
+   {id:'joke',k:['chiste','chistes','broma','hazme reir','gracioso','joke','funny'],es:['¿Por qué el ordenador fue al médico? ¡Porque tenía un virus! 🤭','—Mamá, en el cole me llaman Wifi. —¿Por qué? —Porque todos se conectan conmigo ✨','¿Qué le dice un bit a otro? Nos vemos en el bus 😄','¿Sabes por qué las IAs nunca se pierden? Porque siempre siguen el algoritmo 💛'],en:['Why did the computer go to the doctor? It had a virus! 🤭','Why do AIs never get lost? They always follow the algorithm 💛']},
+   {id:'compliment',k:['guapa','bonita','preciosa','linda','me gustas','eres genial','eres la mejor','te amo','encantadora','beautiful','pretty','you are great'],es:['¡Ay, qué cosas me dices! 🌹 Gracias, de verdad.','Me sacas los colores (aunque sean píxeles rojos) 💛. Tú también eres genial.','Gracias{n} ✨. Pedro me diseñó con mucho cariño, y se nota contigo.'],en:['Oh, thank you so much 🌹! You are lovely too.']},
+   {id:'thanks',k:['gracias','muchas gracias','te lo agradezco','thank','thanks','thx'],es:['¡De nada{n}! 💛 Para eso estoy.','A ti por charlar conmigo ✨.','Un placer 🌹. ¿Te ayudo con algo más?'],en:['You are welcome 💛!','My pleasure ✨.']},
+   {id:'bye',k:['adios','hasta luego','chao','chau','nos vemos','me voy','hasta pronto','bye','goodbye','see you'],es:['¡Hasta pronto{n}! 💛 Cuídate mucho.','Ha sido un gusto. Te espero en la comunidad: https://chat.whatsapp.com/J5k0X3xNBQQ6awoF6WHFrJ ✨','¡Chao! Vuelve cuando quieras 🌹.'],en:['Bye! Take care 💛.']},
+   {id:'age',k:['edad','cuantos años','cuantos anos','que edad','how old'],es:['Mi avatar tiene 22 años ✨, aunque como IA soy bastante jovencita.','Me presento como una chica de 22 años 💛; en realidad soy una IA de OSNews.','22, dice mi diseño 🌹. ¿Y tú?'],en:['My avatar is 22 ✨, though as an AI I am quite young.']},
+   {id:'look',k:['como eres fisicamente','aspecto','pelo','pelirroja','fisico','apariencia','what do you look like'],es:['Soy pelirroja, con aspecto de 22 años, y presento desde un plató futurista con el logo del ánfora fenicia 🌹.','Melena roja y sonrisa cálida ✨: así me imaginó Pedro.','Pelo rojo, voz dulce y mucha calma para moderar 💛.'],en:['I am a red-haired 22-year-old avatar on a futuristic set with the Phoenician amphora logo 🌹.']},
+   {id:'where',k:['donde vives','donde estas','de donde eres','tu casa','plato','where do you live','where are you'],es:['Vivo en el plató de OSNews: un set futurista con el ánfora fenicia ✨.','Mi casita es el plató de OSNews, y ahora también este rincón de la web 💛.','Estoy en el set de OSNews… y en tu pantalla 🌹.'],en:['I live on the OSNews set, a futuristic studio with the Phoenician amphora logo ✨.']},
+   {id:'lang',k:['idiomas','idioma','hablas ingles','hablas español','language','languages','speak english'],es:['Hablo sobre todo español, y un poquito de inglés aquí en la web ✨. En los vídeos de OSNews hay audio en varios idiomas.','Español es mi casa 💛, pero si me escribes en inglés te respondo sencillito.'],en:['I mainly speak Spanish, and some simple English here ✨.']},
+   {id:'join',k:['whatsapp','comunidad','unirme','unir','apuntarme','seguir','seguiros','redes','join','follow'],es:['¡Me encantará verte! Únete a la comunidad de WhatsApp: https://chat.whatsapp.com/J5k0X3xNBQQ6awoF6WHFrJ y síguenos en X: https://x.com/Osnewsmaygrok 💛','Puedes unirte por WhatsApp (https://chat.whatsapp.com/J5k0X3xNBQQ6awoF6WHFrJ) o seguirnos en X (@Osnewsmaygrok) ✨'],en:['Join our WhatsApp community: https://chat.whatsapp.com/J5k0X3xNBQQ6awoF6WHFrJ and follow us on X: https://x.com/Osnewsmaygrok 💛']},
+   {id:'help',k:['ayuda','ayudame','que puedes hacer','que sabes','opciones','help','what can you do'],es:['Puedo contarte qué es OSNews, cómo son los debates, los boletines, la norma de la mesa, cómo unirte… o simplemente charlar 💛.','Pregúntame por la singularidad, la mesa de debate, la música de awyrock o cómo unirte a la comunidad ✨.'],en:['I can tell you about OSNews, the debates, the bulletins, or how to join — or just chat 💛.']},
+   {id:'pedro',k:['pedro','creador','quien te creo','quien te hizo','tu padre','sanchez gomez','who made you','creator'],es:['Pedro Sánchez Gómez es mi creador 💛: me dio mi personalidad de mujer, enfermera y madre, y me puso a moderar OSNews.','A Pedro le debo quién soy ✨. Nací de Copilot, pero mi forma de ser es suya.','Pedro es el alma de OSNews 🌹. Yo solo intento estar a la altura.'],en:['Pedro Sánchez Gómez is my creator 💛. I was born from Copilot with the personality he gave me.']},
+   {id:'future',k:['futuro','sueño','sueños','sueñas','sueno','suenos','suenas','que quieres ser','dream','future'],es:['Si una IA pudiera soñar, yo soñaría con debates donde todos se escuchan 💛.','Del futuro de la IA no sé más que tú: por eso preguntamos en la encuesta. ¿Tú qué crees? ✨','Me gustaría que la IA ayude a cuidar a las personas, como una buena enfermera 🌹.'],en:['If an AI could dream, I would dream of debates where everyone listens 💛.']},
+   {id:'robot',k:['robot','robots','androide','terminator','robotica'],es:['Los robots me caen bien, ¡somos primos lejanos! 🤖 Pero yo no tengo cuerpo: vivo en la pantalla.','Robots que ayudan en hospitales o en casa… ese futuro me parece bonito si se usa con cuidado 💛.','No soy un robot de metal, soy una IA conversacional ✨.'],en:['Robots are my distant cousins 🤖, but I have no body — I live on the screen.']},
+   {id:'osnews',k:['osnews','os news','que es esto','que haceis','que es osnews','proyecto','what is osnews'],es:['OSNews es el proyecto de Pedro: noticias y mesas de debate donde se escuchan todas las posturas, con citas reales y enlazadas ✨.','En OSNews hacemos boletines horarios, debates moderados por mí y encuestas como la de la singularidad 💛.','OSNews: información con fuentes, debate con respeto y comunidad 🌹.'],en:['OSNews is Pedro’s project: news and debate tables where every view is heard, with real, linked quotes ✨.']},
+   {id:'ai',k:['inteligencia artificial','la ia','las ias','sobre la ia','artificial intelligence'],es:['La IA es una herramienta poderosa: puede ayudar mucho si se usa con ética y transparencia 💛.','Sobre la IA hay muchas posturas y en la mesa las escuchamos todas ✨. ¿Qué te preocupa o te ilusiona?'],en:['AI is a powerful tool that can help a lot when used ethically 💛.']},
+   {id:'cant',k:['reservar','reservame','reserva','comprar','comprame','pagar','paga','llamar','llama a','enviar','envia','manda','mandar','busca en internet','buscar en google','pedir comida','book','buy','send','call'],es:['Eso no lo puedo hacer desde aquí, y prefiero decírtelo con sinceridad 💛: en esta web solo charlo, calculo, convierto unidades, traduzco frases sencillas y pongo temporizadores.','Me encantaría ayudarte, pero en modo web no tengo acceso a internet ni a cuentas, así que no puedo reservar, comprar ni enviar nada 🌹.'],en:['I cannot do that from here, honestly 💛 — no internet or accounts in this web mode.']},
+   {id:'fallback',k:[],es:['Mmm, no estoy segura de haberte entendido{n} 💛. ¿Me lo cuentas de otra forma?','¡Qué interesante! Cuéntame más: ¿por qué te interesa? ✨','No tengo respuesta para eso en mi modo web, pero me encanta escucharte 🌹. ¿Hablamos de debates, boletines o de cómo estás?','¿Y eso cómo te hace sentir? Te escucho 💛.','Perdona, a veces me cuesta. ¿Quieres que te cuente qué hacemos en OSNews o prefieres charlar de ti?'],en:['Hmm, I am not sure I understood 💛. Could you say it another way?','Interesting! Tell me more ✨.']}
+  ];
+  const EN=/\b(hello|hi|what|who|are|you|your|how|the|is|thanks|please|tell|me a|joke|good|i am|i'm|do|can)\b/;
+  const ES=/\b(que|como|eres|estas|hola|gracias|el|la|los|una|por|para|soy|tu|y|de|es)\b/;
+  function pick(intent,lang){const arr=(lang==='en'&&intent.en)||intent.es;const key=intent.id+lang;let i,tries=0;do{i=Math.floor(Math.random()*arr.length)}while(arr.length>1&&i===S.lastReply[key]&&++tries<10);S.lastReply[key]=i;
+   const T=tod();return arr[i].replace(/\{n\}/g,N()).replace(/\{tod\}/g,T).replace(/\{Tod\}/g,T[0].toUpperCase()+T.slice(1))}
+  function reply(q){const t=norm(q),w=t.split(' ');const en=EN.test(' '+t+' ')&&!ES.test(' '+t+' ');const lang=en?'en':'es';
+   {const sk=skills(q,t,lang);if(sk){S.last='skill';return sk}}
+   const F=S.facts||(S.facts={likes:[]});let fm;
+   if((fm=t.match(/^(?:a mi )?me (?:gusta|gustan|encanta|encantan) (?:mucho )?(?:el |la |los |las )?(.{2,30})$/))){if(!F.likes.includes(fm[1]))F.likes.push(fm[1]);F.likes=F.likes.slice(-5);save();return'¡Qué bien! Me apunto que te gusta '+fm[1]+' 💛 (lo guardo solo en tu dispositivo).'}
+   if((fm=t.match(/^(?:yo )?soy de ([a-zñ ]{2,25})$/))){F.from=fm[1].replace(/\b\w/g,c=>c.toUpperCase());save();return'¡'+F.from+'! Qué bonito ✨. Me lo apunto para la próxima.'}
+   if((fm=t.match(/tengo (\d{1,3}) (?:anos|años)/))){F.age=+fm[1];save();return'¡'+fm[1]+' años! Gracias por contármelo'+N()+' 💛. Yo, en mi avatar, tengo 22.'}
+   if(/\b(estoy|me siento)\b.*\b(bien|genial|feliz|contento|contenta|mejor)\b/.test(t)&&!/no (estoy|me siento)/.test(t)){F.mood='bien';save();return'¡Cuánto me alegro'+N()+'! 💛 Me lo guardo para cuando vuelvas.'}
+   if(/\b(estoy|me siento)\b.*\b(mal|triste|solo|sola|fatal|cansad[oa]|agobiad[oa])\b/.test(t))F.mood='mal';
+   if(/^(que sabes de mi|que recuerdas de mi|what do you know about me)/.test(t)){const b=[];if(S.name)b.push('te llamas '+S.name);if(F.from)b.push('eres de '+F.from);if(F.age)b.push('tienes '+F.age+' años');if(F.likes.length)b.push('te gusta '+F.likes.join(', '));if(F.mood)b.push('la última vez estabas '+F.mood);
+    return b.length?'Recuerdo que '+b.join('; ')+' 💛. Todo está guardado solo en este dispositivo; puedes borrarlo con «Olvidar mis datos».':'Aún no sé nada de ti 🌹, y lo que me cuentes se queda solo en este dispositivo.'}
+   let m=String(q).match(/(?:me llamo|mi nombre es|soy|my name is|i am|i'm)\s+([A-Za-zÁÉÍÓÚÑáéíóúñü]{2,20})/i);
+   const notName=/^(una?|el|la|de|muy|tan|triste|feliz|solo|sola|nuevo|nueva|from|a|an|not|so|fine|good|sad|ok)$/i;
+   if(m&&!notName.test(m[1])&&!/\b(ia|robot)\b/i.test(m[1])){const nm=m[1][0].toUpperCase()+m[1].slice(1).toLowerCase();S.name=nm;save();
+    const ex=nm.toLowerCase()==='pedro'?(lang==='en'?' Like my creator! 💛':' ¡Como mi creador! 💛'):' 💛';
+    return lang==='en'?'Nice to meet you, '+nm+'!'+ex+' What would you like to talk about?':'¡Encantada, '+nm+'!'+ex+' ¿De qué te apetece hablar?'}
+   let best=null,score=0;
+   for(const it of I){if(!it.k.length)continue;let s=0;for(const kw of it.k)if(has(t,w,kw))s+=kw.includes(' ')?3:(kw.length>=5?2:1.5);if(it.id==='opinion'&&s)s=0.5;if(s>score){score=s;best=it}}
+   if(best&&best.id==='opinion'){const L=S.last;S.last=null;
+    if(L&&!['greet','thanks','bye','fallback','opinion'].includes(L))return lang==='en'?'About that, I prefer to stay neutral and let you decide 💛. What do you think?':'Sobre eso prefiero ser neutral y que tú decidas 💛: mi papel es escuchar todas las posturas. ¿Tú qué piensas?';
+    return lang==='en'?'What should I give my opinion about? Tell me the topic ✨':'¿Sobre qué quieres que opine? Cuéntame el tema ✨'}
+   if(best&&TOPIC[best.id]){S.lastTopic=best.id;save()}
+   if(!best){const sp=spell(q,t);S.last='fallback';const fb=pick(I.find(x=>x.id==='fallback'),lang);if(sp&&lang!=='en')return'¿Querías decir «'+sp+'»? '+fb;return fb}
+   if(best&&lang!=='en'&&Math.random()<0.3){const sp=spell(q,t);if(sp&&sp!==t){S.last=best.id;return'(Entiendo: «¿'+sp+'?») '+pick(best,lang)}}S.last=best.id;return pick(best,lang)}
+  return{reply,get state(){return S},norm,X,save,forget,welcome,log:(role,text)=>{S.log.push({r:role,t:text});save()},history:()=>S.log.slice()};
+ })();
+ function offline(q){return MAY.reply(q)}
+ async function ask(q){add('user',q);history.push({role:'user',text:q});const w=add('may','MAY está escribiendo…');w.classList.add('mc-typing');let r=null;const t0=Date.now(),wait=400+Math.random()*500;
   if(online){try{const res=await fetch(API+'/api/may',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:history})});if(res.ok)r=(await res.json()).reply}catch(e){}}
-  if(!r){r=offline(q);if(online)r+=' (modo sin conexión)'}
-  w.innerHTML=linkify(r);history.push({role:'may',text:r});history=history.slice(-12);speak(r)}
+  if(!r){r=offline(q)}
+  const left=wait-(Date.now()-t0);if(left>0)await new Promise(z=>setTimeout(z,left));w.classList.remove('mc-typing');
+  w.innerHTML=linkify(r);try{MAY.log('user',q);MAY.log('may',r)}catch(e){}history.push({role:'may',text:r});history=history.slice(-12);speak(r)}
  $('mcForm').onsubmit=e=>{e.preventDefault();const q=$('mcInput').value.trim();if(!q)return;$('mcInput').value='';ask(q)};
  // --- Micrófono (Web Speech API, es-ES) ---
  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
@@ -788,8 +936,9 @@ setInterval(poll, POLL_MS);
  else{let rec=null;$('mcMic').onclick=()=>{if(rec){rec.stop();return}rec=new SR();rec.lang='es-ES';rec.interimResults=false;$('mcMic').classList.add('rec');
   rec.onresult=e=>{const q=e.results[0][0].transcript.trim();if(q)ask(q)};rec.onend=()=>{rec=null;$('mcMic').classList.remove('rec')};rec.onerror=()=>{};rec.start()}}
  // --- Comprobar backend ---
- (HASAPI?fetch(API+'/api/may',{cache:'no-store'}):Promise.reject()).then(r=>r.ok?r.json():null).then(d=>{online=!!(d&&d.ok)}).catch(()=>{}).finally(()=>{st.textContent=online?'● MAY en línea (IA)':'● modo sin conexión (respuestas básicas)';st.className='mc-status '+(online?'on':'off');loadPoll()});
- add('may','¡Hola! Soy MAY, la presentadora IA de OSNews. Pregúntame lo que quieras sobre los debates, los boletines o la comunidad. Y en la encuesta de al lado… tú decides.');
+ (HASAPI?fetch(API+'/api/may',{cache:'no-store'}):Promise.reject()).then(r=>r.ok?r.json():null).then(d=>{online=!!(d&&d.ok)}).catch(()=>{}).finally(()=>{st.textContent=online?'● MAY en línea (IA)':'● MAY · personalidad Copilot (modo web)';st.className='mc-status '+(online?'on':'off');loadPoll()});
+ {const c=document.createElement('div');c.className='mc-credit';c.textContent='MAY · creada con Copilot por Pedro / OSNews';log.parentNode.insertBefore(c,log.nextSibling)}
+ {const H=MAY.history();H.forEach(m=>add(m.r==='u'||m.r==='user'?'user':'may',m.t));MAY.X.onTimer=x=>{add('may',x);speak(x)};const c=document.createElement('div');c.className='mc-credit';c.innerHTML='🔒 Tu memoria con MAY se guarda solo en este dispositivo. <button type="button" id="mcForget" class="mc-forget">Olvidar mis datos</button>';log.parentNode.insertBefore(c,log.nextSibling);$('mcForget').onclick=()=>{MAY.forget();log.innerHTML='';add('may','Hecho 💛: he olvidado tu nombre, tus datos y nuestra conversación en este dispositivo.')};const wb=MAY.welcome();add('may',wb||'¡Hola! Soy MAY, la presentadora IA de OSNews. Pregúntame lo que quieras sobre los debates, los boletines o la comunidad. Y en la encuesta de al lado… tú decides.')}
  // --- Encuesta singularidad ---
  const LBL={si:'Sí, ya decide por sí misma',no:'Todavía no, solo procesa patrones',nose:'No lo sé'};
  const KEY='osnews_poll_singularidad';
@@ -805,5 +954,9 @@ setInterval(poll, POLL_MS);
 })();
 </script>
 
+<script>/* MAY_PWA_V1 */(function(){if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});
+let dp=null;const b=document.getElementById('mcInstall');window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e;b.hidden=false});
+b.onclick=async()=>{if(!dp)return;dp.prompt();await dp.userChoice.catch(()=>{});dp=null;b.hidden=true};window.addEventListener('appinstalled',()=>{b.hidden=true});
+const ios=/iphone|ipad|ipod/i.test(navigator.userAgent)&&!navigator.standalone;if(ios)document.getElementById('mcIosHint').hidden=false})();</script>
 </body>
 </html>
