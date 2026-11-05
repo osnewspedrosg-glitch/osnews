@@ -330,6 +330,8 @@ footer{max-width:1700px;margin:0 auto;padding:0 20px 30px}
   </div>
  </div>
 </section>
+<section class="panel" id="hojaMay" aria-label="La hoja de Pedro"></section>
+<script src="hoja.js"></script><script>OSHoja.mount(document.getElementById("hojaMay"),{who:"may",lang:()=>new URLSearchParams(location.search).get("lang")||(document.documentElement.lang||"es").slice(0,2)})</script>
 
 <footer>
  <div class="follow"><svg width="40" height="40"><use href="#logo"/></svg><div><b data-i18n="channel">Canal OSNews en X</b><br><a id="followLink" target="_blank" rel="noopener"></a> <span class="note" id="followNote"></span></div></div>

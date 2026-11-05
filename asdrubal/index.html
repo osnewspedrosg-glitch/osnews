@@ -53,8 +53,10 @@ footer{text-align:center;color:var(--mu);font-size:13px;margin-top:14px}
 <p class="note">🔒 <span data-i="privacy">Tu memoria con Asdrúbal se guarda solo en este dispositivo.</span> <button class="forget" id="forget" type="button" data-i="forget">Olvidar mis datos</button></p>
 <p class="note">⚠️ <span data-i="disclaimer">Asdrúbal es una IA con emociones simuladas. No da consejo médico, legal ni financiero. En peligro: 112 · Violencia de género (España): 016 · WhatsApp 600 000 016 · Conducta suicida: 024. Fuera de España, tu número de emergencias local.</span></p>
 <div class="row"><a class="tb" href="app/" data-i="install">📲 Instalar la app</a><a class="tb" href="../?may=1#hablaMay" data-i="may">💗 Conoce también a MAY</a></div>
+<section id="hojaAsd"></section>
 <footer>Asdrúbal · creado por Pedro Sánchez Gómez (Mar Menor) con Copilot y Grok · OSNews</footer>
 </main>
+<script src="hoja.js"></script>
 <script src="creador.js"></script>
 <script src="charla.js"></script>
 <script src="engine.js"></script>
@@ -136,4 +138,5 @@ applyUI();A.history().forEach(m=>add(m.r==='u'?'u':'a',m.t));window.__asdCharla=
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js',{scope:'./'}).catch(()=>{});
 })();
 </script><script src="holograma.js" data-name="Asdrúbal" data-img="asdrubal-avatar.jpg" data-after="stop" data-form="f" data-input="in" data-mic="mic" data-log="log" data-bot=".msg.a,.msg.poem" data-speaking="wrap" data-theme="violeta"></script><script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>(function(){const m=()=>OSHoja.mount(document.getElementById("hojaAsd"),{who:"asdrubal",lang:()=>new URLSearchParams(location.search).get("lang")||document.getElementById("lang").value});m();document.getElementById("lang").addEventListener("change",m)})()</script>
 </body></html>
