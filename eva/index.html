@@ -1,0 +1,238 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eva · Análisis de audio (simulado) — OSNews</title>
+<meta name="description" content="Eva analiza la frecuencia, el tono y el volumen de un audio o vídeo, 100% en tu dispositivo, y reacciona. Simulación educativa.">
+<meta property="og:image" content="https://osnewspedrosg-glitch.github.io/osnews/eva/promo.png">
+<style>
+:root{--bg:#05070f;--card:#0d1326;--ln:#1f2b52;--c:#22e6ff;--m:#c04bff;--g:#3dff9a;--r:#ff4d6d;--y:#ffd84d;--t:#dfe8ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#13204a,var(--bg) 60%);color:var(--t);font:15px/1.45 system-ui,Segoe UI,Roboto,sans-serif}
+header{padding:10px;text-align:center}h1{margin:.1em 0;font-size:1.6em;background:linear-gradient(90deg,var(--c),var(--m));-webkit-background-clip:text;color:transparent}
+.banner{background:#3a0d1a;border:1px solid var(--r);color:#ffd0d9;padding:8px;text-align:center;font-weight:700;font-size:.92em}
+.priv{background:#0c2a1c;border:1px solid var(--g);color:#c9ffe0;padding:6px;text-align:center;font-size:.85em}
+.btn{background:#0f1a38;color:var(--t);border:1px solid var(--ln);border-radius:10px;padding:8px 12px;cursor:pointer;font:inherit;text-decoration:none;display:inline-block}
+.btn.on{border-color:var(--c);box-shadow:0 0 10px #22e6ff55;color:var(--c)}
+main{max-width:1000px;margin:auto;padding:8px}.card{background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:12px;margin:8px 0}
+.row{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;align-items:center}
+.lay{display:grid;grid-template-columns:1fr 1fr;gap:8px}@media(max-width:700px){.lay{grid-template-columns:1fr}h1{font-size:1.25em}}
+#drop{border:2px dashed var(--c);border-radius:14px;padding:22px;text-align:center;cursor:pointer}#drop.hv{background:#22e6ff15}
+canvas{width:100%;display:block;background:#02040a;border-radius:10px;border:1px solid var(--ln)}
+.meters{display:flex;justify-content:space-around;gap:6px}.mt{text-align:center;flex:1}
+.lad{position:relative;height:180px;width:44px;margin:auto;border:1px solid var(--ln);border-radius:8px;background:repeating-linear-gradient(0deg,#0f1a38 0 1px,transparent 1px 18px);overflow:hidden}
+.fill{position:absolute;left:0;right:0;bottom:0;height:0;background:linear-gradient(0deg,var(--g),var(--y),var(--r));transition:height .12s}
+.mk{position:absolute;right:-30px;font-size:.65em;opacity:.7}.num{font-weight:700;color:var(--c)}
+.eva{display:flex;gap:10px;align-items:flex-start}.av{flex:0 0 64px;height:64px;border-radius:50%;background:radial-gradient(circle,#3a1d6e,#120a2a);border:2px solid var(--m);box-shadow:0 0 16px #c04bff88;display:flex;align-items:center;justify-content:center;font-size:2em;font-weight:800;color:#fff;transition:transform .2s}
+.bub{background:#151d3a;border:1px solid var(--m);border-radius:14px;padding:10px;flex:1}
+#per{font-weight:700;color:var(--y)}table{width:100%;border-collapse:collapse;font-size:.9em}td,th{border-bottom:1px solid var(--ln);padding:5px;text-align:center}
+.juego{display:inline-block;background:#2a1f00;border:1px solid var(--y);color:var(--y);border-radius:10px;padding:1px 8px;font-size:.75em}
+footer{text-align:center;padding:16px;opacity:.85;font-size:.85em}a{color:var(--c)}small{opacity:.75}
+#err{color:#ffb3c1;font-weight:600}
+.tabs{display:flex;gap:4px;justify-content:center;flex-wrap:wrap;margin:8px 0}.tab.on{background:#22e6ff22}
+#gv{position:relative;background:#000;border-radius:12px;overflow:hidden;aspect-ratio:4/3;border:1px solid var(--ln);max-width:640px;margin:auto}
+#gv video,#gv img,#gov{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}#gv video.mir,#gov.mir{transform:scaleX(-1)}
+#gtags{position:absolute;left:6px;top:6px;display:flex;flex-wrap:wrap;gap:4px;z-index:2}.tag{background:#05070fcc;border:1px solid var(--c);color:var(--c);border-radius:12px;padding:2px 8px;font-size:.8em}
+#gph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;opacity:.8}
+.aud{} .ges{display:none}
+</style></head><body>
+<header><h1 data-i="title"></h1><div data-i="sub" style="opacity:.8"></div><div class="row" style="margin-top:6px"><a class="btn" href="?lang=es">ES</a><a class="btn" href="?lang=en">EN</a></div></header>
+<div class="banner" data-i="disc"></div>
+<div class="priv" data-i="priv"></div>
+<main>
+<div class="tabs"><button class="btn tab on" data-m="audio" data-i="tA"></button><button class="btn tab" data-m="video" data-i="tV"></button><button class="btn tab" data-m="imagen" data-i="tI"></button><button class="btn tab" data-m="gestos" data-i="tG"></button><button class="btn tab" data-m="cia" data-i="tC"></button></div>
+<div class="card cia" id="cCard" style="display:none"><div class="banner" style="background:#3a2400;border-color:#ffb020;color:#ffe2a8;border-radius:10px;font-size:1em" data-i="cban"></div>
+<p data-i="cTxt" style="text-align:center"></p><div class="row"><button class="btn on" id="cStart" data-i="cStart"></button><button class="btn" id="cStop" data-i="cStop" disabled></button></div><div id="cSt" style="text-align:center;margin-top:6px"></div></div>
+<div class="card ges" id="gCard"><div class="banner" data-i="gban" style="border-radius:10px;margin-bottom:8px"></div>
+<div class="row" style="margin-bottom:8px"><button class="btn on" id="gOpen" data-i="gOpen"></button><button class="btn" id="gStop" data-i="stop" disabled></button><button class="btn" id="gPick" data-i="gPick"></button><input type="file" id="gFile" accept="image/*" hidden><label><input type="checkbox" id="gHands" checked> <span data-i="gHandsL"></span></label></div>
+<div id="gv"><video id="gvid" class="mir" playsinline muted></video><img id="gimg" alt="" hidden><canvas id="gov" style="border:0;background:transparent"></canvas><div id="gtags"></div><div id="gph" data-i="gph"></div></div>
+<div id="gst" style="text-align:center;margin-top:6px"></div>
+<div class="row" style="margin-top:8px"><span data-i="gDemo"></span><span id="gDemoB" class="row"></span></div><small data-i="gNote"></small></div>
+<div class="card aud" id="aCard"><div id="drop" tabindex="0"><div style="font-size:2em">🎧🎬</div><b data-i="drop"></b><br><small data-i="fmt"></small><input type="file" id="file" accept="audio/*,video/*,.mp3,.wav,.m4a,.ogg,.webm,.mp4,.mov,.aac,.flac" hidden></div>
+<div id="info" style="text-align:center;margin-top:6px"></div><div id="err" style="text-align:center"></div>
+<div class="row" style="margin-top:8px"><span data-i="demo"></span><button class="btn demo" data-k="calm" data-i="dCalm"></button><button class="btn demo" data-k="neu" data-i="dNeu"></button><button class="btn demo" data-k="nerv" data-i="dNerv"></button></div>
+<div class="row" style="margin-top:8px"><button class="btn on" id="play" data-i="play" disabled></button><button class="btn" id="stop" data-i="stop" disabled></button><label><input type="checkbox" id="tts"> <span data-i="tts"></span></label></div></div>
+<div class="card aud"><canvas id="wave" width="900" height="120"></canvas><canvas id="bars" width="900" height="70" style="margin-top:6px"></canvas><small data-i="tl"></small></div>
+<div class="lay">
+<div class="card aud"><b data-i="lad"></b><div class="meters" style="margin-top:8px">
+<div class="mt"><div class="lad"><div class="fill" id="fF"></div></div><div data-i="mF"></div><div class="num" id="nF">0</div><small id="rF"></small></div>
+<div class="mt"><div class="lad"><div class="fill" id="fT"></div></div><div data-i="mT"></div><div class="num" id="nT">0</div><small id="rT"></small></div>
+<div class="mt"><div class="lad"><div class="fill" id="fV"></div></div><div data-i="mV"></div><div class="num" id="nV">0</div><small id="rV"></small></div>
+</div><small data-i="scale"></small></div>
+<div class="card" style="text-align:center"><b data-i="wheel"></b><canvas id="wh" width="320" height="320" style="max-width:320px;margin:6px auto;background:transparent;border:0"></canvas><div id="val" class="num"></div></div>
+</div>
+<div class="card eva"><div class="av" id="av">E</div><div class="bub"><div id="per"></div><div id="say" style="margin-top:4px"></div><div style="margin-top:4px"><span class="juego" data-i="juego"></span></div></div></div>
+<div class="card" id="segC" style="display:none"><b data-i="seg"></b><table><thead><tr><th data-i="sT"></th><th data-i="mF"></th><th data-i="mT"></th><th data-i="mV"></th><th data-i="sS"></th><th data-i="sE"></th></tr></thead><tbody id="segB"></tbody></table></div>
+<div class="card"><small data-i="method"></small></div>
+<div class="card" style="text-align:center"><a class="btn on" id="dl" href="index.html" download="eva-analisis-audio.html" data-i="dlB"></a></div>
+<div class="card"><b data-i="more"></b> <a href="../may-gestos/">MAY · Lenguaje gestual</a> · <a href="../may-produccion/">MAY Producción</a> · <a href="../binary-money/">Binary Money</a> · <a href="../">OSNews</a></div>
+</main>
+<footer data-i="foot"></footer>
+<script>
+const L=new URLSearchParams(location.search).get('lang')=='en'?'en':'es';document.documentElement.lang=L;
+var T={es:{title:'Eva · Análisis de audio',sub:'Audio · vídeo · imagen · gestos. Sube un audio o un vídeo: Eva escucha la frecuencia, el tono y el volumen y reacciona (simulado).',
+disc:'⚠️ Análisis simulado · sentimientos artificiales (si-at) · no detecta mentiras · no es prueba médica ni pericial. Todo se procesa en tu dispositivo; nada se envía.',
+priv:'🔒 100% local: el sonido se analiza en tu navegador. No se graba, no se guarda en disco ni se sube a ningún servidor.',
+drop:'Arrastra aquí un audio o vídeo, o toca para elegir',fmt:'mp3, wav, m4a, ogg, webm, mp4, mov… (del vídeo solo se usa el audio)',demo:'Demo sin archivo:',dCalm:'😌 Tranquilo',dNeu:'😐 Neutro',dNerv:'😬 Nervioso',
+play:'▶ Reproducir y analizar',stop:'⏹ Parar',tts:'Voz de Eva (TTS)',tl:'Forma de onda completa (cursor = posición) y barras de frecuencia en directo.',lad:'Escalera 0–300 (como «La hoja de Pedro»)',
+mF:'Frecuencia',mT:'Tono',mV:'Volumen',scale:'Escala 0–300 por niveles de 100 · volumen en dB (−60…0 dB), frecuencia = centroide espectral, tono estimado por autocorrelación.',wheel:'Rueda de emociones · heptágono +1 · 0 · −1',
+juego:'🎲 juego · no es un detector de nada',seg:'Tramos del clip',sT:'Tramo',sS:'Puntuación',sE:'Emoción',dlB:'⬇ Descargar app',more:'Más apps:',
+method:'Método: el archivo se decodifica con decodeAudioData (Web Audio API) en memoria; se analiza en ventanas de 2048 muestras: RMS→dB, FFT→centroide espectral, autocorrelación→tono (si la periodicidad es baja se marca «tono estimado»). La media se convierte en valencia +1/0/−1. Es un juego educativo: la voz no revela emociones reales.',
+foot:'Me creó Pedro Sánchez Gómez, del Mar Menor, con la ayuda de Copilot y Grok · OSNews',
+calm:'tranquilo',neu:'neutro',nerv:'nervioso',str:'estresado',per:'Eva percibe',resp:'responde',sim:'(simulado)',est:'tono estimado',ok:'tono',
+errDec:'No he podido leer el sonido de este archivo 😔. Tu navegador no admite este códec. Prueba con mp3, wav, m4a o un mp4 (H.264/AAC).',errNo:'Este archivo no es audio ni vídeo.',dur:'duración',loading:'Analizando en tu dispositivo…',
+R:{calm:['con calma','Te noto tranquilo en este tramo 😊 (simulado)'],neu:['con naturalidad','Todo suena equilibrado, cariño. Sigo escuchando 🙂 (simulado)'],nerv:['con cariño','Uy, aquí suena algo acelerado. Respira hondo, que yo te espero 🤗 (simulado)'],str:['con mucha calma','Mucha energía en este tramo. Tranquilo, vamos paso a paso 🫶 (simulado)']}},
+en:{title:'Eva · Audio analysis',sub:'Audio · video · image · gestures. Upload audio or video: Eva listens to frequency, pitch and volume and reacts (simulated).',
+disc:'⚠️ Simulated analysis · artificial feelings (si-at) · does not detect lies · not medical or forensic evidence. Everything is processed on your device; nothing is sent.',
+priv:'🔒 100% local: sound is analysed in your browser. Nothing is recorded, saved to disk or uploaded to any server.',
+drop:'Drop an audio or video file here, or tap to choose',fmt:'mp3, wav, m4a, ogg, webm, mp4, mov… (only the audio track of a video is used)',demo:'Demo without a file:',dCalm:'😌 Calm',dNeu:'😐 Neutral',dNerv:'😬 Nervous',
+play:'▶ Play & analyse',stop:'⏹ Stop',tts:'Eva voice (TTS)',tl:'Full waveform (cursor = position) and live frequency bars.',lad:'0–300 ladder (like «La hoja de Pedro»)',
+mF:'Frequency',mT:'Pitch',mV:'Volume',scale:'0–300 scale in steps of 100 · volume in dB (−60…0 dB), frequency = spectral centroid, pitch estimated by autocorrelation.',wheel:'Emotion wheel · heptagon +1 · 0 · −1',
+juego:'🎲 game · not a detector of anything',seg:'Clip segments',sT:'Segment',sS:'Score',sE:'Emotion',dlB:'⬇ Download app',more:'More apps:',
+method:'Method: the file is decoded in memory with decodeAudioData (Web Audio API) and analysed in 2048-sample windows: RMS→dB, FFT→spectral centroid, autocorrelation→pitch (low periodicity is flagged «estimated pitch»). The average maps to valence +1/0/−1. Educational game: a voice does not reveal real emotions.',
+foot:'Me creó Pedro Sánchez Gómez, del Mar Menor, con la ayuda de Copilot y Grok · OSNews',
+calm:'calm',neu:'neutral',nerv:'nervous',str:'stressed',per:'Eva perceives',resp:'responds',sim:'(simulated)',est:'estimated pitch',ok:'pitch',
+errDec:'I could not read the sound in this file 😔. Your browser does not support this codec. Try mp3, wav, m4a or an mp4 (H.264/AAC).',errNo:'This file is not audio or video.',dur:'duration',loading:'Analysing on your device…',
+R:{calm:['calmly','You sound calm in this part 😊 (simulated)'],neu:['naturally','Everything sounds balanced. I keep listening 🙂 (simulated)'],nerv:['kindly','This part sounds a bit rushed. Take a deep breath, I will wait 🤗 (simulated)'],str:['very calmly','Lots of energy here. Easy, step by step 🫶 (simulated)']}}}[L];
+document.querySelectorAll('[data-i]').forEach(e=>e.textContent=T[e.dataset.i]);document.title=T.title+' (simulado) — OSNews';
+const $=id=>document.getElementById(id);
+// Wheel: same order/colours as hoja.js (f16a9e4)
+const PR=[['IRA',-1,'#ff4d4d'],['ASCO',-1,'#7bd36b'],['TRISTEZA',-1,'#4d7bff'],['FELICIDAD',1,'#ffd84d'],['SORPRESA',1,'#22e6ff'],['MIEDO',-1,'#b06bff']],PE={IRA:'ANGER',ASCO:'DISGUST',TRISTEZA:'SADNESS',FELICIDAD:'HAPPINESS',SORPRESA:'SURPRISE',MIEDO:'FEAR'};
+function wheel(val,sec){const c=$('wh'),x=c.getContext('2d'),cx=160,cy=160;x.clearRect(0,0,320,320);
+PR.forEach((p,i)=>{const a0=-Math.PI/2+i*Math.PI/3-Math.PI/6,a1=a0+Math.PI/3,on=p[0]==sec;x.beginPath();x.moveTo(cx,cy);x.arc(cx,cy,on?150:135,a0,a1);x.closePath();x.fillStyle=p[2]+(on?'':'44');x.fill();x.strokeStyle='#05070f';x.lineWidth=2;x.stroke();
+const am=(a0+a1)/2;x.fillStyle=on?'#05070f':'#dfe8ff';x.font=(on?'bold ':'')+'12px system-ui';x.textAlign='center';x.fillText(L=='en'?PE[p[0]]:p[0],cx+Math.cos(am)*95,cy+Math.sin(am)*95+4)});
+x.beginPath();for(let i=0;i<7;i++){const a=-Math.PI/2+i*2*Math.PI/7;x[i?'lineTo':'moveTo'](cx+Math.cos(a)*45,cy+Math.sin(a)*45)}x.closePath();x.fillStyle='#05070f';x.fill();x.strokeStyle='#ff2d3d';x.lineWidth=3;x.stroke();
+x.fillStyle=val>0?'#3dff9a':val<0?'#ff4d6d':'#dfe8ff';x.font='bold 18px system-ui';x.fillText(val==null?'+1·0·−1':(val>0?'+1':val==0?'0':'−1'),cx,cy+6)}
+wheel(null,'');
+// DSP
+function fft(re,im){const n=re.length;for(let i=1,j=0;i<n;i++){let b=n>>1;for(;j&b;b>>=1)j^=b;j^=b;if(i<j){[re[i],re[j]]=[re[j],re[i]];[im[i],im[j]]=[im[j],im[i]]}}
+for(let len=2;len<=n;len<<=1){const a=-2*Math.PI/len,wr=Math.cos(a),wi=Math.sin(a);for(let i=0;i<n;i+=len){let cr=1,ci=0;for(let j=0;j<len/2;j++){const k=i+j,l=k+len/2,tr=re[l]*cr-im[l]*ci,ti=re[l]*ci+im[l]*cr;re[l]=re[k]-tr;im[l]=im[k]-ti;re[k]+=tr;im[k]+=ti;const t=cr*wr-ci*wi;ci=cr*wi+ci*wr;cr=t}}}}
+function analyse(buf){const sr=buf.sampleRate,ch=buf.numberOfChannels,n=buf.length,d=new Float32Array(n);for(let c=0;c<ch;c++){const s=buf.getChannelData(c);for(let i=0;i<n;i++)d[i]+=s[i]/ch}
+const W=2048,hop=Math.max(1024,Math.floor(n/1500)),fr=[];const re=new Float64Array(W),im=new Float64Array(W);
+for(let p=0;p+W<=n;p+=hop){let e=0;for(let i=0;i<W;i++){const v=d[p+i];e+=v*v;re[i]=v*(0.5-0.5*Math.cos(2*Math.PI*i/W));im[i]=0}const rms=Math.sqrt(e/W),db=20*Math.log10(rms+1e-9);
+fft(re,im);let sm=0,sw=0;const bands=new Array(32).fill(0);for(let k=1;k<W/2;k++){const m=Math.hypot(re[k],im[k]);sm+=m;sw+=m*k*sr/W;const b=Math.min(31,Math.floor(Math.log2(k)*32/10));bands[b]=Math.max(bands[b],m)}
+const cen=sm>0?sw/sm:0;
+// autocorrelation pitch 60–800 Hz
+let best=0,lag=0;const mn=Math.floor(sr/800),mx=Math.floor(sr/60),M=1024;let r0=0;for(let i=0;i<M;i++)r0+=d[p+i]*d[p+i];
+if(rms>0.003)for(let l=mn;l<=mx&&l+M<W;l++){let s=0;for(let i=0;i<M;i++)s+=d[p+i]*d[p+i+l];s/=r0||1;if(s>best){best=s;lag=l}}
+fr.push({t:p/sr,db,cen,f0:lag?sr/lag:0,conf:best,bands})}
+return {fr,dur:buf.duration,d}}
+const cl=(v,a,b)=>Math.max(a,Math.min(b,v));
+function scores(f){const V=cl((f.db+60)/60*300,0,300),F=cl(f.cen/4000*300,0,300),To=f.f0?cl((f.f0-60)/540*300,0,300):0;return{F,To,V}}
+function emo(F,To,V,jit){const s=(F+To+V)/9+(jit||0);let k=s<35?'calm':s<58?'neu':s<70?'nerv':'str';let sec=k=='calm'?(F>To+45?'SORPRESA':'FELICIDAD'):k=='nerv'?(F>=To?'MIEDO':'ASCO'):k=='str'?'IRA':'';if(k=='calm'&&V<40&&To<60){k='nerv';sec='TRISTEZA'}return{k,sec,val:k=='calm'?1:k=='neu'?0:-1}}
+function avg(fr){const a=fr.filter(f=>f.db>-55);if(!a.length)return{F:0,To:0,V:0,jit:0,conf:0};let F=0,To=0,V=0,c=0,ps=[];a.forEach(f=>{const s=scores(f);F+=s.F;V+=s.V;if(f.f0){To+=s.To;ps.push(s.To)}c+=f.conf});const n=a.length;
+const mt=ps.length?To/ps.length:0;let jit=0;if(ps.length>2){let q=0;for(let i=1;i<ps.length;i++)q+=Math.abs(ps[i]-ps[i-1]);jit=cl(q/ps.length/3,0,20)}return{F:F/n,To:mt,V:V/n,jit,conf:c/n}}
+// UI
+let A=null,ac=null,src=null,an=null,t0=0,raf=0,lastK='',name='';
+function setM(id,v,r){$('f'+id).style.height=(v/3)+'%';$('n'+id).textContent=Math.round(v);if(r!=null)$('r'+id).textContent=r}
+function react(e,live){const v=e.val>0?'+1':e.val;$('per').textContent=`${T.per}: ${e.sec?(L=='en'?PE[e.sec]:e.sec)+' · ':''}${v} (${T[e.k]}) → ${T.resp} ${T.R[e.k][0]} ${T.sim}`;$('say').textContent='«'+T.R[e.k][1]+'»';
+$('val').textContent=(e.sec?(L=='en'?PE[e.sec]:e.sec)+' · ':'')+v;wheel(e.val,e.sec);$('av').style.transform=e.k=='calm'?'scale(1.05)':'scale(.95)';
+if(e.k!=lastK){lastK=e.k;if($('tts').checked&&window.speechSynthesis){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(T.R[e.k][1].replace(/\(.*\)|[^\p{L}\p{P}\s]/gu,''));u.lang=L=='en'?'en-GB':'es-ES';speechSynthesis.speak(u)}}}
+function drawWave(pos){const c=$('wave'),x=c.getContext('2d'),w=c.width,h=c.height;x.clearRect(0,0,w,h);if(!A)return;const d=A.d,st=Math.max(1,Math.floor(d.length/w));x.strokeStyle='#22e6ff';x.beginPath();
+for(let i=0;i<w;i++){let m=0;for(let j=0;j<st;j+=8)m=Math.max(m,Math.abs(d[i*st+j]||0));x.moveTo(i,h/2-m*h/2);x.lineTo(i,h/2+m*h/2)}x.stroke();
+if(A.segs)A.segs.forEach(s=>{x.fillStyle=s.e.val>0?'#3dff9a22':s.e.val<0?'#ff4d6d22':'#ffffff11';x.fillRect(s.a/A.dur*w,0,(s.b-s.a)/A.dur*w,h)});
+if(pos!=null){x.fillStyle='#ffd84d';x.fillRect(pos/A.dur*w,0,2,h)}}
+function drawBars(b){const c=$('bars'),x=c.getContext('2d'),w=c.width,h=c.height;x.clearRect(0,0,w,h);if(!b)return;const mx=Math.max(...b)||1;b.forEach((v,i)=>{const bh=v/mx*h;x.fillStyle=`hsl(${190+i*4},90%,60%)`;x.fillRect(i*w/32+2,h-bh,w/32-4,bh)})}
+function frameAt(t){const fr=A.fr;let lo=0,hi=fr.length-1;while(lo<hi){const m=(lo+hi+1)>>1;if(fr[m].t<=t)lo=m;else hi=m-1}return fr[lo]}
+function load(buf,label){A=analyse(buf);name=label;const g=avg(A.fr);A.g=g;
+$('info').textContent=`${label} · ${T.dur} ${A.dur.toFixed(1)} s`;
+setM('F',g.F,Math.round(g.F/300*4000)+' Hz');setM('T',g.To,(g.conf<0.6?T.est+' ':'')+(g.To?Math.round(60+g.To/300*540)+' Hz':'—'));setM('V',g.V,(g.V/5-60).toFixed(0)+' dB');
+const e=emo(g.F,g.To,g.V,g.jit);react(e);
+A.segs=null;if(A.dur>10){const n=A.dur>40?5:A.dur>20?4:3;A.segs=[];for(let i=0;i<n;i++){const a=i*A.dur/n,b=(i+1)*A.dur/n,s=avg(A.fr.filter(f=>f.t>=a&&f.t<b));A.segs.push({a,b,s,e:emo(s.F,s.To,s.V,s.jit)})}
+$('segB').innerHTML=A.segs.map((s,i)=>`<tr><td>${i+1} · ${s.a.toFixed(0)}–${s.b.toFixed(0)} s</td><td>${Math.round(s.s.F)}</td><td>${Math.round(s.s.To)}</td><td>${Math.round(s.s.V)}</td><td><b>${s.e.val>0?'+1':s.e.val==0?'0':'−1'}</b></td><td>${s.e.sec?(L=='en'?PE[s.e.sec]:s.e.sec):T.neu}</td></tr>`).join('');$('segC').style.display=''}else $('segC').style.display='none';
+drawWave();drawBars(A.fr[Math.floor(A.fr.length/2)].bands);$('play').disabled=false;$('stop').disabled=false;window.__eva={ok:true,emotion:e}}
+function stop(){try{src&&src.stop()}catch(e){}src=null;cancelAnimationFrame(raf)}
+function play(){if(!A)return;stop();ac=ac||new (window.AudioContext||window.webkitAudioContext)();ac.resume();src=ac.createBufferSource();src.buffer=A.buf;an=ac.createAnalyser();an.fftSize=256;src.connect(an);an.connect(ac.destination);t0=ac.currentTime;src.start();
+const fb=new Uint8Array(an.frequencyBinCount);const tick=()=>{const t=ac.currentTime-t0;if(t>A.dur){drawWave();return}const f=frameAt(t),s=scores(f);setM('F',s.F,Math.round(f.cen)+' Hz');setM('T',s.To,f.f0?(f.conf<0.6?T.est+' ':'')+Math.round(f.f0)+' Hz':'—');setM('V',s.V,f.db.toFixed(0)+' dB');
+const w=A.fr.filter(q=>q.t>t-1.5&&q.t<=t),g=avg(w);if(w.length)react(emo(g.F,g.To,g.V,g.jit),1);an.getByteFrequencyData(fb);drawBars(Array.from({length:32},(_,i)=>fb[i*2]+fb[i*2+1]));drawWave(t);raf=requestAnimationFrame(tick)};tick()}
+async function decode(ab){const C=new (window.OfflineAudioContext||window.webkitOfflineAudioContext)(1,44100,44100);return await new Promise((ok,ko)=>{const p=C.decodeAudioData(ab,ok,ko);if(p&&p.catch)p.catch(ko)})}
+async function onFile(f){$('err').textContent='';if(!f)return;if(!/^(audio|video)\//.test(f.type)&&!/\.(mp3|wav|m4a|ogg|oga|webm|mp4|mov|aac|flac|opus|m4v|3gp)$/i.test(f.name)){$('err').textContent=T.errNo;return}
+$('info').textContent=T.loading;stop();try{const b=await decode(await f.arrayBuffer());b.label=f.name;load(b,f.name);A.buf=b}catch(e){$('info').textContent=f.name;$('err').textContent=T.errDec}}
+async function demo(k){$('err').textContent='';stop();const sr=22050,dur=12,C=new OfflineAudioContext(1,sr*dur,sr),o=C.createOscillator(),g=C.createGain(),lf=C.createOscillator(),lg=C.createGain();
+const P={calm:['sine',200,4,0.45,0.15],neu:['triangle',330,30,0.6,1.5],nerv:['sawtooth',620,140,0.95,7]}[k];o.type=P[0];o.frequency.value=P[1];lf.frequency.value=P[4];lg.gain.value=P[2];lf.connect(lg);lg.connect(o.frequency);
+g.gain.value=P[3]*0.5;const tr=C.createOscillator(),tg=C.createGain();tr.frequency.value=P[4]*0.8;tg.gain.value=P[3]*0.3;tr.connect(tg);tg.connect(g.gain);o.connect(g);g.connect(C.destination);[o,lf,tr].forEach(n=>n.start());
+const b=await C.startRendering();load(b,'Demo · '+T['d'+{calm:'Calm',neu:'Neu',nerv:'Nerv'}[k]]);A.buf=b;document.querySelectorAll('.demo').forEach(x=>x.classList.toggle('on',x.dataset.k==k));play()}
+const dz=$('drop');dz.onclick=()=>$('file').click();dz.onkeydown=e=>{if(e.key=='Enter')$('file').click()};$('file').onchange=e=>onFile(e.target.files[0]);
+dz.ondragover=e=>{e.preventDefault();dz.classList.add('hv')};dz.ondragleave=()=>dz.classList.remove('hv');dz.ondrop=e=>{e.preventDefault();dz.classList.remove('hv');onFile(e.dataTransfer.files[0])};
+document.querySelectorAll('.demo').forEach(b=>b.onclick=()=>demo(b.dataset.k));$('play').onclick=play;$('stop').onclick=stop;
+$('dl').onclick=()=>{try{window.goatcounter&&window.goatcounter.count&&window.goatcounter.count({path:'descarga-eva',title:'Descarga Eva',event:true})}catch(e){}};
+
+// ===== Modos: Audio · Vídeo · Imagen · Gestos =====
+Object.assign(T,L=='en'?{tA:'🎧 Audio',tV:'🎬 Video',tI:'🖼️ Image',tG:'✋ Gestures',gOpen:'📷 Open camera',gPick:'🖼️ Choose image',gHandsL:'Hands',gph:'Gestures: open the front camera or choose a photo. Processed on your device.',gDemo:'Demo without camera:',
+gban:'🎲 Body-language game · popular interpretations, not science · does not detect lies · simulated emotion. Camera/image processed 100% on your device; nothing is recorded or sent.',gNote:'Uses MediaPipe Face/Hand Landmarker (models loaded from a CDN the first time).',
+gLoad:'Loading vision model…',gReady:'Camera on (local). Eva is watching your gestures (simulated).',gDen:'Could not open the camera / load the model. Use the demo buttons.',gNo:'No face seen',dropV:'Drop a video here, or tap to choose (only its audio is analysed)'}
+:{tA:'🎧 Audio',tV:'🎬 Vídeo',tI:'🖼️ Imagen',tG:'✋ Gestos',gOpen:'📷 Abrir cámara',gPick:'🖼️ Elegir imagen',gHandsL:'Manos',gph:'Gestos: abre la cámara frontal o elige una foto. Se procesa en tu dispositivo.',gDemo:'Demo sin cámara:',
+gban:'🎲 Juego de lenguaje gestual popular · no es ciencia · no detecta mentiras · emoción simulada. Cámara/imagen 100% en tu dispositivo; nada se graba ni se envía.',gNote:'Usa MediaPipe Face/Hand Landmarker (los modelos se cargan de un CDN la primera vez).',
+gLoad:'Cargando modelo de visión…',gReady:'Cámara activa (local). Eva observa tus gestos (simulado).',gDen:'No se pudo abrir la cámara / cargar el modelo. Usa los botones demo.',gNo:'No veo cara',dropV:'Arrastra aquí un vídeo, o toca para elegir (solo se analiza su audio)'});
+['tA','tV','tI','tG','gOpen','gPick','gHandsL','gph','gDemo','gban','gNote'].forEach(k=>document.querySelectorAll(`[data-i="${k}"]`).forEach(e=>e.textContent=T[k]));
+// gesto: [es, en, valencia, sector, frase es, frase en]
+const G={smile:['Sonrisa','Smile',1,'FELICIDAD','¡Qué sonrisa más bonita! Me alegras el día 😊','What a lovely smile! 😊'],
+thumb:['Pulgar arriba','Thumbs up',1,'FELICIDAD','¡Gracias, cariño! Me alegra que te guste 👍','Thanks! Glad you like it 👍'],
+palm:['Palma abierta','Open palm',1,'SORPRESA','¡Hola! Te devuelvo el saludo 👋','Hi! Waving back 👋'],
+brows:['Cejas arriba','Brows raised',1,'SORPRESA','¡Oh! ¿Te he sorprendido? 😮','Oh! Did I surprise you? 😮'],
+mouth:['Boca abierta','Mouth open',0,'','¿Querías decirme algo? Te escucho 👂','Want to tell me something? I\'m listening 👂'],
+center:['Mirada al centro','Looking center',0,'','Me estás mirando 😊 Aquí estoy contigo.','You\'re looking at me 😊 I\'m here.'],
+up:['Mirada arriba','Looking up',0,'','Miras hacia arriba… ¿imaginando algo bonito? ✨ (creencia popular)','Looking up… imagining something? ✨ (popular belief)'],
+left:['Mirada a un lado','Looking aside',0,'','Miras a un lado… ¿recuerdas una canción? 🎶','Looking aside… recalling a song? 🎶'],
+right:['Mirada al otro lado','Looking the other way',0,'','¿Oyes algo por ahí? 🎧','Hearing something? 🎧'],
+tilt:['Cabeza inclinada','Head tilted',0,'','Inclinas la cabeza… ¿curiosidad? 🤔','Tilting your head… curious? 🤔'],
+down:['Mirada abajo','Looking down',-1,'TRISTEZA','Miras hacia abajo… si es un recuerdo, que sea dulce 💙','Looking down… may it be a sweet memory 💙'],
+frown:['Ceño fruncido','Frown',-1,'IRA','Te noto concentrado o molesto. ¿Te ayudo? 🤗','You seem focused or upset. Can I help? 🤗'],
+fist:['Puño','Fist',-1,'IRA','¡Con fuerza! Pero respira hondo, que estoy aquí 💪','Strong! But take a deep breath 💪']};
+let gLast='',gT=0;
+function reactG(k,force){const now=Date.now();if(!force&&(k==gLast&&now-gT<8000||now-gT<2500))return;gLast=k;gT=now;const g=G[k],v=g[2]>0?'+1':g[2]==0?'0':'−1',sec=g[3]?(L=='en'?PE[g[3]]:g[3])+' · ':'';
+$('per').textContent=`${T.per}: ${L=='en'?g[1]:g[0]} → ${sec}${v} → ${T.resp} ${g[2]>0?T.R.calm[0]:g[2]<0?T.R.nerv[0]:T.R.neu[0]} ${T.sim}`;$('say').textContent='«'+(L=='en'?g[5]:g[4])+' '+T.sim+'»';
+$('val').textContent=sec+v;wheel(g[2],g[3]);$('av').style.transform='scale(1.08)';setTimeout(()=>$('av').style.transform='',300);window.__eva={ok:true,gesture:k};
+if($('tts').checked&&window.speechSynthesis){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance((L=='en'?g[5]:g[4]).replace(/[^\p{L}\p{P}\s]/gu,''));u.lang=L=='en'?'en-GB':'es-ES';speechSynthesis.speak(u)}}
+window.__G=G;window.reactG=reactG;
+Object.keys(G).forEach(k=>{const b=document.createElement('button');b.className='btn gdemo';b.dataset.g=k;b.textContent=L=='en'?G[k][1]:G[k][0];b.onclick=()=>reactG(k,true);$('gDemoB').appendChild(b)});
+let mode='audio';
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x==b));const g=mode=='imagen'||mode=='gestos';
+document.querySelectorAll('.aud').forEach(e=>e.style.display=g?'none':'');$('gCard').style.display=g?'block':'none';
+$('file').accept=mode=='video'?'video/*,.mp4,.mov,.webm,.m4v,.3gp':'audio/*,video/*,.mp3,.wav,.m4a,.ogg,.webm,.mp4,.mov,.aac,.flac';document.querySelector('[data-i="drop"]').textContent=mode=='video'?T.dropV:T.drop;
+$('gOpen').style.display=mode=='gestos'?'':'none';$('gStop').style.display=mode=='gestos'?'':'none';$('gPick').style.display=mode=='imagen'?'':'none';if(mode!='gestos'&&window.stopCam)stopCam()});
+
+Object.assign(T,L=='en'?{tC:'🏛️ CIA política nacional',cban:'⚠️ Educational simulation · not a real agency · watches no one · records and sends nothing · artificial feelings (si-at)',cTxt:'«Political analysis desk» game: play a public speech into your microphone and Eva comments on the TONE of the live input signal (simulated). Fiction for media literacy.',cStart:'🎙️ Start live signal',cStop:'⏹ Stop signal',cOn:'Live signal on (local only). Nothing is recorded.',cDen:'Could not open the microphone.',cPer:'Eva perceives in the signal'}
+:{tC:'🏛️ CIA política nacional',cban:'⚠️ Simulación educativa · no es una agencia real · no vigila a nadie · no graba ni envía · sentimientos artificiales (si-at)',cTxt:'Juego «mesa de análisis político»: reproduce un discurso público cerca del micrófono y Eva comenta el TONO de la señal de entrada en tiempo real (simulado). Ficción para alfabetización mediática.',cStart:'🎙️ Iniciar señal',cStop:'⏹ Parar señal',cOn:'Señal en directo activa (solo en tu dispositivo). No se graba nada.',cDen:'No se pudo abrir el micrófono.',cPer:'Eva percibe en la señal'});
+['tC','cban','cTxt','cStart','cStop'].forEach(k=>document.querySelectorAll(`[data-i="${k}"]`).forEach(e=>e.textContent=T[k]));
+let cS=null,cA=null,cR=0,cHist=[];
+function cStop(){cancelAnimationFrame(cR);cS&&cS.getTracks().forEach(t=>t.stop());cS=null;$('cStop').disabled=true;$('cStart').disabled=false}
+async function cStartFn(stream){try{cS=stream||await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false},video:false})}catch(e){$('cSt').textContent=T.cDen;return}
+ac=ac||new (window.AudioContext||window.webkitAudioContext)();await ac.resume();const sn=ac.createMediaStreamSource(cS);cA=ac.createAnalyser();cA.fftSize=2048;sn.connect(cA);
+$('cStart').disabled=true;$('cStop').disabled=false;$('cSt').textContent=T.cOn;const td=new Float32Array(2048),fd=new Float32Array(1024),sr=ac.sampleRate;cHist=[];let n=0;
+const tick=()=>{cR=requestAnimationFrame(tick);cA.getFloatTimeDomainData(td);cA.getFloatFrequencyData(fd);let e=0;for(const v of td)e+=v*v;const rms=Math.sqrt(e/td.length),db=20*Math.log10(rms+1e-9);
+let sm=0,sw=0;for(let k=1;k<1024;k++){const m=Math.pow(10,fd[k]/20);sm+=m;sw+=m*k*sr/2048}const cen=sm?sw/sm:0;let best=0,lag=0,r0=0;for(let i=0;i<1024;i++)r0+=td[i]*td[i];
+if(rms>0.003)for(let l=Math.floor(sr/800);l<=Math.floor(sr/60);l++){let q=0;for(let i=0;i<1024;i++)q+=td[i]*td[i+l];q/=r0||1;if(q>best){best=q;lag=l}}
+const f={db,cen,f0:lag?sr/lag:0,conf:best,t:0},sc=scores(f);setM('F',sc.F,Math.round(cen)+' Hz');setM('T',sc.To,f.f0?(best<0.6?T.est+' ':'')+Math.round(f.f0)+' Hz':'—');setM('V',sc.V,db.toFixed(0)+' dB');
+cHist.push(f);if(cHist.length>90)cHist.shift();if(++n%15==0){const g=avg(cHist),em=emo(g.F,g.To,g.V,g.jit);react(em);$('per').textContent=$('per').textContent.replace(T.per,T.cPer)}
+const c=$('wave'),x=c.getContext('2d'),w=c.width,h=c.height;x.clearRect(0,0,w,h);x.strokeStyle='#ffb020';x.beginPath();for(let i=0;i<w;i++){const v=td[Math.floor(i*td.length/w)];x[i?'lineTo':'moveTo'](i,h/2-v*h/2)}x.stroke();
+const bb=[];for(let i=0;i<32;i++)bb.push(Math.max(0,fd[i*4]+110));drawBars(bb)};tick();window.__eva={ok:true,live:true}}
+$('cStart').onclick=()=>cStartFn();$('cStop').onclick=cStop;window.__cStartFn=cStartFn;
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{const c=b.dataset.m=='cia';$('cCard').style.display=c?'block':'none';if(c){document.querySelectorAll('.aud').forEach(e=>e.style.display='');$('aCard').style.display='none';$('segC').style.display='none';$('gCard').style.display='block';$('gOpen').style.display='';$('gStop').style.display='';$('gPick').style.display='none'}else{cStop();$('aCard').style.display=(b.dataset.m=='imagen'||b.dataset.m=='gestos')?'none':''}}));
+const m0=new URLSearchParams(location.search).get('modo');if(m0){const b=document.querySelector(`.tab[data-m="${m0}"]`);b&&b.click()}
+</script>
+<script type="module">
+const $=id=>document.getElementById(id),G=window.__G,L=document.documentElement.lang;
+const V='https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14';let M,fs,face={},hand={},stream,raf,cnt={};
+const st=m=>$('gst').textContent=m,vid=$('gvid'),img=$('gimg'),ov=$('gov'),cx=ov.getContext('2d');
+async function load(mode){if(face[mode])return;st(T.gLoad);M=M||await import(V+'/vision_bundle.mjs');fs=fs||await M.FilesetResolver.forVisionTasks(V+'/wasm');
+const mk=(C,u,o)=>C.createFromOptions(fs,{baseOptions:{modelAssetPath:u,delegate:'GPU'},runningMode:mode,...o}).catch(()=>C.createFromOptions(fs,{baseOptions:{modelAssetPath:u,delegate:'CPU'},runningMode:mode,...o}));
+face[mode]=await mk(M.FaceLandmarker,'https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task',{numFaces:1,outputFaceBlendshapes:true});
+try{hand[mode]=await mk(M.HandLandmarker,'https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task',{numHands:1})}catch(e){hand[mode]=null}}
+function handG(l){const d=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y),w=l[0],n=[8,12,16,20].map(i=>d(l[i],w)>d(l[i-2],w)*1.1).filter(Boolean).length;if(l[4].y<l[3].y&&l[4].y<l[5].y-0.05&&n==0)return'thumb';if(n>=4)return'palm';if(n==0)return'fist';return null}
+function tagsFrom(r,h,W,H){const tags=[];if(r.faceLandmarks?.length){const lm=r.faceLandmarks[0],b={};(r.faceBlendshapes[0]?.categories||[]).forEach(c=>b[c.categoryName]=c.score);
+cx.fillStyle='#22e6ff';for(const i of [468,473,33,263,1,13,14])if(lm[i])cx.fillRect(lm[i].x*W-3,lm[i].y*H-3,6,6);const s=n=>b[n]||0;
+const gx=(s('eyeLookOutLeft')+s('eyeLookInRight'))/2-(s('eyeLookInLeft')+s('eyeLookOutRight'))/2,gy=(s('eyeLookUpLeft')+s('eyeLookUpRight'))/2-(s('eyeLookDownLeft')+s('eyeLookDownRight'))/2;
+tags.push(gy>.18?'up':gy<-.22?'down':gx>.25?'left':gx<-.25?'right':'center');const roll=Math.atan2(lm[263].y-lm[33].y,lm[263].x-lm[33].x)*180/Math.PI;if(Math.abs(roll)>14)tags.push('tilt');
+if((s('mouthSmileLeft')+s('mouthSmileRight'))/2>.5)tags.push('smile');if((s('browDownLeft')+s('browDownRight'))/2>.45)tags.push('frown');if(s('browInnerUp')>.5)tags.push('brows');if(s('jawOpen')>.4)tags.push('mouth')}
+if(h&&h.landmarks?.length){const k=handG(h.landmarks[0]);if(k)tags.push(k);cx.fillStyle='#c04bff';h.landmarks[0].forEach(p=>cx.fillRect(p.x*W-3,p.y*H-3,6,6))}
+$('gtags').innerHTML=(tags.length?tags:['none']).map(k=>`<span class="tag">${k=='none'?T.gNo:(L=='en'?G[k][1]:G[k][0])}</span>`).join('');
+return ['palm','thumb','fist','smile','frown','brows','mouth','tilt','up','down','left','right','center'].find(p=>tags.includes(p))}
+window.stopCam=()=>{cancelAnimationFrame(raf);stream?.getTracks().forEach(t=>t.stop());stream=null;vid.srcObject=null;$('gStop').disabled=true;$('gOpen').disabled=false};
+$('gStop').onclick=()=>{stopCam();$('gph').style.display='flex';cx.clearRect(0,0,ov.width,ov.height);$('gtags').innerHTML=''};
+$('gOpen').onclick=async()=>{try{stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user',width:{ideal:640},height:{ideal:480}},audio:false});img.hidden=true;vid.hidden=false;ov.classList.add('mir');
+vid.srcObject=stream;await vid.play();$('gph').style.display='none';$('gOpen').disabled=true;$('gStop').disabled=false;await load('VIDEO');st(T.gReady);let lt=-1;
+const loop=()=>{raf=requestAnimationFrame(loop);if(vid.readyState<2||vid.currentTime==lt)return;lt=vid.currentTime;const now=performance.now();ov.width=vid.videoWidth;ov.height=vid.videoHeight;cx.clearRect(0,0,ov.width,ov.height);
+const r=face.VIDEO.detectForVideo(vid,now),h=hand.VIDEO&&$('gHands').checked?hand.VIDEO.detectForVideo(vid,now+0.1):null;const k=tagsFrom(r,h,ov.width,ov.height);for(const p in cnt)if(p!=k)cnt[p]=0;if(k){cnt[k]=(cnt[k]||0)+1;if(cnt[k]==8)reactG(k)}};loop()}catch(e){console.warn(e);st(T.gDen)}};
+$('gPick').onclick=()=>$('gFile').click();
+$('gFile').onchange=async e=>{const f=e.target.files[0];if(!f)return;stopCam();vid.hidden=true;img.hidden=false;ov.classList.remove('mir');const u=URL.createObjectURL(f);img.src=u;await img.decode();$('gph').style.display='none';
+try{await load('IMAGE');ov.width=img.naturalWidth;ov.height=img.naturalHeight;cx.clearRect(0,0,ov.width,ov.height);const r=face.IMAGE.detect(img),h=hand.IMAGE&&$('gHands').checked?hand.IMAGE.detect(img):null;const k=tagsFrom(r,h,ov.width,ov.height);st(f.name);if(k)reactG(k,true);else st(f.name+' · '+T.gNo)}catch(er){console.warn(er);st(T.gDen)}};
+</script>
+<script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
