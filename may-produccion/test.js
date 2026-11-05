@@ -1,0 +1,12 @@
+const a=require('assert'),M=require('./logic.js');let n=0;const t=(d,f)=>{f();n++;console.log('ok',n,d)};
+t('produce 100 panes',()=>{const r=M.parse('produce 100 panes');a.equal(r.intent,'produce');a.equal(r.product,'pan');a.equal(r.qty,100)});
+t('fabrica 10 placas solares',()=>{const r=M.parse('Fabrica 10 placas solares');a.equal(r.product,'placa');a.equal(r.qty,10)});
+t('cultiva tomates default qty',()=>{const r=M.parse('cultiva tomates');a.equal(r.product,'tomate');a.equal(r.qty,100)});
+t('english make two robots',()=>{const r=M.parse('make two robots');a.equal(r.product,'robot');a.equal(r.qty,2)});
+t('questions',()=>{a.equal(M.parse('¿Qué es la renta básica?').intent,'ubi');a.equal(M.parse('explica la escalera').intent,'ladder');a.equal(M.parse('voto por placas').product,'placa')});
+t('price falls with automation',()=>{a.ok(M.unitPrice('pan',90)<M.unitPrice('pan',10));a.equal(M.unitPrice('pan',100),+(1.2*0.2).toFixed(4))});
+t('produce raises automation & fund',()=>{const s=M.newState();const r=M.produce(s,'placa',10);a.ok(s.automation>10);a.equal(s.fund,r.points);a.ok(r.energy>0)});
+t('ladder steps',()=>{a.equal(M.ladderStep(0),0);a.equal(M.ladderStep(45),2);a.equal(M.ladderStep(100),4)});
+t('UBI split 70/30, fund conserved',()=>{const s=M.newState();s.fund=1050;const u=M.payUBI(s);a.equal(u.per,10);a.equal(u.basics,7);a.equal(u.leisure,3);a.equal(s.fund,50)});
+t('vote levels 100/101/200',()=>{a.equal(M.voteLevel(100),1);a.equal(M.voteLevel(101),2);a.equal(M.voteLevel(200),2);const s=M.newState();M.vote(s,'chip',3);a.equal(M.winner(s),'chip')});
+console.log(n+' tests passed');

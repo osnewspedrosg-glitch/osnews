@@ -1,0 +1,191 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agente digital OSNews MAY · Producción — simulación educativa</title>
+<meta name="description" content="MAY, agente digital simulado de OSNews: chatbot que produce bienes en una economía simulada y reparte renta básica en puntos. Simulación educativa.">
+<style>
+:root{--bg:#05070f;--card:#0d1326;--ln:#1f2b52;--c:#22e6ff;--m:#c04bff;--g:#3dff9a;--r:#ff4d6d;--y:#ffd84d;--t:#dfe8ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#13204a,var(--bg) 60%);color:var(--t);font:15px/1.45 system-ui,Segoe UI,Roboto,sans-serif}
+header{padding:12px;text-align:center}h1{margin:.1em 0;font-size:1.6em;background:linear-gradient(90deg,var(--c),var(--m));-webkit-background-clip:text;color:transparent}
+.banner{background:#3a0d1a;border:1px solid var(--r);color:#ffd0d9;padding:6px;text-align:center;font-weight:600;font-size:.9em}
+nav{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;padding:8px}.btn{background:#0f1a38;color:var(--t);border:1px solid var(--ln);border-radius:10px;padding:7px 11px;cursor:pointer;font:inherit}
+.btn.on{border-color:var(--c);box-shadow:0 0 10px #22e6ff55;color:var(--c)}
+main{max-width:1000px;margin:auto;padding:8px}section{display:none}section.on{display:block}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:12px;margin:8px 0}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:6px}.kpi{background:#0a1022;border:1px solid var(--ln);border-radius:10px;padding:6px;text-align:center;font-size:.8em}.kpi b{display:block;font-size:1.3em;color:var(--g)}
+#chat{height:52vh;min-height:300px;overflow-y:auto;padding:8px;display:flex;flex-direction:column;gap:8px}
+.msg{display:flex;gap:8px;align-items:flex-end;max-width:88%}.msg.me{align-self:flex-end;flex-direction:row-reverse}
+.bub{padding:9px 12px;border-radius:16px;background:#16224a;border:1px solid var(--ln);white-space:pre-wrap;word-wrap:break-word}.me .bub{background:#2a1450;border-color:var(--m)}
+.av{width:34px;height:34px;flex:none}.typing span{display:inline-block;width:7px;height:7px;margin:0 2px;border-radius:50%;background:var(--c);animation:b 1s infinite}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}@keyframes b{50%{opacity:.2;transform:translateY(-3px)}}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:6px 0}.chip{white-space:nowrap;background:#0a1530;border:1px solid var(--c);color:var(--c);border-radius:20px;padding:5px 10px;cursor:pointer;font:inherit;font-size:.85em}
+form{display:flex;gap:6px}input{flex:1;min-width:0;background:#070c1c;border:1px solid var(--ln);color:var(--t);border-radius:12px;padding:10px;font:inherit}
+.bar{height:12px;background:#0a1022;border:1px solid var(--ln);border-radius:8px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--c),var(--m));transition:width .6s}
+.ladder{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;text-align:center;font-size:.8em}.ladder div{padding:8px 2px;border-radius:8px;border:1px solid var(--ln);background:#0a1022}.ladder .done{border-color:var(--g);color:var(--g)}.ladder .cur{background:#123a2a;box-shadow:0 0 10px #3dff9a66}
+svg text{fill:var(--t);font:11px system-ui}.node{fill:#0f1a38;stroke:var(--c)}.node.hot{fill:#0f3a48;stroke:var(--g);stroke-width:2}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}table{width:100%;border-collapse:collapse;font-size:.9em}td,th{border-bottom:1px solid var(--ln);padding:4px;text-align:left}
+footer{text-align:center;padding:16px;font-size:.85em;opacity:.85}a{color:var(--c)}small{opacity:.75}
+@media(max-width:600px){h1{font-size:1.15em}header{padding:6px}header>div{font-size:.85em}.banner{font-size:.75em}nav .btn{padding:5px 8px;font-size:.85em}.kpis{gap:4px}.kpi{padding:3px}.kpis{grid-template-columns:repeat(4,1fr)}.kpi{font-size:.68em}.ladder{font-size:.66em}#chat{height:calc(100vh - 400px);min-height:260px}}
+</style></head><body>
+<div class="banner" data-i="ban"></div>
+<header><svg class="av" style="width:46px;height:46px" viewBox="0 0 40 40" id="logo"></svg><h1 data-i="title"></h1><div data-i="sub"></div><button class="btn" id="lang" style="margin-top:6px">EN</button></header>
+<nav id="tabs"></nav>
+<main>
+<div class="kpis"><div class="kpi"><span data-i="kAuto"></span><b id="kAuto"></b></div><div class="kpi"><span data-i="kFund"></span><b id="kFund"></b></div><div class="kpi"><span data-i="kStep"></span><b id="kStep"></b></div><div class="kpi"><span data-i="kMood"></span><b id="kMood"></b></div></div>
+<section id="s-chat" class="on"><div class="card"><div id="chat"></div><div class="chips" id="chips"></div>
+<form id="f"><input id="in" autocomplete="off"><button class="btn on" data-i="send"></button></form><small data-i="note"></small></div></section>
+<section id="s-arch"><div class="card"><h3 data-i="tArch"></h3><svg id="arch" viewBox="0 0 680 280" width="100%"></svg><p data-i="archTxt"></p></div></section>
+<section id="s-prod"><div class="card"><h3 data-i="tProd"></h3><div class="grid" id="sectors"></div><h4 data-i="chipsT"></h4><svg viewBox="0 0 640 120" width="100%" id="cpu"></svg><table id="tbl"></table></div></section>
+<section id="s-ladder"><div class="card"><h3 data-i="tLadder"></h3><div class="ladder" id="ladder"></div><p data-i="ladderTxt"></p><h4 data-i="capT"></h4><div id="cap"></div></div></section>
+<section id="s-pts"><div class="card"><h3 data-i="tPts"></h3><p id="ubi"></p><button class="btn on" id="pay" data-i="payB"></button><h4 data-i="voteT"></h4><div id="votes"></div><p><small data-i="voteAss"></small></p></div></section>
+<div class="card" style="text-align:center"><a class="btn on" id="dl" href="https://osnewspedrosg-glitch.github.io/osnews/may-produccion/may-produccion.html" download="may-produccion.html" data-i="dlB"></a> <span id="cnt"></span><br><small data-i="dlNote"></small></div>
+<div class="card"><b data-i="more"></b> <a href="https://osnewspedrosg-glitch.github.io/osnews/may-core/">MAY Core</a> · <a href="https://osnewspedrosg-glitch.github.io/osnews/cleopatra-puntos/">Cleopatra · Puntos</a> · <a href="https://osnewspedrosg-glitch.github.io/osnews/binary-money/">Binary Money</a> · <a href="https://osnewspedrosg-glitch.github.io/osnews/">OSNews</a></div>
+</main>
+<footer><p data-i="disc"></p><p>Me creó Pedro Sánchez Gómez, del Mar Menor, con la ayuda de Copilot y Grok</p></footer>
+<script>
+/* MAY Producción — lógica (parser + economía). Simulación educativa. */
+(function(G){
+const PRODUCTS={
+ pan:{es:'panes',en:'loaves of bread',sector:'campo',kwh:0.5,rh:0.02,base:1.2,pts:1},
+ tomate:{es:'kg de tomates',en:'kg of tomatoes',sector:'campo',kwh:0.3,rh:0.03,base:2,pts:2},
+ placa:{es:'placas solares',en:'solar panels',sector:'energia',kwh:40,rh:3,base:180,pts:150},
+ chip:{es:'chips',en:'chips',sector:'fabrica',kwh:5,rh:0.5,base:25,pts:20},
+ tablet:{es:'tablets con NPU',en:'NPU tablets',sector:'fabrica',kwh:20,rh:2,base:220,pts:180},
+ robot:{es:'robots',en:'robots',sector:'fabrica',kwh:300,rh:40,base:5000,pts:4000},
+ app:{es:'apps',en:'apps',sector:'digital',kwh:2,rh:1,base:50,pts:40},
+ agua:{es:'litros de agua',en:'litres of water',sector:'servicios',kwh:0.01,rh:0.001,base:0.01,pts:0.01}
+};
+const ALIASES=[[/pan(es)?|bread|loa(f|ves)/,'pan'],[/tomat/,'tomate'],[/placa|solar|panel(es)? solar/,'placa'],[/chip/,'chip'],[/tablet|movil|móvil|phone/,'tablet'],[/robot/,'robot'],[/app|software|program/,'app'],[/agua|water/,'agua']];
+const NUMW={un:1,una:1,uno:1,dos:2,tres:3,cuatro:4,cinco:5,diez:10,cien:100,mil:1000,one:1,two:2,three:3,ten:10,hundred:100,thousand:1000};
+function norm(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function parse(text){
+ const t=norm(text);
+ if(/^\s*(hola|buenas|hello|hi|hey)\b/.test(t))return{intent:'greet'};
+ if(/escalera|ladder|transici|paso|step/.test(t))return{intent:'ladder'};
+ if(/renta|ubi|basic income|basica/.test(t))return{intent:'ubi'};
+ if(/universe|arquitect|cloud|nube|satel|procesador/.test(t))return{intent:'arch'};
+ if(/vot/.test(t)){const m=t.match(/vot\w*\s+(?:por\s+|for\s+)?(?:a\s+)?(\w+)/);let p=null;if(m)for(const[r,k]of ALIASES)if(r.test(m[1]))p=k;return{intent:'vote',product:p};}
+ if(/punto|point/.test(t))return{intent:'points'};
+ if(/estado|status|resumen|summary/.test(t))return{intent:'status'};
+ if(/automat|robotiza|mas robots|more robots|invier|invest/.test(t))return{intent:'automate'};
+ if(/reinici|reset/.test(t))return{intent:'reset'};
+ if(/produc|fabric|cultiv|haz|hace|make|build|grow|crea|genera|manufact/.test(t)||/\d/.test(t)){
+  let product=null;for(const[r,k]of ALIASES)if(r.test(t)){product=k;break;}
+  let qty=null;const m=t.match(/(\d[\d.]*)/);if(m)qty=parseInt(m[1].replace(/\./g,''),10);
+  else for(const w in NUMW)if(new RegExp('\\b'+w+'\\b').test(t)){qty=NUMW[w];break;}
+  if(!product)return{intent:'unknown'};
+  if(!qty)qty=product==='tomate'?100:(product==='robot'?1:10);
+  return{intent:'produce',product,qty:Math.min(qty,1e6)};
+ }
+ if(/ayuda|help|que puedes|what can/.test(t))return{intent:'help'};
+ return{intent:'unknown'};
+}
+function newState(){return{automation:10,fund:0,produced:{},energy:0,robotHours:0,orders:0,citizens:100,paid:0,
+ votes:{pan:0,tomate:0,placa:0,chip:0,app:0},level:{},capital:{gobiernos:0,multinacionales:0,bancos:0}};}
+/* precio unitario baja con la automatización: base*(1-0.8*a) con a=automation/100 (mín. 20% del base) */
+function unitPrice(p,auto){const a=Math.max(0,Math.min(100,auto))/100;return +(PRODUCTS[p].base*(1-0.8*a)).toFixed(4);}
+function produce(s,p,qty){
+ const P=PRODUCTS[p];const a=s.automation/100;
+ const energy=+(P.kwh*qty*(1-0.3*a)).toFixed(2), rh=+(P.rh*qty).toFixed(2);
+ const price=unitPrice(p,s.automation), points=Math.round(P.pts*qty*(0.5+a)); // más automatización = más valor al fondo común
+ s.produced[p]=(s.produced[p]||0)+qty;s.energy+=energy;s.robotHours+=rh;s.orders++;s.fund+=points;
+ s.automation=Math.min(100,+(s.automation+Math.min(5,Math.log10(1+points)*0.8)).toFixed(2));
+ if(p==='robot')s.automation=Math.min(100,s.automation+3*qty);
+ updateCapital(s);
+ return{product:p,qty,energy,robotHours:rh,price,points,automation:s.automation};
+}
+function automate(s){s.automation=Math.min(100,s.automation+10);updateCapital(s);return s.automation;}
+function updateCapital(s){const a=s.automation;s.capital={gobiernos:Math.round(a*0.9),multinacionales:Math.round(Math.max(0,a-10)*1.1>100?100:Math.max(0,a-10)*1.1),bancos:Math.round(Math.min(100,a))};}
+const LADDER=['Dinero','Robots','Software (IA)','Empresas y negocios','Renta básica'];
+const LADDER_EN=['Money','Robots','Software (AI)','Companies & business','Basic income'];
+function ladderStep(auto){return Math.min(4,Math.floor(Math.max(0,auto)/20));} // 0-19 →0 … 80-100 →4
+/* renta básica: se reparte el fondo común entre ciudadanos; 70% básicos / 30% ocio (como Binary Money) */
+function payUBI(s){const per=Math.floor(s.fund/s.citizens);const total=per*s.citizens;s.fund-=total;s.paid+=total;
+ return{per,total,basics:Math.round(per*0.7),leisure:per-Math.round(per*0.7)};}
+/* votos (hoja de Pedro: «pp → 100 votos … 1+100 pase = 101 … pp → 101–200»):
+   supuesto: cada voto = 1 punto para la opción; cada 100 votos la opción "pasa" de nivel
+   (nivel 1 = 1–100, nivel 2 = 101–200…). Gana la opción con más votos; empate → la primera. */
+function vote(s,p,n){n=n||1;if(!(p in s.votes))s.votes[p]=0;s.votes[p]+=n;return voteLevel(s.votes[p]);}
+function voteLevel(v){return v<=0?0:Math.ceil(v/100);}
+function winner(s){let w=null,b=-1;for(const k in s.votes)if(s.votes[k]>b){b=s.votes[k];w=k;}return w;}
+G.MAYLOGIC={PRODUCTS,parse,newState,unitPrice,produce,automate,ladderStep,LADDER,LADDER_EN,payUBI,vote,voteLevel,winner,norm};
+if(typeof module!=='undefined')module.exports=G.MAYLOGIC;
+})(typeof window!=='undefined'?window:globalThis);
+
+</script>
+<script>
+const M=MAYLOGIC,$=id=>document.getElementById(id),K='mayprod-v1';
+const QL=new URLSearchParams(location.search).get('lang');let L=(QL=='en'||QL=='es')?QL:(localStorage.mpLang||'es');
+let S;try{S=JSON.parse(localStorage[K])}catch(e){}S=S&&S.state?S:{state:M.newState(),log:[],mood:'😊'};
+const T={es:{ban:'Simulación educativa · agente simulado con emociones simuladas · sin dinero real · no es asesoramiento financiero',title:'Agente digital OSNews MAY · Producción',sub:'Habla con MAY: ella produce, automatiza y reparte la renta básica en puntos.',
+kAuto:'Automatización',kFund:'Fondo común (pts)',kStep:'Escalera',kMood:'Ánimo de MAY',send:'Enviar',note:'MAY es un agente simulado basado en reglas que funciona en tu navegador (sin API, sin claves). Sus emociones también son simuladas.',
+tabs:['💬 Chat','☁️ Universe AI','🏭 Producción','🪜 Escalera','🎟️ Puntos y votos'],tArch:'Universe AI — arquitectura',archTxt:'Cada orden viaja: tablet/móvil con IA local (NPU) → conexión tipo Starlink → clouds running (navegar Internet) → clouds.com (base de datos de personas/empresas) → procesador IA → clouds.exe (ejecución) → data centre satélite, donde el software se actualiza.',
+tProd:'Línea de producción',chipsT:'Circuito: chips 1-3 → CPU → macro chip',tLadder:'Escalera de transición',ladderTxt:'El paso avanza con la automatización: 0-19 % Dinero, 20-39 % Robots, 40-59 % Software (IA), 60-79 % Empresas y negocios, 80-100 % Renta básica.',capT:'Capital cedido (actores ficticios)',
+tPts:'Producción → puntos → renta básica',payB:'Pagar renta básica ahora',voteT:'Votación ciudadana: ¿qué producimos después?',voteAss:'Supuestos (hoja de Pedro «pp → 100 votos … 1+100 pase = 101 … 101–200»): cada voto suma 1; cada 100 votos la opción pasa de nivel (1–100 nivel 1, 101–200 nivel 2…). Gana la opción con más votos y MAY la produce. 1 punto = 1 € solo como referencia didáctica (como Binary Money); no hay dinero real.',
+more:'Más OSNews:',disc:'Simulación educativa. MAY es un agente simulado; empresas, robots, gobiernos, multinacionales y bancos son ficticios. Sin dinero real, sin afiliación con ninguna empresa, no es asesoramiento financiero.',
+sectors:{campo:'🌾 Campo',fabrica:'🏭 Fábrica',energia:'⚡ Energía',digital:'💻 Servicios digitales',servicios:'💧 Servicios'},th:['Producto','Unidades','Precio unitario (pts)'],
+chips:['Produce 100 panes','Fabrica 10 placas solares','Cultiva tomates','Más robots','¿Qué es la renta básica?','Explica la escalera','¿Qué es Universe AI?','Paga la renta básica','Voto por chips','Estado'],ph:'Escribe una orden o pregunta…',dlB:'⬇️ Descargar app',dlNote:'Un solo archivo HTML que funciona sin conexión.',cD:'descargas',cV:'visitas'},
+en:{ban:'Educational simulation · simulated agent with simulated emotions · no real money · not financial advice',title:'OSNews MAY digital agent · Production',sub:'Talk to MAY: she produces, automates and pays the basic income in points.',
+kAuto:'Automation',kFund:'Common fund (pts)',kStep:'Ladder',kMood:'MAY mood',send:'Send',note:'MAY is a simulated rule-based agent running in your browser (no API, no keys). Her emotions are simulated too.',
+tabs:['💬 Chat','☁️ Universe AI','🏭 Production','🪜 Ladder','🎟️ Points & votes'],tArch:'Universe AI — architecture',archTxt:'Each order travels: tablet/phone with local AI (NPU) → Starlink-type link → clouds running (Internet) → clouds.com (people/companies database) → AI processor → clouds.exe (execution) → satellite data centre, where the software updates.',
+tProd:'Production line',chipsT:'Circuit: chips 1-3 → CPU → macro chip',tLadder:'Transition ladder',ladderTxt:'The step follows automation: 0-19% Money, 20-39% Robots, 40-59% Software (AI), 60-79% Companies & business, 80-100% Basic income.',capT:'Capital ceded (fictional actors)',
+tPts:'Production → points → basic income',payB:'Pay basic income now',voteT:'Citizens\' vote: what do we produce next?',voteAss:'Assumptions (Pedro\'s sheet «pp → 100 votes … 1+100 = 101 … 101–200»): each vote adds 1; every 100 votes an option goes up a level (1–100 level 1, 101–200 level 2…). The option with most votes wins and MAY produces it. 1 point = €1 only as a teaching reference (like Binary Money); no real money.',
+more:'More OSNews:',disc:'Educational simulation. MAY is a simulated agent; companies, robots, governments, multinationals and banks are fictional. No real money, no affiliation with any company, not financial advice.',
+sectors:{campo:'🌾 Farming',fabrica:'🏭 Factory',energia:'⚡ Energy',digital:'💻 Digital services',servicios:'💧 Services'},th:['Product','Units','Unit price (pts)'],
+chips:['Produce 100 loaves of bread','Build 10 solar panels','Grow tomatoes','More robots','What is basic income?','Explain the ladder','What is Universe AI?','Pay basic income','Vote for chips','Status'],ph:'Type an order or question…',dlB:'⬇️ Download app',dlNote:'A single HTML file that works offline.',cD:'downloads',cV:'visits'}};
+const tr=k=>T[L][k];const fmt=n=>Math.round(n).toLocaleString(L);
+const AV='<circle cx="20" cy="20" r="19" fill="#1a1440" stroke="#c04bff"/><circle cx="20" cy="17" r="9" fill="#22e6ff33" stroke="#22e6ff"/><circle cx="16.5" cy="16" r="1.8" fill="#22e6ff"/><circle cx="23.5" cy="16" r="1.8" fill="#22e6ff"/><path d="M16 20q4 3 8 0" stroke="#ff7ab6" stroke-width="1.6" fill="none"/><path d="M8 34q12-9 24 0" fill="#c04bff55"/><line x1="20" y1="8" x2="20" y2="4" stroke="#3dff9a"/><circle cx="20" cy="3.5" r="1.5" fill="#3dff9a"/>';
+$('logo').innerHTML=AV;
+function save(){localStorage[K]=JSON.stringify(S)}
+function add(who,txt,noSave){const d=document.createElement('div');d.className='msg '+who;d.innerHTML=(who=='may'?'<svg class="av" viewBox="0 0 40 40">'+AV+'</svg>':'')+'<div class="bub"></div>';d.querySelector('.bub').textContent=txt;$('chat').appendChild(d);$('chat').scrollTop=1e9;if(!noSave){S.log.push([who,txt]);S.log=S.log.slice(-60);save()}}
+const name=p=>M.PRODUCTS[p][L];
+function reply(text){const r=M.parse(text),s=S.state,es=L=='es';let o;
+ switch(r.intent){
+ case'greet':S.mood='🥰';o=es?'¡Hola, cielo! Soy MAY, tu agente digital de producción (simulado). Pídeme que produzca algo o pregúntame por el plan. 💜':'Hi, sweetheart! I\'m MAY, your (simulated) production agent. Ask me to produce something or about the plan. 💜';break;
+ case'produce':{const x=M.produce(s,r.product,r.qty);S.mood='😊';flow();
+  o=es?`¡Hecho con cariño! 🌱 Planifiqué ${fmt(x.qty)} ${name(x.product)}: ${fmt(x.energy)} kWh, ${x.robotHours.toLocaleString(L)} h de robot. Precio unitario ${x.price.toLocaleString(L,{maximumFractionDigits:2})} pts (baja con la automatización). +${fmt(x.points)} pts al fondo común. Automatización: ${x.automation.toFixed(1)} %.`
+  :`Done with love! 🌱 I planned ${fmt(x.qty)} ${name(x.product)}: ${fmt(x.energy)} kWh, ${x.robotHours.toLocaleString(L)} robot-hours. Unit price ${x.price.toLocaleString(L,{maximumFractionDigits:2})} pts (falls with automation). +${fmt(x.points)} pts to the common fund. Automation: ${x.automation.toFixed(1)}%.`;break;}
+ case'automate':M.automate(s);S.mood='🤩';o=es?`¡Más robots y chips en la línea! 🤖 Automatización ${s.automation.toFixed(1)} %. Ahora todo sale más barato.`:`More robots and chips on the line! 🤖 Automation ${s.automation.toFixed(1)}%. Everything gets cheaper now.`;break;
+ case'ladder':{const i=M.ladderStep(s.automation);o=es?`La escalera tiene 5 pasos: ${M.LADDER.join(' → ')}. Ahora estamos en «${M.LADDER[i]}». Mientras subimos, gobiernos, multinacionales y bancos (ficticios) ceden el poder del capital. 🪜`:`The ladder has 5 steps: ${M.LADDER_EN.join(' → ')}. We are at «${M.LADDER_EN[i]}». As we climb, (fictional) governments, multinationals and banks cede the power of capital. 🪜`;show(3);break;}
+ case'ubi':o=es?`La renta básica sale de lo que producimos: cada bien suma puntos a un fondo común, y yo lo reparto entre ${s.citizens} ciudadanos simulados (70 % básicos, 30 % ocio). Hay ${fmt(s.fund)} pts en el fondo. Di «paga la renta básica». 💜`:`Basic income comes from what we produce: every good adds points to a common fund, and I share it among ${s.citizens} simulated citizens (70% basics, 30% leisure). Fund: ${fmt(s.fund)} pts. Say «pay basic income». 💜`;break;
+ case'arch':o=es?'Universe AI: tu tablet con IA local → conexión tipo Starlink → clouds running (Internet) → clouds.com (personas y empresas) → procesador IA → clouds.exe (ejecuta) → data centre satélite, donde el software se actualiza. ☁️ Mira la pestaña.':'Universe AI: your tablet with local AI → Starlink-type link → clouds running (Internet) → clouds.com (people & companies) → AI processor → clouds.exe (runs it) → satellite data centre, where the software updates. ☁️ See the tab.';flow();show(1);break;
+ case'points':o=es?`Puntos: 1 punto = 1 € solo como referencia didáctica. Fondo: ${fmt(s.fund)} pts; ya repartidos: ${fmt(s.paid)} pts.`:`Points: 1 point = €1 only as a teaching reference. Fund: ${fmt(s.fund)} pts; paid so far: ${fmt(s.paid)} pts.`;break;
+ case'vote':if(r.product){const lv=M.vote(s,r.product,1+Math.floor(Math.random()*20));S.mood='😄';o=es?`¡Voto registrado por ${name(r.product)}! Votos: ${s.votes[r.product]} (nivel ${lv}). Va ganando: ${name(M.winner(s))}.`:`Vote recorded for ${name(r.product)}! Votes: ${s.votes[r.product]} (level ${lv}). Leading: ${name(M.winner(s))}.`}else o=es?'¿Por qué quieres votar? Pan, tomates, placas, chips o apps. 🗳️':'What do you want to vote for? Bread, tomatoes, panels, chips or apps. 🗳️';show(4);break;
+ case'status':o=es?`Estado: automatización ${s.automation.toFixed(1)} %, ${s.orders} órdenes, ${fmt(s.energy)} kWh, fondo ${fmt(s.fund)} pts, paso «${M.LADDER[M.ladderStep(s.automation)]}».`:`Status: automation ${s.automation.toFixed(1)}%, ${s.orders} orders, ${fmt(s.energy)} kWh, fund ${fmt(s.fund)} pts, step «${M.LADDER_EN[M.ladderStep(s.automation)]}».`;break;
+ case'reset':S={state:M.newState(),log:[],mood:'😊'};$('chat').innerHTML='';o=es?'Empezamos de cero, con ilusión. ✨':'Fresh start, full of hope. ✨';break;
+ case'help':o=es?'Puedo producir («produce 100 panes», «fabrica 10 placas solares», «cultiva tomates»), automatizar («más robots»), pagar la renta básica, contar votos y explicar el plan.':'I can produce («produce 100 loaves of bread»), automate («more robots»), pay basic income, count votes and explain the plan.';break;
+ default:S.mood='🤔';o=es?'Ay, no te he entendido del todo 🙈. Prueba «produce 50 chips» o «¿qué es la renta básica?».':'Oops, I didn\'t quite get that 🙈. Try «produce 50 chips» or «what is basic income?».';}
+ if(/paga|pay/.test(M.norm(text))&&/renta|basic|ubi/.test(M.norm(text))){const u=M.payUBI(s);S.mood='🥰';o=es?`¡Renta básica pagada! 💜 ${u.per} pts a cada uno de ${s.citizens} ciudadanos (${u.basics} básicos + ${u.leisure} ocio).`:`Basic income paid! 💜 ${u.per} pts to each of ${s.citizens} citizens (${u.basics} basics + ${u.leisure} leisure).`;show(4)}
+ return o}
+function send(text){if(!text.trim())return;add('me',text);const ty=document.createElement('div');ty.className='msg may';ty.innerHTML='<svg class="av" viewBox="0 0 40 40">'+AV+'</svg><div class="bub typing"><span></span><span></span><span></span></div>';$('chat').appendChild(ty);$('chat').scrollTop=1e9;
+ setTimeout(()=>{ty.remove();add('may',reply(text));save();render()},650)}
+$('f').onsubmit=e=>{e.preventDefault();send($('in').value);$('in').value=''};
+let cur=0;function show(i){cur=i;document.querySelectorAll('section').forEach((s,j)=>s.classList.toggle('on',j==i));document.querySelectorAll('#tabs .btn').forEach((b,j)=>b.classList.toggle('on',j==i))}
+const NODES=[['tablet NPU',20,130],['Starlink',120,60],['clouds running',230,130],['clouds.com',340,50],['procesador IA',340,210],['clouds.exe',460,130],['data centre 🛰️',575,40]];
+let hot=-1;function flow(){let i=0;const st=()=>{hot=i;drawArch();if(i++<NODES.length)setTimeout(st,350);else{hot=-1;drawArch()}};st()}
+function drawArch(){let h='';for(let i=0;i<NODES.length-1;i++){const[a,b]=[NODES[i],NODES[i+1]];h+=`<line x1="${a[1]+45}" y1="${a[2]+18}" x2="${b[1]+45}" y2="${b[2]+18}" stroke="${i<hot?'#3dff9a':'#1f2b52'}" stroke-width="2"/>`}
+ h+=`<text x="575" y="100">↻ software update</text>`;NODES.forEach((n,i)=>h+=`<rect class="node ${i==hot?'hot':''}" x="${n[1]}" y="${n[2]}" width="90" height="36" rx="10"/><text x="${n[1]+45}" y="${n[2]+22}" text-anchor="middle">${n[0]}</text>`);$('arch').innerHTML=h}
+function render(){const s=S.state,step=M.ladderStep(s.automation),LD=L=='es'?M.LADDER:M.LADDER_EN;
+ $('kAuto').textContent=s.automation.toFixed(1)+' %';$('kFund').textContent=fmt(s.fund);$('kStep').textContent=(step+1)+'/5';$('kMood').textContent=S.mood;
+ const sec={};for(const p in M.PRODUCTS){const k=M.PRODUCTS[p].sector;(sec[k]=sec[k]||[]).push(p)}
+ $('sectors').innerHTML=Object.keys(sec).map(k=>`<div class="kpi" style="text-align:left"><b style="font-size:1em">${tr('sectors')[k]}</b>${sec[k].map(p=>name(p)+': '+fmt(s.produced[p]||0)).join('<br>')}<br><small>🤖 ×${1+Math.floor(s.automation/10)}</small></div>`).join('');
+ $('tbl').innerHTML='<tr>'+tr('th').map(x=>`<th>${x}</th>`).join('')+'</tr>'+Object.keys(M.PRODUCTS).map(p=>`<tr><td>${name(p)}</td><td>${fmt(s.produced[p]||0)}</td><td>${M.unitPrice(p,s.automation).toLocaleString(L,{maximumFractionDigits:2})}</td></tr>`).join('')+`<tr><td>⚡ kWh</td><td>${fmt(s.energy)}</td><td></td></tr><tr><td>🤖 h</td><td>${fmt(s.robotHours)}</td><td></td></tr>`;
+ const on=s.orders%4;$('cpu').innerHTML=[0,1,2].map(i=>`<rect class="node ${on==i+1?'hot':''}" x="${20}" y="${8+i*36}" width="110" height="30" rx="6"/><text x="75" y="${27+i*36}" text-anchor="middle">chip ${i+1}</text><line x1="130" y1="${23+i*36}" x2="260" y2="60" stroke="#22e6ff"/>`).join('')+`<rect class="node" x="260" y="38" width="120" height="44" rx="8"/><text x="320" y="64" text-anchor="middle">CPU</text><line x1="380" y1="60" x2="470" y2="60" stroke="#c04bff"/><rect class="node hot" x="470" y="30" width="150" height="60" rx="10"/><text x="545" y="64" text-anchor="middle">macro chip</text>`;
+ $('ladder').innerHTML=LD.map((x,i)=>`<div class="${i<step?'done':''} ${i==step?'cur':''}">${i+1}. ${x}</div>`).join('')+`<div style="grid-column:1/-1" class="bar"><i style="width:${s.automation}%"></i></div>`;
+ const cn=L=='es'?{gobiernos:'Gobiernos',multinacionales:'Multinacionales',bancos:'Bancos'}:{gobiernos:'Governments',multinacionales:'Multinationals',bancos:'Banks'};
+ $('cap').innerHTML=Object.keys(s.capital).map(k=>`<div>${cn[k]} — ${s.capital[k]} %<div class="bar"><i style="width:${s.capital[k]}%;background:linear-gradient(90deg,#ffd84d,#ff4d6d)"></i></div></div>`).join('');
+ $('ubi').textContent=(L=='es'?`Fondo común: ${fmt(s.fund)} pts · ciudadanos simulados: ${s.citizens} · repartido: ${fmt(s.paid)} pts · por persona ahora: ${Math.floor(s.fund/s.citizens)} pts (70/30)`:`Common fund: ${fmt(s.fund)} pts · simulated citizens: ${s.citizens} · paid: ${fmt(s.paid)} pts · per person now: ${Math.floor(s.fund/s.citizens)} pts (70/30)`);
+ const mx=Math.max(100,...Object.values(s.votes)),w=M.winner(s);
+ $('votes').innerHTML=Object.keys(s.votes).map(p=>`<div style="display:flex;gap:6px;align-items:center;margin:4px 0"><button class="btn" style="min-width:120px" data-v="${p}">🗳️ ${name(p)}</button><div class="bar" style="flex:1"><i style="width:${s.votes[p]/mx*100}%"></i></div><span>${s.votes[p]} (n${M.voteLevel(s.votes[p])})</span></div>`).join('')+`<button class="btn on" id="prodw">${L=='es'?'Producir la ganadora':'Produce the winner'}: ${name(w)}</button>`;
+ document.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>{M.vote(s,b.dataset.v,1);save();render()});$('prodw').onclick=()=>{show(0);send((L=='es'?'produce 100 ':'produce 100 ')+name(w))};}
+$('pay').onclick=()=>{show(0);send(L=='es'?'Paga la renta básica':'Pay basic income')};
+function i18n(){document.documentElement.lang=L;document.querySelectorAll('[data-i]').forEach(e=>e.textContent=tr(e.dataset.i));$('lang').textContent=L=='es'?'EN':'ES';$('in').placeholder=tr('ph');
+ $('tabs').innerHTML=tr('tabs').map((x,i)=>`<button class="btn" data-t="${i}">${x}</button>`).join('');document.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>show(+b.dataset.t));show(cur);
+ $('chips').innerHTML=tr('chips').map(c=>`<button class="chip">${c}</button>`).join('');document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>send(c.textContent));drawArch();render()}
+$('lang').onclick=()=>{L=L=='es'?'en':'es';localStorage.mpLang=L;i18n()};
+i18n();if(S.log.length)S.log.forEach(m=>add(m[0],m[1],1));else add('may',L=='es'?'¡Hola! Soy MAY, el agente digital (simulado) de OSNews para PRODUCIR. 💜 Dime qué fabricamos hoy: pan, tomates, placas solares, chips… y yo lo planifico con robots, reparto los puntos de la renta básica y te explico el plan.':'Hi! I\'m MAY, OSNews\' (simulated) digital agent for PRODUCING. 💜 Tell me what we make today: bread, tomatoes, solar panels, chips… I\'ll plan it with robots, share basic-income points and explain the plan.');
+$('dl').onclick=()=>{try{window.goatcounter&&window.goatcounter.count&&window.goatcounter.count({path:'descarga-may-produccion',title:'Descarga MAY Producción',event:true})}catch(e){}};
+/* contador: solo se muestra si GoatCounter tiene contadores públicos activados; nunca se inventa un número */
+(function(){if(location.protocol=='file:')return;const B='https://osnews-may.goatcounter.com/counter/',g=u=>fetch(B+encodeURIComponent(u)+'.json').then(r=>r.ok?r.json():null).catch(()=>null);
+Promise.all([g('descarga-may-produccion'),g(location.pathname)]).then(([d,v])=>{const o=[];if(d&&d.count)o.push(d.count+' '+tr('cD'));if(v&&v.count)o.push(v.count+' '+tr('cV'));$('cnt').textContent=o.join(' · ')})})();
+const DM=new URLSearchParams(location.search).get('demo');if(DM){localStorage.removeItem(K);S={state:M.newState(),log:[],mood:'😊'};$('chat').innerHTML='';add('may','…',1);$('chat').innerHTML='';const q=L=='es'?['Hola MAY','Produce 100 panes','Fabrica 10 placas solares','¿Qué es la renta básica?']:['Hi MAY','Produce 100 loaves of bread','Build 10 solar panels','What is basic income?'];q.forEach((x,i)=>setTimeout(()=>send(x),i*800));if(+DM>0)setTimeout(()=>show(+DM),3600)}
+</script>
+<script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
