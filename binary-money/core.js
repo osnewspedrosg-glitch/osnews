@@ -23,7 +23,7 @@ async function spendLeisure(st,c,pts,what){const w=ensurePts(st)[c];if(!w||w.lei
 const DEV={phone:300,laptop:500,tablet:200,tv:250},COND={good:1,fair:0.5,broken:0.15};
 async function tradeIn(st,c,device,cond,newPrice){const w=ensurePts(st)[c];const credit=Math.round((DEV[device]||0)*(COND[cond]||0));const pay=Math.max(Number(newPrice)-credit,0);if(!w||w.leisure<pay)throw new Error('puntos');w.leisure-=pay;
 await addRecord(st,{type:'recycle',from:c,to:'Reciclaje/Reutilización',amount:credit,tax:0,net:0,token:device+':'+cond});
-return addRecord(st,{type:'tradein-buy',from:c,to:'Tienda tech',amount:Number(newPrice),tax:0,net:pay,token:'credit '+credit});}
+return addRecord(st,{type:'tradein-buy',from:c,to:'Tienda Demo',amount:Number(newPrice),tax:0,net:pay,token:'credit '+credit});}
 
 
 // Colabora y gana (inspirado en la escalera de premios de Cleopatra Puntos; sin apuestas: contribuir nunca cuesta puntos)
@@ -35,6 +35,13 @@ const bonus=Math.floor((rnd==null?Math.random():rnd)*3);const step=Math.min(LADD
 const prize=Math.min(LADDER[step],st.cbank||0);st.cbank=Math.round(((st.cbank||0)-prize)*100)/100;w.leisure+=prize;
 const r=await addRecord(st,{type:'contrib',from:'Banco comunitario',to:c,amount:prize,tax:0,net:prize,token:type+' '+stars+'★ step'+step+' +'+bonus});return {r,step,bonus,prize};}
 
-const api={LADDER,SHARE,CTYPE,feedBank,contribute,monthly,spendLeisure,tradeIn,DEV,COND,sha256,toBin,cents,newState,transfer,verify,token,payload};
+
+// Fase de transición: hasta que la renta sea universal, la financian empresas colaboradoras (ficticias)
+const PARTNERS=['Tienda Demo','Super Ejemplo','Telco Ejemplo'];
+async function partnerFund(st,company,pts,goal){if(!PARTNERS.includes(company))throw new Error('empresa');pts=Number(pts);if(!(pts>0))throw new Error('pts');
+st.cbank=Math.round(((st.cbank||0)+pts)*100)/100;st.funded=(st.funded||0)+pts;const pct=Math.min(100,Math.round(st.funded/Number(goal)*1000)/10);
+await addRecord(st,{type:'partner-fund',from:company,to:'Banco comunitario',amount:pts,tax:0,net:pts,token:'universal '+pct+'%'});return pct;}
+
+const api={PARTNERS,partnerFund,LADDER,SHARE,CTYPE,feedBank,contribute,monthly,spendLeisure,tradeIn,DEV,COND,sha256,toBin,cents,newState,transfer,verify,token,payload};
 if(typeof module!=='undefined')module.exports=api;else root.BM=api;
 })(typeof window!=='undefined'?window:globalThis);

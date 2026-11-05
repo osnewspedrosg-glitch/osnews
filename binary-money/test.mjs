@@ -18,4 +18,6 @@ const q=BM.newState();await BM.monthly(q,['Pedro'],cfg);BM.feedBank(q,2000);t(q.
 const b0=q.pts.Pedro.basic;const c1=await BM.contribute(q,'Pedro','codigo',5,0.99);t(c1.step===16&&c1.prize===1500,'código 5★ + bonus → 1500 pts');
 t(q.pts.Pedro.basic===b0&&q.pts.Pedro.leisure===1700,'premio solo a ocio; básicos intactos');const c2=await BM.contribute(q,'Pedro','idea',3,0);t(c2.prize===0,'banco vacío no paga más de lo que tiene');
 t((await BM.verify(q)).ok,'cadena con contribuciones OK');
+const pc=await BM.partnerFund(q,'Super Ejemplo',2500,10000);t(pc===25&&q.cbank===2500,'empresa colaboradora: 2500/10000 = 25% camino universal');
+try{await BM.partnerFund(q,'MarcaReal',1,10);t(false,'x')}catch(e){t(true,'solo empresas ficticias')}t((await BM.verify(q)).ok,'cadena con financiación OK');
 console.log(ok+'/'+n+' tests OK');
