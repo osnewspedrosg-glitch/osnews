@@ -1,0 +1,15 @@
+:root{--c:#22e6ff;--g:#f5c451;--bg:#05070d;--p:#0c1220}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0,#0d2233,var(--bg) 60%);color:#d8f6ff;font:16px/1.5 system-ui,sans-serif}
+.banner{background:#ff3355;color:#fff;text-align:center;padding:8px;font-weight:700;position:sticky;top:0;z-index:5}
+header{text-align:center;padding:24px 12px}h1{margin:0;color:var(--c);text-shadow:0 0 18px var(--c);letter-spacing:2px}h1 span{color:var(--g)}
+nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}nav a{color:var(--c);border:1px solid var(--c);border-radius:20px;padding:4px 12px;text-decoration:none}
+main{max-width:980px;margin:auto;padding:0 12px}section{background:var(--p);border:1px solid #22e6ff44;border-radius:14px;padding:16px;margin:16px 0;box-shadow:0 0 20px #22e6ff22}
+h2{color:var(--g);margin-top:0}label{display:block;margin:8px 0}input,button{width:100%;background:#000;color:#fff;border:1px solid var(--c);border-radius:8px;padding:10px;font-size:16px;margin-top:4px}
+button{background:var(--c);color:#000;font-weight:700;cursor:pointer}.row{display:flex;gap:8px}.row button{width:auto}
+.canv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:10px}figure{margin:0;text-align:center}canvas{width:100%;image-rendering:pixelated;border:1px solid #333;background:#fff}
+table{border-collapse:collapse;width:100%;font-size:13px;font-family:monospace}td,th{border:1px solid #22e6ff33;padding:4px;text-align:left}.scroll{overflow-x:auto}
+.out b{color:var(--c)}.note{color:#9ab;font-size:13px}a{color:var(--c)}
+.pay{display:flex;align-items:center;justify-content:space-between;gap:8px}.phone{flex:1;border:2px solid var(--c);border-radius:16px;padding:10px;min-height:150px;font-size:13px}
+.shop{border-color:var(--g)}.wave{color:var(--c);font-size:24px;opacity:.2}.wave.on{animation:w 1s 2}@keyframes w{50%{opacity:1;transform:translateX(10px)}}
+.ok{color:#3f6;font-weight:700;font-size:20px}#log{max-height:260px;overflow:auto;margin-bottom:8px}#log p{margin:4px 0;padding:6px 10px;border-radius:10px;background:#000}#log .m{border-left:3px solid var(--c)}
+footer{text-align:center;padding:20px;color:#9ab;font-size:14px}

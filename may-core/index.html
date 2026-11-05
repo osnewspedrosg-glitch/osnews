@@ -1,0 +1,26 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAY Core · núcleo binario — OSNews</title><meta name="description" content="Simulación educativa del núcleo binario MAY Core (OSNews)">
+<link rel="stylesheet" href="style.css"></head><body>
+<div class="banner">⚠️ Simulación educativa: no conecta con bancos ni usa tarjetas reales</div>
+<header><h1>MAY Core <span>· núcleo binario</span></h1><p>Concepto de OSNews: chip water, codificador binario→mA→letra, dinero digital y pago móvil.</p>
+<nav><a href="#a">Chip water</a><a href="#b">Binario↔mA</a><a href="#c">Dinero digital</a><a href="#d">Pago móvil</a><a href="#chat">MAY</a></nav></header>
+<main>
+<section id="a"><h2>(a) Chip water · mosaico de 3 capas</h2><p>Cada letra → 8 bits → grupos de 3 bits: capa 1 rojo, capa 2 azul, capa 3 amarillo. Celda apagada = pintura electrónica negra.</p>
+<input id="aText" value="OSNEWS" maxlength="60"><div class="canv"><figure><canvas id="cR"></canvas><figcaption>capa 1 rojo</figcaption></figure><figure><canvas id="cB"></canvas><figcaption>capa 2 azul</figcaption></figure><figure><canvas id="cY"></canvas><figcaption>capa 3 amarillo</figcaption></figure><figure><canvas id="cM"></canvas><figcaption>mosaico</figcaption></figure></div>
+<p class="out">📷 Cámara simulada lee: <b id="aRead"></b> <small id="aInfo"></small></p></section>
+<section id="b"><h2>(b) Binario → mA → letra</h2><p>Peso del bit i = 0,5 · 2<sup>i</sup> mA (reversible).</p>
+<label>Texto → binario y mA <input id="bText" value="MAY"></label><table id="bTab"></table>
+<label>mA → letra (separados por espacios) <input id="bMa" value="38.5 32.5 44.5"></label><p class="out">Letras: <b id="bMaOut"></b></p>
+<label>Binario → letra (bytes de 8 bits) <input id="bBin" value="01001111 01010011"></label><p class="out">Letras: <b id="bBinOut"></b></p></section>
+<section id="c"><h2>(c) Dinero digital · libro mayor</h2><p>Orígenes (ejemplo de Pedro) → beb → Sabadell → Hacienda → destino. Cada registro en binario (céntimos) con cadena de hashes.</p>
+<label>Orígenes (€) <input id="cOr" value="5000, 500, 1000, 20000"></label><label>Retención de ejemplo (%) <input id="cTax" type="number" value="10" min="0" max="100" step="0.5"></label>
+<p class="out" id="cSum"></p><div class="scroll"><table id="cTab"></table></div><p class="note">La retención es un ejemplo editable, no un tipo fiscal real.</p></section>
+<section id="d"><h2>(d) Pago móvil → tienda</h2><div class="pay"><div class="phone" id="dPhone"><b>📱 Móvil</b><div id="dPh"></div></div><div class="wave" id="dWave">))) </div><div class="phone shop"><b>🏪 Tienda</b><div id="dSh"></div></div></div>
+<label>Importe (€) <input id="dAmt" type="number" value="90" min="1"></label><button id="dGo">Pagar (simulado)</button>
+<p class="note">Se envía un token, nunca el número de tarjeta. Lo real: tokenización + EMV + SCA (PSD2).</p></section>
+<section id="chat"><h2>💬 Pregunta a MAY</h2><div id="log"></div><div class="row"><input id="q" placeholder="Pregunta: chip, binario, dinero, pago…"><button id="send">Enviar</button></div></section>
+<section><h2>Descargas</h2><ul><li><a href="prototipo.py" download>prototipo.py</a> (Python)</li><li><a href="diseno-software-ia.md">diseno-software-ia.md</a></li><li><a href="transcripcion.md">transcripcion.md</a></li><li><a href="core.js">core.js</a> (port JavaScript)</li></ul></section>
+</main><footer>Idea original: Pedro Sánchez Gómez (apuntes a mano). Me creó Pedro Sánchez Gómez, del Mar Menor, con la ayuda de Copilot y Grok · <a href="../">OSNews</a></footer>
+<script src="core.js"></script><script src="app.js"></script>
+<script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
