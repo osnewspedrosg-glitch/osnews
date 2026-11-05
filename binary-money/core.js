@@ -42,6 +42,12 @@ async function partnerFund(st,company,pts,goal){if(!PARTNERS.includes(company))t
 st.cbank=Math.round(((st.cbank||0)+pts)*100)/100;st.funded=(st.funded||0)+pts;const pct=Math.min(100,Math.round(st.funded/Number(goal)*1000)/10);
 await addRecord(st,{type:'partner-fund',from:company,to:'Banco comunitario',amount:pts,tax:0,net:pts,token:'universal '+pct+'%'});return pct;}
 
-const api={PARTNERS,partnerFund,LADDER,SHARE,CTYPE,feedBank,contribute,monthly,spendLeisure,tradeIn,DEV,COND,sha256,toBin,cents,newState,transfer,verify,token,payload};
+
+// Cambio € -> puntos (ejemplo: 1 € = 1 punto, 70 % básicos / 30 % ocio)
+async function exchange(st,c,eur,rate,basicPct){const a=cents(eur);if(!(a>0)||(st.accounts[c]||0)<a)throw new Error('saldo');const pts=Math.round(Number(eur)*(Number(rate)||1));
+const bp=Math.min(100,Math.max(0,Number(basicPct)));const b=Math.round(pts*bp/100),l=pts-b;st.accounts[c]-=a;const w=ensurePts(st)[c]||(st.pts[c]={basic:0,leisure:0});w.basic+=b;w.leisure+=l;
+return addRecord(st,{type:'exchange',from:c,to:'RVB',amount:a,tax:0,net:pts,token:'basic '+b+' / leisure '+l});}
+
+const api={exchange,PARTNERS,partnerFund,LADDER,SHARE,CTYPE,feedBank,contribute,monthly,spendLeisure,tradeIn,DEV,COND,sha256,toBin,cents,newState,transfer,verify,token,payload};
 if(typeof module!=='undefined')module.exports=api;else root.BM=api;
 })(typeof window!=='undefined'?window:globalThis);

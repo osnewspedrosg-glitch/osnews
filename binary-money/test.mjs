@@ -20,4 +20,5 @@ t(q.pts.Pedro.basic===b0&&q.pts.Pedro.leisure===1700,'premio solo a ocio; básic
 t((await BM.verify(q)).ok,'cadena con contribuciones OK');
 const pc=await BM.partnerFund(q,'Super Ejemplo',2500,10000);t(pc===25&&q.cbank===2500,'empresa colaboradora: 2500/10000 = 25% camino universal');
 try{await BM.partnerFund(q,'MarcaReal',1,10);t(false,'x')}catch(e){t(true,'solo empresas ficticias')}t((await BM.verify(q)).ok,'cadena con financiación OK');
+const x=BM.newState();await BM.exchange(x,'Pedro',940,1,70);t(x.pts.Pedro.basic===658&&x.pts.Pedro.leisure===282&&x.accounts.Pedro===BM.cents(60),'cambio 940 € → 940 pts: 658 básicos / 282 ocio');t((await BM.verify(x)).ok,'cadena con cambio OK');
 console.log(ok+'/'+n+' tests OK');
