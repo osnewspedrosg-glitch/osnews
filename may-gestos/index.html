@@ -1,0 +1,136 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAY · Lenguaje gestual (simulado) — OSNews</title>
+<meta name="description" content="MAY percibe tus gestos con la cámara (100% en tu dispositivo) y reacciona. Juego de lenguaje gestual, simulación educativa.">
+<style>
+:root{--bg:#05070f;--card:#0d1326;--ln:#1f2b52;--c:#22e6ff;--m:#c04bff;--g:#3dff9a;--r:#ff4d6d;--y:#ffd84d;--t:#dfe8ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#13204a,var(--bg) 60%);color:var(--t);font:15px/1.45 system-ui,Segoe UI,Roboto,sans-serif}
+header{padding:10px;text-align:center}h1{margin:.1em 0;font-size:1.6em;background:linear-gradient(90deg,var(--c),var(--m));-webkit-background-clip:text;color:transparent}
+.banner{background:#3a0d1a;border:1px solid var(--r);color:#ffd0d9;padding:6px;text-align:center;font-weight:600;font-size:.88em}
+.priv{background:#0c2a1c;border:1px solid var(--g);color:#c9ffe0;padding:6px;text-align:center;font-size:.85em}
+.btn{background:#0f1a38;color:var(--t);border:1px solid var(--ln);border-radius:10px;padding:8px 12px;cursor:pointer;font:inherit;text-decoration:none;display:inline-block}
+.btn.on{border-color:var(--c);box-shadow:0 0 10px #22e6ff55;color:var(--c)}.btn:disabled{opacity:.4}
+main{max-width:1000px;margin:auto;padding:8px}.card{background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:12px;margin:8px 0}
+.row{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.lay{display:grid;grid-template-columns:1.2fr 1fr;gap:8px}@media(max-width:700px){.lay{grid-template-columns:1fr}h1{font-size:1.2em}.banner{font-size:.75em}}
+#vw{position:relative;background:#000;border-radius:12px;overflow:hidden;aspect-ratio:4/3;border:1px solid var(--ln)}
+video,#ov{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
+#tags{position:absolute;left:6px;top:6px;display:flex;flex-wrap:wrap;gap:4px;max-width:95%}
+.tag{background:#05070fcc;border:1px solid var(--c);color:var(--c);border-radius:12px;padding:2px 8px;font-size:.8em}
+#ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;opacity:.8}
+#calib{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;background:#05070f99;font-weight:600}
+#calib i{width:22px;height:22px;border-radius:50%;background:var(--y);box-shadow:0 0 18px var(--y);margin-bottom:10px}
+.may{display:flex;gap:10px;align-items:flex-start}.bub{padding:10px 12px;border-radius:16px;background:#16224a;border:1px solid var(--ln);flex:1;min-height:60px}
+#perc{font-size:.85em;color:var(--y);margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:.88em}td{border-bottom:1px solid var(--ln);padding:4px}td b{color:var(--g)}
+.meter{height:8px;background:#0a1022;border-radius:6px;overflow:hidden}.meter i{display:block;height:100%;background:linear-gradient(90deg,var(--c),var(--m))}
+footer{text-align:center;padding:16px;font-size:.85em;opacity:.85}a{color:var(--c)}small{opacity:.75}
+@keyframes pulse{50%{transform:scale(1.06)}}.talk{animation:pulse .6s 3}
+</style></head><body>
+<div class="banner" data-i="ban"></div>
+<div class="priv" data-i="priv"></div>
+<header><h1 data-i="title"></h1><div data-i="sub"></div><button class="btn" id="lang" style="margin-top:6px">EN</button></header>
+<main>
+<div class="card"><div class="row">
+<button class="btn on" id="open" data-i="open"></button><button class="btn" id="stop" data-i="stop" disabled></button>
+<button class="btn" id="cal" data-i="cal" disabled></button>
+<label class="btn"><input type="checkbox" id="hands" checked> <span data-i="handsL"></span></label>
+<label class="btn"><input type="checkbox" id="voice"> <span data-i="voiceL"></span></label>
+</div><p id="status" style="text-align:center;margin:.5em 0 0"><small></small></p></div>
+<div class="lay">
+<div class="card"><div id="vw"><video id="v" playsinline muted></video><canvas id="ov"></canvas><div id="ph" data-i="ph"></div><div id="tags"></div><div id="calib"><i></i><span data-i="calT"></span></div></div></div>
+<div>
+<div class="card"><div class="may"><svg id="av" width="64" height="64" viewBox="0 0 40 40"></svg><div class="bub" id="say"></div></div><div id="perc"></div></div>
+<div class="card"><b data-i="gameT"></b><table id="tbl"></table><small data-i="gameNote"></small></div>
+</div></div>
+<div class="card" id="demo"><b data-i="demoT"></b> <small data-i="demoN"></small><div class="row" id="demoB" style="margin-top:6px"></div></div>
+<div class="card"><b data-i="limT"></b><ul id="lim"></ul></div>
+<div class="card" style="text-align:center"><a class="btn on" id="dl" href="index.html" download="may-gestos.html" data-i="dlB"></a><br><small data-i="dlNote"></small></div>
+<div class="card"><b data-i="more"></b> <a href="../may-produccion/">MAY Producción</a> · <a href="../may-core/">MAY Core</a> · <a href="../">OSNews</a></div>
+</main>
+<footer data-i="foot"></footer>
+<script>
+const EN=new URLSearchParams(location.search).get('lang')=='en';let en=EN;
+const T={es:{ban:'Simulación · la ciencia no ha confirmado que la dirección de la mirada indique si recuerdas, imaginas o mientes · no detecta mentiras · emoción simulada',
+priv:'🔒 Procesado 100% en tu dispositivo: no se graba, no se guarda y no se envía ninguna imagen.',title:'MAY · Lenguaje gestual (simulado)',sub:'MAY percibe tus gestos y, según el estímulo, así reacciona. Un juego.',
+open:'📷 Abrir cámara',stop:'⏹ Parar cámara',cal:'🎯 Calibrar',handsL:'Manos',voiceL:'Voz de MAY',ph:'Pulsa «Abrir cámara». Funciona en móvil, tablet y portátil (HTTPS).',calT:'Mira al punto central 2 s…',
+gameT:'Lenguaje gestual · juego',gameNote:'Interpretaciones populares, no ciencia. Solo un juego.',demoT:'Modo demo',demoN:'(sin cámara: simula un gesto)',limT:'Límites',
+dlB:'⬇ Descargar app',dlNote:'Necesita internet la primera vez para cargar el modelo de visión.',more:'Más apps:',foot:'Me creó Pedro Sánchez Gómez, del Mar Menor, con la ayuda de Copilot y Grok · OSNews',
+hi:'¡Hola! Soy MAY 💙 Abre la cámara o prueba el modo demo y te diré qué percibo (simulado).',loading:'Cargando modelo de visión…',ready:'Cámara activa. Calibra mirando al centro para mejorar la mirada.',denied:'No se pudo abrir la cámara. Usa el modo demo.',stopped:'Cámara parada.',calOk:'Calibrado ✔',noface:'No veo tu cara',perc:'MAY percibe',reac:'reacción (simulado)',
+lim:['La mirada se estima a partir de la cara; luz, gafas y ángulo afectan.','No detecta mentiras ni lee mentes; las interpretaciones son creencias populares.','Las emociones son simuladas: un gesto no equivale a un sentimiento.','Requiere navegador moderno y permiso de cámara; el modelo se descarga de un CDN.']},
+en:{ban:'Simulation · science has not confirmed that gaze direction shows whether you remember, imagine or lie · no lie detection · simulated emotion',
+priv:'🔒 Processed 100% on your device: no image is recorded, stored or sent.',title:'MAY · Body language (simulated)',sub:'MAY perceives your gestures and reacts to the stimulus. A game.',
+open:'📷 Open camera',stop:'⏹ Stop camera',cal:'🎯 Calibrate',handsL:'Hands',voiceL:'MAY voice',ph:'Press «Open camera». Works on phone, tablet and laptop (HTTPS).',calT:'Look at the center dot for 2 s…',
+gameT:'Body language · game',gameNote:'Popular interpretations, not science. Just a game.',demoT:'Demo mode',demoN:'(no camera: simulate a gesture)',limT:'Limits',
+dlB:'⬇ Download app',dlNote:'Needs internet the first time to load the vision model.',more:'More apps:',foot:'Created by Pedro Sánchez Gómez, from the Mar Menor, with help from Copilot and Grok · OSNews',
+hi:'Hi! I\'m MAY 💙 Open the camera or try demo mode and I\'ll tell you what I perceive (simulated).',loading:'Loading vision model…',ready:'Camera on. Calibrate by looking at the center for better gaze.',denied:'Could not open the camera. Use demo mode.',stopped:'Camera stopped.',calOk:'Calibrated ✔',noface:'No face seen',perc:'MAY perceives',reac:'reaction (simulated)',
+lim:['Gaze is estimated from the face; light, glasses and angle matter.','It does not detect lies or read minds; interpretations are popular beliefs.','Emotions are simulated: a gesture is not a feeling.','Needs a modern browser and camera permission; the model loads from a CDN.']}};
+// gesture: [label es, label en, interpretation es, en, MAY es, en]
+const G={up:['Mirada arriba','Looking up','¿imaginando? (creencia popular)','imagining? (popular belief)','Miras hacia arriba… ¿estás imaginando algo bonito? ✨','Looking up… imagining something lovely? ✨'],
+down:['Mirada abajo','Looking down','¿recordando o pensando sentimientos? (creencia popular)','remembering or feeling? (popular belief)','Miras hacia abajo… si es un recuerdo, que sea dulce 💙','Looking down… if it\'s a memory, may it be sweet 💙'],
+left:['Mirada izquierda','Looking left','¿escuchando/recordando sonidos? (creencia popular)','listening/recalling sounds? (popular belief)','Miras a un lado… ¿recuerdas una canción? 🎶','Looking aside… recalling a song? 🎶'],
+right:['Mirada derecha','Looking right','¿escuchando/recordando sonidos? (creencia popular)','listening/recalling sounds? (popular belief)','Miras al otro lado… ¿oyes algo? 🎧','Looking the other way… hearing something? 🎧'],
+center:['Mirada al centro','Looking center','atención (juego)','attention (game)','Me estás mirando 😊 Aquí estoy contigo.','You\'re looking at me 😊 I\'m here with you.'],
+smile:['Sonrisa','Smile','alegría','joy','¡Qué bonita sonrisa! 😊','What a lovely smile! 😊'],
+frown:['Ceño','Frown','concentración/enfado','focus/anger','Te noto concentrado, ¿te ayudo? (simulado)','You seem focused, can I help? (simulated)'],
+brows:['Cejas arriba','Brows raised','sorpresa','surprise','¡Oh! ¿Te he sorprendido? 😮','Oh! Did I surprise you? 😮'],
+mouth:['Boca abierta','Mouth open','asombro o hablar','awe or speaking','¿Querías decirme algo? Te escucho 👂','Want to tell me something? I\'m listening 👂'],
+blink:['Parpadeo','Blink','descanso','rest','Parpadeas, ¡descansa la vista cuando quieras! 🌙','You blinked, rest your eyes whenever you like! 🌙'],
+tilt:['Cabeza inclinada','Head tilted','curiosidad','curiosity','Inclinas la cabeza… ¿curiosidad? 🤔','Tilting your head… curious? 🤔'],
+palm:['Palma abierta','Open palm','saludo','greeting','¡Hola! Te devuelvo el saludo 👋','Hi! Waving back 👋'],
+thumb:['Pulgar arriba','Thumbs up','aprobación','approval','¡Gracias! Me alegra que te guste 👍','Thanks! Glad you like it 👍'],
+fist:['Puño','Fist','fuerza o tensión','strength or tension','¡Con fuerza! Pero respira hondo 💪','Strong! But take a deep breath 💪']};
+const L=()=>en?'en':'es',tx=k=>T[L()][k],$=id=>document.getElementById(id);
+function render(){document.documentElement.lang=L();document.querySelectorAll('[data-i]').forEach(e=>e.textContent=tx(e.dataset.i));$('lang').textContent=en?'ES':'EN';
+$('tbl').innerHTML=Object.values(G).map(g=>`<tr><td>${en?g[1]:g[0]}</td><td>→ <b>${en?g[3]:g[2]}</b></td></tr>`).join('');
+$('demoB').innerHTML='';Object.keys(G).forEach(k=>{const b=document.createElement('button');b.className='btn';b.textContent=en?G[k][1]:G[k][0];b.onclick=()=>react(k,true);$('demoB').appendChild(b)});
+$('lim').innerHTML=tx('lim').map(x=>`<li>${x}</li>`).join('');if(!last)$('say').textContent=tx('hi')}
+$('lang').onclick=()=>{en=!en;render()};
+$('av').innerHTML='<defs><linearGradient id="gm" x1="0" x2="1"><stop offset="0" stop-color="#22e6ff"/><stop offset="1" stop-color="#c04bff"/></linearGradient></defs><circle cx="20" cy="20" r="18" fill="#0f1a38" stroke="url(#gm)" stroke-width="2"/><circle cx="14" cy="17" r="2.5" fill="#22e6ff"/><circle cx="26" cy="17" r="2.5" fill="#22e6ff"/><path id="mo" d="M13 26 Q20 31 27 26" stroke="#c04bff" stroke-width="2" fill="none"/>';
+let last=null,lastT=0,lastSpeak=0;
+function react(k,force){const now=Date.now();if(!force&&(k==last&&now-lastT<9000||now-lastT<3500))return;last=k;lastT=now;const g=G[k];
+$('say').textContent=en?g[5]:g[4];$('perc').textContent=`${tx('perc')}: ${en?g[1]:g[0]} → ${tx('reac')}`;$('av').classList.remove('talk');void $('av').offsetWidth;$('av').classList.add('talk');
+if($('voice').checked&&'speechSynthesis'in window&&now-lastSpeak>6000){lastSpeak=now;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance((en?g[5]:g[4]).replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF]/gu,''));u.lang=en?'en-US':'es-ES';u.pitch=1.25;u.rate=.95;
+const v=speechSynthesis.getVoices().find(v=>v.lang.startsWith(en?'en':'es')&&/female|mujer|helena|laura|elvira|monica|paulina/i.test(v.name))||speechSynthesis.getVoices().find(v=>v.lang.startsWith(en?'en':'es'));if(v)u.voice=v;speechSynthesis.speak(u)}}
+render();
+</script>
+<script type="module">
+const $=id=>document.getElementById(id),st=m=>$('status').firstChild.textContent=m,tx=k=>document.documentElement.lang=='en'?TT(k,'en'):TT(k,'es');
+function TT(k,l){return window.__T?window.__T[l][k]:k}
+window.__T=T;
+const V='https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14';
+let face,hand,stream,raf,base={x:0,y:0},calib=null,cnt={};
+const v=$('v'),ov=$('ov'),cx=ov.getContext('2d');
+async function load(){if(face)return;st(tx('loading'));const m=await import(V+'/vision_bundle.mjs');const fs=await m.FilesetResolver.forVisionTasks(V+'/wasm');
+const mk=(C,url,o)=>C.createFromOptions(fs,{baseOptions:{modelAssetPath:url,delegate:'GPU'},runningMode:'VIDEO',...o}).catch(()=>C.createFromOptions(fs,{baseOptions:{modelAssetPath:url,delegate:'CPU'},runningMode:'VIDEO',...o}));
+face=await mk(m.FaceLandmarker,'https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task',{numFaces:1,outputFaceBlendshapes:true});
+try{hand=await mk(m.HandLandmarker,'https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task',{numHands:1})}catch(e){hand=null}}
+$('open').onclick=async()=>{try{if(!navigator.mediaDevices?.getUserMedia)throw 0;stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user',width:{ideal:640},height:{ideal:480}},audio:false});
+v.srcObject=stream;await v.play();$('ph').style.display='none';$('stop').disabled=false;$('cal').disabled=false;$('open').disabled=true;await load();st(tx('ready'));loop()}catch(e){console.warn(e);st(tx('denied'));$('demo').scrollIntoView({behavior:'smooth'})}};
+$('stop').onclick=()=>{cancelAnimationFrame(raf);stream?.getTracks().forEach(t=>t.stop());v.srcObject=null;stream=null;$('ph').style.display='flex';$('tags').innerHTML='';cx.clearRect(0,0,ov.width,ov.height);$('stop').disabled=$('cal').disabled=true;$('open').disabled=false;st(tx('stopped'))};
+$('cal').onclick=()=>{calib={t:performance.now(),xs:[],ys:[]};$('calib').style.display='flex'};
+function gaze(b){const s=n=>b[n]||0;return{x:(s('eyeLookOutLeft')+s('eyeLookInRight'))/2-(s('eyeLookInLeft')+s('eyeLookOutRight'))/2,y:(s('eyeLookUpLeft')+s('eyeLookUpRight'))/2-(s('eyeLookDownLeft')+s('eyeLookDownRight'))/2}}
+function handG(l){const d=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y),w=l[0],ext=[8,12,16,20].map(i=>d(l[i],w)>d(l[i-2],w)*1.1);const n=ext.filter(Boolean).length;
+const thumbUp=l[4].y<l[3].y&&l[4].y<l[5].y-0.05&&n==0;if(thumbUp)return'thumb';if(n>=4)return'palm';if(n==0)return'fist';return null}
+let lt=-1;
+function loop(){raf=requestAnimationFrame(loop);if(!face||v.readyState<2||v.currentTime==lt)return;lt=v.currentTime;const now=performance.now();
+ov.width=v.videoWidth;ov.height=v.videoHeight;cx.clearRect(0,0,ov.width,ov.height);const r=face.detectForVideo(v,now),tags=[];
+if(r.faceLandmarks?.length){const lm=r.faceLandmarks[0],b={};(r.faceBlendshapes[0]?.categories||[]).forEach(c=>b[c.categoryName]=c.score);
+cx.fillStyle='#22e6ff';for(const i of [468,473,33,263,1,13,14])if(lm[i])cx.fillRect(lm[i].x*ov.width-2,lm[i].y*ov.height-2,4,4);
+const g=gaze(b);if(calib){calib.xs.push(g.x);calib.ys.push(g.y);if(now-calib.t>2000){const a=x=>x.reduce((p,q)=>p+q,0)/Math.max(1,x.length);base={x:a(calib.xs),y:a(calib.ys)};calib=null;$('calib').style.display='none';st(tx('calOk'))}}
+const gx=g.x-base.x,gy=g.y-base.y;let gd='center';if(gy>.18)gd='up';else if(gy<-.22)gd='down';else if(gx>.25)gd='left';else if(gx<-.25)gd='right';
+// mirror: video is shown mirrored, so the user's left appears on their left
+tags.push(gd);const roll=Math.atan2(lm[263].y-lm[33].y,lm[263].x-lm[33].x)*180/Math.PI;if(Math.abs(roll)>14)tags.push('tilt');
+if((b.eyeBlinkLeft+b.eyeBlinkRight)/2>.55)tags.push('blink');if((b.mouthSmileLeft+b.mouthSmileRight)/2>.5)tags.push('smile');
+if((b.browDownLeft+b.browDownRight)/2>.45)tags.push('frown');if(b.browInnerUp>.5)tags.push('brows');if(b.jawOpen>.4)tags.push('mouth');
+}else tags.push('none');
+if(hand&&$('hands').checked){const h=hand.detectForVideo(v,now+0.1);if(h.landmarks?.length){const k=handG(h.landmarks[0]);if(k)tags.push(k);cx.fillStyle='#c04bff';h.landmarks[0].forEach(p=>cx.fillRect(p.x*ov.width-2,p.y*ov.height-2,4,4))}}
+const en=document.documentElement.lang=='en';$('tags').innerHTML=tags.map(k=>`<span class="tag">${k=='none'?tx('noface'):(en?G[k][1]:G[k][0])}</span>`).join('');
+// stable perception: prefer expressive gestures over gaze; require ~8 consecutive frames
+const pri=['palm','thumb','fist','smile','frown','brows','mouth','tilt','up','down','left','right','blink','center'];const k=pri.find(p=>tags.includes(p));
+for(const p in cnt)if(p!=k)cnt[p]=0;if(k){cnt[k]=(cnt[k]||0)+1;if(cnt[k]==8)react(k)}}
+</script>
+<script>
+document.getElementById('dl').onclick=()=>{try{window.goatcounter&&window.goatcounter.count&&window.goatcounter.count({path:'descarga-may-gestos',title:'Descarga MAY Gestos',event:true})}catch(e){}};
+</script>
+<script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
