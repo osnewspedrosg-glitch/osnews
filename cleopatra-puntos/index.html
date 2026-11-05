@@ -1,0 +1,82 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cleopatra Puntos · OSNews</title><meta name="description" content="Máquina de azar de puntos (sin dinero) inspirada en los apuntes de Pedro Sánchez Gómez.">
+<style>
+:root{--g:#ffd34d;--c:#28e0ff;--p:#ff3fd2;--bg:#07070d}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0,#2a1a3d,var(--bg) 60%);color:#eee;font-family:system-ui,sans-serif;text-align:center}
+main{max-width:480px;margin:auto;padding:12px}
+h1{font-size:1.6rem;margin:.3em 0;color:var(--g);text-shadow:0 0 8px var(--g),0 0 18px #c80}
+.note{background:#1a1020;border:1px solid var(--p);border-radius:10px;padding:8px;font-size:.85rem}
+.scr{border:2px solid var(--c);border-radius:14px;box-shadow:0 0 14px var(--c);padding:10px;margin:10px 0;background:#0d0d1a}
+.top{display:grid;grid-template-columns:1fr 1fr;gap:6px;width:140px;margin:auto}
+.top div{font-size:2rem;background:#14142a;border-radius:8px}
+.reels{display:flex;justify-content:center;gap:8px}
+.reel{font-size:3rem;width:80px;height:90px;line-height:90px;background:#14142a;border:2px solid var(--g);border-radius:10px}
+.line{height:3px;background:var(--p);box-shadow:0 0 8px var(--p);margin:6px 0}
+.stats{display:flex;justify-content:space-around;font-weight:bold}.stats b{color:var(--g)}
+button{font:inherit;font-weight:bold;border:0;border-radius:10px;padding:12px 16px;margin:4px;cursor:pointer;background:var(--g);color:#000;box-shadow:0 0 10px var(--g)}
+button.s{background:#222;color:#eee;box-shadow:0 0 6px var(--c);border:1px solid var(--c)}
+button:disabled{opacity:.4}
+#msg{min-height:1.4em;color:var(--c);font-weight:bold}
+.pyr{display:flex;flex-direction:column-reverse;align-items:center;gap:3px}
+.pyr div{background:#332200;border:1px solid var(--g);border-radius:4px;padding:3px;font-size:.85rem}
+.pyr div.on{background:var(--g);color:#000;box-shadow:0 0 12px var(--g)}
+.board{display:grid;grid-template-columns:repeat(5,1fr);gap:3px}.board div{background:#14142a;border-radius:4px;padding:4px;font-size:.8rem}.board div.on{background:var(--p)}
+table{width:100%;font-size:.85rem;border-collapse:collapse}td{border-bottom:1px solid #333;padding:2px}
+details{text-align:left;margin:8px 0;background:#111;border-radius:10px;padding:8px}summary{cursor:pointer;color:var(--g);font-weight:bold}
+footer{font-size:.8rem;color:#aaa;margin:16px 0}a{color:var(--c)}
+.hide{display:none}
+</style></head><body><main>
+<h1>𓂀 Cleopatra Puntos 𓂀</h1>
+<p class="note">Juego solo con puntos: no hay dinero, apuestas ni premios reales. Si el juego deja de ser divertido, para.</p>
+<div class="stats"><span>Puntos: <b id="pts">100</b></span><span>Récord: <b id="best">100</b></span></div>
+<div class="scr"><small>Pantalla de arriba · Cleopatra 2×2 (4 iguales = Laberinto de la Oca)</small><div class="top" id="top"></div><div id="topmsg" style="min-height:1.2em"></div></div>
+<div class="scr"><small>Pantalla de abajo · línea de premio</small><div class="line"></div><div class="reels" id="reels"></div><div class="line"></div></div>
+<div id="msg">¡Pulsa GIRAR!</div>
+<div>Puntos por tirada: <button class="s" id="minus">−</button><b id="bet">1</b><button class="s" id="plus">+</button></div>
+<button id="spin">GIRAR</button><button class="s" id="reset">Volver a 100 puntos</button><button class="s" id="snd">🔇 Sonido</button>
+<div class="scr hide" id="pyrBox"><b>🔺 BONUS PIRÁMIDE</b><p>La luz sube por la pirámide. ¡Pulsa STOP!</p><div class="pyr" id="pyr"></div><button id="stop">STOP</button></div>
+<div class="scr hide" id="ocaBox"><b>🎲 LABERINTO · JUEGO DE LA OCA</b><div class="board" id="board"></div><button id="dice">Tirar dado</button></div>
+<details><summary>Tabla de premios (× puntos por tirada)</summary><table id="paytab"></table><p>Pirámide: <span id="pyrlist"></span> × puntos por tirada.</p></details>
+<details><summary>📐 Lección de mates: el «banco» y el 75 %</summary>
+<p>En los apuntes «Sistema premios (Silvia 4.0)» las máquinas antiguas dependían del diámetro del rodillo y del número de figuras. Hoy son digitales: cada número o letra de un rodillo virtual es una figura.</p>
+<p>Este juego tiene un <b>banco de puntos</b>: de cada tirada, el <b>75 %</b> de los puntos jugados entra al banco y el 25 % desaparece. Los premios solo salen si el banco los puede pagar. Así, a la larga, la máquina devuelve unos 75 de cada 100 puntos (RTP ≈ 75 %).</p>
+<p>Regla de tres de los apuntes: si un premio de 1500 es el 75 %, hacen falta x = 1500·100/75 = 2000 puntos jugados para «llenar» ese premio.</p>
+<p><b>Conclusión:</b> jugando mucho, siempre se pierde un 25 %. Por eso aquí solo hay puntos y el botón de volver a 100 es gratis. Banco actual: <b id="bank">0</b> · Jugado: <b id="played">0</b> · Devuelto: <b id="rtp">—</b></p>
+<p>Bonus pirámide: unas veces se para en el <b>premio programado</b> (caso A) y otras donde pulsas tú (caso B), siempre según lo que haya en el banco.</p></details>
+<footer>Idea original: Pedro Sánchez Gómez (apuntes a mano). Me creó Pedro Sánchez Gómez, del Mar Menor, con la ayuda de Copilot y Grok<br><a href="../">OSNews</a> · Sin anuncios, nada que comprar.</footer>
+</main>
+<script src="logic.js"></script>
+<script>
+const {SYM,PAY,PYR,Machine}=CP,$=id=>document.getElementById(id),fmt=v=>(+v).toLocaleString('es-ES',{maximumFractionDigits:2});
+const m=new Machine();let pts=100,bet=1,best=+localStorage.getItem('cleoBest')||100,sound=false,busy=false,cur=null;
+const FIG=Object.keys(SYM);
+function ui(){$('pts').textContent=fmt(pts);$('best').textContent=fmt(best);$('bet').textContent=bet;$('bank').textContent=fmt(m.bank);$('played').textContent=fmt(m.played);$('rtp').textContent=m.played?fmt(m.paid/m.played*100)+' %':'—';$('spin').disabled=busy||pts<bet}
+function add(w){pts=Math.round((pts+w)*100)/100;if(pts>best){best=pts;localStorage.setItem('cleoBest',best)}ui()}
+let ac;function beep(f,d=.08){if(!sound)return;ac=ac||new AudioContext();const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=f;g.gain.value=.05;o.connect(g).connect(ac.destination);o.start();o.stop(ac.currentTime+d)}
+function draw(r,t){$('reels').innerHTML=r.map(s=>`<div class="reel">${SYM[s]}</div>`).join('');$('top').innerHTML=t.map(s=>`<div>${SYM[s]}</div>`).join('')}
+draw(['cleo','piramide','cleo'],['oro','plata','bronce','cereza']);
+$('paytab').innerHTML=PAY.map(p=>`<tr><td>${p.txt}</td><td>${p.m?'× '+fmt(p.m):'bonus'}</td></tr>`).join('')+'<tr><td>4 iguales arriba</td><td>Laberinto de la Oca</td></tr>';
+$('pyrlist').textContent=PYR.map(fmt).join(' · ');
+$('minus').onclick=()=>{bet=Math.max(1,bet-1);ui()};$('plus').onclick=()=>{bet=Math.min(5,bet+1);ui()};
+$('reset').onclick=()=>{pts=100;$('msg').textContent='Tienes 100 puntos otra vez.';ui()};
+$('snd').onclick=()=>{sound=!sound;$('snd').textContent=sound?'🔊 Sonido':'🔇 Sonido';beep(600)};
+$('spin').onclick=()=>{if(busy||pts<bet)return;busy=true;add(-bet);const s=m.spin(bet);let n=0;$('msg').textContent='Girando…';
+ const iv=setInterval(()=>{draw([0,0,0].map(()=>FIG[Math.random()*FIG.length|0]),[0,0,0,0].map(()=>FIG[Math.random()*FIG.length|0]));beep(300+n*20,.03);
+  if(++n>14){clearInterval(iv);draw(s.reels,s.top);done(s)}},70)};
+function done(s){busy=false;if(s.win){add(s.win);$('msg').textContent=`${s.txt}: +${fmt(s.win)} puntos`;beep(880,.2)}else $('msg').textContent=s.bonus?'¡3 pirámides! BONUS':'Sin premio esta vez';
+ $('topmsg').textContent=s.oca?'¡4 iguales! Laberinto de la Oca':'';cur={bet:s.bet};ui();
+ if(s.bonus)pyramid();else if(s.oca)oca()}
+let lvl=0,dir=1,pIv,prog;
+function pyramid(){busy=true;ui();prog=m.pyramidProgram(cur.bet);$('pyrBox').classList.remove('hide');$('pyr').innerHTML=PYR.map((v,i)=>`<div style="width:${100-i*7}%">${fmt(v*cur.bet)}</div>`).join('');
+ lvl=0;dir=1;pIv=setInterval(()=>{lvl+=dir;if(lvl>=PYR.length-1||lvl<=0)dir=-dir;[...$('pyr').children].forEach((d,i)=>d.classList.toggle('on',i===lvl));beep(400+lvl*60,.03)},110)}
+$('stop').onclick=()=>{clearInterval(pIv);const r=m.pyramidStop(cur.bet,prog,lvl);[...$('pyr').children].forEach((d,i)=>d.classList.toggle('on',i===r.level));
+ add(r.win);$('msg').textContent=(r.programmed?'Caso A · premio programado: ':'Caso B · paraste tú: ')+'+'+fmt(r.win)+' puntos';setTimeout(()=>{$('pyrBox').classList.add('hide');busy=false;ui()},1800)};
+let oSteps,oi;function oca(){busy=true;ui();const r=m.ocaPlay(cur.bet);oSteps=r.steps;oi=0;$('ocaBox').classList.remove('hide');$('dice').disabled=false;
+ $('board').innerHTML=r.board.map((c,i)=>`<div>${i+1}<br>${c==='oca'?'🪿':fmt(c*cur.bet)}</div>`).join('');}
+$('dice').onclick=()=>{const s=oSteps[oi++];[...$('board').children].forEach((d,i)=>d.classList.toggle('on',i===s.pos));add(s.w);beep(700);
+ $('msg').textContent=`Dado ${s.d} → casilla ${s.pos+1}: +${fmt(s.w)} puntos (${3-oi} tiradas)`;
+ if(oi>=3){$('dice').disabled=true;setTimeout(()=>{$('ocaBox').classList.add('hide');busy=false;ui()},1800)}};
+ui();
+</script>
+<script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
