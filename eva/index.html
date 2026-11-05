@@ -33,17 +33,20 @@ footer{text-align:center;padding:16px;opacity:.85;font-size:.85em}a{color:var(--
 .aud{} .ges{display:none}
 </style></head><body>
 <header><h1 data-i="title"></h1><div data-i="sub" style="opacity:.8"></div><div class="row" style="margin-top:6px"><a class="btn" href="?lang=es">ES</a><a class="btn" href="?lang=en">EN</a></div></header>
-<div class="banner" data-i="disc"></div>
+<div style="text-align:center;font-size:.85em;color:#3dff9a;margin-bottom:4px">🔐 <b data-i="secId"></b></div><div class="banner" data-i="disc"></div>
 <div class="priv" data-i="priv"></div>
 <main>
 <div class="tabs"><button class="btn tab on" data-m="audio" data-i="tA"></button><button class="btn tab" data-m="video" data-i="tV"></button><button class="btn tab" data-m="imagen" data-i="tI"></button><button class="btn tab" data-m="gestos" data-i="tG"></button><button class="btn tab" data-m="cia" data-i="tC"></button></div>
 <div class="card cia" id="cCard" style="display:none"><div class="banner" style="background:#3a2400;border-color:#ffb020;color:#ffe2a8;border-radius:10px;font-size:1em" data-i="cban"></div>
-<p data-i="cTxt" style="text-align:center"></p><div class="row"><button class="btn on" id="cStart" data-i="cStart"></button><button class="btn" id="cStop" data-i="cStop" disabled></button></div><div id="cSt" style="text-align:center;margin-top:6px"></div></div>
+<p data-i="cTxt" style="text-align:center"></p><div id="gate" class="row" style="margin-bottom:8px"><label>🔐 <span data-i="gateL"></span> <input id="pin" placeholder="Eva-ai-psg30/383" style="background:#05070f;color:#dfe8ff;border:1px solid #ffb020;border-radius:8px;padding:6px"></label><button class="btn" id="unl" data-i="unl"></button><small data-i="gateN" style="width:100%;text-align:center"></small></div><div class="row"><button class="btn on" id="cStart" data-i="cStart" disabled></button><button class="btn" id="cStop" data-i="cStop" disabled></button></div><div id="cSt" style="text-align:center;margin-top:6px"></div></div>
 <div class="card ges" id="gCard"><div class="banner" data-i="gban" style="border-radius:10px;margin-bottom:8px"></div>
 <div class="row" style="margin-bottom:8px"><button class="btn on" id="gOpen" data-i="gOpen"></button><button class="btn" id="gStop" data-i="stop" disabled></button><button class="btn" id="gPick" data-i="gPick"></button><input type="file" id="gFile" accept="image/*" hidden><label><input type="checkbox" id="gHands" checked> <span data-i="gHandsL"></span></label></div>
 <div id="gv"><video id="gvid" class="mir" playsinline muted></video><img id="gimg" alt="" hidden><canvas id="gov" style="border:0;background:transparent"></canvas><div id="gtags"></div><div id="gph" data-i="gph"></div></div>
 <div id="gst" style="text-align:center;margin-top:6px"></div>
 <div class="row" style="margin-top:8px"><span data-i="gDemo"></span><span id="gDemoB" class="row"></span></div><small data-i="gNote"></small></div>
+<div class="card" id="sec"><b>🔒 <span data-i="secT"></span></b><div class="row" style="justify-content:flex-start;margin-top:6px">
+<span class="tag" style="border-color:#3dff9a;color:#3dff9a">● <span data-i="s1"></span></span><span class="tag" style="border-color:#3dff9a;color:#3dff9a">● <span data-i="s2"></span></span><span class="tag" style="border-color:#3dff9a;color:#3dff9a">● <span data-i="s3"></span></span><span class="tag" style="border-color:#3dff9a;color:#3dff9a">● <span data-i="s4"></span></span></div>
+<ul style="margin:6px 0;font-size:.88em"><li data-i="c1"></li><li data-i="c2"></li><li data-i="c3"></li></ul><small data-i="secN"></small></div>
 <div class="card aud" id="aCard"><div id="drop" tabindex="0"><div style="font-size:2em">🎧🎬</div><b data-i="drop"></b><br><small data-i="fmt"></small><input type="file" id="file" accept="audio/*,video/*,.mp3,.wav,.m4a,.ogg,.webm,.mp4,.mov,.aac,.flac" hidden></div>
 <div id="info" style="text-align:center;margin-top:6px"></div><div id="err" style="text-align:center"></div>
 <div class="row" style="margin-top:8px"><span data-i="demo"></span><button class="btn demo" data-k="calm" data-i="dCalm"></button><button class="btn demo" data-k="neu" data-i="dNeu"></button><button class="btn demo" data-k="nerv" data-i="dNerv"></button></div>
@@ -63,7 +66,7 @@ footer{text-align:center;padding:16px;opacity:.85;font-size:.85em}a{color:var(--
 <div class="card" style="text-align:center"><a class="btn on" id="dl" href="index.html" download="eva-analisis-audio.html" data-i="dlB"></a></div>
 <div class="card"><b data-i="more"></b> <a href="../may-gestos/">MAY · Lenguaje gestual</a> · <a href="../may-produccion/">MAY Producción</a> · <a href="../binary-money/">Binary Money</a> · <a href="../">OSNews</a></div>
 </main>
-<footer data-i="foot"></footer>
+<footer><div data-i="foot"></div><div style="color:#3dff9a;margin-top:4px">🔐 <span data-i="secId"></span></div></footer>
 <script>
 const L=new URLSearchParams(location.search).get('lang')=='en'?'en':'es';document.documentElement.lang=L;
 var T={es:{title:'Eva · Análisis de audio',sub:'Audio · vídeo · imagen · gestos. Sube un audio o un vídeo: Eva escucha la frecuencia, el tono y el volumen y reacciona (simulado).',
@@ -192,7 +195,7 @@ Object.assign(T,L=='en'?{tC:'🏛️ CIA política nacional',cban:'⚠️ Educat
 :{tC:'🏛️ CIA política nacional',cban:'⚠️ Simulación educativa · no es una agencia real · no vigila a nadie · no graba ni envía · sentimientos artificiales (si-at)',cTxt:'Juego «mesa de análisis político»: reproduce un discurso público cerca del micrófono y Eva comenta el TONO de la señal de entrada en tiempo real (simulado). Ficción para alfabetización mediática.',cStart:'🎙️ Iniciar señal',cStop:'⏹ Parar señal',cOn:'Señal en directo activa (solo en tu dispositivo). No se graba nada.',cDen:'No se pudo abrir el micrófono.',cPer:'Eva percibe en la señal'});
 ['tC','cban','cTxt','cStart','cStop'].forEach(k=>document.querySelectorAll(`[data-i="${k}"]`).forEach(e=>e.textContent=T[k]));
 let cS=null,cA=null,cR=0,cHist=[];
-function cStop(){cancelAnimationFrame(cR);cS&&cS.getTracks().forEach(t=>t.stop());cS=null;$('cStop').disabled=true;$('cStart').disabled=false}
+function cStop(){cancelAnimationFrame(cR);cS&&cS.getTracks().forEach(t=>t.stop());cS=null;$('cStop').disabled=true;$('cStart').disabled=$('gate').style.display!='none'}
 async function cStartFn(stream){try{cS=stream||await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false},video:false})}catch(e){$('cSt').textContent=T.cDen;return}
 ac=ac||new (window.AudioContext||window.webkitAudioContext)();await ac.resume();const sn=ac.createMediaStreamSource(cS);cA=ac.createAnalyser();cA.fftSize=2048;sn.connect(cA);
 $('cStart').disabled=true;$('cStop').disabled=false;$('cSt').textContent=T.cOn;const td=new Float32Array(2048),fd=new Float32Array(1024),sr=ac.sampleRate;cHist=[];let n=0;
@@ -205,6 +208,11 @@ const c=$('wave'),x=c.getContext('2d'),w=c.width,h=c.height;x.clearRect(0,0,w,h)
 const bb=[];for(let i=0;i<32;i++)bb.push(Math.max(0,fd[i*4]+110));drawBars(bb)};tick();window.__eva={ok:true,live:true}}
 $('cStart').onclick=()=>cStartFn();$('cStop').onclick=cStop;window.__cStartFn=cStartFn;
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{const c=b.dataset.m=='cia';$('cCard').style.display=c?'block':'none';if(c){document.querySelectorAll('.aud').forEach(e=>e.style.display='');$('aCard').style.display='none';$('segC').style.display='none';$('gCard').style.display='block';$('gOpen').style.display='';$('gStop').style.display='';$('gPick').style.display='none'}else{cStop();$('aCard').style.display=(b.dataset.m=='imagen'||b.dataset.m=='gestos')?'none':''}}));
+
+Object.assign(T,L=='en'?{secId:'Security system Eva-ai-psg30/383',secT:'Security system Eva-ai-psg30/383 · local',s1:'local camera',s2:'local mic',s3:'no sending',s4:'no recording',c1:'Audio, video, images and camera are processed in this browser tab only.',c2:'No file, sound or image is uploaded or saved; closing the tab erases everything.',c3:'Only an anonymous visit/download counter (GoatCounter) is used, never your media.',secN:'Simulation · educational badge · it does not protect real data and is not national security.',gateL:'Code',unl:'🔓 Unlock',gateN:'Demo code: Eva-ai-psg30/383 · simulation · does not protect real data',bad:'Wrong code (demo: Eva-ai-psg30/383)',ok:'🔓 Unlocked (simulation)'}
+:{secId:'Sistema de seguridad Eva-ai-psg30/383',secT:'Sistema de seguridad Eva-ai-psg30/383 · local',s1:'cámara local',s2:'mic local',s3:'sin envío',s4:'sin grabación',c1:'Audio, vídeo, imágenes y cámara se procesan solo en esta pestaña del navegador.',c2:'No se sube ni se guarda ningún archivo, sonido ni imagen; al cerrar la pestaña se borra todo.',c3:'Solo hay un contador anónimo de visitas/descargas (GoatCounter), nunca tus medios.',secN:'Simulación · insignia educativa · no protege datos reales ni es seguridad nacional.',gateL:'Código',unl:'🔓 Desbloquear',gateN:'Código demo: Eva-ai-psg30/383 · simulación · no protege datos reales',bad:'Código incorrecto (demo: Eva-ai-psg30/383)',ok:'🔓 Desbloqueado (simulación)'});
+['secId','secT','s1','s2','s3','s4','c1','c2','c3','secN','gateL','unl','gateN'].forEach(k=>document.querySelectorAll(`[data-i="${k}"]`).forEach(e=>e.textContent=T[k]));
+$('unl').onclick=()=>{if($('pin').value.trim()=='Eva-ai-psg30/383'){$('cStart').disabled=false;$('cSt').textContent=T.ok;$('gate').style.display='none'}else $('cSt').textContent=T.bad};
 const m0=new URLSearchParams(location.search).get('modo');if(m0){const b=document.querySelector(`.tab[data-m="${m0}"]`);b&&b.click()}
 </script>
 <script type="module">
