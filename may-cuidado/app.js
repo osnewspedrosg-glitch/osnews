@@ -1819,6 +1819,110 @@
     }
   }
 
+
+  /* ---------- PWA install + GoatCounter (clics) ---------- */
+  const INSTALL_CLICK_KEY = 'may_cuidado_install_click_counted_v1';
+  const INSTALL_LOCAL_COUNT_KEY = 'may_cuidado_install_local_count_v1';
+  let deferredInstallPrompt = null;
+
+  function getLocalInstallClicks() {
+    const n = parseInt(localStorage.getItem(INSTALL_LOCAL_COUNT_KEY) || '0', 10);
+    return isNaN(n) ? 0 : n;
+  }
+
+  function bumpLocalInstallClicks() {
+    const n = getLocalInstallClicks() + 1;
+    localStorage.setItem(INSTALL_LOCAL_COUNT_KEY, String(n));
+    return n;
+  }
+
+  function renderInstallLocalCount() {
+    const el = document.getElementById('install-local-count');
+    if (!el) return;
+    el.textContent = 'Instalaciones en este dispositivo (clics del botón): ' + getLocalInstallClicks();
+  }
+
+  function setInstallStatus(msg, kind) {
+    const el = document.getElementById('install-status');
+    if (!el) return;
+    el.textContent = msg || '';
+    el.className = 'status-line' + (kind ? ' ' + kind : '');
+  }
+
+  function trackInstallClickOnce() {
+    // Contador local siempre (honesto: clics en este dispositivo)
+    const localN = bumpLocalInstallClicks();
+    renderInstallLocalCount();
+
+    // GoatCounter público: un solo evento por dispositivo (localStorage), path /may-cuidado/instalar
+    let sentGlobal = false;
+    try {
+      if (!localStorage.getItem(INSTALL_CLICK_KEY)) {
+        if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+          window.goatcounter.count({ path: '/may-cuidado/instalar', title: 'MAY Cuidado · clic Instalar PWA', event: true });
+          localStorage.setItem(INSTALL_CLICK_KEY, '1');
+          sentGlobal = true;
+        }
+      }
+    } catch (e) { /* ignore */ }
+
+    return { localN: localN, sentGlobal: sentGlobal };
+  }
+
+  function wirePwaInstall() {
+    renderInstallLocalCount();
+    const btn = document.getElementById('btn-install-pwa');
+    const fallback = document.getElementById('install-fallback');
+    if (!btn) return;
+
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      deferredInstallPrompt = e;
+      btn.disabled = false;
+      if (fallback) fallback.hidden = true;
+      setInstallStatus('Listo para instalar (Chrome/Edge). El contador registra clics, no instalaciones reales del SO.', 'ok');
+    });
+
+    window.addEventListener('appinstalled', function () {
+      deferredInstallPrompt = null;
+      setInstallStatus('El navegador reportó appinstalada. Datos siguen solo en este dispositivo.', 'ok');
+    });
+
+    // If no beforeinstallprompt after short wait, show fallback instructions (Android Chrome menu)
+    setTimeout(function () {
+      if (!deferredInstallPrompt && fallback) {
+        fallback.hidden = false;
+        setInstallStatus('Si no aparece el diálogo nativo: usa el menú de Chrome → Instalar aplicación. Contador = clics del botón.', 'warn');
+      }
+    }, 2500);
+
+    btn.addEventListener('click', async function () {
+      const tracked = trackInstallClickOnce();
+      let msg = 'Clic registrado. Local: ' + tracked.localN + ' en este dispositivo.';
+      if (tracked.sentGlobal) msg += ' Evento GoatCounter /may-cuidado/instalar (una vez por dispositivo).';
+      else if (localStorage.getItem(INSTALL_CLICK_KEY)) msg += ' Evento global ya contado antes en este dispositivo (sin duplicar).';
+      else msg += ' GoatCounter aún no cargó: queda el contador local (no inventamos cifra global).';
+      msg += ' Aviso: son clics de instalación, no instalaciones reales garantizadas.';
+
+      if (deferredInstallPrompt) {
+        try {
+          deferredInstallPrompt.prompt();
+          const choice = await deferredInstallPrompt.userChoice;
+          deferredInstallPrompt = null;
+          msg += ' Resultado diálogo: ' + (choice && choice.outcome ? choice.outcome : 'desconocido') + '.';
+        } catch (e) {
+          msg += ' No se pudo abrir el diálogo nativo; usa el menú del navegador.';
+          if (fallback) fallback.hidden = false;
+        }
+      } else {
+        if (fallback) fallback.hidden = false;
+        msg += ' Abre el menú ⋮ de Chrome → Instalar aplicación / Añadir a pantalla de inicio.';
+      }
+      setInstallStatus(msg, 'ok');
+    });
+  }
+
+
   /* ---------- PWA ---------- */
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
@@ -2907,6 +3011,7 @@
   }
 
 
+  wirePwaInstall();
   wireSecretariaCom();
   wireHealthUI();
   wireOcrUI();
@@ -2945,6 +3050,8 @@
     photoDelete: photoDelete,
     PHOTO_MAX_EDGE: PHOTO_MAX_EDGE,
     PHOTO_MAX_SOURCE_BYTES: PHOTO_MAX_SOURCE_BYTES,
+    trackInstallClickOnce: trackInstallClickOnce,
+    getLocalInstallClicks: getLocalInstallClicks,
     STORAGE_KEY: STORAGE_KEY
   };
 })();
