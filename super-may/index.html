@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#141526">
+  <meta name="description" content="Super MAY — todas tus apps MAY y redes OSNews en un solo lugar.">
+  <title>Super MAY · Todas tus apps en un solo lugar</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/icon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="assets/awy.png" alt="Foto de perfil de awy de X">
+    <div>
+      <p class="eyebrow">CENTRO MAY · OSNEWS</p>
+      <h1>Super MAY</h1>
+      <p>Todas tus apps en un solo lugar</p>
+    </div>
+  </header>
+
+  <nav aria-label="Secciones">
+    <button class="activo" data-tab="apps">Apps</button>
+    <button data-tab="redes">Redes</button>
+    <button data-tab="imagenes">Analizar imágenes</button>
+    <button data-tab="azar">Máquinas de azar</button>
+  </nav>
+
+  <main>
+    <section id="apps" class="tab activo">
+      <p class="intro">Abre cada app publicada de MAY y OSNews desde aquí.</p>
+      <label class="buscar-label" for="buscar-apps">Buscar apps</label>
+      <input id="buscar-apps" type="search" placeholder="Busca por nombre o descripción…" autocomplete="off" enterkeyhint="search">
+      <p id="buscar-vacio" class="nota" hidden>No hay apps que coincidan con esa búsqueda.</p>
+      <div id="apps-grid" class="grid"></div>
+    </section>
+
+    <section id="redes" class="tab">
+      <p class="intro">Mis redes sociales, con las últimas cifras registradas.</p>
+      <div id="social" class="grid"></div>
+      <p class="nota">Últimas cifras registradas: 6 nov 2026 (Europe/Madrid). No se actualizan automáticamente ni son tiempo real.</p>
+    </section>
+
+    <section id="imagenes" class="tab">
+      <h2>Analizar imágenes</h2>
+      <p>Extrae el texto de tus fotos y guarda tus notas. Las imágenes se quedan en este dispositivo.</p>
+      <input id="foto" type="file" accept="image/*" capture="environment">
+      <img id="preview" alt="Vista previa de tu foto" hidden>
+      <div class="actions">
+        <button id="leer">Leer texto de la foto</button>
+        <button id="guardar-foto" class="secundario">Guardar en este dispositivo</button>
+        <button id="exportar" class="secundario">Exportar mis imágenes</button>
+      </div>
+      <p id="estado" role="status"></p>
+      <label for="texto">Texto leído (revísalo y corrígelo)</label>
+      <textarea id="texto" placeholder="Pulsa «Leer texto de la foto» o escribe tus notas." rows="8"></textarea>
+      <p id="galeria"></p>
+      <p class="nota">No identifica personas, emociones ni enfermedades. Si el texto no se lee bien, te lo dirá para que lo revises.</p>
+    </section>
+
+    <section id="azar" class="tab">
+      <h2>Máquinas de azar</h2>
+      <p>Para elegir una idea o una tarea, sin apuestas ni dinero.</p>
+      <article>
+        <h3>Ruleta de ideas</h3>
+        <label for="ideas">Ideas, una por línea</label>
+        <textarea id="ideas" rows="6">Hacer una demo de MAY
+Escribir una canción
+Preparar un vídeo
+Ordenar mis tareas
+Descansar un rato
+Compartir OSNews</textarea>
+        <button id="girar">Girar ruleta</button>
+        <p class="resultado" id="resultado-ruleta"></p>
+      </article>
+      <article>
+        <h3>Dado</h3>
+        <button id="dado">Tirar dado</button>
+        <p class="resultado" id="resultado-dado"></p>
+      </article>
+      <p class="nota">Azar digital para entretenimiento. No predice sorteos o máquinas físicas, ni garantiza ganar.</p>
+    </section>
+  </main>
+
+  <footer>Hecho por Pedro Sánchez Gómez · OSNews</footer>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
