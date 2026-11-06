@@ -734,6 +734,17 @@
     });
     renderChat();
     el.chatInput.placeholder = 'Escribe a ' + AGENTS[id].name + '…';
+    syncGuideVideoBtn(id);
+  }
+
+  function syncGuideVideoBtn(agentId) {
+    const btn = document.getElementById('btn-guide-video');
+    if (!btn) return;
+    const map = { secretaria: 'secretaria', enfermera: 'salud', psicologa: 'psicologa', money: 'money' };
+    const key = map[agentId] || 'secretaria';
+    btn.setAttribute('data-guide-video', key);
+    btn.textContent = 'Vídeo: cómo funciona';
+    btn.setAttribute('aria-label', 'Vídeo: cómo funciona · ' + (AGENTS[agentId] ? AGENTS[agentId].name : key));
   }
 
   function addChat(role, text, links) {
@@ -1816,6 +1827,79 @@
     renderGallery().catch(function () {});
     if (state.bluetooth && state.bluetooth.name) {
       setBtStatus('Último dispositivo recordado: «' + state.bluetooth.name + '». Vuelve a pulsar Conectar si hace falta.', 'ok');
+    }
+  }
+
+
+
+  /* ---------- Vídeos guía por agente ---------- */
+  const GUIDE_VIDEOS = {
+    secretaria: {
+      title: 'Vídeo: cómo funciona · Secretaria',
+      src: 'media/secretaria/guia-secretaria.mp4',
+      poster: 'media/secretaria/poster.jpg',
+      help: 'Demostración: tareas, hábitos, mailto/tel/WhatsApp/X y preferencias locales. Datos de ejemplo.'
+    },
+    salud: {
+      title: 'Vídeo: cómo funciona · Salud',
+      src: 'media/salud/guia-salud.mp4',
+      poster: 'media/salud/poster.jpg',
+      help: 'Demostración: métricas, análisis de ejemplo (no clínicos reales), recetas→Money, OCR y Samsung import.'
+    },
+    psicologa: {
+      title: 'Vídeo: cómo funciona · Psicóloga',
+      src: 'media/psicologa/guia-psicologa.mp4',
+      poster: 'media/psicologa/poster.jpg',
+      help: 'Rueda La Huertecica (Eva y Pedro), límites protectores y simulación de escena. No es diagnóstico.'
+    },
+    money: {
+      title: 'Vídeo: cómo funciona · Money',
+      src: 'media/money/guia-money.mp4',
+      poster: 'media/money/poster.jpg',
+      help: 'Despensa, mínimos, lista, presupuesto orientativo y comparar en la web sin inventar precios.'
+    }
+  };
+
+  function openGuideVideo(key) {
+    const meta = GUIDE_VIDEOS[key];
+    if (!meta) return;
+    const panel = document.getElementById('panel-video-guia');
+    const player = document.getElementById('video-guia-player');
+    const source = document.getElementById('video-guia-source');
+    const title = document.getElementById('video-guia-title');
+    const help = document.getElementById('video-guia-help');
+    const status = document.getElementById('video-guia-status');
+    if (!panel || !player || !source) return;
+    title.textContent = meta.title;
+    help.textContent = meta.help;
+    player.poster = meta.poster;
+    source.src = meta.src;
+    player.load();
+    panel.hidden = false;
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (status) {
+      status.textContent = 'Pulsa play. preload=none: el vídeo se descarga al reproducir. Guía DEMO.';
+      status.className = 'status-line ok';
+    }
+    // switch agent tab to match
+    const agentMap = { secretaria: 'secretaria', salud: 'enfermera', psicologa: 'psicologa', money: 'money' };
+    if (agentMap[key]) setAgent(agentMap[key]);
+  }
+
+  function wireGuideVideos() {
+    document.querySelectorAll('[data-guide-video]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        openGuideVideo(btn.getAttribute('data-guide-video'));
+      });
+    });
+    const close = document.getElementById('btn-video-close');
+    const panel = document.getElementById('panel-video-guia');
+    const player = document.getElementById('video-guia-player');
+    if (close) {
+      close.addEventListener('click', function () {
+        if (player) { try { player.pause(); } catch (e) {} }
+        if (panel) panel.hidden = true;
+      });
     }
   }
 
@@ -3011,6 +3095,8 @@
   }
 
 
+  wireGuideVideos();
+  syncGuideVideoBtn(state.agent || 'secretaria');
   wirePwaInstall();
   wireSecretariaCom();
   wireHealthUI();
