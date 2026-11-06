@@ -1,0 +1,26 @@
+{
+  "name": "MAY OS · Cuidado personal",
+  "short_name": "MAY Cuidado",
+  "description": "Chatbot con secretaria, enfermera, psicóloga amiga y Money Digital. Seguimiento personal local.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#1a1a1c",
+  "theme_color": "#f5c518",
+  "lang": "es-ES",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='40' fill='%231a1a1c'/%3E%3Ccircle cx='96' cy='88' r='36' fill='%23f5c518'/%3E%3Cpath d='M48 156c8-28 28-44 48-44s40 16 48 44' fill='%23f5c518'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%231a1a1c'/%3E%3Ccircle cx='256' cy='230' r='96' fill='%23f5c518'/%3E%3Cpath d='M128 420c22-76 76-118 128-118s106 42 128 118' fill='%23f5c518'/%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
