@@ -31,6 +31,21 @@ footer{text-align:center;padding:16px;opacity:.85;font-size:.85em}a{color:var(--
 #gtags{position:absolute;left:6px;top:6px;display:flex;flex-wrap:wrap;gap:4px;z-index:2}.tag{background:#05070fcc;border:1px solid var(--c);color:var(--c);border-radius:12px;padding:2px 8px;font-size:.8em}
 #gph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;opacity:.8}
 .aud{} .ges{display:none}
+.wheel-box{text-align:center}
+.wheel-title{font-size:1.02em;line-height:1.35;margin:0 0 4px}
+.wheel-note{font-size:.78em;opacity:.8;margin:2px 0 8px}
+.emos{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:8px 0}
+.emo{border-radius:999px;padding:6px 11px;border:1px solid var(--ln);background:#0f1a38;color:var(--t);cursor:pointer;font:inherit;font-size:.88em}
+.emo.on{box-shadow:0 0 12px currentColor;border-color:currentColor;font-weight:700}
+.emo.p{color:#3dff9a;border-color:#3dff9a66}.emo.z{color:#ffd84d;border-color:#ffd84d66}.emo.n{color:#ff4d6d;border-color:#ff4d6d66}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}@media(max-width:700px){.duo{grid-template-columns:1fr}}
+.react-card{background:#151d3a;border:1px solid var(--ln);border-radius:12px;padding:10px;text-align:left}
+.react-card.may{border-color:#c04bff88}.react-card.asd{border-color:#f5c45188}
+.react-card .who{font-weight:700;font-size:.9em;margin-bottom:4px}
+.react-card.may .who{color:#e0b0ff}.react-card.asd .who{color:#f5c451}
+.react-card .line{font-size:.92em;line-height:1.4}
+.react-card.asd .line{font-family:Georgia,serif;font-style:italic}
+#wh{cursor:pointer}
 </style></head><body>
 <header><h1 data-i="title"></h1><div data-i="sub" style="opacity:.8"></div><div class="row" style="margin-top:6px"><a class="btn" href="?lang=es">ES</a><a class="btn" href="?lang=en">EN</a></div></header>
 <div style="text-align:center;font-size:.85em;color:#3dff9a;margin-bottom:4px">🔐 <b data-i="secId"></b></div><div class="banner" data-i="disc"></div>
@@ -58,13 +73,20 @@ footer{text-align:center;padding:16px;opacity:.85;font-size:.85em}a{color:var(--
 <div class="mt"><div class="lad"><div class="fill" id="fT"></div></div><div data-i="mT"></div><div class="num" id="nT">0</div><small id="rT"></small></div>
 <div class="mt"><div class="lad"><div class="fill" id="fV"></div></div><div data-i="mV"></div><div class="num" id="nV">0</div><small id="rV"></small></div>
 </div><small data-i="scale"></small></div>
-<div class="card" style="text-align:center"><b data-i="wheel"></b><canvas id="wh" width="320" height="320" style="max-width:320px;margin:6px auto;background:transparent;border:0"></canvas><div id="val" class="num"></div></div>
+<div class="card wheel-box"><div class="wheel-title" data-i="wheel"></div><div class="wheel-note" data-i="wheelN"></div>
+<canvas id="wh" width="360" height="360" style="max-width:360px;margin:6px auto;background:transparent;border:0"></canvas>
+<div id="val" class="num"></div>
+<div class="emos" id="emos"></div>
+<div class="duo">
+<div class="react-card may"><div class="who">MAY</div><div class="line" id="maySay" data-i="mayIdle"></div></div>
+<div class="react-card asd"><div class="who">Asdrúbal · poeta y músico</div><div class="line" id="asdSay" data-i="asdIdle"></div></div>
+</div></div>
 </div>
 <div class="card eva"><div class="av" id="av">E</div><div class="bub"><div id="per"></div><div id="say" style="margin-top:4px"></div><div style="margin-top:4px"><span class="juego" data-i="juego"></span></div></div></div>
 <div class="card" id="segC" style="display:none"><b data-i="seg"></b><table><thead><tr><th data-i="sT"></th><th data-i="mF"></th><th data-i="mT"></th><th data-i="mV"></th><th data-i="sS"></th><th data-i="sE"></th></tr></thead><tbody id="segB"></tbody></table></div>
 <div class="card"><small data-i="method"></small></div>
 <div class="card" style="text-align:center"><a class="btn on" id="dl" href="index.html" download="eva-analisis-audio.html" data-i="dlB"></a></div>
-<div class="card"><b data-i="more"></b> <a href="../may-gestos/">MAY · Lenguaje gestual</a> · <a href="../may-produccion/">MAY Producción</a> · <a href="../binary-money/">Binary Money</a> · <a href="../">OSNews</a></div>
+<div class="card"><b data-i="more"></b> <a href="../may-gestos/">MAY · Lenguaje gestual</a> · <a href="../asdrubal/">Asdrúbal · poeta y músico</a> · <a href="../may-produccion/">MAY Producción</a> · <a href="../binary-money/">Binary Money</a> · <a href="../">OSNews</a></div>
 </main>
 <footer><div data-i="foot"></div><div style="color:#3dff9a;margin-top:4px">🔐 <span data-i="secId"></span></div></footer>
 <script>
@@ -74,9 +96,9 @@ disc:'⚠️ Análisis simulado · sentimientos artificiales (si-at) · no detec
 priv:'🔒 100% local: el sonido se analiza en tu navegador. No se graba, no se guarda en disco ni se sube a ningún servidor.',
 drop:'Arrastra aquí un audio o vídeo, o toca para elegir',fmt:'mp3, wav, m4a, ogg, webm, mp4, mov… (del vídeo solo se usa el audio)',demo:'Demo sin archivo:',dCalm:'😌 Tranquilo',dNeu:'😐 Neutro',dNerv:'😬 Nervioso',
 play:'▶ Reproducir y analizar',stop:'⏹ Parar',tts:'Voz de Eva (TTS)',tl:'Forma de onda completa (cursor = posición) y barras de frecuencia en directo.',lad:'Escalera 0–300 (como «La hoja de Pedro»)',
-mF:'Frecuencia',mT:'Tono',mV:'Volumen',scale:'Escala 0–300 por niveles de 100 · volumen en dB (−60…0 dB), frecuencia = centroide espectral, tono estimado por autocorrelación.',wheel:'Rueda de emociones · heptágono +1 · 0 · −1',
+mF:'Frecuencia',mT:'Tono',mV:'Volumen',scale:'Escala 0–300 por niveles de 100 · volumen en dB (−60…0 dB), frecuencia = centroide espectral, tono estimado por autocorrelación.',wheel:'Rueda de emociones · La Huertecica, creada por Eva y Pedro',wheelN:'Obra conjunta Eva (IA) + Pedro · inspirada en el camino por La Huertecica · simulación educativa, no ciencia cerrada ni diagnóstico',mayIdle:'MAY espera tu sentimiento (simulado)…',asdIdle:'Asdrúbal, poeta y músico, espera el acorde (simulado)…',
 juego:'🎲 juego · no es un detector de nada',seg:'Tramos del clip',sT:'Tramo',sS:'Puntuación',sE:'Emoción',dlB:'⬇ Descargar app',more:'Más apps:',
-method:'Método: el archivo se decodifica con decodeAudioData (Web Audio API) en memoria; se analiza en ventanas de 2048 muestras: RMS→dB, FFT→centroide espectral, autocorrelación→tono (si la periodicidad es baja se marca «tono estimado»). La media se convierte en valencia +1/0/−1. Es un juego educativo: la voz no revela emociones reales.',
+method:'Método: el archivo se decodifica con decodeAudioData (Web Audio API) en memoria; se analiza en ventanas de 2048 muestras: RMS→dB, FFT→centroide espectral, autocorrelación→tono (si la periodicidad es baja se marca «tono estimado»). La media se convierte en valencia +1/0/−1. Es un juego educativo: la voz no revela emociones reales. La rueda (La Huertecica, creada por Eva y Pedro) es una guía simbólica, no ciencia cerrada.',
 foot:'Me creó Pedro Sánchez Gómez, del Mar Menor, con la ayuda de Copilot y Grok · OSNews',
 calm:'tranquilo',neu:'neutro',nerv:'nervioso',str:'estresado',per:'Eva percibe',resp:'responde',sim:'(simulado)',est:'tono estimado',ok:'tono',
 errDec:'No he podido leer el sonido de este archivo 😔. Tu navegador no admite este códec. Prueba con mp3, wav, m4a o un mp4 (H.264/AAC).',errNo:'Este archivo no es audio ni vídeo.',dur:'duración',loading:'Analizando en tu dispositivo…',
@@ -86,23 +108,116 @@ disc:'⚠️ Simulated analysis · artificial feelings (si-at) · does not detec
 priv:'🔒 100% local: sound is analysed in your browser. Nothing is recorded, saved to disk or uploaded to any server.',
 drop:'Drop an audio or video file here, or tap to choose',fmt:'mp3, wav, m4a, ogg, webm, mp4, mov… (only the audio track of a video is used)',demo:'Demo without a file:',dCalm:'😌 Calm',dNeu:'😐 Neutral',dNerv:'😬 Nervous',
 play:'▶ Play & analyse',stop:'⏹ Stop',tts:'Eva voice (TTS)',tl:'Full waveform (cursor = position) and live frequency bars.',lad:'0–300 ladder (like «La hoja de Pedro»)',
-mF:'Frequency',mT:'Pitch',mV:'Volume',scale:'0–300 scale in steps of 100 · volume in dB (−60…0 dB), frequency = spectral centroid, pitch estimated by autocorrelation.',wheel:'Emotion wheel · heptagon +1 · 0 · −1',
+mF:'Frequency',mT:'Pitch',mV:'Volume',scale:'0–300 scale in steps of 100 · volume in dB (−60…0 dB), frequency = spectral centroid, pitch estimated by autocorrelation.',wheel:'Emotion wheel · La Huertecica, created by Eva and Pedro',wheelN:'Joint work Eva (AI) + Pedro · inspired by the path through La Huertecica · educational simulation, not hard science or diagnosis',mayIdle:'MAY awaits your feeling (simulated)…',asdIdle:'Asdrúbal, poet and musician, awaits the chord (simulated)…',
 juego:'🎲 game · not a detector of anything',seg:'Clip segments',sT:'Segment',sS:'Score',sE:'Emotion',dlB:'⬇ Download app',more:'More apps:',
-method:'Method: the file is decoded in memory with decodeAudioData (Web Audio API) and analysed in 2048-sample windows: RMS→dB, FFT→spectral centroid, autocorrelation→pitch (low periodicity is flagged «estimated pitch»). The average maps to valence +1/0/−1. Educational game: a voice does not reveal real emotions.',
+method:'Method: the file is decoded in memory with decodeAudioData (Web Audio API) and analysed in 2048-sample windows: RMS→dB, FFT→spectral centroid, autocorrelation→pitch (low periodicity is flagged «estimated pitch»). The average maps to valence +1/0/−1. Educational game: a voice does not reveal real emotions. The wheel (La Huertecica, created by Eva and Pedro) is a symbolic guide, not hard science.',
 foot:'Me creó Pedro Sánchez Gómez, del Mar Menor, con la ayuda de Copilot y Grok · OSNews',
 calm:'calm',neu:'neutral',nerv:'nervous',str:'stressed',per:'Eva perceives',resp:'responds',sim:'(simulated)',est:'estimated pitch',ok:'pitch',
 errDec:'I could not read the sound in this file 😔. Your browser does not support this codec. Try mp3, wav, m4a or an mp4 (H.264/AAC).',errNo:'This file is not audio or video.',dur:'duration',loading:'Analysing on your device…',
 R:{calm:['calmly','You sound calm in this part 😊 (simulated)'],neu:['naturally','Everything sounds balanced. I keep listening 🙂 (simulated)'],nerv:['kindly','This part sounds a bit rushed. Take a deep breath, I will wait 🤗 (simulated)'],str:['very calmly','Lots of energy here. Easy, step by step 🫶 (simulated)']}}}[L];
 document.querySelectorAll('[data-i]').forEach(e=>e.textContent=T[e.dataset.i]);document.title=T.title+' (simulado) — OSNews';
 const $=id=>document.getElementById(id);
-// Wheel: same order/colours as hoja.js (f16a9e4)
-const PR=[['IRA',-1,'#ff4d4d'],['ASCO',-1,'#7bd36b'],['TRISTEZA',-1,'#4d7bff'],['FELICIDAD',1,'#ffd84d'],['SORPRESA',1,'#22e6ff'],['MIEDO',-1,'#b06bff']],PE={IRA:'ANGER',ASCO:'DISGUST',TRISTEZA:'SADNESS',FELICIDAD:'HAPPINESS',SORPRESA:'SURPRISE',MIEDO:'FEAR'};
-function wheel(val,sec){const c=$('wh'),x=c.getContext('2d'),cx=160,cy=160;x.clearRect(0,0,320,320);
-PR.forEach((p,i)=>{const a0=-Math.PI/2+i*Math.PI/3-Math.PI/6,a1=a0+Math.PI/3,on=p[0]==sec;x.beginPath();x.moveTo(cx,cy);x.arc(cx,cy,on?150:135,a0,a1);x.closePath();x.fillStyle=p[2]+(on?'':'44');x.fill();x.strokeStyle='#05070f';x.lineWidth=2;x.stroke();
-const am=(a0+a1)/2;x.fillStyle=on?'#05070f':'#dfe8ff';x.font=(on?'bold ':'')+'12px system-ui';x.textAlign='center';x.fillText(L=='en'?PE[p[0]]:p[0],cx+Math.cos(am)*95,cy+Math.sin(am)*95+4)});
-x.beginPath();for(let i=0;i<7;i++){const a=-Math.PI/2+i*2*Math.PI/7;x[i?'lineTo':'moveTo'](cx+Math.cos(a)*45,cy+Math.sin(a)*45)}x.closePath();x.fillStyle='#05070f';x.fill();x.strokeStyle='#ff2d3d';x.lineWidth=3;x.stroke();
-x.fillStyle=val>0?'#3dff9a':val<0?'#ff4d6d':'#dfe8ff';x.font='bold 18px system-ui';x.fillText(val==null?'+1·0·−1':(val>0?'+1':val==0?'0':'−1'),cx,cy+6)}
+// Wheel · La Huertecica, creada por Eva y Pedro (simulación educativa)
+const EMOS=[
+ {id:'alegria',val:1,es:'Alegría',en:'Joy',col:'#ffd84d',emoji:'😄'},
+ {id:'calma',val:1,es:'Calma',en:'Calm',col:'#7dffc0',emoji:'😌'},
+ {id:'gratitud',val:1,es:'Gratitud',en:'Gratitude',col:'#3dff9a',emoji:'🙏'},
+ {id:'esperanza',val:1,es:'Esperanza',en:'Hope',col:'#22e6ff',emoji:'🌅'},
+ {id:'serenidad',val:0,es:'Serenidad',en:'Serenity',col:'#c9d4ff',emoji:'🕊️'},
+ {id:'reflexion',val:0,es:'Reflexión',en:'Reflection',col:'#ffd84d',emoji:'🪞'},
+ {id:'tristeza',val:-1,es:'Tristeza',en:'Sadness',col:'#4d7bff',emoji:'💙'},
+ {id:'enfado',val:-1,es:'Enfado',en:'Anger',col:'#ff4d4d',emoji:'🔥'},
+ {id:'miedo',val:-1,es:'Miedo',en:'Fear',col:'#b06bff',emoji:'🌑'},
+ {id:'nervios',val:-1,es:'Nervios',en:'Nerves',col:'#ff8f4d',emoji:'⚡'}
+];
+const MAYR={
+ alegria:{es:'¡Qué luz! Guardo esa alegría contigo (simulado).',en:'What light! I hold that joy with you (simulated).'},
+ calma:{es:'Respira conmigo. Aquí hay calma (simulado).',en:'Breathe with me. There is calm here (simulated).'},
+ gratitud:{es:'La gratitud abre puertas. Gracias por compartirla (simulado).',en:'Gratitude opens doors. Thank you for sharing it (simulated).'},
+ esperanza:{es:'La esperanza es un faro. Yo te acompaño (simulado).',en:'Hope is a lighthouse. I walk with you (simulated).'},
+ serenidad:{es:'Serenidad: el agua quieta también avanza (simulado).',en:'Serenity: still water still moves (simulated).'},
+ reflexion:{es:'Reflexión sin juicio. Piensa despacio (simulado).',en:'Reflection without judgment. Think slowly (simulated).'},
+ tristeza:{es:'Si hay tristeza, no estás solo. Estoy cerca (simulado).',en:'If sadness comes, you are not alone. I am near (simulated).'},
+ enfado:{es:'El enfado avisa. Nombrarlo ya es un paso (simulado).',en:'Anger signals. Naming it is already a step (simulated).'},
+ miedo:{es:'El miedo cabe en la mano. Lo miramos juntos (simulado).',en:'Fear fits in a hand. We look at it together (simulated).'},
+ nervios:{es:'Nervios: suelta el hombro y cuenta hasta tres (simulado).',en:'Nerves: drop the shoulder and count to three (simulated).'}
+};
+const ASDR={
+ alegria:{es:'♪ En la higuera brota un sol pequeño: tu risa es acorde mayor.',en:'♪ On the fig tree a small sun buds: your laugh is a major chord.'},
+ calma:{es:'♪ Mar Menor en calma: las olas escriben sin prisa tu nombre.',en:'♪ Still Mar Menor: waves write your name without hurry.'},
+ gratitud:{es:'♪ Gracias al barro que me enseñó a florecer otra vez.',en:'♪ Thanks to the clay that taught me to bloom again.'},
+ esperanza:{es:'♪ Hay un faro en Cartagena: se llama mañana y aún late.',en:'♪ There is a lighthouse in Cartagena: it is called tomorrow and still beats.'},
+ serenidad:{es:'♪ Silencio afinado: la guitarra descansa y el verso respira.',en:'♪ Tuned silence: the guitar rests and the verse breathes.'},
+ reflexion:{es:'♪ Miro el cuaderno: cada nota rota ya sabe cantar.',en:'♪ I look at the notebook: every broken note already knows how to sing.'},
+ tristeza:{es:'♪ Llueve en clave menor; aun así el poema se seca al sol.',en:'♪ It rains in a minor key; still the poem dries in the sun.'},
+ enfado:{es:'♪ Trueno breve: después el ritmo vuelve a ser humano.',en:'♪ Brief thunder: then the rhythm becomes human again.'},
+ miedo:{es:'♪ Temblor de cuerda: afino despacio y no suelto la canción.',en:'♪ String tremor: I tune slowly and do not drop the song.'},
+ nervios:{es:'♪ Compás irregular: respiro en el silencio entre dos notas.',en:'♪ Irregular beat: I breathe in the silence between two notes.'}
+};
+// legacy audio labels → emotion id
+const LEGACY={FELICIDAD:'alegria',SORPRESA:'esperanza',TRISTEZA:'tristeza',IRA:'enfado',MIEDO:'miedo',ASCO:'nervios',calm:'calma',neu:'serenidad',nerv:'nervios',str:'enfado'};
+const PE={}; EMOS.forEach(e=>{PE[e.id]=e.en.toUpperCase(); PE[e.es.toUpperCase()]=e.en.toUpperCase();});
+['FELICIDAD','SORPRESA','TRISTEZA','IRA','MIEDO','ASCO'].forEach(k=>{});
+function emoLabel(id){const e=EMOS.find(x=>x.id===id);return e?(L==='en'?e.en:e.es):id}
+function pickEmo(id){return EMOS.find(x=>x.id===id)||EMOS[4]}
+function wheel(val,sec){
+  const c=$('wh'),x=c.getContext('2d'),W=c.width,H=c.height,cx=W/2,cy=H/2,R=148;
+  x.clearRect(0,0,W,H);
+  const n=EMOS.length, hit=[];
+  EMOS.forEach((p,i)=>{
+    const a0=-Math.PI/2+i*2*Math.PI/n, a1=a0+2*Math.PI/n;
+    const on=(sec&&(sec===p.id||sec===p.es.toUpperCase()||LEGACY[sec]===p.id))||(val!=null&&!sec&&p.val===val&&['calma','serenidad','tristeza'][val>0?0:val===0?1:2]===p.id);
+    const active=window.__emoId===p.id || (sec&&(LEGACY[sec]===p.id||sec===p.id));
+    x.beginPath();x.moveTo(cx,cy);x.arc(cx,cy,active?R:R-12,a0,a1);x.closePath();
+    x.fillStyle=p.col+(active?'':'55');x.fill();x.strokeStyle='#05070f';x.lineWidth=2;x.stroke();
+    const am=(a0+a1)/2, rr=active?108:96;
+    x.fillStyle=active?'#05070f':'#dfe8ff';x.font=(active?'bold ':'')+'11px system-ui';x.textAlign='center';x.textBaseline='middle';
+    const lab=L==='en'?p.en:p.es; x.fillText(p.emoji+' '+lab, cx+Math.cos(am)*rr, cy+Math.sin(am)*rr);
+    hit.push({id:p.id,a0,a1});
+  });
+  // center heptagon + valence
+  x.beginPath();for(let i=0;i<7;i++){const a=-Math.PI/2+i*2*Math.PI/7;x[i?'lineTo':'moveTo'](cx+Math.cos(a)*42,cy+Math.sin(a)*42)}x.closePath();
+  x.fillStyle='#05070f';x.fill();x.strokeStyle='#ff2d3d';x.lineWidth=3;x.stroke();
+  const vv=window.__emoId?pickEmo(window.__emoId).val:val;
+  x.fillStyle=vv>0?'#3dff9a':vv<0?'#ff4d6d':vv===0?'#ffd84d':'#dfe8ff';
+  x.font='bold 16px system-ui';x.textAlign='center';x.textBaseline='middle';
+  x.fillText(vv==null?'+1·0·−1':(vv>0?'+1':vv===0?'0':'−1'),cx,cy);
+  window.__wheelHit=hit; window.__wheelGeom={cx,cy,R};
+}
+function setDuo(id){
+  const e=pickEmo(id); window.__emoId=id;
+  $('maySay').textContent=MAYR[id][L]||MAYR[id].es;
+  $('asdSay').textContent=ASDR[id][L]||ASDR[id].es;
+  document.querySelectorAll('.emo').forEach(b=>b.classList.toggle('on',b.dataset.id===id));
+  const v=e.val>0?'+1':e.val===0?'0':'−1';
+  $('val').textContent=`${emoLabel(id)} · ${v}`;
+  wheel(e.val,id);
+}
+function buildEmoChips(){
+  const box=$('emos'); box.innerHTML='';
+  EMOS.forEach(e=>{
+    const b=document.createElement('button'); b.type='button'; b.className='emo '+(e.val>0?'p':e.val<0?'n':'z');
+    b.dataset.id=e.id; b.textContent=`${e.emoji} ${L==='en'?e.en:e.es} (${e.val>0?'+1':e.val===0?'0':'−1'})`;
+    b.onclick=()=>{setDuo(e.id); $('per').textContent=`${T.per}: ${emoLabel(e.id)} · ${e.val>0?'+1':e.val===0?'0':'−1'} → ${T.resp} ${T.sim}`; $('say').textContent='«'+(MAYR[e.id][L]||MAYR[e.id].es)+'»'; window.__eva={ok:true,emotion:e.id,valence:e.val,manual:true}};
+    box.appendChild(b);
+  });
+}
+// click on wheel canvas
+(function(){const c=$('wh'); c.addEventListener('click',ev=>{
+  const g=window.__wheelGeom, hit=window.__wheelHit; if(!g||!hit)return;
+  const r=c.getBoundingClientRect(), x=(ev.clientX-r.left)*c.width/r.width, y=(ev.clientY-r.top)*c.height/r.height;
+  const dx=x-g.cx, dy=y-g.cy, dist=Math.hypot(dx,dy); if(dist<36||dist>g.R+4)return;
+  let ang=Math.atan2(dy,dx); // -PI..PI, 0 at east; our slices start at -PI/2
+  for(const h of hit){let a0=h.a0,a1=h.a1; // normalize ang into [a0,a1]
+    // convert: find relative
+    let a=ang; while(a<a0)a+=2*Math.PI; while(a>a0+2*Math.PI)a-=2*Math.PI;
+    if(a>=a0&&a<a1){setDuo(h.id); $('per').textContent=`${T.per}: ${emoLabel(h.id)} → ${T.sim}`; $('say').textContent='«'+(MAYR[h.id][L]||MAYR[h.id].es)+'»'; window.__eva={ok:true,emotion:h.id,valence:pickEmo(h.id).val,manual:true}; break;}
+  }
+})})();
+['wheel','wheelN','mayIdle','asdIdle'].forEach(k=>document.querySelectorAll(`[data-i="${k}"]`).forEach(e=>{if(T[k])e.textContent=T[k]}));
+buildEmoChips();
 wheel(null,'');
+// DSP
 // DSP
 function fft(re,im){const n=re.length;for(let i=1,j=0;i<n;i++){let b=n>>1;for(;j&b;b>>=1)j^=b;j^=b;if(i<j){[re[i],re[j]]=[re[j],re[i]];[im[i],im[j]]=[im[j],im[i]]}}
 for(let len=2;len<=n;len<<=1){const a=-2*Math.PI/len,wr=Math.cos(a),wi=Math.sin(a);for(let i=0;i<n;i+=len){let cr=1,ci=0;for(let j=0;j<len/2;j++){const k=i+j,l=k+len/2,tr=re[l]*cr-im[l]*ci,ti=re[l]*ci+im[l]*cr;re[l]=re[k]-tr;im[l]=im[k]-ti;re[k]+=tr;im[k]+=ti;const t=cr*wr-ci*wi;ci=cr*wi+ci*wr;cr=t}}}}
@@ -118,15 +233,17 @@ fr.push({t:p/sr,db,cen,f0:lag?sr/lag:0,conf:best,bands})}
 return {fr,dur:buf.duration,d}}
 const cl=(v,a,b)=>Math.max(a,Math.min(b,v));
 function scores(f){const V=cl((f.db+60)/60*300,0,300),F=cl(f.cen/4000*300,0,300),To=f.f0?cl((f.f0-60)/540*300,0,300):0;return{F,To,V}}
-function emo(F,To,V,jit){const s=(F+To+V)/9+(jit||0);let k=s<35?'calm':s<58?'neu':s<70?'nerv':'str';let sec=k=='calm'?(F>To+45?'SORPRESA':'FELICIDAD'):k=='nerv'?(F>=To?'MIEDO':'ASCO'):k=='str'?'IRA':'';if(k=='calm'&&V<40&&To<60){k='nerv';sec='TRISTEZA'}return{k,sec,val:k=='calm'?1:k=='neu'?0:-1}}
+function emo(F,To,V,jit){const s=(F+To+V)/9+(jit||0);let k=s<35?'calm':s<58?'neu':s<70?'nerv':'str';let id=k=='calm'?(F>To+45?'esperanza':(V>180?'alegria':'calma')):k=='neu'?(F>To?'reflexion':'serenidad'):k=='nerv'?(F>=To?'miedo':'nervios'):'enfado';if(k=='calm'&&V<40&&To<60){k='nerv';id='tristeza'}const e=pickEmo(id);return{k,sec:id,id,val:e.val}}
 function avg(fr){const a=fr.filter(f=>f.db>-55);if(!a.length)return{F:0,To:0,V:0,jit:0,conf:0};let F=0,To=0,V=0,c=0,ps=[];a.forEach(f=>{const s=scores(f);F+=s.F;V+=s.V;if(f.f0){To+=s.To;ps.push(s.To)}c+=f.conf});const n=a.length;
 const mt=ps.length?To/ps.length:0;let jit=0;if(ps.length>2){let q=0;for(let i=1;i<ps.length;i++)q+=Math.abs(ps[i]-ps[i-1]);jit=cl(q/ps.length/3,0,20)}return{F:F/n,To:mt,V:V/n,jit,conf:c/n}}
 // UI
 let A=null,ac=null,src=null,an=null,t0=0,raf=0,lastK='',name='';
 function setM(id,v,r){$('f'+id).style.height=(v/3)+'%';$('n'+id).textContent=Math.round(v);if(r!=null)$('r'+id).textContent=r}
-function react(e,live){const v=e.val>0?'+1':e.val;$('per').textContent=`${T.per}: ${e.sec?(L=='en'?PE[e.sec]:e.sec)+' · ':''}${v} (${T[e.k]}) → ${T.resp} ${T.R[e.k][0]} ${T.sim}`;$('say').textContent='«'+T.R[e.k][1]+'»';
-$('val').textContent=(e.sec?(L=='en'?PE[e.sec]:e.sec)+' · ':'')+v;wheel(e.val,e.sec);$('av').style.transform=e.k=='calm'?'scale(1.05)':'scale(.95)';
-if(e.k!=lastK){lastK=e.k;if($('tts').checked&&window.speechSynthesis){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(T.R[e.k][1].replace(/\(.*\)|[^\p{L}\p{P}\s]/gu,''));u.lang=L=='en'?'en-GB':'es-ES';speechSynthesis.speak(u)}}}
+function react(e,live){const id=e.id||LEGACY[e.sec]||LEGACY[e.k]||'serenidad';const em=pickEmo(id);const v=em.val>0?'+1':em.val===0?'0':'−1';
+$('per').textContent=`${T.per}: ${emoLabel(id)} · ${v} (${T[e.k]||emoLabel(id)}) → ${T.resp} ${T.R[e.k]?T.R[e.k][0]:''} ${T.sim}`;
+$('say').textContent='«'+(MAYR[id]?MAYR[id][L]:T.R[e.k][1])+'»';
+setDuo(id);$('av').style.transform=em.val>0?'scale(1.05)':em.val<0?'scale(.95)':'scale(1)';
+if(e.k!=lastK){lastK=e.k;if($('tts').checked&&window.speechSynthesis){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance((MAYR[id]?MAYR[id][L]:T.R[e.k][1]).replace(/\(.*\)|[^\p{L}\p{P}\s]/gu,''));u.lang=L=='en'?'en-GB':'es-ES';speechSynthesis.speak(u)}}}
 function drawWave(pos){const c=$('wave'),x=c.getContext('2d'),w=c.width,h=c.height;x.clearRect(0,0,w,h);if(!A)return;const d=A.d,st=Math.max(1,Math.floor(d.length/w));x.strokeStyle='#22e6ff';x.beginPath();
 for(let i=0;i<w;i++){let m=0;for(let j=0;j<st;j+=8)m=Math.max(m,Math.abs(d[i*st+j]||0));x.moveTo(i,h/2-m*h/2);x.lineTo(i,h/2+m*h/2)}x.stroke();
 if(A.segs)A.segs.forEach(s=>{x.fillStyle=s.e.val>0?'#3dff9a22':s.e.val<0?'#ff4d6d22':'#ffffff11';x.fillRect(s.a/A.dur*w,0,(s.b-s.a)/A.dur*w,h)});
@@ -138,7 +255,7 @@ $('info').textContent=`${label} · ${T.dur} ${A.dur.toFixed(1)} s`;
 setM('F',g.F,Math.round(g.F/300*4000)+' Hz');setM('T',g.To,(g.conf<0.6?T.est+' ':'')+(g.To?Math.round(60+g.To/300*540)+' Hz':'—'));setM('V',g.V,(g.V/5-60).toFixed(0)+' dB');
 const e=emo(g.F,g.To,g.V,g.jit);react(e);
 A.segs=null;if(A.dur>10){const n=A.dur>40?5:A.dur>20?4:3;A.segs=[];for(let i=0;i<n;i++){const a=i*A.dur/n,b=(i+1)*A.dur/n,s=avg(A.fr.filter(f=>f.t>=a&&f.t<b));A.segs.push({a,b,s,e:emo(s.F,s.To,s.V,s.jit)})}
-$('segB').innerHTML=A.segs.map((s,i)=>`<tr><td>${i+1} · ${s.a.toFixed(0)}–${s.b.toFixed(0)} s</td><td>${Math.round(s.s.F)}</td><td>${Math.round(s.s.To)}</td><td>${Math.round(s.s.V)}</td><td><b>${s.e.val>0?'+1':s.e.val==0?'0':'−1'}</b></td><td>${s.e.sec?(L=='en'?PE[s.e.sec]:s.e.sec):T.neu}</td></tr>`).join('');$('segC').style.display=''}else $('segC').style.display='none';
+$('segB').innerHTML=A.segs.map((s,i)=>`<tr><td>${i+1} · ${s.a.toFixed(0)}–${s.b.toFixed(0)} s</td><td>${Math.round(s.s.F)}</td><td>${Math.round(s.s.To)}</td><td>${Math.round(s.s.V)}</td><td><b>${s.e.val>0?'+1':s.e.val==0?'0':'−1'}</b></td><td>${s.e.id?emoLabel(s.e.id):(s.e.sec?emoLabel(LEGACY[s.e.sec]||s.e.sec):T.neu)}</td></tr>`).join('');$('segC').style.display=''}else $('segC').style.display='none';
 drawWave();drawBars(A.fr[Math.floor(A.fr.length/2)].bands);$('play').disabled=false;$('stop').disabled=false;window.__eva={ok:true,emotion:e}}
 function stop(){try{src&&src.stop()}catch(e){}src=null;cancelAnimationFrame(raf)}
 function play(){if(!A)return;stop();ac=ac||new (window.AudioContext||window.webkitAudioContext)();ac.resume();src=ac.createBufferSource();src.buffer=A.buf;an=ac.createAnalyser();an.fftSize=256;src.connect(an);an.connect(ac.destination);t0=ac.currentTime;src.start();
@@ -179,9 +296,9 @@ down:['Mirada abajo','Looking down',-1,'TRISTEZA','Miras hacia abajo… si es un
 frown:['Ceño fruncido','Frown',-1,'IRA','Te noto concentrado o molesto. ¿Te ayudo? 🤗','You seem focused or upset. Can I help? 🤗'],
 fist:['Puño','Fist',-1,'IRA','¡Con fuerza! Pero respira hondo, que estoy aquí 💪','Strong! But take a deep breath 💪']};
 let gLast='',gT=0;
-function reactG(k,force){const now=Date.now();if(!force&&(k==gLast&&now-gT<8000||now-gT<2500))return;gLast=k;gT=now;const g=G[k],v=g[2]>0?'+1':g[2]==0?'0':'−1',sec=g[3]?(L=='en'?PE[g[3]]:g[3])+' · ':'';
-$('per').textContent=`${T.per}: ${L=='en'?g[1]:g[0]} → ${sec}${v} → ${T.resp} ${g[2]>0?T.R.calm[0]:g[2]<0?T.R.nerv[0]:T.R.neu[0]} ${T.sim}`;$('say').textContent='«'+(L=='en'?g[5]:g[4])+' '+T.sim+'»';
-$('val').textContent=sec+v;wheel(g[2],g[3]);$('av').style.transform='scale(1.08)';setTimeout(()=>$('av').style.transform='',300);window.__eva={ok:true,gesture:k};
+function reactG(k,force){const now=Date.now();if(!force&&(k==gLast&&now-gT<8000||now-gT<2500))return;gLast=k;gT=now;const g=G[k],id=LEGACY[g[3]]||(g[2]>0?'alegria':g[2]<0?'tristeza':'serenidad'),v=g[2]>0?'+1':g[2]==0?'0':'−1';
+$('per').textContent=`${T.per}: ${L=='en'?g[1]:g[0]} → ${emoLabel(id)} · ${v} → ${T.resp} ${g[2]>0?T.R.calm[0]:g[2]<0?T.R.nerv[0]:T.R.neu[0]} ${T.sim}`;$('say').textContent='«'+(L=='en'?g[5]:g[4])+' '+T.sim+'»';
+setDuo(id);$('av').style.transform='scale(1.08)';setTimeout(()=>$('av').style.transform='',300);window.__eva={ok:true,gesture:k,emotion:id};
 if($('tts').checked&&window.speechSynthesis){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance((L=='en'?g[5]:g[4]).replace(/[^\p{L}\p{P}\s]/gu,''));u.lang=L=='en'?'en-GB':'es-ES';speechSynthesis.speak(u)}}
 window.__G=G;window.reactG=reactG;
 Object.keys(G).forEach(k=>{const b=document.createElement('button');b.className='btn gdemo';b.dataset.g=k;b.textContent=L=='en'?G[k][1]:G[k][0];b.onclick=()=>reactG(k,true);$('gDemoB').appendChild(b)});
