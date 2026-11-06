@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f5c518" />
+  <meta name="description" content="MAY OS · Cuidado personal — secretaria, enfermera, psicóloga amiga y Money Digital. Datos locales." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>MAY OS · Cuidado personal</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1a1c'/%3E%3Ccircle cx='32' cy='28' r='12' fill='%23f5c518'/%3E%3Cpath d='M14 52c4-12 12-18 18-18s14 6 18 18' fill='%23f5c518'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-badge" aria-hidden="true">MAY</div>
+      <div>
+        <h1>MAY OS · Cuidado personal</h1>
+        <p>4 agentes · Secretaria · Salud · Psicóloga · Money Digital</p>
+      </div>
+    </div>
+    <div class="disclaimer" role="note">
+      Seguimiento personal · No es diagnóstico médico. En emergencia en España: 112 · Apoyo emocional 024.
+      Money Digital no compra ni paga solo; los precios se consultan en la web al pulsar. Fotos locales · OCR opcional con Tesseract.js (confirmación manual; no inventa datos).
+    </div>
+  </header>
+
+  <nav class="agent-tabs agents-4" role="tablist" aria-label="Agentes">
+    <button type="button" class="agent-tab active" data-agent="secretaria" role="tab" aria-selected="true">
+      <span>📋</span>Secretaria
+    </button>
+    <button type="button" class="agent-tab" data-agent="enfermera" role="tab" aria-selected="false">
+      <span>🩺</span>Salud
+    </button>
+    <button type="button" class="agent-tab" data-agent="psicologa" role="tab" aria-selected="false">
+      <span>💛</span>Psicóloga
+    </button>
+    <button type="button" class="agent-tab" data-agent="money" role="tab" aria-selected="false">
+      <span>🛒</span>Money
+    </button>
+  </nav>
+
+  <main class="main">
+    <section class="panel" id="panel-resumen">
+      <h2>Resumen</h2>
+      <div class="summary-grid" id="summary-grid"></div>
+      <div class="mood-bar" id="mood-bar" aria-label="Ánimo reciente"></div>
+    </section>
+
+    <section class="panel" id="panel-money">
+      <h2>Money Digital · Compra inteligente</h2>
+      <p class="help-tips">Inventario / despensa, mínimos, lista de compra y presupuesto orientativo (editable). No inventamos precios ni ofertas.</p>
+      <form class="manual-form" id="money-budget-form">
+        <label class="full">Presupuesto comida (orientativo, €)
+          <input type="number" step="1" min="0" max="5000" name="budget" id="money-budget" placeholder="250" />
+        </label>
+        <div class="full bt-row">
+          <button type="submit" class="btn btn-secondary">Guardar presupuesto</button>
+        </div>
+      </form>
+      <form class="manual-form" id="money-product-form" style="margin-top:10px">
+        <label class="full">Producto
+          <input type="text" name="name" maxlength="80" placeholder="Ej. leche, pan, arroz" required />
+        </label>
+        <label>Cantidad
+          <input type="number" step="0.1" min="0" name="qty" value="1" />
+        </label>
+        <label>Mínimo
+          <input type="number" step="0.1" min="0" name="min" value="1" />
+        </label>
+        <div class="full bt-row">
+          <button type="submit" class="btn btn-primary">Añadir / actualizar despensa</button>
+          <button type="button" class="btn btn-secondary" id="btn-money-faltan">Qué falta</button>
+          <button type="button" class="btn btn-secondary" id="btn-money-lista">Lista compra</button>
+        </div>
+      </form>
+      <h2 style="margin-top:14px">Despensa</h2>
+      <div class="task-list" id="pantry-list"></div>
+      <h2 style="margin-top:14px">Lista de compra</h2>
+      <div class="task-list" id="shopping-list"></div>
+      <div id="compare-box" class="compare-box hidden">
+        <h2>Comparar en la web</h2>
+        <p class="help-tips" id="compare-note"></p>
+        <div class="tools-row" id="compare-links"></div>
+      </div>
+
+      <div class="photo-capture" id="money-photo-block" style="margin-top:12px">
+        <h2>Foto · Money (producto / etiqueta / recibo)</h2>
+        <p class="help-tips">Archivo local de producto, etiqueta o ticket. <strong>Sin OCR ni lectura automática de precios</strong> y sin subida: tú anotas el texto.</p>
+        <form class="manual-form" id="money-photo-form">
+          <label>Tipo
+            <select name="kind">
+              <option value="producto">Producto</option>
+              <option value="etiqueta">Etiqueta</option>
+              <option value="recibo">Recibo / ticket</option>
+            </select>
+          </label>
+          <label class="full">Foto
+            <input type="file" name="photo" accept="image/*" capture="environment" required />
+          </label>
+          <label class="full">Texto / nota
+            <input type="text" name="note" maxlength="200" placeholder="Ej. leche marca X, ticket Mercadona…" />
+          </label>
+          <div class="full bt-row">
+            <button type="submit" class="btn btn-primary">Guardar foto Money</button>
+          </div>
+        </form>
+        <p class="status-line" id="money-photo-status">Misma política: local, JPEG ≤1600&nbsp;px, sin OCR automático.</p>
+      </div>
+      <p class="status-line" id="money-status"></p>
+    </section>
+
+
+    <section class="panel" id="panel-samsung">
+      <h2>Samsung Health (importar archivo)</h2>
+      <p class="help-tips">
+        <strong>No hay conexión web general a Samsung Health</strong> desde el navegador (no es posible de forma fiable).
+        Si exportaste un CSV/JSON desde Samsung Health u otra app, puedes importarlo aquí.
+        Si el archivo no coincide, usa registro manual o Bluetooth con dispositivos compatibles.
+      </p>
+      <form class="manual-form" id="samsung-import-form">
+        <label class="full">Archivo CSV o JSON
+          <input type="file" name="file" accept=".csv,.json,text/csv,application/json" required />
+        </label>
+        <div class="full bt-row">
+          <button type="submit" class="btn btn-primary">Importar archivo</button>
+        </div>
+      </form>
+      <p class="status-line" id="samsung-status">Encabezados comunes reconocidos: steps/pasos, weight/peso, heart_rate/pulso, sleep/sueño.</p>
+    </section>
+
+    <section class="panel" id="panel-bluetooth">
+      <h2>Dispositivo Bluetooth</h2>
+      <div class="bt-row">
+        <button type="button" class="btn btn-primary" id="btn-bt">Conectar dispositivo</button>
+        <button type="button" class="btn btn-secondary" id="btn-bt-clear">Limpiar estado BT</button>
+      </div>
+      <p class="status-line" id="bt-status">
+        Web Bluetooth funciona en Chrome/Edge (HTTPS o localhost). No inventamos lecturas: si el dispositivo no envía datos, usa la entrada manual.
+      </p>
+    </section>
+
+    <section class="panel" id="panel-manual">
+      <h2>Entrada manual (salud)</h2>
+      <form class="manual-form" id="manual-form">
+        <label>Peso (kg)
+          <input type="number" step="0.1" min="20" max="300" name="peso" placeholder="72.5" />
+        </label>
+        <label>Pasos
+          <input type="number" step="1" min="0" max="100000" name="pasos" placeholder="6500" />
+        </label>
+        <label>Pulso (lpm)
+          <input type="number" step="1" min="30" max="220" name="pulso" placeholder="72" />
+        </label>
+        <label>Sueño (h)
+          <input type="number" step="0.1" min="0" max="24" name="sueno" placeholder="7.5" />
+        </label>
+        <label>Agua (vasos)
+          <input type="number" step="1" min="0" max="30" name="agua" placeholder="6" />
+        </label>
+        <label>Ánimo
+          <select name="animo">
+            <option value="">—</option>
+            <option value="1">Bien (+1)</option>
+            <option value="0">Regular (0)</option>
+            <option value="-1">Bajo (−1)</option>
+          </select>
+        </label>
+        <label class="full">Tarea / nota rápida
+          <input type="text" name="tarea" maxlength="120" placeholder="Ej. llamar al médico a las 17:00" />
+        </label>
+        <div class="full bt-row">
+          <button type="submit" class="btn btn-primary">Guardar datos</button>
+        </div>
+      </form>
+
+      <div class="photo-capture" id="salud-photo-block" style="margin-top:12px">
+        <h2>Foto · Salud</h2>
+        <p class="help-tips">Guarda foto local (análisis, receta médica o informe). <strong>Sin subida</strong>. OCR opcional abajo (con confirmación).</p>
+        <form class="manual-form" id="salud-photo-form">
+          <label>Tipo
+            <select name="kind">
+              <option value="analisis">Análisis / seguimiento</option>
+              <option value="receta_medica">Receta médica</option>
+              <option value="informe_medico">Informe médico</option>
+            </select>
+          </label>
+          <label class="full">Foto (cámara o galería)
+            <input type="file" name="photo" accept="image/*" capture="environment" required />
+          </label>
+          <label class="full">Nota / texto
+            <input type="text" name="note" maxlength="200" placeholder="Ej. analítica marzo, receta del médico…" />
+          </label>
+          <div class="full bt-row">
+            <button type="submit" class="btn btn-primary">Guardar foto Salud</button>
+          </div>
+        </form>
+        <p class="status-line" id="salud-photo-status">Límite: imagen ≤ 12&nbsp;MB; JPEG máx. 1600&nbsp;px. Sin OCR.</p>
+      </div>
+    </section>
+
+
+    <section class="panel" id="panel-ocr">
+      <h2>OCR local (Tesseract.js)</h2>
+      <p class="help-tips">
+        Lectura <strong>opcional y local</strong> en el navegador. Extrae solo patrones claros (peso/pasos/pulso o etiqueta de análisis).
+        <strong>Nada se guarda solo</strong>: revisa, edita y confirma. Si duda, deja el campo vacío — no inventamos valores.
+      </p>
+      <form class="manual-form" id="ocr-form">
+        <label>Origen
+          <select name="target">
+            <option value="metricas">Métricas (peso/pasos/pulso)</option>
+            <option value="analisis">Análisis clínico (etiqueta simple)</option>
+          </select>
+        </label>
+        <label class="full">Foto a leer
+          <input type="file" name="photo" accept="image/*" capture="environment" required />
+        </label>
+        <div class="full bt-row">
+          <button type="submit" class="btn btn-primary" id="btn-ocr-run">Leer con OCR local</button>
+        </div>
+      </form>
+      <p class="status-line" id="ocr-status">Requiere red la primera vez para cargar el motor Tesseract (CDN). El reconocimiento corre en tu dispositivo.</p>
+      <div id="ocr-review" class="ocr-review hidden">
+        <h2>Revisar extracción</h2>
+        <label class="full" style="display:flex;flex-direction:column;gap:4px;font-size:0.72rem;color:var(--muted)">Texto OCR (solo lectura)
+          <textarea id="ocr-raw" rows="5" readonly style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:var(--card);color:var(--text);padding:10px;font-family:inherit;font-size:0.8rem"></textarea>
+        </label>
+        <form class="manual-form" id="ocr-confirm-form" style="margin-top:8px">
+          <label>Peso (kg)
+            <input type="number" step="0.1" min="20" max="300" name="peso" id="ocr-peso" />
+          </label>
+          <label>Pasos
+            <input type="number" step="1" min="0" max="100000" name="pasos" id="ocr-pasos" />
+          </label>
+          <label>Pulso (lpm)
+            <input type="number" step="1" min="30" max="220" name="pulso" id="ocr-pulso" />
+          </label>
+          <label class="full">Prueba (análisis)
+            <input type="text" name="test" id="ocr-test" maxlength="120" placeholder="Ej. glucosa" />
+          </label>
+          <label>Valor
+            <input type="text" name="value" id="ocr-value" maxlength="40" />
+          </label>
+          <label>Unidad
+            <input type="text" name="unit" id="ocr-unit" maxlength="40" placeholder="mg/dL" />
+          </label>
+          <label class="full">Nota
+            <input type="text" name="note" id="ocr-note" maxlength="200" value="desde OCR local (revisado)" />
+          </label>
+          <div class="full bt-row">
+            <button type="submit" class="btn btn-primary">Confirmar y guardar</button>
+            <button type="button" class="btn btn-secondary" id="btn-ocr-cancel">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-labs">
+      <h2>Análisis clínicos (registro local)</h2>
+      <p class="help-tips">Solo archivo personal. <strong>No es diagnóstico médico</strong> ni interpreta resultados. Consulta siempre a profesionales.</p>
+      <form class="manual-form" id="labs-form">
+        <label>Fecha
+          <input type="date" name="date" id="lab-date" required />
+        </label>
+        <label>Nombre / persona
+          <input type="text" name="person" maxlength="80" placeholder="Pedro" required />
+        </label>
+        <label class="full">Prueba
+          <input type="text" name="test" maxlength="120" placeholder="Ej. glucosa, hemoglobina, colesterol…" required />
+        </label>
+        <label>Valor
+          <input type="text" name="value" maxlength="40" placeholder="95" required />
+        </label>
+        <label>Unidad
+          <input type="text" name="unit" maxlength="40" placeholder="mg/dL" />
+        </label>
+        <label class="full">Nota
+          <input type="text" name="note" maxlength="200" placeholder="Laboratorio, ayunas, etc." />
+        </label>
+        <div class="full bt-row">
+          <button type="submit" class="btn btn-primary">Guardar análisis</button>
+        </div>
+      </form>
+      <div class="task-list" id="labs-list" style="margin-top:10px"></div>
+      <p class="status-line" id="labs-status"></p>
+    </section>
+
+
+    <section class="panel" id="panel-tips">
+      <h2>Consejos orientativos (no médicos)</h2>
+      <p class="help-tips">Sugerencias generales de estilo mediterráneo y movimiento <strong>solo según lo que hayas registrado</strong>. No diagnostican ni sustituyen a un médico.</p>
+      <div id="lifestyle-tips" class="help-tips"></div>
+      <div class="bt-row" style="margin-top:8px">
+        <button type="button" class="btn btn-secondary" id="btn-refresh-tips">Actualizar consejos</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-recetas">
+      <h2>Recetas mediterráneas fáciles</h2>
+      <p class="help-tips">Ideas económicas caseras. <strong>No es consejo nutricional médico</strong>. Puedes enviar ingredientes a Money (lista de compra).</p>
+      <div id="recipes-list" class="recipes-list"></div>
+    </section>
+
+    <section class="panel" id="panel-menu-semanal">
+      <h2>Menú semanal sencillo</h2>
+      <p class="help-tips">Plantilla orientativa de comidas. No promete nutrición médica ni dietas terapéuticas.</p>
+      <div id="weekly-menu" class="weekly-menu"></div>
+      <div class="bt-row" style="margin-top:8px">
+        <button type="button" class="btn btn-secondary" id="btn-menu-to-money">Enviar ingredientes de la semana a Money</button>
+      </div>
+      <p class="status-line" id="menu-status"></p>
+    </section>
+
+    <section class="panel" id="panel-habits">
+      <h2>Hábitos de hoy</h2>
+      <div class="habit-chips" id="habit-chips"></div>
+    </section>
+
+    <section class="panel" id="panel-tasks">
+      <h2>Tareas</h2>
+      <div class="task-list" id="task-list"></div>
+    </section>
+
+    <section class="panel" id="panel-secretaria-com">
+      <h2>Secretaria · Contactar (saliente)</h2>
+      <p class="help-tips">
+        Abre borradores reales en tu dispositivo: <code>mailto:</code>, <code>tel:</code>, WhatsApp (<code>wa.me</code>) y composición en X.
+        <strong>Tú confirmas el envío/llamada</strong>. Esta web <strong>no puede recibir llamadas</strong>, ni leer DMs/privados, ni tus gustos de X/YouTube sin que tú los escribas aquí.
+      </p>
+      <form class="manual-form" id="com-email-form">
+        <label class="full">Correo (mailto)
+          <input type="email" name="to" placeholder="ejemplo@correo.com" required />
+        </label>
+        <label class="full">Asunto
+          <input type="text" name="subject" maxlength="120" placeholder="Asunto" />
+        </label>
+        <label class="full">Mensaje
+          <textarea name="body" rows="3" maxlength="2000" placeholder="Redacta el correo…" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:var(--card);color:var(--text);padding:10px;font-family:inherit"></textarea>
+        </label>
+        <div class="full bt-row">
+          <button type="submit" class="btn btn-primary">Abrir borrador de correo</button>
+        </div>
+      </form>
+      <form class="manual-form" id="com-tel-form" style="margin-top:10px">
+        <label class="full">Teléfono (tel:)
+          <input type="tel" name="phone" placeholder="+34…" required />
+        </label>
+        <div class="full bt-row">
+          <button type="submit" class="btn btn-secondary">Llamar (confirma en el móvil)</button>
+        </div>
+      </form>
+      <form class="manual-form" id="com-wa-form" style="margin-top:10px">
+        <label>WhatsApp (número, sin +)
+          <input type="text" name="phone" placeholder="34600000000" required />
+        </label>
+        <label class="full">Texto
+          <input type="text" name="text" maxlength="500" placeholder="Hola…" />
+        </label>
+        <div class="full bt-row">
+          <button type="submit" class="btn btn-secondary">Abrir WhatsApp (borrador)</button>
+        </div>
+      </form>
+      <form class="manual-form" id="com-x-form" style="margin-top:10px">
+        <label class="full">Texto para X (tú revisas y publicas)
+          <textarea name="text" rows="3" maxlength="280" placeholder="Escribe el post…" required style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:var(--card);color:var(--text);padding:10px;font-family:inherit"></textarea>
+        </label>
+        <div class="full bt-row">
+          <button type="submit" class="btn btn-primary">Abrir compositor de X</button>
+        </div>
+      </form>
+      <h2 style="margin-top:14px">Preferencias / gustos (local)</h2>
+      <p class="help-tips">Campos que <strong>tú escribes</strong> sobre X y YouTube. Roadmap: sin API/OAuth conectada, la web no puede leer automáticamente likes, privados ni recomendaciones de esas plataformas.</p>
+      <form class="manual-form" id="prefs-form">
+        <label class="full">Gustos / temas en X
+          <input type="text" name="x_likes" maxlength="300" placeholder="Ej. noticias, IA, música…" />
+        </label>
+        <label class="full">Cuentas X que sigues / te interesan
+          <input type="text" name="x_accounts" maxlength="300" placeholder="@ejemplo …" />
+        </label>
+        <label class="full">Gustos YouTube
+          <input type="text" name="yt_likes" maxlength="300" placeholder="Documentales, cocina…" />
+        </label>
+        <label class="full">Canales YouTube
+          <input type="text" name="yt_channels" maxlength="300" placeholder="Nombres o URLs…" />
+        </label>
+        <label class="full">Notas
+          <input type="text" name="notes" maxlength="300" placeholder="Otras preferencias…" />
+        </label>
+        <div class="full bt-row">
+          <button type="submit" class="btn btn-primary">Guardar preferencias</button>
+        </div>
+      </form>
+      <p class="status-line" id="com-status"></p>
+    </section>
+
+
+
+    <section class="panel" id="panel-rueda">
+      <h2>Rueda de emociones · Detecta tu estado emocional</h2>
+      <p class="credit-line" id="rueda-credito">Rueda de emociones · La Huertecica, creada por Eva y Pedro</p>
+      <p class="help-tips">Creación personal inspirada en La Huertecica (no es la ONG oficial). Apoyo cotidiano · <strong>no es diagnóstico</strong>. No sustituye familia, pareja ni profesionales.</p>
+      <div class="emotion-wheel-wrap" aria-hidden="false">
+        <svg class="emotion-wheel" viewBox="0 0 220 220" role="img" aria-label="Rueda de emociones +1 verde, 0 ámbar, −1 rojo">
+          <circle cx="110" cy="110" r="100" fill="#1a1a1c" stroke="rgba(245,197,24,0.35)" stroke-width="2"/>
+          <path d="M110 110 L110 10 A100 100 0 0 1 196.6 60 Z" fill="#2e7d4f"/>
+          <path d="M110 110 L196.6 60 A100 100 0 0 1 196.6 160 Z" fill="#3fa66a"/>
+          <path d="M110 110 L196.6 160 A100 100 0 0 1 110 210 Z" fill="#c9a227"/>
+          <path d="M110 110 L110 210 A100 100 0 0 1 23.4 160 Z" fill="#d4a017"/>
+          <path d="M110 110 L23.4 160 A100 100 0 0 1 23.4 60 Z" fill="#c62828"/>
+          <path d="M110 110 L23.4 60 A100 100 0 0 1 110 10 Z" fill="#e53935"/>
+          <circle cx="110" cy="110" r="42" fill="#242428" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+          <text x="110" y="104" text-anchor="middle" fill="#6bcf7f" font-size="11" font-family="Segoe UI,sans-serif">+1</text>
+          <text x="110" y="118" text-anchor="middle" fill="#ffb347" font-size="11" font-family="Segoe UI,sans-serif">0</text>
+          <text x="110" y="132" text-anchor="middle" fill="#ff6b6b" font-size="11" font-family="Segoe UI,sans-serif">−1</text>
+        </svg>
+        <div class="wheel-legend">
+          <span class="leg pos">+1 positivo (verde)</span>
+          <span class="leg neu">0 neutro (ámbar)</span>
+          <span class="leg neg">−1 negativo (rojo)</span>
+        </div>
+      </div>
+      <div class="habit-chips" id="emotion-buttons" style="margin-top:10px"></div>
+      <div class="photo-capture" style="margin-top:12px">
+        <h2>Simulación de escena (opcional)</h2>
+        <p class="help-tips">Analiza <strong>brillo/color medio de la foto</strong> (luminancia). <strong>No es reconocimiento facial</strong> ni lectura emocional de una persona. Si hay OCR, solo palabras emocionales del texto; si no, etiqueta de simulación de escena. Siempre pedimos confirmación.</p>
+        <form class="manual-form" id="emotion-scene-form">
+          <label class="full">Foto de escena
+            <input type="file" name="photo" accept="image/*" capture="environment" required />
+          </label>
+          <div class="full bt-row">
+            <button type="submit" class="btn btn-secondary">Simular estado por escena</button>
+          </div>
+        </form>
+        <div id="emotion-scene-review" class="ocr-review hidden">
+          <p class="help-tips" id="emotion-scene-note"></p>
+          <form class="manual-form" id="emotion-scene-confirm">
+            <label>Estado sugerido
+              <select name="label" id="emotion-scene-label"></select>
+            </label>
+            <label>Score
+              <select name="score" id="emotion-scene-score">
+                <option value="1">+1 positivo</option>
+                <option value="0">0 neutro</option>
+                <option value="-1">−1 negativo</option>
+              </select>
+            </label>
+            <label class="full">Nota
+              <input type="text" name="note" id="emotion-scene-note-input" maxlength="160" />
+            </label>
+            <div class="full bt-row">
+              <button type="submit" class="btn btn-primary">Confirmar y guardar</button>
+              <button type="button" class="btn btn-secondary" id="btn-emotion-scene-cancel">Cancelar</button>
+            </div>
+          </form>
+        </div>
+        <p class="status-line" id="emotion-scene-status"></p>
+      </div>
+      <h2 style="margin-top:12px">Historial emocional</h2>
+      <div class="task-list" id="emotion-history"></div>
+      <p class="status-line" id="emotion-status"></p>
+    </section>
+
+    <section class="panel" id="panel-chat">
+      <h2 id="chat-title">Chat · Secretaria</h2>
+      <p class="help-tips" id="chat-help"></p>
+      <div class="chat-box" id="chat-box" role="log" aria-live="polite"></div>
+    </section>
+
+
+    <section class="panel" id="panel-galeria">
+      <h2>Galería local</h2>
+      <p class="help-tips">Preview por categoría, fecha y texto. Todo queda en este dispositivo (IndexedDB). No se sube ni se analiza con OCR automático.</p>
+      <div class="bt-row" style="margin-bottom:8px">
+        <label class="filter-label">Filtrar
+          <select id="gallery-filter">
+            <option value="all">Todas</option>
+            <option value="salud">Salud</option>
+            <option value="money">Money</option>
+          </select>
+        </label>
+      </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+      <div id="gallery-preview" class="gallery-preview hidden">
+        <img id="gallery-preview-img" alt="Vista previa" />
+        <p id="gallery-preview-meta" class="help-tips"></p>
+        <div class="bt-row">
+          <button type="button" class="btn btn-secondary" id="btn-preview-close">Cerrar</button>
+          <button type="button" class="btn btn-danger" id="btn-preview-delete">Borrar foto</button>
+        </div>
+      </div>
+      <p class="status-line" id="gallery-status"></p>
+    </section>
+
+    <section class="panel" id="panel-tools">
+      <h2>Datos</h2>
+      <div class="tools-row">
+        <button type="button" class="btn btn-secondary" id="btn-export">Exportar JSON</button>
+        <button type="button" class="btn btn-secondary" id="btn-whatsapp">Compartir por WhatsApp</button>
+        <button type="button" class="btn btn-danger" id="btn-clear">Borrar todo</button>
+      </div>
+      <p class="status-line" id="tools-status"></p>
+    </section>
+  </main>
+
+  <form class="composer" id="composer" autocomplete="off">
+    <button type="button" class="icon-btn" id="btn-mic" title="Dictar (opcional)" aria-label="Micrófono">🎤</button>
+    <input class="chat-input" id="chat-input" type="text" maxlength="500" placeholder="Escribe a tu agente…" aria-label="Mensaje" />
+    <button type="submit" class="icon-btn" title="Enviar" aria-label="Enviar" style="background:var(--yellow);color:#1a1a1c;border:none;">➤</button>
+    <button type="button" class="icon-btn" id="btn-clear-chat" title="Limpiar chat" aria-label="Limpiar chat">⌫</button>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
