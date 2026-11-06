@@ -52,3 +52,6 @@ Seguimiento personal · No es diagnóstico médico.
 
 ## OCR local
 Tesseract.js (CDN): extracción conservadora + campos editables + confirmación antes de guardar. No inventa datos.
+
+## Instalar PWA
+Botón Instalar + `beforeinstallprompt` y fallback Chrome Android. GoatCounter evento `/may-cuidado/instalar` (clics, no instalaciones reales). Contador local por dispositivo.
