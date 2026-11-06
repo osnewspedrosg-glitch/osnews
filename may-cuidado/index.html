@@ -42,7 +42,25 @@
     </button>
   </nav>
 
+  <div class="bt-row video-guide-btns" id="video-guide-btns" style="padding:8px 16px 0;flex-wrap:wrap">
+    <button type="button" class="btn btn-primary" id="btn-guide-video" data-guide-video="secretaria">Vídeo: cómo funciona</button>
+  </div>
+
   <main class="main">
+
+
+    <section class="panel" id="panel-video-guia" hidden>
+      <h2 id="video-guia-title">Vídeo: cómo funciona</h2>
+      <p class="help-tips" id="video-guia-help">Guía de demostración con datos de ejemplo. No usa análisis médicos reales.</p>
+      <video id="video-guia-player" class="guide-video" controls playsinline preload="none" poster="">
+        <source id="video-guia-source" src="" type="video/mp4" />
+        Tu navegador no reproduce MP4.
+      </video>
+      <p class="status-line" id="video-guia-status"></p>
+      <div class="bt-row">
+        <button type="button" class="btn btn-secondary" id="btn-video-close">Cerrar vídeo</button>
+      </div>
+    </section>
 
     <section class="panel" id="panel-install">
       <h2>Instalar app (PWA)</h2>
