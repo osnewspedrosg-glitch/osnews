@@ -654,3 +654,16 @@ button, .btn {
 .emotion-chip.pos { border-color: rgba(107,207,127,0.55); color: var(--ok); }
 .emotion-chip.neu { border-color: rgba(255,179,71,0.55); color: var(--warn); }
 .emotion-chip.neg { border-color: rgba(255,107,107,0.55); color: var(--danger); }
+
+.guide-video {
+  width: 100%;
+  max-height: 70vh;
+  border-radius: 14px;
+  background: #0d0d0f;
+  margin-top: 8px;
+}
+.video-guide-btns .btn {
+  font-size: 0.72rem;
+  padding: 8px 10px;
+}
+#panel-video-guia[hidden] { display: none !important; }
