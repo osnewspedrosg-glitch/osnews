@@ -75,7 +75,7 @@ export function requirementsText() {
     "Qwen no publica una RAM mínima para esta tablet. Propuesta, no medida: la RAM física libre tendría que superar el archivo, y el punto de partida recomendado es 8 GB físicos. Los 6 GB virtuales de la foto no cuentan; son intercambio y esta página no puede verlos.",
     "La foto describe Lenovo TB336FU, Dimensity 6300, 8 GB físicos, 6 GB virtuales, 256 GB con 162 GB libres y Android 16. MediaTek indica GPU Arm Mali-G57 MC2. Chrome documenta WebGPU en Android 12 o superior con GPU ARM, Qualcomm o Intel. Esta tablet no se ha probado: ni WebGPU, ni la NPU, ni una velocidad.",
     "162 GB libres bastan para el archivo. No borres nada.",
-    `La descarga no empieza sola. Si marcas el consentimiento, este navegador pide unos ${formatBytes(WASM_BUNDLE_BYTES)} bytes a Hugging Face y el motor Transformers.js 4.3.2 a jsDelivr. Conviene usar Wi-Fi. La pregunta no sale de este aparato. Aún no está comprobado que la visita siguiente funcione sin red.`,
+    `La descarga no empieza sola. Si marcas el consentimiento, el modelo (unos ${formatBytes(WASM_BUNDLE_BYTES)} bytes) se pide a Hugging Face y el motor Transformers.js 4.3.2 a jsDelivr. Conviene usar Wi-Fi. La pregunta no sale de este aparato. La página puede volver a abrirse sin red después de visitarla, pero en la prueba de este ordenador cargar el modelo otra vez sin red falló. No hay uso sin conexión medido.`,
   ].join(" ");
 }
 
@@ -281,7 +281,7 @@ export function mount(doc, input = {}) {
   consent.type = "checkbox";
   consent.id = "azum-local-consent";
   const consentText = doc.createElement("span");
-  consentText.textContent = `Acepto descargar el modelo (${formatBytes(WASM_BUNDLE_BYTES)} bytes) desde Hugging Face y el motor Transformers.js desde jsDelivr. Conviene usar Wi-Fi. La pregunta no se envía a un servidor.`;
+  consentText.textContent = `Acepto descargar el modelo (${formatBytes(WASM_BUNDLE_BYTES)} bytes) desde Hugging Face. El motor viaja con la página y, la primera vez, su WebAssembly sale de jsDelivr. Conviene usar Wi-Fi. La pregunta no se envía a un servidor.`;
   consentLabel.append(consent, consentText);
 
   const probe = button(doc, "azum-local-probe", "Comprobar este navegador");
@@ -322,9 +322,8 @@ export function mount(doc, input = {}) {
   section.append(consentLabel, probe, download, cancel, retry, remove, questionLabel, ask, stop, progress, badge, answer, log);
   body.appendChild(section);
 
-  let worker = null;
   let modelReady = false;
-  let requestId = 0;
+  let engine = null;
 
   function setStatus(text, stateName) {
     status.textContent = text;
@@ -346,80 +345,45 @@ export function mount(doc, input = {}) {
   consent.addEventListener("change", syncButtons);
   question.addEventListener("input", syncButtons);
 
-  function ensureWorker() {
-    if (worker) return worker;
-    worker = new view.Worker(new URL("./local-ai-worker.js", import.meta.url), { type: "module" });
-    worker.addEventListener("message", (event) => {
-      const message = event.data ?? {};
-      if (message.type === "progress") {
-        const item = message.progress ?? {};
-        const percent = item.progress == null ? "" : ` ${Math.round(item.progress)} %`;
-        progress.textContent = `Descarga: ${item.status}${item.file ? " " + item.file : ""}${percent}`;
-        setStatus("Descargando el modelo en este navegador.", "downloading");
-      } else if (message.type === "ready") {
-        modelReady = true;
-        cancel.disabled = true;
-        retry.disabled = true;
-        syncButtons();
-        setStatus("Modelo cargado en este navegador. Puedes preguntar. No está comprobado el uso sin red.", "ready");
-        progress.textContent = "";
-      } else if (message.type === "chunk") {
-        answer.dataset.source = "device";
-        badge.textContent = labelFor("device");
-        answer.textContent += message.chunk ?? "";
-      } else if (message.type === "result") {
-        stop.disabled = true;
-        ask.disabled = false;
-        if (message.ok && message.source === "device") {
-          showAnswer("device", message.text);
-          const turn = doc.createElement("article");
-          turn.dataset.source = "device";
-          const asked = doc.createElement("p");
-          asked.textContent = "Pregunta: " + question.value.trim();
-          const mark = doc.createElement("p");
-          mark.className = "azum-local-badge";
-          mark.textContent = labelFor("device");
-          const said = doc.createElement("p");
-          said.textContent = message.text;
-          turn.append(asked, mark, said);
-          log.appendChild(turn);
-          setStatus("Respuesta generada en este navegador.", "ready");
-        } else if (message.code === "stopped") {
-          showAnswer("none", statusText("stopped"));
-          setStatus(statusText("stopped"), "ready");
-        } else {
-          showAnswer("none", statusText(message.code || "engine-failed"));
-          setStatus(statusText(message.code || "engine-failed"), "error");
-          retry.disabled = false;
-        }
-      } else if (message.type === "error") {
-        modelReady = false;
-        cancel.disabled = true;
-        retry.disabled = false;
-        syncButtons();
-        showAnswer("none", statusText("engine-failed"));
-        setStatus(`No se pudo cargar el modelo. ${message.message ?? ""}`.trim(), "error");
-      }
-    });
-    worker.addEventListener("error", () => {
-      modelReady = false;
-      retry.disabled = false;
-      cancel.disabled = true;
-      syncButtons();
-      showAnswer("none", statusText("engine-failed"));
-      setStatus("El motor del navegador falló. No hay una respuesta inventada.", "error");
-    });
-    return worker;
+  function remember(text) {
+    const turn = doc.createElement("article");
+    turn.dataset.source = "device";
+    const asked = doc.createElement("p");
+    asked.textContent = "Pregunta: " + question.value.trim();
+    const mark = doc.createElement("p");
+    mark.className = "azum-local-badge";
+    mark.textContent = labelFor("device");
+    const said = doc.createElement("p");
+    said.textContent = text;
+    turn.append(asked, mark, said);
+    log.appendChild(turn);
+  }
+
+  async function engineApi() {
+    if (!engine) engine = await import("./local-ai-engine.js");
+    return engine;
   }
 
   async function prepareIsolation() {
-    if (view.crossOriginIsolated) return "ready";
-    if (!view.navigator?.serviceWorker) return "unavailable";
-    try {
-      await view.navigator.serviceWorker.register(new URL("./coi-serviceworker.js", import.meta.url));
-    } catch {
-      return "unavailable";
+    const serviceWorker = view.navigator?.serviceWorker;
+    if (serviceWorker) {
+      try {
+        await serviceWorker.register(new URL("./coi-serviceworker.js", import.meta.url));
+        if (!serviceWorker.controller) {
+          await new Promise((resolve) => {
+            const timer = setTimeout(resolve, 4000);
+            serviceWorker.addEventListener("controllerchange", () => {
+              clearTimeout(timer);
+              resolve();
+            }, { once: true });
+          });
+        }
+      } catch {
+        if (!view.crossOriginIsolated) return "unavailable";
+      }
     }
+    if (view.crossOriginIsolated) return "ready";
+    if (!serviceWorker) return "unavailable";
     if (!view.sessionStorage.getItem("azum-coi-reload")) {
       view.sessionStorage.setItem("azum-coi-reload", "1");
       view.location.reload();
@@ -457,12 +421,31 @@ export function mount(doc, input = {}) {
     retry.disabled = true;
     showAnswer("none", "");
     setStatus("Descargando y cargando el modelo en este navegador.", "downloading");
-    ensureWorker().postMessage({ type: "load" });
+    try {
+      const api = await engineApi();
+      await api.load((item) => {
+        const percent = item.progress == null ? "" : ` ${Math.round(item.progress)} %`;
+        progress.textContent = `Descarga: ${item.status}${item.file ? " " + item.file : ""}${percent}`;
+      });
+      modelReady = true;
+      cancel.disabled = true;
+      retry.disabled = true;
+      syncButtons();
+      progress.textContent = "";
+      setStatus("Modelo cargado en este navegador. Puedes preguntar.", "ready");
+    } catch (error) {
+      modelReady = false;
+      cancel.disabled = true;
+      retry.disabled = false;
+      syncButtons();
+      showAnswer("none", statusText("engine-failed"));
+      setStatus(`No se pudo cargar el modelo. ${String(error?.message ?? error).slice(0, 300)}`, "error");
+    }
   });
 
   cancel.addEventListener("click", async () => {
-    worker?.terminate();
-    worker = null;
+    engine?.unload?.();
+    engine = null;
     modelReady = false;
     cancel.disabled = true;
     await removeOwnModel(view.caches);
@@ -473,33 +456,50 @@ export function mount(doc, input = {}) {
 
   retry.addEventListener("click", () => {
     if (!consent.checked) return;
-    worker?.terminate();
-    worker = null;
+    engine?.unload?.();
+    engine = null;
     modelReady = false;
     download.click();
   });
 
-  ask.addEventListener("click", () => {
+  ask.addEventListener("click", async () => {
     const text = question.value.trim();
-    if (!text || !modelReady) return;
-    requestId += 1;
+    if (!text || !modelReady || !engine) return;
     stop.disabled = false;
     ask.disabled = true;
     showAnswer("device", "");
-    setStatus("Generando en este navegador.", "generating");
-    ensureWorker().postMessage({ type: "generate", id: requestId, text });
+    setStatus("Generando en este navegador. El cálculo pesado va en el worker del motor.", "generating");
+    try {
+      const generated = await engine.ask(text, (chunk) => {
+        answer.dataset.source = "device";
+        badge.textContent = labelFor("device");
+        answer.textContent += chunk;
+      });
+      showAnswer("device", generated);
+      remember(generated);
+      stop.disabled = true;
+      ask.disabled = false;
+      setStatus("Respuesta generada en este navegador.", "ready");
+    } catch (error) {
+      stop.disabled = true;
+      ask.disabled = false;
+      const stopped = String(error?.message ?? error).includes("stopped");
+      showAnswer("none", statusText(stopped ? "stopped" : "engine-failed"));
+      setStatus(statusText(stopped ? "stopped" : "engine-failed"), stopped ? "ready" : "error");
+      if (!stopped) retry.disabled = false;
+    }
   });
 
   stop.addEventListener("click", () => {
-    worker?.postMessage({ type: "stop" });
+    engine?.requestStop?.();
     stop.disabled = true;
     setStatus("Parando la generación.", "generating");
   });
 
   remove.addEventListener("click", async () => {
-    worker?.postMessage({ type: "reset" });
-    worker?.terminate();
-    worker = null;
+    engine?.resetHistory?.();
+    engine?.unload?.();
+    engine = null;
     modelReady = false;
     const outcome = await removeOwnModel(view.caches);
     syncButtons();
