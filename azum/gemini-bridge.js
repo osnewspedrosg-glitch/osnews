@@ -28,6 +28,9 @@ export function buildTurnBody({ role, text, history, consent }) {
   };
 }
 
+export const BUDGET_NOTICE =
+  "Tope local de este puente: 30,00 EUR por mes natural de Madrid. El máximo configurable es 30,00 EUR y solo puede bajarse. Cada llamada se reserva al precio de pago de gemini-2.5-flash: 0,30 USD por millón de tokens de entrada y 2,50 USD por millón de tokens de salida, pensamiento incluido. El puente cuenta 1 USD como 1 EUR y suma un 21 % de margen. Reserva hasta 512 tokens de salida y 1024 de pensamiento antes de llamar. No es un tope de la factura de Google, ni de otras claves, ni de otros proyectos, ni del hosting, ni del IVA real, ni del tipo de cambio del día. El modo de pago sigue apagado.";
+
 export function badgeFor(source) {
   if (source === "gemini-free-tier") {
     return "Texto recibido desde la API de Gemini con el modelo gratuito configurado. Esta pantalla no ha verificado la facturación de la cuenta.";
@@ -71,10 +74,12 @@ export function mount(doc, options = {}) {
     "La demostración local (Leer en local) no cambia y no envía el texto.",
     "Una suscripción de consumo Gemini Plus no es crédito de la API.",
     "Pagos, Money Bank y planes de suscripción siguen desconectados.",
+    BUDGET_NOTICE,
     "Si quien usa el puente está en el EEE, Suiza o el Reino Unido, las condiciones de la API solo permiten Paid Services para ese uso. Este puente no activa facturación y por eso se queda cerrado.",
   ]) {
     const p = doc.createElement("p");
     p.textContent = line;
+    if (line === BUDGET_NOTICE) p.dataset.budgetNotice = "true";
     section.appendChild(p);
   }
 
@@ -148,8 +153,10 @@ export function mount(doc, options = {}) {
       const status = await response.json();
       const allowed = status?.callAllowed === true && status?.mode === "free" && status?.freeTierConfirmed === true && status?.verifiedAccount === false;
       state.dataset.state = allowed ? "ready" : status?.mode === "mock" ? "mock" : "closed";
+      const budgetLine = section.querySelector("[data-budget-notice]");
+      if (budgetLine && status?.budget?.notice) budgetLine.textContent = status.budget.notice;
       state.textContent = allowed
-        ? "El puente local permite llamar a gemini-2.5-flash. La cuenta de Google no está verificada desde aquí. No hay plan de pago."
+        ? "El puente local permite llamar a gemini-2.5-flash. La cuenta de Google no está verificada desde aquí. No hay plan de pago. El tope local no es la factura de Google."
         : status?.mode === "mock"
           ? "Simulación del puente. No se llama a Gemini."
           : "El puente responde, pero la llamada a Gemini sigue cerrada. " + (status?.reasons || []).join(", ");

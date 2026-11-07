@@ -26,6 +26,18 @@ export function buildGeminiRequest({ model = FREE_MODEL, system, contents }) {
   };
 }
 
+export function readUsage(parsed) {
+  const usage = parsed?.usageMetadata;
+  if (!usage || typeof usage !== "object") return null;
+  const fields = ["promptTokenCount", "candidatesTokenCount", "thoughtsTokenCount"];
+  if (!fields.every((field) => Number.isInteger(usage[field]) && usage[field] >= 0)) return null;
+  return {
+    inputTokens: usage.promptTokenCount,
+    outputTokens: usage.candidatesTokenCount,
+    thinkingTokens: usage.thoughtsTokenCount,
+  };
+}
+
 export function classifyUpstream(status, bodyText) {
   const body = String(bodyText ?? "");
   if (status === 429 || /RESOURCE_EXHAUSTED/.test(body)) return "gemini_quota";
@@ -53,22 +65,24 @@ export async function generateTurn({ fetchImpl, apiKey, model, system, contents,
       signal: controller.signal,
     });
     const raw = await response.text();
-    if (!response.ok) {
-      return { ok: false, code: classifyUpstream(response.status, raw), upstreamStatus: response.status };
-    }
-    let parsed;
+    let parsed = null;
     try {
       parsed = JSON.parse(raw);
     } catch {
-      return { ok: false, code: "gemini_error", upstreamStatus: response.status };
+      parsed = null;
     }
+    const usage = readUsage(parsed);
+    if (!response.ok) {
+      return { ok: false, code: classifyUpstream(response.status, raw), upstreamStatus: response.status, usage };
+    }
+    if (!parsed) return { ok: false, code: "gemini_error", upstreamStatus: response.status, usage: null };
     if (parsed?.promptFeedback?.blockReason) {
-      return { ok: false, code: "gemini_blocked", upstreamStatus: response.status };
+      return { ok: false, code: "gemini_blocked", upstreamStatus: response.status, usage };
     }
     const parts = parsed?.candidates?.[0]?.content?.parts ?? [];
     const text = parts.map((part) => part?.text ?? "").join("").trim();
-    if (!text) return { ok: false, code: "gemini_empty", upstreamStatus: response.status };
-    return { ok: true, code: "ok", text: text.slice(0, 4000), upstreamStatus: response.status };
+    if (!text) return { ok: false, code: "gemini_empty", upstreamStatus: response.status, usage };
+    return { ok: true, code: "ok", text: text.slice(0, 4000), upstreamStatus: response.status, usage };
   } catch (error) {
     if (error?.name === "AbortError") return { ok: false, code: "gemini_timeout" };
     return { ok: false, code: "gemini_error" };

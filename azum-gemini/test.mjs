@@ -1,13 +1,23 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { evaluatePolicy, publicStatus, FREE_MODEL } from "./policy.js";
 import { buildGeminiRequest, classifyUpstream, generateTurn } from "./gemini-client.js";
 import { classifyTurn } from "./safety.js";
 import { createAzumGeminiServer } from "./server.js";
-import { badgeFor, buildTurnBody, isLoopbackHost, panelModel } from "../azum/gemini-bridge.js";
+import { badgeFor, BUDGET_NOTICE, buildTurnBody, isLoopbackHost, panelModel } from "../azum/gemini-bridge.js";
+import {
+  estimateReservationMicros,
+  eurMicrosForTokens,
+  periodKey,
+  readBudget,
+  reserveBudget,
+  settleBudget,
+  USER_FACING_LIMIT,
+} from "./budget.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const GATE = "loopback-gate-secret";
@@ -23,6 +33,11 @@ function freeEnv(overrides = {}) {
     AZUM_GATE_SECRET: GATE,
     GEMINI_MODEL: FREE_MODEL,
     AZUM_BIND: "127.0.0.1",
+    AZUM_MONTHLY_BUDGET_EUR: "30",
+    AZUM_BUDGET_LEDGER: path.join(
+      os.tmpdir(),
+      `azum-budget-${process.pid}-${Date.now()}-${Math.random().toString(16).slice(2)}.json`
+    ),
     ...overrides,
   };
 }
@@ -357,6 +372,165 @@ test("static Azum is served from loopback and the bridge source is not", async (
     assert.equal(outside.status, 404);
     const foreign = await fetch(`${ctx.base}/api/azum/gemini/status`, { headers: { origin: "https://example.com" } });
     assert.equal(foreign.status, 403);
+  } finally {
+    await ctx.close();
+  }
+});
+
+test("the nominal cap is 30 EUR and cannot be raised, and paid mode stays pending", () => {
+  assert.equal(BUDGET_NOTICE, USER_FACING_LIMIT);
+  assert.match(USER_FACING_LIMIT, /30,00 EUR/);
+  assert.match(USER_FACING_LIMIT, /No es un tope de la factura de Google/);
+  const ready = evaluatePolicy(freeEnv());
+  assert.equal(ready.live, true);
+  assert.equal(ready.paidMode, "disabled");
+  assert.equal(ready.accountWideHardEurCap, false);
+  assert.equal(publicStatus(ready).budget.guaranteesInvoice, false);
+  assert.equal(publicStatus(ready).budget.includesHosting, false);
+  assert.equal(evaluatePolicy(freeEnv({ AZUM_MONTHLY_BUDGET_EUR: "30.01" })).live, false);
+  assert.ok(evaluatePolicy(freeEnv({ AZUM_MONTHLY_BUDGET_EUR: "31" })).reasons.includes("budget-above-nominal-30"));
+  assert.equal(evaluatePolicy(freeEnv({ AZUM_MONTHLY_BUDGET_EUR: "10" })).live, true);
+  assert.equal(evaluatePolicy(freeEnv({ AZUM_BUDGET_LEDGER: "" })).live, false);
+  const paid = evaluatePolicy(freeEnv({ AZUM_GEMINI_MODE: "paid", AZUM_PAID_SETUP_APPROVED: "yes", AZUM_SPEND_CONTROLS_CONFIRMED: "yes" }));
+  assert.equal(paid.live, false);
+  assert.equal(paid.paidActivation, "pending");
+  assert.ok(paid.reasons.includes("paid-activation-pending"));
+  assert.equal(evaluatePolicy(freeEnv({ AZUM_PAID_MODE: "yes" })).live, false);
+});
+
+test("token cost rounds up and includes thinking at the output price", () => {
+  assert.equal(eurMicrosForTokens({ inputTokens: 1_000_000, outputTokens: 0, thinkingTokens: 0 }), 363_000n);
+  assert.equal(
+    eurMicrosForTokens({ inputTokens: 0, outputTokens: 512, thinkingTokens: 1024 }),
+    eurMicrosForTokens({ inputTokens: 0, outputTokens: 1536, thinkingTokens: 0 })
+  );
+  const estimate = estimateReservationMicros({
+    system: "a".repeat(10),
+    contents: [{ parts: [{ text: "hola" }] }],
+  });
+  assert.ok(estimate > 0n);
+  assert.ok(estimate < 30_000_000n);
+});
+
+test("parallel reservations cannot pass the cap, and a failed call keeps the hold", async () => {
+  const file = path.join(os.tmpdir(), `azum-budget-race-${Date.now()}.json`);
+  const cap = 5_000_000n;
+  const results = await Promise.all(
+    Array.from({ length: 8 }, () =>
+      reserveBudget({ file, capMicros: cap, amountMicros: 1_000_000n }).then(
+        (value) => value,
+        (error) => error
+      )
+    )
+  );
+  const ok = results.filter((item) => item?.id);
+  const denied = results.filter((item) => item?.code === "local-budget-reached");
+  assert.equal(ok.length, 5);
+  assert.equal(denied.length, 3);
+  await settleBudget({ file, capMicros: cap, id: ok[0].id, usage: null });
+  const after = await readBudget(file, cap);
+  assert.equal(after.countedEurMicros, "5000000");
+  await assert.rejects(
+    reserveBudget({ file, capMicros: cap, amountMicros: 1n }),
+    (error) => error.code === "local-budget-reached"
+  );
+});
+
+test("known usage can settle below the reservation, and the next month starts clear", async () => {
+  const file = path.join(os.tmpdir(), `azum-budget-month-${Date.now()}.json`);
+  let current = new Date("2026-11-07T12:00:00Z");
+  const now = () => current;
+  const cap = 30_000_000n;
+  const held = await reserveBudget({ file, capMicros: cap, amountMicros: 10_000n, now });
+  await settleBudget({
+    file,
+    capMicros: cap,
+    id: held.id,
+    usage: { inputTokens: 1000, outputTokens: 10, thinkingTokens: 0 },
+    now,
+  });
+  const november = await readBudget(file, cap, now);
+  assert.ok(BigInt(november.countedEurMicros) < 10_000n);
+  assert.ok(BigInt(november.countedEurMicros) > 0n);
+  current = new Date("2026-12-07T12:00:00Z");
+  const december = await readBudget(file, cap, now);
+  assert.equal(december.period, periodKey(current));
+  assert.equal(december.countedEurMicros, "0");
+});
+
+test("a full or corrupt ledger blocks the upstream call", async () => {
+  let calls = 0;
+  const fetchImpl = async () => {
+    calls += 1;
+    return new Response("no");
+  };
+  const fullEnv = freeEnv();
+  fs.mkdirSync(path.dirname(fullEnv.AZUM_BUDGET_LEDGER), { recursive: true });
+  fs.writeFileSync(
+    fullEnv.AZUM_BUDGET_LEDGER,
+    JSON.stringify({
+      version: 1,
+      period: periodKey(new Date()),
+      timezone: "Europe/Madrid",
+      history: [],
+      entries: [
+        {
+          id: "full",
+          at: new Date().toISOString(),
+          reservedEurMicros: "30000000",
+          state: "kept",
+          settledEurMicros: "30000000",
+        },
+      ],
+    })
+  );
+  const corruptEnv = freeEnv();
+  fs.mkdirSync(path.dirname(corruptEnv.AZUM_BUDGET_LEDGER), { recursive: true });
+  fs.writeFileSync(corruptEnv.AZUM_BUDGET_LEDGER, "{");
+  const full = await listen({ env: fullEnv, fetchImpl });
+  const corrupt = await listen({ env: corruptEnv, fetchImpl });
+  try {
+    const fullBody = await (await turn(full.base, { text: "hola" })).json();
+    assert.equal(fullBody.code, "local_budget_reached");
+    assert.match(fullBody.text, /no frena la factura de Google/);
+    assert.equal(fullBody.accountWideHardEurCap, false);
+    const corruptBody = await (await turn(corrupt.base, { text: "hola" })).json();
+    assert.equal(corruptBody.code, "budget_unavailable");
+    assert.equal(calls, 0);
+    const status = await (await fetch(`${full.base}/api/azum/gemini/status`)).json();
+    assert.equal(status.budget.guaranteesInvoice, false);
+    assert.equal(status.budget.countedEurMicros, "30000000");
+    assert.equal(status.paidMode, "disabled");
+    assert.equal(JSON.stringify(status).includes(KEY), false);
+  } finally {
+    await full.close();
+    await corrupt.close();
+  }
+});
+
+test("a successful mock of usage settles the ledger and does not call a second model", async () => {
+  const env = freeEnv();
+  const calls = [];
+  const ctx = await listen({
+    env,
+    fetchImpl: async (url) => {
+      calls.push(url);
+      return new Response(
+        JSON.stringify({
+          candidates: [{ content: { parts: [{ text: "vale" }] } }],
+          usageMetadata: { promptTokenCount: 20, candidatesTokenCount: 5, thoughtsTokenCount: 0 },
+        }),
+        { status: 200 }
+      );
+    },
+  });
+  try {
+    const payload = await (await turn(ctx.base, { text: "hola" })).json();
+    assert.equal(payload.ok, true);
+    assert.equal(calls.length, 1);
+    const snap = await readBudget(env.AZUM_BUDGET_LEDGER, 30_000_000n);
+    assert.ok(BigInt(snap.countedEurMicros) > 0n);
+    assert.ok(BigInt(snap.countedEurMicros) < estimateReservationMicros({ system: "x", contents: [] }));
   } finally {
     await ctx.close();
   }

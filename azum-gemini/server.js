@@ -4,6 +4,7 @@ import path from "node:path";
 import { timingSafeEqual } from "node:crypto";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { evaluatePolicy, publicStatus } from "./policy.js";
+import { estimateReservationMicros, readBudget, reserveBudget, settleBudget } from "./budget.js";
 import { roleById, systemInstruction } from "./roles.js";
 import { classifyTurn, localSafetyReply } from "./safety.js";
 import { generateTurn } from "./gemini-client.js";
@@ -32,6 +33,9 @@ const MESSAGES = {
   gemini_blocked: "Gemini bloqueó la respuesta con sus filtros. No se reintenta.",
   gemini_empty: "Gemini no devolvió texto. No se reintenta con otro modelo.",
   gemini_error: "Gemini no completó la llamada. No se reintenta con otro modelo ni con un plan de pago.",
+  local_budget_reached:
+    "Este puente ha llegado a su tope local del mes. No llama a Gemini. Ese tope es solo de este proceso: no frena la factura de Google, otras claves ni otros proyectos.",
+  budget_unavailable: "El puente no puede comprobar su contabilidad local, así que no llama a Gemini.",
   internal: "El puente no pudo completar la petición. La demostración local sigue disponible.",
 };
 
@@ -201,7 +205,17 @@ export function createAzumGeminiServer(options = {}) {
 
     if (req.method === "GET" && url.pathname === "/api/azum/gemini/status") {
       emit({ event: "status", mode: policy.mode, live: policy.live });
-      sendJson(res, 200, publicStatus(policy));
+      const body = publicStatus(policy);
+      if (policy.ledgerPath && policy.capEurMicros != null) {
+        try {
+          body.budget = await readBudget(policy.ledgerPath, policy.capEurMicros, options.now);
+          if (BigInt(body.budget.remainingEurMicros) <= 0n) body.callAllowed = false;
+        } catch {
+          body.budget = { ...body.budget, readable: false, countedEur: null, remainingEur: null };
+          body.callAllowed = false;
+        }
+      }
+      sendJson(res, 200, body);
       return;
     }
 
@@ -395,14 +409,56 @@ export function createAzumGeminiServer(options = {}) {
     }
 
     const contents = history.concat([{ role: "user", parts: [{ text }] }]);
-    const result = await generateTurn({
-      fetchImpl,
-      apiKey,
-      model: policy.model,
-      system: systemInstruction(role),
-      contents,
-      timeoutMs: policy.timeoutMs,
-    });
+    const system = systemInstruction(role);
+    const reservationMicros = estimateReservationMicros({ system, contents });
+    let reservation;
+    try {
+      reservation = await reserveBudget({
+        file: policy.ledgerPath,
+        capMicros: policy.capEurMicros,
+        amountMicros: reservationMicros,
+        now: options.now,
+      });
+    } catch (error) {
+      const reached = error?.code === "local-budget-reached";
+      emit({ event: "turn", code: reached ? "local-budget-reached" : "budget-unavailable" });
+      sendJson(res, 403, {
+        ok: false,
+        code: reached ? "local_budget_reached" : "budget_unavailable",
+        text: reached ? MESSAGES.local_budget_reached : MESSAGES.budget_unavailable,
+        live: false,
+        transmitted: false,
+        source: "local-policy",
+        paidFallback: false,
+        accountWideHardEurCap: false,
+      });
+      return;
+    }
+
+    let result;
+    try {
+      result = await generateTurn({
+        fetchImpl,
+        apiKey,
+        model: policy.model,
+        system,
+        contents,
+        timeoutMs: policy.timeoutMs,
+      });
+    } catch {
+      result = { ok: false, code: "gemini_error", usage: null };
+    }
+    try {
+      await settleBudget({
+        file: policy.ledgerPath,
+        capMicros: policy.capEurMicros,
+        id: reservation.id,
+        usage: result.usage ?? null,
+        now: options.now,
+      });
+    } catch {
+      emit({ event: "turn", code: "budget-settle-failed" });
+    }
     emit({ event: "turn", code: result.code, upstreamStatus: result.upstreamStatus ?? null, role: role.id });
 
     if (!result.ok) {

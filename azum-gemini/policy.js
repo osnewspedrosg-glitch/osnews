@@ -1,3 +1,5 @@
+import { budgetTerms, parseCapEurMicros } from "./budget.js";
+
 /**
  * Gates for a personal, no-cost Gemini call.
  * The live path stays closed unless every free-tier condition is explicit.
@@ -72,11 +74,20 @@ export function evaluatePolicy(env = {}) {
   const region = String(env.AZUM_OPERATOR_REGION ?? "").trim().toLowerCase();
   const key = String(env.GEMINI_API_KEY ?? "");
   const gate = String(env.AZUM_GATE_SECRET ?? "");
+  const cap = parseCapEurMicros(env.AZUM_MONTHLY_BUDGET_EUR);
+  const ledgerPath = String(env.AZUM_BUDGET_LEDGER ?? "").trim();
+  const paidRequested =
+    requestedMode === "paid" ||
+    truthyPaid(env.AZUM_PAID_MODE) ||
+    truthyPaid(env.AZUM_PAID_SETUP_APPROVED) ||
+    truthyPaid(env.AZUM_SPEND_CONTROLS_CONFIRMED);
   const reasons = [];
 
   if (!["127.0.0.1", "::1"].includes(requestedBind)) reasons.push("public-bind-forbidden");
   if (model !== FREE_MODEL) reasons.push("model-not-on-free-allowlist");
   if (truthyPaid(env.AZUM_ALLOW_PAID)) reasons.push("paid-fallback-forbidden");
+  if (paidRequested) reasons.push("paid-activation-pending");
+  if (!cap.ok) reasons.push(cap.reason);
 
   const base = {
     bind,
@@ -90,6 +101,11 @@ export function evaluatePolicy(env = {}) {
     rpm: clampLimit(env.AZUM_RPM, 5, 1, 10),
     rpd: clampLimit(env.AZUM_RPD, 30, 1, 50),
     timeoutMs: clampLimit(env.AZUM_UPSTREAM_TIMEOUT_MS, 15000, 200, 20000),
+    capEurMicros: cap.ok ? cap.micros : null,
+    ledgerPath,
+    paidMode: "disabled",
+    paidActivation: "pending",
+    accountWideHardEurCap: false,
   };
 
   if (requestedMode === "mock") {
@@ -103,9 +119,17 @@ export function evaluatePolicy(env = {}) {
   }
 
   if (requestedMode !== "free") {
-    reasons.push(requestedMode === "closed" || requestedMode === "" ? "mode-closed" : "unknown-mode");
+    reasons.push(
+      requestedMode === "closed" || requestedMode === ""
+        ? "mode-closed"
+        : requestedMode === "paid"
+          ? "paid-mode-disabled"
+          : "unknown-mode"
+    );
     return { ...base, ok: false, mode: "closed", live: false, reasons };
   }
+
+  if (!ledgerPath) reasons.push("budget-ledger-required");
 
   if (!key.trim()) reasons.push("missing-api-key");
   if (confirmed !== "yes") reasons.push("free-tier-not-confirmed");
@@ -137,7 +161,11 @@ export function publicStatus(policy) {
     freeTierConfirmed: policy.freeTierConfirmed === true,
     billingLinked: policy.billingLinked === true,
     paidFallback: false,
+    paidMode: "disabled",
+    paidActivation: "pending",
+    accountWideHardEurCap: false,
     chatStored: false,
     reasons: policy.reasons,
+    budget: budgetTerms(policy.capEurMicros ?? 30_000_000n),
   };
 }
