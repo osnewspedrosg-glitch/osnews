@@ -81,9 +81,27 @@ export function requirementsText() {
 
 export function labelFor(source) {
   if (source === "device") return "IA local del navegador. Texto generado ahora en este aparato.";
+  if (source === "app-rule") return "Regla de la aplicación. No es texto nuevo del modelo.";
   if (source === "mock") return "Simulación de prueba. No es una respuesta del modelo.";
   if (source === "rules") return "Motor de reglas. No es IA.";
   return "No hay respuesta de IA.";
+}
+
+function foldQuestion(text) {
+  return String(text ?? "")
+    .normalize("NFD")
+    .replace(/\p{M}/gu, "")
+    .toLowerCase();
+}
+
+export function identityReply(text) {
+  const folded = foldQuestion(text);
+  const aboutIdentity =
+    /\b(como te llamas|tu nombre|quien eres|que eres)\b/.test(folded) ||
+    /\b(eres humano|eres una persona|eres persona|eres gente)\b/.test(folded) ||
+    /\b(eres grok|eres gemini|eres chatgpt|eres copilot)\b/.test(folded);
+  if (!aboutIdentity) return null;
+  return "Soy Azum, la IA local de esta página. No soy una persona ni Grok.";
 }
 
 export function assessDevice(input = {}) {
@@ -342,20 +360,20 @@ export function mount(doc, input = {}) {
   }
 
   function syncButtons() {
-    ask.disabled = !(modelReady && question.value.trim());
+    ask.disabled = !question.value.trim();
   }
 
   consent.addEventListener("change", syncButtons);
   question.addEventListener("input", syncButtons);
 
-  function remember(text) {
+  function remember(source, text) {
     const turn = doc.createElement("article");
-    turn.dataset.source = "device";
+    turn.dataset.source = source;
     const asked = doc.createElement("p");
     asked.textContent = "Pregunta: " + question.value.trim();
     const mark = doc.createElement("p");
     mark.className = "azum-local-badge";
-    mark.textContent = labelFor("device");
+    mark.textContent = labelFor(source);
     const said = doc.createElement("p");
     said.textContent = text;
     turn.append(asked, mark, said);
@@ -488,8 +506,20 @@ export function mount(doc, input = {}) {
 
   ask.addEventListener("click", async () => {
     const text = question.value.trim();
-    if (!text || !modelReady || !engine) {
-      setStatus(modelReady ? "Escribe una pregunta." : "El modelo todavía no está cargado.", "error");
+    if (!text) {
+      setStatus("Escribe una pregunta.", "error");
+      return;
+    }
+    const ruled = identityReply(text);
+    if (ruled) {
+      showAnswer("app-rule", ruled);
+      remember("app-rule", ruled);
+      ask.disabled = false;
+      setStatus("Esta frase es una regla de la aplicación. El modelo no la ha escrito.", "ready");
+      return;
+    }
+    if (!modelReady || !engine) {
+      setStatus("El modelo todavía no está cargado.", "error");
       return;
     }
     stop.disabled = false;
@@ -503,7 +533,7 @@ export function mount(doc, input = {}) {
         answer.textContent += chunk;
       });
       showAnswer("device", generated);
-      remember(generated);
+      remember("device", generated);
       stop.disabled = true;
       ask.disabled = false;
       setStatus("Respuesta generada en este navegador.", "ready");
