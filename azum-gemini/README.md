@@ -1,5 +1,7 @@
 # Azum · puente Gemini (cerrado por defecto)
 
+La vía nueva para no gastar es la IA en el propio aparato, descrita en la página (`azum/local-ai.js`). Esta copia no descarga el modelo ni lo ejecuta en el navegador. El puente Gemini de abajo sigue cerrado y no sustituye a esa vía.
+
 Este directorio es el puente personal de Azum hacia la API de Gemini. La página publicada en GitHub Pages sigue siendo la demostración local de trece papeles. No llama a Gemini.
 
 El puente no está conectado a una cuenta real en este repositorio. `connected` y `verifiedAccount` se quedan en `false`. Una prueba con simulación o con un sustituto de red no demuestra que la cuota gratuita esté activa.

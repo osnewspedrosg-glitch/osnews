@@ -217,7 +217,8 @@ if (typeof document !== "undefined") {
   const start = () => mount(document);
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
   else start();
-  window.addEventListener("load", () => {
+  const observer = new MutationObserver(() => {
     if (!document.getElementById(STYLE_NOTE)) start();
   });
+  observer.observe(document.body, { childList: true, subtree: true });
 }
