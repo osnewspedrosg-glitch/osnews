@@ -24,6 +24,7 @@ const KNOWN_FILES = [
 let generator = null;
 let loading = null;
 let stopRequested = false;
+export const SYSTEM_PROMPT = "Eres Azum, la IA de esta página.";
 
 function summarizeProgress(update) {
   if (!update || typeof update !== "object") return { status: "progress" };
@@ -105,8 +106,9 @@ export async function ask(text, onChunk) {
   const prompt = String(text ?? "").trim().slice(0, MAX_PROMPT_CHARS);
   if (!prompt) throw Object.assign(new Error("empty"), { code: "empty-generation" });
   stopRequested = false;
+  // Prior replies are not sent back: on this model they were copied into the next answer.
   const messages = [
-    { role: "system", content: "Responde en español y en una sola frase. Si la pregunta ofrece dos opciones, di cuál es." },
+    { role: "system", content: SYSTEM_PROMPT },
     { role: "user", content: prompt },
   ];
   const { TextStreamer } = await import(RUNTIME_URL);
@@ -117,7 +119,11 @@ export async function ask(text, onChunk) {
       if (chunk) onChunk?.(String(chunk).slice(0, 200));
     },
   });
-  const output = await generator(messages, { max_new_tokens: MAX_NEW_TOKENS, do_sample: false, streamer });
+  const output = await generator(messages, {
+    max_new_tokens: MAX_NEW_TOKENS,
+    do_sample: false,
+    streamer,
+  });
   const textOut = assistantText(output);
   if (!textOut) throw Object.assign(new Error("empty"), { code: "empty-generation" });
   return textOut;

@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { SYSTEM_PROMPT } from "./local-ai-engine.js";
 import {
   CACHE_NAME,
   GGUF_BYTES,
@@ -167,6 +168,11 @@ test("failed or empty generation never fabricates an answer", async () => {
   assert.equal(empty.text, null);
 });
 
+test("the system line is a persona, not the instruction the tablet quoted", () => {
+  assert.equal(SYSTEM_PROMPT, "Eres Azum, la IA de esta página.");
+  assert.doesNotMatch(SYSTEM_PROMPT, /di cuál es|dos opciones|Responde en español|Me llamo Ana/);
+});
+
 test("name and human questions use a labeled app rule, other questions do not", () => {
   const ruled = identityReply("Hola como te llamas");
   assert.equal(ruled, identityReply("¿Eres humano?"));
@@ -175,6 +181,8 @@ test("name and human questions use a labeled app rule, other questions do not", 
   assert.equal(identityReply("¿Eres Grok?"), ruled);
   assert.equal(identityReply("¿De qué color es el cielo cuando está despejado?"), null);
   assert.equal(identityReply("Por la mañana, ¿se dice buenos días o buenas noches?"), null);
+  assert.equal(identityReply("Me llamo pedro"), null);
+  assert.equal(identityReply("¿Cómo me llamo?"), null);
   assert.notEqual(labelFor("app-rule"), labelFor("device"));
   assert.match(labelFor("app-rule"), /No es texto nuevo del modelo/);
 });
