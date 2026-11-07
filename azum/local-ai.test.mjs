@@ -11,6 +11,7 @@ import {
   downloadModel,
   formatBytes,
   ggufUrl,
+  labelFor,
   panelState,
   probeWebGpu,
   removeOwnModel,
@@ -31,26 +32,32 @@ test("the published plan names the Apache model and the measured file sizes", ()
   assert.match(text, /no medida/);
   assert.match(text, /6 GB virtuales/);
   assert.match(text, /No borres nada/);
-  assert.match(text, /no descarga el modelo/);
+  assert.match(text, /no empieza sola/);
   assert.equal(formatBytes(WASM_BUNDLE_BYTES), "523.587.267");
   assert.equal(MODEL_FILES.length, 10);
   assert.match(ggufUrl(), /qwen2\.5-0\.5b-instruct-q4_k_m\.gguf/);
 });
 
-test("the shipped panel keeps rules, Gemini and payments apart and does not offer a download", () => {
+test("the shipped panel keeps rules, Gemini and payments apart until consent", () => {
   const state = panelState({ webAssembly: true, webgpu: "adapter", deviceMemoryGb: 8 });
   assert.match(state.rulesLabel, /No es IA/);
   assert.equal(state.downloadEnabled, false);
   assert.equal(state.generateEnabled, false);
   assert.equal(state.geminiEnabled, false);
   assert.equal(state.paymentsEnabled, false);
-  assert.equal(state.assessment.runtimeConnected, false);
+  assert.equal(state.assessment.runtimeConnected, true);
+  const consented = panelState({ webAssembly: true, consent: true });
+  assert.equal(consented.downloadEnabled, true);
+  assert.equal(panelState({ webAssembly: false, consent: true }).downloadEnabled, false);
+  assert.equal(labelFor("device").includes("IA local"), true);
+  assert.equal(labelFor("mock").includes("Simulación"), true);
+  assert.notEqual(labelFor("device"), labelFor("rules"));
   assert.equal(state.assessment.tabletTested, false);
   assert.equal(state.assessment.npuUsed, false);
   assert.equal(state.assessment.speedKnown, false);
   assert.equal(state.assessment.virtualRamCounted, false);
   assert.equal(state.assessment.deviceMemoryIsPhysical, false);
-  assert.match(state.status, /No hay respuesta de IA/);
+  assert.match(state.status, /Todavía no hay una respuesta/);
 });
 
 test("missing WebAssembly is unsupported and 8 GB reported by the browser is not physical RAM", () => {
@@ -60,7 +67,7 @@ test("missing WebAssembly is unsupported and 8 GB reported by the browser is not
   const reported = assessDevice({ webAssembly: true, deviceMemoryGb: 8, webgpu: "unknown" });
   assert.equal(reported.deviceMemoryGb, 8);
   assert.equal(reported.deviceMemoryIsPhysical, false);
-  assert.equal(reported.guidance, "wasm-present-runtime-not-connected");
+  assert.equal(reported.guidance, "wasm-ready");
 });
 
 test("WebGPU probe does not invent an adapter", async () => {
@@ -70,17 +77,23 @@ test("WebGPU probe does not invent an adapter", async () => {
   assert.equal(await probeWebGpu({ requestAdapter: async () => { throw new Error("blocked"); } }), "no-adapter");
 });
 
-test("download stays off without a connected runtime or consent, and never calls fetch", async () => {
+test("download waits for consent and then fetches the model", async () => {
   let calls = 0;
   const fetchImpl = async () => {
     calls += 1;
     return { ok: true };
   };
-  const blocked = await downloadModel({ fetchImpl, consent: true, runtimeConnected: false, cachePut: async () => {} });
-  assert.equal(blocked.code, "runtime-not-connected");
-  const unconsented = await downloadModel({ fetchImpl, consent: false, runtimeConnected: true, cachePut: async () => {} });
-  assert.equal(unconsented.code, "consent-required");
+  const denied = await downloadModel({ fetchImpl, consent: false, cachePut: async () => {} });
+  assert.equal(denied.code, "consent-required");
   assert.equal(calls, 0);
+  const allowed = await downloadModel({
+    fetchImpl,
+    consent: true,
+    files: MODEL_FILES.slice(0, 1),
+    cachePut: async () => {},
+  });
+  assert.equal(allowed.ok, true);
+  assert.equal(calls, 1);
 });
 
 test("a consented mock download reports progress, and cancel removes only its cache", async () => {

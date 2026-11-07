@@ -102,12 +102,19 @@ function safeEqual(left, right) {
   return timingSafeEqual(a, b);
 }
 
+const ISOLATION = {
+  "cross-origin-opener-policy": "same-origin",
+  "cross-origin-embedder-policy": "require-corp",
+  "cross-origin-resource-policy": "same-origin",
+};
+
 function sendJson(res, status, body) {
   const payload = JSON.stringify(body);
   res.writeHead(status, {
     "content-type": "application/json; charset=utf-8",
     "cache-control": "no-store",
     "x-content-type-options": "nosniff",
+    ...ISOLATION,
   });
   res.end(payload);
 }
@@ -198,6 +205,7 @@ export function createAzumGeminiServer(options = {}) {
         "access-control-allow-methods": "GET, POST",
         vary: "Origin",
         "cache-control": "no-store",
+        ...ISOLATION,
       });
       res.end();
       return;
@@ -245,6 +253,7 @@ export function createAzumGeminiServer(options = {}) {
         "content-type": TYPES[path.extname(file).toLowerCase()] ?? "application/octet-stream",
         "cache-control": "no-store",
         "x-content-type-options": "nosniff",
+        ...ISOLATION,
       });
       if (req.method === "HEAD") {
         res.end();

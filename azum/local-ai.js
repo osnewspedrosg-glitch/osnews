@@ -1,8 +1,7 @@
 /**
  * On-device model plan for Azum.
- * The shipped page does not download weights and does not invent an answer.
- * A future runtime may call downloadModel only after consent. This copy keeps
- * runtimeConnected false so a tablet cannot spend data by accident.
+ * The page downloads weights only after a consent checkbox.
+ * Generation runs in a worker. A missing or failed model never invents an answer.
  */
 
 export const CACHE_NAME = "azum-local-ai-qwen2.5-0.5b-uint8";
@@ -32,13 +31,19 @@ export const WASM_FILES = [
 
 export const WASM_MODEL_BYTES = 512_096_636;
 export const WASM_BUNDLE_BYTES = WASM_FILES.reduce((sum, file) => sum + file[1], 0);
+export const RUNTIME_URL = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.3.2/+esm";
+export const MAX_NEW_TOKENS = 48;
+export const MAX_PROMPT_CHARS = 400;
 
 const RULES_LABEL = "La lectura «Leer en local» es un motor de reglas. No es IA.";
 
 const STATUS = {
-  "runtime-not-connected": "No hay respuesta de IA. El motor del navegador no está conectado en esta copia.",
+  "runtime-not-connected": "Marca el consentimiento para descargar el modelo. Todavía no hay una respuesta.",
   "consent-required": "Sin consentimiento no se descarga ni se genera nada.",
   "unsupported-no-wasm": "Este navegador no ofrece WebAssembly. No hay modelo que ejecutar aquí.",
+  "isolation-needed": "El motor necesita una recarga para activar su memoria. La descarga del modelo no ha empezado.",
+  stopped: "Generación parada. No se inventa el resto.",
+  "not-ready": "El modelo todavía no está cargado.",
   cancelled: "Descarga cancelada. Se borra solo la caché de este modelo.",
   "download-failed": "La descarga no se completó. No hay respuesta de IA.",
   "empty-generation": "El motor no devolvió texto. No se inventa una respuesta.",
@@ -70,8 +75,15 @@ export function requirementsText() {
     "Qwen no publica una RAM mínima para esta tablet. Propuesta, no medida: la RAM física libre tendría que superar el archivo, y el punto de partida recomendado es 8 GB físicos. Los 6 GB virtuales de la foto no cuentan; son intercambio y esta página no puede verlos.",
     "La foto describe Lenovo TB336FU, Dimensity 6300, 8 GB físicos, 6 GB virtuales, 256 GB con 162 GB libres y Android 16. MediaTek indica GPU Arm Mali-G57 MC2. Chrome documenta WebGPU en Android 12 o superior con GPU ARM, Qualcomm o Intel. Esta tablet no se ha probado: ni WebGPU, ni la NPU, ni una velocidad.",
     "162 GB libres bastan para el archivo. No borres nada.",
-    "Esta copia no descarga el modelo, no llama a una API de pago, no abre un servidor y no comparte la tablet.",
+    `La descarga no empieza sola. Si marcas el consentimiento, este navegador pide unos ${formatBytes(WASM_BUNDLE_BYTES)} bytes a Hugging Face y el motor Transformers.js 4.3.2 a jsDelivr. Conviene usar Wi-Fi. La pregunta no sale de este aparato. Aún no está comprobado que la visita siguiente funcione sin red.`,
   ].join(" ");
+}
+
+export function labelFor(source) {
+  if (source === "device") return "IA local del navegador. Texto generado ahora en este aparato.";
+  if (source === "mock") return "Simulación de prueba. No es una respuesta del modelo.";
+  if (source === "rules") return "Motor de reglas. No es IA.";
+  return "No hay respuesta de IA.";
 }
 
 export function assessDevice(input = {}) {
@@ -89,9 +101,9 @@ export function assessDevice(input = {}) {
     npuUsed: false,
     speedKnown: false,
     tabletTested: false,
-    runtimeConnected: false,
-    downloadOffered: false,
-    guidance: wasm ? "wasm-present-runtime-not-connected" : "unsupported-no-wasm",
+    runtimeConnected: wasm,
+    downloadOffered: wasm,
+    guidance: wasm ? "wasm-ready" : "unsupported-no-wasm",
   };
 }
 
@@ -115,20 +127,21 @@ export async function probeWebGpu(gpu, timeoutMs = 3000) {
 
 export function panelState(input = {}) {
   const assessment = assessDevice(input);
+  const consent = input.consent === true;
   return {
     rulesLabel: RULES_LABEL,
     requirements: requirementsText(),
-    downloadEnabled: false,
-    generateEnabled: false,
+    downloadEnabled: assessment.wasm && consent && input.modelReady !== true,
+    generateEnabled: input.modelReady === true && input.busy !== true,
     geminiEnabled: false,
     paymentsEnabled: false,
     assessment,
-    status: STATUS["runtime-not-connected"],
+    status: assessment.wasm ? STATUS["runtime-not-connected"] : STATUS["unsupported-no-wasm"],
     manualSteps: [
-      "Abre Azum y usa «Leer en local». Esa lectura es de reglas, no de IA.",
-      "Lee los requisitos de esta sección. No borres archivos: el espacio libre de la foto ya cubre el modelo.",
-      "No pulses una descarga en esta copia: el botón está apagado y no hay respuesta de IA.",
-      "Si más adelante quieres el modelo en la tablet, descarga solo el GGUF oficial de Qwen y compila el ejemplo Android de llama.cpp en tu máquina. Este repositorio no instala nada en la tablet y no la convierte en servidor.",
+      "Abre esta página en Chrome. Si se recarga una vez, es para la memoria del motor, no para bajar el modelo.",
+      "Lee el tamaño, marca el consentimiento y pulsa descargar. Mejor por Wi-Fi. No borres otros archivos.",
+      "Cuando diga que el modelo está cargado, escribe una pregunta. La respuesta marcada como IA local sale de este navegador.",
+      "«Leer en local» sigue siendo el motor de reglas y no es IA. Gemini y los pagos siguen apagados. Esta tablet concreta no está medida.",
     ],
   };
 }
@@ -147,7 +160,6 @@ export async function downloadModel({
   onProgress,
   removePartial,
 }) {
-  if (runtimeConnected !== true) return { ok: false, code: "runtime-not-connected", bytes: 0 };
   if (consent !== true) return { ok: false, code: "consent-required", bytes: 0 };
   const total = files.reduce((sum, file) => sum + file.bytes, 0);
   let loaded = 0;
@@ -217,16 +229,30 @@ function addParagraph(doc, parent, text, className) {
   return p;
 }
 
+function button(doc, id, text) {
+  const element = doc.createElement("button");
+  element.type = "button";
+  element.id = id;
+  element.textContent = text;
+  return element;
+}
+
 export function mount(doc, input = {}) {
   const body = doc.body;
+  const view = doc.defaultView ?? globalThis;
   if (!body) return null;
-  const state = panelState(input);
+  const initial = panelState({
+    webAssembly: typeof view.WebAssembly === "object",
+    webgpu: "unknown",
+    deviceMemoryGb: Number.isFinite(view.navigator?.deviceMemory) ? view.navigator.deviceMemory : null,
+    consent: false,
+  });
   const pill = doc.querySelector?.(".pill");
   if (pill && !doc.getElementById("azum-rules-label")) {
     const note = doc.createElement("p");
     note.id = "azum-rules-label";
     note.className = "azum-rules-label";
-    note.textContent = state.rulesLabel;
+    note.textContent = initial.rulesLabel;
     pill.insertAdjacentElement("afterend", note);
   }
   if (doc.getElementById("azum-local-ai")) return doc.getElementById("azum-local-ai");
@@ -238,62 +264,252 @@ export function mount(doc, input = {}) {
   title.textContent = "IA en este aparato";
   section.appendChild(title);
   addParagraph(doc, section, "Aparte de las reglas y de Gemini. Gemini y los pagos siguen apagados.", "azum-local-kicker");
-  const status = addParagraph(doc, section, state.status, "azum-local-state");
-  status.dataset.state = "off";
-  addParagraph(doc, section, state.requirements);
+  const status = addParagraph(doc, section, initial.status, "azum-local-state");
+  status.dataset.state = initial.assessment.wasm ? "idle" : "unsupported";
+  addParagraph(doc, section, initial.requirements);
   const list = doc.createElement("ol");
-  for (const step of state.manualSteps) {
+  for (const step of initial.manualSteps) {
     const item = doc.createElement("li");
     item.textContent = step;
     list.appendChild(item);
   }
   section.appendChild(list);
-  const probe = doc.createElement("button");
-  probe.type = "button";
-  probe.id = "azum-local-probe";
-  probe.textContent = "Comprobar este navegador";
-  const download = doc.createElement("button");
-  download.type = "button";
-  download.id = "azum-local-download";
+
+  const consentLabel = doc.createElement("label");
+  consentLabel.className = "azum-local-consent";
+  const consent = doc.createElement("input");
+  consent.type = "checkbox";
+  consent.id = "azum-local-consent";
+  const consentText = doc.createElement("span");
+  consentText.textContent = `Acepto descargar el modelo (${formatBytes(WASM_BUNDLE_BYTES)} bytes) desde Hugging Face y el motor Transformers.js desde jsDelivr. Conviene usar Wi-Fi. La pregunta no se envía a un servidor.`;
+  consentLabel.append(consent, consentText);
+
+  const probe = button(doc, "azum-local-probe", "Comprobar este navegador");
+  const download = button(doc, "azum-local-download", `Descargar y cargar (${formatBytes(WASM_BUNDLE_BYTES)} bytes)`);
   download.disabled = true;
-  download.textContent = `Descarga apagada (${formatBytes(WASM_BUNDLE_BYTES)} bytes)`;
-  const remove = doc.createElement("button");
-  remove.type = "button";
-  remove.id = "azum-local-remove";
-  remove.textContent = "Borrar solo la caché de este modelo";
-  const result = doc.createElement("p");
-  result.id = "azum-local-result";
-  result.setAttribute("aria-live", "polite");
-  section.append(probe, download, remove, result);
+  const cancel = button(doc, "azum-local-cancel", "Cancelar la descarga");
+  cancel.disabled = true;
+  const remove = button(doc, "azum-local-remove", "Borrar solo la caché de este modelo");
+  const retry = button(doc, "azum-local-retry", "Reintentar la carga");
+  retry.disabled = true;
+
+  const questionLabel = doc.createElement("label");
+  questionLabel.className = "azum-local-field";
+  questionLabel.textContent = "Pregunta para la IA local";
+  const question = doc.createElement("textarea");
+  question.id = "azum-local-question";
+  question.maxLength = MAX_PROMPT_CHARS;
+  question.rows = 3;
+  question.placeholder = "Escribe una pregunta en español";
+  questionLabel.appendChild(question);
+
+  const ask = button(doc, "azum-local-ask", "Preguntar a la IA local");
+  ask.disabled = true;
+  const stop = button(doc, "azum-local-stop", "Parar");
+  stop.disabled = true;
+  const progress = addParagraph(doc, section, "", "azum-local-progress");
+  const answer = doc.createElement("p");
+  answer.id = "azum-local-answer";
+  answer.dataset.source = "none";
+  answer.setAttribute("aria-live", "polite");
+  const badge = doc.createElement("p");
+  badge.id = "azum-local-badge";
+  badge.className = "azum-local-badge";
+  badge.textContent = labelFor("none");
+  const log = doc.createElement("div");
+  log.id = "azum-local-log";
+
+  section.append(consentLabel, probe, download, cancel, retry, remove, questionLabel, ask, stop, progress, badge, answer, log);
   body.appendChild(section);
 
+  let worker = null;
+  let modelReady = false;
+  let requestId = 0;
+
+  function setStatus(text, stateName) {
+    status.textContent = text;
+    status.dataset.state = stateName;
+  }
+
+  function showAnswer(source, text) {
+    badge.textContent = labelFor(source);
+    answer.dataset.source = source;
+    answer.textContent = text ?? "";
+  }
+
+  function syncButtons() {
+    const wasm = typeof view.WebAssembly === "object";
+    download.disabled = !(wasm && consent.checked && !modelReady);
+    ask.disabled = !(modelReady && question.value.trim());
+  }
+
+  consent.addEventListener("change", syncButtons);
+  question.addEventListener("input", syncButtons);
+
+  function ensureWorker() {
+    if (worker) return worker;
+    worker = new view.Worker(new URL("./local-ai-worker.js", import.meta.url), { type: "module" });
+    worker.addEventListener("message", (event) => {
+      const message = event.data ?? {};
+      if (message.type === "progress") {
+        const item = message.progress ?? {};
+        const percent = item.progress == null ? "" : ` ${Math.round(item.progress)} %`;
+        progress.textContent = `Descarga: ${item.status}${item.file ? " " + item.file : ""}${percent}`;
+        setStatus("Descargando el modelo en este navegador.", "downloading");
+      } else if (message.type === "ready") {
+        modelReady = true;
+        cancel.disabled = true;
+        retry.disabled = true;
+        syncButtons();
+        setStatus("Modelo cargado en este navegador. Puedes preguntar. No está comprobado el uso sin red.", "ready");
+        progress.textContent = "";
+      } else if (message.type === "chunk") {
+        answer.dataset.source = "device";
+        badge.textContent = labelFor("device");
+        answer.textContent += message.chunk ?? "";
+      } else if (message.type === "result") {
+        stop.disabled = true;
+        ask.disabled = false;
+        if (message.ok && message.source === "device") {
+          showAnswer("device", message.text);
+          const turn = doc.createElement("article");
+          turn.dataset.source = "device";
+          const asked = doc.createElement("p");
+          asked.textContent = "Pregunta: " + question.value.trim();
+          const mark = doc.createElement("p");
+          mark.className = "azum-local-badge";
+          mark.textContent = labelFor("device");
+          const said = doc.createElement("p");
+          said.textContent = message.text;
+          turn.append(asked, mark, said);
+          log.appendChild(turn);
+          setStatus("Respuesta generada en este navegador.", "ready");
+        } else if (message.code === "stopped") {
+          showAnswer("none", statusText("stopped"));
+          setStatus(statusText("stopped"), "ready");
+        } else {
+          showAnswer("none", statusText(message.code || "engine-failed"));
+          setStatus(statusText(message.code || "engine-failed"), "error");
+          retry.disabled = false;
+        }
+      } else if (message.type === "error") {
+        modelReady = false;
+        cancel.disabled = true;
+        retry.disabled = false;
+        syncButtons();
+        showAnswer("none", statusText("engine-failed"));
+        setStatus(`No se pudo cargar el modelo. ${message.message ?? ""}`.trim(), "error");
+      }
+    });
+    worker.addEventListener("error", () => {
+      modelReady = false;
+      retry.disabled = false;
+      cancel.disabled = true;
+      syncButtons();
+      showAnswer("none", statusText("engine-failed"));
+      setStatus("El motor del navegador falló. No hay una respuesta inventada.", "error");
+    });
+    return worker;
+  }
+
+  async function prepareIsolation() {
+    if (view.crossOriginIsolated) return "ready";
+    if (!view.navigator?.serviceWorker) return "unavailable";
+    try {
+      await view.navigator.serviceWorker.register(new URL("./coi-serviceworker.js", import.meta.url));
+    } catch {
+      return "unavailable";
+    }
+    if (!view.sessionStorage.getItem("azum-coi-reload")) {
+      view.sessionStorage.setItem("azum-coi-reload", "1");
+      view.location.reload();
+    }
+    return "reload-needed";
+  }
+
   probe.addEventListener("click", async () => {
-    const nav = doc.defaultView?.navigator ?? {};
-    const webgpu = await probeWebGpu(nav.gpu);
+    const webgpu = await probeWebGpu(view.navigator?.gpu);
     const assessment = assessDevice({
-      webAssembly: typeof doc.defaultView?.WebAssembly === "object",
+      webAssembly: typeof view.WebAssembly === "object",
       webgpu,
-      deviceMemoryGb: Number.isFinite(nav.deviceMemory) ? nav.deviceMemory : null,
+      deviceMemoryGb: Number.isFinite(view.navigator?.deviceMemory) ? view.navigator.deviceMemory : null,
     });
     const memory = assessment.deviceMemoryGb == null
       ? "El navegador no dice cuánta RAM hay."
       : `El navegador informa un cubo de unos ${assessment.deviceMemoryGb} GB. Eso no separa los 8 GB físicos de los 6 GB virtuales.`;
     const gpu = assessment.webgpu === "adapter"
-      ? "WebGPU tiene un adaptador. No se ha medido la velocidad y no se usa la NPU."
-      : assessment.webgpu === "absent"
-        ? "WebGPU no está en este navegador. No es un fallo de la tablet hasta probar Chrome, y tampoco promete funcionar allí."
-        : "WebGPU no ofreció un adaptador usable. La velocidad sigue sin medirse.";
-    result.textContent = `${assessment.wasm ? "Hay WebAssembly." : "No hay WebAssembly."} ${gpu} ${memory} ${statusText(assessment.guidance === "unsupported-no-wasm" ? "unsupported-no-wasm" : "runtime-not-connected")}`;
+      ? "WebGPU tiene un adaptador. La generación usa la CPU por WebAssembly. No se ha medido la velocidad y no se usa la NPU."
+      : "WebGPU no se usa para generar. La vía es la CPU por WebAssembly. La velocidad no está medida.";
+    const isolation = view.crossOriginIsolated ? "La memoria del motor está activa." : "La memoria del motor aún no está aislada.";
+    progress.textContent = `${assessment.wasm ? "Hay WebAssembly." : "No hay WebAssembly."} ${gpu} ${memory} ${isolation}`;
+    if (!assessment.wasm) setStatus(statusText("unsupported-no-wasm"), "unsupported");
+  });
+
+  download.addEventListener("click", async () => {
+    if (!consent.checked || typeof view.WebAssembly !== "object") return;
+    const isolation = await prepareIsolation();
+    if (isolation !== "ready") {
+      setStatus(statusText("isolation-needed"), "error");
+      return;
+    }
+    download.disabled = true;
+    cancel.disabled = false;
+    retry.disabled = true;
+    showAnswer("none", "");
+    setStatus("Descargando y cargando el modelo en este navegador.", "downloading");
+    ensureWorker().postMessage({ type: "load" });
+  });
+
+  cancel.addEventListener("click", async () => {
+    worker?.terminate();
+    worker = null;
+    modelReady = false;
+    cancel.disabled = true;
+    await removeOwnModel(view.caches);
+    syncButtons();
+    showAnswer("none", statusText("cancelled"));
+    setStatus(statusText("cancelled"), "idle");
+  });
+
+  retry.addEventListener("click", () => {
+    if (!consent.checked) return;
+    worker?.terminate();
+    worker = null;
+    modelReady = false;
+    download.click();
+  });
+
+  ask.addEventListener("click", () => {
+    const text = question.value.trim();
+    if (!text || !modelReady) return;
+    requestId += 1;
+    stop.disabled = false;
+    ask.disabled = true;
+    showAnswer("device", "");
+    setStatus("Generando en este navegador.", "generating");
+    ensureWorker().postMessage({ type: "generate", id: requestId, text });
+  });
+
+  stop.addEventListener("click", () => {
+    worker?.postMessage({ type: "stop" });
+    stop.disabled = true;
+    setStatus("Parando la generación.", "generating");
   });
 
   remove.addEventListener("click", async () => {
-    const caches = doc.defaultView?.caches;
-    const outcome = await removeOwnModel(caches);
-    result.textContent = outcome.ok
-      ? "Se pidió borrar solo la caché azum-local-ai-qwen2.5-0.5b-uint8. Ningún otro dato entra en esa orden."
-      : "Este navegador no tiene caché que borrar.";
+    worker?.postMessage({ type: "reset" });
+    worker?.terminate();
+    worker = null;
+    modelReady = false;
+    const outcome = await removeOwnModel(view.caches);
+    syncButtons();
+    showAnswer("none", outcome.ok
+      ? "Se pidió borrar solo la caché de este modelo. Las reglas y el resto del navegador no entran en esa orden."
+      : "Este navegador no tiene caché que borrar.");
+    setStatus("Modelo descargado retirado de la caché de este nombre.", "idle");
   });
 
+  prepareIsolation().catch(() => {});
   return section;
 }
 

@@ -1,6 +1,6 @@
 # Azum · puente Gemini (cerrado por defecto)
 
-La vía nueva para no gastar es la IA en el propio aparato, descrita en la página (`azum/local-ai.js`). Esta copia no descarga el modelo ni lo ejecuta en el navegador. El puente Gemini de abajo sigue cerrado y no sustituye a esa vía.
+La vía para no gastar es la IA en el propio navegador (`azum/local-ai.js`). La descarga del modelo empieza solo después del consentimiento. El puente Gemini de abajo sigue cerrado.
 
 Este directorio es el puente personal de Azum hacia la API de Gemini. La página publicada en GitHub Pages sigue siendo la demostración local de trece papeles. No llama a Gemini.
 
