@@ -24,7 +24,6 @@ const KNOWN_FILES = [
 let generator = null;
 let loading = null;
 let stopRequested = false;
-const history = [];
 
 function summarizeProgress(update) {
   if (!update || typeof update !== "object") return { status: "progress" };
@@ -107,11 +106,7 @@ export async function ask(text, onChunk) {
   if (!prompt) throw Object.assign(new Error("empty"), { code: "empty-generation" });
   stopRequested = false;
   const messages = [
-    { role: "system", content: "Responde en español, en una sola frase, y contesta a la pregunta. No eres un médico ni un banco." },
-    ...history.flatMap((turn) => [
-      { role: "user", content: turn.user },
-      { role: "assistant", content: turn.assistant },
-    ]),
+    { role: "system", content: "Responde en español y en una sola frase. Si la pregunta ofrece dos opciones, di cuál es." },
     { role: "user", content: prompt },
   ];
   const { TextStreamer } = await import(RUNTIME_URL);
@@ -125,8 +120,6 @@ export async function ask(text, onChunk) {
   const output = await generator(messages, { max_new_tokens: MAX_NEW_TOKENS, do_sample: false, streamer });
   const textOut = assistantText(output);
   if (!textOut) throw Object.assign(new Error("empty"), { code: "empty-generation" });
-  history.push({ user: prompt, assistant: textOut.slice(0, 240) });
-  while (history.length > 2) history.shift();
   return textOut;
 }
 
@@ -134,12 +127,9 @@ export function requestStop() {
   stopRequested = true;
 }
 
-export function resetHistory() {
-  history.length = 0;
-}
+export function resetHistory() {}
 
 export function unload() {
   generator = null;
   loading = null;
-  history.length = 0;
 }

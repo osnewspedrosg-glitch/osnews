@@ -11,6 +11,7 @@ import {
   downloadModel,
   formatBytes,
   ggufUrl,
+  identityReply,
   labelFor,
   panelState,
   probeWebGpu,
@@ -164,6 +165,18 @@ test("failed or empty generation never fabricates an answer", async () => {
   });
   assert.equal(empty.code, "empty-generation");
   assert.equal(empty.text, null);
+});
+
+test("name and human questions use a labeled app rule, other questions do not", () => {
+  const ruled = identityReply("Hola como te llamas");
+  assert.equal(ruled, identityReply("¿Eres humano?"));
+  assert.match(ruled, /Soy Azum/);
+  assert.match(ruled, /No soy una persona/);
+  assert.equal(identityReply("¿Eres Grok?"), ruled);
+  assert.equal(identityReply("¿De qué color es el cielo cuando está despejado?"), null);
+  assert.equal(identityReply("Por la mañana, ¿se dice buenos días o buenas noches?"), null);
+  assert.notEqual(labelFor("app-rule"), labelFor("device"));
+  assert.match(labelFor("app-rule"), /No es texto nuevo del modelo/);
 });
 
 test("a mock engine is labeled as a mock and is not a device result", async () => {
