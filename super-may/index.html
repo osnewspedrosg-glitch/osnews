@@ -27,6 +27,7 @@
     <button data-tab="redes">Redes</button>
     <button data-tab="imagenes">Analizar imágenes</button>
     <button data-tab="azar">Máquinas de azar</button>
+    <button data-tab="mesa">Mesa</button>
   </nav>
 
   <main>
@@ -83,9 +84,17 @@ Compartir OSNews</textarea>
       </article>
       <p class="nota">Azar digital para entretenimiento. No predice sorteos o máquinas físicas, ni garantiza ganar.</p>
     </section>
+
+    <section id="mesa" class="tab" aria-label="Mesa abierta">
+      <div id="mesa-root"></div>
+    </section>
   </main>
 
   <footer>Hecho por Pedro Sánchez Gómez · OSNews</footer>
+  <script src="../ia/config.js"></script>
+  <script src="../ia/nucleo.js"></script>
+  <script src="../ia/cliente.js"></script>
+  <script src="../ia/mesa.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js" defer></script>
   <script src="app.js" defer></script>
 </body>

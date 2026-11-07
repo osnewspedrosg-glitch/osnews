@@ -88,6 +88,12 @@ footer{text-align:center;padding:16px;opacity:.85;font-size:.85em}a{color:var(--
 <div class="card" style="text-align:center"><a class="btn on" id="dl" href="index.html" download="eva-analisis-audio.html" data-i="dlB"></a></div>
 <div class="card"><b data-i="more"></b> <a href="../may-gestos/">MAY · Lenguaje gestual</a> · <a href="../asdrubal/">Asdrúbal · poeta y músico</a> · <a href="../may-produccion/">MAY Producción</a> · <a href="../binary-money/">Binary Money</a> · <a href="../">OSNews</a></div>
 </main>
+<section class="card" id="charlaEva" aria-label="Charla de texto con Eva">
+<h2>Charla de texto con Eva</h2>
+<p>Eva acompaña. El audio, la cámara, las fotos y los gestos siguen en este dispositivo y no se envían. Este cuadro solo usa el texto que escribes y pulsas para enviar, o una respuesta que importas.</p>
+<p>Eva no es un proveedor. Si el texto sale de Gemini o de Grok, el origen lo dice. Varios personajes con el mismo proveedor no son inteligencias independientes. No hay frases de chat preparadas que se hagan pasar por el servicio.</p>
+<div id="eva-charla-root"></div>
+</section>
 <footer><div data-i="foot"></div><div style="color:#3dff9a;margin-top:4px">🔐 <span data-i="secId"></span></div></footer>
 <script>
 const L=new URLSearchParams(location.search).get('lang')=='en'?'en':'es';document.documentElement.lang=L;
@@ -359,5 +365,10 @@ $('gPick').onclick=()=>$('gFile').click();
 $('gFile').onchange=async e=>{const f=e.target.files[0];if(!f)return;stopCam();vid.hidden=true;img.hidden=false;ov.classList.remove('mir');const u=URL.createObjectURL(f);img.src=u;await img.decode();$('gph').style.display='none';
 try{await load('IMAGE');ov.width=img.naturalWidth;ov.height=img.naturalHeight;cx.clearRect(0,0,ov.width,ov.height);const r=face.IMAGE.detect(img),h=hand.IMAGE&&$('gHands').checked?hand.IMAGE.detect(img):null;const k=tagsFrom(r,h,ov.width,ov.height);st(f.name);if(k)reactG(k,true);else st(f.name+' · '+T.gNo)}catch(er){console.warn(er);st(T.gDen)}};
 </script>
+<script src="../ia/config.js"></script>
+<script src="../ia/nucleo.js"></script>
+<script src="../ia/cliente.js"></script>
+<script src="../ia/charla-ui.js"></script>
+<script>OSN_CHARLA_UI.mount(document.getElementById('eva-charla-root'),{personaje:'eva',storageKey:'osnews-eva-charla'});</script>
 <script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body></html>

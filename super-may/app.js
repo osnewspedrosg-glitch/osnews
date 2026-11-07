@@ -27,7 +27,8 @@ const apps = [
   ['Binary Money', 'Simulación educativa de finanzas y puntos', '../binary-money/'],
   ['MAY · Producción', 'Agente de productividad y renta en puntos', '../may-produccion/'],
   ['MAY Core', 'Núcleo binario y centro de asistencia', '../may-core/'],
-  ['Cleopatra · Puntos', 'Organiza y juega con tus puntos', '../cleopatra-puntos/']
+  ['Cleopatra · Puntos', 'Organiza y juega con tus puntos', '../cleopatra-puntos/'],
+  ['Mesa abierta', 'Temas propios, textos íntegros e importación con fuente', '#mesa']
 ];
 
 const appsGrid = $('#apps-grid');
@@ -154,6 +155,19 @@ $('#girar').onclick = () => {
 $('#dado').onclick = () => {
   $('#resultado-dado').textContent = `Ha salido: ${pick(6) + 1}`;
 };
+
+function abrirTab(id) {
+  const b = document.querySelector(`[data-tab="${id}"]`);
+  if (!b) return;
+  b.click();
+  const s = document.getElementById(id);
+  if (s) s.scrollIntoView({ block: 'start' });
+}
+appsGrid.querySelectorAll('a[href="#mesa"]').forEach(a => {
+  a.addEventListener('click', () => abrirTab('mesa'));
+});
+window.addEventListener('hashchange', () => abrirTab(location.hash.slice(1)));
+if (location.hash) abrirTab(location.hash.slice(1));
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js').catch(() => {});
