@@ -1,7 +1,7 @@
 /* Adds the isolation headers the WebAssembly motor needs, and keeps a copy of
    the Azum page plus the jsDelivr runtime. The model weights stay in their own
    cache and are not duplicated here. Chat text is not stored or uploaded. */
-const SHELL = "azum-shell-v2";
+const SHELL = "azum-shell-v3";
 
 function isolated(response) {
   if (!response || response.status === 0) return response;
