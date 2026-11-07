@@ -266,6 +266,9 @@ export function mount(doc, input = {}) {
   addParagraph(doc, section, "Aparte de las reglas y de Gemini. Gemini y los pagos siguen apagados.", "azum-local-kicker");
   const status = addParagraph(doc, section, initial.status, "azum-local-state");
   status.dataset.state = initial.assessment.wasm ? "idle" : "unsupported";
+  const feedback = addParagraph(doc, section, "Aquí aparecerá lo que hagan los botones.", "azum-local-feedback");
+  feedback.id = "azum-local-feedback";
+  feedback.dataset.state = status.dataset.state;
   addParagraph(doc, section, initial.requirements);
   const list = doc.createElement("ol");
   for (const step of initial.manualSteps) {
@@ -286,7 +289,6 @@ export function mount(doc, input = {}) {
 
   const probe = button(doc, "azum-local-probe", "Comprobar este navegador");
   const download = button(doc, "azum-local-download", `Descargar y cargar (${formatBytes(WASM_BUNDLE_BYTES)} bytes)`);
-  download.disabled = true;
   const cancel = button(doc, "azum-local-cancel", "Cancelar la descarga");
   cancel.disabled = true;
   const remove = button(doc, "azum-local-remove", "Borrar solo la caché de este modelo");
@@ -319,7 +321,7 @@ export function mount(doc, input = {}) {
   const log = doc.createElement("div");
   log.id = "azum-local-log";
 
-  section.append(consentLabel, probe, download, cancel, retry, remove, questionLabel, ask, stop, progress, badge, answer, log);
+  section.append(consentLabel, probe, download, cancel, retry, remove, feedback, questionLabel, ask, stop, progress, badge, answer, log);
   body.appendChild(section);
 
   let modelReady = false;
@@ -328,6 +330,9 @@ export function mount(doc, input = {}) {
   function setStatus(text, stateName) {
     status.textContent = text;
     status.dataset.state = stateName;
+    feedback.textContent = text;
+    feedback.dataset.state = stateName;
+    feedback.scrollIntoView({ block: "nearest" });
   }
 
   function showAnswer(source, text) {
@@ -337,8 +342,6 @@ export function mount(doc, input = {}) {
   }
 
   function syncButtons() {
-    const wasm = typeof view.WebAssembly === "object";
-    download.disabled = !(wasm && consent.checked && !modelReady);
     ask.disabled = !(modelReady && question.value.trim());
   }
 
@@ -368,7 +371,7 @@ export function mount(doc, input = {}) {
     const serviceWorker = view.navigator?.serviceWorker;
     if (serviceWorker) {
       try {
-        await serviceWorker.register(new URL("./coi-serviceworker.js", import.meta.url));
+        await serviceWorker.register(new URL("./coi-serviceworker.js", import.meta.url), { updateViaCache: "none" });
         if (!serviceWorker.controller) {
           await new Promise((resolve) => {
             const timer = setTimeout(resolve, 4000);
@@ -392,7 +395,14 @@ export function mount(doc, input = {}) {
   }
 
   probe.addEventListener("click", async () => {
-    const webgpu = await probeWebGpu(view.navigator?.gpu);
+    setStatus("Comprobando este navegador…", "busy");
+    let webgpu = "unknown";
+    try {
+      webgpu = await probeWebGpu(view.navigator?.gpu);
+    } catch (error) {
+      setStatus(`No pude comprobar WebGPU. ${String(error?.message ?? error).slice(0, 180)}`, "error");
+      return;
+    }
     const assessment = assessDevice({
       webAssembly: typeof view.WebAssembly === "object",
       webgpu,
@@ -405,12 +415,19 @@ export function mount(doc, input = {}) {
       ? "WebGPU tiene un adaptador. La generación usa la CPU por WebAssembly. No se ha medido la velocidad y no se usa la NPU."
       : "WebGPU no se usa para generar. La vía es la CPU por WebAssembly. La velocidad no está medida.";
     const isolation = view.crossOriginIsolated ? "La memoria del motor está activa." : "La memoria del motor aún no está aislada.";
-    progress.textContent = `${assessment.wasm ? "Hay WebAssembly." : "No hay WebAssembly."} ${gpu} ${memory} ${isolation}`;
-    if (!assessment.wasm) setStatus(statusText("unsupported-no-wasm"), "unsupported");
+    setStatus(`${assessment.wasm ? "Hay WebAssembly." : "No hay WebAssembly."} ${gpu} ${memory} ${isolation}`, assessment.wasm ? "idle" : "unsupported");
   });
 
   download.addEventListener("click", async () => {
-    if (!consent.checked || typeof view.WebAssembly !== "object") return;
+    setStatus("He recibido «Descargar y cargar».", "busy");
+    if (!consent.checked) {
+      setStatus("Marca primero el consentimiento. Sin eso no descargo nada.", "error");
+      return;
+    }
+    if (typeof view.WebAssembly !== "object") {
+      setStatus(statusText("unsupported-no-wasm"), "unsupported");
+      return;
+    }
     const isolation = await prepareIsolation();
     if (isolation !== "ready") {
       setStatus(statusText("isolation-needed"), "error");
@@ -425,7 +442,9 @@ export function mount(doc, input = {}) {
       const api = await engineApi();
       await api.load((item) => {
         const percent = item.progress == null ? "" : ` ${Math.round(item.progress)} %`;
-        progress.textContent = `Descarga: ${item.status}${item.file ? " " + item.file : ""}${percent}`;
+        const line = `Descarga: ${item.status}${item.file ? " " + item.file : ""}${percent}`;
+        progress.textContent = line;
+        feedback.textContent = line;
       });
       modelReady = true;
       cancel.disabled = true;
@@ -435,6 +454,7 @@ export function mount(doc, input = {}) {
       setStatus("Modelo cargado en este navegador. Puedes preguntar.", "ready");
     } catch (error) {
       modelReady = false;
+      download.disabled = false;
       cancel.disabled = true;
       retry.disabled = false;
       syncButtons();
@@ -455,16 +475,23 @@ export function mount(doc, input = {}) {
   });
 
   retry.addEventListener("click", () => {
-    if (!consent.checked) return;
+    if (!consent.checked) {
+      setStatus("Marca el consentimiento para reintentar.", "error");
+      return;
+    }
     engine?.unload?.();
     engine = null;
     modelReady = false;
+    download.disabled = false;
     download.click();
   });
 
   ask.addEventListener("click", async () => {
     const text = question.value.trim();
-    if (!text || !modelReady || !engine) return;
+    if (!text || !modelReady || !engine) {
+      setStatus(modelReady ? "Escribe una pregunta." : "El modelo todavía no está cargado.", "error");
+      return;
+    }
     stop.disabled = false;
     ask.disabled = true;
     showAnswer("device", "");

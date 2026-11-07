@@ -34,12 +34,23 @@
   text-transform: uppercase;
 }
 
-.azum-local-state {
+.azum-local-state,
+.azum-local-feedback {
   margin: 0 0 0.8rem;
   padding: 0.7rem 0.85rem;
   border: 1px solid #e3d5c4;
   border-radius: 0.8rem;
   background: #fffaf3;
+}
+
+.azum-local-feedback {
+  border-color: #1e4d40;
+  font-weight: 600;
+}
+
+.azum-local-feedback[data-state="error"],
+.azum-local-feedback[data-state="unsupported"] {
+  border-color: #7d2428;
 }
 
 .azum-local-ai ol {
