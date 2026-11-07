@@ -28,8 +28,9 @@ select{background:#140c26;color:var(--tx);border:1px solid #b06bff66;border-radi
 .sing button.st{background:#3a2a55;color:var(--tx)}
 .sing small{color:var(--mu);align-self:center}
 .typing{opacity:.6}
-form{display:flex;gap:6px}
-#in{flex:1;padding:13px;border-radius:14px;border:1px solid #b06bff55;background:#140c26;color:var(--tx);font-size:16px}
+form{display:flex;gap:6px;align-items:flex-end;flex-wrap:wrap}
+#in{flex:1;padding:13px;border-radius:14px;border:1px solid #b06bff55;background:#140c26;color:var(--tx);font:16px/1.4 inherit;min-height:48px;resize:vertical;width:100%}
+.origen-nota{font-style:normal;font-family:system-ui,sans-serif;font-size:12px;color:var(--mu);margin-top:6px}
 form button,.tb{border:0;border-radius:14px;padding:0 14px;font-size:18px;cursor:pointer;background:linear-gradient(90deg,var(--c1),#ffd98a);color:#1a0f00}
 .tb{background:#21173a;color:var(--tx);font-size:15px;padding:8px 12px}
 .row{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
@@ -47,8 +48,15 @@ footer{text-align:center;color:var(--mu);font-size:13px;margin-top:14px}
 </div>
 <div class="mood"><svg id="hex" viewBox="-46 -46 92 92" width="54" height="54"></svg><span id="moodTxt"></span></div>
 <div id="log" aria-live="polite"></div>
+<p class="note" id="stAsd" role="status">Comprobando configuración…</p>
+<div class="row" id="modoAsd">
+<label class="note">Modo <select id="modo" aria-label="Modo de respuesta"><option value="local">Personalidad local (no es un proveedor)</option><option value="proveedor">Preguntar al proveedor (solo este texto)</option></select></label>
+<label class="note">Proveedor <select id="prov" aria-label="Proveedor técnico"><option value="gemini">Gemini</option><option value="grok">Grok</option></select></label>
+</div>
+<p class="note">Asdrúbal es el personaje. Gemini y Grok son proveedores. Un texto generado es borrador de IA y no es obra de Pedro salvo que él lo apruebe en la mesa abierta. <a href="../super-may/#mesa">Mesa abierta</a></p>
 <div class="row" id="chips"></div>
-<form id="f"><input id="in" autocomplete="off" data-ip="placeholder"><button type="button" class="tb" id="mic" title="🎤">🎤</button><button id="send" aria-label="Enviar">➤</button></form>
+<form id="f"><textarea id="in" rows="3" autocomplete="off" data-ip="placeholder" aria-label="Mensaje para Asdrúbal"></textarea><button type="button" class="tb" id="mic" title="🎤">🎤</button><button id="send" aria-label="Enviar">➤</button></form>
+<p class="note" id="cuentaAsd">0 caracteres</p>
 <div class="row"><label class="note"><input type="checkbox" id="voiceOn" checked> <span data-i="voice">Voz de Asdrúbal</span></label><button class="tb" id="stop" type="button">⏹</button></div>
 <p class="note">🔒 <span data-i="privacy">Tu memoria con Asdrúbal se guarda solo en este dispositivo.</span> <button class="forget" id="forget" type="button" data-i="forget">Olvidar mis datos</button></p>
 <p class="note">⚠️ <span data-i="disclaimer">Asdrúbal es una IA con emociones simuladas. No da consejo médico, legal ni financiero. En peligro: 112 · Violencia de género (España): 016 · WhatsApp 600 000 016 · Conducta suicida: 024. Fuera de España, tu número de emergencias local.</span></p>
@@ -60,6 +68,9 @@ footer{text-align:center;color:var(--mu);font-size:13px;margin-top:14px}
 <script src="creador.js"></script>
 <script src="charla.js"></script>
 <script src="engine.js"></script>
+<script src="../ia/config.js"></script>
+<script src="../ia/nucleo.js"></script>
+<script src="../ia/cliente.js"></script>
 <script>
 (function(){
 const $=id=>document.getElementById(id),A=window.ASDRUBAL,log=$('log');
@@ -73,7 +84,7 @@ const VL={es:'es-ES',en:'en-GB',pt:'pt-PT',fr:'fr-FR',it:'it-IT'};
 let L=A.state.lang;if(!L){const n=(navigator.language||'es').slice(0,2).toLowerCase();L=A.LANGS.includes(n)?n:'es';A.setLang(L)}
 function applyUI(){const u=UI[L];document.documentElement.lang=L;document.querySelectorAll('[data-i]').forEach(e=>e.textContent=u[e.dataset.i]);$('in').placeholder=u.placeholder;$('lang').value=L;
  $('chips').innerHTML='';u.chips.forEach(c=>{const b=document.createElement('button');b.className='chip';b.type='button';b.textContent=c;b.onclick=()=>{if(/…$/.test(c)){$('in').value=c.replace('…',' ');$('in').focus()}else ask(c)};$('chips').appendChild(b)});moodUI()}
-$('lang').onchange=e=>{L=e.target.value;A.setLang(L);applyUI();add('a',A.welcome())};
+$('lang').onchange=e=>{L=e.target.value;A.setLang(L);applyUI();add('a',A.welcome(),'Presentación local. No es una respuesta de Gemini ni de Grok.')};
 
 /* ---- Voz masculina ---- */
 const N=window.ASDNative||null;let voice=null;
@@ -115,15 +126,32 @@ window.ASD_SING=singPoem;
 
 /* ---- Chat ---- */
 const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-function add(role,text){const d=document.createElement('div');d.className='msg '+role;d.innerHTML=esc(text).replace(/(https?:\/\/[^\s)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>');
+const hilo=[];
+function add(role,text,meta){const d=document.createElement('div');d.className='msg '+role;d.innerHTML=esc(text).replace(/(https?:\/\/[^\s)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>');
+ if(meta){const s=document.createElement('div');s.className='origen-nota';s.textContent=meta;d.appendChild(s)}
  if(role==='a'&&text.startsWith('📜')){d.classList.add('poem');const u=UI[L],s=document.createElement('div');s.className='sing';s.innerHTML='<button type="button">'+u.sing+'</button><button type="button" class="st">'+u.stopS+'</button><small>🎵 '+u.synth+'</small>';
   s.children[0].onclick=()=>singPoem(text);s.children[1].onclick=()=>stopAll();d.appendChild(s)}
  log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
 const SINGRE=/\b(canta|cantame|cantamelo|cantar|sing|chante|cantami|canta-me)/i;
-async function ask(q){add('u',q);const w=add('a',UI[L].typing);w.classList.add('typing');const CH=window.__asdCharla;const c=CH&&CH.turn(q);const r=c?c.text:A.reply(q);window.__asdLang=c?c.lang:(A.isCrisis&&A.isCrisis(q)?null:(A.detectLang(A.norm(q),q,L)||L));await sleep(350+Math.random()*350);w.remove();add('a',r);A.log('u',q);A.log('a',r);moodUI();
- if(r.startsWith('📜')&&SINGRE.test(A.norm(q)))singPoem(r);else speak(r)}
-$('f').onsubmit=e=>{e.preventDefault();const q=$('in').value.trim();if(!q)return;$('in').value='';ask(q)};
-$('forget').onclick=()=>{A.forget();A.setLang(L);log.innerHTML='';add('a',UI[L].forgot);window.__asdLang=L;if(window.__asdCharla)add('a',__asdCharla.welcome());moodUI()};
+async function ask(q){add('u',q);
+ if(A.isCrisis&&A.isCrisis(q)){const r=A.reply(q);add('a',r,'Mensaje local de emergencia. No es Gemini ni Grok.');A.log('u',q);A.log('a',r);moodUI();speak(r);return}
+ if($('modo')&&$('modo').value==='proveedor'){
+  const w=add('a','Consultando al proveedor… todavía no hay respuesta.');
+  const pack=window.OSN_IA_NUCLEO&&OSN_IA_NUCLEO.prepararMensajes(hilo.concat([{rol:'usuario',texto:q}]));
+  let res;
+  if(!window.OSN_IA)res={ok:false,mensaje:'Configuración pendiente: falta el cliente del puente. No hay respuesta de un proveedor.',estado:'configuracion_pendiente'};
+  else if(pack&&!pack.ok)res={ok:false,mensaje:pack.mensaje,estado:pack.error};
+  else res=await OSN_IA.preguntar({papel:'personaje',personaje:'asdrubal',proveedor:($('prov')&&$('prov').value)||'gemini',mensajes:pack.mensajes});
+  w.remove();
+  if(!res||!res.ok||!res.texto){add('a',(res&&res.mensaje)||'Sin respuesta del proveedor. Esto no es un poema de Asdrúbal ni una respuesta de Gemini o Grok.','Estado: '+((res&&res.estado)||'desconectado'));}
+  else{const meta=OSN_IA.etiquetaServicio(res)+(res.texto.length>1500?' Texto largo: no se lee entero en voz.':'')+' Borrador de IA: no es obra de Pedro.';add('a',res.texto,meta);hilo.push({rol:'usuario',texto:q},{rol:'personaje',texto:res.texto});if(res.texto.length<=1500)speak(res.texto)}
+  moodUI();return}
+ if(q.length>=20000){add('a','Modo local: este texto tiene '+q.length+' caracteres y se muestra entero arriba. La personalidad local no lo envía a un proveedor ni lo resume.','Personalidad local. No es Gemini ni Grok.');return}
+ const w=add('a',UI[L].typing);w.classList.add('typing');const CH=window.__asdCharla;const c=CH&&CH.turn(q);const r=c?c.text:A.reply(q);window.__asdLang=c?c.lang:(A.detectLang(A.norm(q),q,L)||L);await sleep(350+Math.random()*350);w.remove();add('a',r,'Personalidad local de esta página. No es Gemini ni Grok.');A.log('u',q);A.log('a',r);moodUI();
+ if(r.startsWith('📜')&&SINGRE.test(A.norm(q)))singPoem(r);else if(r.length<=1500)speak(r)}
+$('f').onsubmit=e=>{e.preventDefault();const q=$('in').value;if(!q.trim())return;$('in').value='';if($('cuentaAsd'))$('cuentaAsd').textContent='0 caracteres';ask(q)};
+if($('in'))$('in').addEventListener('input',()=>{const n=$('in').value.length;$('cuentaAsd').textContent=n+' caracteres'+(n>40000?' · supera 40000: no se enviará ni se recortará':'')});
+$('forget').onclick=()=>{A.forget();hilo.length=0;A.setLang(L);log.innerHTML='';add('a',UI[L].forgot,'Personalidad local. No es Gemini ni Grok.');window.__asdLang=L;if(window.__asdCharla)add('a',__asdCharla.welcome(),'Presentación local. No es una respuesta de Gemini ni de Grok.');moodUI()};
 /* micrófono */
 const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
 window.__asdRecResult=q=>ask(q);window.__asdRecEnd=()=>$('mic').style.opacity=1;
@@ -134,7 +162,9 @@ function moodUI(){const o=A.moodInfo();const E=[['alegria','Ale'],['sorpresa','S
  E.forEach((e,k)=>{g+='<text x="'+(P[k][0]*1.4).toFixed(1)+'" y="'+(P[k][1]*1.4+3).toFixed(1)+'" font-size="10" text-anchor="middle" fill="'+(e[0]===o.label?'#f5c451':'#8a7fa6')+'">'+e[1]+'</text>'});
  const k=E.findIndex(e=>e[0]===o.label),r=k<0?0:Math.min(1,Math.abs(o.m)+.25);g+='<circle cx="'+(k<0?0:P[k][0]*r).toFixed(1)+'" cy="'+(k<0?0:P[k][1]*r).toFixed(1)+'" r="4.5" fill="#f5c451"/>';$('hex').innerHTML=g;
  $('moodTxt').textContent=UI[L].mood+': '+(o.m>=0?'+':'−')+Math.abs(o.m).toFixed(1)+' · '+o.name+' · '+o.tone}
-applyUI();A.history().forEach(m=>add(m.r==='u'?'u':'a',m.t));window.__asdCharla=window.OSN_CHARLA&&OSN_CHARLA({who:'asdrubal',state:()=>A.state,save:()=>A.save(),ui:()=>L,isCrisis:x=>A.isCrisis(x)});add('a',(window.__asdCharla&&__asdCharla.welcome())||A.welcome());
+applyUI();A.history().forEach(m=>add(m.r==='u'?'u':'a',m.t,m.r==='u'?'':'Registro guardado en este dispositivo. No certifica un proveedor.'));window.__asdCharla=window.OSN_CHARLA&&OSN_CHARLA({who:'asdrubal',state:()=>A.state,save:()=>A.save(),ui:()=>L,isCrisis:x=>A.isCrisis(x)});add('a',(window.__asdCharla&&__asdCharla.welcome())||A.welcome(),'Presentación local. No es una respuesta de Gemini ni de Grok.');
+if(window.OSN_IA)OSN_IA.refrescar().then(s=>{$('stAsd').textContent=s.etiqueta});
+else $('stAsd').textContent='Configuración pendiente: falta el cliente del puente. No hay IA en vivo.';
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js',{scope:'./'}).catch(()=>{});
 })();
 </script><script src="holograma.js" data-name="Asdrúbal" data-img="asdrubal-avatar.jpg" data-after="stop" data-form="f" data-input="in" data-mic="mic" data-log="log" data-bot=".msg.a,.msg.poem" data-speaking="wrap" data-theme="violeta"></script><script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>

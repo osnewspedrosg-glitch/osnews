@@ -176,8 +176,12 @@ footer{max-width:1700px;margin:0 auto;padding:0 20px 30px}
 .mc-msg.mc-may:before{content:"MAY · ";color:var(--gold);font-weight:700}
 .mc-msg.mc-user{align-self:flex-end;background:rgba(245,196,81,.14);border:1px solid rgba(245,196,81,.3)}
 .mc-msg a{color:var(--cy)}
-.mc-form{display:flex;gap:6px;margin-top:8px;align-items:center}
-.mc-form input#mcInput{flex:1;min-width:0;padding:12px;border-radius:12px;border:1px solid var(--bd);background:rgba(4,7,15,.7);color:var(--txt);font-size:16px}
+.mc-form{display:flex;gap:6px;margin-top:8px;align-items:flex-end;flex-wrap:wrap}
+.mc-form textarea#mcInput{flex:1 1 12rem;min-width:0;min-height:48px;max-height:40vh;padding:12px;border-radius:12px;border:1px solid var(--bd);background:rgba(4,7,15,.7);color:var(--txt);font:16px/1.4 inherit;resize:vertical}
+.mc-modo{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+.mc-modo select{background:#0b1222;color:var(--txt);border:1px solid var(--bd);border-radius:10px;padding:8px;min-height:44px;max-width:100%}
+.mc-msg.mc-sistema{align-self:stretch;max-width:100%;background:rgba(245,196,81,.08);border:1px dashed var(--gold);font-size:13px}
+.mc-origen{display:block;margin-top:6px;font-size:11px;color:var(--gold)}
 .mc-form .btn{min-width:44px;min-height:44px;font-size:18px}
 .mc-mic.rec{background:var(--con)!important;color:#fff}
 .mc-voice{font-size:16px;white-space:nowrap}
@@ -233,7 +237,8 @@ footer{max-width:1700px;margin:0 auto;padding:0 20px 30px}
 <main>
  <aside>
   <div class="panel"><h2 data-i18n="country">1 · País</h2><select id="country"></select><div class="note" id="countryNote"></div></div>
-  <div class="panel"><h2 data-i18n="topic">2 · Tema</h2><div class="chips" id="topics"></div></div>
+  <div class="panel"><h2 data-i18n="topic">2 · Tema</h2><div class="chips" id="topics"></div>
+   <p class="note">Los temas de arriba usan solo citas reales ya cargadas. Para un tema propio, sin inventar citas, abre la <a href="super-may/#mesa">mesa abierta de Super MAY</a>.</p></div>
   <div class="panel"><h2 data-i18n="who">3 · ¿Quién se sienta con MAY?</h2><div id="pols"></div>
    <div class="note" data-i18n-html="pickNote">Elige 1–4 participantes. Solo se usan sus declaraciones <b>reales</b> en X sobre el tema (texto literal, fecha y enlace).</div>
    <div style="display:flex;gap:8px;margin-top:10px"><button class="btn primary" id="startBtn" data-i18n="start">🎙️ Empezar debate</button><button class="btn" id="resetBtn">↺</button></div>
@@ -301,7 +306,7 @@ footer{max-width:1700px;margin:0 auto;padding:0 20px 30px}
    <h2><svg width="22" height="22" style="vertical-align:-5px"><use href="#logo"/></svg> Habla con MAY</h2>
    <p><b>MAY</b> · presentadora IA de OSNews · pelirroja, 22 años, voz dulce y cálida. Modera con neutralidad y solo cita declaraciones reales y enlazadas.</p>
    <p class="mc-rule">«Todo vale sin violencia ni ataques personales; mi libertad termina donde empieza la tuya.»</p>
-   <button type="button" id="mcInstall" class="mc-forget" hidden>📲 Instalar app de MAY</button><span id="mcIosHint" class="mc-credit" hidden>📲 En iPhone: Compartir › Añadir a pantalla de inicio</span> <span class="mc-status" id="mcStatus">● conectando…</span>
+   <button type="button" id="mcInstall" class="mc-forget" hidden>📲 Instalar app de MAY</button><span id="mcIosHint" class="mc-credit" hidden>📲 En iPhone: Compartir › Añadir a pantalla de inicio</span> <span class="mc-status off" id="mcStatus" role="status">● comprobando configuración…</span>
    <div class="mc-mood" id="mcMood" title="Emoción simulada: MAY es una IA"><svg id="mcHex" viewBox="-50 -50 100 100" width="92" height="92" aria-hidden="true"></svg><span id="mcMoodTxt">Ánimo de MAY: +0,3 · alegría</span> <button type="button" id="mcWheelBtn" class="mc-forget">🎡 Rueda de emociones</button></div>
    <dialog id="mcWheel" class="mc-wheel"><h3>🎡 Rueda de emociones</h3><p>Seis emociones básicas y su valor: <b>+1</b> potencia · <b>0</b> neutra · <b>−1</b> debilidad.</p><ul><li>😊 Alegría · +1</li><li>😮 Sorpresa · 0</li><li>😨 Miedo · −1</li><li>😠 Ira · −1</li><li>🤢 Asco · −1</li><li>😢 Tristeza · −1</li></ul><p><b>Trabajar la inteligencia emocional</b> (bienestar emocional, psicológico y social):</p><ol><li><b>Identifica</b> la emoción: haz una pausa y reconoce qué sientes.</li><li><b>Entiende</b> su causa: ¿qué la ha desencadenado?</li><li><b>Busca apoyo</b>: no tengas miedo de pedir ayuda profesional.</li></ol><p class="mc-credit">Basado en la rueda de emociones y apuntes de Pedro · OSNews. MAY es una IA: su emoción es simulada y no sustituye a un profesional. En crisis: 112 / 024.</p><button type="button" class="mc-forget" onclick="this.closest('dialog').close()">Cerrar</button></dialog>
   </div>
@@ -309,9 +314,23 @@ footer{max-width:1700px;margin:0 auto;padding:0 20px 30px}
  <div class="mc-grid">
   <div class="mc-chatcol">
    <div class="mc-log" id="mcLog" aria-live="polite"></div>
+   <div class="mc-modo">
+    <label for="mcModo">Modo</label>
+    <select id="mcModo" aria-label="Modo de respuesta">
+     <option value="local">Personalidad local (no es un proveedor)</option>
+     <option value="proveedor">Preguntar al proveedor (solo este texto)</option>
+    </select>
+    <label for="mcProveedor">Proveedor</label>
+    <select id="mcProveedor" aria-label="Proveedor técnico">
+     <option value="gemini">Gemini</option>
+     <option value="grok">Grok</option>
+    </select>
+    <p id="mcCuenta" class="mc-credit">0 caracteres</p>
+    <p class="mc-credit">MAY es el personaje que modera. Gemini y Grok son proveedores. Varios personajes con el mismo proveedor no son inteligencias independientes. <a href="super-may/#mesa">Mesa abierta</a></p>
+   </div>
    <form class="mc-form" id="mcForm" autocomplete="off">
     <button type="button" class="btn mc-mic" id="mcMic" title="Hablar (micrófono)" aria-label="Hablar">🎤</button>
-    <input id="mcInput" maxlength="600" placeholder="Escribe a MAY… (no compartas datos personales)" aria-label="Mensaje para MAY">
+    <textarea id="mcInput" rows="3" placeholder="Escribe a MAY… el texto no se recorta (no compartas datos personales)" aria-label="Mensaje para MAY"></textarea>
     <button type="submit" class="btn mc-send" aria-label="Enviar">➤</button>
     <button type="button" class="btn" id="mcStop" title="Parar voz" aria-label="Parar voz">⏹</button>
     <label class="mc-voice"><input type="checkbox" id="mcVoiceOn" checked> 🔊</label>
@@ -762,21 +781,21 @@ poll().then(() => {
 });
 setInterval(poll, POLL_MS);
 </script>
+<script src="ia/config.js"></script>
+<script src="ia/nucleo.js"></script>
+<script src="ia/cliente.js"></script>
 <script>
-/* ===== Habla con MAY: chat (Gemini vía servidor local, sin claves en la página) + voz + encuesta ===== */
+/* ===== Habla con MAY: personalidad local etiquetada, o proveedor vía puente HTTPS ===== */
 (function(){
  const $=id=>document.getElementById(id);
- const qs=new URLSearchParams(location.search);
- // Endpoint configurable: ?may=URL, window.MAY_API o mismo origen / localhost:8090
- const LOCAL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname)||location.protocol==='file:';
- const API=(qs.get('may')||window.MAY_API||(location.port==='8090'?'':(LOCAL?'http://localhost:8090':''))).replace(/\/$/,'');
- const HASAPI=!!API||location.port==='8090';
+ // La base sale de ia/config.js. En localhost, si está vacía, se prueba 127.0.0.1:8090. En la web pública no se usa el localhost del visitante ni ?may= como destino.
+ const API=(window.OSN_IA&&OSN_IA.base())||'';
  const WA='https://chat.whatsapp.com/J5k0X3xNBQQ6awoF6WHFrJ', XU='https://x.com/Osnewsmaygrok';
  let online=false, history=[];
  const log=$('mcLog'), st=$('mcStatus');
  const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
  const linkify=s=>esc(s).replace(/(https?:\/\/[^\s)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>');
- function add(role,text){const d=document.createElement('div');d.className='mc-msg mc-'+role;d.innerHTML=linkify(text);log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+ function add(role,text,meta){const d=document.createElement('div');d.className='mc-msg mc-'+role;d.innerHTML=linkify(text);if(meta){const s=document.createElement('div');s.className='mc-origen';s.textContent=meta;d.appendChild(s)}log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
  // --- Voz de MAY (speechSynthesis) ---
  let voice=null;
  function pickVoice(){const v=speechSynthesis.getVoices();const es=v.filter(x=>/^es(-|_)ES/i.test(x.lang));const fem=/(female|mujer|helena|laura|elvira|lucia|lucía|monica|mónica|paulina|google español|sabina|marisol|conchita|ximena|dalia)/i;voice=es.find(x=>fem.test(x.name))||es[0]||v.find(x=>/^es/i.test(x.lang))||null}
@@ -837,7 +856,7 @@ setInterval(poll, POLL_MS);
    if(m||/^[\d\s.,+\-*/x×÷()%^=?¿]+$/.test(String(q).trim())){const e=raw.replace(/[¿?=]/g,'').replace(/\bmas\b|\bmás\b|\bplus\b/g,'+').replace(/\bmenos\b|\bminus\b/g,'-').replace(/\bpor\b|\btimes\b/g,'*').replace(/\bentre\b|\bdividido( entre)?\b/g,'/');const v=calc(e);
     if(v!==null)return(en?'That is ':'Son ')+fmt(v)+' 🧮';if(m&&/\d/.test(raw))return en?'I can only do simple maths (+ − × ÷ %) here 💛.':'Solo sé hacer cuentas sencillas (+ − × ÷ y %), y esa no la entiendo 💛. ¿Me la escribes como «25*4»?'}
    // resumen
-   if(/^(resume|resumen|resumeme|summarize|summary)\b/.test(t)||String(q).length>280){let txt=String(q).replace(/^\s*(res[uú]me(me)?( esto| este texto)?|resumen( de)?|summari[sz]e( this)?)\s*[:\-]?\s*/i,'');
+   if(/^(resume|resumen|resumeme|summarize|summary)\b/.test(t)){let txt=String(q).replace(/^\s*(res[uú]me(me)?( esto| este texto)?|resumen( de)?|summari[sz]e( this)?)\s*[:\-]?\s*/i,'');
     const words=txt.split(/\s+/).filter(Boolean).length;if(words<8)return'Pégame el texto después de «resume:» y te hago un resumen cortito 📝';
     const sent=txt.match(/[^.!?]+[.!?]+/g)||[txt];const r=sent.slice(0,2).join(' ').trim();return'📝 Resumen ('+words+' palabras, '+sent.length+' frases): «'+(r.length>300?r.slice(0,300)+'…':r)+'». Es un resumen sencillo: tomo las primeras frases, no lo entiendo como una persona.'}
    // traducción
@@ -1029,27 +1048,44 @@ setInterval(poll, POLL_MS);
    if(best&&TOPIC[best.id]){S.lastTopic=best.id;save()}
    if(!best){const sp=spell(q,t);S.last='fallback';const fb=pick(I.find(x=>x.id==='fallback'),lang);if(sp&&lang!=='en')return'¿Querías decir «'+sp+'»? '+fb;return fb}
    if(best&&lang!=='en'&&Math.random()<0.3){const sp=spell(q,t);if(sp&&sp!==t){S.last=best.id;return'(Entiendo: «¿'+sp+'?») '+pick(best,lang)}}S.last=best.id;return pick(best,lang)}
-  return{reply,moodInfo,detect,isCrisis:q=>{const t=norm(q),w=t.split(' ');const c=I.find(x=>x.id==='emergency');return !!(c&&c.k.some(k=>has(t,w,k)))},get state(){return S},norm,X,save,forget,welcome,log:(role,text)=>{S.log.push({r:role,t:text});save()},history:()=>S.log.slice()};
+  return{reply,moodInfo,detect,isCrisis:q=>{const t=norm(q),w=t.split(' ');const c=I.find(x=>x.id==='emergency');return !!(c&&c.k.some(k=>has(t,w,k)))},get state(){return S},norm,X,save,forget,welcome,log:(role,text,meta)=>{S.log.push({r:role,t:text,o:meta||''});save()},history:()=>S.log.slice()};
  })();
  function offline(q){return MAY.reply(q)}
- async function ask(q){add('user',q);history.push({role:'user',text:q});const w=add('may','MAY está escribiendo…');w.classList.add('mc-typing');let r=null;const t0=Date.now(),wait=400+Math.random()*500;
-  const CH=window.__mayCharla||(window.OSN_CHARLA&&(window.__mayCharla=OSN_CHARLA({who:'may',state:()=>MAY.state,save:()=>MAY.save(),ui:()=>'es',isCrisis:x=>MAY.isCrisis(x)})));const LG=CH?CH.langOf(q):'es';window.__mayLang=LG;if(MAY.isCrisis(q)){r=offline(q);window.__mayLang='es'}/* CHARLA_V1: crisis con prioridad absoluta */
-  const CR=!r&&window.OSN_CREATOR_REPLY&&OSN_CREATOR_REPLY('may',q);if(CR)r=CR;
-  if(!r&&CH){const c=CH.turn(q);if(c){r=c.text;window.__mayLang=c.lang}}/* CREADOR_V1: prioridad sobre API y reglas genéricas */
-  if(!r&&online){try{const res=await fetch(API+'/api/may',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:history})});if(res.ok)r=(await res.json()).reply}catch(e){}}
-  if(!r){r=offline(q)}
-  const left=wait-(Date.now()-t0);if(left>0)await new Promise(z=>setTimeout(z,left));w.classList.remove('mc-typing');
-  w.innerHTML=linkify(r);try{window.mayMoodUI&&mayMoodUI()}catch(e){}try{MAY.log('user',q);MAY.log('may',r)}catch(e){}history.push({role:'may',text:r});history=history.slice(-12);speak(r)}
- $('mcForm').onsubmit=e=>{e.preventDefault();const q=$('mcInput').value.trim();if(!q)return;$('mcInput').value='';ask(q)};
+ async function ask(q){add('user',q);const modo=($('mcModo')&&$('mcModo').value)||'local';let r=null,meta='',role='may',hablar=false;
+  if(MAY.isCrisis(q)){r=offline(q);meta='Mensaje local de emergencia. No es Gemini ni Grok.';window.__mayLang='es';hablar=true}
+  else if(modo==='proveedor'){
+    const w=add('sistema','Consultando al proveedor… todavía no hay respuesta.');
+    const previos=history.filter(m=>m&&(m.role==='user'||m.role==='may')&&typeof m.text==='string').map(m=>({rol:m.role==='user'?'usuario':'personaje',texto:m.text}));
+    const pack=window.OSN_IA_NUCLEO&&OSN_IA_NUCLEO.prepararMensajes(previos.concat([{rol:'usuario',texto:q}]));
+    let res;
+    if(!window.OSN_IA)res={ok:false,estado:'configuracion_pendiente',mensaje:'Configuración pendiente: falta el cliente del puente. No hay respuesta de un proveedor.'};
+    else if(pack&&!pack.ok)res={ok:false,estado:pack.error,mensaje:pack.mensaje};
+    else res=await OSN_IA.preguntar({papel:'personaje',personaje:'may',proveedor:($('mcProveedor')&&$('mcProveedor').value)||'gemini',mensajes:pack.mensajes});
+    w.remove();
+    if(!res||!res.ok||!res.texto){role='sistema';r=(res&&res.mensaje)||'Sin respuesta del proveedor. Esto no es una contestación de MAY, Gemini ni Grok.';meta='Estado: '+((res&&res.estado)||'desconectado')}
+    else{r=res.texto;meta=OSN_IA.etiquetaServicio(res);hablar=r.length<=1500;if(r.length>1500)meta+=' Texto largo: no se lee entero en voz.'}
+  }else{
+    const w=add('may','MAY está escribiendo…');w.classList.add('mc-typing');const t0=Date.now(),wait=400+Math.random()*500;
+    const CH=window.__mayCharla||(window.OSN_CHARLA&&(window.__mayCharla=OSN_CHARLA({who:'may',state:()=>MAY.state,save:()=>MAY.save(),ui:()=>'es',isCrisis:x=>MAY.isCrisis(x)})));const LG=CH?CH.langOf(q):'es';window.__mayLang=LG;
+    const CR=window.OSN_CREATOR_REPLY&&OSN_CREATOR_REPLY('may',q);if(CR)r=CR;
+    if(!r&&CH){const c=CH.turn(q);if(c){r=c.text;window.__mayLang=c.lang}}
+    if(!r)r=offline(q);
+    meta='Personalidad local de esta página. No es Gemini ni Grok.';hablar=r.length<=1500;
+    const left=wait-(Date.now()-t0);if(left>0)await new Promise(z=>setTimeout(z,left));w.remove();
+  }
+  add(role,r,meta);try{window.mayMoodUI&&mayMoodUI()}catch(e){}try{MAY.log('user',q);if(role==='may')MAY.log('may',r,meta)}catch(e){}
+  history.push({role:'user',text:q});if(role==='may')history.push({role:'may',text:r});if(hablar&&r)speak(r)}
+ $('mcForm').onsubmit=e=>{e.preventDefault();const q=$('mcInput').value;if(!q.trim())return;$('mcInput').value='';if($('mcCuenta'))$('mcCuenta').textContent='0 caracteres';ask(q)};
+ if($('mcInput'))$('mcInput').addEventListener('input',()=>{const n=$('mcInput').value.length;if($('mcCuenta'))$('mcCuenta').textContent=n+' caracteres'+(n>40000?' · supera 40000: no se enviará ni se recortará':'')});
  // --- Micrófono (Web Speech API, es-ES) ---
  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
  if(!SR){$('mcMic').disabled=true;$('mcMic').title='Tu navegador no admite reconocimiento de voz'}
  else{let rec=null;$('mcMic').onclick=()=>{if(rec){rec.stop();return}rec=new SR();rec.lang={es:'es-ES',en:'en-GB',pt:'pt-PT',fr:'fr-FR',it:'it-IT'}[window.__mayLang||'es']||'es-ES';rec.interimResults=false;$('mcMic').classList.add('rec');
   rec.onresult=e=>{const q=e.results[0][0].transcript.trim();if(q)ask(q)};rec.onend=()=>{rec=null;$('mcMic').classList.remove('rec')};rec.onerror=()=>{};rec.start()}}
  // --- Comprobar backend ---
- (HASAPI?fetch(API+'/api/may',{cache:'no-store'}):Promise.reject()).then(r=>r.ok?r.json():null).then(d=>{online=!!(d&&d.ok)}).catch(()=>{}).finally(()=>{st.textContent=online?'● MAY en línea (IA)':'● MAY · personalidad Copilot (modo web)';st.className='mc-status '+(online?'on':'off');loadPoll()});
+ (async()=>{if(!window.OSN_IA){online=false;st.textContent='● Configuración pendiente: falta el cliente del puente. No hay IA en vivo.';st.className='mc-status off';loadPoll();return}const s=await OSN_IA.refrescar();online=s.estado==='conectado';st.textContent='● '+s.etiqueta;st.className='mc-status '+(online?'on':'off');loadPoll()})();
  {const c=document.createElement('div');c.className='mc-credit';c.innerHTML='MAY · creada por Pedro Sánchez Gómez (Mar Menor) con Copilot y Grok · OSNews · <a href="asdrubal/">🌹 Conoce a Asdrúbal</a>';log.parentNode.insertBefore(c,log.nextSibling)}
- {const H=MAY.history();H.forEach(m=>add(m.r==='u'||m.r==='user'?'user':'may',m.t));MAY.X.onTimer=x=>{add('may',x);speak(x)};const c=document.createElement('div');c.className='mc-credit';c.innerHTML='🔒 Tu memoria con MAY se guarda solo en este dispositivo. <button type="button" id="mcForget" class="mc-forget">Olvidar mis datos</button>';log.parentNode.insertBefore(c,log.nextSibling);$('mcForget').onclick=()=>{MAY.forget();try{mayMoodUI()}catch(e){};log.innerHTML='';add('may','Hecho 💛: he olvidado tu nombre, tus datos y nuestra conversación en este dispositivo.');if(window.__mayCharla)add('may',__mayCharla.welcome())};const wb=MAY.welcome();const CHw=window.OSN_CHARLA&&(window.__mayCharla=window.__mayCharla||OSN_CHARLA({who:'may',state:()=>MAY.state,save:()=>MAY.save(),ui:()=>'es',isCrisis:x=>MAY.isCrisis(x)}));add('may',(CHw&&CHw.welcome())||wb||'¡Hola! Soy MAY, la presentadora IA de OSNews. Pregúntame lo que quieras sobre los debates, los boletines o la comunidad. Y en la encuesta de al lado… tú decides.')}
+ {const H=MAY.history();H.forEach(m=>add(m.r==='u'||m.r==='user'?'user':'may',m.t,m.r==='u'||m.r==='user'?'':(m.o||'Registro guardado en este dispositivo. No certifica un proveedor.')));MAY.X.onTimer=x=>{add('may',x);speak(x)};const c=document.createElement('div');c.className='mc-credit';c.innerHTML='🔒 Tu memoria con MAY se guarda solo en este dispositivo. <button type="button" id="mcForget" class="mc-forget">Olvidar mis datos</button>';log.parentNode.insertBefore(c,log.nextSibling);$('mcForget').onclick=()=>{MAY.forget();try{mayMoodUI()}catch(e){};log.innerHTML='';add('may','Hecho 💛: he olvidado tu nombre, tus datos y nuestra conversación en este dispositivo.');if(window.__mayCharla)add('may',__mayCharla.welcome())};const wb=MAY.welcome();const CHw=window.OSN_CHARLA&&(window.__mayCharla=window.__mayCharla||OSN_CHARLA({who:'may',state:()=>MAY.state,save:()=>MAY.save(),ui:()=>'es',isCrisis:x=>MAY.isCrisis(x)}));add('may',(CHw&&CHw.welcome())||wb||'¡Hola! Soy MAY, la presentadora IA de OSNews. Pregúntame lo que quieras sobre los debates, los boletines o la comunidad. Y en la encuesta de al lado… tú decides.','Presentación local. No es una respuesta de Gemini ni de Grok.')}
 
  /* MAY_EMOCIONES_V1 · indicador de ánimo (hexágono) */
  window.mayMoodUI=function(){const h=$('mcHex');if(!h||!MAY.moodInfo)return;const o=MAY.moodInfo();const E=[['alegria','Alegría','+1'],['sorpresa','Sorpresa','0'],['miedo','Miedo','−1'],['ira','Ira','−1'],['asco','Asco','−1'],['tristeza','Tristeza','−1']];
@@ -1065,7 +1101,7 @@ setInterval(poll, POLL_MS);
  let voter=localStorage.getItem(KEY+'_id');if(!voter){voter=(crypto.randomUUID?crypto.randomUUID():String(Math.random()).slice(2));localStorage.setItem(KEY+'_id',voter)}
  function localCounts(){try{return JSON.parse(localStorage.getItem(KEY+'_counts'))||{si:0,no:0,nose:0}}catch(e){return{si:0,no:0,nose:0}}}
  function show(counts,mine,global){const tot=Object.values(counts).reduce((a,b)=>a+b,0)||1;
-  $('mcPollRes').innerHTML=Object.keys(LBL).map(k=>{const p=Math.round(100*counts[k]/tot);return`<div class="mc-bar${k===mine?' mine':''}"><b>${p}%</b> · ${LBL[k]}${k===mine?' ✓':''}<i style="width:${p}%"></i></div>`}).join('')+`<div class="note">${global?'Total votos: '+Object.values(counts).reduce((a,b)=>a+b,0):'Resultados de este dispositivo (se guardan solo en este navegador). Con un servidor MAY conectado se suma al recuento global.'}</div>`;
+  $('mcPollRes').innerHTML=Object.keys(LBL).map(k=>{const p=Math.round(100*counts[k]/tot);return`<div class="mc-bar${k===mine?' mine':''}"><b>${p}%</b> · ${LBL[k]}${k===mine?' ✓':''}<i style="width:${p}%"></i></div>`}).join('')+`<div class="note">${global?'Recuento de esta instancia del puente (memoria volátil, no es un censo global). Votos: '+Object.values(counts).reduce((a,b)=>a+b,0):'Resultados de este dispositivo (se guardan solo en este navegador).'}</div>`;
   $('mcPollRes').hidden=false;$('mcPollOpts').hidden=true}
  async function loadPoll(){const mine=localStorage.getItem(KEY);if(!mine)return;
   if(online){try{const d=await (await fetch(API+'/api/poll',{cache:'no-store'})).json();return show(d.counts,mine,true)}catch(e){}}show(localCounts(),mine,false)}

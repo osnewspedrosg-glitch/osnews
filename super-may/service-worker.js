@@ -1,20 +1,16 @@
-const c = 'super-may-v1';
-self.addEventListener('install', e => e.waitUntil(
-  caches.open(c).then(x => x.addAll([
-    './',
-    './index.html',
-    './styles.css',
-    './app.js',
-    './manifest.json',
-    './assets/awy.png',
-    './assets/instagram.jpg',
-    './assets/tiktok.jpg',
-    './assets/icon.png'
-  ]))
-));
+const c = 'super-may-v2';
+self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', e => e.waitUntil(
-  caches.keys().then(xs => Promise.all(xs.filter(x => x !== c).map(x => caches.delete(x))))
+  caches.keys().then(xs => Promise.all(xs.filter(x => x !== c).map(x => caches.delete(x)))).then(() => self.clients.claim())
 ));
-self.addEventListener('fetch', e => e.respondWith(
-  caches.match(e.request).then(r => r || fetch(e.request))
-));
+self.addEventListener('fetch', e => {
+  const url = new URL(e.request.url);
+  if (e.request.method !== 'GET' || url.origin !== self.location.origin) return;
+  e.respondWith(
+    fetch(e.request).then(res => {
+      const copia = res.clone();
+      caches.open(c).then(cache => cache.put(e.request, copia)).catch(() => {});
+      return res;
+    }).catch(() => caches.match(e.request))
+  );
+});
