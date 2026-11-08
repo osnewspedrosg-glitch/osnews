@@ -8,6 +8,9 @@ function isolated(response) {
   const headers = new Headers(response.headers);
   headers.set("Cross-Origin-Embedder-Policy", "require-corp");
   headers.set("Cross-Origin-Opener-Policy", "same-origin");
+  if (!headers.has("cross-origin-resource-policy")) {
+    headers.set("Cross-Origin-Resource-Policy", "cross-origin");
+  }
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,
