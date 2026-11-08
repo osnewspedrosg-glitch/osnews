@@ -45,10 +45,26 @@
 }
 
 .azum-guided button {
-  min-height: 2.75rem;
-  margin: 0.35rem 0.35rem 0 0;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 3rem;
+  margin: 0.45rem 0 0;
+  padding: 0.7rem 1rem;
+  border: 2px solid #1f6b4a;
+  border-radius: 12px;
+  background: #1f6b4a;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  touch-action: manipulation;
 }
 
-@media (max-width: 640px) {
-  .azum-guided button { width: 100%; margin-right: 0; }
+.azum-guided-forget {
+  background: #fff;
+  color: #1b1612;
+}
+
+.azum-guided-status[data-kind="error"] {
+  border-color: #9a3412;
 }
