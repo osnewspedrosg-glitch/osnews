@@ -1,0 +1,54 @@
+.azum-guided {
+  margin: 0 0 1rem;
+  padding: 0.9rem;
+  border: 2px solid #1f6b4a;
+  border-radius: 12px;
+  background: #f7fbf8;
+  color: #1b1612;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.azum-guided-label {
+  margin: 0 0 0.4rem;
+  color: #7d2428;
+  font-weight: 700;
+}
+
+.azum-guided h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.4rem;
+}
+
+.azum-guided-note,
+.azum-guided-status,
+.azum-guided-log p {
+  margin: 0.4rem 0;
+  white-space: pre-wrap;
+}
+
+.azum-guided-status {
+  padding: 0.7rem;
+  border: 2px solid #1f6b4a;
+  background: #fff;
+}
+
+.azum-guided textarea,
+.azum-guided button {
+  font: inherit;
+}
+
+.azum-guided textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0.3rem;
+}
+
+.azum-guided button {
+  min-height: 2.75rem;
+  margin: 0.35rem 0.35rem 0 0;
+}
+
+@media (max-width: 640px) {
+  .azum-guided button { width: 100%; margin-right: 0; }
+}
