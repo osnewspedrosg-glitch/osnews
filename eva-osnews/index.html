@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1f4f86">
+  <title>Eva OSNews</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+  <header>
+    <p><a href="../">OSNews</a></p>
+    <h1>Eva OSNews</h1>
+    <p>Recoge una noticia o denuncia para contrastarla. No se publica sola.</p>
+  </header>
+  <main>
+    <p class="banner" id="eva-connection">Conexión con MAY: no conectada</p>
+    <p id="eva-missing"></p>
+    <p class="warn">No escribas datos personales ni sensibles, ni una acusación privada sin un enlace que se pueda contrastar. Lo guardado se queda en este navegador: no se sube al repositorio ni se envía a un servidor.</p>
+    <p id="eva-status-line" aria-live="polite"></p>
+    <p id="eva-error" class="error" hidden></p>
+    <p><button type="button" class="btn" id="eva-new">Nueva denuncia</button></p>
+    <form id="eva-form" hidden>
+      <label>Título <input id="eva-title" name="title" required maxlength="160"></label>
+      <label>País <input id="eva-country" name="country" required maxlength="80"></label>
+      <label>Descripción <textarea id="eva-description" name="description" required rows="5" maxlength="4000"></textarea></label>
+      <label>Fecha del hecho <input id="eva-date" name="factDate" type="date" required></label>
+      <label>URLs de fuentes, una por línea
+        <textarea id="eva-urls" name="sources" required rows="3" placeholder="https://x.com/…"></textarea>
+      </label>
+      <p class="note">Un enlace de X es una pista por contrastar, no una prueba de que el hecho sea cierto.</p>
+      <label>Clasificación de quien escribe
+        <select id="eva-kind" name="kind">
+          <option value="hecho">Hecho</option>
+          <option value="opinion">Opinión</option>
+          <option value="pendiente" selected>Pendiente de clasificar</option>
+        </select>
+      </label>
+      <label>Estado que marcas tú. No es una decisión de MAY.
+        <select id="eva-status" name="status">
+          <option value="recibida" selected>Recibida</option>
+          <option value="pendiente-contraste">Pendiente de contraste</option>
+          <option value="lista-revision-may">Lista para revisión de MAY</option>
+        </select>
+      </label>
+      <input id="eva-created" type="hidden">
+      <div class="row">
+        <button type="submit" class="btn" id="eva-save">Guardar en este navegador</button>
+        <button type="button" class="btn" id="eva-cancel">Cancelar</button>
+      </div>
+    </form>
+    <section id="eva-list" aria-live="polite"></section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

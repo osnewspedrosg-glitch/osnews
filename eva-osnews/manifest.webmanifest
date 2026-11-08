@@ -1,0 +1,10 @@
+{
+  "name": "Eva OSNews",
+  "short_name": "Eva OSNews",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#1f4f86",
+  "lang": "es"
+}
