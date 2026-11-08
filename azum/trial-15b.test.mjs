@@ -24,7 +24,7 @@ test("the 1.5B trial does not replace the installed 0.5B model", async () => {
   assert.match(consentText(), /1\.117\.320\.736/);
   assert.match(consentText(), /8\.763\.949/);
   assert.match(consentText(), /No sustituye el modelo de 0,5B/);
-  assert.match(consentText(), /2,4 GiB/);
+  assert.match(consentText(), /2,9 GiB/);
   assert.match(page, /consent\.checked/);
   assert.match(page, /Cancelar la descarga/);
   assert.match(page, /Cargar el modelo de 1,5B/);

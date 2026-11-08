@@ -77,7 +77,7 @@ export function consentText() {
     `El modelo son ${formatBytes(TRIAL_15B.modelBytes)} bytes, Qwen2.5-1.5B-Instruct Q4_K_M, licencia ${TRIAL_15B.license}.`,
     `El motor aparte son ${formatBytes(TRIAL_15B.wasmBytes)} bytes de WebAssembly y ${formatBytes(TRIAL_15B.moduleBytes)} bytes de JavaScript.`,
     "No sustituye el modelo de 0,5B ni borra su caché.",
-    "En un Chrome de escritorio el proceso llegó a unos 2,4 GiB. No está medido en la tablet: con 8 GB físicos, Android y Chrome también ocupan memoria y la carga puede fallar.",
+    "En un Chrome de escritorio, al abrir esta página, el proceso llegó a unos 2,9 GiB. No está medido en la tablet: con 8 GB físicos, Android y Chrome también ocupan memoria y la carga puede fallar.",
     "La generación va en CPU, con cero capas de GPU. Una copia terminada se reutiliza en este navegador; si la copia queda a medias, la siguiente carga vuelve a pedir el archivo.",
   ].join(" ");
 }
