@@ -28,6 +28,7 @@
   <p>
     <button id="load" type="button">Cargar el modelo de 1,5B</button>
     <button id="cancel" type="button" disabled>Cancelar la descarga</button>
+    <button id="again" type="button">Aprobar otra descarga del modelo</button>
   </p>
   <label>Pregunta<textarea id="question" rows="3"></textarea></label>
   <p>
@@ -36,10 +37,11 @@
   </p>
   <div id="log"></div>
   <script type="module">
-    import { TRIAL_15B, askTrial, consentText, formatBytes, loadTrialModel, prepareTrialIsolation } from "./trial-15b.js";
+    import { TRIAL_15B, askTrial, consentText, loadTrialModel, prepareTrialIsolation, stageText } from "./trial-15b.js";
     const notice = document.querySelector("#notice");
     const consent = document.querySelector("#consent");
     const load = document.querySelector("#load");
+    const again = document.querySelector("#again");
     const cancel = document.querySelector("#cancel");
     const ask = document.querySelector("#ask");
     const status = document.querySelector("#status");
@@ -56,7 +58,7 @@
       status.scrollIntoView({ block: "nearest" });
     }
 
-    load.addEventListener("click", async () => {
+    async function begin(allowDownload) {
       if (!consent.checked) {
         setStatus("Sin la casilla no se descarga nada.", "error");
         return;
@@ -70,34 +72,38 @@
         return;
       }
       load.disabled = true;
+      again.disabled = true;
       cancel.disabled = false;
       const controller = new AbortController();
       download = controller;
-      setStatus("Pidiendo el modelo oficial. 0 %.", "busy");
+      const started = performance.now();
       try {
         const { Wllama } = await import(TRIAL_15B.moduleUrl);
-        const started = performance.now();
         engine = await loadTrialModel(Wllama, {
+          allowDownload,
           signal: controller.signal,
-          onProgress: ({ loaded, total }) => {
-            const whole = total || TRIAL_15B.modelBytes;
-            const pct = whole ? Math.min(100, Math.round((loaded / whole) * 100)) : 0;
-            setStatus(`Descargando el modelo: ${formatBytes(loaded)} de ${formatBytes(whole)} bytes (${pct} %).`, "busy");
+          onStage: (stage, detail) => {
+            const kind = stage === "worker" || stage === "incompleto" || stage === "ausente" ? "error" : "busy";
+            setStatus(stageText(stage, detail), kind);
           },
         });
-        setStatus(`Modelo listo en ${Math.round(performance.now() - started)} ms. Capas de GPU: 0. Aislado: ${self.crossOriginIsolated}.`, "ready");
+        setStatus(stageText("listo", { ms: Math.round(performance.now() - started), isolated: self.crossOriginIsolated }), "ready");
       } catch (error) {
-        const aborted = controller.signal.aborted || String(error).toLowerCase().includes("abort");
+        const aborted = controller.signal.aborted || error?.name === "AbortError";
         engine = null;
-        setStatus(aborted
-          ? "Descarga cancelada. El modelo de 0,5B sigue en su sitio."
-          : `No se pudo cargar: ${error}`, aborted ? "idle" : "error");
+        if (aborted) setStatus("Descarga cancelada. El archivo guardado no se borra y el modelo de 0,5B sigue en su sitio.", "idle");
+        else if (error?.code === "motor-timeout") setStatus(stageText("motor-timeout"), "error");
+        else if (error?.code !== "incomplete-cache" && error?.code !== "missing-cache") setStatus(`No se pudo cargar: ${error}`, "error");
       } finally {
         download = null;
         cancel.disabled = true;
         load.disabled = Boolean(engine);
+        again.disabled = Boolean(engine);
       }
-    });
+    }
+
+    load.addEventListener("click", () => begin(false));
+    again.addEventListener("click", () => begin(true));
 
     cancel.addEventListener("click", () => {
       download?.abort();

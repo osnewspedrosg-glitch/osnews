@@ -22,7 +22,7 @@ export function trialLoadOptions() {
     n_batch: 256,
     n_ubatch: 256,
     n_gpu_layers: 0,
-    n_threads: 2,
+    n_threads: 1,
     n_parallel: 1,
     warmup: false,
     reasoning: false,
@@ -82,14 +82,130 @@ export function consentText() {
   ].join(" ");
 }
 
-export async function loadTrialModel(Wllama, hooks = {}) {
-  const wllama = new Wllama({ default: TRIAL_15B.wasmUrl });
-  await wllama.loadModelFromUrl(TRIAL_15B.modelUrl, {
-    ...trialLoadOptions(),
-    progressCallback: hooks.onProgress,
-    signal: hooks.signal,
+export const MOTOR_TIMEOUT_MS = 120_000;
+
+export function stageText(stage, detail = {}) {
+  const bytes = formatBytes(detail.bytes ?? 0);
+  if (stage === "comprobando") return "Comprobando si el archivo ya está guardado. No se borra nada.";
+  if (stage === "descargando") {
+    const total = detail.total || TRIAL_15B.modelBytes;
+    const pct = total ? Math.min(100, Math.round(((detail.loaded || 0) / total) * 100)) : 0;
+    return `Descargando el modelo: ${formatBytes(detail.loaded || 0)} de ${formatBytes(total)} bytes (${pct} %).`;
+  }
+  if (stage === "guardado") return `Archivo guardado: ${formatBytes(detail.bytes || TRIAL_15B.modelBytes)} bytes. No se vuelve a descargar.`;
+  if (stage === "incompleto") return `La copia guardada no está completa (${bytes}). No la borro y no vuelvo a descargar.`;
+  if (stage === "ausente") return "No hay una copia guardada de este modelo. No empiezo otra descarga.";
+  if (stage === "motor") return "Iniciando el motor en un hilo. Esto no es la descarga.";
+  if (stage === "listo") return `Modelo listo en ${detail.ms} ms. Un hilo de CPU. Capas de GPU: 0. Aislado: ${detail.isolated}.`;
+  if (stage === "motor-timeout") return "El motor no respondió en 2 minutos. El archivo sigue guardado. Pulsa Cargar otra vez: no se vuelve a pedir el peso si la copia está completa.";
+  if (stage === "worker") return `Fallo del motor: ${detail.message}`;
+  return stage;
+}
+
+export function withTimeout(promise, ms, code) {
+  let timer;
+  const timeout = new Promise((_, reject) => {
+    timer = setTimeout(() => reject(Object.assign(new Error(code), { code })), ms);
   });
-  return wllama;
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(timer));
+}
+
+function modelFileName() {
+  return TRIAL_15B.modelUrl.split("/").pop();
+}
+
+export function classifySavedModel(files) {
+  const name = modelFileName();
+  const related = (files || []).filter((file) => file?.metadata?.originalURL === TRIAL_15B.modelUrl || String(file?.name || "").endsWith(`_${name}`));
+  if (!related.length) return { state: "absent", bytes: 0 };
+  const bytes = Math.max(...related.map((file) => Number(file.size) || 0));
+  const complete = related.some((file) => file.size === TRIAL_15B.modelBytes && (file.metadata?.originalSize === TRIAL_15B.modelBytes || file.metadata?.originalURL === TRIAL_15B.modelUrl));
+  return complete ? { state: "complete", bytes: TRIAL_15B.modelBytes } : { state: "incomplete", bytes };
+}
+
+export async function loadTrialModel(Wllama, hooks = {}) {
+  const notes = [];
+  const wllama = new Wllama({ default: TRIAL_15B.wasmUrl }, {
+    logger: {
+      debug() {},
+      log() {},
+      warn: (...parts) => notes.push(parts.join(" ")),
+      error: (...parts) => {
+        const message = parts.join(" ");
+        notes.push(message);
+        hooks.onStage?.("worker", { message });
+      },
+    },
+  });
+  const fail = async (error) => {
+    await wllama.exit().catch(() => {});
+    error.notes = notes;
+    throw error;
+  };
+  try {
+    hooks.onStage?.("comprobando");
+    const saved = classifySavedModel(await wllama.cacheManager.list());
+    if (saved.state === "incomplete") {
+      hooks.onStage?.("incompleto", saved);
+      await wllama.exit().catch(() => {});
+      throw Object.assign(new Error("incomplete-cache"), { code: "incomplete-cache" });
+    }
+    if (saved.state === "absent" && !hooks.allowDownload) {
+      hooks.onStage?.("ausente");
+      await wllama.exit().catch(() => {});
+      throw Object.assign(new Error("missing-cache"), { code: "missing-cache" });
+    }
+    const findModel = async () => (await wllama.modelManager.getModels()).find((item) => item.url === TRIAL_15B.modelUrl);
+    let model = null;
+    if (saved.state === "complete") {
+      hooks.onStage?.("guardado", saved);
+      const name = modelFileName();
+      const files = await wllama.cacheManager.list();
+      const file = files.find((item) => item.metadata?.originalURL === TRIAL_15B.modelUrl)
+        || files.find((item) => item.size === TRIAL_15B.modelBytes && String(item.name || "").endsWith(`_${name}`));
+      if (file && file.metadata?.originalURL !== TRIAL_15B.modelUrl) {
+        await wllama.cacheManager.writeMetadata(file.name, {
+          etag: file.metadata?.etag || "",
+          originalSize: TRIAL_15B.modelBytes,
+          originalURL: TRIAL_15B.modelUrl,
+        });
+      }
+      model = await findModel();
+    } else {
+      hooks.onStage?.("descargando", { loaded: 0, total: TRIAL_15B.modelBytes });
+      await wllama.modelManager.downloadModel(TRIAL_15B.modelUrl, {
+        signal: hooks.signal,
+        progressCallback: (progress) => hooks.onStage?.("descargando", progress),
+      });
+      const again = classifySavedModel(await wllama.cacheManager.list());
+      if (again.state !== "complete") {
+        hooks.onStage?.("incompleto", again);
+        await wllama.exit().catch(() => {});
+        throw Object.assign(new Error("incomplete-cache"), { code: "incomplete-cache" });
+      }
+      hooks.onStage?.("guardado", again);
+      model = await findModel();
+    }
+    if (!model) {
+      hooks.onStage?.("incompleto", saved);
+      await wllama.exit().catch(() => {});
+      throw Object.assign(new Error("incomplete-cache"), { code: "incomplete-cache" });
+    }
+    hooks.onStage?.("motor");
+    const stop = new Promise((_, reject) => {
+      if (!hooks.signal) return;
+      if (hooks.signal.aborted) reject(Object.assign(new Error("abort"), { name: "AbortError" }));
+      hooks.signal.addEventListener("abort", () => reject(Object.assign(new Error("abort"), { name: "AbortError" })), { once: true });
+    });
+    await Promise.race([
+      withTimeout(wllama.loadModel(model, trialLoadOptions()), MOTOR_TIMEOUT_MS, "motor-timeout"),
+      stop,
+    ]);
+    return wllama;
+  } catch (error) {
+    if (error?.code === "incomplete-cache" || error?.code === "missing-cache") throw error;
+    return fail(error);
+  }
 }
 
 export async function askTrial(wllama, messages, userText) {
