@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prueba voluntaria 1,5B</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 1rem; line-height: 1.45; max-width: 40rem; }
+    button, textarea { font: inherit; }
+    button { min-height: 2.75rem; }
+    textarea { width: 100%; box-sizing: border-box; }
+    #log { white-space: pre-wrap; }
+    .warn, #status { border: 2px solid #9a3412; padding: 0.75rem; }
+    #status { border-color: #166534; position: sticky; top: 0; background: #fff; z-index: 1; }
+    #status[data-kind="error"] { border-color: #9a3412; }
+    label.row { display: flex; gap: 0.6rem; align-items: flex-start; }
+    @media (max-width: 640px) {
+      button { width: 100%; margin: 0.25rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Prueba voluntaria, no es el modelo de la página</h1>
+  <p id="status" data-kind="idle" aria-live="polite">Todavía no se ha pedido el archivo.</p>
+  <p class="warn" id="notice"></p>
+  <p>Azum sigue usando el modelo de 0,5B. Esta pantalla no lo cambia y no borra su caché. Gemini y los pagos no intervienen.</p>
+  <label class="row"><input id="consent" type="checkbox"> <span>Entiendo el tamaño y quiero cargarlo en este navegador.</span></label>
+  <p>
+    <button id="load" type="button">Cargar el modelo de 1,5B</button>
+    <button id="cancel" type="button" disabled>Cancelar la descarga</button>
+  </p>
+  <label>Pregunta<textarea id="question" rows="3"></textarea></label>
+  <p>
+    <button id="ask" type="button">Preguntar</button>
+    <button id="forget" type="button">Olvidar esta conversación</button>
+  </p>
+  <div id="log"></div>
+  <script type="module">
+    import { TRIAL_15B, askTrial, consentText, formatBytes, loadTrialModel, prepareTrialIsolation } from "./trial-15b.js";
+    const notice = document.querySelector("#notice");
+    const consent = document.querySelector("#consent");
+    const load = document.querySelector("#load");
+    const cancel = document.querySelector("#cancel");
+    const ask = document.querySelector("#ask");
+    const status = document.querySelector("#status");
+    const question = document.querySelector("#question");
+    const log = document.querySelector("#log");
+    notice.textContent = consentText();
+    let engine = null;
+    let download = null;
+    let messages = [{ role: "system", content: TRIAL_15B.system }];
+
+    function setStatus(text, kind) {
+      status.dataset.kind = kind || "idle";
+      status.textContent = text;
+      status.scrollIntoView({ block: "nearest" });
+    }
+
+    load.addEventListener("click", async () => {
+      if (!consent.checked) {
+        setStatus("Sin la casilla no se descarga nada.", "error");
+        return;
+      }
+      setStatus("Preparando el navegador para el motor.", "busy");
+      const isolation = await prepareTrialIsolation(window);
+      if (isolation !== "ready") {
+        setStatus(isolation === "reload-needed"
+          ? "El navegador va a recargar una vez para activar el motor. Después hay que marcar la casilla otra vez."
+          : "Este navegador no ha podido aislar el motor. No se ha pedido el modelo.", "error");
+        return;
+      }
+      load.disabled = true;
+      cancel.disabled = false;
+      const controller = new AbortController();
+      download = controller;
+      setStatus("Pidiendo el modelo oficial. 0 %.", "busy");
+      try {
+        const { Wllama } = await import(TRIAL_15B.moduleUrl);
+        const started = performance.now();
+        engine = await loadTrialModel(Wllama, {
+          signal: controller.signal,
+          onProgress: ({ loaded, total }) => {
+            const whole = total || TRIAL_15B.modelBytes;
+            const pct = whole ? Math.min(100, Math.round((loaded / whole) * 100)) : 0;
+            setStatus(`Descargando el modelo: ${formatBytes(loaded)} de ${formatBytes(whole)} bytes (${pct} %).`, "busy");
+          },
+        });
+        setStatus(`Modelo listo en ${Math.round(performance.now() - started)} ms. Capas de GPU: 0. Aislado: ${self.crossOriginIsolated}.`, "ready");
+      } catch (error) {
+        const aborted = controller.signal.aborted || String(error).toLowerCase().includes("abort");
+        engine = null;
+        setStatus(aborted
+          ? "Descarga cancelada. El modelo de 0,5B sigue en su sitio."
+          : `No se pudo cargar: ${error}`, aborted ? "idle" : "error");
+      } finally {
+        download = null;
+        cancel.disabled = true;
+        load.disabled = Boolean(engine);
+      }
+    });
+
+    cancel.addEventListener("click", () => {
+      download?.abort();
+      setStatus("Cancelando la descarga.", "busy");
+    });
+
+    ask.addEventListener("click", async () => {
+      if (!engine) {
+        setStatus("El modelo de 1,5B no está cargado.", "error");
+        return;
+      }
+      const text = question.value;
+      ask.disabled = true;
+      const started = performance.now();
+      setStatus("Generando en este navegador.", "busy");
+      try {
+        const answer = await askTrial(engine, messages, text);
+        log.textContent += `Tú: ${text}\nAzum: ${answer}\n${Math.round(performance.now() - started)} ms\n\n`;
+        question.value = "";
+        setStatus("Respuesta generada en este navegador.", "ready");
+      } catch (error) {
+        setStatus(`La generación falló: ${error}`, "error");
+      }
+      ask.disabled = false;
+    });
+
+    prepareTrialIsolation(window).then((state) => {
+      if (state === "reload-needed") setStatus("El navegador va a recargar una vez para activar el motor. Todavía no se ha pedido el modelo.", "busy");
+    });
+
+    document.querySelector("#forget").addEventListener("click", () => {
+      messages = [{ role: "system", content: TRIAL_15B.system }];
+      log.textContent = "";
+      setStatus("Se olvidó esta conversación. El archivo del modelo sigue cargado y el modelo de 0,5B no se ha tocado.", "idle");
+    });
+  </script>
+</body>
+</html>
