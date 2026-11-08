@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prueba voluntaria 1,5B</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 1rem; line-height: 1.4; max-width: 40rem; }
+    button, textarea { font: inherit; }
+    button { min-height: 2.75rem; }
+    textarea { width: 100%; }
+    #log { white-space: pre-wrap; }
+    .warn { border: 1px solid #9a3412; padding: 0.75rem; }
+  </style>
+</head>
+<body>
+  <h1>Prueba voluntaria, no es el modelo de la página</h1>
+  <p class="warn" id="notice"></p>
+  <p>El modelo que usa Azum sigue siendo el de 0,5B. Esta pantalla no lo cambia y no borra su caché. Gemini y los pagos no intervienen.</p>
+  <label><input id="consent" type="checkbox"> Entiendo el tamaño y quiero cargarlo en este navegador.</label>
+  <p><button id="load" type="button">Cargar el modelo de 1,5B</button></p>
+  <p id="status">Todavía no se ha pedido el archivo.</p>
+  <label>Pregunta<textarea id="question" rows="3"></textarea></label>
+  <p><button id="ask" type="button">Preguntar</button> <button id="forget" type="button">Olvidar esta conversación</button></p>
+  <div id="log"></div>
+  <script type="module">
+    import { TRIAL_15B, askTrial, consentText, loadTrialModel } from "./trial-15b.js";
+    const notice = document.querySelector("#notice");
+    const consent = document.querySelector("#consent");
+    const load = document.querySelector("#load");
+    const ask = document.querySelector("#ask");
+    const status = document.querySelector("#status");
+    const question = document.querySelector("#question");
+    const log = document.querySelector("#log");
+    notice.textContent = consentText();
+    let engine = null;
+    let messages = [{ role: "system", content: TRIAL_15B.system }];
+    const params = new URLSearchParams(location.search);
+    const modelUrl = params.get("model") || TRIAL_15B.modelUrl;
+
+    load.addEventListener("click", async () => {
+      if (!consent.checked) {
+        status.textContent = "Sin la casilla no se descarga nada.";
+        return;
+      }
+      load.disabled = true;
+      status.textContent = "Cargando en este navegador. Puede tardar y usar unos 2,4 GiB medidos en un Chrome de escritorio, no en la tablet.";
+      try {
+        const { Wllama } = await import(TRIAL_15B.moduleUrl);
+        const started = performance.now();
+        engine = await loadTrialModel(Wllama, modelUrl);
+        status.textContent = `Modelo cargado en ${Math.round(performance.now() - started)} ms. WebGPU de capas: 0. Aislado: ${self.crossOriginIsolated}.`;
+      } catch (error) {
+        load.disabled = false;
+        status.textContent = `No se pudo cargar: ${error}`;
+      }
+    });
+
+    ask.addEventListener("click", async () => {
+      if (!engine) {
+        status.textContent = "El modelo de 1,5B no está cargado.";
+        return;
+      }
+      const text = question.value;
+      ask.disabled = true;
+      const started = performance.now();
+      try {
+        const answer = await askTrial(engine, messages, text);
+        log.textContent += `Tú: ${text}\nAzum: ${answer}\n${Math.round(performance.now() - started)} ms\n\n`;
+        question.value = "";
+        status.textContent = "Respuesta generada en este navegador.";
+      } catch (error) {
+        status.textContent = `La generación falló: ${error}`;
+      }
+      ask.disabled = false;
+    });
+
+    document.querySelector("#forget").addEventListener("click", () => {
+      messages = [{ role: "system", content: TRIAL_15B.system }];
+      log.textContent = "";
+      status.textContent = "Se olvidó esta conversación. El archivo del modelo sigue cargado y el modelo de 0,5B no se ha tocado.";
+    });
+  </script>
+</body>
+</html>
