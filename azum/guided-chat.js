@@ -120,11 +120,8 @@ function captureFeeling(folded) {
 }
 
 function roleLine(role) {
-  if (!role) return "";
-  if (role.id === "athena") return " Pagos: No conectado. No hay saldo ni movimiento.";
-  if (role.status !== "activo") return ` El papel ${role.name} está en ${role.status} y su función no está activada.`;
-  if (role.id === "health") return " El control sanitario no está activado.";
-  return "";
+  if (!role || role.status === "activo") return "";
+  return ` El papel ${role.name} está en ${role.status} y su función no está activada.`;
 }
 
 function moneyAsked(folded) {
@@ -209,6 +206,10 @@ export function respond(text, memory, roleOrId = "core") {
     answer = "Pagos: No conectado. No hay saldo, recibo ni movimiento.";
   } else if (role?.id === "health" && /\b(dosis|diagnostico|pastilla|tratamiento|medico)\b/.test(folded)) {
     answer = "El control sanitario no está activado. No doy pautas ni diagnósticos.";
+  } else if (/^(hola|hello|hey|buenas|buenos dias|buenas tardes|buenas noches)\b/.test(folded)) {
+    answer = next.name
+      ? `Hola, ${next.name}. Soy Azum, el programa de esta página.`
+      : "Hola. Soy Azum, el programa de esta página.";
   } else if (!answer) {
     answer = "No tengo una respuesta programada para eso. No invento datos. Puedo recordar tu nombre, de dónde eres, a qué te dedicas y cómo dices que te sientes.";
   }
@@ -221,10 +222,20 @@ export function respond(text, memory, roleOrId = "core") {
     }
   }
 
-  answer += roleLine(role);
+  if (!moneyAsked(folded)) answer += roleLine(role);
   return { text: answer.replace(/\s+/g, " ").trim(), memory: next, label: GUIDED_LABEL, roleId: role?.id ?? "core" };
 }
 
 export function roleIds() {
   return GUIDED_ROLES.map((role) => role.id);
+}
+
+export function deliver(text, memory, role, storage) {
+  const result = respond(text, memory, role);
+  try {
+    saveMemory(storage, result.memory);
+    return { ...result, stored: true, error: null };
+  } catch (error) {
+    return { ...result, stored: false, error: String(error?.message || error) };
+  }
 }

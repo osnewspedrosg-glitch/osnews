@@ -7,6 +7,7 @@ import {
   GUIDED_ROLES,
   STORAGE_KEY,
   emptyMemory,
+  deliver,
   forgetGuidedMemory,
   loadMemory,
   respond,
@@ -70,6 +71,18 @@ test("origin, loneliness and an unknown question stay honest", () => {
   assert.doesNotMatch(result.text, /grados|llueve|Cartagena es/);
   result = respond("de dónde soy", result.memory, "eva");
   assert.match(result.text, /Cartagena/);
+});
+
+test("hola is a visible greeting and a storage failure stays visible", () => {
+  const hello = respond("hola", emptyMemory(), "core");
+  assert.match(hello.text, /^Hola\./);
+  assert.equal(hello.text.includes("No tengo una respuesta programada"), false);
+  const storage = memoryStore();
+  storage.setItem = () => { throw new Error("quota"); };
+  const failed = deliver("hola", emptyMemory(), "core", storage);
+  assert.match(failed.text, /^Hola\./);
+  assert.equal(failed.stored, false);
+  assert.match(failed.error, /quota/);
 });
 
 test("payments stay disconnected and a repeated prompt is not asked again", () => {
