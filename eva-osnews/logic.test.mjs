@@ -1,8 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
-  createEntry, dossier, dossierText, loadEntries, removeEntry, saveEntries, upsertEntry, deliverToMay,
+  createEntry, dossier, dossierText, loadEntries, removeEntry, saveEntries, upsertEntry, deliverToMay, markSent, MAY_DELIVERY,
 } from "./logic.js";
+import { RELAY_URL, payloadFor } from "./may-adapter.js";
 
 function store() {
   const data = new Map();
@@ -51,7 +52,6 @@ test("javascript URLs are rejected and the dossier does not claim a MAY decision
   assert.match(text, /Decisión de MAY: ninguna/);
   assert.match(text, /por contrastar/);
   assert.equal(dossier(made.entry).decisionMay, null);
-  assert.equal(deliverToMay().sent, false);
 });
 
 test("storage starts empty and a full disk is visible", () => {
@@ -59,4 +59,44 @@ test("storage starts empty and a full disk is visible", () => {
   assert.deepEqual(loadEntries(memory).entries, []);
   const full = { getItem: () => "[]", setItem: () => { throw new Error("quota"); } };
   assert.match(saveEntries(full, []).error, /quota/);
+});
+
+const made = () => createEntry({ ...sample, sourcesText: "https://example.org/acta.pdf" }).entry;
+
+test("sending posts only dossier fields to the relay, never a key", async () => {
+  let seen;
+  const fake = async (url, init) => { seen = { url, init }; return new Response(JSON.stringify({ ok: true }), { status: 200 }); };
+  const result = await deliverToMay(made(), fake);
+  assert.equal(result.sent, true);
+  assert.match(result.message, /Recibirlo no significa publicarlo; MAY decidirá tras contrastar/);
+  assert.equal(seen.url, RELAY_URL);
+  assert.equal(seen.init.headers.Authorization, undefined);
+  assert.deepEqual(Object.keys(JSON.parse(seen.init.body)).sort(), Object.keys(payloadFor(made())).sort());
+});
+
+test("a failed send is reported and the local copy is untouched", async () => {
+  const memory = store();
+  const entry = made();
+  saveEntries(memory, [entry]);
+  const down = await deliverToMay(entry, async () => { throw new Error("offline"); });
+  assert.equal(down.sent, false);
+  assert.match(down.reason, /copia local sigue guardada/);
+  const refused = await deliverToMay(entry, async () => new Response(JSON.stringify({ ok: false, error: "La entrega a MAY aún no está configurada." }), { status: 503 }));
+  assert.equal(refused.sent, false);
+  assert.match(refused.reason, /no está configurada/);
+  assert.equal(loadEntries(memory).entries[0].id, entry.id);
+  assert.equal(markSent(entry, "2026-11-09T07:00:00Z").sentAt, "2026-11-09T07:00:00Z");
+});
+
+test("the banner says not connected until the end-to-end test flips it", () => {
+  assert.equal(MAY_DELIVERY.connected, false);
+  assert.equal(MAY_DELIVERY.label, "Conexión con MAY: no conectada");
+});
+
+test("the page source holds no webhook key or webhook URL", async () => {
+  const { readFile } = await import("node:fs/promises");
+  for (const f of ["app.js", "logic.js", "may-adapter.js", "index.html"]) {
+    const text = await readFile(new URL(`./${f}`, import.meta.url), "utf8");
+    assert.doesNotMatch(text, /Bearer|EVA_WEBHOOK|cursor\.com\/.*webhook/i, f);
+  }
 });

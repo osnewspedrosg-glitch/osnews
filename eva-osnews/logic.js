@@ -1,5 +1,5 @@
-/** Local complaint records. Nothing here contacts MAY or a network. */
-import { deliverToMay, MAY_DELIVERY } from "./may-adapter.js";
+/** Local complaint records. Only may-adapter.js contacts the relay, on request. */
+import { deliverToMay, MAY_DELIVERY, PRIVACY_NOTICE, SENT_MESSAGE } from "./may-adapter.js";
 
 export const STORAGE_KEY = "eva-osnews-entries-v1";
 export const KINDS = ["hecho", "opinion", "pendiente"];
@@ -111,7 +111,7 @@ export function statusLabel(status) { return STATUS_LABEL[status] || status; }
 
 export function dossier(entry) {
   return {
-    aviso: "Expediente local para entrega manual. MAY no lo ha recibido ni ha decidido. Las fuentes están por contrastar.",
+    aviso: entry.sentAt ? "Expediente enviado para revisión. MAY no ha decidido. Las fuentes están por contrastar." : "Expediente local. No enviado a MAY. MAY no ha decidido. Las fuentes están por contrastar.",
     conexionMay: MAY_DELIVERY.label,
     id: entry.id,
     titulo: entry.title,
@@ -143,4 +143,8 @@ export function dossierText(entry) {
   ].join("\n");
 }
 
-export { deliverToMay, MAY_DELIVERY };
+export function markSent(entry, now = new Date().toISOString()) {
+  return { ...entry, sentAt: now };
+}
+
+export { deliverToMay, MAY_DELIVERY, PRIVACY_NOTICE, SENT_MESSAGE };
