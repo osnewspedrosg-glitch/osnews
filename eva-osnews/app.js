@@ -87,7 +87,7 @@ function paint(entries) {
     const sent = document.createElement("p");
     sent.className = "note";
     sent.textContent = entry.sentAt
-      ? `Enviado para revisión el ${new Date(entry.sentAt).toLocaleString()}. Recibirlo no significa publicarlo.`
+      ? `Enviado para revisión el ${new Date(entry.sentAt).toLocaleString("es-ES")}. Recibirlo no significa publicarlo.`
       : "No enviado a MAY todavía.";
     card.append(title, meta, note, body, links, sent, row);
     list.appendChild(card);

@@ -110,13 +110,28 @@ async function clientKey(request) {
   return [...new Uint8Array(digest)].slice(0, 12).map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
+// Second, in-memory layer per Worker instance (the ratelimit binding is approximate).
+const memory = new Map();
+export function memoryAllow(key, limit, now = Date.now(), windowMs = 60000) {
+  const slot = memory.get(key);
+  if (!slot || now - slot.start >= windowMs) {
+    memory.set(key, { start: now, count: 1 });
+    if (memory.size > 5000) memory.clear();
+    return true;
+  }
+  slot.count += 1;
+  return slot.count <= limit;
+}
+
 async function allowed(env, request) {
+  const key = await clientKey(request);
+  if (!memoryAllow("global", 20) || !memoryAllow(`c:${key}`, 3)) return false;
   if (env.RL_GLOBAL) {
     const g = await env.RL_GLOBAL.limit({ key: "global" });
     if (!g.success) return false;
   }
   if (env.RL_CLIENT) {
-    const c = await env.RL_CLIENT.limit({ key: await clientKey(request) });
+    const c = await env.RL_CLIENT.limit({ key });
     if (!c.success) return false;
   }
   return true;

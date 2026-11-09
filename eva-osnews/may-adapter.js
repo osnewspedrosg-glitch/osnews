@@ -48,7 +48,7 @@ export async function deliverToMay(entry, fetchImpl = globalThis.fetch) {
       referrerPolicy: "no-referrer",
     });
   } catch {
-    return { ok: false, sent: false, reason: "No se pudo enviar (sin conexión o servicio caído). Tu copia local sigue guardada." };
+    return { ok: false, sent: false, reason: "No se pudo enviar (sin conexión, servicio caído o envío bloqueado por el navegador). Tu copia local sigue guardada." };
   }
   let data = {};
   try { data = await response.json(); } catch {}

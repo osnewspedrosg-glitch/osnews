@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { handle, validate, ALLOWED_ORIGIN, MAX_BYTES } from "./worker.js";
+import { handle, validate, memoryAllow, ALLOWED_ORIGIN, MAX_BYTES } from "./worker.js";
 
 const good = {
   id: "eva-abc123-xyz",
@@ -13,9 +13,10 @@ const good = {
   status: "recibida",
 };
 const env = { EVA_WEBHOOK_URL: "https://hook.example/run", EVA_WEBHOOK_KEY: "k-secret" };
+let n = 0;
 const req = (body, { origin = ALLOWED_ORIGIN, method = "POST", type = "application/json", path = "/expediente" } = {}) =>
   new Request(`https://w.example${path}`, {
-    method, headers: { Origin: origin, "Content-Type": type },
+    method, headers: { Origin: origin, "Content-Type": type, "CF-Connecting-IP": `10.0.0.${n++}` },
     body: method === "POST" ? (typeof body === "string" ? body : JSON.stringify(body)) : undefined,
   });
 
@@ -77,4 +78,13 @@ test("health check says whether it is configured without leaking secrets", async
   const body = await res.json();
   assert.equal(body.configurado, true);
   assert.doesNotMatch(JSON.stringify(body), /k-secret|hook/);
+});
+
+test("in-memory limiter blocks a burst from one client", () => {
+  const t = 1_000_000;
+  assert.equal(memoryAllow("c:burst", 3, t), true);
+  assert.equal(memoryAllow("c:burst", 3, t), true);
+  assert.equal(memoryAllow("c:burst", 3, t), true);
+  assert.equal(memoryAllow("c:burst", 3, t), false);
+  assert.equal(memoryAllow("c:burst", 3, t + 60001), true);
 });
