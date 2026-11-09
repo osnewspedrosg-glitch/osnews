@@ -1,6 +1,7 @@
 import {
   createEntry, dossier, dossierText, kindLabel, loadEntries,
   removeEntry, saveEntries, statusLabel, upsertEntry, MAY_DELIVERY,
+  deliverToMay, PRIVACY_NOTICE, markSent,
 } from "./logic.js";
 
 const $ = (id) => document.getElementById(id);
@@ -80,9 +81,15 @@ function paint(entries) {
     const copy = button("Copiar expediente", () => copyDossier(entry));
     const file = button("Descargar JSON", () => downloadDossier(entry));
     const text = button("Descargar texto", () => downloadText(entry));
+    const send = button(entry.sentAt ? "Volver a enviar a MAY" : "Enviar a MAY", (event) => sendEntry(entry, event.currentTarget));
     const drop = button("Borrar", () => erase(entry.id));
-    row.append(edit, copy, file, text, drop);
-    card.append(title, meta, note, body, links, row);
+    row.append(send, edit, copy, file, text, drop);
+    const sent = document.createElement("p");
+    sent.className = "note";
+    sent.textContent = entry.sentAt
+      ? `Enviado para revisión el ${new Date(entry.sentAt).toLocaleString()}. Recibirlo no significa publicarlo.`
+      : "No enviado a MAY todavía.";
+    card.append(title, meta, note, body, links, sent, row);
     list.appendChild(card);
   }
 }
@@ -120,13 +127,28 @@ function onSave(event) {
     showError(made.errors.join(" "));
     return;
   }
-  persist(upsertEntry(currentEntries(), made.entry), "Guardado en este navegador.");
+  persist(upsertEntry(currentEntries(), made.entry), "Guardado en este navegador. Puedes enviarlo a MAY con el botón «Enviar a MAY».");
   editing = null;
   $("eva-form").reset();
   $("eva-kind").value = "pendiente";
   $("eva-status").value = "recibida";
   $("eva-save").textContent = "Guardar en este navegador";
   $("eva-form").hidden = true;
+}
+
+async function sendEntry(entry, node) {
+  if (!window.confirm(PRIVACY_NOTICE)) return;
+  showError("");
+  if (node) { node.disabled = true; node.textContent = "Enviando…"; }
+  $("eva-status-line").textContent = "Enviando a MAY…";
+  const result = await deliverToMay(entry);
+  if (result.ok) {
+    persist(upsertEntry(currentEntries(), markSent(entry)), result.message);
+  } else {
+    if (node) { node.disabled = false; node.textContent = "Enviar a MAY"; }
+    $("eva-status-line").textContent = "";
+    showError(result.reason);
+  }
 }
 
 function erase(id) {

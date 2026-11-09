@@ -1,0 +1,13 @@
+{
+  // Cloudflare Workers Free plan. Secrets: EVA_WEBHOOK_URL, EVA_WEBHOOK_KEY
+  // (set with `wrangler secret put`, never committed).
+  "name": "eva-osnews-entrega",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "observability": { "enabled": false },
+  "ratelimits": [
+    { "name": "RL_CLIENT", "namespace_id": "4101", "simple": { "limit": 3, "period": 60 } },
+    { "name": "RL_GLOBAL", "namespace_id": "4102", "simple": { "limit": 20, "period": 60 } }
+  ]
+}
