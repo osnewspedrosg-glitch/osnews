@@ -28,6 +28,13 @@ ul,ol{margin:0;padding-left:20px}li{margin:5px 0}
 #fb{display:none}
 footer{text-align:center;color:var(--mu);font-size:13px;line-height:1.5;margin-top:22px;padding:0 6px calc(28px + env(safe-area-inset-bottom));overflow-wrap:anywhere}
 .creator{color:var(--tx);font-size:14px;font-weight:600;margin:0 0 6px}
+
+.apps{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.app{border:1px solid #00e5ff2e;border-radius:14px;padding:14px 16px;background:#06101ccc}
+.app h3{margin:0 0 4px;font-size:17px;color:var(--tx)}
+.app p{margin:0 0 10px;color:var(--mu);font-size:14px;line-height:1.45}
+.app .btn{margin:0;padding:12px;font-size:16px;border-radius:12px}
+.howto ol{margin-top:6px}
 </style></head><body><main>
 <div class="brand">OSNews · App</div>
 <section class="hero">
@@ -51,6 +58,83 @@ footer{text-align:center;color:var(--mu);font-size:13px;line-height:1.5;margin-t
 <li>🧹 Botón <b>«Olvidar mis datos»</b> para borrarlo todo.</li></ul></section>
 <section class="card"><h2>🔒 Privacidad</h2><p>Tus datos con MAY (nombre, conversación, preferencias) se guardan <b>solo en tu dispositivo</b>. Puedes borrarlos cuando quieras con «Olvidar mis datos».</p></section>
 <a class="btn b3" href="../asdrubal/app/">🌹 Conoce a Asdrúbal, el poeta</a>
+
+<section class="card" id="mas-apps">
+<h2>Más apps OSNews</h2>
+<p>Doce apps nuevas, gratis, para abrir cada proyecto en el móvil. MAY y Asdrúbal siguen arriba, como siempre.</p>
+<div class="howto">
+<p><b>Cómo instalar el APK</b></p>
+<ol>
+<li>Pulsa <b>Descargar APK</b> en la app que quieras.</li>
+<li>Abre el archivo. Si Android lo pide, permite instalar apps de <b>origen desconocido</b> (Ajustes › Aplicaciones › Acceso especial, o el aviso al abrir el APK).</li>
+<li>Confirma la instalación.</li>
+</ol>
+</div>
+<p class="note">Android 7.0 o superior. Las he probado en un Android 14 simulado, todavía no en un móvil real.</p>
+<div class="apps">
+<article class="app">
+<h3>Azum</h3>
+<p>Prototipo local de papeles lógicos y guía emocional. Los pagos no están conectados.</p>
+<a class="btn b2" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/azum-app-v1.0/Azum-OSNews-v1.0.apk" download="Azum-OSNews-v1.0.apk">Descargar APK · Azum</a>
+</article>
+<article class="app">
+<h3>Eva Audio</h3>
+<p>Analiza la frecuencia, el tono y el volumen de un audio o un vídeo en tu dispositivo. Simulación educativa.</p>
+<a class="btn b2" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/eva-app-v1.0/Eva-Audio-OSNews-v1.0.apk" download="Eva-Audio-OSNews-v1.0.apk">Descargar APK · Eva Audio</a>
+</article>
+<article class="app">
+<h3>MAY Core</h3>
+<p>Simulación educativa del núcleo binario MAY Core.</p>
+<a class="btn b2" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/may-core-app-v1.0/MAY-Core-OSNews-v1.0.apk" download="MAY-Core-OSNews-v1.0.apk">Descargar APK · MAY Core</a>
+</article>
+<article class="app">
+<h3>Cleopatra Puntos</h3>
+<p>Máquina de azar de puntos, sin dinero, inspirada en los apuntes de Pedro Sánchez Gómez.</p>
+<a class="btn b2" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/cleopatra-puntos-app-v1.0/Cleopatra-Puntos-OSNews-v1.0.apk" download="Cleopatra-Puntos-OSNews-v1.0.apk">Descargar APK · Cleopatra Puntos</a>
+</article>
+<article class="app">
+<h3>Binary Money</h3>
+<p>Simulación educativa de dinero binario, pago con móvil y renta básica en puntos. No es un banco.</p>
+<a class="btn b2" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/binary-money-app-v1.0/Binary-Money-OSNews-v1.0.apk" download="Binary-Money-OSNews-v1.0.apk">Descargar APK · Binary Money</a>
+</article>
+<article class="app">
+<h3>MAY Producción</h3>
+<p>Chatbot simulado que produce bienes en una economía de puntos y reparte renta básica. Simulación educativa.</p>
+<a class="btn b2" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/may-produccion-app-v1.0/MAY-Produccion-OSNews-v1.0.apk" download="MAY-Produccion-OSNews-v1.0.apk">Descargar APK · MAY Producción</a>
+</article>
+<article class="app">
+<h3>MAY Cuidado</h3>
+<p>Secretaria, salud, psicóloga amiga y Money Digital, con datos locales. No es un diagnóstico médico. En esta app, las notificaciones no funcionan de momento.</p>
+<a class="btn b2" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/may-cuidado-app-v1.0/MAY-Cuidado-OSNews-v1.0.apk" download="MAY-Cuidado-OSNews-v1.0.apk">Descargar APK · MAY Cuidado</a>
+</article>
+<article class="app">
+<h3>MAY Gestos</h3>
+<p>Percibe tus gestos con la cámara en tu dispositivo y reacciona. Juego de lenguaje gestual, simulación educativa.</p>
+<a class="btn b2" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/may-gestos-app-v1.0/MAY-Gestos-OSNews-v1.0.apk" download="MAY-Gestos-OSNews-v1.0.apk">Descargar APK · MAY Gestos</a>
+</article>
+<article class="app">
+<h3>Super MAY</h3>
+<p>Todas tus apps MAY y redes OSNews en un solo lugar.</p>
+<a class="btn b2" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/super-may-app-v1.0/Super-MAY-OSNews-v1.0.apk" download="Super-MAY-OSNews-v1.0.apk">Descargar APK · Super MAY</a>
+</article>
+<article class="app">
+<h3>Eva OSNews</h3>
+<p>Recoge una noticia o una denuncia para contrastarla. No se publica sola. La conexión con MAY aún no está conectada.</p>
+<a class="btn b2" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/eva-osnews-app-v1.0/Eva-OSNews-v1.0.apk" download="Eva-OSNews-v1.0.apk">Descargar APK · Eva OSNews</a>
+</article>
+<article class="app">
+<h3>awy Redes</h3>
+<p>El espacio personal de awy de X: redes, otras apps y análisis de imágenes.</p>
+<a class="btn b2" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/awy-redes-app-v1.0/awy-Redes-OSNews-v1.0.apk" download="awy-Redes-OSNews-v1.0.apk">Descargar APK · awy Redes</a>
+</article>
+<article class="app">
+<h3>Máquinas de azar</h3>
+<p>Ruleta de ideas y dado para elegir una idea o una tarea. Solo es un juego: sin apuestas ni dinero.</p>
+<a class="btn b2" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/maquinas-azar-app-v1.0/Maquinas-de-azar-OSNews-v1.0.apk" download="Maquinas-de-azar-OSNews-v1.0.apk">Descargar APK · Máquinas de azar</a>
+</article>
+</div>
+</section>
+
 <footer>MAY · creada por Pedro Sánchez Gómez (Mar Menor) con Copilot y Grok · OSNews</footer>
 </main>
 <script>
