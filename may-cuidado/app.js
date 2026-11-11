@@ -234,15 +234,20 @@
     }
   ];
 
+  /* Plan de 2 comidas al día (comida y cena), no 5 tomas. Totales aproximados
+     alrededor de 2.100 kcal/día, con pescado o huevo y mucha verdura.
+     Cifras orientativas (BEDCA/USDA typ.), no prescripción médica. */
+  const TWO_MEAL_KCAL_TARGET = 2100;
   const WEEKLY_MENU = [
-    { day: 'Lunes', lunch: 'Lentejas con verduras', dinner: 'Ensalada de garbanzos' },
-    { day: 'Martes', lunch: 'Tortilla de patatas', dinner: 'Gazpacho + pan' },
-    { day: 'Miércoles', lunch: 'Arroz con verduras', dinner: 'Pescado a la plancha' },
-    { day: 'Jueves', lunch: 'Ensalada de garbanzos', dinner: 'Lentejas (sobras)' },
-    { day: 'Viernes', lunch: 'Pescado a la plancha', dinner: 'Tortilla francesa + ensalada' },
-    { day: 'Sábado', lunch: 'Arroz con verduras', dinner: 'Gazpacho' },
-    { day: 'Domingo', lunch: 'Lentejas o cocido suave', dinner: 'Ensalada mixta + huevo' }
+    { day: 'Lunes', lunch: 'Pescado a la plancha con patata, verdura abundante, pan, fruta y un puñado de nueces', lunchKcal: 1202, dinner: 'Tortilla de 3 huevos con garbanzos, ensalada abundante, yogur y fruta', dinnerKcal: 878, totalKcal: 2080 },
+    { day: 'Martes', lunch: 'Lentejas con verduras, 2 huevos, fruta, pan y un poco de nueces', lunchKcal: 1170, dinner: 'Pescado a la plancha con patata, verdura, pan, yogur y fruta', dinnerKcal: 927, totalKcal: 2097 },
+    { day: 'Miércoles', lunch: 'Plato de arroz de gambas y almejas, ensalada, yogur, fruta, pan y nueces', lunchKcal: 1204, dinner: 'Tortilla de 3 huevos con verdura, patata, pan y fruta', dinnerKcal: 890, totalKcal: 2094 },
+    { day: 'Jueves', lunch: 'Ensalada de garbanzos con 2 huevos, verdura, pan, fruta y nueces', lunchKcal: 1225, dinner: 'Pescado a la plancha con verdura, patata, pan, yogur y fruta', dinnerKcal: 898, totalKcal: 2123 },
+    { day: 'Viernes', lunch: 'Pescado a la plancha con arroz, verdura abundante, fruta y nueces', lunchKcal: 1116, dinner: 'Tortilla de 3 huevos con ensalada, patata, pan, yogur y fruta', dinnerKcal: 985, totalKcal: 2101 },
+    { day: 'Sábado', lunch: 'Arroz con verduras, 2 huevos, fruta, pan y nueces', lunchKcal: 1190, dinner: 'Pescado a la plancha con verdura, patata, pan, yogur y fruta', dinnerKcal: 937, totalKcal: 2127 },
+    { day: 'Domingo', lunch: 'Tortilla de patatas (3 huevos) con ensalada, fruta y nueces', lunchKcal: 1065, dinner: 'Pescado a la plancha con verdura, patata, pan, yogur, fruta y un poco de nueces', dinnerKcal: 1056, totalKcal: 2121 }
   ];
+  const WEEKLY_MENU_NOTE = 'Solo 2 comidas al día (comida y cena), no 5 tomas. El total aproximado de cada día ronda las 2.100 kcal, con pescado o huevo y mucha verdura, aliñadas con aceite de oliva. Las cifras son estimaciones (valores typ. BEDCA/USDA: aceite 119 kcal/cda, merluza ≈82 kcal/100 g, huevo ≈78 kcal, arroz crudo ≈354 kcal/100 g, patata cocida ≈77 kcal/100 g, frutos secos ≈650 kcal/100 g). No es una dieta médica ni un recuento de laboratorio.';
 
 
   /* ---------- Calorías aproximadas (caldo OSNews) y rutina de ejercicio ---------- */
@@ -280,9 +285,11 @@
       { id: 'mancuernas', label: 'Mancuernas' },
       { id: 'goma', label: 'Goma elástica' },
       { id: 'esterilla', label: 'Esterilla' },
-      { id: 'barra', label: 'Barra sin discos' }
+      { id: 'barra', label: 'Barra sin discos' },
+      { id: 'bici', label: 'Bici estática', pending: true, pendingNote: 'Pendiente de comprar' }
     ],
     schedule: '35 min lunes, miércoles y viernes. Además, caminar 30–45 min otros días (o el mismo día, si te sienta bien).',
+    bikeNote: 'Cuando tengas la bici estática, puedes añadir 20–30 min suaves. No forma parte de la rutina actual.',
     routine: [
       'Sentadilla a la silla',
       'Press de pecho con mancuernas',
@@ -336,9 +343,12 @@
       '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.disclaimer) + '</p>' +
       '<div class="r-meta" style="margin-top:4px">Aparatos que tienes</div>' +
       '<div class="ex-kit">' + EXERCISE_HOME.kit.map(function (k) {
-        return '<span class="ex-chip">' + escapeHtml(k.label) + '</span>';
+        var extra = k.pending ? ' pending' : '';
+        var label = k.label + (k.pendingNote ? ' — ' + k.pendingNote : '');
+        return '<span class="ex-chip' + extra + '">' + escapeHtml(label) + '</span>';
       }).join('') + '</div>' +
       '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.schedule) + '</p>' +
+      (EXERCISE_HOME.bikeNote ? '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.bikeNote) + '</p>' : '') +
       '<strong style="font-size:0.82rem">Sesión de 35 min (L / X / V)</strong>' +
       '<ol class="ex-list">' + EXERCISE_HOME.routine.map(function (s) {
         return '<li>' + escapeHtml(s) + '</li>';
@@ -644,10 +654,17 @@
   function renderWeeklyMenu() {
     const box = document.getElementById('weekly-menu');
     if (!box) return;
+    var note = document.getElementById('weekly-menu-note');
+    if (note && typeof WEEKLY_MENU_NOTE === 'string') note.textContent = WEEKLY_MENU_NOTE;
     box.innerHTML = WEEKLY_MENU.map(function (w) {
-      return '<div class="week-row"><div class="day">' + escapeHtml(w.day) + '</div><div>' +
-        '<div><strong>Comida:</strong> ' + escapeHtml(w.lunch) + '</div>' +
-        '<div><strong>Cena:</strong> ' + escapeHtml(w.dinner) + '</div></div></div>';
+      var total = (w.totalKcal != null) ? (Number(w.lunchKcal || 0) + Number(w.dinnerKcal || 0)) : null;
+      if (w.totalKcal != null) total = w.totalKcal;
+      return '<div class="week-row"><div class="day">' + escapeHtml(w.day) +
+        (total ? '<div class="day-kcal">≈ ' + total + ' kcal</div>' : '') + '</div><div>' +
+        '<div><strong>Comida:</strong> ' + escapeHtml(w.lunch) +
+        (w.lunchKcal != null ? ' <span class="meal-kcal">≈ ' + w.lunchKcal + ' kcal</span>' : '') + '</div>' +
+        '<div><strong>Cena:</strong> ' + escapeHtml(w.dinner) +
+        (w.dinnerKcal != null ? ' <span class="meal-kcal">≈ ' + w.dinnerKcal + ' kcal</span>' : '') + '</div></div></div>';
     }).join('');
   }
 
@@ -1339,9 +1356,16 @@
     }
 
     if (/ejercicio|rutina|aparatos|mancuernas|esterilla|goma elastica|goma elástica/.test(t)) {
-      return 'Aparatos que tienes: ' + EXERCISE_HOME.kit.map(function (k) { return k.label; }).join(', ') + '.\n' +
+      var have = EXERCISE_HOME.kit.filter(function (k) { return !k.pending; }).map(function (k) { return k.label; });
+      var pending = EXERCISE_HOME.kit.filter(function (k) { return k.pending; }).map(function (k) {
+        return k.label + (k.pendingNote ? ' — ' + k.pendingNote : '');
+      });
+      return 'Aparatos que tienes: ' + have.join(', ') + '.\n' +
+        (pending.length ? ('Pendiente: ' + pending.join(', ') + '.\n') : '') +
         EXERCISE_HOME.schedule + '\nSesión: ' + EXERCISE_HOME.routine.join('; ') + '.\n' +
-        EXERCISE_HOME.walk + '\n' + EXERCISE_HOME.disclaimer;
+        EXERCISE_HOME.walk + '\n' +
+        (EXERCISE_HOME.bikeNote ? EXERCISE_HOME.bikeNote + '\n' : '') +
+        EXERCISE_HOME.disclaimer;
     }
 
     if (/consejos|recomendacion|recomendación|mediterrane|mediterráne|dieta/.test(t)) {
@@ -1379,8 +1403,8 @@
     }
 
     if (/menu|menú|menu semanal|menú semanal/.test(t)) {
-      return 'Menú semanal sencillo (orientativo, no nutrición médica):\n' + WEEKLY_MENU.map(function (w) {
-        return '• ' + w.day + ': comida ' + w.lunch + ' / cena ' + w.dinner;
+      return 'Menú de 2 comidas al día (comida y cena; no 5 tomas). Total aproximado unas ' + TWO_MEAL_KCAL_TARGET + ' kcal/día, con pescado o huevo y mucha verdura. Cifras orientativas, no nutrición médica:\n' + WEEKLY_MENU.map(function (w) {
+        return '• ' + w.day + ' (≈ ' + w.totalKcal + ' kcal): comida ' + w.lunch + ' (≈ ' + w.lunchKcal + ') / cena ' + w.dinner + ' (≈ ' + w.dinnerKcal + ')';
       }).join('\n') + '\nPuedes «Enviar ingredientes de la semana a Money» en el panel.';
     }
 
@@ -3556,6 +3580,7 @@
     sceneSuggestionFromStats: sceneSuggestionFromStats,
     RECIPES: RECIPES,
     WEEKLY_MENU: WEEKLY_MENU,
+    TWO_MEAL_KCAL_TARGET: TWO_MEAL_KCAL_TARGET,
     sendIngredientsToMoney: sendIngredientsToMoney,
     importSamsungPayload: importSamsungPayload,
     applyHealthSeed: applyHealthSeed,

@@ -1,5 +1,5 @@
 /* MAY OS · Cuidado personal — service worker PWA */
-const CACHE = 'may-cuidado-v12';
+const CACHE = 'may-cuidado-v13';
 const ASSETS = [
   './',
   './index.html',
