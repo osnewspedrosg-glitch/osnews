@@ -762,3 +762,36 @@ button, .btn {
   font-weight: 650;
   white-space: nowrap;
 }
+
+.buy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 10px;
+}
+.buy-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 8px;
+  align-items: center;
+  background: var(--card-soft);
+  border-radius: 10px;
+  padding: 7px 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.buy-row.bought {
+  opacity: 0.62;
+}
+.buy-row.bought .buy-name {
+  text-decoration: line-through;
+}
+.buy-row input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--yellow);
+  margin: 0;
+}
+.buy-name { font-weight: 650; }
+.buy-qty { color: var(--muted); font-size: 0.72rem; white-space: nowrap; }
+.buy-line { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }

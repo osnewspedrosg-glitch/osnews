@@ -23,7 +23,7 @@ URL prevista: `https://osnewspedrosg-glitch.github.io/osnews/may-cuidado/`
 
 ## Archivos
 
-`index.html` · `styles.css` · `app.js` · `manifest.json` · `service-worker.js` (caché **may-cuidado-v13**)
+`index.html` · `styles.css` · `app.js` · `manifest.json` · `service-worker.js` (caché **may-cuidado-v14**)
 
 ## Aviso
 
@@ -37,7 +37,7 @@ Seguimiento personal · No es diagnóstico médico.
 - Límite honesto de origen: **12 MB**; máximo **40** fotos; aviso si el JPEG sigue > 1,5 MB.
 - Galería con categoría, fecha, texto, preview y borrar.
 - **Sin subida a la nube y sin OCR automático.**
-- Service worker caché: `may-cuidado-v13`.
+- Service worker caché: `may-cuidado-v14`.
 
 
 
@@ -73,3 +73,7 @@ Las recetas (incluido el caldo de gambas y almejas, con calorías **aproximadas*
 El menú semanal es de **2 comidas al día** (comida y cena), con un total aproximado de unas 2.100 kcal y platos de pescado o huevo y mucha verdura. Cifras orientativas.
 
 En ejercicio, la bici estática aparece como **pendiente de comprar** y no entra en la rutina actual; cuando esté, se pueden añadir 20–30 min suaves.
+
+## Compra del mes
+
+La sección «Compra del mes» muestra una lista importada (artículos, precios y casillas de comprado) **solo en el dispositivo**. No hay carritos ni precios en el código publicado. Se carga con el mismo enlace `#import=` o JSON `may-cuidado-seed` que el perfil/báscula. La app no hace pedidos.
