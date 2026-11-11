@@ -13,6 +13,8 @@ import {
   respond,
   roleIds,
   saveMemory,
+  chooseRole,
+  dispatch,
 } from "./guided-chat.js";
 
 function memoryStore(initial = {}) {
@@ -94,4 +96,62 @@ test("payments stay disconnected and a repeated prompt is not asked again", () =
   result = respond("cuál es mi saldo de PayPal", result.memory, "athena");
   assert.match(result.text, /No conectado/);
   assert.doesNotMatch(result.text, /\d+\s*€|saldo es/);
+});
+
+function fakeLorena({ emotion = "tristeza", intensity = 7, trend = "estable", valence = -1 } = {}) {
+  const calls = { analyze: 0, memory: 0, respond: 0, order: [] };
+  return {
+    calls,
+    analyze() {
+      calls.analyze += 1;
+      calls.order.push("analyze");
+      return { emotion, intensity, trend, valence, label: emotion, detected: true };
+    },
+    memory() {
+      calls.memory += 1;
+      calls.order.push("memory");
+      return { user: { last: null, turns: 0 }, assistant: { replies: 0 } };
+    },
+    respond(_text, base) {
+      calls.respond += 1;
+      calls.order.push("respond");
+      return { text: `ANOTADA ${base}`, tone: "validacion" };
+    },
+  };
+}
+
+test("Lorena alimenta la decisión de Azum y solo hay una respuesta", () => {
+  const storage = memoryStore();
+  const lorena = fakeLorena();
+  const result = dispatch("Me llamo Ana y estoy muy triste", emptyMemory(), "core", storage, lorena);
+  assert.equal(lorena.calls.analyze, 1, "Lorena analiza antes de decidir");
+  assert.ok(lorena.calls.order.indexOf("analyze") < lorena.calls.order.indexOf("respond"));
+  assert.equal(result.requestedRole, "core");
+  assert.equal(result.chosenRole, "eva", "con tristeza intensa Azum elige EVA");
+  assert.equal(result.analysis.emotion, "tristeza");
+  assert.equal(result.analysis.intensity, 7);
+  assert.equal(typeof result.text, "string");
+  assert.equal(Array.isArray(result.text), false);
+  assert.match(result.text, /^ANOTADA /);
+  assert.match(result.text, /Encantada, Ana|Soy Azum|sentirte en tristeza/);
+  assert.equal((result.text.match(/^ANOTADA /gm) || []).length, 1, "Lorena no añade una segunda respuesta");
+  assert.equal(roleIds().length, 13);
+});
+
+test("un papel elegido a propósito se respeta y Lorena solo adapta el tono", () => {
+  const lorena = fakeLorena({ emotion: "tristeza", intensity: 8 });
+  const result = dispatch("estoy triste", emptyMemory(), "isabella", memoryStore(), lorena);
+  assert.equal(result.chosenRole, "isabella");
+  assert.equal(chooseRole("health", { emotion: "tristeza", intensity: 9, valence: -1 }), "health");
+  assert.equal(chooseRole("core", { emotion: "alegria", intensity: 7, valence: 1 }), "core");
+  assert.equal(chooseRole("core", { emotion: "ansiedad", intensity: 6, valence: -1 }), "eva");
+  assert.match(result.text, /^ANOTADA /);
+});
+
+test("sin Lorena, Azum sigue dando una sola respuesta programada", () => {
+  const result = dispatch("hola", emptyMemory(), "core", memoryStore(), null);
+  assert.equal(result.chosenRole, "core");
+  assert.equal(result.analysis, null);
+  assert.match(result.text, /Soy Azum/);
+  assert.doesNotMatch(result.text, /ANOTADA/);
 });

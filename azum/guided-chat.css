@@ -20,13 +20,18 @@
 }
 
 .azum-guided-note,
-.azum-guided-status,
-.azum-guided-log p {
+.azum-guided-status {
   margin: 0.4rem 0;
-  white-space: pre-wrap;
 }
 
 .azum-guided-status {
+  padding: 0.55rem 0.7rem;
+  color: #3d4a44;
+}
+
+.azum-guided-log p {
+  margin: 0.4rem 0;
+  white-space: pre-wrap;
   padding: 0.7rem;
   border: 2px solid #1f6b4a;
   background: #fff;
