@@ -87,6 +87,10 @@ def run(p):
     pg.goto(BASE + "azum/"); pg.wait_for_selector("#azum-guided .lorena-indicator", timeout=15000)
     pg.fill("#azum-guided-input", "Me llamo Ana y estoy muy triste"); pg.click("#azum-guided-send")
     pg.wait_for_selector("#azum-guided-log p"); reply = pg.text_content("#azum-guided-log p"); ind = pg.text_content("#azum-guided .lorena-indicator")
+    nlog = pg.locator("#azum-guided-log p").count()
+    status = pg.text_content("#azum-guided-status") or ""
+    check("Azum", nlog == 1, "un solo turno visible: %s" % nlog)
+    check("Azum", not status.strip().startswith("Tú:"), "el estado no repite el intercambio: " + status[:160])
     check("Azum", "tristeza" in ind, "indicador: " + ind)
     check("Azum", "Azum:" in reply and any(k in reply for k in ["Gracias por contármelo", "Te leo"]), "respuesta: " + reply[:260])
     pg.reload(); pg.wait_for_selector("#azum-guided .lorena-indicator"); ind2 = pg.text_content("#azum-guided .lorena-indicator")

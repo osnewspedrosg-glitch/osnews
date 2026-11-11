@@ -1,5 +1,5 @@
 import "./lorena.js"; // Módulo Lorena — diseño de Pedro Sánchez Gómez (OSNews): define globalThis.OSN_LORENA
-import { GUIDED_LABEL, deliver, forgetGuidedMemory, loadMemory, STORAGE_KEY } from "./guided-chat.js";
+import { GUIDED_LABEL, dispatch, forgetGuidedMemory, loadMemory, STORAGE_KEY } from "./guided-chat.js";
 
 const KEY = STORAGE_KEY;
 
@@ -72,8 +72,7 @@ export function mount(doc) {
     const turn = doc.createElement("p");
     turn.textContent = text;
     log.appendChild(turn);
-    status.textContent = text;
-    status.scrollIntoView({ block: "nearest" });
+    turn.scrollIntoView({ block: "nearest" });
   }
 
   function roleId() {
@@ -95,11 +94,13 @@ export function mount(doc) {
     lastFire = now;
     lastText = text;
     try {
-      const result = deliver(text, loadMemory(storage), roleId(), storage);
-      if (lorena) result.text = lorena.respond(text, result.text, { lang: "es" }).text;
-      const note = result.stored ? "" : `\nNo se pudo guardar en este aparato: ${result.error}`;
+      // One send → Lorena analyzes → Azum picks one reply → Lorena adapts its tone.
+      const result = dispatch(text, loadMemory(storage), roleId(), storage, lorena);
       status.dataset.kind = result.stored ? "ready" : "error";
-      paint(`Tú: ${text}\nAzum: ${result.text}${note}`);
+      status.textContent = result.stored
+        ? "Respuesta lista. Se queda en este aparato."
+        : `No se pudo guardar en este aparato: ${result.error}`;
+      paint(`Tú: ${text}\nAzum: ${result.text}`);
       input.value = "";
     } catch (error) {
       status.dataset.kind = "error";
@@ -132,11 +133,26 @@ export function mount(doc) {
 }
 
 if (typeof document !== "undefined") {
-  const start = () => mount(document);
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
-  else start();
-  const observer = new MutationObserver(() => {
-    if (!document.getElementById("azum-guided")) start();
-  });
-  if (document.body) observer.observe(document.body, { childList: true, subtree: true });
+  // Mount after load so React can hydrate the static page first (avoids #418).
+  // mount() itself stays synchronous for tests that call it directly.
+  let armed = false;
+  const start = () => { if (armed) mount(document); };
+  const arm = () => {
+    if (armed) return;
+    armed = true;
+    start();
+    if (document.body) {
+      const observer = new MutationObserver(() => {
+        if (!document.getElementById("azum-guided")) start();
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+    }
+  };
+  const afterHydration = () => {
+    if (typeof requestAnimationFrame === "function") {
+      requestAnimationFrame(() => setTimeout(arm, 0));
+    } else setTimeout(arm, 0);
+  };
+  if (document.readyState === "complete") afterHydration();
+  else (document.defaultView || window).addEventListener("load", afterHydration, { once: true });
 }

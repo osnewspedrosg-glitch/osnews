@@ -239,3 +239,52 @@ export function deliver(text, memory, role, storage) {
     return { ...result, stored: false, error: String(error?.message || error) };
   }
 }
+
+/**
+ * Azum is the router. For each user message there is one decision and one reply:
+ * 1) Módulo Lorena analyzes (emotion, intensity, trend, both memories);
+ * 2) Azum uses that analysis to pick a single role/reply;
+ * 3) Lorena adapts the tone of that same reply and must not add another.
+ *
+ * An explicit papel lógico other than the default «core» is respected.
+ * From «core», distress detected by Lorena may be routed to EVA (activo).
+ * Draft roles are never auto-selected.
+ */
+export function chooseRole(preferredRole, analysis, memories) {
+  const requested = typeof preferredRole === "string"
+    ? GUIDED_ROLES.find((item) => item.id === preferredRole)
+    : preferredRole;
+  const requestedId = requested?.id || "core";
+  if (requestedId !== "core") return requestedId;
+
+  const emotion = analysis?.emotion || "";
+  const intensity = Number(analysis?.intensity) || 0;
+  const trend = analysis?.trend;
+  const valence = analysis?.valence;
+  const lastValence = memories?.user?.last
+    ? (memories.user.last.v ?? memories.user.last.valence)
+    : null;
+  const worsening = trend === "empeora" || (typeof lastValence === "number" && valence < 0 && valence < lastValence);
+  if ((/^(tristeza|soledad|ansiedad|miedo)$/.test(emotion) && intensity >= 4) || (worsening && valence < 0 && intensity >= 3)) {
+    return "eva";
+  }
+  return "core";
+}
+
+export function dispatch(text, memory, role, storage, lorena) {
+  const analysis = lorena && typeof lorena.analyze === "function" ? lorena.analyze(text) : null;
+  const memories = lorena && typeof lorena.memory === "function" ? lorena.memory() : null;
+  const roleId = chooseRole(role, analysis, memories);
+  const decided = deliver(text, memory, roleId, storage);
+  decided.analysis = analysis || null;
+  decided.chosenRole = roleId;
+  decided.requestedRole = (typeof role === "string" ? role : role?.id) || "core";
+  if (lorena && typeof lorena.respond === "function") {
+    const shaped = lorena.respond(text, decided.text, { lang: "es" });
+    if (shaped && typeof shaped.text === "string") {
+      decided.text = shaped.text;
+      if (shaped.tone) decided.tone = shaped.tone;
+    }
+  }
+  return decided;
+}
