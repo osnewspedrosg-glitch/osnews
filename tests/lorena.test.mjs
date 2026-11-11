@@ -105,3 +105,18 @@ test("cada app tiene su espacio y lo enlaza", () => {
   assert.match(fs.readFileSync(new URL("azum/guided-chat-ui.js", root), "utf8"), /^import "\.\/lorena\.js";/);
   for (const sw of ["sw.js", "asdrubal/sw.js", "eva-osnews/sw.js"]) assert.match(fs.readFileSync(new URL(sw, root), "utf8"), /lorena\.js/, sw);
 });
+
+test("el programa propio usa la librería de la raíz y lleva el crédito", () => {
+  const html = fs.readFileSync(new URL("lorena/index.html", root), "utf8");
+  const js = fs.readFileSync(new URL("lorena/app.js", root), "utf8");
+  assert.match(html, /<script src="\.\.\/lorena\.js">/);
+  assert.match(html, /Módulo Lorena — diseño de Pedro Sánchez Gómez \(OSNews\)/);
+  assert.match(js, /OSN_LORENA\.create\(\{ app: "lorena"/);
+  assert.match(js, /buttonText: "Borrar memoria Lorena"/);
+  assert.match(js, /lo\.respond\(/);
+  assert.match(js, /lo\.memory\(/);
+  assert.doesNotMatch(js + html, /fetch\(|XMLHttpRequest|sendBeacon|api[_-]?key|stripe|paypal/i, "sin red ni pagos ni claves");
+  const sw = fs.readFileSync(new URL("sw.js", root), "utf8");
+  assert.match(sw, /lorena\/index\.html/);
+  assert.match(sw, /lorena/);
+});

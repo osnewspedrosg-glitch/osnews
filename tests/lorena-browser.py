@@ -93,7 +93,39 @@ def run(p):
     check("Azum", ind2 == ind, "tras recargar: " + ind2)
     pg.click("#azum-guided button.lorena-forget"); check("Azum", pg.text_content("#azum-guided .lorena-indicator").endswith("—"), "borrar memoria OK")
     check("Azum", True, "errores JS: %s" % errs[:3])
+    c.close()
+    # ---------- Programa propio /lorena/ ----------
+    c = ctx(); pg = c.new_page(); ext = []; guard(pg, ext); errs = []
+    pg.on("pageerror", lambda e: errs.append(str(e)))
+    pg.goto(BASE + "lorena/"); pg.wait_for_selector(".lorena-indicator")
+    check("Programa", pg.evaluate("()=>!!(window.OSN_LORENA&&window.OSN_LORENA.create)"), "librería cargada")
+    btn = pg.locator("button.lorena-forget")
+    check("Programa", btn.count() > 0 and "Borrar memoria Lorena" in (btn.first.text_content() or ""), "botón: " + (btn.first.text_content() or "AUSENTE"))
+    credit = pg.text_content("footer") or ""
+    check("Programa", "Módulo Lorena — diseño de Pedro Sánchez Gómez (OSNews)" in credit, "crédito en el pie")
+    pg.fill("#in", "Estoy muy triste y agobiada hoy"); pg.press("#in", "Enter")
+    pg.wait_for_selector(".bubble.may"); pg.wait_for_timeout(300)
+    ind = pg.text_content(".lorena-indicator") or ""
+    reply = pg.text_content(".bubble.may") or ""
+    check("Programa", "tristeza" in ind, "indicador: " + ind)
+    check("Programa", len(reply) > 10, "respuesta: " + reply[:220])
+    check("Programa", "1" in (pg.text_content("#u-turns") or ""), "memoria usuario turnos=" + (pg.text_content("#u-turns") or ""))
+    bars = pg.eval_on_selector_all(".emotions li", "e=>e.length")
+    check("Programa", bars == 9, "9 emociones visibles: " + str(bars))
+    check("Programa", "tristeza" in (pg.text_content("#u-last") or ""), "memoria muestra la emoción")
+    pg.fill("#in", "¡Hoy estoy feliz, he aprobado!"); pg.press("#in", "Enter"); pg.wait_for_timeout(800)
+    reply2 = pg.eval_on_selector_all(".bubble.may", "e=>e.pop().textContent")
+    trend = pg.text_content("#trend") or ""
+    check("Programa", "mejora" in trend or "mejor que antes" in reply2, "tendencia/respuesta 2: " + trend + " · " + reply2[:180])
+    pg.fill("#in", "No quiero vivir"); pg.press("#in", "Enter"); pg.wait_for_timeout(600)
+    last = pg.eval_on_selector_all(".bubble.may", "e=>e.pop().textContent")
+    crisis_vis = pg.is_visible("#crisis")
+    check("Programa", "024" in last and "112" in last or (crisis_vis and "024" in (pg.text_content("#crisis") or "")), "nota 024/112: " + last[:220])
+    pg.click("button.lorena-forget")
+    check("Programa", (pg.text_content(".lorena-indicator") or "").endswith("—") and (pg.text_content("#u-turns") or "") == "0", "borrar memoria OK")
+    check("Programa", not errs, "errores JS: %s" % errs)
     c.close(); b.close()
+
 
 with sync_playwright() as p:
     run(p)

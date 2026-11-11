@@ -2,7 +2,7 @@
 
 **Módulo Lorena — diseño de Pedro Sánchez Gómez (OSNews).**
 
-Bucle de inteligencia emocional para **MAY** (Habla con MAY, `index.html`), **Asdrúbal** (`asdrubal/`), **Eva OSNews** (`eva-osnews/`) y **Azum** (`azum/`, charla guiada):
+Programa propio en [`lorena/`](lorena/) (esquema visual del bucle, charla y memorias en vivo). El mismo módulo se usa también en **MAY** (Habla con MAY, `index.html`), **Asdrúbal** (`asdrubal/`), **Eva OSNews** (`eva-osnews/`) y **Azum** (`azum/`, charla guiada):
 
 ```
 (1) Memoria del historial del usuario ─┐
@@ -28,3 +28,8 @@ Bucle de inteligencia emocional para **MAY** (Habla con MAY, `index.html`), **As
 ## Pruebas
 - `node --test tests/*.test.mjs eva-osnews/*.test.mjs azum/*.test.mjs`
 - Navegador real (Chromium headless, sin red externa): servir la raíz del repo como `/osnews/` (p. ej. `mkdir -p /tmp/s && ln -s "$PWD" /tmp/s/osnews && cd /tmp/s && python3 -m http.server 8799`) y ejecutar `python3 tests/lorena-browser.py http://127.0.0.1:8799/osnews/`.
+
+- El navegador también comprueba el programa propio en `/lorena/`.
+
+## Cómo enchufarlo en otra app
+Copia `lorena.js` y sigue la sección del [README](README.md#cómo-enchufar-lorenajs-en-cualquier-app).
