@@ -23,7 +23,7 @@ URL prevista: `https://osnewspedrosg-glitch.github.io/osnews/may-cuidado/`
 
 ## Archivos
 
-`index.html` · `styles.css` · `app.js` · `manifest.json` · `service-worker.js` (caché **may-cuidado-v6**)
+`index.html` · `styles.css` · `app.js` · `manifest.json` · `service-worker.js` (caché **may-cuidado-v12**)
 
 ## Aviso
 
@@ -37,7 +37,7 @@ Seguimiento personal · No es diagnóstico médico.
 - Límite honesto de origen: **12 MB**; máximo **40** fotos; aviso si el JPEG sigue > 1,5 MB.
 - Galería con categoría, fecha, texto, preview y borrar.
 - **Sin subida a la nube y sin OCR automático.**
-- Service worker caché: `may-cuidado-v6`.
+- Service worker caché: `may-cuidado-v12`.
 
 
 
@@ -55,3 +55,17 @@ Tesseract.js (CDN): extracción conservadora + campos editables + confirmación 
 
 ## Instalar PWA
 Botón Instalar + `beforeinstallprompt` y fallback Chrome Android. GoatCounter evento `/may-cuidado/instalar` (clics, no instalaciones reales). Contador local por dispositivo.
+
+
+## Importar datos de salud (privados, en el dispositivo)
+
+La web es pública (GitHub Pages). **No se publican mediciones ni datos de báscula en el código.**
+
+Para cargar un perfil o una medición en tu navegador:
+
+1. Abre un enlace con fragmento `#import=` (el fragmento no se envía al servidor). La app lo lee, lo guarda en `localStorage` y limpia la barra de direcciones.
+2. O bien, en Salud → «Mis datos», elige un JSON de tipo `may-cuidado-seed` (o el mismo formato en el importador de Samsung Health).
+
+Una importación **no borra** métricas, fotos ni chats que ya tuvieras. Si el mismo identificador ya está guardado, se omite el duplicado.
+
+Las recetas (incluido el caldo de gambas y almejas, con calorías **aproximadas**) y la rutina de ejercicio en casa sí forman parte de la app pública. Son orientación, no consejo médico.

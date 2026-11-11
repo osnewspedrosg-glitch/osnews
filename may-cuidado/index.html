@@ -8,6 +8,22 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <title>MAY OS · Cuidado personal</title>
+  <script>
+    /* Aparta un fragmento #import=… a sessionStorage y lo quita de la barra
+       antes de que carguen analíticas. El fragmento no se envía al servidor;
+       así tampoco queda en el historial ni en la URL visible. */
+    (function () {
+      try {
+        var h = String(location.hash || '');
+        if (h && /(?:^#|[&])(?:may-)?import=/.test(h)) {
+          sessionStorage.setItem('may_cuidado_pending_import', h.replace(/^#/, ''));
+          if (history.replaceState) {
+            history.replaceState(null, '', location.pathname + location.search);
+          }
+        }
+      } catch (e) { /* modo privado / file:// */ }
+    })();
+  </script>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1a1c'/%3E%3Ccircle cx='32' cy='28' r='12' fill='%23f5c518'/%3E%3Cpath d='M14 52c4-12 12-18 18-18s14 6 18 18' fill='%23f5c518'/%3E%3C/svg%3E" />
@@ -151,6 +167,7 @@
       <p class="help-tips">
         <strong>No hay conexión web general a Samsung Health</strong> desde el navegador (no es posible de forma fiable).
         Si exportaste un CSV/JSON desde Samsung Health u otra app, puedes importarlo aquí.
+        También acepta un JSON de tipo <code>may-cuidado-seed</code> (medición o perfil): se guarda solo en este dispositivo, sin subirlo.
         Si el archivo no coincide, usa registro manual o Bluetooth con dispositivos compatibles.
       </p>
       <form class="manual-form" id="samsung-import-form">
@@ -232,6 +249,38 @@
         </form>
         <p class="status-line" id="salud-photo-status">Límite: imagen ≤ 12&nbsp;MB; JPEG máx. 1600&nbsp;px. Sin OCR.</p>
       </div>
+    </section>
+
+
+
+    <section class="panel" id="panel-mis-datos">
+      <h2>Mis datos (este dispositivo)</h2>
+      <p class="help-tips">
+        Perfil y mediciones de báscula guardados <strong>solo en este navegador</strong> (localStorage).
+        No viajan al servidor. Si todavía no hay datos, ábrelos con el enlace de importación que te han dado
+        o con un archivo JSON <code>may-cuidado-seed</code>. Una importación <strong>no borra</strong> lo que ya tuvieras.
+        Seguimiento personal · No es diagnóstico médico.
+      </p>
+      <form class="manual-form" id="health-seed-form">
+        <label class="full">Importar JSON de salud (solo en este dispositivo)
+          <input type="file" name="file" accept=".json,application/json" />
+        </label>
+        <div class="full bt-row">
+          <button type="submit" class="btn btn-primary">Importar en local</button>
+        </div>
+      </form>
+      <p class="status-line" id="mis-datos-status"></p>
+      <div id="mis-datos-view"></div>
+    </section>
+
+    <section class="panel" id="panel-caldo-kcal">
+      <h2>Caldo y arroz de gambas y almejas · calorías</h2>
+      <div id="caldo-kcal-view"></div>
+    </section>
+
+    <section class="panel" id="panel-ejercicio">
+      <h2>Ejercicio en casa (aparatos y rutina)</h2>
+      <div id="ejercicio-view"></div>
     </section>
 
 
