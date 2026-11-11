@@ -22,7 +22,7 @@
     enfermera: {
       name: 'Enfermera · Agente Salud',
       emoji: '🩺',
-      help: 'Salud: métricas, análisis clínicos, recetas, menú, consejos orientativos. Ej.: «peso 72.5», «análisis», «recetas», «menú», «consejos», «historial».'
+      help: 'Salud: métricas, báscula (Mis datos), recetas, calorías del caldo, ejercicio en casa, menú, consejos orientativos. Ej.: «peso 72.5», «mis datos», «caldo», «ejercicio», «recetas», «menú», «consejos».'
     },
     psicologa: {
       name: 'Psicóloga amiga',
@@ -52,7 +52,10 @@
     bluetooth: { name: null, connectedAt: null },
     money: defaultMoney(),
     clinicalLabs: [],
-    prefs: { x_likes: '', x_accounts: '', yt_likes: '', yt_channels: '', notes: '' }
+    prefs: { x_likes: '', x_accounts: '', yt_likes: '', yt_channels: '', notes: '' },
+    healthProfile: {},
+    scaleReadings: [],
+    importedSeedIds: []
   });
 
   let state = loadState();
@@ -202,6 +205,32 @@
         'Añade arroz, luego caldo.',
         'Cuece ~18 min hasta absorber.'
       ]
+    }    ,
+    {
+      id: 'caldo-gambas-almejas',
+      title: 'Caldo y arroz de gambas y almejas · OSNews Canal Cocina',
+      time: '1 hora',
+      cost: 'máx. 10 €',
+      servings: 'comida para 2 días (2 raciones grandes)',
+      ingredients: [
+        { name: 'aceite de oliva', qty: 2, unit: 'cucharadas' },
+        { name: 'tomate frito', qty: 180, unit: 'g' },
+        { name: 'pimentón', qty: 5, unit: 'g' },
+        { name: 'pimienta en grano', qty: 1, unit: 'g' },
+        { name: 'acelgas', qty: 250, unit: 'g' },
+        { name: 'gambas o langostinos', qty: 4, unit: 'ud grandes' },
+        { name: 'almejas', qty: 17, unit: 'ud' },
+        { name: 'pastillas de caldo de pollo', qty: 1, unit: 'ud (mejor 1; la receta usó 2)' },
+        { name: 'arroz (o fideos)', qty: 80, unit: 'g por plato' }
+      ],
+      steps: [
+        'Sofrito: aceite, tomate frito, pimentón y acelgas.',
+        'Pimienta en grano y luego el marisco.',
+        'Agua y la pastilla (mejor 1 por la sal; si usas 2, el caldo queda más salado), cocer 20–30 min.',
+        'Sacar el marisco.',
+        'Tupper para mañana y el resto en la olla para hoy.',
+        'Al día siguiente, echa el arroz en el caldo con el marisco pelado y déjalo cocer unos 18 minutos.'
+      ]
     }
   ];
 
@@ -214,6 +243,319 @@
     { day: 'Sábado', lunch: 'Arroz con verduras', dinner: 'Gazpacho' },
     { day: 'Domingo', lunch: 'Lentejas o cocido suave', dinner: 'Ensalada mixta + huevo' }
   ];
+
+
+  /* ---------- Calorías aproximadas (caldo OSNews) y rutina de ejercicio ---------- */
+  /* No se encontró en el historial la tabla de calorías previa: estas cifras son
+     una estimación nueva, marcada como aproximada, con cantidades razonables
+     según las fotos de la receta y valores nutricionales habituales (BEDCA/USDA). */
+  const CALDO_KCAL = {
+    approx: true,
+    title: 'Caldo y arroz de gambas y almejas',
+    servingsNote: 'La olla da para 2 días: un plato de caldo con marisco y un plato de arroz.',
+    saltTip: 'Usa solo 1 pastilla de caldo de pollo: 2 pastillas dejan el plato muy salado. Las almejas también aportan sal.',
+    disclaimer: 'Cifras aproximadas, no un análisis de laboratorio ni consejo nutricional médico. Las cantidades no se pesaron: se estimaron a la vista de las fotos (4 langostinos grandes, unos 17 almejas, sofrito de tomate frito y aceite, un plato de arroz de 80 g en crudo). Si comes toda la olla de arroz (unos 160 g en crudo), el plato de arroz sube a unas 915 kcal.',
+    items: [
+      { name: 'Aceite de oliva', qty: '27 g (2 cucharadas)', kcal: 239, ref: '884 kcal/100 g (BEDCA/USDA)' },
+      { name: 'Tomate frito', qty: '180 g', kcal: 155, ref: '≈86 kcal/100 g (BEDCA, typ.)' },
+      { name: 'Pimentón', qty: '5 g', kcal: 14, ref: '≈282 kcal/100 g (USDA paprika)' },
+      { name: 'Pimienta en grano', qty: '1 g', kcal: 3, ref: '≈251 kcal/100 g' },
+      { name: 'Acelgas', qty: '250 g crudas', kcal: 48, ref: '≈19 kcal/100 g (BEDCA)' },
+      { name: 'Langostinos, parte comestible', qty: '≈160 g (4 ud grandes con cáscara ≈340 g)', kcal: 150, ref: '≈94 kcal/100 g carne (USDA/BEDCA)' },
+      { name: 'Almejas, parte comestible', qty: '≈75 g (≈17 ud con concha ≈340 g)', kcal: 65, ref: '≈86 kcal/100 g (BEDCA)' },
+      { name: 'Pastilla de caldo de pollo', qty: '2 ud en la receta original (mejor 1)', kcal: 24, ref: '≈12 kcal/pastilla, typ.' }
+    ],
+    ricePlateRawG: 80,
+    riceKcalPer100: 354,
+    riceRef: 'Arroz crudo ≈354 kcal/100 g (BEDCA)',
+    plates: [
+      { id: 'caldo', title: 'Plato de caldo con marisco (1 de 2 raciones, sin arroz)', kcal: 349 },
+      { id: 'arroz', title: 'Plato de arroz con marisco (la otra ración + 80 g de arroz crudo)', kcal: 632 }
+    ]
+  };
+
+  const EXERCISE_HOME = {
+    disclaimer: 'Rutina orientativa para casa, pensada con los aparatos que ya tienes. No es una prescripción médica ni sustituye a un profesional. Consúltalo con tu médico antes de empezar o si algo duele.',
+    kit: [
+      { id: 'mancuernas', label: 'Mancuernas' },
+      { id: 'goma', label: 'Goma elástica' },
+      { id: 'esterilla', label: 'Esterilla' },
+      { id: 'barra', label: 'Barra sin discos' }
+    ],
+    schedule: '35 min lunes, miércoles y viernes. Además, caminar 30–45 min otros días (o el mismo día, si te sienta bien).',
+    routine: [
+      'Sentadilla a la silla',
+      'Press de pecho con mancuernas',
+      'Remo con goma',
+      'Curl de bíceps (mancuernas)',
+      'Press de hombros (mancuernas)',
+      'Peso muerto con barra sin discos',
+      'Puente de glúteo (esterilla)',
+      'Plancha con rodillas (esterilla)',
+      'Estiramientos'
+    ],
+    walk: 'Caminar 30–45 min.'
+  };
+
+  function caldoTotals() {
+    const pot = CALDO_KCAL.items.reduce(function (s, it) { return s + (Number(it.kcal) || 0); }, 0);
+    const rice = Math.round(CALDO_KCAL.ricePlateRawG * CALDO_KCAL.riceKcalPer100 / 100);
+    return { pot: pot, rice: rice, caldoPlate: Math.round(pot / 2), arrozPlate: Math.round(pot / 2) + rice };
+  }
+
+  function renderCaldoKcal() {
+    const box = document.getElementById('caldo-kcal-view');
+    if (!box) return;
+    const tot = caldoTotals();
+    const rows = CALDO_KCAL.items.map(function (it) {
+      return '<tr><td>' + escapeHtml(it.name) + '<div class="hint">' + escapeHtml(it.ref) + '</div></td>' +
+        '<td>' + escapeHtml(it.qty) + '</td><td class="num">' + it.kcal + '</td></tr>';
+    }).join('');
+    box.innerHTML =
+      '<p class="help-tips"><strong>Aproximado.</strong> ' + escapeHtml(CALDO_KCAL.disclaimer) + '</p>' +
+      '<p class="help-tips">' + escapeHtml(CALDO_KCAL.servingsNote) + '</p>' +
+      '<div class="data-note">' + escapeHtml(CALDO_KCAL.saltTip) + '</div>' +
+      '<div class="kcal-plate"><h3>' + escapeHtml(CALDO_KCAL.plates[0].title) + '</h3>' +
+        '<div class="kcal-big">≈ ' + tot.caldoPlate + ' kcal</div>' +
+        '<div class="hint">Mitad de la olla (sofrito + verdura + marisco + pastillas), sin arroz.</div></div>' +
+      '<div class="kcal-plate"><h3>' + escapeHtml(CALDO_KCAL.plates[1].title) + '</h3>' +
+        '<div class="kcal-big">≈ ' + tot.arrozPlate + ' kcal</div>' +
+        '<div class="hint">La otra mitad de la olla + ' + CALDO_KCAL.ricePlateRawG + ' g de arroz crudo (≈ ' + tot.rice + ' kcal). ' + escapeHtml(CALDO_KCAL.riceRef) + '.</div></div>' +
+      '<h3 style="font-size:0.88rem;margin:14px 0 0">Desglose de toda la olla (sin arroz): ≈ ' + tot.pot + ' kcal</h3>' +
+      '<table class="kcal-table"><thead><tr><th>Ingrediente</th><th>Cantidad estimada</th><th>kcal</th></tr></thead><tbody>' +
+      rows + '</tbody></table>' +
+      '<p class="help-tips">' + (state.healthProfile && state.healthProfile.kcal_target
+        ? ('Si usas el objetivo orientativo de Mis datos (unas ' + state.healthProfile.kcal_target + ' kcal/día), estos platos son una parte de ese total, no el menú completo.')
+        : 'Estos platos son una parte del día, no el menú completo. El objetivo de kcal, si lo importas, aparece en Mis datos.') + '</p>';
+  }
+
+  function renderEjercicio() {
+    const box = document.getElementById('ejercicio-view');
+    if (!box) return;
+    box.innerHTML =
+      '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.disclaimer) + '</p>' +
+      '<div class="r-meta" style="margin-top:4px">Aparatos que tienes</div>' +
+      '<div class="ex-kit">' + EXERCISE_HOME.kit.map(function (k) {
+        return '<span class="ex-chip">' + escapeHtml(k.label) + '</span>';
+      }).join('') + '</div>' +
+      '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.schedule) + '</p>' +
+      '<strong style="font-size:0.82rem">Sesión de 35 min (L / X / V)</strong>' +
+      '<ol class="ex-list">' + EXERCISE_HOME.routine.map(function (s) {
+        return '<li>' + escapeHtml(s) + '</li>';
+      }).join('') + '</ol>' +
+      '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.walk) + '</p>';
+  }
+
+  function ensureHealthBoxes() {
+    if (!state.healthProfile || typeof state.healthProfile !== 'object') state.healthProfile = {};
+    if (!Array.isArray(state.scaleReadings)) state.scaleReadings = [];
+    if (!Array.isArray(state.importedSeedIds)) state.importedSeedIds = [];
+  }
+
+  function latestScaleReading() {
+    ensureHealthBoxes();
+    if (!state.scaleReadings.length) return null;
+    return state.scaleReadings.slice().sort(function (a, b) {
+      return String(b.ts || '').localeCompare(String(a.ts || ''));
+    })[0];
+  }
+
+  function formatReadingWhen(ts) {
+    if (!ts) return '—';
+    try {
+      return new Date(ts).toLocaleString('es-ES', {
+        day: '2-digit', month: '2-digit', year: 'numeric',
+        hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid'
+      }) + ' (Europe/Madrid)';
+    } catch (e) {
+      return String(ts);
+    }
+  }
+
+  function renderMisDatos() {
+    const box = document.getElementById('mis-datos-view');
+    if (!box) return;
+    ensureHealthBoxes();
+    const profile = state.healthProfile || {};
+    const reading = latestScaleReading();
+    if (!reading && !profile.age && !profile.height_cm) {
+      box.innerHTML = '<p class="help-tips">Aún no hay perfil ni medición de báscula en este dispositivo. Usa el enlace de importación o un archivo JSON. Receta y ejercicio de abajo sí se pueden ver sin importar.</p>';
+      return;
+    }
+    let html = '';
+    if (profile.sex || profile.age || profile.height_cm || profile.kcal_target) {
+      html += '<div class="kcal-plate"><h3>Perfil</h3><div class="data-grid">';
+      if (profile.sex) html += metricCell('Sexo', profile.sex, '');
+      if (profile.age) html += metricCell('Edad', profile.age, 'años');
+      if (profile.height_cm) html += metricCell('Altura', (Number(profile.height_cm) / 100).toFixed(2).replace('.', ',') + ' m', String(profile.height_cm) + ' cm');
+      if (profile.kcal_target) html += metricCell('Objetivo de dieta', 'unas ' + profile.kcal_target + ' kcal/día', 'Orientativo, no prescripción');
+      html += '</div></div>';
+    }
+    if (reading) {
+      html += '<div class="kcal-plate"><h3>Medición de báscula</h3>' +
+        '<div class="hint">' + escapeHtml(formatReadingWhen(reading.ts)) +
+        (reading.source ? ' · ' + escapeHtml(String(reading.source)) : '') + '</div>' +
+        '<div class="data-grid" style="margin-top:8px">';
+      const cells = [
+        ['Peso', reading.peso != null ? String(reading.peso).replace('.', ',') + ' kg' : null, ''],
+        ['Grasa corporal', pct(reading.body_fat_pct), ''],
+        ['IMC (báscula)', num(reading.imc_scale), 'Dato de la báscula'],
+        ['IMC real (1,87 m)', num(reading.imc_real), 'Con la altura del perfil'],
+        ['Músculo esquelético', pct(reading.skeletal_muscle_pct), ''],
+        ['Masa muscular', kg(reading.muscle_mass_kg), ''],
+        ['Capacidad almacén muscular', reading.muscle_storage_grade != null ? String(reading.muscle_storage_grade) : null, 'Grado'],
+        ['Proteína', pct(reading.protein_pct), ''],
+        ['TMB', reading.tmr_kcal != null ? reading.tmr_kcal + ' kcal' : null, 'Metabolismo en reposo'],
+        ['Peso sin grasa', kg(reading.ffm_kg), ''],
+        ['Grasa subcutánea', pct(reading.subcutaneous_fat_pct), ''],
+        ['Grasa visceral', reading.visceral_fat != null ? String(reading.visceral_fat) : null, 'Índice de la báscula'],
+        ['Agua corporal', pct(reading.water_pct), ''],
+        ['Masa ósea', kg(reading.bone_kg), ''],
+        ['Edad metabólica', reading.metabolic_age != null ? String(reading.metabolic_age) : null, '']
+      ];
+      cells.forEach(function (c) {
+        if (c[1] != null) html += metricCell(c[0], c[1], c[2]);
+      });
+      html += '</div>';
+      if (reading.imc_note) {
+        html += '<div class="data-note">' + escapeHtml(reading.imc_note) + '</div>';
+      }
+      if (reading.delta_since && (reading.delta_kg != null || reading.delta_imc != null)) {
+        var since = String(reading.delta_since);
+        try {
+          var ds = String(reading.delta_since);
+          since = new Date(ds.indexOf('T') >= 0 ? ds : ds + 'T00:00:00+01:00').toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'Europe/Madrid' });
+        } catch (e1) {}
+        html += '<p class="help-tips">Desde el ' + escapeHtml(since || reading.delta_since) + ' la báscula marca ' +
+          (reading.delta_kg != null ? (reading.delta_kg > 0 ? '+' : '') + String(reading.delta_kg).replace('.', ',') + ' kg' : '') +
+          (reading.delta_imc != null ? ' y ' + (reading.delta_imc > 0 ? '+' : '') + String(reading.delta_imc).replace('.', ',') + ' de IMC' : '') +
+          '.</p>';
+      }
+      html += '</div>';
+    }
+    html += '<p class="help-tips">Seguimiento personal · No es diagnóstico médico. Comenta estos datos con tu médico en la próxima revisión.</p>';
+    box.innerHTML = html;
+  }
+
+  function metricCell(label, value, hint) {
+    return '<div class="metric-card"><div class="label">' + escapeHtml(label) + '</div><div class="value">' +
+      escapeHtml(String(value)) + '</div>' +
+      (hint ? '<div class="hint">' + escapeHtml(hint) + '</div>' : '') + '</div>';
+  }
+  function pct(v) { return v == null || v === '' ? null : String(v).replace('.', ',') + ' %'; }
+  function kg(v) { return v == null || v === '' ? null : String(v).replace('.', ',') + ' kg'; }
+  function num(v) { return v == null || v === '' ? null : String(v).replace('.', ','); }
+
+  function setMisDatosStatus(msg, kind) {
+    const n = document.getElementById('mis-datos-status');
+    if (!n) return;
+    n.textContent = msg || '';
+    n.className = 'status-line' + (kind ? ' ' + kind : '');
+  }
+
+  function utf8FromB64url(s) {
+    var t = String(s || '').replace(/-/g, '+').replace(/_/g, '/');
+    while (t.length % 4) t += '=';
+    var bin = atob(t);
+    var out = '';
+    for (var i = 0; i < bin.length; i++) out += '%' + ('00' + bin.charCodeAt(i).toString(16)).slice(-2);
+    return decodeURIComponent(out);
+  }
+
+  function looksLikeHealthSeed(obj) {
+    if (!obj || typeof obj !== 'object') return false;
+    if (Array.isArray(obj)) return false;
+    return obj.type === 'may-cuidado-seed' || (obj.reading && (obj.reading.peso != null || obj.profile));
+  }
+
+  /* Fusiona un JSON de semilla en el estado local. No borra métricas, fotos ni chats previos. */
+  function applyHealthSeed(obj) {
+    ensureHealthBoxes();
+    if (!looksLikeHealthSeed(obj)) {
+      return { ok: false, error: 'El JSON no es un may-cuidado-seed reconocible.' };
+    }
+    const id = String(obj.id || (obj.reading && obj.reading.ts) || '').trim();
+    if (id && state.importedSeedIds.indexOf(id) !== -1) {
+      return { ok: true, skipped: true, id: id, message: 'Esta medición ya estaba guardada en este dispositivo. No se ha duplicado ni se ha borrado nada.' };
+    }
+    let added = [];
+    if (obj.profile && typeof obj.profile === 'object') {
+      Object.keys(obj.profile).forEach(function (k) {
+        if (obj.profile[k] != null && obj.profile[k] !== '') state.healthProfile[k] = obj.profile[k];
+      });
+      added.push('perfil');
+    }
+    if (obj.reading && typeof obj.reading === 'object') {
+      const r = Object.assign({}, obj.reading);
+      if (!r.ts) r.ts = nowIso();
+      if (!r.id) r.id = id || ('seed-' + r.ts);
+      const exists = state.scaleReadings.some(function (x) { return (x.id && x.id === r.id) || (x.ts && x.ts === r.ts && x.peso === r.peso); });
+      if (!exists) {
+        state.scaleReadings.push(r);
+        added.push('medición de báscula');
+      }
+      if (r.peso != null && !isNaN(Number(r.peso))) {
+        const already = (state.metrics || []).some(function (m) {
+          return m && m.source === 'bascula-import' && m.ts === r.ts && Number(m.peso) === Number(r.peso);
+        });
+        if (!already) {
+          state.metrics.push({ ts: r.ts, source: 'bascula-import', peso: Number(r.peso) });
+          added.push('peso en métricas');
+        }
+      }
+    }
+    if (id) state.importedSeedIds.push(id);
+    saveState();
+    return { ok: true, skipped: false, id: id, added: added, message: 'Datos guardados solo en este dispositivo: ' + (added.join(', ') || 'sin campos nuevos') + '.' };
+  }
+
+  function parseImportHash(raw) {
+    const s = String(raw || '').replace(/^#/, '');
+    const parts = s.split('&');
+    for (var i = 0; i < parts.length; i++) {
+      const kv = parts[i].split('=');
+      const k = decodeURIComponent(kv[0] || '');
+      if (k === 'import' || k === 'may-import') {
+        return kv.slice(1).join('=');
+      }
+    }
+    return '';
+  }
+
+  function processPendingImport() {
+    let payload = '';
+    try {
+      payload = sessionStorage.getItem('may_cuidado_pending_import') || '';
+    } catch (e) { payload = ''; }
+    if (!payload) {
+      const h = String(location.hash || '');
+      if (h && /(?:^#|[&])(?:may-)?import=/.test(h)) payload = h.replace(/^#/, '');
+    }
+    if (!payload) return;
+    try { sessionStorage.removeItem('may_cuidado_pending_import'); } catch (e) {}
+    try {
+      if (history.replaceState) history.replaceState(null, '', location.pathname + location.search);
+    } catch (e) {}
+    const b64 = parseImportHash(payload);
+    if (!b64) {
+      setMisDatosStatus('El enlace de importación no traía datos.', 'warn');
+      return;
+    }
+    try {
+      const obj = JSON.parse(utf8FromB64url(b64));
+      const res = applyHealthSeed(obj);
+      setMisDatosStatus(res.message || res.error || '', res.ok ? 'ok' : 'warn');
+      if (res.ok) setAgent('enfermera');
+    } catch (e) {
+      setMisDatosStatus('No se pudo leer el enlace de importación. Prueba el archivo JSON.', 'warn');
+    }
+  }
+
+  function applyHealthSeedFromText(text, filename) {
+    const obj = JSON.parse(text);
+    if (looksLikeHealthSeed(obj)) return applyHealthSeed(obj);
+    throw new Error('no-seed');
+  }
 
   function ensureLabs() {
     if (!Array.isArray(state.clinicalLabs)) state.clinicalLabs = [];
@@ -350,10 +692,16 @@
         bluetooth: Object.assign({ name: null, connectedAt: null }, (parsed && parsed.bluetooth) || {}),
         money: Object.assign(defaultMoney(), (parsed && parsed.money) || {}),
         clinicalLabs: Array.isArray(parsed && parsed.clinicalLabs) ? parsed.clinicalLabs : [],
-        prefs: Object.assign({ x_likes: '', x_accounts: '', yt_likes: '', yt_channels: '', notes: '' }, (parsed && parsed.prefs) || {})
+        prefs: Object.assign({ x_likes: '', x_accounts: '', yt_likes: '', yt_channels: '', notes: '' }, (parsed && parsed.prefs) || {}),
+        healthProfile: Object.assign({}, (parsed && parsed.healthProfile) || {}),
+        scaleReadings: Array.isArray(parsed && parsed.scaleReadings) ? parsed.scaleReadings : [],
+        importedSeedIds: Array.isArray(parsed && parsed.importedSeedIds) ? parsed.importedSeedIds : []
       });
       if (!merged.chats.money) merged.chats.money = [];
       if (!Array.isArray(merged.clinicalLabs)) merged.clinicalLabs = [];
+      if (!merged.healthProfile || typeof merged.healthProfile !== 'object') merged.healthProfile = {};
+      if (!Array.isArray(merged.scaleReadings)) merged.scaleReadings = [];
+      if (!Array.isArray(merged.importedSeedIds)) merged.importedSeedIds = [];
       return merged;
     } catch (e) {
       return defaultState();
@@ -958,16 +1306,45 @@
     const t = normalize(raw);
 
     if (/^(hola|buenas|hey)\b/.test(t)) {
-      return 'Hola. Soy Enfermera · Agente Salud MAY. Registro métricas, análisis clínicos locales, recetas mediterráneas fáciles y un menú semanal sencillo. Consejos solo orientativos según lo registrado. No es diagnóstico médico. ¿Qué necesitas?';
+      return 'Hola. Soy Enfermera · Agente Salud MAY. Registro métricas, Mis datos de báscula (solo en este dispositivo), recetas, calorías aproximadas del caldo de gambas y almejas, ejercicio en casa y un menú semanal sencillo. Consejos solo orientativos. No es diagnóstico médico. ¿Qué necesitas?';
     }
     if (/ayuda|comandos|que puedes/.test(t)) {
-      return 'Comandos Salud:\n• peso / pasos / pulso / sueño / agua\n• historial · resumen · consejos\n• análisis / labs (ver formulario)\n• recetas · menú\n• enviar ingredientes [nombre receta]\nFotos: análisis, receta médica, informe médico. OCR local opcional (Tesseract) con confirmación.\nSamsung Health: importa CSV/JSON (sin conexión web directa).';
+      return 'Comandos Salud:\n• peso / pasos / pulso / sueño / agua\n• mis datos (báscula, en este dispositivo)\n• caldo / calorías (platos aproximados)\n• ejercicio / rutina / aparatos\n• historial · resumen · consejos\n• análisis / labs (ver formulario)\n• recetas · menú\n• enviar ingredientes [nombre receta]\nFotos: análisis, receta médica, informe médico. OCR local opcional (Tesseract) con confirmación.\nImportar: enlace #import= o JSON may-cuidado-seed (solo local; no borra lo anterior).';
     }
     if (/emergencia|urgencia|112|dolor fuerte|me encuentro mal/.test(t)) {
       return 'Si es una emergencia, llama al 112 ahora. Yo solo hago seguimiento personal, no diagnostico ni sustituyo atención sanitaria.';
     }
 
-    if (/consejos|recomendacion|recomendación|mediterrane|mediterráne|ejercicio|dieta/.test(t)) {
+    if (/mis datos|bascula|báscula|medicion|medición de peso|mi perfil/.test(t)) {
+      const r = latestScaleReading();
+      const pr = state.healthProfile || {};
+      if (!r && !pr.age && !pr.height_cm) {
+        return 'Aún no hay medición de báscula en este dispositivo. Ábrela con el enlace de importación o un JSON may-cuidado-seed en el panel «Mis datos». No se publica en la web: se guarda solo aquí. No es diagnóstico médico.';
+      }
+      let lines = ['Datos guardados solo en este dispositivo (no es diagnóstico médico):'];
+      if (pr.age || pr.height_cm || pr.kcal_target) {
+        lines.push('Perfil: ' + (pr.sex || '') + (pr.age ? ', ' + pr.age + ' años' : '') + (pr.height_cm ? ', ' + (pr.height_cm / 100).toFixed(2).replace('.', ',') + ' m' : '') + (pr.kcal_target ? ', objetivo orientativo unas ' + pr.kcal_target + ' kcal/día' : ''));
+      }
+      if (r) {
+        lines.push('Báscula (' + formatReadingWhen(r.ts) + '): peso ' + r.peso + ' kg' + (r.body_fat_pct != null ? ', grasa ' + r.body_fat_pct + ' %' : '') + (r.imc_real != null ? ', IMC real ' + r.imc_real : '') + (r.muscle_mass_kg != null ? ', masa muscular ' + r.muscle_mass_kg + ' kg' : '') + (r.visceral_fat != null ? ', grasa visceral ' + r.visceral_fat : '') + (r.tmr_kcal != null ? ', TMB ' + r.tmr_kcal + ' kcal' : '') + '.');
+        if (r.imc_note) lines.push(r.imc_note);
+      }
+      lines.push('El detalle está en el panel «Mis datos».');
+      return lines.join('\n');
+    }
+
+    if (/caldo|calorias|calorías|gambas y almejas|plato de arroz/.test(t)) {
+      const tot = caldoTotals();
+      return 'Caldo y arroz de gambas y almejas (cifras APROXIMADAS; no se encontró la tabla previa del historial, se han estimado con las fotos y valores BEDCA/USDA):\n• Plato de caldo con marisco: ≈ ' + tot.caldoPlate + ' kcal\n• Plato de arroz (80 g crudos + la otra ración): ≈ ' + tot.arrozPlate + ' kcal\nConsejo: usa solo 1 pastilla de caldo por la sal (la receta original llevaba 2).\nEl desglose está en el panel de Salud. No es consejo nutricional médico.';
+    }
+
+    if (/ejercicio|rutina|aparatos|mancuernas|esterilla|goma elastica|goma elástica/.test(t)) {
+      return 'Aparatos que tienes: ' + EXERCISE_HOME.kit.map(function (k) { return k.label; }).join(', ') + '.\n' +
+        EXERCISE_HOME.schedule + '\nSesión: ' + EXERCISE_HOME.routine.join('; ') + '.\n' +
+        EXERCISE_HOME.walk + '\n' + EXERCISE_HOME.disclaimer;
+    }
+
+    if (/consejos|recomendacion|recomendación|mediterrane|mediterráne|dieta/.test(t)) {
       return 'Consejos orientativos (NO médicos) según lo registrado:\n• ' + buildLifestyleTips().join('\n• ');
     }
 
@@ -1797,7 +2174,7 @@
   function seedWelcome() {
     const welcomes = {
       secretaria: 'Hola, soy tu Secretaria. Tareas, hábitos y contactos salientes (mailto/tel/WhatsApp/X — tú confirmas). Preferencias X/YouTube locales. Di «ayuda».',
-      enfermera: 'Hola, soy Enfermera · Agente Salud. Métricas, análisis clínicos, recetas mediterráneas, menú semanal y consejos orientativos (no médicos). OCR local opcional con confirmación. Di «ayuda», «recetas», «consejos» u «ocr».',
+      enfermera: 'Hola, soy Enfermera · Agente Salud. Métricas, Mis datos (báscula en este dispositivo), recetas, calorías aproximadas del caldo de gambas y almejas, ejercicio en casa, menú y consejos orientativos (no médicos). Di «ayuda», «mis datos», «caldo», «ejercicio» o «recetas».',
       psicologa: 'Hola, soy tu Psicóloga amiga protectora. NO a compras impulsivas, drogas/alcohol y autolesión. No sustituyo familia/pareja ni diagnostico. 112 · 024. Di «ayuda» o «respiración».',
       money: 'Hola, soy Money Digital · Compra inteligente. Despensa, lista, presupuesto orientativo (250 € editable) y fotos locales de producto/etiqueta/recibo (sin OCR). No invento precios ni compro/pago sola. Di «ayuda» o «comparar leche».'
     };
@@ -1822,6 +2199,9 @@
     renderWeeklyMenu();
     renderLabs();
     renderLifestyleTips();
+    renderCaldoKcal();
+    renderEjercicio();
+    renderMisDatos();
     renderEmotionUI();
     renderChat();
     renderGallery().catch(function () {});
@@ -2361,6 +2741,14 @@
     const text = String(raw || '');
     if (name.endsWith('.json') || text.trim().charAt(0) === '[' || text.trim().charAt(0) === '{') {
       const parsed = JSON.parse(text);
+      if (looksLikeHealthSeed(parsed)) {
+        const res = applyHealthSeed(parsed);
+        renderMisDatos();
+        renderSummary();
+        renderCaldoKcal();
+        if (!res.ok) throw new Error(res.error || 'Semilla no aplicada');
+        return { seed: true, result: res, added: res.skipped ? 0 : 1 };
+      }
       if (Array.isArray(parsed)) rows = parsed;
       else if (parsed && Array.isArray(parsed.data)) rows = parsed.data;
       else if (parsed && typeof parsed === 'object') rows = [parsed];
@@ -2469,6 +2857,34 @@
     const btnTips = document.getElementById('btn-refresh-tips');
     if (btnTips) btnTips.addEventListener('click', function () { renderLifestyleTips(); });
 
+    const seedForm = document.getElementById('health-seed-form');
+    if (seedForm) {
+      seedForm.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        const fileInput = seedForm.querySelector('input[name=file]');
+        const file = fileInput && fileInput.files && fileInput.files[0];
+        if (!file) {
+          setMisDatosStatus('Elige un archivo JSON.', 'warn');
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = function () {
+          try {
+            const res = applyHealthSeed(JSON.parse(String(reader.result || '')));
+            renderMisDatos();
+            renderSummary();
+            renderCaldoKcal();
+            setMisDatosStatus(res.message || res.error || '', res.ok ? 'ok' : 'warn');
+            seedForm.reset();
+          } catch (e) {
+            setMisDatosStatus('No se pudo importar ese JSON. ¿Es de tipo may-cuidado-seed?', 'warn');
+          }
+        };
+        reader.onerror = function () { setMisDatosStatus('No se pudo leer el archivo.', 'warn'); };
+        reader.readAsText(file);
+      });
+    }
+
     const samsungForm = document.getElementById('samsung-import-form');
     if (samsungForm) {
       samsungForm.addEventListener('submit', function (ev) {
@@ -2486,8 +2902,13 @@
             const added = importSamsungPayload(reader.result, file.name);
             renderSummary();
             renderLifestyleTips();
+            renderMisDatos();
             if (status) {
-              if (added > 0) {
+              if (added && typeof added === 'object' && added.seed) {
+                status.textContent = (added.result && added.result.message) || 'JSON de salud guardado solo en este dispositivo.';
+                status.className = 'status-line ok';
+                setMisDatosStatus(status.textContent, 'ok');
+              } else if (added > 0) {
                 status.textContent = 'Importadas ' + added + ' filas útiles desde «' + file.name + '». Revisa el resumen. Sin conexión directa a Samsung Health.';
                 status.className = 'status-line ok';
               } else {
@@ -3105,8 +3526,15 @@
   wirePhotos();
   setupSpeech();
   seedWelcome();
+  processPendingImport();
   renderAll();
   renderGallery().catch(function () {});
+  window.addEventListener('hashchange', function () {
+    processPendingImport();
+    renderMisDatos();
+    renderSummary();
+    renderCaldoKcal();
+  });
 
   window.MAYCuidado = {
     state: function () { return state; },
@@ -3130,6 +3558,12 @@
     WEEKLY_MENU: WEEKLY_MENU,
     sendIngredientsToMoney: sendIngredientsToMoney,
     importSamsungPayload: importSamsungPayload,
+    applyHealthSeed: applyHealthSeed,
+    looksLikeHealthSeed: looksLikeHealthSeed,
+    caldoTotals: caldoTotals,
+    CALDO_KCAL: CALDO_KCAL,
+    EXERCISE_HOME: EXERCISE_HOME,
+    processPendingImport: processPendingImport,
     compressImageFile: compressImageFile,
     savePhotoRecord: savePhotoRecord,
     photoGetAll: photoGetAll,

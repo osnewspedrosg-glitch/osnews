@@ -667,3 +667,80 @@ button, .btn {
   padding: 8px 10px;
 }
 #panel-video-guia[hidden] { display: none !important; }
+
+
+/* Mis datos / caldo / ejercicio (Salud) */
+.data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+.data-note {
+  margin: 8px 0 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 179, 71, 0.12);
+  border: 1px solid rgba(255, 179, 71, 0.35);
+  color: var(--yellow-soft);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+.data-note.ok-note {
+  background: rgba(107, 207, 127, 0.1);
+  border-color: rgba(107, 207, 127, 0.3);
+  color: var(--text);
+}
+.kcal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  margin: 8px 0;
+}
+.kcal-table th,
+.kcal-table td {
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  vertical-align: top;
+}
+.kcal-table th { color: var(--muted); font-weight: 650; font-size: 0.72rem; }
+.kcal-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.kcal-plate {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.kcal-plate h3 {
+  margin: 0 0 4px;
+  font-size: 0.95rem;
+  color: var(--yellow);
+}
+.kcal-plate .kcal-big {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 4px 0;
+}
+.ex-kit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0;
+}
+.ex-chip {
+  background: var(--card);
+  border: 1px solid rgba(245, 197, 24, 0.25);
+  color: var(--yellow-soft);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+.ex-list {
+  margin: 8px 0 0;
+  padding-left: 1.2rem;
+  font-size: 0.86rem;
+}
+.ex-list li { margin: 4px 0; }
