@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Módulo Lorena · OSNews</title>
+  <meta name="description" content="Programa propio del Módulo Lorena — diseño de Pedro Sánchez Gómez (OSNews). Inteligencia emocional local, sin red ni claves.">
+  <meta name="theme-color" content="#050814">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='17' rx='15' ry='5' fill='none' stroke='%2322e6ff' stroke-width='2' transform='rotate(-18 16 17)'/%3E%3Cpath d='M13 3h6v4c4 2 6 6 6 11 0 5-4 9-7 12h-4c-3-3-7-7-7-12 0-5 2-9 6-11z' fill='%23f5c451'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="../lorena.js"></script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="amph" x1="0" x2="1"><stop offset="0" stop-color="#b8742a"/><stop offset=".5" stop-color="#f5c451"/><stop offset="1" stop-color="#8a4f17"/></linearGradient>
+      <symbol id="logo" viewBox="0 0 120 120">
+        <ellipse cx="60" cy="62" rx="56" ry="20" fill="none" stroke="#22e6ff" stroke-width="2.2" transform="rotate(-18 60 62)" opacity=".9"/>
+        <g>
+          <path d="M52 14h16v6c0 3 2 4 2 7v6c10 4 18 14 18 30 0 18-10 32-22 44l-6 9-6-9C42 95 32 81 32 63c0-16 8-26 18-30v-6c0-3 2-4 2-7z" fill="url(#amph)" stroke="#5a3010" stroke-width="1.5"/>
+          <path d="M50 30c-10-2-14 6-12 14" fill="none" stroke="#c98a35" stroke-width="4" stroke-linecap="round"/>
+          <path d="M70 30c10-2 14 6 12 14" fill="none" stroke="#c98a35" stroke-width="4" stroke-linecap="round"/>
+          <path d="M38 58h44M37 66h46" stroke="#5a3010" stroke-width="1.6" opacity=".7"/>
+          <path d="M47 76l6-4 6 4 6-4 6 4" fill="none" stroke="#5a3010" stroke-width="1.4" opacity=".7"/>
+        </g>
+        <path d="M4 62a56 20 0 0 0 112 0" fill="none" stroke="#22e6ff" stroke-width="2.4" transform="rotate(-18 60 62)"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="top">
+    <a class="brand" href="../" title="OSNews">
+      <svg width="48" height="48" viewBox="0 0 120 120"><use href="#logo"/></svg>
+      <span>OSNews</span>
+    </a>
+    <div class="titles">
+      <h1>Módulo Lorena</h1>
+      <p class="sub">Inteligencia emocional de MAY</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="diagram" aria-label="Esquema del Módulo Lorena">
+      <article class="box box-orange" id="box-ia" data-step="ia">
+        <div class="box-icon" aria-hidden="true">✦</div>
+        <div>
+          <h2>Inteligencia emocional (IA)</h2>
+          <p class="arrow-may">→ <strong>MAY</strong></p>
+        </div>
+      </article>
+
+      <div class="fork" aria-hidden="true"><span></span><span></span></div>
+
+      <div class="mem-row">
+        <article class="box box-cyan" id="box-user" data-step="user">
+          <div class="box-head">
+            <span class="box-icon" aria-hidden="true">👤</span>
+            <h2>Memoria del historial<br>del usuario</h2>
+          </div>
+          <dl id="mem-user" class="mem">
+            <div><dt>Turnos</dt><dd id="u-turns">0</dd></div>
+            <div><dt>Última emoción</dt><dd id="u-last">—</dd></div>
+            <div><dt>Temas</dt><dd id="u-topics">—</dd></div>
+            <div><dt>Gustos</dt><dd id="u-prefs">—</dd></div>
+          </dl>
+        </article>
+        <article class="box box-cyan" id="box-asst" data-step="asst">
+          <div class="box-head">
+            <span class="box-icon" aria-hidden="true">▣</span>
+            <h2>Memoria<br>de MAY</h2>
+          </div>
+          <dl id="mem-asst" class="mem">
+            <div><dt>Respuestas</dt><dd id="a-replies">0</dd></div>
+            <div><dt>Último tono</dt><dd id="a-tone">—</dd></div>
+            <div><dt>Tonos que ayudaron</dt><dd id="a-scores">—</dd></div>
+            <div><dt>Notas</dt><dd id="a-notes">—</dd></div>
+          </dl>
+        </article>
+      </div>
+
+      <div class="join" aria-hidden="true"><span></span><span></span></div>
+
+      <article class="box box-orange box-analyze" id="box-analyze" data-step="analyze">
+        <div class="box-head">
+          <span class="box-icon" aria-hidden="true">⌁</span>
+          <h2>MAY analiza con inteligencia <em>y medida de emociones</em></h2>
+        </div>
+        <div class="metrics">
+          <div class="intensity">
+            <span>Intensidad</span>
+            <strong id="intensity">— / 10</strong>
+            <div class="ibar" aria-hidden="true"><i id="ibar-fill"></i></div>
+          </div>
+          <div class="trend">
+            <span>Tendencia</span>
+            <strong id="trend">—</strong>
+          </div>
+        </div>
+        <ul class="emotions" id="emotions" aria-label="Nueve emociones"></ul>
+      </article>
+
+      <div class="down" aria-hidden="true"></div>
+
+      <article class="box box-gold" id="box-result" data-step="result">
+        <div class="box-head">
+          <span class="box-icon" aria-hidden="true">💬</span>
+          <h2><em>Resultado:</em> respuesta con inteligencia emocional</h2>
+        </div>
+        <p id="result-text" class="result-text">Escribe cómo te sientes y verás aquí la respuesta, hecha en este dispositivo.</p>
+        <p id="result-meta" class="result-meta"></p>
+      </article>
+
+      <div class="loops" aria-hidden="true">
+        <div class="loop left"><i>①</i></div>
+        <div class="loop right"><i>①</i></div>
+      </div>
+      <p class="legend"><i>①</i> Lo aprendido vuelve a las dos memorias · bucle de aprendizaje</p>
+    </section>
+
+    <section class="chat" aria-label="Charla con el Módulo Lorena">
+      <h2>Pruébalo</h2>
+      <p class="chat-lead">Todo se queda en este dispositivo. No hay servidor, ni claves, ni pagos.</p>
+      <div id="log" class="log" role="log" aria-live="polite"></div>
+      <form id="form" class="composer">
+        <label class="sr" for="in">Tu mensaje</label>
+        <textarea id="in" rows="2" maxlength="2000" required placeholder="Escribe cómo te sientes… por ejemplo: Estoy muy triste hoy"></textarea>
+        <button type="submit" id="send">Enviar</button>
+      </form>
+      <div id="lorena-slot"></div>
+      <p id="crisis" class="crisis" hidden></p>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Módulo Lorena — diseño de Pedro Sánchez Gómez (OSNews)</strong></p>
+    <p>La emoción es una estimación orientativa por palabras, no una medición clínica ni un diagnóstico. Si lo necesitas, consulta a un profesional.</p>
+    <p class="foot-links"><a href="../">OSNews</a> · <a href="../#hablaMay">Habla con MAY</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
