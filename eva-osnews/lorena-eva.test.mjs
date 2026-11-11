@@ -15,7 +15,7 @@ test("Eva responde con inteligencia emocional a una denuncia angustiosa", () => 
   const r = evaLorenaReply(lorena, entry);
   assert.ok(r.text.endsWith(evaBaseReply(entry)));
   assert.ok(["miedo", "ansiedad"].includes(r.analysis.emotion));
-  assert.match(r.text, /calma|respira|válido/i);
+  assert.match(r.text, /calma|respir[ao]|serenidad|válido|despacio/i);
   assert.equal(lorena.memory().user.turns, 1);
 });
 

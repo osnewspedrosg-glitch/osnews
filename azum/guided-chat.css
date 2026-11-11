@@ -73,3 +73,22 @@
 .azum-guided-status[data-kind="error"] {
   border-color: #9a3412;
 }
+
+.azum-guided-tools { margin: 0.7rem 0 0; }
+.azum-guia-link {
+  display: inline-block;
+  font-weight: 700;
+  color: #7d2428;
+  text-decoration: underline;
+}
+.azum-decision {
+  margin: 0.7rem 0 0;
+  padding: 0.6rem 0.7rem;
+  border: 1px dashed #1f6b4a;
+  border-radius: 10px;
+  background: #fff;
+}
+.azum-decision summary { cursor: pointer; font-weight: 700; }
+.azum-decision-note, .azum-decision-empty { margin: 0.35rem 0; font-size: 0.9rem; color: #3d4a44; }
+.azum-decision-log { margin: 0.3rem 0 0; padding-left: 1.2rem; font-size: 0.9rem; }
+.azum-decision-log li { margin: 0.25rem 0; }

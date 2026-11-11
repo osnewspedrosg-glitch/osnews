@@ -92,7 +92,14 @@ def run(p):
     check("Azum", nlog == 1, "un solo turno visible: %s" % nlog)
     check("Azum", not status.strip().startswith("Tú:"), "el estado no repite el intercambio: " + status[:160])
     check("Azum", "tristeza" in ind, "indicador: " + ind)
-    check("Azum", "Azum:" in reply and any(k in reply for k in ["Gracias por contármelo", "Te leo"]), "respuesta: " + reply[:260])
+    check("Azum", "modo Eva" in ind or "modo Lorena" in ind, "indicador con modo: " + ind)
+    check("Azum", "Azum:" in reply and any(k in reply for k in ["Gracias por contármelo", "Te leo", "Estoy contigo", "Te acompaño"]), "respuesta: " + reply[:260])
+    check("Azum", pg.locator("#azum-guia-mujeres").count() == 1, "enlace a la Guía para mujeres")
+    href = pg.get_attribute("#azum-guia-mujeres", "href") or ""
+    check("Azum", "lorena/#guia-mujeres" in href, "href guía: " + href)
+    ditems = pg.locator("#azum-decision-log li").count()
+    dtext = pg.text_content("#azum-decision-log") or ""
+    check("Azum", ditems >= 1 and "modo" in dtext, "registro de decisión: " + dtext[:220])
     pg.reload(); pg.wait_for_selector("#azum-guided .lorena-indicator"); ind2 = pg.text_content("#azum-guided .lorena-indicator")
     check("Azum", ind2 == ind, "tras recargar: " + ind2)
     pg.click("#azum-guided button.lorena-forget"); check("Azum", pg.text_content("#azum-guided .lorena-indicator").endswith("—"), "borrar memoria OK")
@@ -112,6 +119,7 @@ def run(p):
     ind = pg.text_content(".lorena-indicator") or ""
     reply = pg.text_content(".bubble.may") or ""
     check("Programa", "tristeza" in ind, "indicador: " + ind)
+    check("Programa", "modo Eva" in ind or "modo Lorena" in ind, "indicador con modo: " + ind)
     check("Programa", len(reply) > 10, "respuesta: " + reply[:220])
     check("Programa", "1" in (pg.text_content("#u-turns") or ""), "memoria usuario turnos=" + (pg.text_content("#u-turns") or ""))
     bars = pg.eval_on_selector_all(".emotions li", "e=>e.length")
@@ -127,7 +135,25 @@ def run(p):
     check("Programa", "024" in last and "112" in last or (crisis_vis and "024" in (pg.text_content("#crisis") or "")), "nota 024/112: " + last[:220])
     pg.click("button.lorena-forget")
     check("Programa", (pg.text_content(".lorena-indicator") or "").endswith("—") and (pg.text_content("#u-turns") or "") == "0", "borrar memoria OK")
+    # Guía para mujeres
+    check("Programa", pg.locator("#guia-mujeres").count() == 1, "sección Guía para mujeres")
+    gtxt = (pg.text_content("#guia-mujeres") or "")
+    check("Programa", "016" in gtxt and "600 000 016" in gtxt and "016-online@igualdad.gob.es" in gtxt and "112" in gtxt, "contactos 016/112 en la guía")
+    check("Programa", "orientativa" in gtxt.lower() and "jurídica" in gtxt.lower(), "aviso orientativo")
+    check("Programa", pg.is_checked("#guia-guardar") is False, "guardar desactivado por defecto")
+    pg.fill("#guia-in", "Buenos días, ¿quedamos a tomar un café el sábado? Espero que hayas tenido una buena semana.")
+    pg.click("#guia-analizar"); pg.wait_for_timeout(200)
+    gout = pg.text_content("#guia-out") or ""
+    check("Programa", "Sin señales claras" in gout, "guía benévola: " + gout[:200])
+    pg.fill("#guia-in", "No te dejo salir sin mi permiso. Eres mía. Dame el móvil. Si me dejas te mato.")
+    pg.click("#guia-analizar"); pg.wait_for_timeout(200)
+    gout = pg.text_content("#guia-out") or ""
+    check("Programa", "Peligro" in gout and "control" in gout.lower() and "amenazas" in gout.lower(), "guía riesgo: " + gout[:240])
+    check("Programa", "no te dejo salir" in gout.lower() or "eres mia" in gout.lower() or "eres mía" in gout.lower(), "cita las frases: " + gout[:240])
     check("Programa", not errs, "errores JS: %s" % errs)
+    pg.click("#guia-salida")
+    pg.wait_for_timeout(400)
+    check("Programa", pg.evaluate("()=>location.href").startswith("about:blank"), "salida rápida limpia la página: " + pg.evaluate("()=>location.href"))
     c.close(); b.close()
 
 

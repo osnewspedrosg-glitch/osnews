@@ -178,10 +178,16 @@
     var out = lo.respond(text, function (a) { return baseReply(a); });
     addBubble("may", out.text);
     document.getElementById("result-text").textContent = out.text;
-    document.getElementById("result-meta").textContent =
-      "Tono: " + (out.tone || "—") + (out.analysis && out.analysis.detected
-        ? " · " + out.analysis.label + " " + out.analysis.intensity + "/10 · tendencia " + (TREND[out.analysis.trend] || out.analysis.trend)
-        : "");
+    var meta = "Tono: " + (out.tone || "—");
+    if (out.analysis && out.analysis.detected) {
+      meta += " · " + out.analysis.label + " " + out.analysis.intensity + "/10";
+      if (out.analysis.secondary && out.analysis.secondary.label) {
+        meta += " · " + out.analysis.secondary.label + " " + out.analysis.secondary.intensity + "/10";
+      }
+      meta += " · tendencia " + (TREND[out.analysis.trend] || out.analysis.trend);
+    }
+    if (out.modeLabel) meta += " · " + out.modeLabel;
+    document.getElementById("result-meta").textContent = meta;
     renderAnalysis(out.analysis);
     renderMemories();
     pulse();
@@ -199,6 +205,80 @@
       form.requestSubmit();
     }
   });
+
+  var GUIDE_KEY = "lorena-guia-opcional-v1";
+  var LEVEL_NAME = {
+    "sin señales claras": "Sin señales claras",
+    "atención": "Atención",
+    "cuidado": "Cuidado",
+    "peligro": "Peligro"
+  };
+  function levelWord(n) {
+    return n >= 3 ? "peligro" : n === 2 ? "cuidado" : n === 1 ? "atención" : "sin señales claras";
+  }
+  function renderGuide(g) {
+    var out = $("guia-out");
+    out.innerHTML = "";
+    if (!g) return;
+    var lvl = el("p", "guia-level level-" + (g.levelNum || 0));
+    lvl.appendChild(el("strong", "", LEVEL_NAME[g.level] || g.level));
+    out.appendChild(lvl);
+    if (!g.categories.length) {
+      out.appendChild(el("p", "guia-ok", "En estas frases no veo señales claras de control, desprecio u otras actitudes de riesgo. Eso no cierra nada: tú conoces el contexto. Si algo te inquieta, está bien pedirle una segunda mirada a alguien de confianza o al 016."));
+    } else {
+      out.appendChild(el("p", "guia-ok", "He leído las frases que has pegado. Estas son las actitudes que resaltan, con las palabras exactas que las han activado. No pongo etiqueta a ninguna persona."));
+      g.categories.forEach(function (c) {
+        var art = el("article", "guia-cat level-" + c.level);
+        art.appendChild(el("h3", "", c.label + " · " + levelWord(c.level)));
+        var ul = el("ul", "guia-quotes");
+        (c.phrases || []).forEach(function (ph) {
+          var li = el("li");
+          li.appendChild(el("q", "", ph));
+          ul.appendChild(li);
+        });
+        art.appendChild(ul);
+        out.appendChild(art);
+      });
+    }
+  }
+  $("guia-form").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var text = ($("guia-in").value || "").trim();
+    if (!text) {
+      $("guia-out").textContent = "Cuando quieras, pega aquí los mensajes. Los leemos con calma, solo en este aparato.";
+      return;
+    }
+    var g = OSN_LORENA.analyzeGuide(text);
+    renderGuide(g);
+    try {
+      if ($("guia-guardar").checked) {
+        localStorage.setItem(GUIDE_KEY, JSON.stringify({ t: Date.now(), text: text.slice(0, 8000), level: g.level }));
+      } else {
+        localStorage.removeItem(GUIDE_KEY);
+      }
+    } catch (e) {}
+  });
+  $("guia-salida").addEventListener("click", function () {
+    try { localStorage.removeItem(GUIDE_KEY); } catch (e) {}
+    $("guia-in").value = "";
+    $("guia-out").innerHTML = "";
+    try { document.documentElement.replaceChildren(); } catch (e) {
+      try { document.documentElement.innerHTML = ""; } catch (e2) {}
+    }
+    document.title = "";
+    location.replace("about:blank");
+  });
+  try {
+    var saved = JSON.parse(localStorage.getItem(GUIDE_KEY) || "null");
+    if (saved && saved.text) {
+      $("guia-in").value = saved.text;
+      $("guia-guardar").checked = true;
+    }
+  } catch (e) {}
+  if (location.hash === "#guia-mujeres") {
+    var gbox = $("guia-mujeres");
+    if (gbox && gbox.scrollIntoView) gbox.scrollIntoView({ block: "start" });
+  }
 
   // Barras a cero y memorias persistidas (si las hay) al abrir.
   renderAnalysis(null);

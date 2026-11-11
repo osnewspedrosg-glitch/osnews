@@ -202,3 +202,59 @@ footer strong { color: var(--text); font-weight: 600; }
   .composer { grid-template-columns: 1fr; }
   .composer button { padding: 10px; }
 }
+
+.top-nav { margin-top: 8px; }
+.top-nav a { color: var(--gold); font-weight: 700; font-size: 14px; }
+
+.guia {
+  margin-top: 28px;
+  background: rgba(8, 12, 28, .78);
+  border: 1px solid rgba(245,196,81,.35);
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+}
+.guia-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; flex-wrap: wrap; }
+.guia h2 { margin: 0 0 6px; font-size: 20px; color: var(--gold); }
+.guia-salida {
+  background: #3a1020;
+  color: #ffd7e0;
+  border: 1px solid #ff8aa0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 800;
+  cursor: pointer;
+  font: inherit;
+  white-space: nowrap;
+}
+.guia-salida:hover { filter: brightness(1.08); }
+.guia-016 {
+  margin: 12px 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--gold);
+  background: rgba(245,196,81,.08);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.guia-form textarea {
+  width: 100%; resize: vertical; min-height: 120px; border-radius: 12px; border: 1px solid #334;
+  background: #070b16; color: var(--text); font: inherit; padding: 10px 12px;
+}
+.guia-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 10px; }
+.guia-actions button {
+  background: linear-gradient(180deg, var(--gold), #d4a017);
+  color: #1a1000; border: 0; border-radius: 12px; padding: 10px 16px;
+  font-weight: 800; cursor: pointer; font: inherit;
+}
+.guia-save { font-size: 13px; color: var(--mut); display: flex; gap: 8px; align-items: center; }
+.guia-out { margin-top: 14px; display: grid; gap: 10px; }
+.guia-level { margin: 0; font-size: 16px; }
+.guia-level.level-0 strong { color: var(--ok); }
+.guia-level.level-1 strong { color: var(--gold); }
+.guia-level.level-2 strong { color: var(--orange-2); }
+.guia-level.level-3 strong { color: var(--warn); }
+.guia-cat { border: 1px solid rgba(255,255,255,.12); border-radius: 12px; padding: 10px 12px; background: rgba(0,0,0,.2); }
+.guia-cat h3 { margin: 0 0 6px; font-size: 14px; }
+.guia-quotes { margin: 0; padding-left: 18px; }
+.guia-quotes q { font-style: italic; color: #fff8e8; }
+.guia-ok { margin: 0; color: var(--text); }

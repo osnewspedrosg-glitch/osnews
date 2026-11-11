@@ -12,7 +12,7 @@ Módulo Lorena — diseño de Pedro Sánchez Gómez (OSNews): bucle de inteligen
 
 
 ## Programa propio del Módulo Lorena
-Página independiente, en [lorena/](lorena/): cualquiera puede escribir y ver el análisis (las dos memorias, las 9 emociones, la intensidad 0–10, la tendencia y la respuesta). Todo local.
+Página independiente, en [lorena/](lorena/): cualquiera puede escribir y ver el análisis (las dos memorias, las 9 emociones, la intensidad 0–10, la tendencia, el modo Eva o Lorena y la respuesta). Incluye la [Guía para mujeres](lorena/#guia-mujeres). Todo local.
 
 ## Cómo enchufar `lorena.js` en cualquier app
 `lorena.js` (en la raíz de este repo) es una librería reutilizable, sin dependencias y sin llamadas de red. Se puede copiar tal cual a otro proyecto.

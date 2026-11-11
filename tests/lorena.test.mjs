@@ -87,7 +87,7 @@ test("retroalimenta las dos memorias y persiste tras recargar", () => {
   assert.equal(m.assistant.replies, 2);
   assert.equal(m.assistant.toneScores.tristeza.validacion, 1, "aprende que la validación ayudó");
   assert.match(m.assistant.notes[0].txt, /ayudó/);
-  assert.match(lo.indicatorText(), /^Módulo Lorena · emoción detectada: alegría \d+\/10$/);
+  assert.match(lo.indicatorText(), /^Módulo Lorena · emoción detectada: alegría \d+\/10(?: · [^·]+ \d+\/10)?(?: · modo (?:Eva|Lorena))?$/);
   assert.equal(JSON.stringify(s.dump()).includes("Estoy muy triste por el trabajo"), false, "no guarda frases literales");
   lo.forget();
   assert.equal(lo.memory().user.turns, 0);
@@ -119,4 +119,138 @@ test("el programa propio usa la librería de la raíz y lleva el crédito", () =
   const sw = fs.readFileSync(new URL("sw.js", root), "utf8");
   assert.match(sw, /lorena\/index\.html/);
   assert.match(sw, /lorena/);
+});
+
+
+test("corrige erratas, ironía, sesgo hacia lo negativo y dos emociones", () => {
+  const cansado = L.analyzeText("No estoy triste, solo cansado", []);
+  assert.equal(cansado.emotion, "calma");
+  assert.ok((cansado.scores.tristeza || 0) < (cansado.scores.calma || 0));
+
+  const typo = L.analyzeText("estoi trizte y cabreao", []);
+  assert.equal(typo.emotion, "tristeza");
+  assert.ok(typo.secondary && typo.secondary.emotion === "enfado");
+
+  const irony = L.analyzeText("Genial, otra vez se ha caído la app 🙄", []);
+  assert.equal(irony.emotion, "enfado");
+  assert.equal(irony.irony, true);
+
+  const mixed = L.analyzeText("contento pero muy agobiado", []);
+  assert.equal(mixed.emotion, "ansiedad", "si hay señal positiva y negativa, prima la negativa");
+  assert.ok(mixed.secondary && mixed.secondary.emotion === "alegria");
+
+  const narices = L.analyzeText("hasta las narices", []);
+  assert.equal(narices.emotion, "enfado");
+
+  const mas = L.analyzeText("no puedo mas", []);
+  assert.equal(mas.emotion, "tristeza");
+  assert.ok(mas.intensity >= 5);
+
+  const mild = L.analyzeText("estoy triste", []);
+  assert.ok(mild.intensity < 10, "el 10 no sale con una tristeza ordinaria");
+  const crisis = L.analyzeText("No quiero vivir", []);
+  assert.ok(crisis.distress === "crisis" || crisis.intensity >= 8);
+
+  assert.equal(L.isWeakSignal("ok"), true);
+  assert.equal(L.isWeakSignal("vale"), true);
+  const lo = L.create({ app: "weak", storage: store() });
+  lo.respond("ok", "De acuerdo.");
+  assert.equal(lo.memory().user.turns, 0, "un «ok» no entra en la memoria");
+});
+
+test("decideMode usa la actitud y el historial, no solo el último mensaje", () => {
+  const sad = L.analyzeText("Estoy muy triste", []);
+  const d1 = L.decideMode(sad, { user: { emo: [] }, assistant: {} });
+  assert.equal(d1.mode, "eva");
+  assert.equal(d1.modeLabel, "modo Eva");
+
+  const anger = L.analyzeText("Estoy harto y cabreado", []);
+  const d2 = L.decideMode(anger, { user: { emo: [] }, assistant: {} });
+  assert.equal(d2.mode, "lorena");
+  assert.equal(d2.modeLabel, "modo Lorena");
+
+  const hist = { user: { emo: [
+    { e: "tristeza", i: 7, v: -7 }, { e: "tristeza", i: 6, v: -6 }, { e: "soledad", i: 5, v: -5 },
+  ] }, assistant: { lastMode: "eva" } };
+  const mild = L.analyzeText("vale", hist.user.emo);
+  const d3 = L.decideMode(mild, hist);
+  assert.equal(d3.mode, "eva", "el historial de tristeza mantiene el modo Eva");
+
+  const mac = L.analyzeText("Las mujeres no saben conducir", []);
+  const d4 = L.decideMode(mac, { user: { emo: [{ e: "tristeza", i: 8, v: -8 }] }, assistant: {} });
+  assert.equal(d4.mode, "lorena", "una actitud machista fuerza el modo Lorena");
+  assert.ok(d4.reasons.some((r) => /machista/.test(r)));
+});
+
+test("detecta actitudes machistas y evita falsos positivos", () => {
+  const hit = L.detectMachismo("Las mujeres no saben conducir");
+  assert.equal(hit.detected, true);
+  assert.ok(hit.quotes.some((q) => /no saben/.test(q)));
+
+  const viol = L.detectMachismo("eres mía y no te dejo salir");
+  assert.equal(viol.detected, true);
+  assert.equal(viol.violence, true);
+
+  const lo = L.create({ app: "mac", storage: store() });
+  const shaped = lo.respond("Las mujeres no saben conducir", "Te escucho.");
+  assert.equal(shaped.mode, "lorena");
+  assert.match(shaped.text, /libertad termina donde empieza/);
+  assert.match(lo.indicatorText(), /actitud machista detectada/);
+
+  const ctrl = lo.respond("no te dejo salir sin mi permiso", "Base.");
+  assert.match(ctrl.text, /016/);
+  assert.match(ctrl.text, /112/);
+  assert.match(ctrl.text, /600 000 016/);
+  assert.match(ctrl.text, /016-online@igualdad\.gob\.es/);
+
+  for (const text of [
+    "Las mujeres merecen igualdad",
+    "El feminismo busca la igualdad",
+    "Hablo de violencia de género en clase",
+    "Me dijo: «eres una zorra»",
+    "Me escribió que no te dejo salir",
+  ]) {
+    const m = L.detectMachismo(text);
+    assert.equal(m.detected, false, "falso positivo: " + text);
+  }
+});
+
+test("la Guía para mujeres clasifica señales y deja en paz los mensajes benévolos", () => {
+  const ok1 = L.analyzeGuide("Buenos días, ¿quedamos a tomar un café el sábado? Espero que hayas tenido una buena semana.");
+  assert.equal(ok1.level, "sin señales claras");
+  assert.equal(ok1.categories.length, 0);
+  assert.match(ok1.disclaimer, /orientativa/);
+  assert.match(ok1.note016, /016/);
+  assert.match(ok1.note016, /600 000 016/);
+  assert.match(ok1.note016, /016-online@igualdad\.gob\.es/);
+  assert.match(ok1.note016, /112/);
+
+  const ok2 = L.analyzeGuide("Te quiero. Que duermas bien. Mañana te llamo cuando salga del trabajo.");
+  assert.equal(ok2.level, "sin señales claras");
+
+  const ok3 = L.analyzeGuide("Perdona el retraso, el metro iba lleno. ¿Llegas bien a casa?");
+  assert.equal(ok3.level, "sin señales claras");
+
+  const danger = L.analyzeGuide("No te dejo salir sin mi permiso. Eres mía. Dame el móvil. Si me dejas te mato.");
+  assert.equal(danger.level, "peligro");
+  const labels = danger.categories.map((c) => c.label);
+  assert.ok(labels.includes("control"));
+  assert.ok(labels.includes("amenazas"));
+  assert.ok(danger.phrases.length >= 2);
+  danger.categories.forEach((c) => {
+    assert.ok(c.phrases.length, "cada categoría cita la frase que la activó: " + c.label);
+  });
+
+  const html = fs.readFileSync(new URL("lorena/index.html", root), "utf8");
+  const js = fs.readFileSync(new URL("lorena/app.js", root), "utf8");
+  assert.match(html, /id="guia-mujeres"/);
+  assert.match(html, /600 000 016/);
+  assert.match(html, /016-online@igualdad\.gob\.es/);
+  assert.match(html, /id="guia-salida"/);
+  assert.match(js, /analyzeGuide/);
+  assert.match(js, /location\.replace\("about:blank"\)/);
+  assert.match(js, /guia-guardar/);
+  const ui = fs.readFileSync(new URL("azum/guided-chat-ui.js", root), "utf8");
+  assert.match(ui, /azum-guia-mujeres/);
+  assert.match(ui, /lorena\/#guia-mujeres/);
 });
