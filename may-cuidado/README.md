@@ -23,7 +23,7 @@ URL prevista: `https://osnewspedrosg-glitch.github.io/osnews/may-cuidado/`
 
 ## Archivos
 
-`index.html` · `styles.css` · `app.js` · `manifest.json` · `service-worker.js` (caché **may-cuidado-v14**)
+`index.html` · `styles.css` · `app.js` · `manifest.json` · `service-worker.js` (caché **may-cuidado-v15**)
 
 ## Aviso
 
@@ -37,7 +37,7 @@ Seguimiento personal · No es diagnóstico médico.
 - Límite honesto de origen: **12 MB**; máximo **40** fotos; aviso si el JPEG sigue > 1,5 MB.
 - Galería con categoría, fecha, texto, preview y borrar.
 - **Sin subida a la nube y sin OCR automático.**
-- Service worker caché: `may-cuidado-v14`.
+- Service worker caché: `may-cuidado-v15`.
 
 
 
@@ -77,3 +77,13 @@ En ejercicio, la bici estática aparece como **pendiente de comprar** y no entra
 ## Compra del mes
 
 La sección «Compra del mes» muestra una lista importada (artículos, precios y casillas de comprado) **solo en el dispositivo**. No hay carritos ni precios en el código publicado. Se carga con el mismo enlace `#import=` o JSON `may-cuidado-seed` que el perfil/báscula. La app no hace pedidos.
+
+## Plan progresivo de ejercicio
+
+La rutina de lunes, miércoles y viernes es genérica: sesión 1 de 10 min, sesión 2 de 15 min y +5 min por sesión (20, 25, 30) hasta los 35 min de la rutina completa. Cada sesión tiene una casilla; la app muestra cuánto toca la próxima vez. Las caminatas y la nota de que el plan es orientativo (consultar al médico) se mantienen.
+
+En la misma sección aparecen fotos de los aparatos (mancuernas, barra, goma y esterilla). La bici estática sigue marcada como pendiente de comprar y no forma parte de la rutina actual.
+
+Si el JSON importado trae un objetivo de peso, Mis datos muestra una barra de progreso desde el peso de partida hasta la meta, un ritmo semanal aproximado y la nota de que es orientativo (consultar al médico). Esos números no van en el código público.
+
+El historial personal de sesiones (fechas y minutos hechos) no va en el código público: se importa con el mismo enlace `#import=` / archivo `may-cuidado-seed` que la báscula y la compra del mes, y se guarda solo en `localStorage` de este dispositivo. Reimportar no duplica lecturas, líneas de compra ni sesiones ya registradas.

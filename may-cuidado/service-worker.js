@@ -1,11 +1,13 @@
 /* MAY OS · Cuidado personal — service worker PWA */
-const CACHE = 'may-cuidado-v14';
+const CACHE = 'may-cuidado-v15';
 const ASSETS = [
   './',
   './index.html',
   './styles.css',
   './app.js',
-  './manifest.json'
+  './manifest.json',
+  './media/salud/aparatos-1.jpg',
+  './media/salud/aparatos-2.jpg'
 ];
 
 self.addEventListener('install', (event) => {

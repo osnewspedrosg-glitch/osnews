@@ -795,3 +795,76 @@ button, .btn {
 .buy-name { font-weight: 650; }
 .buy-qty { color: var(--muted); font-size: 0.72rem; white-space: nowrap; }
 .buy-line { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.ex-session-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 8px 0 12px;
+}
+.ex-session-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid var(--border, #d7d2c8);
+  border-radius: 10px;
+  background: var(--card, #fff);
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.ex-session-row.next {
+  border-color: #6b8f71;
+  box-shadow: 0 0 0 1px rgba(107, 143, 113, 0.35);
+}
+.ex-session-row.done {
+  opacity: 0.82;
+}
+.ex-session-row.done .buy-name {
+  text-decoration: line-through;
+}
+.ex-session-row input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+}
+
+.ex-photos {
+  margin: 10px 0 12px;
+}
+.ex-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.ex-photo-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border, #d7d2c8);
+  background: #f3efe6;
+}
+.ex-photos figcaption {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--muted, #5c574e);
+}
+@media (max-width: 360px) {
+  .ex-photo-grid { grid-template-columns: 1fr; }
+  .ex-photo-grid img { height: 200px; }
+}
+
+.weight-goal-bar {
+  height: 14px;
+  border-radius: 999px;
+  background: #e6e1d6;
+  overflow: hidden;
+  margin: 10px 0 6px;
+}
+.weight-goal-fill {
+  height: 100%;
+  width: 0;
+  background: #6b8f71;
+  border-radius: inherit;
+}

@@ -56,7 +56,8 @@
     healthProfile: {},
     scaleReadings: [],
     importedSeedIds: [],
-    monthPurchases: []
+    monthPurchases: [],
+    exerciseLog: []
   });
 
   let state = loadState();
@@ -289,8 +290,17 @@
       { id: 'barra', label: 'Barra sin discos' },
       { id: 'bici', label: 'Bici estática', pending: true, pendingNote: 'Pendiente de comprar' }
     ],
-    schedule: '35 min lunes, miércoles y viernes. Además, caminar 30–45 min otros días (o el mismo día, si te sienta bien).',
+    photos: {
+      caption: 'Mis aparatos: mancuernas, barra, goma y esterilla',
+      items: [
+        { src: 'media/salud/aparatos-1.jpg', alt: 'Tres mancuernas, goma elástica y un borde de esterilla en el suelo' },
+        { src: 'media/salud/aparatos-2.jpg', alt: 'Barra sin discos, esterilla y goma elástica en el suelo' }
+      ]
+    },
+    schedule: 'Lunes, miércoles y viernes, con un plan progresivo: 10 min en la primera sesión, 15 en la segunda y +5 min cada vez (20, 25, 30) hasta los 35 min de la rutina completa. Además, caminar 30–45 min otros días (o el mismo día, si te sienta bien).',
     bikeNote: 'Cuando tengas la bici estática, puedes añadir 20–30 min suaves. No forma parte de la rutina actual.',
+    progress: { startMin: 10, stepMin: 5, targetMin: 35 },
+    shortSessionNote: 'En las sesiones más cortas, haz los mismos ejercicios con menos tiempo o menos series, sin forzar. A los 35 min es la rutina completa.',
     routine: [
       'Sentadilla a la silla',
       'Press de pecho con mancuernas',
@@ -337,24 +347,191 @@
         : 'Estos platos son una parte del día, no el menú completo. El objetivo de kcal, si lo importas, aparece en Mis datos.') + '</p>';
   }
 
+  function exerciseSessionPlan() {
+    const prog = (EXERCISE_HOME && EXERCISE_HOME.progress) || { startMin: 10, stepMin: 5, targetMin: 35 };
+    const out = [];
+    let n = 1;
+    let m = Number(prog.startMin) || 10;
+    const step = Number(prog.stepMin) || 5;
+    const target = Number(prog.targetMin) || 35;
+    while (m <= target && n <= 20) {
+      out.push({ n: n, minutes: m });
+      n += 1;
+      m += step;
+    }
+    return out;
+  }
+
+  function applyExerciseLog(entries) {
+    ensureHealthBoxes();
+    let added = 0;
+    let kept = 0;
+    (entries || []).forEach(function (raw) {
+      if (!raw || typeof raw !== 'object') return;
+      const rec = {
+        id: String(raw.id || ('ej-' + (raw.date || '') + '-' + (raw.minutes || '') + '-' + (raw.session || ''))),
+        date: String(raw.date || ''),
+        minutes: Number(raw.minutes) || 0,
+        session: raw.session != null ? Number(raw.session) : null,
+        source: String(raw.source || 'import'),
+        note: String(raw.note || ''),
+        cleared: false
+      };
+      if (!rec.id && !rec.date) return;
+      const exists = state.exerciseLog.some(function (x) {
+        return (x.id && x.id === rec.id) ||
+          (x.date && x.date === rec.date && Number(x.minutes) === rec.minutes && Number(x.session) === rec.session && !x.cleared);
+      });
+      if (exists) { kept += 1; return; }
+      state.exerciseLog.push(rec);
+      added += 1;
+    });
+    return { added: added > 0, kept: kept > 0 && added === 0 };
+  }
+
+  function activeExerciseLog() {
+    ensureHealthBoxes();
+    return (state.exerciseLog || []).filter(function (x) { return x && !x.cleared; });
+  }
+
+  function logForSession(n) {
+    const list = activeExerciseLog().filter(function (x) { return Number(x.session) === Number(n); });
+    if (!list.length) return null;
+    return list[list.length - 1];
+  }
+
+  function nextExerciseSession() {
+    const plan = exerciseSessionPlan();
+    for (let i = 0; i < plan.length; i++) {
+      if (!logForSession(plan[i].n)) return plan[i];
+    }
+    return { n: plan.length, minutes: (EXERCISE_HOME.progress && EXERCISE_HOME.progress.targetMin) || 35, maintain: true };
+  }
+
+  function formatExerciseDate(dateStr) {
+    if (!dateStr) return '';
+    try {
+      const ds = String(dateStr);
+      const iso = ds.indexOf('T') >= 0 ? ds : ds + 'T12:00:00+01:00';
+      return new Date(iso).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'Europe/Madrid' });
+    } catch (e) {
+      return String(dateStr);
+    }
+  }
+
   function renderEjercicio() {
     const box = document.getElementById('ejercicio-view');
     if (!box) return;
-    box.innerHTML =
-      '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.disclaimer) + '</p>' +
-      '<div class="r-meta" style="margin-top:4px">Aparatos que tienes</div>' +
-      '<div class="ex-kit">' + EXERCISE_HOME.kit.map(function (k) {
-        var extra = k.pending ? ' pending' : '';
-        var label = k.label + (k.pendingNote ? ' — ' + k.pendingNote : '');
-        return '<span class="ex-chip' + extra + '">' + escapeHtml(label) + '</span>';
-      }).join('') + '</div>' +
-      '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.schedule) + '</p>' +
-      (EXERCISE_HOME.bikeNote ? '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.bikeNote) + '</p>' : '') +
-      '<strong style="font-size:0.82rem">Sesión de 35 min (L / X / V)</strong>' +
-      '<ol class="ex-list">' + EXERCISE_HOME.routine.map(function (s) {
-        return '<li>' + escapeHtml(s) + '</li>';
-      }).join('') + '</ol>' +
-      '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.walk) + '</p>';
+    const plan = exerciseSessionPlan();
+    const next = nextExerciseSession();
+    const logs = activeExerciseLog().slice().sort(function (a, b) {
+      return String(a.date).localeCompare(String(b.date));
+    });
+    let html = '';
+    html += '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.disclaimer) + '</p>';
+    html += '<div class="r-meta" style="margin-top:4px">Aparatos que tienes</div>';
+    html += '<div class="ex-kit">' + EXERCISE_HOME.kit.map(function (k) {
+      var extra = k.pending ? ' pending' : '';
+      var label = k.label + (k.pendingNote ? ' — ' + k.pendingNote : '');
+      return '<span class="ex-chip' + extra + '">' + escapeHtml(label) + '</span>';
+    }).join('') + '</div>';
+    if (EXERCISE_HOME.photos && EXERCISE_HOME.photos.items && EXERCISE_HOME.photos.items.length) {
+      html += '<figure class="ex-photos">';
+      html += '<div class="ex-photo-grid">';
+      EXERCISE_HOME.photos.items.forEach(function (ph) {
+        html += '<img src="' + escapeHtml(ph.src) + '" alt="' + escapeHtml(ph.alt || EXERCISE_HOME.photos.caption || '') + '" loading="eager" />';
+      });
+      html += '</div>';
+      if (EXERCISE_HOME.photos.caption) {
+        html += '<figcaption>' + escapeHtml(EXERCISE_HOME.photos.caption) + '</figcaption>';
+      }
+      html += '</figure>';
+    }
+    html += '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.schedule) + '</p>';
+    if (EXERCISE_HOME.bikeNote) html += '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.bikeNote) + '</p>';
+
+    html += '<div class="kcal-plate" id="ex-next-box">';
+    if (next.maintain) {
+      html += '<h3>Próxima sesión</h3><div class="kcal-big">35 min</div>';
+      html += '<div class="hint">Ya completaste el plan hasta la rutina completa. Sigue con 35 min lunes, miércoles o viernes, si te sienta bien.</div>';
+    } else {
+      html += '<h3>Próxima sesión</h3><div class="kcal-big">Sesión ' + next.n + ' · ' + next.minutes + ' min</div>';
+      html += '<div class="hint">Lunes, miércoles o viernes. Luego +5 min cada vez, hasta 35.</div>';
+    }
+    html += '</div>';
+
+    html += '<strong style="font-size:0.82rem">Plan progresivo (L / X / V)</strong>';
+    html += '<div class="ex-session-list">';
+    plan.forEach(function (s) {
+      const rec = logForSession(s.n);
+      const done = !!rec;
+      html += '<label class="ex-session-row' + (done ? ' done' : '') + (next && !next.maintain && next.n === s.n ? ' next' : '') + '">';
+      html += '<input type="checkbox" data-ex-session="' + s.n + '"' + (done ? ' checked' : '') + ' />';
+      html += '<span class="buy-name">Sesión ' + s.n + ' · ' + s.minutes + ' min' + (s.minutes === 35 ? ' (rutina completa)' : '') + '</span>';
+      html += '<span class="buy-qty">' + (done ? ('Hecho' + (rec.date ? ' el ' + formatExerciseDate(rec.date) : '')) : (next && next.n === s.n ? 'Siguiente' : 'Pendiente')) + '</span>';
+      html += '</label>';
+    });
+    html += '</div>';
+    if (EXERCISE_HOME.shortSessionNote) {
+      html += '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.shortSessionNote) + '</p>';
+    }
+
+    if (logs.length) {
+      html += '<strong style="font-size:0.82rem">Historial en este dispositivo</strong>';
+      html += '<ul class="ex-list">';
+      logs.forEach(function (rec) {
+        const ses = rec.session ? ('sesión ' + rec.session + ' · ') : '';
+        html += '<li>' + escapeHtml(formatExerciseDate(rec.date) || rec.date) + ' · ' + ses + rec.minutes + ' min</li>';
+      });
+      html += '</ul>';
+      html += '<p class="help-tips">Estas fechas se quedan solo en este navegador. No se publican en el código de la web.</p>';
+    }
+
+    html += '<strong style="font-size:0.82rem">Ejercicios de la rutina completa (35 min)</strong>';
+    html += '<ol class="ex-list">' + EXERCISE_HOME.routine.map(function (s) {
+      return '<li>' + escapeHtml(s) + '</li>';
+    }).join('') + '</ol>';
+    html += '<p class="help-tips">' + escapeHtml(EXERCISE_HOME.walk) + '</p>';
+    box.innerHTML = html;
+  }
+
+  function wireEjercicio() {
+    const box = document.getElementById('ejercicio-view');
+    if (!box || box.dataset.wired === '1') return;
+    box.dataset.wired = '1';
+    box.addEventListener('change', function (ev) {
+      const inp = ev.target.closest('input[data-ex-session]');
+      if (!inp) return;
+      const n = Number(inp.getAttribute('data-ex-session'));
+      const plan = exerciseSessionPlan();
+      const spec = plan.find(function (s) { return s.n === n; });
+      if (!spec) return;
+      ensureHealthBoxes();
+      const existing = (state.exerciseLog || []).find(function (x) {
+        return x && Number(x.session) === n;
+      });
+      if (inp.checked) {
+        if (existing) {
+          existing.cleared = false;
+          if (!existing.date) existing.date = todayKey();
+          if (!existing.minutes) existing.minutes = spec.minutes;
+        } else {
+          state.exerciseLog.push({
+            id: 'ej-manual-' + n + '-' + todayKey(),
+            date: todayKey(),
+            minutes: spec.minutes,
+            session: n,
+            source: 'manual',
+            note: '',
+            cleared: false
+          });
+        }
+      } else if (existing) {
+        existing.cleared = true;
+      }
+      saveState();
+      renderEjercicio();
+    });
   }
 
   function ensureHealthBoxes() {
@@ -362,6 +539,7 @@
     if (!Array.isArray(state.scaleReadings)) state.scaleReadings = [];
     if (!Array.isArray(state.importedSeedIds)) state.importedSeedIds = [];
     if (!Array.isArray(state.monthPurchases)) state.monthPurchases = [];
+    if (!Array.isArray(state.exerciseLog)) state.exerciseLog = [];
   }
 
   function latestScaleReading() {
@@ -384,13 +562,118 @@
     }
   }
 
+
+  function weightGoalOf(profile) {
+    if (!profile || typeof profile !== 'object') return null;
+    const g = profile.weightGoal;
+    if (g && typeof g === 'object' && (g.targetKg != null || g.target_kg != null)) return g;
+    return null;
+  }
+
+  function fmtKgPlain(v) {
+    if (v == null || v === '') return '';
+    var n = Number(v);
+    if (isNaN(n)) return String(v).replace('.', ',') + ' kg';
+    var s = (Math.round(n * 10) / 10).toFixed(1).replace(/\.0$/, '').replace('.', ',');
+    return s + ' kg';
+  }
+
+  function formatGoalDate(dateStr) {
+    if (!dateStr) return '';
+    try {
+      const ds = String(dateStr);
+      const iso = ds.indexOf('T') >= 0 ? ds : ds + 'T12:00:00+01:00';
+      return new Date(iso).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Europe/Madrid' });
+    } catch (e) {
+      return String(dateStr);
+    }
+  }
+
+  function weightGoalPaceText(g) {
+    if (!g) return '';
+    if (g.paceLabel) return String(g.paceLabel);
+    const a = g.paceKgPerWeekMin != null ? Number(g.paceKgPerWeekMin) : null;
+    const b = g.paceKgPerWeekMax != null ? Number(g.paceKgPerWeekMax) : null;
+    function one(n) {
+      return String(n).replace('.', ',');
+    }
+    if (a != null && !isNaN(a) && b != null && !isNaN(b) && a !== b) {
+      return 'unos ' + one(a) + '–' + one(b) + ' kg por semana';
+    }
+    if (a != null && !isNaN(a)) return 'unos ' + one(a) + ' kg por semana';
+    if (b != null && !isNaN(b)) return 'unos ' + one(b) + ' kg por semana';
+    const startKg = Number(g.startKg != null ? g.startKg : g.fromKg);
+    const targetKg = Number(g.targetKg != null ? g.targetKg : g.target_kg);
+    const startD = g.startDate || g.fromDate;
+    if (!startD || !(startKg > 0) || !(targetKg > 0)) return '';
+    function weeksBetween(from, to) {
+      try {
+        const a = new Date((String(from).indexOf('T') >= 0 ? from : from + 'T12:00:00+01:00'));
+        const b = new Date((String(to).indexOf('T') >= 0 ? to : to + 'T12:00:00+01:00'));
+        return (b - a) / (7 * 24 * 3600 * 1000);
+      } catch (e) { return 0; }
+    }
+    const span = Math.abs(startKg - targetKg);
+    const rates = [];
+    [g.targetFrom, g.targetTo, g.targetDate].forEach(function (d) {
+      if (!d) return;
+      const w = weeksBetween(startD, d);
+      if (w > 0) rates.push(span / w);
+    });
+    if (!rates.length) return '';
+    rates.sort(function (x, y) { return x - y; });
+    const lo = Math.round(rates[0] * 10) / 10;
+    const hi = Math.round(rates[rates.length - 1] * 10) / 10;
+    if (lo === hi) return 'unos ' + String(lo).replace('.', ',') + ' kg por semana';
+    return 'unos ' + String(lo).replace('.', ',') + '–' + String(hi).replace('.', ',') + ' kg por semana';
+  }
+
+  function renderWeightGoal(profile, reading) {
+    const g = weightGoalOf(profile);
+    if (!g) return '';
+    const startKg = Number(g.startKg != null ? g.startKg : g.fromKg);
+    const targetKg = Number(g.targetKg != null ? g.targetKg : g.target_kg);
+    if (!(startKg > 0) || !(targetKg > 0) || startKg === targetKg) return '';
+    const current = (reading && reading.peso != null && !isNaN(Number(reading.peso))) ? Number(reading.peso) : startKg;
+    const span = startKg - targetKg;
+    const done = startKg - current;
+    let pct = span !== 0 ? (done / span) * 100 : 0;
+    if (pct < 0) pct = 0;
+    if (pct > 100) pct = 100;
+    const remaining = current - targetKg;
+    const startDate = g.startDate || g.fromDate;
+    const when = g.targetLabel || formatGoalDate(g.targetDate || g.targetFrom) || '';
+    const pace = weightGoalPaceText(g);
+    const note = g.note || 'Orientativo, consulta a tu médico.';
+    const pctLabel = (Math.round(pct * 10) / 10).toString().replace('.', ',');
+    let html = '<div class="kcal-plate" id="weight-goal-box">';
+    html += '<h3>Objetivo de peso</h3>';
+    html += '<div class="kcal-big">' + escapeHtml(fmtKgPlain(targetKg)) + '</div>';
+    html += '<div class="hint">Partiendo de ' + escapeHtml(fmtKgPlain(startKg));
+    if (startDate) html += ' (' + escapeHtml(formatGoalDate(startDate)) + ')';
+    if (when) html += ' · para ' + escapeHtml(when);
+    html += '.</div>';
+    html += '<div class="weight-goal-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + Math.round(pct) + '" aria-label="Progreso hacia el objetivo de peso">';
+    html += '<div class="weight-goal-fill" style="width:' + pct.toFixed(1) + '%"></div>';
+    html += '</div>';
+    html += '<div class="hint">' + escapeHtml(fmtKgPlain(current)) + ' ahora';
+    if (remaining > 0) html += ' · faltan ' + escapeHtml(fmtKgPlain(remaining));
+    else if (remaining < 0) html += ' · ' + escapeHtml(fmtKgPlain(Math.abs(remaining))) + ' por debajo del objetivo';
+    else html += ' · objetivo alcanzado';
+    html += ' · ' + pctLabel + ' % del camino</div>';
+    if (pace) html += '<p class="help-tips">Ritmo aproximado: ' + escapeHtml(pace) + '.</p>';
+    html += '<p class="help-tips">' + escapeHtml(note) + '</p>';
+    html += '</div>';
+    return html;
+  }
+
   function renderMisDatos() {
     const box = document.getElementById('mis-datos-view');
     if (!box) return;
     ensureHealthBoxes();
     const profile = state.healthProfile || {};
     const reading = latestScaleReading();
-    if (!reading && !profile.age && !profile.height_cm) {
+    if (!reading && !profile.age && !profile.height_cm && !weightGoalOf(profile)) {
       box.innerHTML = '<p class="help-tips">Aún no hay perfil ni medición de báscula en este dispositivo. Usa el enlace de importación o un archivo JSON. Receta y ejercicio de abajo sí se pueden ver sin importar.</p>';
       return;
     }
@@ -403,6 +686,7 @@
       if (profile.kcal_target) html += metricCell('Objetivo de dieta', 'unas ' + profile.kcal_target + ' kcal/día', 'Orientativo, no prescripción');
       html += '</div></div>';
     }
+    html += renderWeightGoal(profile, reading);
     if (reading) {
       html += '<div class="kcal-plate"><h3>Medición de báscula</h3>' +
         '<div class="hint">' + escapeHtml(formatReadingWhen(reading.ts)) +
@@ -479,7 +763,8 @@
     if (Array.isArray(obj)) return false;
     return obj.type === 'may-cuidado-seed' ||
       (obj.reading && (obj.reading.peso != null || obj.profile)) ||
-      (obj.shoppingMonth && typeof obj.shoppingMonth === 'object');
+      (obj.shoppingMonth && typeof obj.shoppingMonth === 'object') ||
+      (Array.isArray(obj.exerciseLog) && obj.exerciseLog.length > 0);
   }
 
   /* Fusiona un JSON de semilla en el estado local. No borra métricas, fotos ni chats previos. */
@@ -522,6 +807,11 @@
       const shopRes = applyShoppingMonth(obj.shoppingMonth);
       if (shopRes.added) added.push('compra del mes');
       else if (shopRes.kept) added.push('compra del mes (ya estaba, se conservan las casillas)');
+    }
+    if (Array.isArray(obj.exerciseLog) && obj.exerciseLog.length) {
+      const exRes = applyExerciseLog(obj.exerciseLog);
+      if (exRes.added) added.push('historial de ejercicio');
+      else if (exRes.kept) added.push('historial de ejercicio (ya estaba)');
     }
     if (id) state.importedSeedIds.push(id);
     saveState();
@@ -896,7 +1186,8 @@
         healthProfile: Object.assign({}, (parsed && parsed.healthProfile) || {}),
         scaleReadings: Array.isArray(parsed && parsed.scaleReadings) ? parsed.scaleReadings : [],
         importedSeedIds: Array.isArray(parsed && parsed.importedSeedIds) ? parsed.importedSeedIds : [],
-        monthPurchases: Array.isArray(parsed && parsed.monthPurchases) ? parsed.monthPurchases : []
+        monthPurchases: Array.isArray(parsed && parsed.monthPurchases) ? parsed.monthPurchases : [],
+        exerciseLog: Array.isArray(parsed && parsed.exerciseLog) ? parsed.exerciseLog : []
       });
       if (!merged.chats.money) merged.chats.money = [];
       if (!Array.isArray(merged.clinicalLabs)) merged.clinicalLabs = [];
@@ -904,6 +1195,7 @@
       if (!Array.isArray(merged.scaleReadings)) merged.scaleReadings = [];
       if (!Array.isArray(merged.importedSeedIds)) merged.importedSeedIds = [];
       if (!Array.isArray(merged.monthPurchases)) merged.monthPurchases = [];
+      if (!Array.isArray(merged.exerciseLog)) merged.exerciseLog = [];
       return merged;
     } catch (e) {
       return defaultState();
@@ -1544,6 +1836,16 @@
       if (pr.age || pr.height_cm || pr.kcal_target) {
         lines.push('Perfil: ' + (pr.sex || '') + (pr.age ? ', ' + pr.age + ' años' : '') + (pr.height_cm ? ', ' + (pr.height_cm / 100).toFixed(2).replace('.', ',') + ' m' : '') + (pr.kcal_target ? ', objetivo orientativo unas ' + pr.kcal_target + ' kcal/día' : ''));
       }
+      const goal = weightGoalOf(pr);
+      if (goal && (goal.targetKg != null || goal.target_kg != null)) {
+        const tkg = goal.targetKg != null ? goal.targetKg : goal.target_kg;
+        let gl = 'Objetivo de peso: ' + String(tkg).replace('.', ',') + ' kg';
+        if (goal.targetLabel) gl += ' para ' + goal.targetLabel;
+        const pace = weightGoalPaceText(goal);
+        if (pace) gl += '. Ritmo aproximado: ' + pace;
+        gl += '. Orientativo, consulta a tu médico.';
+        lines.push(gl);
+      }
       if (r) {
         lines.push('Báscula (' + formatReadingWhen(r.ts) + '): peso ' + r.peso + ' kg' + (r.body_fat_pct != null ? ', grasa ' + r.body_fat_pct + ' %' : '') + (r.imc_real != null ? ', IMC real ' + r.imc_real : '') + (r.muscle_mass_kg != null ? ', masa muscular ' + r.muscle_mass_kg + ' kg' : '') + (r.visceral_fat != null ? ', grasa visceral ' + r.visceral_fat : '') + (r.tmr_kcal != null ? ', TMB ' + r.tmr_kcal + ' kcal' : '') + '.');
         if (r.imc_note) lines.push(r.imc_note);
@@ -1562,9 +1864,18 @@
       var pending = EXERCISE_HOME.kit.filter(function (k) { return k.pending; }).map(function (k) {
         return k.label + (k.pendingNote ? ' — ' + k.pendingNote : '');
       });
+      const next = nextExerciseSession();
+      let nextLine = next.maintain
+        ? 'Próxima sesión: 35 min (rutina completa, para mantener).'
+        : ('Próxima sesión: sesión ' + next.n + ' · ' + next.minutes + ' min.');
+      const done = activeExerciseLog();
+      if (done.length) {
+        nextLine += ' En este dispositivo hay ' + done.length + ' sesión(es) registrada(s).';
+      }
       return 'Aparatos que tienes: ' + have.join(', ') + '.\n' +
         (pending.length ? ('Pendiente: ' + pending.join(', ') + '.\n') : '') +
-        EXERCISE_HOME.schedule + '\nSesión: ' + EXERCISE_HOME.routine.join('; ') + '.\n' +
+        EXERCISE_HOME.schedule + '\n' + nextLine + '\n' +
+        'Rutina completa: ' + EXERCISE_HOME.routine.join('; ') + '.\n' +
         EXERCISE_HOME.walk + '\n' +
         (EXERCISE_HOME.bikeNote ? EXERCISE_HOME.bikeNote + '\n' : '') +
         EXERCISE_HOME.disclaimer;
@@ -2400,7 +2711,7 @@
   function seedWelcome() {
     const welcomes = {
       secretaria: 'Hola, soy tu Secretaria. Tareas, hábitos y contactos salientes (mailto/tel/WhatsApp/X — tú confirmas). Preferencias X/YouTube locales. Di «ayuda».',
-      enfermera: 'Hola, soy Enfermera · Agente Salud. Métricas, Mis datos (báscula en este dispositivo), compra del mes (si la has importado), recetas, calorías aproximadas del caldo, ejercicio en casa, menú y consejos orientativos (no médicos). Di «ayuda», «mis datos», «compra», «caldo» o «ejercicio».',
+      enfermera: 'Hola, soy Enfermera · Agente Salud. Métricas, Mis datos (báscula en este dispositivo), compra del mes (si la has importado), recetas, calorías aproximadas del caldo, ejercicio en casa, menú y consejos orientativos (no médicos). Di «ayuda», «mis datos», «compra», «caldo» o «ejercicio» (plan progresivo 10→35 min).',
       psicologa: 'Hola, soy tu Psicóloga amiga protectora. NO a compras impulsivas, drogas/alcohol y autolesión. No sustituyo familia/pareja ni diagnostico. 112 · 024. Di «ayuda» o «respiración».',
       money: 'Hola, soy Money Digital · Compra inteligente. Despensa, lista, presupuesto orientativo (250 € editable) y fotos locales de producto/etiqueta/recibo (sin OCR). No invento precios ni compro/pago sola. Di «ayuda» o «comparar leche».'
     };
@@ -2972,6 +3283,7 @@
         const res = applyHealthSeed(parsed);
         renderMisDatos();
         renderMonthPurchase();
+        renderEjercicio();
         renderSummary();
         renderCaldoKcal();
         if (!res.ok) throw new Error(res.error || 'Semilla no aplicada');
@@ -3101,6 +3413,7 @@
             const res = applyHealthSeed(JSON.parse(String(reader.result || '')));
             renderMisDatos();
             renderMonthPurchase();
+            renderEjercicio();
             renderSummary();
             renderCaldoKcal();
             setMisDatosStatus(res.message || res.error || '', res.ok ? 'ok' : 'warn');
@@ -3139,6 +3452,7 @@
                 status.className = 'status-line ok';
                 setMisDatosStatus(status.textContent, 'ok');
                 renderMonthPurchase();
+                renderEjercicio();
                 setCompraStatus(status.textContent, 'ok');
               } else if (added > 0) {
                 status.textContent = 'Importadas ' + added + ' filas útiles desde «' + file.name + '». Revisa el resumen. Sin conexión directa a Samsung Health.';
@@ -3761,11 +4075,13 @@
   processPendingImport();
   renderAll();
   wireMonthPurchase();
+  wireEjercicio();
   renderGallery().catch(function () {});
   window.addEventListener('hashchange', function () {
     processPendingImport();
     renderMisDatos();
     renderMonthPurchase();
+    renderEjercicio();
     renderSummary();
     renderCaldoKcal();
   });
@@ -3798,6 +4114,9 @@
     caldoTotals: caldoTotals,
     CALDO_KCAL: CALDO_KCAL,
     EXERCISE_HOME: EXERCISE_HOME,
+    exerciseSessionPlan: exerciseSessionPlan,
+    nextExerciseSession: nextExerciseSession,
+    applyExerciseLog: applyExerciseLog,
     processPendingImport: processPendingImport,
     applyShoppingMonth: applyShoppingMonth,
     latestMonthPurchase: latestMonthPurchase,
