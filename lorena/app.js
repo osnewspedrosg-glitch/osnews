@@ -16,7 +16,12 @@
     gratitud: "Me alegra acompañarte. ¿Hay algo más que quieras compartir?",
     calma: "Cuando quieras, seguimos hablando.",
     sorpresa: "¿Qué es lo que más te ha sorprendido?",
-    tristeza: "Si te apetece, puedes contarme un poco más. Aquí estoy.",
+    tristeza: [
+      "Si te apetece, puedes contarme un poco más. Aquí estoy.",
+      "Cuando quieras, me dices algo más. Te escucho.",
+      "Si te viene bien, sigue cuando tú digas. Aquí estoy.",
+      "No hay prisa. Si quieres ampliarlo, te leo."
+    ],
     soledad: "No tienes que pasar por esto en silencio. Te escucho.",
     enfado: "¿Qué es lo que más te ha sentado mal?",
     miedo: "Vamos despacio. ¿Qué es lo que más te preocupa?",
@@ -166,7 +171,9 @@
     if (!a || !a.detected) {
       return "Cuando quieras, escribe cómo te sientes o lo que te ronda la cabeza. Te escucho.";
     }
-    return FOLLOW[a.emotion] || "Te escucho. ¿Quieres contar un poco más?";
+    var f = FOLLOW[a.emotion];
+    if (Array.isArray(f)) return f[(lo.memory().assistant.replies || 0) % f.length];
+    return f || "Te escucho. ¿Quieres contar un poco más?";
   }
 
   form.addEventListener("submit", function (ev) {
@@ -259,14 +266,12 @@
     } catch (e) {}
   });
   $("guia-salida").addEventListener("click", function () {
+    try { lo.forget(); } catch (e) {}
+    try { sessionStorage.clear(); } catch (e) {}
     try { localStorage.removeItem(GUIDE_KEY); } catch (e) {}
-    $("guia-in").value = "";
-    $("guia-out").innerHTML = "";
-    try { document.documentElement.replaceChildren(); } catch (e) {
-      try { document.documentElement.innerHTML = ""; } catch (e2) {}
-    }
-    document.title = "";
-    location.replace("about:blank");
+    try { $("guia-in").value = ""; $("guia-out").innerHTML = ""; log.innerHTML = ""; } catch (e) {}
+    try { history.replaceState(null, "", "https://www.aemet.es/"); } catch (e) {}
+    location.replace("https://www.aemet.es/");
   });
   try {
     var saved = JSON.parse(localStorage.getItem(GUIDE_KEY) || "null");
