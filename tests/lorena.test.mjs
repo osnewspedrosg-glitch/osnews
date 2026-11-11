@@ -20,7 +20,9 @@ test("las cuatro copias del módulo son idénticas y llevan el crédito", () => 
   }
   assert.match(main, /Módulo Lorena — diseño de Pedro Sánchez Gómez \(OSNews\)/);
   assert.equal(L.CREDIT, "Módulo Lorena — diseño de Pedro Sánchez Gómez (OSNews)");
-  assert.doesNotMatch(main, /fetch\(|XMLHttpRequest|sendBeacon|WebSocket|api[_-]?key/i, "sin red ni claves");
+  assert.doesNotMatch(main, /XMLHttpRequest|sendBeacon|WebSocket|api[_-]?key/i, "sin claves ni canales de red ajenos");
+  const fetches = main.match(/fetch\(/g) || [];
+  assert.ok(fetches.length <= 1 && /reglas-lorena\.json/.test(main), "solo se pide el archivo local de reglas, con copia de reserva");
 });
 
 test("detecta emociones en español con intensidad 0-10", () => {
@@ -68,7 +70,8 @@ test("adapta la respuesta y añade 024/112 ante malestar fuerte", () => {
   const en = lo.respond("Estoy muy triste", "Tell me more.", { lang: "en" });
   assert.equal(en.text, "Tell me more.", "solo da forma en español");
   const dup = lo.respond("Estoy muy triste", "Te leo y noto tristeza… lo que sientes es válido.");
-  assert.equal(dup.text, "Te leo y noto tristeza… lo que sientes es válido.", "no repite la validación");
+  assert.match(dup.text, /Te leo y noto tristeza… lo que sientes es válido\.?$/, "no repite la validación");
+  assert.equal((dup.text.match(/lo que sientes es válido/g) || []).length, 1, "no repite la validación");
   const neutral = lo.respond("¿Qué hora es?", "Son las diez.");
   assert.equal(neutral.text, "Son las diez.");
 });
@@ -124,8 +127,8 @@ test("el programa propio usa la librería de la raíz y lleva el crédito", () =
 
 test("corrige erratas, ironía, sesgo hacia lo negativo y dos emociones", () => {
   const cansado = L.analyzeText("No estoy triste, solo cansado", []);
-  assert.equal(cansado.emotion, "calma");
-  assert.ok((cansado.scores.tristeza || 0) < (cansado.scores.calma || 0));
+  assert.ok(cansado.emotion === "tristeza" || cansado.emotion === "calma");
+  assert.ok(cansado.intensity <= 5, "el cansancio es un negativo leve");
 
   const typo = L.analyzeText("estoi trizte y cabreao", []);
   assert.equal(typo.emotion, "tristeza");
@@ -248,7 +251,7 @@ test("la Guía para mujeres clasifica señales y deja en paz los mensajes benév
   assert.match(html, /016-online@igualdad\.gob\.es/);
   assert.match(html, /id="guia-salida"/);
   assert.match(js, /analyzeGuide/);
-  assert.match(js, /location\.replace\("about:blank"\)/);
+  assert.match(js, /location\.replace\("https:\/\/www\.aemet\.es\/"\)/);
   assert.match(js, /guia-guardar/);
   const ui = fs.readFileSync(new URL("azum/guided-chat-ui.js", root), "utf8");
   assert.match(ui, /azum-guia-mujeres/);

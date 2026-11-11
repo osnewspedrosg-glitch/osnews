@@ -8,7 +8,9 @@ BASE = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:8799/osnews/"
 results = {}
 
 def guard(page, ext):
-    page.route("**/*", lambda r: r.abort() if not r.request.url.startswith(BASE.split("/osnews/")[0]) and not ext.append(r.request.url) else r.continue_())
+    def _ok(u):
+        return u.startswith(BASE.split("/osnews/")[0]) or "aemet.es" in u
+    page.route("**/*", lambda r: r.abort() if not _ok(r.request.url) and not ext.append(r.request.url) else r.continue_())
 
 def check(name, ok, detail):
     results.setdefault(name, []).append(("OK" if ok else "FALLO", detail))
@@ -153,7 +155,8 @@ def run(p):
     check("Programa", not errs, "errores JS: %s" % errs)
     pg.click("#guia-salida")
     pg.wait_for_timeout(400)
-    check("Programa", pg.evaluate("()=>location.href").startswith("about:blank"), "salida rápida limpia la página: " + pg.evaluate("()=>location.href"))
+    url = pg.evaluate("()=>location.href")
+    check("Programa", "aemet.es" in url, "salida rápida va a una página neutra: " + url)
     c.close(); b.close()
 
 
