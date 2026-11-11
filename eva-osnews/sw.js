@@ -1,4 +1,4 @@
-const CACHE = "eva-osnews-shell-v2-lorena";
+const CACHE = "eva-osnews-shell-v3-lorena";
 const FILES = ["./index.html", "./app.js", "./app.css", "./logic.js", "./may-adapter.js", "./manifest.webmanifest", "./lorena.js", "./lorena-eva.js"];
 
 self.addEventListener("install", (event) => {

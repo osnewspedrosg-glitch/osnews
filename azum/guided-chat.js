@@ -190,7 +190,13 @@ export function respond(text, memory, roleOrId = "core") {
     next.feeling = feeling;
     const care = feeling === "soledad"
       ? "Gracias por decirlo. No soy una persona y no siento soledad: esta frase está programada. Si puedes, cuéntaselo también a alguien cercano."
-      : `Apunto que dices sentirte en ${feeling}. No es una medición ni una emoción mía.`;
+      : `Apunto que ${({
+        tristeza: "dices que estás triste",
+        soledad: "dices que te sientes en soledad",
+        ansiedad: "dices que estás agobiado o agobiada",
+        miedo: "dices que tienes miedo",
+        bien: "dices que estás bien",
+      }[feeling] || "dices cómo te sientes")}. No es una medición ni una emoción mía.`;
     answer = (answer ? answer + " " : "") + care;
     askedNow = true;
   }
@@ -261,8 +267,12 @@ export function chooseRole(preferredRole, analysis, memories) {
   const intensity = Number(analysis?.intensity) || 0;
   const trend = analysis?.trend;
   const valence = analysis?.valence;
-  const lastValence = memories?.user?.last
-    ? (memories.user.last.v ?? memories.user.last.valence)
+  const last = memories?.user?.last;
+  const lastValence = last
+    ? (typeof last.v === "number" ? last.v
+      : typeof last.valence === "number" && typeof last.i === "number" ? last.valence * last.i
+      : typeof last.valence === "number" ? last.valence
+      : null)
     : null;
   const worsening = trend === "empeora" || (typeof lastValence === "number" && valence < 0 && valence < lastValence);
   if ((/^(tristeza|soledad|ansiedad|miedo)$/.test(emotion) && intensity >= 4) || (worsening && valence < 0 && intensity >= 3)) {
@@ -271,20 +281,134 @@ export function chooseRole(preferredRole, analysis, memories) {
   return "core";
 }
 
+export const DECISION_KEY = "azum-decision-log-v1";
+
+export function loadDecisions(storage) {
+  try {
+    const data = JSON.parse(storage.getItem(DECISION_KEY) || "[]");
+    return Array.isArray(data) ? data.slice(-30) : [];
+  } catch {
+    return [];
+  }
+}
+
+export function clearDecisions(storage) {
+  storage.removeItem(DECISION_KEY);
+}
+
+function rolesToAsk(preferred) {
+  const pref = (typeof preferred === "string" ? preferred : preferred?.id) || "core";
+  const out = [];
+  const seen = new Set();
+  const add = (id) => {
+    const role = GUIDED_ROLES.find((item) => item.id === id);
+    if (role && !seen.has(role.id)) { seen.add(role.id); out.push(role); }
+  };
+  add(pref);
+  ["core", "isabella", "eva"].forEach(add);
+  return out;
+}
+
+export function scoreCandidate(cand, analysis, memories, lastReplies) {
+  let s = cand.status === "activo" ? 0.7 : 0.4;
+  if (cand.status === "borrador") s -= 0.25;
+  const emo = analysis?.emotion || "";
+  const intensity = Number(analysis?.intensity) || 0;
+  if (cand.roleId === "eva" && /^(tristeza|soledad|miedo)$/.test(emo)) s += 0.35 * (intensity / 10);
+  if (cand.roleId === "core") s += 0.12;
+  if (analysis?.machista?.detected && cand.roleId === "core") s += 0.3;
+  if (analysis?.distress === "crisis" && cand.roleId === "eva") s += 0.25;
+  if (cand.roleId === "health" && !/\b(dosis|diagnostico|medico|salud)\b/.test((cand.text || "").toLowerCase())) s -= 0.4;
+  const prev = lastReplies || [];
+  if (prev.some((t) => t && cand.text && t.slice(0, 48) === cand.text.slice(0, 48))) s -= 0.35;
+  return Math.round(s * 100) / 100;
+}
+
+/**
+ * Un envío: Lorena analiza; Azum pide a cada candidato, uno detrás de otro,
+ * una respuesta; las puntúa (emoción, repetición, seguridad) y elige una.
+ * Lorena solo adapta esa respuesta. Azum decide también el modo Eva/Lorena
+ * con el análisis y el historial.
+ */
 export function dispatch(text, memory, role, storage, lorena) {
   const analysis = lorena && typeof lorena.analyze === "function" ? lorena.analyze(text) : null;
   const memories = lorena && typeof lorena.memory === "function" ? lorena.memory() : null;
-  const roleId = chooseRole(role, analysis, memories);
-  const decided = deliver(text, memory, roleId, storage);
-  decided.analysis = analysis || null;
-  decided.chosenRole = roleId;
-  decided.requestedRole = (typeof role === "string" ? role : role?.id) || "core";
+  const modeDec = lorena && typeof lorena.decideMode === "function"
+    ? lorena.decideMode(analysis)
+    : { mode: "lorena", modeLabel: "modo Lorena", reasons: [], scores: {} };
+
+  const candidates = [];
+  const asked = rolesToAsk(role);
+  for (let i = 0; i < asked.length; i += 1) {
+    const item = asked[i];
+    const raw = respond(text, memory, item.id);
+    candidates.push({
+      roleId: item.id,
+      status: item.status,
+      text: raw.text,
+      memory: raw.memory,
+      confidence: item.status === "activo" ? 0.7 : 0.4,
+    });
+  }
+  const lastReplies = loadDecisions(storage).map((d) => d.reply).filter(Boolean);
+  const scored = candidates.map((c) => ({ ...c, score: scoreCandidate(c, analysis, memories, lastReplies) }));
+  scored.sort((a, b) => b.score - a.score);
+  const requestedId = (typeof role === "string" ? role : role?.id) || "core";
+  let winner = scored[0] || { text: "", memory, roleId: "core" };
+  if (requestedId !== "core") {
+    const forced = scored.find((c) => c.roleId === requestedId);
+    if (forced) winner = forced;
+  }
+
+  let stored = true, error = null;
+  try {
+    if (winner.memory) saveMemory(storage, winner.memory);
+  } catch (err) {
+    stored = false;
+    error = String(err?.message || err);
+  }
+
   if (lorena && typeof lorena.respond === "function") {
-    const shaped = lorena.respond(text, decided.text, { lang: "es" });
+    const shaped = lorena.respond(text, winner.text, { lang: "es", mode: modeDec.mode });
     if (shaped && typeof shaped.text === "string") {
-      decided.text = shaped.text;
-      if (shaped.tone) decided.tone = shaped.tone;
+      winner.text = shaped.text;
+      if (shaped.tone) winner.tone = shaped.tone;
     }
   }
-  return decided;
+
+  const entry = {
+    t: Date.now(),
+    user: String(text || "").slice(0, 180),
+    picked: winner.roleId,
+    mode: modeDec.mode,
+    modeLabel: modeDec.modeLabel,
+    reasons: modeDec.reasons || [],
+    emotion: analysis?.emotion || null,
+    intensity: analysis?.intensity ?? null,
+    machista: !!(analysis?.machista && analysis.machista.detected),
+    candidates: scored.map((c) => ({ role: c.roleId, score: c.score })),
+    reply: String(winner.text || "").slice(0, 220),
+  };
+  try {
+    const log = loadDecisions(storage);
+    log.push(entry);
+    storage.setItem(DECISION_KEY, JSON.stringify(log.slice(-30)));
+  } catch {
+    /* el registro de decisión es local y opcional */
+  }
+
+  return {
+    text: winner.text,
+    memory: winner.memory,
+    stored,
+    error,
+    analysis,
+    chosenRole: winner.roleId,
+    requestedRole: (typeof role === "string" ? role : role?.id) || "core",
+    mode: modeDec.mode,
+    modeLabel: modeDec.modeLabel,
+    tone: winner.tone,
+    decision: entry,
+    candidates: scored.map((c) => ({ roleId: c.roleId, score: c.score })),
+  };
 }

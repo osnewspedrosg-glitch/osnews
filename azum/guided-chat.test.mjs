@@ -15,6 +15,9 @@ import {
   saveMemory,
   chooseRole,
   dispatch,
+  loadDecisions,
+  clearDecisions,
+  DECISION_KEY,
 } from "./guided-chat.js";
 
 function memoryStore(initial = {}) {
@@ -112,10 +115,17 @@ function fakeLorena({ emotion = "tristeza", intensity = 7, trend = "estable", va
       calls.order.push("memory");
       return { user: { last: null, turns: 0 }, assistant: { replies: 0 } };
     },
-    respond(_text, base) {
+    respond(_text, base, opts) {
       calls.respond += 1;
       calls.order.push("respond");
-      return { text: `ANOTADA ${base}`, tone: "validacion" };
+      return { text: `ANOTADA ${base}`, tone: "validacion", mode: opts && opts.mode };
+    },
+    decideMode(analysis) {
+      calls.decideMode = (calls.decideMode || 0) + 1;
+      const mode = analysis && analysis.machista && analysis.machista.detected
+        ? "lorena"
+        : (analysis && /^(tristeza|soledad|miedo)$/.test(analysis.emotion) ? "eva" : "lorena");
+      return { mode, modeLabel: mode === "eva" ? "modo Eva" : "modo Lorena", reasons: ["test"] };
     },
   };
 }
@@ -133,7 +143,7 @@ test("Lorena alimenta la decisión de Azum y solo hay una respuesta", () => {
   assert.equal(typeof result.text, "string");
   assert.equal(Array.isArray(result.text), false);
   assert.match(result.text, /^ANOTADA /);
-  assert.match(result.text, /Encantada, Ana|Soy Azum|sentirte en tristeza/);
+  assert.match(result.text, /Encantada, Ana|Soy Azum|dices que estás triste/);
   assert.equal((result.text.match(/^ANOTADA /gm) || []).length, 1, "Lorena no añade una segunda respuesta");
   assert.equal(roleIds().length, 13);
 });
@@ -154,4 +164,38 @@ test("sin Lorena, Azum sigue dando una sola respuesta programada", () => {
   assert.equal(result.analysis, null);
   assert.match(result.text, /Soy Azum/);
   assert.doesNotMatch(result.text, /ANOTADA/);
+});
+
+
+test("el despacho anota el modo y el registro de decisión, un envío y una respuesta", () => {
+  const storage = memoryStore();
+  const lorena = fakeLorena({ emotion: "tristeza", intensity: 7 });
+  const result = dispatch("Me siento muy triste", emptyMemory(), "core", storage, lorena);
+  assert.equal(result.mode, "eva");
+  assert.equal(result.modeLabel, "modo Eva");
+  assert.ok(Array.isArray(result.candidates) && result.candidates.length >= 2);
+  assert.equal(result.candidates.filter((c) => c.roleId === result.chosenRole).length, 1);
+  const log = loadDecisions(storage);
+  assert.equal(log.length, 1);
+  assert.equal(log[0].mode, "eva");
+  assert.equal(log[0].picked, result.chosenRole);
+  assert.equal(log[0].machista, false);
+  assert.ok(storage.getItem(DECISION_KEY));
+  clearDecisions(storage);
+  assert.deepEqual(loadDecisions(storage), []);
+});
+
+test("una actitud machista queda en el registro y Azum elige modo Lorena", () => {
+  const storage = memoryStore();
+  const lorena = fakeLorena({ emotion: "enfado", intensity: 4 });
+  const orig = lorena.analyze;
+  lorena.analyze = function () {
+    const a = orig();
+    a.machista = { detected: true, violence: false };
+    return a;
+  };
+  const result = dispatch("Las mujeres no saben conducir", emptyMemory(), "core", storage, lorena);
+  assert.equal(result.mode, "lorena");
+  assert.equal(loadDecisions(storage)[0].machista, true);
+  assert.equal(result.chosenRole, "core");
 });

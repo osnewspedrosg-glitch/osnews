@@ -36,6 +36,7 @@
     <div class="titles">
       <h1>Módulo Lorena</h1>
       <p class="sub">Inteligencia emocional de MAY</p>
+      <nav class="top-nav"><a href="#guia-mujeres">Guía para mujeres</a></nav>
     </div>
   </header>
 
@@ -128,6 +129,26 @@
       </form>
       <div id="lorena-slot"></div>
       <p id="crisis" class="crisis" hidden></p>
+    </section>
+
+    <section class="guia" id="guia-mujeres" aria-label="Guía para mujeres">
+      <div class="guia-head">
+        <div>
+          <h2>Guía para mujeres</h2>
+          <p class="chat-lead">Si quieres, pega aquí mensajes que hayas recibido de un hombre. Los leo contigo, con calma, solo en este dispositivo: no salen a ninguna red y no se guardan a menos que tú lo elijas. Esta lectura es orientativa: no es una valoración profesional, clínica ni jurídica, y no pone etiqueta a ninguna persona; señala actitudes en las frases.</p>
+        </div>
+        <button type="button" id="guia-salida" class="guia-salida">Salida rápida</button>
+      </div>
+      <p class="guia-016" id="guia-016">Si lo necesitas, el <strong>016</strong> es gratuito y confidencial, y no deja rastro en la factura (Ministerio de Igualdad). También puedes escribir por WhatsApp al <strong>600 000 016</strong> (solo WhatsApp, no admite llamadas) o a <a href="mailto:016-online@igualdad.gob.es">016-online@igualdad.gob.es</a>. Si hay peligro inmediato, llama al <strong>112</strong>.</p>
+      <form id="guia-form" class="guia-form">
+        <label class="sr" for="guia-in">Mensajes recibidos</label>
+        <textarea id="guia-in" rows="7" maxlength="12000" placeholder="Pega aquí los mensajes, tal como te llegaron…"></textarea>
+        <div class="guia-actions">
+          <button type="submit" id="guia-analizar">Leer estos mensajes</button>
+          <label class="guia-save"><input type="checkbox" id="guia-guardar"> Guardar una copia solo en este aparato (desactivado por defecto)</label>
+        </div>
+      </form>
+      <div id="guia-out" class="guia-out" aria-live="polite"></div>
     </section>
   </main>
 

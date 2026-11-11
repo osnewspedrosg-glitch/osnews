@@ -1,5 +1,5 @@
 import "./lorena.js"; // Módulo Lorena — diseño de Pedro Sánchez Gómez (OSNews): define globalThis.OSN_LORENA
-import { GUIDED_LABEL, dispatch, forgetGuidedMemory, loadMemory, STORAGE_KEY } from "./guided-chat.js";
+import { GUIDED_LABEL, dispatch, forgetGuidedMemory, loadMemory, STORAGE_KEY, loadDecisions, clearDecisions } from "./guided-chat.js";
 
 const KEY = STORAGE_KEY;
 
@@ -49,7 +49,28 @@ export function mount(doc) {
   form.append(field, send, forget, status);
   const log = add(doc, section, "div", "azum-guided-log", "");
   log.id = "azum-guided-log";
-  section.append(form, log);
+  const tools = add(doc, section, "p", "azum-guided-tools", "");
+  const guideLink = doc.createElement("a");
+  guideLink.id = "azum-guia-mujeres";
+  guideLink.className = "azum-guia-link";
+  guideLink.href = "../lorena/#guia-mujeres";
+  guideLink.textContent = "Guía para mujeres";
+  guideLink.title = "Analiza en este aparato mensajes que hayas recibido. Nada sale del dispositivo.";
+  tools.appendChild(guideLink);
+  const decisions = doc.createElement("details");
+  decisions.className = "azum-decision";
+  decisions.id = "azum-decision";
+  const sum = add(doc, decisions, "summary", null, "Registro de decisión de Azum");
+  add(doc, decisions, "p", "azum-decision-note", "Qué papel y qué modo eligió Azum en este aparato, con el análisis de Lorena. Se queda aquí.");
+  const dlog = add(doc, decisions, "ol", "azum-decision-log", "");
+  dlog.id = "azum-decision-log";
+  const dclear = doc.createElement("button");
+  dclear.type = "button";
+  dclear.id = "azum-decision-clear";
+  dclear.className = "azum-guided-forget";
+  dclear.textContent = "Borrar registro de decisión";
+  decisions.appendChild(dclear);
+  section.append(form, log, tools, decisions);
   const stack = doc.querySelector("#contenido .stack") || doc.querySelector("#contenido") || body;
   stack.insertBefore(section, stack.firstChild);
 
@@ -74,6 +95,26 @@ export function mount(doc) {
     log.appendChild(turn);
     turn.scrollIntoView({ block: "nearest" });
   }
+
+  function paintDecisions() {
+    dlog.textContent = "";
+    const rows = loadDecisions(storage).slice().reverse();
+    if (!rows.length) {
+      add(doc, dlog, "li", "azum-decision-empty", "Todavía no hay decisiones guardadas en este aparato.");
+      return;
+    }
+    rows.forEach((row) => {
+      const li = add(doc, dlog, "li", null, "");
+      const mode = row.modeLabel || (row.mode === "eva" ? "modo Eva" : row.mode === "lorena" ? "modo Lorena" : "—");
+      const emo = row.emotion ? `${row.emotion}${row.intensity != null ? " " + row.intensity + "/10" : ""}` : "—";
+      const mac = row.machista ? " · actitud machista detectada" : "";
+      const cands = Array.isArray(row.candidates)
+        ? row.candidates.map((c) => `${c.role || c.roleId}:${c.score}`).join(", ")
+        : "";
+      li.textContent = `${mode} · papel ${row.picked || "—"} · ${emo}${mac}` + (cands ? ` · candidatos: ${cands}` : "");
+    });
+  }
+  paintDecisions();
 
   function roleId() {
     return doc.querySelector(".app select")?.value || "core";
@@ -101,6 +142,7 @@ export function mount(doc) {
         ? "Respuesta lista. Se queda en este aparato."
         : `No se pudo guardar en este aparato: ${result.error}`;
       paint(`Tú: ${text}\nAzum: ${result.text}`);
+      paintDecisions();
       input.value = "";
     } catch (error) {
       status.dataset.kind = "error";
@@ -116,6 +158,12 @@ export function mount(doc) {
     if (event.pointerType === "mouse") return;
     event.preventDefault();
     submitText();
+  });
+
+  dclear.addEventListener("click", () => {
+    clearDecisions(storage);
+    paintDecisions();
+    status.textContent = "He borrado el registro de decisión en este aparato.";
   });
 
   forget.addEventListener("click", () => {

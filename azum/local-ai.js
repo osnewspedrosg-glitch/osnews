@@ -571,11 +571,23 @@ export function mount(doc, input = {}) {
 }
 
 if (typeof document !== "undefined") {
+  // Mount after load so React can hydrate the static page first (avoids #418).
+  // mount() itself stays synchronous for tests that call it directly.
   const start = () => mount(document);
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
-  else start();
-  const observer = new MutationObserver(() => {
-    if (!document.getElementById("azum-local-ai") || !document.getElementById("azum-rules-label")) start();
-  });
-  observer.observe(document.body, { childList: true, subtree: true });
+  const afterHydration = () => {
+    const go = () => {
+      start();
+      if (document.body) {
+        const observer = new MutationObserver(() => {
+          if (!document.getElementById("azum-local-ai") || !document.getElementById("azum-rules-label")) start();
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+      }
+    };
+    if (typeof requestAnimationFrame === "function") {
+      requestAnimationFrame(() => setTimeout(go, 0));
+    } else setTimeout(go, 0);
+  };
+  if (document.readyState === "complete") afterHydration();
+  else (document.defaultView || window).addEventListener("load", afterHydration, { once: true });
 }
