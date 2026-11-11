@@ -3,6 +3,7 @@
 <head>
 <script src="creador.js"></script>
 <script src="charla.js"></script>
+<script src="lorena.js"></script><!-- Módulo Lorena — diseño de Pedro Sánchez Gómez (OSNews) -->
 <script>/* MAY_ANDROID_BRIDGE_V1: en la app Android (WebView) usa la voz y el micrófono nativos del teléfono */(function(){var N=window.MAYNative;if(!N)return;
 window.SpeechSynthesisUtterance=function(t){this.text=t||'';this.lang='es-ES';this.pitch=1;this.rate=1;this.volume=1;this.voice=null};
 window.speechSynthesis={onvoiceschanged:null,getVoices:function(){return[]},speak:function(u){window.__mayU=u;try{u.onstart&&u.onstart()}catch(e){}N.speak2?N.speak2(String(u.text),+u.pitch||1,+u.rate||1,String(u.lang||'es-ES')):N.speak(String(u.text),+u.pitch||1,+u.rate||1)},cancel:function(){N.stop()}};
@@ -1038,6 +1039,8 @@ setInterval(poll, POLL_MS);
   if(!r&&CH){const c=CH.turn(q);if(c){r=c.text;window.__mayLang=c.lang}}/* CREADOR_V1: prioridad sobre API y reglas genéricas */
   if(!r&&online){try{const res=await fetch(API+'/api/may',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:history})});if(res.ok)r=(await res.json()).reply}catch(e){}}
   if(!r){r=offline(q)}
+  /* MODULO_LORENA_V1: memorias del usuario y de MAY → análisis de emociones → respuesta con inteligencia emocional → retroalimentación */
+  try{const LO=window.__mayLorena;if(LO){r=LO.respond(q,r,{lang:window.__mayLang||'es'}).text}}catch(e){}
   const left=wait-(Date.now()-t0);if(left>0)await new Promise(z=>setTimeout(z,left));w.classList.remove('mc-typing');
   w.innerHTML=linkify(r);try{window.mayMoodUI&&mayMoodUI()}catch(e){}try{MAY.log('user',q);MAY.log('may',r)}catch(e){}history.push({role:'may',text:r});history=history.slice(-12);speak(r)}
  $('mcForm').onsubmit=e=>{e.preventDefault();const q=$('mcInput').value.trim();if(!q)return;$('mcInput').value='';ask(q)};
@@ -1049,7 +1052,7 @@ setInterval(poll, POLL_MS);
  // --- Comprobar backend ---
  (HASAPI?fetch(API+'/api/may',{cache:'no-store'}):Promise.reject()).then(r=>r.ok?r.json():null).then(d=>{online=!!(d&&d.ok)}).catch(()=>{}).finally(()=>{st.textContent=online?'● MAY en línea (IA)':'● MAY · personalidad Copilot (modo web)';st.className='mc-status '+(online?'on':'off');loadPoll()});
  {const c=document.createElement('div');c.className='mc-credit';c.innerHTML='MAY · creada por Pedro Sánchez Gómez (Mar Menor) con Copilot y Grok · OSNews · <a href="asdrubal/">🌹 Conoce a Asdrúbal</a>';log.parentNode.insertBefore(c,log.nextSibling)}
- {const H=MAY.history();H.forEach(m=>add(m.r==='u'||m.r==='user'?'user':'may',m.t));MAY.X.onTimer=x=>{add('may',x);speak(x)};const c=document.createElement('div');c.className='mc-credit';c.innerHTML='🔒 Tu memoria con MAY se guarda solo en este dispositivo. <button type="button" id="mcForget" class="mc-forget">Olvidar mis datos</button>';log.parentNode.insertBefore(c,log.nextSibling);$('mcForget').onclick=()=>{MAY.forget();try{mayMoodUI()}catch(e){};log.innerHTML='';add('may','Hecho 💛: he olvidado tu nombre, tus datos y nuestra conversación en este dispositivo.');if(window.__mayCharla)add('may',__mayCharla.welcome())};const wb=MAY.welcome();const CHw=window.OSN_CHARLA&&(window.__mayCharla=window.__mayCharla||OSN_CHARLA({who:'may',state:()=>MAY.state,save:()=>MAY.save(),ui:()=>'es',isCrisis:x=>MAY.isCrisis(x)}));add('may',(CHw&&CHw.welcome())||wb||'¡Hola! Soy MAY, la presentadora IA de OSNews. Pregúntame lo que quieras sobre los debates, los boletines o la comunidad. Y en la encuesta de al lado… tú decides.')}
+ {const H=MAY.history();H.forEach(m=>add(m.r==='u'||m.r==='user'?'user':'may',m.t));MAY.X.onTimer=x=>{add('may',x);speak(x)};const c=document.createElement('div');c.className='mc-credit';c.innerHTML='🔒 Tu memoria con MAY se guarda solo en este dispositivo. <button type="button" id="mcForget" class="mc-forget">Olvidar mis datos</button>';log.parentNode.insertBefore(c,log.nextSibling);$('mcForget').onclick=()=>{MAY.forget();try{window.__mayLorena&&__mayLorena.forget()}catch(e){};try{mayMoodUI()}catch(e){};log.innerHTML='';add('may','Hecho 💛: he olvidado tu nombre, tus datos y nuestra conversación en este dispositivo.');if(window.__mayCharla)add('may',__mayCharla.welcome())};const wb=MAY.welcome();const CHw=window.OSN_CHARLA&&(window.__mayCharla=window.__mayCharla||OSN_CHARLA({who:'may',state:()=>MAY.state,save:()=>MAY.save(),ui:()=>'es',isCrisis:x=>MAY.isCrisis(x)}));add('may',(CHw&&CHw.welcome())||wb||'¡Hola! Soy MAY, la presentadora IA de OSNews. Pregúntame lo que quieras sobre los debates, los boletines o la comunidad. Y en la encuesta de al lado… tú decides.')}
 
  /* MAY_EMOCIONES_V1 · indicador de ánimo (hexágono) */
  window.mayMoodUI=function(){const h=$('mcHex');if(!h||!MAY.moodInfo)return;const o=MAY.moodInfo();const E=[['alegria','Alegría','+1'],['sorpresa','Sorpresa','0'],['miedo','Miedo','−1'],['ira','Ira','−1'],['asco','Asco','−1'],['tristeza','Tristeza','−1']];
@@ -1058,6 +1061,9 @@ setInterval(poll, POLL_MS);
   const k=E.findIndex(e=>e[0]===o.label);const r=k<0?0:Math.min(1,Math.abs(o.m)+.25);const dx=k<0?0:P[k][0]*r,dy=k<0?0:P[k][1]*r;
   g+='<circle cx="'+dx.toFixed(1)+'" cy="'+dy.toFixed(1)+'" r="4.5" fill="'+(o.m>=0?'#f5c451':'#7aa7ff')+'"><title>Emoción simulada: MAY es una IA</title></circle>';h.innerHTML=g;
   const M={analitica:'analítica',psicologa:'psicóloga/comprensiva',charla:'cariñosa/charla'};$('mcMoodTxt').textContent='Ánimo de MAY: '+o.txt+' · '+o.name+' · Voz: '+o.tone+' · Modo: '+(M[o.mode]||o.mode)};
+ /* MODULO_LORENA_V1 · indicador visible y botón de borrar memoria */
+ if(window.OSN_LORENA){window.__mayLorena=OSN_LORENA.create({app:'may',assistant:'MAY',userName:()=>{try{return MAY.state.name}catch(e){return null}}});
+  __mayLorena.mount($('mcMood'),{buttonClass:'mc-forget',buttonText:'🧹 Borrar memoria Lorena',onForget:()=>add('may','Hecho 💛: he borrado la memoria emocional del Módulo Lorena (la tuya y la mía) en este dispositivo.')})}
  $('mcWheelBtn').onclick=()=>{const d=$('mcWheel');d.showModal?d.showModal():d.setAttribute('open','')};mayMoodUI();
  // --- Encuesta singularidad ---
  const LBL={si:'Sí, ya decide por sí misma',no:'Todavía no, solo procesa patrones',nose:'No lo sé'};

@@ -19,6 +19,9 @@
     <p id="eva-missing"></p>
     <p class="warn">No escribas datos personales ni sensibles, ni una acusación privada sin un enlace que se pueda contrastar. Lo guardado se queda en este navegador: no se sube al repositorio ni se envía a un servidor.</p>
     <p id="eva-status-line" aria-live="polite"></p>
+    <section id="eva-lorena" class="lorena" aria-label="Módulo Lorena">
+      <p id="eva-lorena-reply" aria-live="polite" hidden></p>
+    </section>
     <p id="eva-error" class="error" hidden></p>
     <p><button type="button" class="btn" id="eva-new">Nueva denuncia</button></p>
     <form id="eva-form" hidden>
@@ -52,6 +55,7 @@
     </form>
     <section id="eva-list" aria-live="polite"></section>
   </main>
+  <script src="./lorena.js"></script><!-- Módulo Lorena — diseño de Pedro Sánchez Gómez (OSNews) -->
   <script type="module" src="./app.js"></script>
 <script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

@@ -60,6 +60,7 @@ footer{text-align:center;color:var(--mu);font-size:13px;margin-top:14px}
 <script src="creador.js"></script>
 <script src="charla.js"></script>
 <script src="engine.js"></script>
+<script src="lorena.js"></script><!-- Módulo Lorena — diseño de Pedro Sánchez Gómez (OSNews) -->
 <script>
 (function(){
 const $=id=>document.getElementById(id),A=window.ASDRUBAL,log=$('log');
@@ -120,10 +121,15 @@ function add(role,text){const d=document.createElement('div');d.className='msg '
   s.children[0].onclick=()=>singPoem(text);s.children[1].onclick=()=>stopAll();d.appendChild(s)}
  log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
 const SINGRE=/\b(canta|cantame|cantamelo|cantar|sing|chante|cantami|canta-me)/i;
-async function ask(q){add('u',q);const w=add('a',UI[L].typing);w.classList.add('typing');const CH=window.__asdCharla;const c=CH&&CH.turn(q);const r=c?c.text:A.reply(q);window.__asdLang=c?c.lang:(A.isCrisis&&A.isCrisis(q)?null:(A.detectLang(A.norm(q),q,L)||L));await sleep(350+Math.random()*350);w.remove();add('a',r);A.log('u',q);A.log('a',r);moodUI();
+async function ask(q){add('u',q);const w=add('a',UI[L].typing);w.classList.add('typing');const CH=window.__asdCharla;const c=CH&&CH.turn(q);let r=c?c.text:A.reply(q);window.__asdLang=c?c.lang:(A.isCrisis&&A.isCrisis(q)?null:(A.detectLang(A.norm(q),q,L)||L));/* MODULO_LORENA_V1: análisis de emociones + respuesta con inteligencia emocional + retroalimentación a las dos memorias */
+ try{const LO=window.__asdLorena;if(LO)r=LO.respond(q,r,{lang:window.__asdLang||L,noOpening:r.startsWith('📜')}).text}catch(e){}
+ await sleep(350+Math.random()*350);w.remove();add('a',r);A.log('u',q);A.log('a',r);moodUI();
  if(r.startsWith('📜')&&SINGRE.test(A.norm(q)))singPoem(r);else speak(r)}
 $('f').onsubmit=e=>{e.preventDefault();const q=$('in').value.trim();if(!q)return;$('in').value='';ask(q)};
-$('forget').onclick=()=>{A.forget();A.setLang(L);log.innerHTML='';add('a',UI[L].forgot);window.__asdLang=L;if(window.__asdCharla)add('a',__asdCharla.welcome());moodUI()};
+/* MODULO_LORENA_V1 · indicador visible y botón de borrar memoria */
+if(window.OSN_LORENA){window.__asdLorena=OSN_LORENA.create({app:'asdrubal',assistant:'Asdrúbal',userName:()=>{try{return A.state.name}catch(e){return null}}});
+ __asdLorena.mount(document.querySelector('.mood'),{buttonClass:'forget',buttonText:'🧹 Borrar memoria Lorena',onForget:()=>add('a',L==='es'?'Hecho 🌹: he borrado la memoria emocional del Módulo Lorena (la tuya y la mía) en este dispositivo.':'Done 🌹: Módulo Lorena emotional memory erased on this device.')})}
+$('forget').onclick=()=>{A.forget();try{window.__asdLorena&&__asdLorena.forget()}catch(e){};A.setLang(L);log.innerHTML='';add('a',UI[L].forgot);window.__asdLang=L;if(window.__asdCharla)add('a',__asdCharla.welcome());moodUI()};
 /* micrófono */
 const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
 window.__asdRecResult=q=>ask(q);window.__asdRecEnd=()=>$('mic').style.opacity=1;
