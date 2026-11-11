@@ -1,3 +1,4 @@
+import "./lorena.js"; // Módulo Lorena — diseño de Pedro Sánchez Gómez (OSNews): define globalThis.OSN_LORENA
 import { GUIDED_LABEL, deliver, forgetGuidedMemory, loadMemory, STORAGE_KEY } from "./guided-chat.js";
 
 const KEY = STORAGE_KEY;
@@ -52,6 +53,21 @@ export function mount(doc) {
   const stack = doc.querySelector("#contenido .stack") || doc.querySelector("#contenido") || body;
   stack.insertBefore(section, stack.firstChild);
 
+  // MODULO_LORENA_V1 — diseño de Pedro Sánchez Gómez (OSNews): memoria del usuario + memoria de Azum
+  // → análisis de emociones (estimación programada por palabras, no una medición clínica)
+  // → respuesta con inteligencia emocional → retroalimentación a las dos memorias. Solo en este aparato.
+  const lorena = doc.defaultView?.OSN_LORENA
+    ? doc.defaultView.OSN_LORENA.create({ app: "azum", assistant: "Azum", storage, userName: () => loadMemory(storage).name })
+    : null;
+  if (lorena) {
+    lorena.mount(section, {
+      buttonClass: "azum-guided-forget",
+      buttonText: "Borrar memoria Lorena",
+      noteText: "🔒 Solo en este aparato. Estimación programada por palabras, no es una medición clínica ni una emoción de Azum.",
+      onForget: () => { status.textContent = "He borrado la memoria emocional del Módulo Lorena en este aparato."; },
+    });
+  }
+
   function paint(text) {
     const turn = doc.createElement("p");
     turn.textContent = text;
@@ -80,6 +96,7 @@ export function mount(doc) {
     lastText = text;
     try {
       const result = deliver(text, loadMemory(storage), roleId(), storage);
+      if (lorena) result.text = lorena.respond(text, result.text, { lang: "es" }).text;
       const note = result.stored ? "" : `\nNo se pudo guardar en este aparato: ${result.error}`;
       status.dataset.kind = result.stored ? "ready" : "error";
       paint(`Tú: ${text}\nAzum: ${result.text}${note}`);
@@ -103,6 +120,7 @@ export function mount(doc) {
   forget.addEventListener("click", () => {
     const before = Object.keys(storage);
     forgetGuidedMemory(storage);
+    if (lorena) lorena.forget();
     log.textContent = "";
     status.textContent = storage.getItem(KEY) === null
       ? "He olvidado solo esta charla. El resto de datos de este aparato sigue donde estaba."

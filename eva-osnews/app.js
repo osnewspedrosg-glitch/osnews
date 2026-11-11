@@ -2,9 +2,11 @@ import {
   createEntry, dossier, dossierText, kindLabel, loadEntries,
   removeEntry, saveEntries, statusLabel, upsertEntry, MAY_DELIVERY,
 } from "./logic.js";
+import { createEvaLorena, evaLorenaReply } from "./lorena-eva.js";
 
 const $ = (id) => document.getElementById(id);
 let editing = null;
+let lorena = null;
 
 function storage() { return localStorage; }
 
@@ -121,6 +123,15 @@ function onSave(event) {
     return;
   }
   persist(upsertEntry(currentEntries(), made.entry), "Guardado en este navegador.");
+  // MODULO_LORENA_V1: Eva responde con inteligencia emocional y aprende en las dos memorias locales.
+  try {
+    const answer = evaLorenaReply(lorena, made.entry);
+    const box = $("eva-lorena-reply");
+    box.textContent = `Eva: ${answer.text}`;
+    box.hidden = false;
+  } catch (error) {
+    showError(`Módulo Lorena: ${error?.message || error}`);
+  }
   editing = null;
   $("eva-form").reset();
   $("eva-kind").value = "pendiente";
@@ -168,6 +179,18 @@ function boot() {
   $("eva-new").addEventListener("click", () => { showError(""); fillForm(null); });
   $("eva-cancel").addEventListener("click", () => { $("eva-form").hidden = true; editing = null; });
   $("eva-form").addEventListener("submit", onSave);
+  lorena = createEvaLorena(storage());
+  if (lorena) {
+    lorena.mount($("eva-lorena"), {
+      buttonClass: "btn",
+      buttonText: "Borrar memoria Lorena",
+      onForget: () => {
+        const box = $("eva-lorena-reply");
+        box.textContent = "Eva: he borrado la memoria emocional del Módulo Lorena en este navegador. Tus denuncias siguen guardadas.";
+        box.hidden = false;
+      },
+    });
+  }
   const loaded = loadEntries(storage());
   if (!loaded.ok) showError(loaded.error);
   paint(loaded.entries);

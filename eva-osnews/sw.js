@@ -1,5 +1,5 @@
-const CACHE = "eva-osnews-shell-v1";
-const FILES = ["./index.html", "./app.js", "./app.css", "./logic.js", "./may-adapter.js", "./manifest.webmanifest"];
+const CACHE = "eva-osnews-shell-v2-lorena";
+const FILES = ["./index.html", "./app.js", "./app.css", "./logic.js", "./may-adapter.js", "./manifest.webmanifest", "./lorena.js", "./lorena-eva.js"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(FILES)).then(() => self.skipWaiting()));
