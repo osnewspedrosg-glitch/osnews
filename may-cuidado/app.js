@@ -22,7 +22,7 @@
     enfermera: {
       name: 'Enfermera · Agente Salud',
       emoji: '🩺',
-      help: 'Salud: métricas, báscula (Mis datos), recetas, calorías del caldo, ejercicio en casa, menú, consejos orientativos. Ej.: «peso 72.5», «mis datos», «caldo», «ejercicio», «recetas», «menú», «consejos».'
+      help: 'Salud: métricas, báscula (Mis datos), compra del mes (importada en este dispositivo), recetas, calorías del caldo, ejercicio, menú, consejos. Ej.: «peso 72.5», «mis datos», «compra», «caldo», «ejercicio», «recetas».'
     },
     psicologa: {
       name: 'Psicóloga amiga',
@@ -55,7 +55,8 @@
     prefs: { x_likes: '', x_accounts: '', yt_likes: '', yt_channels: '', notes: '' },
     healthProfile: {},
     scaleReadings: [],
-    importedSeedIds: []
+    importedSeedIds: [],
+    monthPurchases: []
   });
 
   let state = loadState();
@@ -360,6 +361,7 @@
     if (!state.healthProfile || typeof state.healthProfile !== 'object') state.healthProfile = {};
     if (!Array.isArray(state.scaleReadings)) state.scaleReadings = [];
     if (!Array.isArray(state.importedSeedIds)) state.importedSeedIds = [];
+    if (!Array.isArray(state.monthPurchases)) state.monthPurchases = [];
   }
 
   function latestScaleReading() {
@@ -475,7 +477,9 @@
   function looksLikeHealthSeed(obj) {
     if (!obj || typeof obj !== 'object') return false;
     if (Array.isArray(obj)) return false;
-    return obj.type === 'may-cuidado-seed' || (obj.reading && (obj.reading.peso != null || obj.profile));
+    return obj.type === 'may-cuidado-seed' ||
+      (obj.reading && (obj.reading.peso != null || obj.profile)) ||
+      (obj.shoppingMonth && typeof obj.shoppingMonth === 'object');
   }
 
   /* Fusiona un JSON de semilla en el estado local. No borra métricas, fotos ni chats previos. */
@@ -486,7 +490,7 @@
     }
     const id = String(obj.id || (obj.reading && obj.reading.ts) || '').trim();
     if (id && state.importedSeedIds.indexOf(id) !== -1) {
-      return { ok: true, skipped: true, id: id, message: 'Esta medición ya estaba guardada en este dispositivo. No se ha duplicado ni se ha borrado nada.' };
+      return { ok: true, skipped: true, id: id, message: 'Estos datos ya estaban guardados en este dispositivo. No se ha duplicado ni se ha borrado nada.' };
     }
     let added = [];
     if (obj.profile && typeof obj.profile === 'object') {
@@ -514,9 +518,187 @@
         }
       }
     }
+    if (obj.shoppingMonth && typeof obj.shoppingMonth === 'object') {
+      const shopRes = applyShoppingMonth(obj.shoppingMonth);
+      if (shopRes.added) added.push('compra del mes');
+      else if (shopRes.kept) added.push('compra del mes (ya estaba, se conservan las casillas)');
+    }
     if (id) state.importedSeedIds.push(id);
     saveState();
     return { ok: true, skipped: false, id: id, added: added, message: 'Datos guardados solo en este dispositivo: ' + (added.join(', ') || 'sin campos nuevos') + '.' };
+  }
+
+
+  function euroFromCents(cents) {
+    const n = (Number(cents) || 0) / 100;
+    return n.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  }
+  function toCents(n) {
+    return Math.round(Number(n) * 100);
+  }
+  function fmtEuro(n) {
+    return euroFromCents(toCents(n));
+  }
+
+  function applyShoppingMonth(raw) {
+    ensureHealthBoxes();
+    const src = raw || {};
+    const listId = String(src.id || src.title || '').trim();
+    if (!listId && !Array.isArray(src.orders)) {
+      return { added: false, kept: false };
+    }
+    const incoming = {
+      id: listId || ('compra-' + nowIso()),
+      title: String(src.title || 'Compra del mes'),
+      store: String(src.store || ''),
+      currency: String(src.currency || 'EUR'),
+      appTotal: src.appTotal != null ? Number(src.appTotal) : null,
+      calculatedTotal: src.calculatedTotal != null ? Number(src.calculatedTotal) : null,
+      note: String(src.note || ''),
+      orders: (src.orders || []).map(function (o) {
+        return {
+          id: String(o.id || ''),
+          title: String(o.title || ''),
+          when: String(o.when || ''),
+          whenLabel: String(o.whenLabel || ''),
+          focus: String(o.focus || ''),
+          subtotal: o.subtotal != null ? Number(o.subtotal) : null,
+          items: (o.items || []).map(function (it) {
+            return {
+              id: String(it.id || ''),
+              name: String(it.name || ''),
+              qty: Number(it.qty) || 0,
+              unitPrice: Number(it.unitPrice) || 0,
+              lineTotal: it.lineTotal != null ? Number(it.lineTotal) : ((Number(it.qty) || 0) * (Number(it.unitPrice) || 0)),
+              bought: false
+            };
+          })
+        };
+      })
+    };
+    const existing = state.monthPurchases.find(function (x) { return x.id === incoming.id; });
+    if (!existing) {
+      state.monthPurchases.push(incoming);
+      return { added: true, kept: false, id: incoming.id };
+    }
+    // Conserva casillas ya marcadas; añade líneas nuevas si las hubiera.
+    incoming.orders.forEach(function (ord) {
+      let prevOrd = existing.orders.find(function (x) { return x.id === ord.id; });
+      if (!prevOrd) {
+        existing.orders.push(ord);
+        return;
+      }
+      ord.items.forEach(function (it) {
+        const prev = prevOrd.items.find(function (x) { return x.id === it.id; });
+        if (prev) it.bought = !!prev.bought;
+        else prevOrd.items.push(it);
+      });
+    });
+    if (incoming.note) existing.note = existing.note || incoming.note;
+    if (incoming.appTotal != null) existing.appTotal = incoming.appTotal;
+    if (incoming.calculatedTotal != null) existing.calculatedTotal = incoming.calculatedTotal;
+    return { added: false, kept: true, id: incoming.id };
+  }
+
+  function latestMonthPurchase() {
+    ensureHealthBoxes();
+    if (!state.monthPurchases.length) return null;
+    return state.monthPurchases[state.monthPurchases.length - 1];
+  }
+
+  function orderCents(order) {
+    return (order.items || []).reduce(function (s, it) { return s + toCents(it.lineTotal); }, 0);
+  }
+  function orderBoughtCents(order) {
+    return (order.items || []).reduce(function (s, it) { return s + (it.bought ? toCents(it.lineTotal) : 0); }, 0);
+  }
+
+  function setCompraStatus(msg, kind) {
+    const n = document.getElementById('compra-mes-status');
+    if (!n) return;
+    n.textContent = msg || '';
+    n.className = 'status-line' + (kind ? ' ' + kind : '');
+  }
+
+  function renderMonthPurchase() {
+    const box = document.getElementById('compra-mes-view');
+    const titleEl = document.getElementById('compra-mes-title');
+    if (!box) return;
+    const list = latestMonthPurchase();
+    if (titleEl) titleEl.textContent = (list && list.title) ? list.title : 'Compra del mes';
+    if (!list || !list.orders || !list.orders.length) {
+      box.innerHTML = '<p class="help-tips">Aún no hay lista de la compra en este dispositivo. Ábrela con el enlace de importación o un JSON <code>may-cuidado-seed</code>. Los artículos y precios no se publican en el código de la web: se quedan solo aquí.</p>';
+      return;
+    }
+    const calc = list.orders.reduce(function (s, o) { return s + orderCents(o); }, 0);
+    const appC = list.appTotal != null ? toCents(list.appTotal) : null;
+    let mismatch = '';
+    if (appC != null && calc !== appC) {
+      const d = calc - appC;
+      const sign = d > 0 ? '+' : '−';
+      mismatch = '<div class="data-note">La suma de las líneas es ' + euroFromCents(calc) +
+        ', distinta de los ' + euroFromCents(appC) + ' que marcaba la app (' + sign + euroFromCents(Math.abs(d)) +
+        '). Puede faltar o sobrar algún artículo.</div>';
+    }
+    let html = '';
+    if (list.store) {
+      html += '<p class="help-tips">' + escapeHtml(list.store);
+      if (list.whenLabel || list.orders[0]) html += '';
+      html += '. Lista guardada <strong>solo en este dispositivo</strong>. Marca la casilla cuando lo hayas comprado. No se ha hecho ningún pedido desde aquí.</p>';
+    }
+    if (list.note) html += '<p class="help-tips">' + escapeHtml(list.note) + '</p>';
+    if (mismatch) html += mismatch;
+    list.orders.forEach(function (ord) {
+      const sub = orderCents(ord);
+      const boughtC = orderBoughtCents(ord);
+      const nBought = (ord.items || []).filter(function (it) { return it.bought; }).length;
+      const nAll = (ord.items || []).length;
+      html += '<div class="kcal-plate buy-order" data-order="' + escapeHtml(ord.id) + '">';
+      html += '<h3>' + escapeHtml(ord.title || 'Pedido') + '</h3>';
+      html += '<div class="hint">' + escapeHtml(ord.whenLabel || ord.when || '');
+      if (ord.focus) html += ' · ' + escapeHtml(ord.focus);
+      html += '</div>';
+      html += '<div class="kcal-big">Subtotal ≈ ' + euroFromCents(sub) + '</div>';
+      html += '<div class="hint">Marcadas ' + nBought + '/' + nAll + ' · comprado ' + euroFromCents(boughtC) + '</div>';
+      html += '<div class="buy-list">';
+      (ord.items || []).forEach(function (it) {
+        html += '<label class="buy-row' + (it.bought ? ' bought' : '') + '">';
+        html += '<input type="checkbox" data-buy-list="' + escapeHtml(list.id) + '" data-buy-item="' + escapeHtml(it.id) + '"' + (it.bought ? ' checked' : '') + ' />';
+        html += '<span class="buy-name">' + escapeHtml(it.name) + '</span>';
+        html += '<span class="buy-qty">' + escapeHtml(String(it.qty)) + ' × ' + fmtEuro(it.unitPrice) + '</span>';
+        html += '<span class="buy-line">' + fmtEuro(it.lineTotal) + '</span>';
+        html += '</label>';
+      });
+      html += '</div></div>';
+    });
+    html += '<div class="kcal-plate"><h3>Total de la compra</h3><div class="kcal-big">' + euroFromCents(calc) + '</div>';
+    if (appC != null && calc === appC) {
+      html += '<div class="hint">Coincide con el total de la app (' + euroFromCents(appC) + ').</div>';
+    }
+    html += '</div>';
+    box.innerHTML = html;
+  }
+
+  function wireMonthPurchase() {
+    const box = document.getElementById('compra-mes-view');
+    if (!box || box.dataset.wired === '1') return;
+    box.dataset.wired = '1';
+    box.addEventListener('change', function (ev) {
+      const inp = ev.target.closest('input[data-buy-item]');
+      if (!inp) return;
+      const listId = inp.getAttribute('data-buy-list');
+      const itemId = inp.getAttribute('data-buy-item');
+      ensureHealthBoxes();
+      const list = state.monthPurchases.find(function (x) { return x.id === listId; });
+      if (!list) return;
+      list.orders.forEach(function (ord) {
+        (ord.items || []).forEach(function (it) {
+          if (it.id === itemId) it.bought = !!inp.checked;
+        });
+      });
+      saveState();
+      renderMonthPurchase();
+    });
   }
 
   function parseImportHash(raw) {
@@ -555,6 +737,7 @@
       const obj = JSON.parse(utf8FromB64url(b64));
       const res = applyHealthSeed(obj);
       setMisDatosStatus(res.message || res.error || '', res.ok ? 'ok' : 'warn');
+      setCompraStatus(res.ok ? (res.message || '') : (res.error || ''), res.ok ? 'ok' : 'warn');
       if (res.ok) setAgent('enfermera');
     } catch (e) {
       setMisDatosStatus('No se pudo leer el enlace de importación. Prueba el archivo JSON.', 'warn');
@@ -712,13 +895,15 @@
         prefs: Object.assign({ x_likes: '', x_accounts: '', yt_likes: '', yt_channels: '', notes: '' }, (parsed && parsed.prefs) || {}),
         healthProfile: Object.assign({}, (parsed && parsed.healthProfile) || {}),
         scaleReadings: Array.isArray(parsed && parsed.scaleReadings) ? parsed.scaleReadings : [],
-        importedSeedIds: Array.isArray(parsed && parsed.importedSeedIds) ? parsed.importedSeedIds : []
+        importedSeedIds: Array.isArray(parsed && parsed.importedSeedIds) ? parsed.importedSeedIds : [],
+        monthPurchases: Array.isArray(parsed && parsed.monthPurchases) ? parsed.monthPurchases : []
       });
       if (!merged.chats.money) merged.chats.money = [];
       if (!Array.isArray(merged.clinicalLabs)) merged.clinicalLabs = [];
       if (!merged.healthProfile || typeof merged.healthProfile !== 'object') merged.healthProfile = {};
       if (!Array.isArray(merged.scaleReadings)) merged.scaleReadings = [];
       if (!Array.isArray(merged.importedSeedIds)) merged.importedSeedIds = [];
+      if (!Array.isArray(merged.monthPurchases)) merged.monthPurchases = [];
       return merged;
     } catch (e) {
       return defaultState();
@@ -1326,10 +1511,27 @@
       return 'Hola. Soy Enfermera · Agente Salud MAY. Registro métricas, Mis datos de báscula (solo en este dispositivo), recetas, calorías aproximadas del caldo de gambas y almejas, ejercicio en casa y un menú semanal sencillo. Consejos solo orientativos. No es diagnóstico médico. ¿Qué necesitas?';
     }
     if (/ayuda|comandos|que puedes/.test(t)) {
-      return 'Comandos Salud:\n• peso / pasos / pulso / sueño / agua\n• mis datos (báscula, en este dispositivo)\n• caldo / calorías (platos aproximados)\n• ejercicio / rutina / aparatos\n• historial · resumen · consejos\n• análisis / labs (ver formulario)\n• recetas · menú\n• enviar ingredientes [nombre receta]\nFotos: análisis, receta médica, informe médico. OCR local opcional (Tesseract) con confirmación.\nImportar: enlace #import= o JSON may-cuidado-seed (solo local; no borra lo anterior).';
+      return 'Comandos Salud:\n• peso / pasos / pulso / sueño / agua\n• mis datos (báscula, en este dispositivo)\n• compra / mercadona / pedido (lista importada)\n• caldo / calorías (platos aproximados)\n• ejercicio / rutina / aparatos\n• historial · resumen · consejos\n• análisis / labs (ver formulario)\n• recetas · menú\n• enviar ingredientes [nombre receta]\nFotos: análisis, receta médica, informe médico. OCR local opcional (Tesseract) con confirmación.\nImportar: enlace #import= o JSON may-cuidado-seed (solo local; no borra lo anterior).';
     }
     if (/emergencia|urgencia|112|dolor fuerte|me encuentro mal/.test(t)) {
       return 'Si es una emergencia, llama al 112 ahora. Yo solo hago seguimiento personal, no diagnostico ni sustituyo atención sanitaria.';
+    }
+
+    if (/\bcompra\b|mercadona|pedido 1|pedido 2|compra del mes|lista de la compra/.test(t)) {
+      const list = latestMonthPurchase();
+      if (!list) {
+        return 'Aún no hay lista de la compra en este dispositivo. Ábrela con el enlace de importación (o un JSON may-cuidado-seed). Los artículos y precios se quedan solo aquí, no se publican en la web. Desde esta app no se hace ningún pedido.';
+      }
+      const lines = [list.title + (list.store ? ' · ' + list.store : '') + ' (solo en este dispositivo):'];
+      list.orders.forEach(function (ord) {
+        const sub = orderCents(ord);
+        const nBought = (ord.items || []).filter(function (it) { return it.bought; }).length;
+        lines.push((ord.title || 'Pedido') + ' (' + (ord.whenLabel || '') + '): ' + euroFromCents(sub) + ' · ' + nBought + '/' + (ord.items || []).length + ' marcadas. ' + (ord.focus || ''));
+      });
+      const calc = list.orders.reduce(function (s, o) { return s + orderCents(o); }, 0);
+      lines.push('Total: ' + euroFromCents(calc) + (list.appTotal != null && toCents(list.appTotal) === calc ? ' (coincide con la app).' : ''));
+      lines.push('El detalle y las casillas están en el panel «Compra del mes». No se ha hecho ningún pedido desde aquí.');
+      return lines.join('\n');
     }
 
     if (/mis datos|bascula|báscula|medicion|medición de peso|mi perfil/.test(t)) {
@@ -2198,7 +2400,7 @@
   function seedWelcome() {
     const welcomes = {
       secretaria: 'Hola, soy tu Secretaria. Tareas, hábitos y contactos salientes (mailto/tel/WhatsApp/X — tú confirmas). Preferencias X/YouTube locales. Di «ayuda».',
-      enfermera: 'Hola, soy Enfermera · Agente Salud. Métricas, Mis datos (báscula en este dispositivo), recetas, calorías aproximadas del caldo de gambas y almejas, ejercicio en casa, menú y consejos orientativos (no médicos). Di «ayuda», «mis datos», «caldo», «ejercicio» o «recetas».',
+      enfermera: 'Hola, soy Enfermera · Agente Salud. Métricas, Mis datos (báscula en este dispositivo), compra del mes (si la has importado), recetas, calorías aproximadas del caldo, ejercicio en casa, menú y consejos orientativos (no médicos). Di «ayuda», «mis datos», «compra», «caldo» o «ejercicio».',
       psicologa: 'Hola, soy tu Psicóloga amiga protectora. NO a compras impulsivas, drogas/alcohol y autolesión. No sustituyo familia/pareja ni diagnostico. 112 · 024. Di «ayuda» o «respiración».',
       money: 'Hola, soy Money Digital · Compra inteligente. Despensa, lista, presupuesto orientativo (250 € editable) y fotos locales de producto/etiqueta/recibo (sin OCR). No invento precios ni compro/pago sola. Di «ayuda» o «comparar leche».'
     };
@@ -2226,6 +2428,7 @@
     renderCaldoKcal();
     renderEjercicio();
     renderMisDatos();
+    renderMonthPurchase();
     renderEmotionUI();
     renderChat();
     renderGallery().catch(function () {});
@@ -2768,6 +2971,7 @@
       if (looksLikeHealthSeed(parsed)) {
         const res = applyHealthSeed(parsed);
         renderMisDatos();
+        renderMonthPurchase();
         renderSummary();
         renderCaldoKcal();
         if (!res.ok) throw new Error(res.error || 'Semilla no aplicada');
@@ -2896,9 +3100,11 @@
           try {
             const res = applyHealthSeed(JSON.parse(String(reader.result || '')));
             renderMisDatos();
+            renderMonthPurchase();
             renderSummary();
             renderCaldoKcal();
             setMisDatosStatus(res.message || res.error || '', res.ok ? 'ok' : 'warn');
+            setCompraStatus(res.ok ? (res.message || '') : '', res.ok ? 'ok' : 'warn');
             seedForm.reset();
           } catch (e) {
             setMisDatosStatus('No se pudo importar ese JSON. ¿Es de tipo may-cuidado-seed?', 'warn');
@@ -2932,6 +3138,8 @@
                 status.textContent = (added.result && added.result.message) || 'JSON de salud guardado solo en este dispositivo.';
                 status.className = 'status-line ok';
                 setMisDatosStatus(status.textContent, 'ok');
+                renderMonthPurchase();
+                setCompraStatus(status.textContent, 'ok');
               } else if (added > 0) {
                 status.textContent = 'Importadas ' + added + ' filas útiles desde «' + file.name + '». Revisa el resumen. Sin conexión directa a Samsung Health.';
                 status.className = 'status-line ok';
@@ -3552,10 +3760,12 @@
   seedWelcome();
   processPendingImport();
   renderAll();
+  wireMonthPurchase();
   renderGallery().catch(function () {});
   window.addEventListener('hashchange', function () {
     processPendingImport();
     renderMisDatos();
+    renderMonthPurchase();
     renderSummary();
     renderCaldoKcal();
   });
@@ -3589,6 +3799,9 @@
     CALDO_KCAL: CALDO_KCAL,
     EXERCISE_HOME: EXERCISE_HOME,
     processPendingImport: processPendingImport,
+    applyShoppingMonth: applyShoppingMonth,
+    latestMonthPurchase: latestMonthPurchase,
+    renderMonthPurchase: renderMonthPurchase,
     compressImageFile: compressImageFile,
     savePhotoRecord: savePhotoRecord,
     photoGetAll: photoGetAll,

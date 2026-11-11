@@ -258,7 +258,7 @@
       <p class="help-tips">
         Perfil y mediciones de báscula guardados <strong>solo en este navegador</strong> (localStorage).
         No viajan al servidor. Si todavía no hay datos, ábrelos con el enlace de importación que te han dado
-        o con un archivo JSON <code>may-cuidado-seed</code>. Una importación <strong>no borra</strong> lo que ya tuvieras.
+        o con un archivo JSON <code>may-cuidado-seed</code> (puede incluir báscula y compra del mes). Una importación <strong>no borra</strong> lo que ya tuvieras.
         Seguimiento personal · No es diagnóstico médico.
       </p>
       <form class="manual-form" id="health-seed-form">
@@ -271,6 +271,19 @@
       </form>
       <p class="status-line" id="mis-datos-status"></p>
       <div id="mis-datos-view"></div>
+    </section>
+
+
+    <section class="panel" id="panel-compra-mes">
+      <h2 id="compra-mes-title">Compra del mes</h2>
+      <p class="help-tips">
+        La lista (artículos y precios) se guarda <strong>solo en este dispositivo</strong>.
+        Ábrela con el enlace de importación o un JSON <code>may-cuidado-seed</code>.
+        No se publica en el código de la web. Las casillas «comprado» también se quedan aquí.
+        Esta app <strong>no hace pedidos</strong>.
+      </p>
+      <p class="status-line" id="compra-mes-status"></p>
+      <div id="compra-mes-view"></div>
     </section>
 
     <section class="panel" id="panel-caldo-kcal">
