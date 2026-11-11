@@ -744,3 +744,21 @@ button, .btn {
   font-size: 0.86rem;
 }
 .ex-list li { margin: 4px 0; }
+
+.ex-chip.pending {
+  border-color: rgba(255, 179, 71, 0.45);
+  color: var(--warn);
+  background: rgba(255, 179, 71, 0.08);
+}
+.week-row .day-kcal {
+  margin-top: 4px;
+  font-size: 0.68rem;
+  font-weight: 650;
+  color: var(--yellow-soft);
+}
+.meal-kcal {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
