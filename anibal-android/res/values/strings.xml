@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Aníbal</string>
+  <string name="url_hint">Dirección o búsqueda</string>
+  <string name="go">Ir</string>
+  <string name="back">Atrás</string>
+  <string name="forward">Adelante</string>
+  <string name="reload">Recargar</string>
+  <string name="home">Inicio</string>
+  <string name="download_started">Descarga iniciada</string>
+  <string name="download_failed">No se ha podido iniciar la descarga</string>
+  <string name="cannot_open">No hay una aplicación para abrir este enlace</string>
+</resources>
