@@ -1,3 +1,8 @@
 .env
 azum-gemini/.env
 azum-gemini/ledger/
+
+__pycache__/
+*.pyc
+scripts/.tv-ligera-cache.json
+
