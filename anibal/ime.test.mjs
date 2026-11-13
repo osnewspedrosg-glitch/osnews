@@ -123,10 +123,11 @@ test("MainActivity handles GO, SEARCH, DONE and null-action Enter", () => {
   const xml = fs.readFileSync(new URL("../anibal-android/res/layout/activity_main.xml", import.meta.url), "utf8");
   assert.match(xml, /actionGo/);
   const manifest = fs.readFileSync(new URL("../anibal-android/AndroidManifest.xml", import.meta.url), "utf8");
-  assert.match(manifest, /android:versionName="1\.2"/);
+  assert.match(manifest, /android:versionName="1\.3"/);
+  assert.match(manifest, /android:versionCode="4"/);
 });
 
-test("the start page has the MAY news block, IME attributes and the v1.2 APK link", () => {
+test("the start page has the MAY news block, IME attributes and the v1.3 APK link", () => {
   const page = fs.readFileSync(new URL("./index.html", import.meta.url), "utf8");
   assert.match(page, /id="may-form"/);
   assert.match(page, /id="may-ask"/);
@@ -134,7 +135,7 @@ test("the start page has the MAY news block, IME attributes and the v1.2 APK lin
   assert.match(page, /may-avatar\.jpg/);
   assert.match(page, /enterkeyhint="search"/);
   assert.match(page, /enterkeyhint="go"/);
-  assert.match(page, /anibal-v1\.2\/Anibal-OSNews-v1\.2\.apk/);
+  assert.match(page, /anibal-v1\.3\/Anibal-OSNews-v1\.3\.apk/);
   assert.match(page, /canales\/china\//);
   assert.match(page, /tv-world\/ligera\//);
   const app = fs.readFileSync(new URL("./app.js", import.meta.url), "utf8");

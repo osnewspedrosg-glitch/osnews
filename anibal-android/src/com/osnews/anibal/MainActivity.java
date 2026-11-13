@@ -115,7 +115,7 @@ public class MainActivity extends Activity {
     s.setAllowFileAccess(false);
     s.setAllowContentAccess(false);
     s.setMixedContentMode(WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE);
-    s.setUserAgentString(s.getUserAgentString() + " AnibalOSNews/1.2");
+    s.setUserAgentString(s.getUserAgentString() + " AnibalOSNews/1.3");
     CookieManager cookies = CookieManager.getInstance();
     cookies.setAcceptCookie(true);
     cookies.setAcceptThirdPartyCookies(web, true);
@@ -558,6 +558,10 @@ public class MainActivity extends Activity {
   boolean handleUrl(String url) {
     if (url == null) return true;
     String lower = url.toLowerCase(Locale.US);
+    if (AnibalLogic.opensOutsideAnibal(url)) {
+      openExternal(Intent.ACTION_VIEW, Uri.parse(url));
+      return true;
+    }
     if (lower.startsWith("http://") || lower.startsWith("https://") || lower.startsWith("about:")) {
       return false;
     }

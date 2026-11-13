@@ -1,6 +1,7 @@
 package com.osnews.anibal;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URI;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
@@ -125,5 +126,50 @@ final class AnibalLogic {
     List<String> out = new ArrayList<String>();
     for (Entry e : list) out.add(label(e));
     return out;
+  }
+  /** Host of an http(s) URL, lowercase, without a leading www. Null if it is not a web URL. */
+  static String hostOf(String url) {
+    if (!isWebUrl(url)) return null;
+    try {
+      String h = new URI(url.trim()).getHost();
+      if (h == null) return null;
+      h = h.toLowerCase(Locale.US);
+      if (h.startsWith("www.")) h = h.substring(4);
+      return h;
+    } catch (Exception e) {
+      return null;
+    }
+  }
+
+  static boolean hostMatches(String host, String domain) {
+    return host != null && (host.equals(domain) || host.endsWith("." + domain));
+  }
+
+  static boolean isYoutubeUrl(String url) {
+    String h = hostOf(url);
+    return hostMatches(h, "youtube.com") || hostMatches(h, "youtu.be")
+        || hostMatches(h, "youtube-nocookie.com");
+  }
+
+  static boolean isTikTokUrl(String url) {
+    return hostMatches(hostOf(url), "tiktok.com");
+  }
+
+  static boolean isFacebookUrl(String url) {
+    String h = hostOf(url);
+    return hostMatches(h, "facebook.com") || hostMatches(h, "fb.com")
+        || hostMatches(h, "fb.watch") || hostMatches(h, "fb.me");
+  }
+
+  /** Official download sites of the free tools linked from the VPN section. */
+  static boolean isVpnToolUrl(String url) {
+    String h = hostOf(url);
+    return hostMatches(h, "protonvpn.com") || hostMatches(h, "psiphon.ca")
+        || hostMatches(h, "torproject.org");
+  }
+
+  /** YouTube, official VPN/Tor sites, and Facebook/TikTok if reached: open outside the WebView. */
+  static boolean opensOutsideAnibal(String url) {
+    return isYoutubeUrl(url) || isTikTokUrl(url) || isFacebookUrl(url) || isVpnToolUrl(url);
   }
 }

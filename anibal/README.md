@@ -11,7 +11,9 @@ Página de inicio ligera de OSNews, en [https://osnewspedrosg-glitch.github.io/o
 - Búsqueda general en [DuckDuckGo](https://duckduckgo.com/) (formulario GET normal, sin rastreador en esta página).
 - El buscador OSNews World (`/buscador/`) existe en el material de trabajo, pero todavía no está publicado en GitHub Pages, así que no hay enlace a él.
 - Sección destacada «Azum · tu bot personal»: botón [Instala tu bot Azum](https://x.ai/bot/HN5oMXEOftu3wGLT-uD_m) (cada usuario o pequeño negocio usa su propio plan Super Grok Bot; OSNews no paga ni guarda claves) y enlace a la [web de Azum](../azum/).
-- Teselas: OSNews TV World, versión ligera, Azum, Canal YouTube OSNews, [YouTube OSNews World](https://www.youtube.com/@OSNewsWorld), Canales OSNews, [OSNews Museos](../museos/), Noticias por país, la app OSNews y [Descargar app Android](https://github.com/osnewspedrosg-glitch/osnews/releases/download/anibal-v1.2/Anibal-OSNews-v1.2.apk).
+- Teselas: OSNews TV World, versión ligera, Vídeos OSNews, Azum, Canal YouTube OSNews, [YouTube OSNews World](https://www.youtube.com/@OSNewsWorld), Canales OSNews, [OSNews Museos](../museos/), Noticias por país, la app OSNews y [Descargar app Android](https://github.com/osnewspedrosg-glitch/osnews/releases/download/anibal-v1.3/Anibal-OSNews-v1.3.apk).
+- Sección discreta «VPN · acceso libre a la información» (v1.3): enlaces oficiales a [Proton VPN (plan gratuito)](https://protonvpn.com/free-vpn), [Psiphon](https://psiphon.ca) y [Tor Browser](https://www.torproject.org/download/), que se abren fuera de Aníbal. Incluye el aviso legal. Sin afiliados, sin rastreadores y sin integrar ninguna VPN en la app.
+- Sección «Vídeos OSNews» (v1.3): copias propias de debates y anuncios en un reproductor HTML5, alojadas en la publicación de GitHub, sin incrustar YouTube ni rastreadores. El enlace «Ver en YouTube» (cuando hay un vídeo coincidente del canal OSNews) se abre fuera de Aníbal.
 - Interfaz en 8 idiomas (es, en, fr, de, pt, it, ar con RTL, zh).
 - PWA: `manifest.webmanifest`, iconos propios y `sw.js` (solo esta carpeta).
 - Sin anuncios, sin rastreadores, sin fuentes externas.

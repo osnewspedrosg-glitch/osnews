@@ -65,6 +65,33 @@ public class AnibalLogicTest {
     eq("T\nhttps://a.es/", AnibalLogic.label(new AnibalLogic.Entry("https://a.es/", "T", 0)), "label");
     eq("https://a.es/", AnibalLogic.label(new AnibalLogic.Entry("https://a.es/", "", 0)), "label no title");
 
+
+    eq(true, AnibalLogic.isYoutubeUrl("https://www.youtube.com/channel/UCsyOKlZTaQ-6auoVQa_2Dhg"), "yt channel");
+    eq(true, AnibalLogic.isYoutubeUrl("https://youtube.com/@OSNewsWorld"), "yt handle");
+    eq(true, AnibalLogic.isYoutubeUrl("https://youtu.be/Pq5bYcQL4zM"), "yt short");
+    eq(true, AnibalLogic.isYoutubeUrl("https://m.youtube.com/watch?v=Pq5bYcQL4zM"), "yt mobile");
+    eq(false, AnibalLogic.isYoutubeUrl("https://notyoutube.com/watch"), "yt lookalike");
+    eq(false, AnibalLogic.isYoutubeUrl("https://example.com/youtube.com"), "yt in path");
+    eq(true, AnibalLogic.isTikTokUrl("https://www.tiktok.com/@osnews86"), "tt osnews");
+    eq(true, AnibalLogic.isTikTokUrl("https://vm.tiktok.com/ZMabc/"), "tt vm");
+    eq(false, AnibalLogic.isTikTokUrl("https://faketiktok.com/@osnews86"), "tt lookalike");
+    eq(true, AnibalLogic.isFacebookUrl("https://www.facebook.com/profile.php?id=1"), "fb profile");
+    eq(true, AnibalLogic.isFacebookUrl("https://m.facebook.com/osnews"), "fb mobile");
+    eq(false, AnibalLogic.isFacebookUrl("https://notfacebook.com/"), "fb lookalike");
+    eq(true, AnibalLogic.opensOutsideAnibal("https://www.youtube.com/watch?v=Pq5bYcQL4zM"), "outside yt");
+    eq(true, AnibalLogic.opensOutsideAnibal("https://www.tiktok.com/@osnews86"), "outside tt");
+    eq(false, AnibalLogic.opensOutsideAnibal("https://osnewspedrosg-glitch.github.io/osnews/anibal/"), "outside osnews");
+    eq(false, AnibalLogic.opensOutsideAnibal("https://starlink.com/?referral=x"), "outside starlink");
+
+    eq(true, AnibalLogic.isVpnToolUrl("https://protonvpn.com/free-vpn"), "proton");
+    eq(true, AnibalLogic.isVpnToolUrl("https://psiphon.ca/"), "psiphon");
+    eq(true, AnibalLogic.isVpnToolUrl("https://www.torproject.org/download/"), "tor");
+    eq(true, AnibalLogic.isVpnToolUrl("https://download.torproject.org/"), "tor download host");
+    eq(false, AnibalLogic.isVpnToolUrl("https://notprotonvpn.com/free-vpn"), "vpn lookalike");
+    eq(true, AnibalLogic.opensOutsideAnibal("https://protonvpn.com/free-vpn"), "outside proton");
+    eq(false, AnibalLogic.opensOutsideAnibal("https://osnewspedrosg-glitch.github.io/osnews/anibal/"), "outside osnews");
+
+
     System.out.println((n - fails) + "/" + n + " checks passed");
     if (fails > 0) System.exit(1);
   }
