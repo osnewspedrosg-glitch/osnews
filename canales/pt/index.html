@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <title>OSNews Português</title>
+  <meta name="description" content="Notícias sobre a China, a Índia, Marrocos e Cuba, de meios oficiais europeus e dos EUA, com vídeos oficiais inseríveis, declarações literais no X e uma pesquisa que abre o X. Grátis, sem anúncios. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <p class="tag">OSNews</p>
+        <h1>OSNews Português</h1>
+        <p class="lead">Notícias sobre a China, a Índia, Marrocos e Cuba, de meios oficiais europeus e dos EUA, com vídeos oficiais inseríveis, declarações literais no X e uma pesquisa que abre o X. Grátis, sem anúncios.</p>
+      </div>
+      <nav class="jump">
+        <a href="../">Canais OSNews</a>
+        <a href="../../anibal/">Aníbal</a>
+        <a href="../../tv-world/">OSNews TV World</a>
+        <a href="../../tv-world/ligera/">TV World ligeira</a>
+        <a href="../../app/">App OSNews</a>
+        <a href="../../">Voltar à OSNews</a>
+      </nav>
+    </header>
+    <section class="panel" aria-labelledby="h-lang">
+      <h2 id="h-lang">Idioma</h2>
+      <div class="langs">
+        <a class="lang" href="../es/" lang="es">Español</a>
+        <a class="lang" href="../en/" lang="en">English</a>
+        <a class="lang" href="../fr/" lang="fr">Français</a>
+        <a class="lang" href="../de/" lang="de">Deutsch</a>
+        <a class="lang on" aria-current="page" href="../pt/" lang="pt">Português</a>
+        <a class="lang" href="../it/" lang="it">Italiano</a>
+        <a class="lang" href="../ar/" lang="ar">العربية</a>
+        <a class="lang" href="../zh/" lang="zh">中文</a>
+      </div>
+      <h3>Canais por país</h3>
+      <div class="langs">
+        <a class="lang" href="../china/">China</a>
+        <a class="lang" href="../india/">Índia</a>
+        <a class="lang" href="../marruecos/">Marrocos</a>
+        <a class="lang" href="../cuba/">Cuba</a>
+      </div>
+    </section>
+    <section class="panel" aria-labelledby="h-search">
+      <h2 id="h-search">Pesquisar notícias no X</h2>
+      <form class="search" id="x-search" action="https://x.com/search" method="get" data-lang="pt" role="search">
+        <input type="search" name="q" required autocomplete="off" placeholder="Pesquisar no X" aria-label="Pesquisar no X">
+        <input type="hidden" name="f" value="live">
+        <button type="submit">Pesquisar no X</button>
+      </form>
+      <p class="note">A pesquisa abre no X (x.com), em direto e neste idioma. Esta página não envia a consulta a nenhum servidor da OSNews e não usa chaves.</p>
+      <h3>Pesquisa rápida no X (fontes oficiais)</h3>
+      <div class="btns">
+        <a href="https://x.com/search?q=%28China%20OR%20chin%C3%AAs%20OR%20Pequim%29%20%28from%3ABBCNews%20OR%20from%3Aeuronews%20OR%20from%3AFrance24_es%20OR%20from%3AReuters%20OR%20from%3AStateDept%20OR%20from%3ASecRubio%20OR%20from%3AWhiteHouse%20OR%20from%3AEuroparl_EN%20OR%20from%3Aeu_eeas%20OR%20from%3AMAECgob%29%20lang%3Apt&amp;f=live" rel="noopener noreferrer">China</a>
+        <a href="https://x.com/search?q=%28%C3%8Dndia%20OR%20indiano%20OR%20Deli%29%20%28from%3ABBCNews%20OR%20from%3Aeuronews%20OR%20from%3AFrance24_es%20OR%20from%3AReuters%20OR%20from%3AStateDept%20OR%20from%3ASecRubio%20OR%20from%3AWhiteHouse%20OR%20from%3AMAECgob%20OR%20from%3Aeu_eeas%20OR%20from%3AGiorgiaMeloni%29%20lang%3Apt&amp;f=live" rel="noopener noreferrer">Índia</a>
+        <a href="https://x.com/search?q=%28Marrocos%20OR%20marroquino%20OR%20Rabat%29%20%28from%3ABBCNews%20OR%20from%3Aeuronews%20OR%20from%3AFrance24_es%20OR%20from%3AReuters%20OR%20from%3AUSAmbUN%20OR%20from%3AEuroparl_EN%20OR%20from%3AEuroparl_ES%20OR%20from%3AMAECgob%20OR%20from%3AStateDept%20OR%20from%3Aeu_eeas%29%20lang%3Apt&amp;f=live" rel="noopener noreferrer">Marrocos</a>
+        <a href="https://x.com/search?q=%28Cuba%20OR%20cubano%20OR%20Havana%29%20%28from%3ABBCNews%20OR%20from%3Aeuronews%20OR%20from%3AFrance24_es%20OR%20from%3AReuters%20OR%20from%3AStateDept%20OR%20from%3ASecRubio%20OR%20from%3AUSAmbUN%20OR%20from%3AWhiteHouse%20OR%20from%3AMAECgob%20OR%20from%3AEuroparl_ES%29%20lang%3Apt&amp;f=live" rel="noopener noreferrer">Cuba</a>
+      </div>
+    </section>
+    <section class="panel declaraciones" aria-labelledby="h-decl">
+      <h2 id="h-decl">Declarações</h2>
+      <p class="note">Texto integral e literal de publicações reais no X sobre a China, a Índia, Marrocos e Cuba, de contas oficiais verificadas de políticos dos Estados Unidos e da Europa e das contas oficiais de canais de notícias europeus e dos EUA. O texto nunca é inventado nem parafraseado. Cada ligação abre a publicação original em x.com.</p>
+      <h3 id="decl-china">China</h3>
+      <h4>Políticos dos EUA e da Europa</h4>
+      <article class="post">
+        <p>At China&#x27;s request, Secretary of State and National Security Advisor Marco Rubio spoke today with Director of the Office of the CCP Central Foreign Affairs Commission, Politburo Member, and Foreign Minister Wang Yi. 
+
+The two discussed President Trump&#x27;s upcoming travel to the</p>
+        <small>Department of State (@StateDept) · 2026-11-12 00:05 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/StateDept/status/2120654186849120593" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>🇪🇺-🇨🇳 trade relations: Members of the Parliament push for continued dialogue and concrete results.
+
+@EP_Trade committee members visited China to discuss trade challenges and explore opportunities for dialogue. https://t.co/tiUG409t7n</p>
+        <small>European Parliament (@Europarl_EN) · 2026-11-07 11:00 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/Europarl_EN/status/2119006955461099626" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Freiheit ist kein Risiko, sie ist unser wichtigstes Gut. In Zeiten radikaler Unsicherheit, geopolitischer Herausforderungen, des Wettbewerbs mit China und von Umbrüchen in der Wirtschaft ist Freiheit unser strategischer Wettbewerbsvorteil. https://t.co/2aDWGsGQMn</p>
+        <small>Bundeskanzler Friedrich Merz (@bundeskanzler) · 2026-11-05 14:23 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/bundeskanzler/status/2118333507730919797" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>The Donroe Doctrine is taking back the Western Hemisphere.
+
+&quot;President Trump’s &#x27;Donroe Doctrine&#x27; has solidified the US grip over almost two-thirds of the Western Hemisphere, cutting deals with pro-America governments, targeting drug cartels, and booting Chinese influence&quot; https://t.co/sdQniEsMxA</p>
+        <small>The White House (@WhiteHouse) · 2026-11-04 18:39 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/WhiteHouse/status/2118035523738497371" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>SECRETARY RUBIO on CHINA: The attitude of this administration has been to try to find a level of strategic stability in our relationship with them. https://t.co/3lkPCT1bVa</p>
+        <small>Department of State (@StateDept) · 2026-10-21 00:50 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/StateDept/status/2112677927259189301" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>President Donald J. Trump announces an Offtake Commitment from Taiwan of between 70 to 80 billion dollars for Alaska LNG. https://t.co/1QedBRuMEx https://t.co/yrLJOjMzmB</p>
+        <small>The White House (@WhiteHouse) · 2026-10-14 18:35 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/WhiteHouse/status/2110409092535599143" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <h4>Canais de notícias europeus e dos EUA</h4>
+      <article class="post">
+        <p>China aprovecharía cualquier tropiezo de Nvidia para avanzar en la IA: experto https://t.co/II4LwXpXyP</p>
+        <small>CNN en Español (@CNNEE) · 2026-11-13 02:50 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/CNNEE/status/2121057965390110827" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>US Attorney General Todd Blanche said the Justice Department has not yet reached a conclusion on whether Alice Huang, the Chinese businesswoman who had an affair with former Nvidia CEO Jensen Huang, was a Chinese spy https://t.co/TOYvF8LOgR https://t.co/5yowPXxcXz</p>
+        <small>Reuters (@Reuters) · 2026-11-13 02:33 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/Reuters/status/2121053698726178856" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>The U.S. rebuffed requests from Singaporean authorities to assist with its investigation into Alice Huang, the alleged Chinese espionage asset whose affair with Nvidia CEO Jensen Huang has raised national security concerns, Singapore&#x27;s government said. https://t.co/BxaO3xFNrA</p>
+        <small>The Washington Post (@washingtonpost) · 2026-11-13 01:45 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/washingtonpost/status/2121041612021051792" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Explainer: Tougher curbs on AI chip sales to China likely after Nvidia CEO resigns https://t.co/sCEP74mWKI</p>
+        <small>Reuters (@Reuters) · 2026-11-13 01:00 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/Reuters/status/2121030490513657903" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Tibetan exile leader laments absence of rights in Trump China dealings https://t.co/6p27Z2mgLQ</p>
+        <small>Reuters (@Reuters) · 2026-11-13 00:20 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/Reuters/status/2121020265031188931" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>En Contexto - Nvidia, EE. UU. y China: un caso de romance personal a un asunto de Estado ➡️ https://t.co/wqYpyoOMiS https://t.co/niw6be3dfz</p>
+        <small>FRANCE 24 Español (@France24_es) · 2026-11-12 21:33 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/France24_es/status/2120978402408890670" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <h3 id="decl-india">Índia</h3>
+      <h4>Políticos dos EUA e da Europa</h4>
+      <article class="post">
+        <p>@MAECgob acoge el Diálogo de Alto Nivel de la Comunidad Iberoamericana de Naciones con Observadores Asociados y Consultivos. 
+
+El ministro @jmalbares da la bienvenida a India, Turquía, Angola y la Asociación de Estados del Caribe @ACS_AEC, nuevos observadores de la Conferencia. https://t.co/GTy5Wrz5Hj</p>
+        <small>Ministerio de Asuntos Exteriores, UE y Cooperación (@MAECgob) · 2026-11-03 18:41 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/MAECgob/status/2117673455516860832" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Just departed India having advanced our economic and strategic priorities in the region. 
+
+Continuing to build our economic partnership and energy security cooperation makes both our nations stronger. https://t.co/SaZK1QbpsO</p>
+        <small>Secretary Marco Rubio (@SecRubio) · 2026-10-22 09:03 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/SecRubio/status/2113164244015542404" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>FULL REMARKS: Secretary Rubio Answers Questions in India https://t.co/AzMxOuWrLv</p>
+        <small>Department of State (@StateDept) · 2026-10-22 01:54 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/StateDept/status/2113056316642173010" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>.@SecRubio’s second trip to India this year focused around two major hubs of finance, energy, and culture: Mumbai and Jamnagar.
+
+The U.S.-India relationship is central to U.S. security and prosperity. This visit underscores our commitment to commercial investment, energy https://t.co/Dn418zlnBk</p>
+        <small>Department of State (@StateDept) · 2026-10-21 06:13 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/StateDept/status/2112759093723283475" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>As the United States celebrates its 250th anniversary, we continue to reaffirm our founding principles of liberty, innovation, and peace through strength that continue to shape American leadership on the global stage. 
+
+At the Freedom 250 reception in Mumbai, I underscored that https://t.co/7MptGpPMLa</p>
+        <small>Secretary Marco Rubio (@SecRubio) · 2026-10-21 04:17 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/SecRubio/status/2112730060201275425" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>It was a pleasure meeting with our @USAndMumbai team to recognize their dedication to strengthening U.S.-India ties, supporting American citizens, and advancing shared economic and strategic priorities. https://t.co/OIKdPdcsvQ</p>
+        <small>Secretary Marco Rubio (@SecRubio) · 2026-10-21 04:15 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/SecRubio/status/2112729415826415634" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <h4>Canais de notícias europeus e dos EUA</h4>
+      <article class="post">
+        <p>Announced annually by Travel + Leisure since 2014, India follows in the footsteps of previous destinations of the year including Brazil, Thailand and Costa Rica. https://t.co/qzp1ChYRsq</p>
+        <small>euronews (@euronews) · 2026-11-12 15:59 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/euronews/status/2120894243380322449" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>EXCLUSIVE: India to ban private equity firms from controlling multiple non-bank lenders, sources say https://t.co/1n79OuR5ns</p>
+        <small>Reuters (@Reuters) · 2026-11-12 13:45 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/Reuters/status/2120860430935433344" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Was Delhi pollution data during Diwali misleading? https://t.co/GXAnOXuKK3</p>
+        <small>BBC News (UK) (@BBCNews) · 2026-11-12 10:50 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/BBCNews/status/2120816528417243226" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Was Delhi pollution data during Diwali misleading? https://t.co/FLDcikAQMl</p>
+        <small>BBC News (World) (@BBCWorld) · 2026-11-12 10:03 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/BBCWorld/status/2120804706448474351" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>EXCLUSIVE: India to ban private equity firms from controlling multiple non-bank lenders, sources say https://t.co/mSfH7LSe7P</p>
+        <small>Reuters (@Reuters) · 2026-11-12 09:40 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/Reuters/status/2120798779494252607" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Indian billionaire, doctors spar over $900 brain blood-flow tracker Temple https://t.co/624Ryt1UfW</p>
+        <small>Reuters (@Reuters) · 2026-11-12 07:50 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/Reuters/status/2120771084106519014" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <h3 id="decl-morocco">Marrocos</h3>
+      <h4>Políticos dos EUA e da Europa</h4>
+      <article class="post">
+        <p>Six years in, President Trump’s historic Abraham Accords continue to replace old grievances in the Middle East with strong new economic ties and opportunity. 
+
+Great to host the foreign ministers of Israel and Morocco yesterday to strengthen their ties further. https://t.co/tYfsFOmcJX</p>
+        <small>Ambassador Mike Waltz (@USAmbUN) · 2026-09-17 17:19 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/USAmbUN/status/2100605501616611799" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Parliament condemns the mass irregular crossings into Ceuta and calls for increased EU support, cooperation with Morocco and the return of persons with no right to stay. https://t.co/N523CVKAuw</p>
+        <small>European Parliament (@Europarl_EN) · 2026-09-17 16:30 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/Europarl_EN/status/2100593283672002802" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>El Parlamento Europeo condena los cruces irregulares masivos a Ceuta y reclama más apoyo de la Unión Europea, cooperación con Marruecos y el retorno de quienes no tienen derecho a permanecer en territorio comunitario.
+
+Nota de prensa: https://t.co/fYT1KAxUmr https://t.co/b84BWLutIB</p>
+        <small>Parlamento Europeo en España (@Europarl_ES) · 2026-09-17 14:57 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/Europarl_ES/status/2100569871549342054" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>The naysayers were wrong. Six years in, the Abraham Accords have withstood every test—and today in NY, we proved it again.
+
+Moroccan Foreign Minister Bourita &amp; Israeli Foreign Minister Sa&#x27;ar agreed to advance their relationship on  security, trade, and regional integration:
+
+✅ https://t.co/YDJvQDKUDM</p>
+        <small>Ambassador Mike Waltz (@USAmbUN) · 2026-09-17 03:52 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/USAmbUN/status/2100402515409793107" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Happy 6th birthday, Abraham Accords.  
+
+Fantastic to celebrate President Trump’s historic diplomatic breakthrough with Foriegn Ministers, Ambassadors and business leaders from the US, UAE, Bahrain, Israel, Kazakhstan and Morocco. 🇺🇸🇦🇪🇧🇭🇮🇱🇰🇿🇲🇦 https://t.co/TdvudcDSTV</p>
+        <small>Ambassador Mike Waltz (@USAmbUN) · 2026-09-17 03:45 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/USAmbUN/status/2100400702191288801" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <h4>Canais de notícias europeus e dos EUA</h4>
+      <article class="post">
+        <p>📺 TV EN DIRECTO | Saiz informe de que &quot;se han desmantelado los dos recursos temporales&quot; en el puerto de Ceuta. A día de ayer, 15.671 migrantes han retornado a Marruecos, de ellas 14.942 por retorno voluntario, 277 expulsiones y 452 devoluciones https://t.co/ddgK2VOa3c https://t.co/XmbO43bBDn</p>
+        <small>EL PAÍS (@el_pais) · 2026-11-10 13:33 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/el_pais/status/2120132822102855731" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>El operativo policial busca trasladar a los inmigrantes a otros recursos de acogida o al CATE de El Tarajal. El desmantelamiento del asentamiento ha acelerado los retornos voluntarios a Marruecos. #EuropeNews https://t.co/U3ECp5jAP0</p>
+        <small>euronews español (@euronewses) · 2026-11-10 11:53 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/euronewses/status/2120107619184722000" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>In Rabat, Friday is for couscous. From mint tea overlooking the Bouregreg River to caftans in the medina and sunsets over the Atlantic, here are our Reuters correspondent’s tips for experiencing the Moroccan capital like a local: https://t.co/fpXbkNjFgN https://t.co/P1bd5MZ2H0</p>
+        <small>Reuters (@Reuters) · 2026-11-08 19:00 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/Reuters/status/2119490176883831220" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>‘No other Moroccan city matches Rabat&#x27;s museums and cultural calendar.’ From book fairs and music festivals to preparations for the 2030 World Cup, our correspondent shares his guide to experiencing Morocco’s capital like a local:
+https://t.co/xpof9XCuZT https://t.co/6VtaRzE9YN</p>
+        <small>Reuters (@Reuters) · 2026-11-08 07:00 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/Reuters/status/2119309010624974849" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Rabat is Morocco’s administrative capital, but there’s more to the city than government buildings: blue-and-white alleys, bustling medinas and a growing cultural scene. Our Reuters correspondent shares his guide to exploring the city like a local: https://t.co/l8R3Oy4kWZ https://t.co/wYbGNRwD7g</p>
+        <small>Reuters (@Reuters) · 2026-11-07 19:00 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/Reuters/status/2119127800686735370" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>La Guardia Civil eleva a 88.146 las devoluciones de Ceuta a Marruecos https://t.co/CUQapJL1Tl</p>
+        <small>euronews español (@euronewses) · 2026-11-07 02:17 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/euronewses/status/2118875514060632363" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <h3 id="decl-cuba">Cuba</h3>
+      <h4>Políticos dos EUA e da Europa</h4>
+      <article class="post">
+        <p>PRESIDENT TRUMP: I want to get Cuba done before I leave, yeah. We have a very good, talented guy for Cuba named Marco. https://t.co/BLJILtcsAl</p>
+        <small>Department of State (@StateDept) · 2026-11-12 22:03 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/StateDept/status/2120985972716478685" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>SECRETARY RUBIO on CUBA: Ultimately, our goal is for Cuba to have a better future. We&#x27;re going to do everything we can to help put it on that path, but in the end, it will require them to wake up and realize that there is no future on the path they are on right now. https://t.co/icAiN9o62W</p>
+        <small>Department of State (@StateDept) · 2026-11-09 21:01 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/StateDept/status/2119883039774003275" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>THE HILL: Rubio places additional sanctions on Cuba, targeting ‘illicit’ shipping network https://t.co/W2SkgyQH9z</p>
+        <small>Department of State (@StateDept) · 2026-11-06 15:37 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/StateDept/status/2118714472932220991" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>The United States will not tolerate subversive communist networks in our hemisphere. 
+
+The Marxist Cuban regime relies on a web of state-owned enterprises, joint ventures, and offshore intermediaries to keep its systems running, and its foreign backers supply the military</p>
+        <small>Secretary Marco Rubio (@SecRubio) · 2026-11-05 22:16 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/SecRubio/status/2118452363174261203" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Former Cuban political prisoner José Daniel Ferrer asks exactly the right question: 
+
+How can the regime’s officials justify being so fat while their political prisoners waste away in confinement? https://t.co/eCchjWfuhN</p>
+        <small>Ambassador Mike Waltz (@USAmbUN) · 2026-10-28 22:00 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/USAmbUN/status/2115549395941032405" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>It’s very clear what the Cuban regime must do. Don’t take it from me—hear what brave Cuban dissidents José Daniel Ferrer and Orlando Gutierrez-Boronat say: 
+
+The regime simply has to free all political prisoners, legalize civil society, and schedule free and fair elections. https://t.co/m0yZ7L0aK6</p>
+        <small>Ambassador Mike Waltz (@USAmbUN) · 2026-10-28 21:57 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/USAmbUN/status/2115548603255230974" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <h4>Canais de notícias europeus e dos EUA</h4>
+      <article class="post">
+        <p>Rubio dice que el &quot;objetivo final&quot; es un destino mejor para Cuba. Díaz-Canel responde que &quot;el futuro no se decidirá&quot; al norte https://t.co/U7ngGoXnEm</p>
+        <small>CNN en Español (@CNNEE) · 2026-11-11 19:12 (hora de Europe/Madrid) · Idioma do original: Español</small>
+        <p><a href="https://x.com/CNNEE/status/2120580321619894656" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>China backs Cuba in opposing sanctions, blockades; pledges &#x27;firm support&#x27;, Xinhua reports https://t.co/WX9zSH6szk</p>
+        <small>Reuters (@Reuters) · 2026-11-11 13:50 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/Reuters/status/2120499296093045100" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>China backs Cuba in opposing sanctions, blockades; pledges &#x27;firm support&#x27;, Xinhua reports https://t.co/cmy3TzlM54</p>
+        <small>Reuters (@Reuters) · 2026-11-11 09:45 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/Reuters/status/2120437651358544174" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Cuba: cada vez menos periodistas independientes y más represión
+
+Periodistas, comunicadores, creadores de contenido y organizaciones defensoras de los derechos humanos y la libertad de expresión denuncian el auge de la represión estatal a las voces críticas.</p>
+        <small>DW Español (@dw_espanol) · 2026-11-09 22:16 (hora de Europe/Madrid) · Idioma do original: Español</small>
+        <p><a href="https://x.com/dw_espanol/status/2119902032127746556" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Sabor cubano en el escenario: el musical &quot;Buena Vista Social Club&quot; llega a México https://t.co/Y5oF2fsVxw</p>
+        <small>CNN en Español (@CNNEE) · 2026-11-07 14:00 (hora de Europe/Madrid) · Idioma do original: Español</small>
+        <p><a href="https://x.com/CNNEE/status/2119052296889798883" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>#YoaniSánchez fue liberada tras varias horas detenida en La Habana
+
+La #periodista independiente fue liberada nueve horas después de haber sido detenida por la policía política de #Cuba. (jc)
+https://t.co/3gzL9sAAzz</p>
+        <small>DW Español (@dw_espanol) · 2026-11-06 04:20 (hora de Europe/Madrid) · Idioma do original: Español</small>
+        <p><a href="https://x.com/dw_espanol/status/2118543998122127428" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+    </section>
+    <section class="panel" id="china" aria-labelledby="h-china">
+      <h2 id="h-china">China</h2>
+      <h3>Títulos de meios europeus e dos EUA</h3>
+      <ul class="list">
+        <li><a href="https://www.bbc.com/portuguese/articles/cmg474pw776wo" rel="noopener noreferrer">Jensen Huang: O papel do CEO da Nvidia investigado por caso com suposta espiã na guerra tecnológica entre EUA e China</a><small>Fonte: BBC News Brasil · 2026-11-11 09:58 (hora de Europe/Madrid) · Idioma do original: Português · Abrir o artigo original</small></li>
+        <li><a href="https://www.bbc.com/portuguese/articles/c235j4dgpz9o" rel="noopener noreferrer">Os brasileiros que decidiram morar nas grandes metrópoles da China: &#x27;A liberdade muda nossa forma de viver&#x27;</a><small>Fonte: BBC News Brasil · 2026-11-12 09:26 (hora de Europe/Madrid) · Idioma do original: Português · Abrir o artigo original</small></li>
+        <li><a href="https://www.theguardian.com/environment/2026/nov/12/china-battery-swapping-e-trucks-catl-ev-range-anxiety" rel="noopener noreferrer">‘It is much, much faster’: could China’s battery-swapping e-trucks be the answer to EV range anxiety?</a><small>Fonte: The Guardian · 2026-11-12 15:00 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+        <li><a href="https://www.theguardian.com/business/2026/nov/11/nissan-reduces-petrol-car-production-as-ev-sales-boom-in-china" rel="noopener noreferrer">Nissan reduces petrol car production as EV sales boom in China</a><small>Fonte: The Guardian · 2026-11-11 14:11 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+        <li><a href="https://elpais.com/us/2026-11-11/la-ventaja-estrategica-de-los-chips-de-nvidia-convirtio-a-su-primer-ejecutivo-en-un-objetivo-de-china.html" rel="noopener noreferrer">La ventaja estratégica de los chips de Nvidia convirtió a su primer ejecutivo en un objetivo de China</a><small>Fonte: El País · 2026-11-11 06:48 (hora de Europe/Madrid) · Idioma do original: Español · Abrir o artigo original</small></li>
+        <li><a href="https://www.bbc.co.uk/news/articles/c6zxjx01vyleo" rel="noopener noreferrer">Nvidia shares tumble over investigation into Huang&#x27;s affair with alleged Chinese spy</a><small>Fonte: BBC News · 2026-11-09 20:58 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+        <li><a href="https://www.bbc.co.uk/news/videos/c80404zyr53wo" rel="noopener noreferrer">Who is the suspected Chinese spy at centre of the Nvidia investigation?</a><small>Fonte: BBC News · 2026-11-09 15:50 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+        <li><a href="https://www.theguardian.com/music/2026/oct/09/global-bands-on-how-punk-fires-up-their-lives" rel="noopener noreferrer">‘It gave me a superpower – question everything’: ​as punk turns 50, bands from China to Greenland explain how it fires up their lives</a><small>Fonte: The Guardian · 2026-10-09 09:00 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+      </ul>
+      <h3>Vídeos oficiais (YouTube, inserção permitida)</h3>
+      <div class="video">
+        <div class="frame"><iframe title="China&#x27;s first foreign partner in space | DW News" src="https://www.youtube-nocookie.com/embed/sriLm0jhrek?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=sriLm0jhrek" rel="noopener noreferrer">China&#x27;s first foreign partner in space | DW News</a><small>DW News · 2026-11-12 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="China dispara sus exportaciones y supera el billón de dólares de superávit comercial" src="https://www.youtube-nocookie.com/embed/pQqduPdm8o8?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=pQqduPdm8o8" rel="noopener noreferrer">China dispara sus exportaciones y supera el billón de dólares de superávit comercial</a><small>FRANCE 24 Español · 2026-11-10 (hora de Europe/Madrid) · Idioma do original: Español · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="China&#x27;s trade surplus surpasses $1 trillion as AI boom powers exports" src="https://www.youtube-nocookie.com/embed/gdXYDP9cL08?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=gdXYDP9cL08" rel="noopener noreferrer">China&#x27;s trade surplus surpasses $1 trillion as AI boom powers exports</a><small>euronews · 2026-11-10 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="A magnitude 7 earthquake hit China&#x27;s Tibet region, killing at least 16 people" src="https://www.youtube-nocookie.com/embed/n7gIvYd8hnY?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=n7gIvYd8hnY" rel="noopener noreferrer">A magnitude 7 earthquake hit China&#x27;s Tibet region, killing at least 16 people</a><small>Associated Press · 2026-10-23 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="As U.S. pushes back on data centers, China races to build them" src="https://www.youtube-nocookie.com/embed/ru6jnqz3Q6I?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=ru6jnqz3Q6I" rel="noopener noreferrer">As U.S. pushes back on data centers, China races to build them</a><small>NBC News · 2026-11-12 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="Xi pitches China as leader of new global AI order" src="https://www.youtube-nocookie.com/embed/Tglwn1TYkCM?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=Tglwn1TYkCM" rel="noopener noreferrer">Xi pitches China as leader of new global AI order</a><small>Reuters · 2026-07-17 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <h3>Contas oficiais do país no X</h3>
+      <article class="post">
+        <p>As agreed between China and the ROK, Minister of Foreign Affairs of the ROK Cho Hyun will visit China from November 13 to 14.</p>
+        <small>CHINA MFA Spokesperson 中国外交部发言人 (@MFA_China) · 2026-11-12 08:11 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/MFA_China/status/2120776525968707769" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>For years, they searched snowy peaks, determined to find the remains of U.S. pilots who aided China during the Chinese People&#x27;s War of Resistance Against Japanese Aggression and return them to American soil.
+
+In Sichuan, SW China, more of those remains were recovered and handed https://t.co/Bmw2LyDoIR</p>
+        <small>CHINA MFA Spokesperson 中国外交部发言人 (@MFA_China) · 2026-11-11 03:22 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/MFA_China/status/2120341418657120557" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>On September 24, during his state visit to the United States, President Xi Jinping announced that two giant pandas, Ping Ping and Fu Shuang, would soon find their new home in Zoo Atlanta, which was warmly welcomed by people in the U.S. On September 27 local time, the two pandas https://t.co/K7WY3o9Xvp</p>
+        <small>CHINA MFA Spokesperson 中国外交部发言人 (@MFA_China) · 2026-11-10 12:35 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/MFA_China/status/2120118161358073905" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+    </section>
+    <section class="panel" id="india" aria-labelledby="h-india">
+      <h2 id="h-india">Índia</h2>
+      <h3>Títulos de meios europeus e dos EUA</h3>
+      <ul class="list">
+        <li><a href="https://www.bbc.com/hindi/watch/cqlyj8j0lklgo" rel="noopener noreferrer">दिल्ली: हेरिटेज साइट पर अंधेरे में क्यों निकलीं ये महिलाएं?</a><small>Fonte: BBC News हिंदी · 2026-11-12 13:38 (hora de Europe/Madrid) · Idioma do original: हिन्दी · Abrir o artigo original</small></li>
+        <li><a href="https://www.bbc.com/hindi/articles/c6ge3d3090dpo" rel="noopener noreferrer">क्या दिवाली के दौरान दिल्ली में प्रदूषण के आंकड़े भ्रामक थे?</a><small>Fonte: BBC News हिंदी · 2026-11-12 13:29 (hora de Europe/Madrid) · Idioma do original: हिन्दी · Abrir o artigo original</small></li>
+        <li><a href="https://www.bbc.co.uk/news/articles/c54gne3plvrxo" rel="noopener noreferrer">New Indian mega library rocked by scandal over &#x27;AI-generated books&#x27;</a><small>Fonte: BBC News · 2026-11-11 12:33 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+        <li><a href="https://www.bbc.co.uk/news/articles/c687z7g4xr97o" rel="noopener noreferrer">&#x27;They will kill you too&#x27;: Sonia Gandhi&#x27;s turbulent journey in Indian politics</a><small>Fonte: BBC News · 2026-11-11 01:26 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+        <li><a href="https://www.theguardian.com/artanddesign/gallery/2026/nov/09/millions-in-india-celebrate-diwali-the-hindu-festival-of-lights-in-pictures" rel="noopener noreferrer">Millions in India celebrate Diwali, the Hindu festival of lights – in pictures</a><small>Fonte: The Guardian · 2026-11-09 06:42 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+        <li><a href="https://www.theguardian.com/world/2026/nov/07/interview-sonia-gandhi-rajiv-gandhi-assassination-memoir-extract" rel="noopener noreferrer">‘My thought was always: he will be killed next’: Sonia Gandhi on marrying into an Indian political dynasty and her husband’s assassination</a><small>Fonte: The Guardian · 2026-11-07 04:00 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+        <li><a href="https://www.dw.com/en/india-increases-growth-forecast-for-fiscal-year/a-79798971" rel="noopener noreferrer">India increases growth forecast for fiscal year</a><small>Fonte: DW · 2026-10-29 17:30 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+        <li><a href="https://www.theguardian.com/environment/2026/nov/03/uk-ministers-anant-ambani-indian-zoo-vantara-freedom-information-endangered-animals-cites" rel="noopener noreferrer">UK ministers told not to engage formally with Indian mega-zoo after lobbying</a><small>Fonte: The Guardian · 2026-11-03 07:00 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+      </ul>
+      <h3>Vídeos oficiais (YouTube, inserção permitida)</h3>
+      <div class="video">
+        <div class="frame"><iframe title="India&#x27;s AI ambitions: Can it become a global tech superpower? | DW News" src="https://www.youtube-nocookie.com/embed/S2sRA5pDgtE?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=S2sRA5pDgtE" rel="noopener noreferrer">India&#x27;s AI ambitions: Can it become a global tech superpower? | DW News</a><small>DW News · 2026-11-07 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="Festival de las luces: empiezan celebraciones de una de las fiestas más importantes del hinduismo" src="https://www.youtube-nocookie.com/embed/wV70XQD3K04?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=wV70XQD3K04" rel="noopener noreferrer">Festival de las luces: empiezan celebraciones de una de las fiestas más importantes del hinduismo</a><small>FRANCE 24 Español · 2026-11-08 (hora de Europe/Madrid) · Idioma do original: Español · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="Delhi air as harmful as smoking 20 cigarettes a day" src="https://www.youtube-nocookie.com/embed/cOLounJNUgw?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=cOLounJNUgw" rel="noopener noreferrer">Delhi air as harmful as smoking 20 cigarettes a day</a><small>Reuters · 2026-11-09 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="Diwali celebrations in India amid political tensions" src="https://www.youtube-nocookie.com/embed/gAbOxF7Iuj4?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=gAbOxF7Iuj4" rel="noopener noreferrer">Diwali celebrations in India amid political tensions</a><small>ABC News · 2026-11-07 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="India&#x27;s Gen Z youth flock to streets over voter roll purge" src="https://www.youtube-nocookie.com/embed/qWRvkLN4Oe4?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=qWRvkLN4Oe4" rel="noopener noreferrer">India&#x27;s Gen Z youth flock to streets over voter roll purge</a><small>PBS NewsHour · 2026-10-22 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="Dussehra: enormes efigies de demonios arden en la India" src="https://www.youtube-nocookie.com/embed/ks0Bb4kUKUQ?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=ks0Bb4kUKUQ" rel="noopener noreferrer">Dussehra: enormes efigies de demonios arden en la India</a><small>euronews (en español) · 2026-10-21 (hora de Europe/Madrid) · Idioma do original: Español · Ver no YouTube oficial</small></p>
+      </div>
+      <h3>Contas oficiais do país no X</h3>
+      <article class="post">
+        <p>The 7th Meeting of India- Indonesia Joint Working Group on Counter Terrorism was held on 12 November 2026 in New Delhi. 
+
+See details below 👇 
+
+https://t.co/Q4JstZg84a https://t.co/KajLDM8KVZ</p>
+        <small>Randhir Jaiswal (@MEAIndia) · 2026-11-12 17:07 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/MEAIndia/status/2120911293087691042" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>India offers growing opportunities in everything from agri-engineering to agri-startups. The focus is on empowering farmers to become agricultural entrepreneurs. https://t.co/Cr5OuKvPuu</p>
+        <small>PMO India (@PMOIndia) · 2026-11-12 16:34 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/PMOIndia/status/2120903131622252960" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Cabinet extends Mudra credit guarantee and Stand-Up India schemes till March 2031
+
+https://t.co/1n33aQYtRH
+
+via NaMo App https://t.co/m6omfl5UIT</p>
+        <small>PMO India (@PMOIndia) · 2026-11-12 11:15 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/PMOIndia/status/2120822846754791749" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Speaking during the Deepawali Milan programme at the BJP HQ in Delhi. https://t.co/eppVv7yq0Q</p>
+        <small>Narendra Modi (@narendramodi) · 2026-11-12 07:42 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/narendramodi/status/2120769253544767978" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>The 12th round of Foreign Office Consultations between India and South Africa was co-chaired by Mr. Janesh Kain, Joint Secretary (E&amp;SA), MEA and Ambassador David Malcomson, Acting DDG, DIRCO. 
+
+Both sides reviewed the entire gamut of the Strategic Partnership and explored avenues https://t.co/SneKbSK8LF</p>
+        <small>Randhir Jaiswal (@MEAIndia) · 2026-11-12 06:58 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/MEAIndia/status/2120758075347046554" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Imagine New Delhi becoming home to the world’s largest museum display area?
+
+Think scale. Think culture. 
+
+That is the vision behind the Yuge Yugeen Bharat Museum!
+
+Today’s Cabinet decision will give impetus to transform historic North and South Block buildings into a magnificent https://t.co/JR09zE8rU1</p>
+        <small>Narendra Modi (@narendramodi) · 2026-11-11 17:23 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/narendramodi/status/2120552910933405942" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+    </section>
+    <section class="panel" id="morocco" aria-labelledby="h-morocco">
+      <h2 id="h-morocco">Marrocos</h2>
+      <h3>Títulos de meios europeus e dos EUA</h3>
+      <ul class="list">
+        <li><a href="https://www.theguardian.com/commentisfree/2026/sep/29/the-guardian-view-on-moroccos-election-hosting-a-world-cup-will-not-placate-a-disillusioned-generation" rel="noopener noreferrer">The Guardian view on Morocco’s election: hosting a World Cup will not placate a disillusioned generation | Editorial</a><small>Fonte: The Guardian · 2026-09-29 20:22 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+        <li><a href="https://www.theguardian.com/world/2026/sep/03/spain-pm-evidence-morocco-ceuta-border-breach" rel="noopener noreferrer">Spain’s PM says no evidence ‘whatsoever’ Morocco behind Ceuta border breach</a><small>Fonte: The Guardian · 2026-09-03 14:52 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+        <li><a href="https://www.bbc.com/arabic/watch/cmvg2rgg6gz5o" rel="noopener noreferrer">ما قصة الصحراء الغربية؟ ولماذا احتفل المغرب بانتهاء مهمة &quot;مينورسو&quot;؟</a><small>Fonte: BBC News عربي · 2026-11-12 15:11 (hora de Europe/Madrid) · Idioma do original: العربية · Abrir o artigo original</small></li>
+      </ul>
+      <h3>Vídeos oficiais (YouTube, inserção permitida)</h3>
+      <div class="video">
+        <div class="frame"><iframe title="What Morocco&#x27;s first female premier means for the Arab world | DW News" src="https://www.youtube-nocookie.com/embed/rdANsCrKkac?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=rdANsCrKkac" rel="noopener noreferrer">What Morocco&#x27;s first female premier means for the Arab world | DW News</a><small>DW News · 2026-09-30 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="¿Cuál es el panorama en Marruecos en las elecciones legislativas?" src="https://www.youtube-nocookie.com/embed/29S-0SqjHcQ?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=29S-0SqjHcQ" rel="noopener noreferrer">¿Cuál es el panorama en Marruecos en las elecciones legislativas?</a><small>FRANCE 24 Español · 2026-09-23 (hora de Europe/Madrid) · Idioma do original: Español · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="Morocco&#x27;s King Mohammed VI appoints Fatima Mansouri as the country&#x27;s first female prime minister" src="https://www.youtube-nocookie.com/embed/KkCNeygybn8?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=KkCNeygybn8" rel="noopener noreferrer">Morocco&#x27;s King Mohammed VI appoints Fatima Mansouri as the country&#x27;s first female prime minister</a><small>euronews · 2026-09-30 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="El desalojo del puerto de Ceuta acelera los retornos a Marruecos" src="https://www.youtube-nocookie.com/embed/gY3vBkbXiIE?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=gY3vBkbXiIE" rel="noopener noreferrer">El desalojo del puerto de Ceuta acelera los retornos a Marruecos</a><small>euronews (en español) · 2026-11-10 (hora de Europe/Madrid) · Idioma do original: Español · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="Morocco votes for a new parliament after Gen Z protests and migration crisis" src="https://www.youtube-nocookie.com/embed/whr0jHBHIx4?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=whr0jHBHIx4" rel="noopener noreferrer">Morocco votes for a new parliament after Gen Z protests and migration crisis</a><small>Associated Press · 2026-09-23 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="Tens of thousands of migrants enter Spanish territory, then return to Morocco" src="https://www.youtube-nocookie.com/embed/1dLDXygk-dg?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=1dLDXygk-dg" rel="noopener noreferrer">Tens of thousands of migrants enter Spanish territory, then return to Morocco</a><small>PBS NewsHour · 2026-07-31 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <h3>Contas oficiais do país no X</h3>
+      <article class="post">
+        <p>Le Royaume du Maroc commémore le 70ᵉ anniversaire de son adhésion à l’#ONU. Sept décennies d&#x27;engagement multilatéral indéfectible en faveur de la paix, de la sécurité internationale et du développement durable.
+🔗https://t.co/rI7NcdksIl https://t.co/z2QIQ5n3KQ</p>
+        <small>Maroc Diplomatie 🇲🇦 (@MarocDiplomatie) · 2026-11-12 23:02 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/MarocDiplomatie/status/2121000726684197028" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>En marge de la #COP31, M.Nasser Bourita a affirmé que le Maroc participe avec un engagement fort, une expérience solide et des réponses nationales concrètes aux défis
+🔗https://t.co/IMvx1n02MW https://t.co/SCQJI1KVC6</p>
+        <small>Maroc Diplomatie 🇲🇦 (@MarocDiplomatie) · 2026-11-11 13:15 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/MarocDiplomatie/status/2120490663468769625" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>10/11/2026 : Retour sur les moments forts de la rencontre, ce jour à Rabat, entre M. Nasser Bourita et son homologue sierra-léonais, M. Mohamed Rahman Swaray https://t.co/gFpzZiz3lJ</p>
+        <small>Maroc Diplomatie 🇲🇦 (@MarocDiplomatie) · 2026-11-10 21:50 (hora de Europe/Madrid)</small>
+        <p><a href="https://x.com/MarocDiplomatie/status/2120257692526670183" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+    </section>
+    <section class="panel" id="cuba" aria-labelledby="h-cuba">
+      <h2 id="h-cuba">Cuba</h2>
+      <h3>Títulos de meios europeus e dos EUA</h3>
+      <ul class="list">
+        <li><a href="https://www.bbc.co.uk/news/videos/ck5yn5rlz978o" rel="noopener noreferrer">&#x27;You&#x27;re lying&#x27; - US and Cuban officials get into shouting match at UN</a><small>Fonte: BBC News · 2026-10-27 21:52 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+        <li><a href="https://www.theguardian.com/world/2026/oct/17/cuban-dissident-artist-luis-manuel-otero-alcantara" rel="noopener noreferrer">‘I spent five years with criminals’: dissident Cuban artist embraces new life in US after prison release</a><small>Fonte: The Guardian · 2026-10-17 13:00 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+        <li><a href="https://www.theguardian.com/us-news/ng-interactive/2026/oct/10/havana-syndrome-mystery-cia-russia" rel="noopener noreferrer">Why the mystery over Havana syndrome refuses to die</a><small>Fonte: The Guardian · 2026-10-10 07:00 (hora de Europe/Madrid) · Idioma do original: English · Abrir o artigo original</small></li>
+      </ul>
+      <h3>Vídeos oficiais (YouTube, inserção permitida)</h3>
+      <div class="video">
+        <div class="frame"><iframe title="Building collapses in Cuba create national emergency amid deepening economic crisis" src="https://www.youtube-nocookie.com/embed/jr0HsN6DyTs?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=jr0HsN6DyTs" rel="noopener noreferrer">Building collapses in Cuba create national emergency amid deepening economic crisis</a><small>NBC News · 2026-11-11 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="Cuba enfrenta octavo apagón y la población se las ingenia para resistir • FRANCE 24 Español" src="https://www.youtube-nocookie.com/embed/8A7kwLJv0Mc?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=8A7kwLJv0Mc" rel="noopener noreferrer">Cuba enfrenta octavo apagón y la población se las ingenia para resistir • FRANCE 24 Español</a><small>FRANCE 24 Español · 2026-09-19 (hora de Europe/Madrid) · Idioma do original: Español · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="Cuba hit by nationwide blackout as power crisis deepens | DW News" src="https://www.youtube-nocookie.com/embed/O2IEIKGZLp0?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=O2IEIKGZLp0" rel="noopener noreferrer">Cuba hit by nationwide blackout as power crisis deepens | DW News</a><small>DW News · 2026-07-07 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="Cuba tourism crisis: An industry brought to ‘almost total paralysis’" src="https://www.youtube-nocookie.com/embed/Bpf1pCG5p6s?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=Bpf1pCG5p6s" rel="noopener noreferrer">Cuba tourism crisis: An industry brought to ‘almost total paralysis’</a><small>euronews · 2026-07-30 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="10 million people left without power in Cuba after electric grid collapsed" src="https://www.youtube-nocookie.com/embed/UdElseH8Bnk?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=UdElseH8Bnk" rel="noopener noreferrer">10 million people left without power in Cuba after electric grid collapsed</a><small>ABC News · 2026-07-07 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <div class="video">
+        <div class="frame"><iframe title="US oil blockade is an &#x27;act of war,&#x27; Cuba&#x27;s foreign minister says" src="https://www.youtube-nocookie.com/embed/wAouh_5-SZI?rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=pt&hl=pt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p><a href="https://www.youtube.com/watch?v=wAouh_5-SZI" rel="noopener noreferrer">US oil blockade is an &#x27;act of war,&#x27; Cuba&#x27;s foreign minister says</a><small>Associated Press · 2026-09-25 (hora de Europe/Madrid) · Idioma do original: English · Ver no YouTube oficial</small></p>
+      </div>
+      <h3>Contas oficiais do país no X</h3>
+      <article class="post">
+        <p>🇨🇺| El Presidente @DiazCanelB participó este jueves en la clausura del Congreso Internacional de Dirección, Desarrollo Local, Turismo y Cooperativismo, CE-GESTA 2026, celebrado en el Palacio de Convenciones de La Habana.
+
+🔗| Los detalles en el enlace:
+
+https://t.co/O3t7nJeVFB https://t.co/iX5IYmDB8E</p>
+        <small>Presidencia Cuba 🇨🇺 (@PresidenciaCuba) · 2026-11-13 00:33 (hora de Europe/Madrid) · Idioma do original: Español</small>
+        <p><a href="https://x.com/PresidenciaCuba/status/2121023646831620589" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Hoy chequeamos programas de impacto en La Habana. Estuvimos en el Sistema de Atención a la Familia El Rampeño, en la escuela Arturo Montori Céspedes, en Maternidad Obrera y en los Tanques de Agua de Alamar. En medio del #BloqueoGenocida seguimos trabajando para mejorar servicios. https://t.co/o1oAgKfJDO</p>
+        <small>Miguel Díaz-Canel Bermúdez (@DiazCanelB) · 2026-11-13 00:15 (hora de Europe/Madrid) · Idioma do original: Español</small>
+        <p><a href="https://x.com/DiazCanelB/status/2121019144183365987" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Recibí las Cartas Credenciales de los nuevos embajadores en #Cuba de Tanzania, Chile, Serbia, Barbados, India, Canadá y Filipinas.
+
+Reafirmé la voluntad de nuestro Gobierno de continuar fortaleciendo los vínculos bilaterales en diversas áreas de interés mutuo. https://t.co/hG3psQtI1m</p>
+        <small>Miguel Díaz-Canel Bermúdez (@DiazCanelB) · 2026-11-12 19:32 (hora de Europe/Madrid) · Idioma do original: Español</small>
+        <p><a href="https://x.com/DiazCanelB/status/2120947958157918505" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Delegación cubana en #COP31Turkiye sostuvo fructífero intercambio con Asesora Técnica Regional para America Latina y el Caribe en adaptación al #CambioClimático del @pnud.
+
+Se evaluó el estado de la cooperación existente en el área de clima y energía. Se revisaron los resultados https://t.co/fFK07i6CzQ</p>
+        <small>Bruno Rodríguez P (@BrunoRguezP) · 2026-11-12 16:30 (hora de Europe/Madrid) · Idioma do original: Español</small>
+        <p><a href="https://x.com/BrunoRguezP/status/2120901936958378361" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>En el marco de las discusiones que tienen lugar en la #COP31Turkiye, los países en desarrollo, incluida #Cuba, defienden la necesidad de operacionalizar un mecanismo internacional para fortalecer la cooperación y el avance de la transición justa en nuestras naciones.
+
+Dicho https://t.co/jLWieqTxya</p>
+        <small>Bruno Rodríguez P (@BrunoRguezP) · 2026-11-12 16:15 (hora de Europe/Madrid) · Idioma do original: Español</small>
+        <p><a href="https://x.com/BrunoRguezP/status/2120898159467757862" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+      <article class="post">
+        <p>Recent statement issued by #G7 Foreign Ministers&#x27; meeting omits reality of the cruel impact caused by the blockade, the economic warfare and the energy siege imposed by the government of the United States against #Cuba, which is a flagrant, massive and systematic violation of the https://t.co/RXX1nzKIgI</p>
+        <small>Bruno Rodríguez P (@BrunoRguezP) · 2026-11-12 15:20 (hora de Europe/Madrid) · Idioma do original: English</small>
+        <p><a href="https://x.com/BrunoRguezP/status/2120884318759534926" rel="noopener noreferrer">Abrir a publicação no X</a></p>
+      </article>
+    </section>
+    <footer>
+      <p><strong>Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.</strong></p>
+      <p>Os canais OSNews não retransmitem sinais de TV alheios, não inserem scripts do X, não têm anúncios nem rastreadores e não recolhem dados. Os títulos vêm de canais RSS públicos oficiais de meios europeus e dos EUA. Os vídeos são inserções oficiais do YouTube já verificadas. O texto do X é o da publicação original, nunca inventado nem apresentado como tradução da fonte. Cada ligação abre o original. A pesquisa no X é uma ligação estática ou um formulário que abre o x.com.</p>
+      <p>Títulos atualizados em 2026-11-13 01:48 (hora de Europe/Madrid). Publicações do X recolhidas em 2026-11-13 03:02 (hora de Europe/Madrid).</p>
+    </footer>
+  </div>
+  <script src="../buscar.js"></script>
+</body>
+</html>

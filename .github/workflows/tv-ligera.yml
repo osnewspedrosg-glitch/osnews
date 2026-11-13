@@ -1,8 +1,8 @@
 # Daily refresh of the text-only TV World lite headlines from official public RSS.
 # No secrets and no paid services. GitHub Actions cannot call the X connector,
-# so X posts in titulos-x.json are left as last collected; the Europe/Madrid
-# 08:00 routine can refresh that file and rerun the script.
-name: Update OSNews TV World lite headlines
+# so X posts in titulos-x.json and canales/posts-x.json are left as last collected;
+# the Europe/Madrid 08:00 routine can refresh those files and rerun the scripts.
+name: Update OSNews TV World lite headlines and Canales OSNews
 
 on:
   schedule:
@@ -24,14 +24,17 @@ jobs:
       - name: Fetch official RSS and rebuild lite pages
         run: python3 scripts/actualizar-tv-ligera.py
 
-      - name: Commit if headlines changed
+      - name: Rebuild Canales OSNews from the lite headlines
+        run: python3 scripts/actualizar-canales.py --from-ligera
+
+      - name: Commit if headlines or channel pages changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tv-world/ligera
+          git add tv-world/ligera canales
           if git diff --cached --quiet; then
             echo "No headline changes."
           else
-            git commit -m "Update OSNews TV World lite headlines from official RSS"
+            git commit -m "Update OSNews TV World lite headlines and Canales OSNews from official RSS"
             git push
           fi

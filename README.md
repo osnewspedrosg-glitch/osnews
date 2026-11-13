@@ -44,3 +44,6 @@ También funciona en Node o en un test: `const L = require("./lorena.js")`. `L.a
 
 ## Aníbal · navegador OSNews
 Página de inicio ligera, en [anibal/](anibal/): búsqueda en DuckDuckGo, accesos a TV World, Azum, noticias por país y el canal de YouTube OSNews, en 8 idiomas. Se puede instalar como PWA. Sin anuncios ni rastreadores.
+
+## Canales OSNews
+Canales de noticias en [canales/](canales/): ocho idiomas (español, inglés, francés, alemán, portugués, italiano, árabe y chino) y un canal por país — [China](canales/china/) (中文), [India](canales/india/) (English y हिन्दी), [Marruecos](canales/marruecos/) (العربية y Français) y [Cuba](canales/cuba/) (español). Titulares de medios oficiales europeos y de EE. UU., vídeos oficiales insertables, una sección de Declaraciones con el texto literal de posts reales en X y un buscador hacia X. Sin anuncios ni rastreadores. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.

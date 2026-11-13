@@ -1,0 +1,127 @@
+{
+  "method": "x.search_posts_all",
+  "start_time_tv_recent": "2026-10-01T00:00:00Z",
+  "start_time_politicians": "2026-09-01T00:00:00Z",
+  "operators": "-is:retweet -is:reply",
+  "sort_order": "recency",
+  "max_results": 25,
+  "expansions": [
+    "author_id",
+    "username"
+  ],
+  "post.fields": [
+    "created_at",
+    "text",
+    "lang",
+    "author_id"
+  ],
+  "user.fields": [
+    "username",
+    "name",
+    "verified",
+    "verified_type"
+  ],
+  "note": "Keep only posts whose literal text matches the country (same patterns as scripts/actualizar-tv-ligera.py). Never invent or paraphrase. Store date/time in Europe/Madrid. After writing canales/posts-x.json (and optionally tv-world/ligera/titulos-x.json), run: python3 scripts/actualizar-tv-ligera.py && python3 scripts/actualizar-canales.py --from-ligera",
+  "accounts": {
+    "tv_european_us": [
+      "BBCNews",
+      "BBCWorld",
+      "BBCMundo",
+      "nytimes",
+      "washingtonpost",
+      "NPR",
+      "el_pais",
+      "lemondefr",
+      "guardian",
+      "dwnews",
+      "dw_espanol",
+      "euronews",
+      "euronewses",
+      "France24",
+      "France24_es",
+      "France24_fr",
+      "Reuters",
+      "AP",
+      "CNN",
+      "CNNEE"
+    ],
+    "us_eu_politicians": [
+      "POTUS",
+      "WhiteHouse",
+      "StateDept",
+      "SecRubio",
+      "USAmbUN",
+      "EU_Commission",
+      "EUCouncil",
+      "eu_eeas",
+      "kajakallas",
+      "vonderleyen",
+      "EUROPARL_EN",
+      "Europarl_ES",
+      "MAECgob",
+      "sanchezcastejon",
+      "EmmanuelMacron",
+      "francediplo",
+      "bundeskanzler",
+      "AuswaertigesAmt",
+      "Bundesregierung",
+      "10DowningStreet",
+      "FCDOGovUK",
+      "GiorgiaMeloni"
+    ],
+    "country_officials": [
+      "MFA_China",
+      "narendramodi",
+      "PMOIndia",
+      "MEAIndia",
+      "DrSJaishankar",
+      "MarocDiplomatie",
+      "DiazCanelB",
+      "PresidenciaCuba",
+      "BrunoRguezP",
+      "MINREXCuba"
+    ]
+  },
+  "queries": [
+    {
+      "country": "china",
+      "group": "tv",
+      "query": "(China OR Chinese OR Chine OR chino OR Cina OR 中国 OR الصين OR Beijing OR Pekín) (from:BBCNews OR from:BBCWorld OR from:BBCMundo OR from:nytimes OR from:washingtonpost OR from:NPR OR from:el_pais OR from:lemondefr OR from:guardian OR from:dwnews OR from:dw_espanol OR from:euronews OR from:euronewses OR from:France24 OR from:France24_es OR from:France24_fr OR from:Reuters OR from:AP OR from:CNN OR from:CNNEE) -is:retweet -is:reply"
+    },
+    {
+      "country": "india",
+      "group": "tv",
+      "query": "(India OR Indian OR Inde OR 印度 OR الهند OR Delhi OR Kashmir OR Modi) (from:BBCNews OR from:BBCWorld OR from:BBCMundo OR from:nytimes OR from:washingtonpost OR from:NPR OR from:el_pais OR from:lemondefr OR from:guardian OR from:dwnews OR from:dw_espanol OR from:euronews OR from:euronewses OR from:France24 OR from:France24_es OR from:France24_fr OR from:Reuters OR from:AP OR from:CNN OR from:CNNEE) -is:retweet -is:reply"
+    },
+    {
+      "country": "morocco",
+      "group": "tv",
+      "query": "(Morocco OR Moroccan OR Marruecos OR Maroc OR Marokko OR 摩洛哥 OR المغرب OR Rabat OR Marrakech) (from:BBCNews OR from:BBCWorld OR from:BBCMundo OR from:nytimes OR from:washingtonpost OR from:NPR OR from:el_pais OR from:lemondefr OR from:guardian OR from:dwnews OR from:dw_espanol OR from:euronews OR from:euronewses OR from:France24 OR from:France24_es OR from:France24_fr OR from:Reuters OR from:AP OR from:CNN OR from:CNNEE) -is:retweet -is:reply"
+    },
+    {
+      "country": "cuba",
+      "group": "tv",
+      "query": "(Cuba OR Cuban OR cubano OR Kuba OR 古巴 OR كوبا OR Havana OR Habana) (from:BBCNews OR from:BBCWorld OR from:BBCMundo OR from:nytimes OR from:washingtonpost OR from:NPR OR from:el_pais OR from:lemondefr OR from:guardian OR from:dwnews OR from:dw_espanol OR from:euronews OR from:euronewses OR from:France24 OR from:France24_es OR from:France24_fr OR from:Reuters OR from:AP OR from:CNN OR from:CNNEE) -is:retweet -is:reply"
+    },
+    {
+      "country": "china",
+      "group": "us_eu_politicians",
+      "query": "(China OR Chinese OR Chine OR chino OR Cina OR 中国 OR الصين OR Beijing OR Pekín) (from:POTUS OR from:WhiteHouse OR from:StateDept OR from:SecRubio OR from:USAmbUN OR from:EU_Commission OR from:eu_eeas OR from:EUROPARL_EN OR from:Europarl_ES OR from:MAECgob OR from:EmmanuelMacron OR from:bundeskanzler OR from:GiorgiaMeloni) -is:retweet -is:reply"
+    },
+    {
+      "country": "india",
+      "group": "us_eu_politicians",
+      "query": "(India OR Indian OR Inde OR 印度 OR الهند OR Delhi OR Kashmir OR Modi) (from:POTUS OR from:WhiteHouse OR from:StateDept OR from:SecRubio OR from:USAmbUN OR from:EU_Commission OR from:eu_eeas OR from:EUROPARL_EN OR from:Europarl_ES OR from:MAECgob OR from:EmmanuelMacron OR from:bundeskanzler OR from:GiorgiaMeloni) -is:retweet -is:reply"
+    },
+    {
+      "country": "morocco",
+      "group": "us_eu_politicians",
+      "query": "(Morocco OR Moroccan OR Marruecos OR Maroc OR 摩洛哥 OR المغرب OR Rabat) (from:POTUS OR from:WhiteHouse OR from:StateDept OR from:SecRubio OR from:USAmbUN OR from:EU_Commission OR from:eu_eeas OR from:EUROPARL_EN OR from:Europarl_ES OR from:MAECgob OR from:EmmanuelMacron OR from:bundeskanzler OR from:GiorgiaMeloni) -is:retweet -is:reply"
+    },
+    {
+      "country": "cuba",
+      "group": "us_eu_politicians",
+      "query": "(Cuba OR Cuban OR cubano OR 古巴 OR كوبا OR Havana OR Habana) (from:POTUS OR from:WhiteHouse OR from:StateDept OR from:SecRubio OR from:USAmbUN OR from:EU_Commission OR from:eu_eeas OR from:EUROPARL_EN OR from:Europarl_ES OR from:MAECgob OR from:EmmanuelMacron OR from:bundeskanzler OR from:GiorgiaMeloni) -is:retweet -is:reply"
+    }
+  ]
+}
