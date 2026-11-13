@@ -179,7 +179,9 @@ export function mount(doc, options = {}) {
       show("Falta el consentimiento. No se ha enviado nada.", "local-policy");
       return;
     }
-    const text = doc.querySelector(".app textarea")?.value?.trim() ?? "";
+    const box = doc.querySelector(".app textarea");
+    if (box && typeof box.blur === "function") box.blur();
+    const text = box?.value?.trim() ?? "";
     const role = doc.querySelector(".app select")?.value || "core";
     if (!text) {
       show("Escribe un turno en la demostración local antes de enviarlo.", "local-policy");

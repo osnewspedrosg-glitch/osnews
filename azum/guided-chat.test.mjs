@@ -41,6 +41,12 @@ test("the guided label is explicit and the thirteen roles stay available", () =>
   }
   assert.match(page, /guided-chat-ui\.js/);
   assert.match(page, /local-ai\.js/);
+  assert.match(page, /ime-commit\.js/);
+  const ui = fs.readFileSync(new URL("./guided-chat-ui.js", import.meta.url), "utf8");
+  assert.match(ui, /isComposingEvent/);
+  assert.match(ui, /committedValue/);
+  assert.match(ui, /keyCode === 229/);
+  assert.match(ui, /input\.blur/);
   assert.equal(fs.readFileSync(new URL("../index.html", import.meta.url), "utf8").includes("guided-chat"), false);
 });
 

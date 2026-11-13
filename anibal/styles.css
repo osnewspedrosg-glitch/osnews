@@ -26,7 +26,7 @@ body {
 }
 body[dir="rtl"] { text-align: right; }
 a { color: var(--accent2); }
-a:focus-visible, button:focus-visible, input:focus-visible, .lang:focus-visible, .tile:focus-visible {
+a:focus-visible, button:focus-visible, input:focus-visible, .lang:focus-visible, .tile:focus-visible, .chip:focus-visible {
   outline: none;
   box-shadow: var(--focus);
 }
@@ -47,7 +47,7 @@ h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 4px; letter-spacing: .02
 .tagline { margin: 0; color: var(--muted); }
 
 .jump { display: flex; flex-wrap: wrap; gap: 10px; }
-.jump a, .lang, .search button, #install {
+.jump a, .lang, .search button, #install, .chip {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -156,7 +156,7 @@ footer strong { color: var(--text); }
 @media (max-width: 700px) {
   h1 { font-size: 1.6rem; }
   .brand img { width: 52px; height: 52px; }
-  .jump a, .lang, .search button, #install, .tile { min-height: 56px; }
+  .jump a, .lang, .search button, #install, .tile, .chip { min-height: 56px; }
 }
 
 .azum-bot {
@@ -194,4 +194,50 @@ footer strong { color: var(--text); }
 .btn-azum-web:hover, .btn-azum-web:focus-visible { border-color: var(--accent); }
 @media (max-width: 700px) {
   .btn-azum, .btn-azum-web { min-height: 56px; flex: 1 1 220px; }
+}
+
+.may-news {
+  border-color: var(--accent);
+  background: linear-gradient(180deg, #152636 0%, var(--bg2) 72%);
+}
+.may-head {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.may-head img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  background: var(--card);
+}
+.may-news h2 { margin-bottom: 4px; }
+.may-ask {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.may-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 0;
+}
+.chip {
+  min-height: 48px;
+  padding: 8px 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+}
+.chip:hover, .chip:focus-visible { border-color: var(--accent); }
+@media (max-width: 700px) {
+  .may-head img { width: 60px; height: 60px; }
+  .chip { flex: 1 1 140px; }
 }

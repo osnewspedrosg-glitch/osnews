@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>IME composition test</title>
+<form id="f" action="/no" method="get">
+  <input id="q" name="q" type="search">
+  <button type="submit" id="go">Go</button>
+</form>
+<pre id="out"></pre>
+<script src="ime.js"></script>
+<script>
+(function () {
+  const out = [];
+  const f = document.getElementById("f");
+  const q = document.getElementById("q");
+  let submitted = [];
+  ANIBAL_IME.wireImeForm(f, q, function (event, value) {
+    event.preventDefault();
+    submitted.push(value);
+  });
+
+  function record(name, ok, detail) {
+    out.push((ok ? "PASS" : "FAIL") + " " + name + (detail ? " " + detail : ""));
+  }
+
+  q.focus();
+  q.value = "ho";
+  const start = new CompositionEvent("compositionstart", { data: "ho" });
+  q.dispatchEvent(start);
+  const composingEnter = new KeyboardEvent("keydown", {
+    key: "Enter",
+    code: "Enter",
+    keyCode: 229,
+    which: 229,
+    isComposing: true,
+    bubbles: true,
+    cancelable: true
+  });
+  q.dispatchEvent(composingEnter);
+  record("ignore-enter-during-composition", submitted.length === 0, "submitted=" + submitted.length);
+
+  q.value = "hola";
+  q.dispatchEvent(new CompositionEvent("compositionend", { data: "hola" }));
+
+  const go = document.getElementById("go");
+  q.focus();
+  q.value = "segunda";
+  go.dispatchEvent(new PointerEvent("pointerdown", { bubbles: true, cancelable: true, pointerType: "touch" }));
+  f.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+  record("blur-before-submit-reads-value", submitted[0] === "segunda", "got=" + JSON.stringify(submitted[0]) + " active=" + document.activeElement.id);
+
+  const r1 = ANIBAL_IME.routeNewsQuery("noticias de Cuba");
+  record("route-cuba", r1 && r1.path === "cuba", JSON.stringify(r1));
+  const r2 = ANIBAL_IME.newsDestination("clima en Valencia");
+  record("route-ddg-news", r2 && r2.indexOf("iar=news") !== -1 && r2.indexOf("Valencia") !== -1, r2);
+
+  const text = out.join("\n");
+  document.getElementById("out").textContent = text;
+  document.title = out.every(function (l) { return l.indexOf("PASS") === 0; }) ? "ALL_PASS" : "HAS_FAIL";
+  document.documentElement.setAttribute("data-ime-test", document.title);
+  document.documentElement.setAttribute("data-ime-out", text);
+})();
+</script>
