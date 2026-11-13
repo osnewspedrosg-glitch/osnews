@@ -436,37 +436,36 @@
   const COUNTRY_NEWS = {
     china: [
       { id: "sriLm0jhrek", title: "China's first foreign partner in space | DW News", channel: "DW News", date: "2026-11-12" },
-      { id: "pQqduPdm8o8", title: "China dispara sus exportaciones y supera el billón de dólares de superávit comercial", channel: "FRANCE 24 Español", date: "2026-11-10" },
-      { id: "gdXYDP9cL08", title: "China's trade surplus surpasses $1 trillion as AI boom powers exports", channel: "euronews", date: "2026-11-10" },
-      { id: "n7gIvYd8hnY", title: "A magnitude 7 earthquake hit China's Tibet region, killing at least 16 people", channel: "Associated Press", date: "2026-10-23" },
       { id: "ru6jnqz3Q6I", title: "As U.S. pushes back on data centers, China races to build them", channel: "NBC News", date: "2026-11-12" },
-      { id: "Tglwn1TYkCM", title: "Xi pitches China as leader of new global AI order", channel: "Reuters", date: "2026-07-17" }
+      { id: "pQqduPdm8o8", title: "China dispara sus exportaciones y supera el billón de dólares de superávit comercial", channel: "FRANCE 24 Español", date: "2026-11-10" },
+      { id: "beMyJ6H0WP0", title: "Al menos 14 muertos en el incendio de un edificio de apartamentos en China", channel: "DW Español", date: "2026-11-09" },
+      { id: "Q6HdsCrMfvk", title: "Nvidia launches probe into alleged Chinese spy affair | DW News", channel: "DW News", date: "2026-11-09" },
+      { id: "wrmDWX3KVt4", title: "China threatens EU with retaliation as EU mulls “kill-switch” to defend its market", channel: "euronews", date: "2026-11-05" }
     ],
     india: [
-      { id: "S2sRA5pDgtE", title: "India's AI ambitions: Can it become a global tech superpower? | DW News", channel: "DW News", date: "2026-11-07" },
-      { id: "wV70XQD3K04", title: "Festival de las luces: empiezan celebraciones de una de las fiestas más importantes del hinduismo", channel: "FRANCE 24 Español", date: "2026-11-08" },
       { id: "cOLounJNUgw", title: "Delhi air as harmful as smoking 20 cigarettes a day", channel: "Reuters", date: "2026-11-09" },
+      { id: "wV70XQD3K04", title: "Festival de las luces: empiezan celebraciones de una de las fiestas más importantes del hinduismo", channel: "FRANCE 24 Español", date: "2026-11-08" },
       { id: "gAbOxF7Iuj4", title: "Diwali celebrations in India amid political tensions", channel: "ABC News", date: "2026-11-07" },
-      { id: "qWRvkLN4Oe4", title: "India's Gen Z youth flock to streets over voter roll purge", channel: "PBS NewsHour", date: "2026-10-22" },
-      { id: "ks0Bb4kUKUQ", title: "Dussehra: enormes efigies de demonios arden en la India", channel: "euronews (en español)", date: "2026-10-21" }
+      { id: "S2sRA5pDgtE", title: "India's AI ambitions: Can it become a global tech superpower? | DW News", channel: "DW News", date: "2026-11-07" },
+      { id: "ymikbun6Da4", title: "Mass protests challenge Modi over voter-list controversy | DW News", channel: "DW News", date: "2026-11-01" },
+      { id: "9fNl0jLR3N4", title: "India's Black Sea dilemma | DW News", channel: "DW News", date: "2026-10-27" }
     ],
     morocco: [
-      { id: "rdANsCrKkac", title: "What Morocco's first female premier means for the Arab world | DW News", channel: "DW News", date: "2026-09-30" },
-      { id: "29S-0SqjHcQ", title: "¿Cuál es el panorama en Marruecos en las elecciones legislativas?", channel: "FRANCE 24 Español", date: "2026-09-23" },
-      { id: "KkCNeygybn8", title: "Morocco's King Mohammed VI appoints Fatima Mansouri as the country's first female prime minister", channel: "euronews", date: "2026-09-30" },
+      { id: "W0SHyWsjz6g", title: "JOJ Dakar 2026 : Ghali Bougja, un jeune cavalier marocain prêt à relever le défi • FRANCE 24", channel: "FRANCE 24", date: "2026-11-12" },
       { id: "gY3vBkbXiIE", title: "El desalojo del puerto de Ceuta acelera los retornos a Marruecos", channel: "euronews (en español)", date: "2026-11-10" },
+      { id: "rdANsCrKkac", title: "What Morocco's first female premier means for the Arab world | DW News", channel: "DW News", date: "2026-09-30" },
+      { id: "ESuswUmhiSw", title: "Marruecos hace historia: Fatima Mansouri será la primera mujer en asumir como jefa de Gobierno", channel: "DW Español", date: "2026-09-30" },
+      { id: "KkCNeygybn8", title: "Morocco's King Mohammed VI appoints Fatima Mansouri as the country's first female prime minister", channel: "euronews", date: "2026-09-30" },
       { id: "whr0jHBHIx4", title: "Morocco votes for a new parliament after Gen Z protests and migration crisis", channel: "Associated Press", date: "2026-09-23" },
-      { id: "1dLDXygk-dg", title: "Tens of thousands of migrants enter Spanish territory, then return to Morocco", channel: "PBS NewsHour", date: "2026-07-31" },
-      { id: "9IpZqort5pM", title: "Migrants return to Morocco after crossing to Spain's Ceuta", channel: "Reuters", date: "2026-07-31" }
+      { id: "29S-0SqjHcQ", title: "¿Cuál es el panorama en Marruecos en las elecciones legislativas?", channel: "FRANCE 24 Español", date: "2026-09-23" }
     ],
     cuba: [
       { id: "jr0HsN6DyTs", title: "Building collapses in Cuba create national emergency amid deepening economic crisis", channel: "NBC News", date: "2026-11-11" },
-      { id: "8A7kwLJv0Mc", title: "Cuba enfrenta octavo apagón y la población se las ingenia para resistir • FRANCE 24 Español", channel: "FRANCE 24 Español", date: "2026-09-19" },
-      { id: "O2IEIKGZLp0", title: "Cuba hit by nationwide blackout as power crisis deepens | DW News", channel: "DW News", date: "2026-07-07" },
-      { id: "Bpf1pCG5p6s", title: "Cuba tourism crisis: An industry brought to ‘almost total paralysis’", channel: "euronews", date: "2026-07-30" },
-      { id: "UdElseH8Bnk", title: "10 million people left without power in Cuba after electric grid collapsed", channel: "ABC News", date: "2026-07-07" },
+      { id: "Xmb5shZSbpA", title: "Shouting match between US and Cuba at UN assembly | DW News", channel: "DW News", date: "2026-10-28" },
+      { id: "EyrxP3VtNHM", title: "La libreta de racionamiento, víctima de las reformas económicas en Cuba", channel: "DW Español", date: "2026-10-08" },
+      { id: "Fc8kSKRRh_U", title: "US Coast Guard seizes 2 ships carrying thousands of gallons of oil bound for Cuba", channel: "ABC News", date: "2026-10-02" },
       { id: "wAouh_5-SZI", title: "US oil blockade is an 'act of war,' Cuba's foreign minister says", channel: "Associated Press", date: "2026-09-25" },
-      { id: "aS3VtuaG9gA", title: "Cuba anuncia una reforma inédita de su economía", channel: "DW Español", date: "2026-06-20" }
+      { id: "OEjG4S5jqEw", title: "Cuba abandona durante el discurso de Trump", channel: "euronews (en español)", date: "2026-09-23" }
     ]
   };
 
