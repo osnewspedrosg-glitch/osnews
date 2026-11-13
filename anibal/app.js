@@ -87,7 +87,10 @@
       vpnTorS: 'torproject.org/download',
       vpnWarn: 'En algunos países el uso de VPN está restringido o es ilegal. Infórmate de la ley de tu país; el uso es responsabilidad de cada persona. OSNews no recibe nada por estos enlaces.',
       medios: 'TikTok y Facebook',
-      mediosLead: 'Cuentas oficiales de medios de comunicación. Solo el título y el enlace público. Se abren en la app o en el navegador del sistema. Aníbal no carga Facebook ni TikTok, ni sus anuncios ni rastreadores.',
+      mediosLead: 'Cuentas de Pedro / OSNews y cuentas oficiales de medios de comunicación. Solo el título y el enlace público. Se abren en la app o en el navegador del sistema. Aníbal no carga Facebook ni TikTok, ni sus anuncios ni rastreadores.',
+      mediosPedro: 'Pedro / OSNews',
+      medioPedroFb: 'Facebook de Pedro / OSNews',
+      medioPedroTt: 'TikTok de Pedro / OSNews',
       medioFb: 'Facebook',
       medioTt: 'TikTok',
       palabra: 'Buscador único',
@@ -184,7 +187,10 @@
       vpnTorS: 'torproject.org/download',
       vpnWarn: 'In some countries the use of a VPN is restricted or illegal. Check the law in your country; each person is responsible for their own use. OSNews receives nothing from these links.',
       medios: 'TikTok and Facebook',
-      mediosLead: 'Official accounts of news organisations. Only the title and the public link. They open in the app or the system browser. Aníbal does not load Facebook or TikTok, or their ads or trackers.',
+      mediosLead: 'Accounts of Pedro / OSNews and official accounts of news organisations. Only the title and the public link. They open in the app or the system browser. Aníbal does not load Facebook or TikTok, or their ads or trackers.',
+      mediosPedro: 'Pedro / OSNews',
+      medioPedroFb: 'Pedro / OSNews Facebook',
+      medioPedroTt: 'Pedro / OSNews TikTok',
       medioFb: 'Facebook',
       medioTt: 'TikTok',
       palabra: 'One-word search',
@@ -613,6 +619,9 @@
     if ($('medios-lead')) $('medios-lead').textContent = t.mediosLead;
     document.querySelectorAll('.medio-fb').forEach((a) => { a.textContent = t.medioFb; });
     document.querySelectorAll('.medio-tt').forEach((a) => { a.textContent = t.medioTt; });
+    if ($('medios-pedro-h')) $('medios-pedro-h').textContent = t.mediosPedro;
+    document.querySelectorAll('.medio-pedro-fb').forEach((a) => { a.textContent = t.medioPedroFb; });
+    document.querySelectorAll('.medio-pedro-tt').forEach((a) => { a.textContent = t.medioPedroTt; });
     $('t-grok-s').textContent = t.grokS;
     $('h-palabra').textContent = t.palabra;
     $('palabra-lead').textContent = t.palabraLead;

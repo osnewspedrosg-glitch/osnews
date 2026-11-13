@@ -364,3 +364,5 @@ footer strong { color: var(--text); }
 .medios-list h3 { margin: 0 0 4px; font-size: 1.02rem; color: var(--text); }
 .medios-links { margin: 0; display: flex; flex-wrap: wrap; gap: 8px 16px; }
 .medios-links a { font-weight: 700; }
+
+.medios-pedro { border-color: var(--accent2); }
