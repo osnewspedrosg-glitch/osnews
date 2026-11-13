@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <title>OSNews TV World</title>
+  <meta name="description" content="Debates de OSNews y directos oficiales con el reproductor permitido. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="../assets/may-icon-192.png">
+  <link rel="apple-touch-icon" href="../assets/may-icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img src="../assets/may-icon-192.png" width="64" height="64" alt="OSNews">
+        <div>
+          <h1>OSNews TV World</h1>
+          <p class="tagline" id="tagline"></p>
+        </div>
+      </div>
+      <a class="back" id="back" href="../">Volver a OSNews</a>
+    </header>
+
+    <section class="panel" aria-labelledby="h-lang">
+      <h2 id="h-lang">Idioma</h2>
+      <div class="langs" id="langs"></div>
+    </section>
+
+    <div class="layout">
+      <div>
+        <div class="stage" id="stage"><div class="placeholder">Elige un canal o un vídeo para verlo aquí.</div></div>
+        <p class="meta" id="now"></p>
+        <div class="actions" id="actions"></div>
+        <p class="notice" id="notice"></p>
+      </div>
+      <div>
+        <section class="panel" aria-labelledby="h-live">
+          <h2 id="h-live">Directos oficiales</h2>
+          <div class="grid" id="live-grid"></div>
+        </section>
+      </div>
+    </div>
+
+    <section class="panel" aria-labelledby="h-osnews">
+      <h2 id="h-osnews">Debates OSNews</h2>
+      <div class="grid" id="debates"></div>
+      <h3 id="missing-title" class="missing" style="color:inherit;font-size:1.05rem;margin-top:18px"></h3>
+      <p id="missing-intro" class="missing"></p>
+      <ul id="missing-list" class="missing"></ul>
+    </section>
+
+    <section class="panel" aria-labelledby="h-countries">
+      <h2 id="h-countries">Noticias por país</h2>
+      <h3 id="lab-china">China</h3>
+      <div class="list" id="news-china"></div>
+      <p style="height:8px;margin:0"></p>
+      <h3 id="lab-india">India</h3>
+      <div class="list" id="news-india"></div>
+      <p style="height:8px;margin:0"></p>
+      <h3 id="lab-morocco">Marruecos</h3>
+      <div class="list" id="news-morocco"></div>
+      <p style="height:8px;margin:0"></p>
+      <h3 id="lab-cuba">Cuba</h3>
+      <div class="list" id="news-cuba"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="china-live-title">
+      <h2 id="china-live-title">CGTN / CCTV</h2>
+      <div class="grid" id="china-live"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="india-live-title">
+      <h2 id="india-live-title">India · DD India, WION, NDTV, India Today</h2>
+      <div class="grid" id="india-live"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="h-cnnbbc">
+      <h2 id="h-cnnbbc">CNN y BBC</h2>
+      <div class="actions" id="cnnbbc-links"></div>
+    </section>
+
+    <footer>
+      <p id="authors"><strong>Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.</strong></p>
+      <p id="legal"></p>
+    </footer>
+  </div>
+  <script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
