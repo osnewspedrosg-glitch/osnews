@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-13T09:09:01+01:00",
-  "x_fetched_at": "2026-11-13T08:12:28+01:00",
+  "generated_at": "2026-11-13T16:00:25+01:00",
+  "x_fetched_at": "2026-11-13T16:00:25+01:00",
   "errors": [],
   "counts": {
     "es": {
@@ -10,7 +10,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 20,
-        "decl_tv_all": 23,
+        "decl_tv_all": 30,
         "local": 14
       },
       "india": {
@@ -19,16 +19,16 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 19,
-        "decl_tv_all": 24,
+        "decl_tv_all": 27,
         "local": 24
       },
       "morocco": {
-        "news": 3,
+        "news": 6,
         "videos": 6,
         "decl_pol": 5,
         "decl_tv": 6,
         "decl_pol_all": 5,
-        "decl_tv_all": 13,
+        "decl_tv_all": 14,
         "local": 16
       },
       "cuba": {
@@ -48,7 +48,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 20,
-        "decl_tv_all": 23,
+        "decl_tv_all": 30,
         "local": 14
       },
       "india": {
@@ -57,16 +57,16 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 19,
-        "decl_tv_all": 24,
+        "decl_tv_all": 27,
         "local": 24
       },
       "morocco": {
-        "news": 3,
+        "news": 6,
         "videos": 6,
         "decl_pol": 5,
         "decl_tv": 6,
         "decl_pol_all": 5,
-        "decl_tv_all": 13,
+        "decl_tv_all": 14,
         "local": 16
       },
       "cuba": {
@@ -86,7 +86,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 20,
-        "decl_tv_all": 23,
+        "decl_tv_all": 30,
         "local": 14
       },
       "india": {
@@ -95,16 +95,16 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 19,
-        "decl_tv_all": 24,
+        "decl_tv_all": 27,
         "local": 24
       },
       "morocco": {
-        "news": 3,
+        "news": 6,
         "videos": 6,
         "decl_pol": 5,
         "decl_tv": 6,
         "decl_pol_all": 5,
-        "decl_tv_all": 13,
+        "decl_tv_all": 14,
         "local": 16
       },
       "cuba": {
@@ -124,7 +124,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 20,
-        "decl_tv_all": 23,
+        "decl_tv_all": 30,
         "local": 14
       },
       "india": {
@@ -133,16 +133,16 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 19,
-        "decl_tv_all": 24,
+        "decl_tv_all": 27,
         "local": 24
       },
       "morocco": {
-        "news": 3,
+        "news": 6,
         "videos": 6,
         "decl_pol": 5,
         "decl_tv": 6,
         "decl_pol_all": 5,
-        "decl_tv_all": 13,
+        "decl_tv_all": 14,
         "local": 16
       },
       "cuba": {
@@ -162,7 +162,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 20,
-        "decl_tv_all": 23,
+        "decl_tv_all": 30,
         "local": 14
       },
       "india": {
@@ -171,16 +171,16 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 19,
-        "decl_tv_all": 24,
+        "decl_tv_all": 27,
         "local": 24
       },
       "morocco": {
-        "news": 3,
+        "news": 6,
         "videos": 6,
         "decl_pol": 5,
         "decl_tv": 6,
         "decl_pol_all": 5,
-        "decl_tv_all": 13,
+        "decl_tv_all": 14,
         "local": 16
       },
       "cuba": {
@@ -200,7 +200,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 20,
-        "decl_tv_all": 23,
+        "decl_tv_all": 30,
         "local": 14
       },
       "india": {
@@ -209,16 +209,16 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 19,
-        "decl_tv_all": 24,
+        "decl_tv_all": 27,
         "local": 24
       },
       "morocco": {
-        "news": 3,
+        "news": 6,
         "videos": 6,
         "decl_pol": 5,
         "decl_tv": 6,
         "decl_pol_all": 5,
-        "decl_tv_all": 13,
+        "decl_tv_all": 14,
         "local": 16
       },
       "cuba": {
@@ -238,7 +238,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 20,
-        "decl_tv_all": 23,
+        "decl_tv_all": 30,
         "local": 14
       },
       "india": {
@@ -247,16 +247,16 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 19,
-        "decl_tv_all": 24,
+        "decl_tv_all": 27,
         "local": 24
       },
       "morocco": {
-        "news": 3,
+        "news": 6,
         "videos": 6,
         "decl_pol": 5,
         "decl_tv": 6,
         "decl_pol_all": 5,
-        "decl_tv_all": 13,
+        "decl_tv_all": 14,
         "local": 16
       },
       "cuba": {
@@ -276,7 +276,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 20,
-        "decl_tv_all": 23,
+        "decl_tv_all": 30,
         "local": 14
       },
       "india": {
@@ -285,16 +285,16 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 19,
-        "decl_tv_all": 24,
+        "decl_tv_all": 27,
         "local": 24
       },
       "morocco": {
-        "news": 3,
+        "news": 6,
         "videos": 6,
         "decl_pol": 5,
         "decl_tv": 6,
         "decl_pol_all": 5,
-        "decl_tv_all": 13,
+        "decl_tv_all": 14,
         "local": 16
       },
       "cuba": {

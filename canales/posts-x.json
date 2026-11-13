@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-13T08:12:28+01:00",
+  "fetched_at": "2026-11-13T16:00:25+01:00",
   "timezone": "Europe/Madrid",
   "method": "x.search_posts_all, official politician (government-verified) and official European/US TV-news accounts; start_time 2026-09-01T00:00:00Z (TV China/India/Morocco/Cuba from 2026-10-01T00:00:00Z); -is:retweet -is:reply; literal text only, country must appear in the post",
   "accounts": {
@@ -240,6 +240,90 @@
   },
   "countries": {
     "china": [
+      {
+        "id": "2121242289385484326",
+        "account": "France24_fr",
+        "name": "FRANCE 24 Français",
+        "role": "tv",
+        "date": "2026-11-13",
+        "time": "15:02",
+        "text": "🇺🇸💻 Scandale #Nvidia : qui est Alice Huang, soupçonnée d’espionnage au profit de la Chine ? https://t.co/YFpCTiwnl4",
+        "url": "https://x.com/France24_fr/status/2121242289385484326",
+        "lang": "",
+        "scope": "tv"
+      },
+      {
+        "id": "2121240414640615744",
+        "account": "Reuters",
+        "name": "Reuters",
+        "role": "tv",
+        "date": "2026-11-13",
+        "time": "14:55",
+        "text": "Chinese AI stocks fell on concerns that Jensen Huang’s exit could further restrict access to US chips. But Joachim Klement of Panmure Liberum says China could emerge as the biggest winner, as a slowdown in US AI expansion gives Beijing room to catch up https://t.co/YZdHdMR7Ns https://t.co/o2Ce9gNlSD",
+        "url": "https://x.com/Reuters/status/2121240414640615744",
+        "lang": "",
+        "scope": "tv"
+      },
+      {
+        "id": "2121229089940124022",
+        "account": "el_pais",
+        "name": "EL PAÍS",
+        "role": "tv",
+        "date": "2026-11-13",
+        "time": "14:10",
+        "text": "El Congreso de EE UU inicia el escrutinio por el caso de Nvidia y la infidelidad de Jensen Huang con una supuesta espía china. La empresa proporciona el 90% de los chips usados en los centros de datos, donde se entrenan los modelos más sofisticados de IA https://t.co/zuK7fng6a6",
+        "url": "https://x.com/el_pais/status/2121229089940124022",
+        "lang": "",
+        "scope": "tv"
+      },
+      {
+        "id": "2121205906259997051",
+        "account": "bbcmundo",
+        "name": "BBC News Mundo",
+        "role": "tv",
+        "date": "2026-11-13",
+        "time": "12:37",
+        "text": "\"Nací en España y un día me miré al espejo y me di cuenta de que era china\" https://t.co/gTj327cfix",
+        "url": "https://x.com/bbcmundo/status/2121205906259997051",
+        "lang": "",
+        "scope": "tv"
+      },
+      {
+        "id": "2121177500479049792",
+        "account": "Reuters",
+        "name": "Reuters",
+        "role": "tv",
+        "date": "2026-11-13",
+        "time": "10:45",
+        "text": "World leaders are set to gather in Shenzhen for the APEC summit, with attention on a meeting involving US, Chinese and Russian leaders. But what exactly is APEC, who are its 21 members, and what does the forum do? https://t.co/ruNsGorMsv https://t.co/jOvSjMXGge",
+        "url": "https://x.com/Reuters/status/2121177500479049792",
+        "lang": "",
+        "scope": "tv"
+      },
+      {
+        "id": "2121175447690199228",
+        "account": "euronews",
+        "name": "euronews",
+        "role": "tv",
+        "date": "2026-11-13",
+        "time": "10:36",
+        "text": "\"We will discover if it's actually China orchestrating all of this. Or it's a businessman with this sort of tacit consent from the US administration.\"\n\nAndrea Renda, head of research at the CEPS on #EuropeToday, as the chief executive of Nvidia resigns. https://t.co/0IknkPJk52",
+        "url": "https://x.com/euronews/status/2121175447690199228",
+        "lang": "",
+        "scope": "tv"
+      },
+      {
+        "id": "2121172668313485774",
+        "account": "Reuters",
+        "name": "Reuters",
+        "role": "tv",
+        "date": "2026-11-13",
+        "time": "10:25",
+        "text": "Exclusive: Nvidia has said US export controls have effectively shut it out of China's AI data-center market, but a Reuters review has identified more than $3 billion in Chinese computing projects built around the American chipmaker's restricted processors https://t.co/Fg7hQHm5zA",
+        "url": "https://x.com/Reuters/status/2121030490513657903",
+        "lang": "",
+        "scope": "tv"
+      },
       {
         "id": "2121128449129562288",
         "account": "Reuters",
@@ -927,6 +1011,30 @@
     ],
     "india": [
       {
+        "id": "2121241766636536170",
+        "account": "Reuters",
+        "name": "Reuters",
+        "role": "tv",
+        "date": "2026-11-13",
+        "time": "15:00",
+        "text": "India orders audit of electronic waste recyclers to catch fake compliance https://t.co/891a7CoaY7",
+        "url": "https://x.com/Reuters/status/2121241766636536170",
+        "lang": "",
+        "scope": "tv"
+      },
+      {
+        "id": "2121178781259866582",
+        "account": "Reuters",
+        "name": "Reuters",
+        "role": "tv",
+        "date": "2026-11-13",
+        "time": "10:50",
+        "text": "India orders audit of electronic waste recyclers to catch fake compliance https://t.co/hYEUrPa7ul",
+        "url": "https://x.com/Reuters/status/2121178781259866582",
+        "lang": "",
+        "scope": "tv"
+      },
+      {
         "id": "2121133762583150903",
         "account": "PMOIndia",
         "name": "PMO India",
@@ -1297,6 +1405,18 @@
         "url": "https://x.com/MEAIndia/status/2120201826893246792",
         "lang": "",
         "scope": "country"
+      },
+      {
+        "id": "2120178767003799612",
+        "account": "France24_es",
+        "name": "FRANCE 24 Español",
+        "role": "tv",
+        "date": "2026-11-10",
+        "time": "16:36",
+        "text": "La bielorrusa Aryna Sabalenka se impuso a la checa Karolina Muchova en dos sets y comenzó con buen pie su participación en las WTA Finals, el torneo que reúne en Indian Wells a las ocho mejores tenistas de la temporada\nhttps://t.co/diZ7Kl3ypV",
+        "url": "https://x.com/France24_es/status/2120178767003799612",
+        "lang": "",
+        "scope": "tv"
       },
       {
         "id": "2120102919546785912",
@@ -1959,6 +2079,18 @@
         "url": "https://x.com/MarocDiplomatie/status/2118629533284802871",
         "lang": "fr",
         "scope": "country"
+      },
+      {
+        "id": "2118507554640744814",
+        "account": "Reuters",
+        "name": "Reuters",
+        "role": "tv",
+        "date": "2026-11-06",
+        "time": "01:55",
+        "text": "Students clashed with police in Santiago, Chile, as they demanded the resignation of Justice Minister Fernando Rabat over prison sentence cuts for people convicted of sexual abuse and rape of minors, as well as human rights violations https://t.co/224skytees",
+        "url": "https://x.com/Reuters/status/2118507554640744814",
+        "lang": "",
+        "scope": "tv"
       },
       {
         "id": "2118352985512149168",
