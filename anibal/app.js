@@ -33,6 +33,8 @@
       chipCuba: 'Cuba',
       chipTv: 'TV World',
       chipLite: 'Versión ligera',
+      chipDiccionario: 'Diccionario',
+      chipLibros: 'Libros',
       tiles: 'Accesos OSNews',
       tv: 'OSNews TV World',
       tvS: 'Directos oficiales y debates',
@@ -50,6 +52,8 @@
       ytwS: 'Canal nuevo de debates y vídeos',
       canales: 'Canales OSNews',
       canalesS: 'Ocho idiomas y un canal por país, con declaraciones literales en X',
+      museos: 'Museos OSNews',
+      museosS: 'Museos de Europa y EE. UU., galerías, Instituto Cervantes, diccionarios y libros',
       news: 'Noticias por país',
       newsS: 'China, India, Marruecos y Cuba',
       app: 'App OSNews',
@@ -83,6 +87,8 @@
       chipCuba: 'Cuba',
       chipTv: 'TV World',
       chipLite: 'Lite version',
+      chipDiccionario: 'Dictionary',
+      chipLibros: 'Books',
       tiles: 'OSNews shortcuts',
       tv: 'OSNews TV World',
       tvS: 'Official live streams and debates',
@@ -100,6 +106,8 @@
       ytwS: 'New channel for debates and videos',
       canales: 'OSNews channels',
       canalesS: 'Eight languages and one channel per country, with literal X statements',
+      museos: 'OSNews Museums',
+      museosS: 'Museums in Europe and the US, galleries, Instituto Cervantes, dictionaries and books',
       news: 'News by country',
       newsS: 'China, India, Morocco and Cuba',
       app: 'OSNews app',
@@ -133,6 +141,8 @@
       chipCuba: 'Cuba',
       chipTv: 'TV World',
       chipLite: 'Version légère',
+      chipDiccionario: 'Dictionnaire',
+      chipLibros: 'Livres',
       tiles: 'Accès OSNews',
       tv: 'OSNews TV World',
       tvS: 'Directs officiels et débats',
@@ -150,6 +160,8 @@
       ytwS: 'Nouvelle chaîne de débats et de vidéos',
       canales: 'Chaînes OSNews',
       canalesS: 'Huit langues et une chaîne par pays, avec des déclarations littérales sur X',
+      museos: 'Musées OSNews',
+      museosS: 'Musées d’Europe et des États-Unis, galeries, Instituto Cervantes, dictionnaires et livres',
       news: 'Actualités par pays',
       newsS: 'Chine, Inde, Maroc et Cuba',
       app: 'App OSNews',
@@ -183,6 +195,8 @@
       chipCuba: 'Kuba',
       chipTv: 'TV World',
       chipLite: 'Leichte Version',
+      chipDiccionario: 'Wörterbuch',
+      chipLibros: 'Bücher',
       tiles: 'OSNews-Zugänge',
       tv: 'OSNews TV World',
       tvS: 'Offizielle Livestreams und Debatten',
@@ -200,6 +214,8 @@
       ytwS: 'Neuer Kanal für Debatten und Videos',
       canales: 'OSNews-Kanäle',
       canalesS: 'Acht Sprachen und ein Kanal pro Land, mit wörtlichen X-Erklärungen',
+      museos: 'OSNews Museen',
+      museosS: 'Museen in Europa und den USA, Galerien, Instituto Cervantes, Wörterbücher und Bücher',
       news: 'Nachrichten nach Land',
       newsS: 'China, Indien, Marokko und Kuba',
       app: 'OSNews-App',
@@ -233,6 +249,8 @@
       chipCuba: 'Cuba',
       chipTv: 'TV World',
       chipLite: 'Versão ligeira',
+      chipDiccionario: 'Dicionário',
+      chipLibros: 'Livros',
       tiles: 'Atalhos OSNews',
       tv: 'OSNews TV World',
       tvS: 'Diretos oficiais e debates',
@@ -250,6 +268,8 @@
       ytwS: 'Canal novo de debates e vídeos',
       canales: 'Canais OSNews',
       canalesS: 'Oito idiomas e um canal por país, com declarações literais no X',
+      museos: 'Museus OSNews',
+      museosS: 'Museus da Europa e dos EUA, galerias, Instituto Cervantes, dicionários e livros',
       news: 'Notícias por país',
       newsS: 'China, Índia, Marrocos e Cuba',
       app: 'App OSNews',
@@ -283,6 +303,8 @@
       chipCuba: 'Cuba',
       chipTv: 'TV World',
       chipLite: 'Versione leggera',
+      chipDiccionario: 'Dizionario',
+      chipLibros: 'Libri',
       tiles: 'Accessi OSNews',
       tv: 'OSNews TV World',
       tvS: 'Dirette ufficiali e dibattiti',
@@ -300,6 +322,8 @@
       ytwS: 'Nuovo canale di dibattiti e video',
       canales: 'Canali OSNews',
       canalesS: 'Otto lingue e un canale per paese, con dichiarazioni letterali su X',
+      museos: 'Musei OSNews',
+      museosS: 'Musei d’Europa e degli Stati Uniti, gallerie, Instituto Cervantes, dizionari e libri',
       news: 'Notizie per paese',
       newsS: 'Cina, India, Marocco e Cuba',
       app: 'App OSNews',
@@ -333,6 +357,8 @@
       chipCuba: 'كوبا',
       chipTv: 'TV World',
       chipLite: 'النسخة الخفيفة',
+      chipDiccionario: 'القاموس',
+      chipLibros: 'كتب',
       tiles: 'اختصارات OSNews',
       tv: 'OSNews TV World',
       tvS: 'بثوث مباشرة رسمية ومناظرات',
@@ -350,6 +376,8 @@
       ytwS: 'القناة الجديدة للندوات والفيديوهات',
       canales: 'قنوات OSNews',
       canalesS: 'ثماني لغات وقناة لكل بلد، مع تصريحات حرفية على X',
+      museos: 'متاحف OSNews',
+      museosS: 'متاحف أوروبا والولايات المتحدة والمعارض ومعهد ثيربانتس والقواميس والكتب',
       news: 'أخبار حسب البلد',
       newsS: 'الصين والهند والمغرب وكوبا',
       app: 'تطبيق OSNews',
@@ -383,6 +411,8 @@
       chipCuba: '古巴',
       chipTv: 'TV World',
       chipLite: '轻量版',
+      chipDiccionario: '词典',
+      chipLibros: '电子书',
       tiles: 'OSNews 入口',
       tv: 'OSNews TV World',
       tvS: '官方直播与辩论',
@@ -400,6 +430,8 @@
       ytwS: '新的辩论与视频频道',
       canales: 'OSNews 频道',
       canalesS: '八种语言和每个国家一个频道，含 X 上的逐字声明',
+      museos: 'OSNews 博物馆',
+      museosS: '欧洲与美国博物馆、美术馆、塞万提斯学院、词典与电子书',
       news: '按国家查看新闻',
       newsS: '中国、印度、摩洛哥和古巴',
       app: 'OSNews 应用',
@@ -451,6 +483,8 @@
     $('chip-cuba').textContent = t.chipCuba;
     $('chip-tv').textContent = t.chipTv;
     $('chip-lite').textContent = t.chipLite;
+    $('chip-diccionario').textContent = t.chipDiccionario;
+    $('chip-libros').textContent = t.chipLibros;
     $('h-tiles').textContent = t.tiles;
     textNode($('t-tv'), t.tv);
     $('t-tv-s').textContent = t.tvS;
@@ -468,6 +502,8 @@
     $('t-ytw-s').textContent = t.ytwS;
     textNode($('t-canales'), t.canales);
     $('t-canales-s').textContent = t.canalesS;
+    textNode($('t-museos'), t.museos);
+    $('t-museos-s').textContent = t.museosS;
     textNode($('t-news'), t.news);
     $('t-news-s').textContent = t.newsS;
     textNode($('t-app'), t.app);
