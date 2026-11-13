@@ -41,3 +41,6 @@ Página independiente, en [lorena/](lorena/): cualquiera puede escribir y ver el
 ```
 
 También funciona en Node o en un test: `const L = require("./lorena.js")`. `L.analyzeText(texto, historial)` analiza sin guardar memoria. Crédito: **Módulo Lorena — diseño de Pedro Sánchez Gómez (OSNews)**.
+
+## Aníbal · navegador OSNews
+Página de inicio ligera, en [anibal/](anibal/): búsqueda en DuckDuckGo, accesos a TV World, Azum, noticias por país y el canal de YouTube OSNews, en 8 idiomas. Se puede instalar como PWA. Sin anuncios ni rastreadores.

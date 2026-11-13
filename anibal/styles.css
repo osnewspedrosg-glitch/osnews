@@ -1,0 +1,160 @@
+/* Aníbal · navegador OSNews — system fonts only, no trackers, no external assets. */
+:root {
+  --bg: #0b1220;
+  --bg2: #141c2e;
+  --card: #1a2438;
+  --line: #2c3a55;
+  --text: #eef3ff;
+  --muted: #9aa8c3;
+  --accent: #3dd6c6;
+  --accent2: #7ab8ff;
+  --btn: #243250;
+  --btn-on: #1e6b62;
+  --soon: #2a2416;
+  --soon-line: #6a5a2a;
+  --soon-text: #f7e7b8;
+  --radius: 16px;
+  --focus: 0 0 0 3px #3dd6c6;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); }
+body {
+  font-family: system-ui, "Segoe UI", "Noto Sans", "Noto Sans Arabic", "Noto Sans SC", sans-serif;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+body[dir="rtl"] { text-align: right; }
+a { color: var(--accent2); }
+a:focus-visible, button:focus-visible, input:focus-visible, .lang:focus-visible, .tile:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
+.wrap { max-width: 920px; margin: 0 auto; padding: 16px 16px 48px; }
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.brand { display: flex; gap: 14px; align-items: center; }
+.brand img { width: 64px; height: 64px; border-radius: 16px; }
+h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 4px; letter-spacing: .02em; }
+.tagline { margin: 0; color: var(--muted); }
+
+.jump { display: flex; flex-wrap: wrap; gap: 10px; }
+.jump a, .lang, .search button, #install {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--btn);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font: inherit;
+  border: 0;
+  cursor: pointer;
+}
+#install { background: var(--btn-on); color: #fff; }
+
+.panel {
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+h2 { margin: 0 0 12px; font-size: 1.2rem; color: var(--accent); }
+
+.langs { display: flex; flex-wrap: wrap; gap: 10px; }
+.lang { min-width: 72px; }
+.lang[aria-pressed="true"] { background: var(--btn-on); color: #fff; }
+
+.search { display: flex; flex-wrap: wrap; gap: 10px; }
+.search input[type="search"] {
+  flex: 1 1 220px;
+  min-height: 56px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+  font-size: 1.05rem;
+}
+.search button {
+  flex: 0 0 auto;
+  min-width: 120px;
+  min-height: 56px;
+  background: var(--btn-on);
+  color: #fff;
+}
+.hint { margin: 12px 0 0; color: var(--muted); font-size: 0.95rem; }
+
+.tiles {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+.tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 88px;
+  padding: 18px 18px;
+  border-radius: 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+.tile:hover, .tile:focus-visible { border-color: var(--accent); }
+.tile small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.tile.soon {
+  background: var(--soon);
+  border-color: var(--soon-line);
+  color: var(--soon-text);
+  cursor: default;
+  min-height: 88px;
+}
+.tile.soon small { color: #dcc896; }
+.tile.soon:hover { border-color: var(--soon-line); }
+
+.install-help {
+  display: none;
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+footer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 1rem;
+}
+footer strong { color: var(--text); }
+
+@media (min-width: 640px) {
+  .tiles { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 700px) {
+  h1 { font-size: 1.6rem; }
+  .brand img { width: 52px; height: 52px; }
+  .jump a, .lang, .search button, #install, .tile { min-height: 56px; }
+}

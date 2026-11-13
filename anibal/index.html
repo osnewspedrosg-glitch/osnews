@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <title>Aníbal · navegador OSNews</title>
+  <meta name="description" content="Página de inicio de OSNews: búsqueda en DuckDuckGo, TV World, Azum, noticias y el canal de YouTube. Gratis, sin anuncios ni rastreadores. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Aníbal">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img src="icon-192.png" width="64" height="64" alt="Aníbal">
+        <div>
+          <h1>Aníbal</h1>
+          <p class="tagline" id="tagline">Página de inicio de OSNews, sin anuncios ni rastreadores.</p>
+        </div>
+      </div>
+      <nav class="jump">
+        <button type="button" id="install" hidden></button>
+        <a id="back" href="../">Volver a OSNews</a>
+      </nav>
+    </header>
+
+    <section class="panel" aria-labelledby="h-lang">
+      <h2 id="h-lang">Idioma</h2>
+      <div class="langs" id="langs"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="h-search">
+      <h2 id="h-search">Buscar</h2>
+      <form class="search" id="search-form" action="https://duckduckgo.com/" method="get" role="search">
+        <input type="search" name="q" id="q" required autocomplete="off" placeholder="Buscar en la web" aria-label="Buscar en la web">
+        <button type="submit" id="search-btn">Buscar</button>
+      </form>
+      <p class="hint" id="search-hint">La búsqueda se abre en DuckDuckGo, un buscador público que respeta la privacidad. El buscador OSNews World todavía no está publicado en esta web.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="h-tiles">
+      <h2 id="h-tiles">Accesos OSNews</h2>
+      <div class="tiles">
+        <a class="tile" id="t-tv" href="../tv-world/">OSNews TV World<small id="t-tv-s">Directos oficiales y debates</small></a>
+        <a class="tile" id="t-lite" href="../tv-world/ligera/">TV World ligera<small id="t-lite-s">Solo texto, para conexiones lentas</small></a>
+        <a class="tile" id="t-azum" href="../azum/">Azum<small id="t-azum-s">Charla y guía emocional</small></a>
+        <a class="tile" id="t-yt" href="https://www.youtube.com/channel/UCsyOKlZTaQ-6auoVQa_2Dhg" rel="noopener noreferrer" target="_blank">Canal YouTube OSNews<small id="t-yt-s">Debates y vídeos del canal actual</small></a>
+        <div class="tile soon" id="t-ytw" role="note">OSNews World en YouTube (próximamente)<small id="t-ytw-s">Se está creando un canal nuevo. Aquí estará el enlace cuando exista.</small></div>
+        <a class="tile" id="t-news" href="../tv-world/#h-countries">Noticias por país<small id="t-news-s">China, India, Marruecos y Cuba</small></a>
+        <a class="tile" id="t-app" href="../app/">App OSNews<small id="t-app-s">MAY y las apps para Android</small></a>
+      </div>
+    </section>
+
+    <p class="install-help" id="install-help"></p>
+
+    <footer>
+      <p id="authors"><strong>Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.</strong></p>
+      <p id="legal">Aníbal es una página de inicio. No sustituye a Chrome ni a Firefox.</p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
