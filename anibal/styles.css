@@ -158,3 +158,40 @@ footer strong { color: var(--text); }
   .brand img { width: 52px; height: 52px; }
   .jump a, .lang, .search button, #install, .tile { min-height: 56px; }
 }
+
+.azum-bot {
+  border-color: var(--accent);
+  background: linear-gradient(180deg, #152636 0%, var(--card) 70%);
+}
+.azum-bot p { margin: 0 0 14px; color: var(--text); }
+.azum-bot-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 !important;
+}
+.btn-azum, .btn-azum-web {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  text-decoration: none;
+}
+.btn-azum {
+  background: var(--accent);
+  color: #07201c;
+  border: 1px solid var(--accent);
+}
+.btn-azum:hover, .btn-azum:focus-visible { filter: brightness(1.08); }
+.btn-azum-web {
+  background: var(--btn);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+.btn-azum-web:hover, .btn-azum-web:focus-visible { border-color: var(--accent); }
+@media (max-width: 700px) {
+  .btn-azum, .btn-azum-web { min-height: 56px; flex: 1 1 220px; }
+}

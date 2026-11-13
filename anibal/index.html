@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b1220">
   <title>Aníbal · navegador OSNews</title>
-  <meta name="description" content="Página de inicio de OSNews: búsqueda en DuckDuckGo, TV World, Azum, noticias y el canal de YouTube. Gratis, sin anuncios ni rastreadores. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.">
+  <meta name="description" content="Página de inicio de OSNews: búsqueda en DuckDuckGo, TV World, Azum (web y bot personal), noticias y el canal de YouTube. Gratis, sin anuncios ni rastreadores. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon-192.png">
   <link rel="apple-touch-icon" href="icon-192.png">
@@ -41,6 +41,16 @@
         <button type="submit" id="search-btn">Buscar</button>
       </form>
       <p class="hint" id="search-hint">La búsqueda se abre en DuckDuckGo, un buscador público que respeta la privacidad. El buscador OSNews World todavía no está publicado en esta web.</p>
+    </section>
+
+
+    <section class="panel azum-bot" aria-labelledby="h-azum-bot">
+      <h2 id="h-azum-bot">Azum · tu bot personal</h2>
+      <p id="azum-bot-text">Cada persona o pequeño negocio puede instalar su propia Azum y conectarla a su plan Super Grok Bot. OSNews no paga esa suscripción ni guarda claves.</p>
+      <p class="azum-bot-actions">
+        <a class="btn-azum" id="azum-install" href="https://x.ai/bot/HN5oMXEOftu3wGLT-uD_m" rel="noopener noreferrer" target="_blank">Instala tu bot Azum</a>
+        <a class="btn-azum-web" id="azum-web" href="../azum/">Abrir Azum en la web</a>
+      </p>
     </section>
 
     <section class="panel" aria-labelledby="h-tiles">
