@@ -32,6 +32,8 @@
       ytS: 'Debates y vídeos del canal actual',
       ytw: 'OSNews World en YouTube (próximamente)',
       ytwS: 'Se está creando un canal nuevo. Aquí estará el enlace cuando exista.',
+      canales: 'Canales OSNews',
+      canalesS: 'Ocho idiomas y un canal por país, con declaraciones literales en X',
       news: 'Noticias por país',
       newsS: 'China, India, Marruecos y Cuba',
       app: 'App OSNews',
@@ -62,6 +64,8 @@
       ytS: 'Debates and videos on the current channel',
       ytw: 'OSNews World on YouTube (coming soon)',
       ytwS: 'A new channel is being created. The link will appear here when it exists.',
+      canales: 'OSNews channels',
+      canalesS: 'Eight languages and one channel per country, with literal X statements',
       news: 'News by country',
       newsS: 'China, India, Morocco and Cuba',
       app: 'OSNews app',
@@ -92,6 +96,8 @@
       ytS: 'Débats et vidéos de la chaîne actuelle',
       ytw: 'OSNews World sur YouTube (prochainement)',
       ytwS: 'Une nouvelle chaîne est en cours de création. Le lien apparaîtra ici lorsqu’elle existera.',
+      canales: 'Chaînes OSNews',
+      canalesS: 'Huit langues et une chaîne par pays, avec des déclarations littérales sur X',
       news: 'Actualités par pays',
       newsS: 'Chine, Inde, Maroc et Cuba',
       app: 'App OSNews',
@@ -122,6 +128,8 @@
       ytS: 'Debatten und Videos des aktuellen Kanals',
       ytw: 'OSNews World auf YouTube (demnächst)',
       ytwS: 'Ein neuer Kanal wird gerade eingerichtet. Der Link erscheint hier, sobald er existiert.',
+      canales: 'OSNews-Kanäle',
+      canalesS: 'Acht Sprachen und ein Kanal pro Land, mit wörtlichen X-Erklärungen',
       news: 'Nachrichten nach Land',
       newsS: 'China, Indien, Marokko und Kuba',
       app: 'OSNews-App',
@@ -152,6 +160,8 @@
       ytS: 'Debates e vídeos do canal atual',
       ytw: 'OSNews World no YouTube (em breve)',
       ytwS: 'Está a ser criado um canal novo. A ligação aparecerá aqui quando existir.',
+      canales: 'Canais OSNews',
+      canalesS: 'Oito idiomas e um canal por país, com declarações literais no X',
       news: 'Notícias por país',
       newsS: 'China, Índia, Marrocos e Cuba',
       app: 'App OSNews',
@@ -182,6 +192,8 @@
       ytS: 'Dibattiti e video del canale attuale',
       ytw: 'OSNews World su YouTube (prossimamente)',
       ytwS: 'Si sta creando un nuovo canale. Il collegamento comparirà qui quando esisterà.',
+      canales: 'Canali OSNews',
+      canalesS: 'Otto lingue e un canale per paese, con dichiarazioni letterali su X',
       news: 'Notizie per paese',
       newsS: 'Cina, India, Marocco e Cuba',
       app: 'App OSNews',
@@ -212,6 +224,8 @@
       ytS: 'المناظرات ومقاطع الفيديو على القناة الحالية',
       ytw: 'OSNews World على YouTube (قريبًا)',
       ytwS: 'يجري إنشاء قناة جديدة. سيظهر الرابط هنا عندما تكون جاهزة.',
+      canales: 'قنوات OSNews',
+      canalesS: 'ثماني لغات وقناة لكل بلد، مع تصريحات حرفية على X',
       news: 'أخبار حسب البلد',
       newsS: 'الصين والهند والمغرب وكوبا',
       app: 'تطبيق OSNews',
@@ -242,6 +256,8 @@
       ytS: '当前频道中的辩论和视频',
       ytw: 'OSNews World 的 YouTube 频道（即将推出）',
       ytwS: '新频道正在创建。有了链接后会显示在这里。',
+      canales: 'OSNews 频道',
+      canalesS: '八种语言和每个国家一个频道，含 X 上的逐字声明',
       news: '按国家查看新闻',
       newsS: '中国、印度、摩洛哥和古巴',
       app: 'OSNews 应用',
@@ -289,6 +305,8 @@
     $('t-yt-s').textContent = t.ytS;
     textNode($('t-ytw'), t.ytw);
     $('t-ytw-s').textContent = t.ytwS;
+    textNode($('t-canales'), t.canales);
+    $('t-canales-s').textContent = t.canalesS;
     textNode($('t-news'), t.news);
     $('t-news-s').textContent = t.newsS;
     textNode($('t-app'), t.app);

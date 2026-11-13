@@ -8,6 +8,7 @@
       tagline: "Debates de OSNews y directos oficiales, con el reproductor permitido.",
       back: "Volver a OSNews",
       lite: "Versión ligera (solo texto)",
+      canales: "Canales OSNews",
       language: "Idioma",
       live: "Directos oficiales",
       osnews: "Debates OSNews",
@@ -56,6 +57,7 @@
       tagline: "OSNews debates and official live streams, using allowed players only.",
       back: "Back to OSNews",
       lite: "Lite version (text only)",
+      canales: "OSNews channels",
       language: "Language",
       live: "Official live channels",
       osnews: "OSNews debates",
@@ -102,6 +104,7 @@
       tagline: "Débats OSNews et directs officiels, uniquement avec le lecteur autorisé.",
       back: "Retour à OSNews",
       lite: "Version légère (texte seul)",
+      canales: "Chaînes OSNews",
       language: "Langue",
       live: "Directs officiels",
       osnews: "Débats OSNews",
@@ -148,6 +151,7 @@
       tagline: "OSNews-Debatten und offizielle Livestreams, nur mit erlaubtem Player.",
       back: "Zurück zu OSNews",
       lite: "Leichtversion (nur Text)",
+      canales: "OSNews-Kanäle",
       language: "Sprache",
       live: "Offizielle Livesender",
       osnews: "OSNews-Debatten",
@@ -194,6 +198,7 @@
       tagline: "Debates da OSNews e diretos oficiais, só com o leitor permitido.",
       back: "Voltar à OSNews",
       lite: "Versão leve (só texto)",
+      canales: "Canais OSNews",
       language: "Idioma",
       live: "Diretos oficiais",
       osnews: "Debates OSNews",
@@ -238,6 +243,7 @@
       tagline: "Dibattiti OSNews e dirette ufficiali, solo con il lettore consentito.",
       back: "Torna a OSNews",
       lite: "Versione leggera (solo testo)",
+      canales: "Canali OSNews",
       language: "Lingua",
       live: "Dirette ufficiali",
       osnews: "Dibattiti OSNews",
@@ -284,6 +290,7 @@
       tagline: "مناظرات OSNews وبثوث رسمية، عبر المشغّل المسموح به فقط.",
       back: "العودة إلى OSNews",
       lite: "نسخة خفيفة (نص فقط)",
+      canales: "قنوات OSNews",
       language: "اللغة",
       live: "البثوث الرسمية",
       osnews: "مناظرات OSNews",
@@ -330,6 +337,7 @@
       tagline: "OSNews 辩论与官方直播，仅使用允许嵌入的播放器。",
       back: "返回 OSNews",
       lite: "轻量版（纯文字）",
+      canales: "OSNews 频道",
       language: "语言",
       live: "官方直播",
       osnews: "OSNews 辩论",
@@ -611,6 +619,7 @@
     $("tagline").textContent = ui.tagline;
     $("back").textContent = ui.back;
     if ($("lite")) $("lite").textContent = ui.lite;
+    if ($("canales")) $("canales").textContent = ui.canales;
     $("h-lang").textContent = ui.language;
     $("h-live").textContent = ui.live;
     $("h-osnews").textContent = ui.osnews;
