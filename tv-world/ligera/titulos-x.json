@@ -1,34 +1,175 @@
 {
-  "fetched_at": "2026-11-13T01:44:53+01:00",
+  "fetched_at": "2026-11-13T08:12:28+01:00",
   "timezone": "Europe/Madrid",
-  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-30T00:00:00Z, -is:retweet -is:reply",
+  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
   "accounts": [
+    "bbcmundo",
     "BBCNews",
     "BBCWorld",
-    "BBCMundo",
-    "nytimes",
-    "washingtonpost",
-    "NPR",
-    "el_pais",
-    "lemondefr",
-    "guardian",
-    "dwnews",
+    "CNN",
+    "CNNEE",
     "dw_espanol",
+    "el_pais",
     "euronews",
     "euronewses",
-    "France24",
     "France24_es",
-    "France24_fr"
+    "France24_fr",
+    "Reuters",
+    "washingtonpost"
   ],
   "countries": {
     "china": [
+      {
+        "id": "2121128449129562288",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-13",
+        "time": "07:30",
+        "text": "Explainer: Tougher curbs on AI chip sales to China likely after Nvidia CEO resigns https://t.co/4ntnBt8tEh",
+        "url": "https://x.com/Reuters/status/2121128449129562288"
+      },
+      {
+        "id": "2121095758401220748",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-13",
+        "time": "05:20",
+        "text": "China stages unannounced Pacific drills in 'silent intimidation' of Taiwan, officials say https://t.co/nM1lD19arV",
+        "url": "https://x.com/Reuters/status/2121095758401220748"
+      },
+      {
+        "id": "2121093224018198903",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-13",
+        "time": "05:10",
+        "text": "US Attorney General Todd Blanche said  that the Justice Department has not yet reached a conclusion on whether Alice Huang, the Chinese businesswoman who had an affair with former Nvidia CEO Jensen Huang, was a Chinese spy https://t.co/0QymfaEnPD",
+        "url": "https://x.com/Reuters/status/2121093224018198903"
+      },
+      {
+        "id": "2121090715941835030",
+        "account": "CNN",
+        "name": "CNN",
+        "date": "2026-11-13",
+        "time": "05:00",
+        "text": "The US intelligence community is still working to understand the relationship between a Chinese businesswoman who had an affair with Nvidia CEO Jensen Huang and the Chinese government, with multiple sources telling CNN that the intelligence collected on her to date does not prove",
+        "url": "https://x.com/CNN/status/2121090715941835030"
+      },
+      {
+        "id": "2121083171189993567",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-13",
+        "time": "04:30",
+        "text": "Tibetan exile leader laments absence of rights in Trump China dealings https://t.co/fq20nWsD8V",
+        "url": "https://x.com/Reuters/status/2121083171189993567"
+      },
+      {
+        "id": "2121074349574660192",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-13",
+        "time": "03:55",
+        "text": "US House Speaker Mike Johnson said there was growing consensus in Congress on limiting chip exports to China after a spy scandal forced out Nvidia CEO Jensen Huang https://t.co/2rZXkCcMHu",
+        "url": "https://x.com/Reuters/status/2121074349574660192"
+      },
+      {
+        "id": "2121073090654310699",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-13",
+        "time": "03:50",
+        "text": "Exclusive: Japan has warned defense contractors of deep cuts to expected orders as fiscal constraints threaten to scale back a military buildup that Prime Minister Sanae Takaichi's government says is needed to counter China https://t.co/fACtB2OF0Q",
+        "url": "https://x.com/Reuters/status/2121073090654310699"
+      },
+      {
+        "id": "2121070560964714532",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-13",
+        "time": "03:40",
+        "text": "Nvidia CEO Jensen Huang stepped down after revelations of extramarital affairs, including one involving a suspected Chinese spy, plunged the chipmaker into crisis and sent shockwaves across an AI industry he helped bankroll https://t.co/RPSAkm9eNT",
+        "url": "https://x.com/Reuters/status/2121070560964714532"
+      },
+      {
+        "id": "2121069542038274317",
+        "account": "CNNEE",
+        "name": "CNN en Español",
+        "date": "2026-11-13",
+        "time": "03:36",
+        "text": "Los vínculos de Alice Huang con Beijing y el fundador de Nvidia dividen a funcionarios de Estados Unidos https://t.co/CEPIZSbZIA",
+        "url": "https://x.com/CNNEE/status/2121069542038274317"
+      },
+      {
+        "id": "2121057965390110827",
+        "account": "CNNEE",
+        "name": "CNN en Español",
+        "date": "2026-11-13",
+        "time": "02:50",
+        "text": "China aprovecharía cualquier tropiezo de Nvidia para avanzar en la IA: experto https://t.co/II4LwXpXyP",
+        "url": "https://x.com/CNNEE/status/2121057965390110827"
+      },
+      {
+        "id": "2121053698726178856",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-13",
+        "time": "02:33",
+        "text": "US Attorney General Todd Blanche said the Justice Department has not yet reached a conclusion on whether Alice Huang, the Chinese businesswoman who had an affair with former Nvidia CEO Jensen Huang, was a Chinese spy https://t.co/TOYvF8LOgR https://t.co/5yowPXxcXz",
+        "url": "https://x.com/Reuters/status/2121053698726178856"
+      },
+      {
+        "id": "2121041612021051792",
+        "account": "washingtonpost",
+        "name": "The Washington Post",
+        "date": "2026-11-13",
+        "time": "01:45",
+        "text": "The U.S. rebuffed requests from Singaporean authorities to assist with its investigation into Alice Huang, the alleged Chinese espionage asset whose affair with Nvidia CEO Jensen Huang has raised national security concerns, Singapore's government said. https://t.co/BxaO3xFNrA",
+        "url": "https://x.com/washingtonpost/status/2121041612021051792"
+      },
+      {
+        "id": "2121030490513657903",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-13",
+        "time": "01:00",
+        "text": "Explainer: Tougher curbs on AI chip sales to China likely after Nvidia CEO resigns https://t.co/sCEP74mWKI",
+        "url": "https://x.com/Reuters/status/2121030490513657903"
+      },
+      {
+        "id": "2121020265031188931",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-13",
+        "time": "00:20",
+        "text": "Tibetan exile leader laments absence of rights in Trump China dealings https://t.co/6p27Z2mgLQ",
+        "url": "https://x.com/Reuters/status/2121020265031188931"
+      },
+      {
+        "id": "2121017723459096670",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-13",
+        "time": "00:10",
+        "text": "US Justice Department has not concluded Alice Huang was Chinese spy, Blanche says https://t.co/zDUfZ9hVkt",
+        "url": "https://x.com/Reuters/status/2121017723459096670"
+      },
+      {
+        "id": "2121004203422490823",
+        "account": "dw_espanol",
+        "name": "DW Español",
+        "date": "2026-11-12",
+        "time": "23:16",
+        "text": "Mercedes-Benz analiza el cierre de fábricas en Alemania\n\nLa firma enfrenta una caída de sus beneficios por el desplome de sus ventas en el mercado chino y el alto costo de producción en el país europeo. https://t.co/PUqqZx8EnW (dz)",
+        "url": "https://x.com/dw_espanol/status/2121004203422490823"
+      },
       {
         "id": "2120978402408890670",
         "account": "France24_es",
         "name": "FRANCE 24 Español",
         "date": "2026-11-12",
         "time": "21:33",
-        "text": "En Contexto - Nvidia, EE. UU. y China: un caso de romance personal a un asunto de Estado ➡️ https://t.co/wqYpyoOMiS https://t.co/niw6be3dfz",
+        "text": "En Contexto - Nvidia, EE. UU. y China: un caso de romance personal a un asunto de Estado\n➡️ https://t.co/wqYpyoOMiS https://t.co/niw6be3dfz",
         "url": "https://x.com/France24_es/status/2120978402408890670"
       },
       {
@@ -55,7 +196,7 @@
         "name": "DW Español",
         "date": "2026-11-12",
         "time": "19:01",
-        "text": "Pantuflas, té y rapidez: Latinoamérica se prepara para turistas chinos Un calentador de agua en la habitación puede valer más que la mejor cafetera. En la #ITB Américas, expertos explican cómo conquistar en #AméricaLatina a un viajero de #China que no conoce Instagram ni",
+        "text": "Pantuflas, té y rapidez: Latinoamérica se prepara para turistas chinos\n\nUn calentador de agua en la habitación puede valer más que la mejor cafetera. En la #ITB Américas, expertos explican cómo conquistar en #AméricaLatina a un viajero de #China que no conoce Instagram ni",
         "url": "https://x.com/dw_espanol/status/2120940168500928546"
       },
       {
@@ -64,7 +205,7 @@
         "name": "euronews español",
         "date": "2026-11-12",
         "time": "18:23",
-        "text": "Jensen Huang dimite como líder de Nvidia tras 33 años. Jensen Huang abandona la dirección de Nvidia en Estados Unidos en plena crisis por sus relaciones extramatrimoniales y las sospechas de espionaje vinculado a China, dejando el relevo interino a Colette Kress #Nvidia #IA https://t.co/4j0DtoXAEd",
+        "text": "Jensen Huang dimite como líder de Nvidia tras 33 años. Jensen Huang abandona la dirección de Nvidia en Estados Unidos en plena crisis por sus relaciones extramatrimoniales y las sospechas de espionaje vinculado a China, dejando el relevo interino a Colette Kress\n#Nvidia #IA https://t.co/4j0DtoXAEd",
         "url": "https://x.com/euronewses/status/2120930496280510943"
       },
       {
@@ -75,6 +216,15 @@
         "time": "17:17",
         "text": "🇺🇸🖥️ Le cofondateur de Nvidia quitte ses fonctions après plusieurs polémiques sur sa vie privée, dont une liaison avec une femme soupçonnée d’espionnage au profit de la Chine https://t.co/0TnRT04yrS",
         "url": "https://x.com/France24_fr/status/2120913933607321718"
+      },
+      {
+        "id": "2120901979056583043",
+        "account": "washingtonpost",
+        "name": "The Washington Post",
+        "date": "2026-11-12",
+        "time": "16:30",
+        "text": "Jensen Huang’s affair with an alleged Chinese spy has plunged Nvidia into its biggest crisis in decades, with Huang resigning as chief executive.\n\nHere’s a timeline of how the controversy at one of the most influential tech companies unfolded: https://t.co/CGaRyXEOEo https://t.co/TDsZiKJlfr",
+        "url": "https://x.com/washingtonpost/status/2120901979056583043"
       }
     ],
     "india": [
@@ -86,6 +236,15 @@
         "time": "15:59",
         "text": "Announced annually by Travel + Leisure since 2014, India follows in the footsteps of previous destinations of the year including Brazil, Thailand and Costa Rica. https://t.co/qzp1ChYRsq",
         "url": "https://x.com/euronews/status/2120894243380322449"
+      },
+      {
+        "id": "2120860430935433344",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-12",
+        "time": "13:45",
+        "text": "EXCLUSIVE: India to ban private equity firms from controlling multiple non-bank lenders, sources say https://t.co/1n79OuR5ns",
+        "url": "https://x.com/Reuters/status/2120860430935433344"
       },
       {
         "id": "2120816528417243226",
@@ -106,13 +265,58 @@
         "url": "https://x.com/BBCWorld/status/2120804706448474351"
       },
       {
+        "id": "2120798779494252607",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-12",
+        "time": "09:40",
+        "text": "EXCLUSIVE: India to ban private equity firms from controlling multiple non-bank lenders, sources say https://t.co/mSfH7LSe7P",
+        "url": "https://x.com/Reuters/status/2120798779494252607"
+      },
+      {
+        "id": "2120771084106519014",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-12",
+        "time": "07:50",
+        "text": "Indian billionaire, doctors spar over $900 brain blood-flow tracker Temple https://t.co/624Ryt1UfW",
+        "url": "https://x.com/Reuters/status/2120771084106519014"
+      },
+      {
         "id": "2120717035919270176",
         "account": "washingtonpost",
         "name": "The Washington Post",
         "date": "2026-11-12",
         "time": "04:15",
-        "text": "A Russian paraglider was rescued in India on Nov. 10 after becoming trapped in high-voltage power lines, a rescue official said. Media reports said the man had taken off from one of India’s best-known paragliding sites and was stuck for two hours before being saved. https://t.co/DYgL7eIVhX",
+        "text": "A Russian paraglider was rescued in India on Nov. 10 after becoming trapped in high-voltage power lines, a rescue official said.\n\nMedia reports said the man had taken off from one of India’s best-known paragliding sites and was stuck for two hours before being saved. https://t.co/DYgL7eIVhX",
         "url": "https://x.com/washingtonpost/status/2120717035919270176"
+      },
+      {
+        "id": "2120709432044642429",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-12",
+        "time": "03:45",
+        "text": "A tiny, $900 wearable device being developed by an Indian billionaire entrepreneur and showcased by some of the country's top sportspersons has sparked criticism from doctors who say its claims of tracking blood flow to the brain are exaggerated https://t.co/IOjyZQHrAr",
+        "url": "https://x.com/Reuters/status/2120709432044642429"
+      },
+      {
+        "id": "2120526979304771873",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-11",
+        "time": "15:40",
+        "text": "EXCLUSIVE: India ordered website takedowns on fake court orders, Reuters finds; police launch probe https://t.co/1BvjKce5ZH",
+        "url": "https://x.com/Reuters/status/2120526979304771873"
+      },
+      {
+        "id": "2120495515905216575",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-11",
+        "time": "13:35",
+        "text": "EXCLUSIVE: India holds Pernod, Diageo Scotch shipments as investigators seek higher tariff https://t.co/Rj5MAI702D",
+        "url": "https://x.com/Reuters/status/2120495515905216575"
       },
       {
         "id": "2120480403752464498",
@@ -124,6 +328,87 @@
         "url": "https://x.com/BBCWorld/status/2120480403752464498"
       },
       {
+        "id": "2120474127022588410",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-11",
+        "time": "12:10",
+        "text": "India garment makers rethink reliance on US after tariff shock https://t.co/0Iw5pwv0dw",
+        "url": "https://x.com/Reuters/status/2120474127022588410"
+      },
+      {
+        "id": "2120465332527677836",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-11",
+        "time": "11:35",
+        "text": "EXCLUSIVE: India ordered website takedowns on fake court orders, Reuters finds; police launch probe https://t.co/ZmGtD2mQNx",
+        "url": "https://x.com/Reuters/status/2120465332527677836"
+      },
+      {
+        "id": "2120443926905520180",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-11",
+        "time": "10:10",
+        "text": "Indian stocks hit eight-month high as foreign investors return https://t.co/gGn7tX9xuQ",
+        "url": "https://x.com/Reuters/status/2120443926905520180"
+      },
+      {
+        "id": "2120426310027682181",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-11",
+        "time": "09:00",
+        "text": "Exclusive: Indian customs is holding dozens of containers of bulk Scotch imported by Pernod Ricard and Diageo as investigators press for a 150% tariff, even though the companies rely on a New Delhi assurance of lower duties under the India-UK trade pact https://t.co/rNFOKyCMjM",
+        "url": "https://x.com/Reuters/status/2120426310027682181"
+      },
+      {
+        "id": "2120411339872940098",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-11",
+        "time": "08:00",
+        "text": "India garment makers rethink reliance on US after tariff shock https://t.co/103F69pgg4",
+        "url": "https://x.com/Reuters/status/2120411339872940098"
+      },
+      {
+        "id": "2120381147733475815",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-11",
+        "time": "06:00",
+        "text": "Indian stocks open higher on softer crude, robust foreign buying https://t.co/ujl2q2LiEk",
+        "url": "https://x.com/Reuters/status/2120381147733475815"
+      },
+      {
+        "id": "2120312789843521552",
+        "account": "BBCWorld",
+        "name": "BBC News (World)",
+        "date": "2026-11-11",
+        "time": "01:28",
+        "text": "'They will kill you too': Sonia Gandhi's turbulent journey in Indian politics https://t.co/RtdLhwMfHQ",
+        "url": "https://x.com/BBCWorld/status/2120312789843521552"
+      },
+      {
+        "id": "2120102919546785912",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-10",
+        "time": "11:35",
+        "text": "An Indian sailor’s mother has not heard from her son in more than six months, but continues to hope for his return. Naveen Kumar was among six crew members aboard two Iran-linked vessels that disappeared in Iranian waters in May https://t.co/DpDkO7GY5G https://t.co/RhmF873u5V",
+        "url": "https://x.com/Reuters/status/2120102919546785912"
+      },
+      {
+        "id": "2120071482759909781",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-10",
+        "time": "09:30",
+        "text": "Three workers die at Tata's India iPhone parts factory in latest safety incident https://t.co/19qt0Srdk1",
+        "url": "https://x.com/Reuters/status/2120071482759909781"
+      },
+      {
         "id": "2120055879231746537",
         "account": "BBCNews",
         "name": "BBC News (UK)",
@@ -131,6 +416,33 @@
         "time": "08:28",
         "text": "Oxford museum returns ancestral Naga skulls to India https://t.co/xNifuuciRN",
         "url": "https://x.com/BBCNews/status/2120055879231746537"
+      },
+      {
+        "id": "2120040561860133344",
+        "account": "BBCWorld",
+        "name": "BBC News (World)",
+        "date": "2026-11-10",
+        "time": "07:27",
+        "text": "Oxford museum returns ancestral Naga skulls to India https://t.co/ajpywcn88K",
+        "url": "https://x.com/BBCWorld/status/2120040561860133344"
+      },
+      {
+        "id": "2120008560704676302",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-10",
+        "time": "05:20",
+        "text": "Three contract workers died of asphyxiation at a Tata Electronics factory in southern India which makes parts for Apple iPhones, a source said https://t.co/oFFr6HUHke",
+        "url": "https://x.com/Reuters/status/2120008560704676302"
+      },
+      {
+        "id": "2119968072714932598",
+        "account": "BBCWorld",
+        "name": "BBC News (World)",
+        "date": "2026-11-10",
+        "time": "02:39",
+        "text": "Qantas to outsource 850 local jobs with most roles moving to India https://t.co/nCRUtXPEoT",
+        "url": "https://x.com/BBCWorld/status/2119968072714932598"
       }
     ],
     "morocco": [
@@ -140,7 +452,7 @@
         "name": "EL PAÍS",
         "date": "2026-11-10",
         "time": "13:33",
-        "text": "📺 TV EN DIRECTO | Saiz informe de que \"se han desmantelado los dos recursos temporales\" en el puerto de Ceuta. A día de ayer, 15.671 migrantes han retornado a Marruecos, de ellas 14.942 por retorno voluntario, 277 expulsiones y 452 devoluciones https://t.co/ddgK2VOa3c",
+        "text": "📺 TV EN DIRECTO | Saiz informe de que \"se han desmantelado los dos recursos temporales\" en el puerto de Ceuta. A día de ayer, 15.671 migrantes han retornado a Marruecos, de ellas 14.942 por retorno voluntario, 277 expulsiones y 452 devoluciones https://t.co/ddgK2VOa3c https://t.co/XmbO43bBDn",
         "url": "https://x.com/el_pais/status/2120132822102855731"
       },
       {
@@ -151,6 +463,51 @@
         "time": "11:53",
         "text": "El operativo policial busca trasladar a los inmigrantes a otros recursos de acogida o al CATE de El Tarajal. El desmantelamiento del asentamiento ha acelerado los retornos voluntarios a Marruecos. #EuropeNews https://t.co/U3ECp5jAP0",
         "url": "https://x.com/euronewses/status/2120107619184722000"
+      },
+      {
+        "id": "2119490176883831220",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-08",
+        "time": "19:00",
+        "text": "In Rabat, Friday is for couscous. From mint tea overlooking the Bouregreg River to caftans in the medina and sunsets over the Atlantic, here are our Reuters correspondent’s tips for experiencing the Moroccan capital like a local: https://t.co/fpXbkNjFgN https://t.co/P1bd5MZ2H0",
+        "url": "https://x.com/Reuters/status/2119490176883831220"
+      },
+      {
+        "id": "2119309010624974849",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-08",
+        "time": "07:00",
+        "text": "‘No other Moroccan city matches Rabat's museums and cultural calendar.’ From book fairs and music festivals to preparations for the 2030 World Cup, our correspondent shares his guide to experiencing Morocco’s capital like a local:\nhttps://t.co/xpof9XCuZT https://t.co/6VtaRzE9YN",
+        "url": "https://x.com/Reuters/status/2119309010624974849"
+      },
+      {
+        "id": "2119127800686735370",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-07",
+        "time": "19:00",
+        "text": "Rabat is Morocco’s administrative capital, but there’s more to the city than government buildings: blue-and-white alleys, bustling medinas and a growing cultural scene. Our Reuters correspondent shares his guide to exploring the city like a local: https://t.co/l8R3Oy4kWZ https://t.co/wYbGNRwD7g",
+        "url": "https://x.com/Reuters/status/2119127800686735370"
+      },
+      {
+        "id": "2119100077654315480",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-07",
+        "time": "17:10",
+        "text": "Rabat like a local https://t.co/ZDtNDzD6kJ",
+        "url": "https://x.com/Reuters/status/2119100077654315480"
+      },
+      {
+        "id": "2119037218442432604",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-07",
+        "time": "13:00",
+        "text": "Where can you wander through a 12th-century kasbah, eat $6 couscous and watch the sun set over the Atlantic? Our Reuters correspondent shares his local guide to Morocco’s capital, Rabat: https://t.co/IdKcyGlASO https://t.co/vVKRHw9Nxv",
+        "url": "https://x.com/Reuters/status/2119037218442432604"
       },
       {
         "id": "2118875514060632363",
@@ -167,37 +524,91 @@
         "name": "EL PAÍS",
         "date": "2026-11-06",
         "time": "18:14",
-        "text": "🔴 La Guardia Civil cifra en más de 88.000 los retornos de migrantes de Ceuta a Marruecos, más de los que el Gobierno calculó que habían entrado en julio https://t.co/uU3I5VVt7d",
+        "text": "🔴 La Guardia Civil cifra en más de 88.000 los retornos de migrantes de Ceuta a Marruecos, más de los que el Gobierno calculó que habían entrado en julio\nhttps://t.co/uU3I5VVt7d",
         "url": "https://x.com/el_pais/status/2118753943924973626"
       },
       {
-        "id": "2117520583827103912",
-        "account": "BBCWorld",
-        "name": "BBC News (World)",
-        "date": "2026-11-03",
-        "time": "08:33",
-        "text": "Why a US-Russia showdown left Morocco celebrating https://t.co/p83UCrJNzk",
-        "url": "https://x.com/BBCWorld/status/2117520583827103912"
+        "id": "2118352985512149168",
+        "account": "el_pais",
+        "name": "EL PAÍS",
+        "date": "2026-11-05",
+        "time": "15:41",
+        "text": "La Policía identifica en la frontera con Marruecos a dos altos cargos de las fuerzas marroquíes el día del asalto masivo\nhttps://t.co/qHAWpBeYw8",
+        "url": "https://x.com/el_pais/status/2118352985512149168"
       },
       {
-        "id": "2117237266318045367",
-        "account": "France24_fr",
-        "name": "FRANCE 24 Français",
-        "date": "2026-11-02",
-        "time": "13:47",
-        "text": "🇲🇦🖌️ Yasser #Mounbir avait été placé en détention au mois de juin après avoir dessiné et posté sur son compte Instagram des #caricatures du roi du #Maroc. ➡️ https://t.co/mWKZVuBtkb https://t.co/DJhwUXMHQ0",
-        "url": "https://x.com/France24_fr/status/2117237266318045367"
+        "id": "2118204186332389535",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-05",
+        "time": "05:50",
+        "text": "Morocco says it will uphold Western Sahara ceasefire after UN mission ends https://t.co/9InpVcKnCv",
+        "url": "https://x.com/Reuters/status/2118204186332389535"
+      },
+      {
+        "id": "2118140020317913102",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-05",
+        "time": "01:35",
+        "text": "Morocco says it will uphold Western Sahara ceasefire after UN mission ends https://t.co/mBpkyiKbbN",
+        "url": "https://x.com/Reuters/status/2118140020317913102"
+      },
+      {
+        "id": "2117568721233527108",
+        "account": "el_pais",
+        "name": "EL PAÍS",
+        "date": "2026-11-03",
+        "time": "11:45",
+        "text": "Natalia Lartitegui (Bilbao, 26 años) lleva un año pedaleando por el continente africano en solitario, desde Marruecos hacia el sur, y ha recorrido ya 13 países. \"Este viaje es sinónimo de vivir mi vida como quiero\", cuenta https://t.co/cP4DgPSDVH",
+        "url": "https://x.com/el_pais/status/2117568721233527108"
       }
     ],
     "cuba": [
+      {
+        "id": "2120580321619894656",
+        "account": "CNNEE",
+        "name": "CNN en Español",
+        "date": "2026-11-11",
+        "time": "19:12",
+        "text": "Rubio dice que el \"objetivo final\" es un destino mejor para Cuba. Díaz-Canel responde que \"el futuro no se decidirá\" al norte https://t.co/U7ngGoXnEm",
+        "url": "https://x.com/CNNEE/status/2120580321619894656"
+      },
+      {
+        "id": "2120499296093045100",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-11",
+        "time": "13:50",
+        "text": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support', Xinhua reports https://t.co/WX9zSH6szk",
+        "url": "https://x.com/Reuters/status/2120499296093045100"
+      },
+      {
+        "id": "2120437651358544174",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-11-11",
+        "time": "09:45",
+        "text": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support', Xinhua reports https://t.co/cmy3TzlM54",
+        "url": "https://x.com/Reuters/status/2120437651358544174"
+      },
       {
         "id": "2119902032127746556",
         "account": "dw_espanol",
         "name": "DW Español",
         "date": "2026-11-09",
         "time": "22:16",
-        "text": "Cuba: cada vez menos periodistas independientes y más represión Periodistas, comunicadores, creadores de contenido y organizaciones defensoras de los derechos humanos y la libertad de expresión denuncian el auge de la represión estatal a las voces críticas.",
+        "text": "Cuba: cada vez menos periodistas independientes y más represión\n\nPeriodistas, comunicadores, creadores de contenido y organizaciones defensoras de los derechos humanos y la libertad de expresión denuncian el auge de la represión estatal a las voces críticas.",
         "url": "https://x.com/dw_espanol/status/2119902032127746556"
+      },
+      {
+        "id": "2119052296889798883",
+        "account": "CNNEE",
+        "name": "CNN en Español",
+        "date": "2026-11-07",
+        "time": "14:00",
+        "text": "Sabor cubano en el escenario: el musical \"Buena Vista Social Club\" llega a México https://t.co/Y5oF2fsVxw",
+        "url": "https://x.com/CNNEE/status/2119052296889798883"
       },
       {
         "id": "2118543998122127428",
@@ -205,7 +616,7 @@
         "name": "DW Español",
         "date": "2026-11-06",
         "time": "04:20",
-        "text": "#YoaniSánchez fue liberada tras varias horas detenida en La Habana La #periodista independiente fue liberada nueve horas después de haber sido detenida por la policía política de #Cuba. (jc) https://t.co/3gzL9sAAzz",
+        "text": "#YoaniSánchez fue liberada tras varias horas detenida en La Habana\n\nLa #periodista independiente fue liberada nueve horas después de haber sido detenida por la policía política de #Cuba. (jc)\nhttps://t.co/3gzL9sAAzz",
         "url": "https://x.com/dw_espanol/status/2118543998122127428"
       },
       {
@@ -223,7 +634,7 @@
         "name": "DW Español",
         "date": "2026-11-05",
         "time": "18:51",
-        "text": "#ÚltimoMinuto: Detenida en #Cuba la periodista independiente Yoani Sánchez La directora del diario digital 14ymedio fue interceptada por la policía política cuando salía de su casa en La Habana. Desde entonces, no se tienen noticias de su paradero, según denunció el medio. (ct)",
+        "text": "#ÚltimoMinuto: Detenida en #Cuba la periodista independiente Yoani Sánchez\n\nLa directora del diario digital 14ymedio fue interceptada por la policía política cuando salía de su casa en La Habana. Desde entonces, no se tienen noticias de su paradero, según denunció el medio. (ct)",
         "url": "https://x.com/dw_espanol/status/2118400895025062037"
       },
       {
@@ -232,8 +643,125 @@
         "name": "DW Español",
         "date": "2026-10-30",
         "time": "07:41",
-        "text": "#EEUU expulsa a diplomático cubano tras un altercado en la #ONU El gobierno estadounidense informó que Richard Tur de la Concepción \"no era bienvenido\" en el país. (mg) Lea el artículo completo haciendo clic en la imagen https://t.co/h5t0rbXRpi",
+        "text": "#EEUU expulsa a diplomático cubano tras un altercado en la #ONU\n\nEl gobierno estadounidense informó que Richard Tur de la Concepción \"no era bienvenido\" en el país. (mg)\n\nLea el artículo completo haciendo clic en la imagen\nhttps://t.co/h5t0rbXRpi",
         "url": "https://x.com/dw_espanol/status/2116057916696400350"
+      },
+      {
+        "id": "2115582067564069124",
+        "account": "CNN",
+        "name": "CNN",
+        "date": "2026-10-29",
+        "time": "00:10",
+        "text": "The Trump administration is ejecting a Cuban diplomat from the US, a decision that comes after a shouting match between US Ambassador to the UN Mike Waltz and the Cuban diplomat during a United Nations session on the US economic embargo against Cuba  — and as administration",
+        "url": "https://x.com/CNN/status/2115582067564069124"
+      },
+      {
+        "id": "2115581655729504502",
+        "account": "CNNEE",
+        "name": "CNN en Español",
+        "date": "2026-10-29",
+        "time": "00:09",
+        "text": "Gobierno de Trump expulsa a un diplomático cubano de EE.UU. en medio del aumento de tensiones entre ambos países https://t.co/j8HYXiPLlh",
+        "url": "https://x.com/CNNEE/status/2115581655729504502"
+      },
+      {
+        "id": "2115564389830914411",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-10-28",
+        "time": "23:00",
+        "text": "US sways more countries to oppose UN resolution condemning its Cuba embargo https://t.co/quS4jiZJ7s",
+        "url": "https://x.com/Reuters/status/2115564389830914411"
+      },
+      {
+        "id": "2115503251428876532",
+        "account": "France24_es",
+        "name": "FRANCE 24 Español",
+        "date": "2026-10-28",
+        "time": "18:57",
+        "text": "🇨🇺 #NacionesUnidas aboga mayoritariamente por el fin del embargo económico estadounidense contra #Cuba, aunque una presión de la Administración #Trump llevó a varios países a oponerse a la resolución o a abstenerse por primera vez en años ➡️ https://t.co/OY6GbqoveK https://t.co/2jUfylVVVJ",
+        "url": "https://x.com/France24_es/status/2115503251428876532"
+      },
+      {
+        "id": "2115501402868859276",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-10-28",
+        "time": "18:50",
+        "text": "US gets more countries to oppose UN resolution condemning its Cuba embargo https://t.co/RLCRhXVdnf",
+        "url": "https://x.com/Reuters/status/2115501402868859276"
+      },
+      {
+        "id": "2115495220011839629",
+        "account": "France24_es",
+        "name": "FRANCE 24 Español",
+        "date": "2026-10-28",
+        "time": "18:25",
+        "text": "La ONU aprueba una resolución contra el embargo a Cuba, aunque EE. UU. suma adeptos al bloqueo\n➡️ https://t.co/bEZeTyb1wQ https://t.co/swV8rT4yFe",
+        "url": "https://x.com/France24_es/status/2115495220011839629"
+      },
+      {
+        "id": "2115483498861506611",
+        "account": "dw_espanol",
+        "name": "DW Español",
+        "date": "2026-10-28",
+        "time": "17:39",
+        "text": "Resolución contra el embargo a Cuba con menos apoyos\n\nA pesar de la ofensiva diplomática de EE.UU., se aprobó con 130 votos a favor (frente a 165 el año pasado). Varios países latinoamericanos votaron en contra. Alemania se abstuvo por primera vez (lgc)\n\nhttps://t.co/EGuYODaStv",
+        "url": "https://x.com/dw_espanol/status/2115483498861506611"
+      },
+      {
+        "id": "2115473949500854622",
+        "account": "washingtonpost",
+        "name": "The Washington Post",
+        "date": "2026-10-28",
+        "time": "17:01",
+        "text": "U.S. and Cuban officials clashed on the floor of the United Nations General Assembly.\n\nAs the U.S. ambassador to the U.N. detailed alleged corruption by Cuba, the island’s delegation slammed on their designated table and yelled for a point of order. https://t.co/4AnZGiwWl3 https://t.co/87y4WbdwUo",
+        "url": "https://x.com/washingtonpost/status/2115473949500854622"
+      },
+      {
+        "id": "2115435574194508059",
+        "account": "dw_espanol",
+        "name": "DW Español",
+        "date": "2026-10-28",
+        "time": "14:28",
+        "text": "\"¡Esto no es La Habana!\", gritos en la ONU entre embajadores de Cuba y Estados Unidos\n\nLa sesión de este martes de la Asamblea General de la ONU sobre el embargo estadounidense a Cuba terminó entre gritos y acusaciones. Las críticas del embajador de EE. UU., Mike Waltz, a Fidel https://t.co/RiWZiRP5xS",
+        "url": "https://x.com/dw_espanol/status/2115435574194508059"
+      },
+      {
+        "id": "2115428455969857870",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-10-28",
+        "time": "14:00",
+        "text": "🔊 ‘You are a liar, Mr. Ambassador.’ A fiery US-Cuba clash at the UN embargo vote saw the debate briefly suspended. Listen now on the Reuters World News podcast https://t.co/6LU1VhyNLh https://t.co/DYtzRWXdL9",
+        "url": "https://x.com/Reuters/status/2115428455969857870"
+      },
+      {
+        "id": "2115283208241590342",
+        "account": "CNNEE",
+        "name": "CNN en Español",
+        "date": "2026-10-28",
+        "time": "04:23",
+        "text": "“¡Esto es Estados Unidos!”: altercado entre funcionarios de EE.UU. y Cuba en la ONU https://t.co/YfltgnhXbh",
+        "url": "https://x.com/CNNEE/status/2115283208241590342"
+      },
+      {
+        "id": "2115258498262946266",
+        "account": "Reuters",
+        "name": "Reuters",
+        "date": "2026-10-28",
+        "time": "02:45",
+        "text": "A UN General Assembly session debating the US embargo of Cuba was suspended after US Ambassador Michael Waltz and Cuban representatives exchanged sharp accusations during a tense floor confrontation https://t.co/YJZS7zQaGN",
+        "url": "https://x.com/Reuters/status/2115258498262946266"
+      },
+      {
+        "id": "2115222514154508544",
+        "account": "CNNEE",
+        "name": "CNN en Español",
+        "date": "2026-10-28",
+        "time": "00:22",
+        "text": "EE.UU. y Cuba protagonizan un acalorado intercambio en la asamblea general de la ONU https://t.co/1uZOl2ffc1",
+        "url": "https://x.com/CNNEE/status/2115222514154508544"
       }
     ]
   }
