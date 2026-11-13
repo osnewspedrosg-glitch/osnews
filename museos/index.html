@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <title>OSNews Museos</title>
+  <meta name="description" content="OSNews Museos: museos de Europa y de EE. UU., galerías de arte, Instituto Cervantes y diccionarios de la lengua española. Enlaces oficiales a visitas virtuales y colecciones. Gratis, sin anuncios ni rastreadores. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <p class="tag">OSNews</p>
+        <h1 id="title">OSNews Museos</h1>
+        <p class="lead" id="lead">Museos de Europa y de Estados Unidos, galerías de arte, Instituto Cervantes, la lengua española y libros electrónicos de fuentes legales. Enlaces oficiales a visitas virtuales, colecciones y diccionarios. Gratis, sin anuncios ni rastreadores.</p>
+      </div>
+      <nav class="jump">
+        <a id="nav-anibal" href="../anibal/">Aníbal</a>
+        <a id="nav-canales" href="../canales/">Canales OSNews</a>
+        <a id="nav-tv" href="../tv-world/">OSNews TV World</a>
+        <a id="nav-back" href="../">Volver a OSNews</a>
+      </nav>
+    </header>
+
+    <section class="panel" aria-labelledby="h-lang">
+      <h2 id="h-lang">Idioma</h2>
+      <div class="langs" id="langs"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="h-search">
+      <h2 id="h-search">Buscar</h2>
+      <form class="search" id="filter-form" role="search">
+        <input type="search" id="filter-q" name="q" autocomplete="off" enterkeyhint="search" placeholder="Buscar un museo, una ciudad o un tema" aria-label="Buscar un museo, una ciudad o un tema">
+        <button type="submit" id="filter-btn">Buscar</button>
+      </form>
+      <p class="hint" id="filter-hint">Filtra las fichas de esta página. No envía tus palabras a ningún servidor de OSNews.</p>
+      <p class="hint" id="filter-empty" hidden>No hay fichas que coincidan con esa búsqueda.</p>
+    </section>
+
+    <section class="panel obra-panel" id="obra-panel" aria-labelledby="h-obra" hidden>
+      <h2 id="h-obra">Obra del día</h2>
+      <div class="obra" id="obra">
+        <img id="obra-img" alt="" width="320" height="320">
+        <div>
+          <h3 id="obra-title"></h3>
+          <p class="place" id="obra-artist"></p>
+          <p class="hint" id="obra-credit"></p>
+          <p class="links"><a id="obra-link" href="#" rel="noopener noreferrer" target="_blank"></a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="europa" aria-labelledby="h-eu">
+      <h2 id="h-eu">Museos de Europa</h2>
+      <div class="cards" id="cards-eu"></div>
+    </section>
+
+    <section class="panel" id="usa" aria-labelledby="h-us">
+      <h2 id="h-us">Museos de EE. UU.</h2>
+      <div class="cards" id="cards-us"></div>
+    </section>
+
+    <section class="panel" id="galerias" aria-labelledby="h-gal">
+      <h2 id="h-gal">Galerías de arte</h2>
+      <div class="cards" id="cards-gal"></div>
+    </section>
+
+    <section class="panel" id="cervantes" aria-labelledby="h-cer">
+      <h2 id="h-cer">Instituto Cervantes</h2>
+      <div class="cards" id="cards-cer"></div>
+    </section>
+
+    <section class="panel" id="lengua" aria-labelledby="h-lang-es">
+      <h2 id="h-lang-es">Lengua española</h2>
+      <p class="hint" id="lang-lead">Consulta los diccionarios oficiales de la RAE y la ASALE, las recomendaciones de FundéuRAE y el Centro Virtual Cervantes. Escribe una palabra y ábrela en el Diccionario de la lengua española o en un diccionario de sinónimos y antónimos.</p>
+      <form class="search" id="dle-form" role="search">
+        <input type="search" id="dle-q" name="q" autocomplete="off" enterkeyhint="search" spellcheck="true" placeholder="Escribe una palabra" aria-label="Escribe una palabra">
+        <button type="submit" id="dle-btn">Buscar en la RAE</button>
+        <button type="button" id="sin-btn">Sinónimos y antónimos</button>
+      </form>
+      <p class="hint" id="dle-hint">La búsqueda de la RAE abre dle.rae.es. Los sinónimos y antónimos se abren en WordReference, porque la RAE no publica un diccionario propio de sinónimos con busca en línea.</p>
+      <div class="cards" id="cards-lang"></div>
+    </section>
+
+    <section class="panel" id="libros" aria-labelledby="h-libros">
+      <h2 id="h-libros">Libros electrónicos gratis</h2>
+      <p class="hint" id="libros-lead">Obras de dominio público y préstamos legales de bibliotecas. OSNews no copia ni aloja los libros: solo abre las páginas oficiales.</p>
+      <div class="cards" id="cards-libros"></div>
+    </section>
+
+    <noscript>
+      <section class="panel">
+        <h2>Enlaces oficiales</h2>
+        <p>Activa JavaScript para ver todas las fichas, el selector de idioma y los buscadores. Mientras tanto, puedes abrir el <a href="https://www.museodelprado.es/">Museo del Prado</a>, el <a href="https://www.louvre.fr/">Louvre</a>, el <a href="https://www.metmuseum.org/">Metropolitan Museum of Art</a>, el <a href="https://cervantes.org/es">Instituto Cervantes</a> el <a href="https://dle.rae.es/">Diccionario de la lengua española</a> y la <a href="https://www.cervantesvirtual.com/">Biblioteca Virtual Miguel de Cervantes</a>.</p>
+      </section>
+    </noscript>
+
+    <footer>
+      <p id="authors"><strong>Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.</strong></p>
+      <p id="legal">OSNews Museos no copia ni aloja las obras: solo abre las páginas oficiales de cada institución. La obra del día, si se muestra, se carga desde la API de acceso abierto del Cleveland Museum of Art (CC0), con su crédito. Sin anuncios ni rastreadores.</p>
+    </footer>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
