@@ -1,5 +1,5 @@
 /* Aníbal · OSNews — local cache only, same origin, no tracking. */
-const C = 'anibal-v5';
+const C = 'anibal-v6';
 const CORE = [
   './',
   './index.html',

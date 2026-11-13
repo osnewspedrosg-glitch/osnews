@@ -68,10 +68,28 @@
       xosnewsS: '@Osnewsmaygrok: boletines de MAY cada hora',
       grok: 'Grok',
       grokS: 'Abre grok.com con tu propia cuenta. OSNews no guarda claves ni paga nada',
+      videosTile: 'Vídeos OSNews',
+      videosTileS: 'Debates y anuncios propios, sin el reproductor de YouTube',
+      videos: 'Vídeos OSNews',
+      videosLead: 'Copias propias de los debates y anuncios de OSNews, en un reproductor de esta página, sin el reproductor de YouTube y sin rastreadores. «Ver en YouTube» se abre en la app de YouTube o en el navegador del sistema.',
+      ytOut: 'Ver en YouTube',
       starlink: 'Starlink · Conexión a internet satelital',
       starlinkSub: 'invitación de Pedro',
       starlinkText: 'Enlace de invitación de Pedro: obtén 45 € en efectivo o saldo de servicio de Starlink al registrarte. Se aplican términos.',
       starlinkGo: 'Abrir Starlink',
+      vpn: 'VPN · acceso libre a la información',
+      vpnLead: 'Enlaces a las páginas oficiales de descarga de herramientas gratuitas y reconocidas. Se abren fuera de Aníbal. OSNews no las instala ni las integra.',
+      vpnProton: 'Proton VPN',
+      vpnProtonS: 'Plan gratuito · protonvpn.com',
+      vpnPsiphon: 'Psiphon',
+      vpnPsiphonS: 'psiphon.ca',
+      vpnTor: 'Tor Browser',
+      vpnTorS: 'torproject.org/download',
+      vpnWarn: 'En algunos países el uso de VPN está restringido o es ilegal. Infórmate de la ley de tu país; el uso es responsabilidad de cada persona. OSNews no recibe nada por estos enlaces.',
+      medios: 'TikTok y Facebook',
+      mediosLead: 'Cuentas oficiales de medios de comunicación. Solo el título y el enlace público. Se abren en la app o en el navegador del sistema. Aníbal no carga Facebook ni TikTok, ni sus anuncios ni rastreadores.',
+      medioFb: 'Facebook',
+      medioTt: 'TikTok',
       palabra: 'Buscador único',
       palabraLead: 'Escribe una palabra y te salen a la vez el diccionario, las dudas, los sinónimos, Museos OSNews y libros gratis.',
       palabraPh: 'Escribe una palabra',
@@ -146,11 +164,29 @@
       xosnewsS: '@Osnewsmaygrok: MAY bulletins every hour',
       grok: 'Grok',
       grokS: 'Opens grok.com with your own account. OSNews stores no keys and pays nothing',
+      videosTile: 'OSNews videos',
+      videosTileS: 'Our own debates and ads, without the YouTube player',
+      videos: 'OSNews videos',
+      videosLead: 'Our own copies of OSNews debates and ads, played on this page, without the YouTube player and without trackers. “Watch on YouTube” opens in the YouTube app or the system browser.',
+      ytOut: 'Watch on YouTube',
       starlink: 'Starlink · Satellite internet',
       starlinkSub: 'Pedro’s invitation',
       starlinkGrok: 'What Starlink is, according to @grok (quoted in Spanish)',
       starlinkText: 'Pedro’s invitation link: get €45 in cash or Starlink service credit when you sign up. Terms apply.',
       starlinkGo: 'Open Starlink',
+      vpn: 'VPN · free access to information',
+      vpnLead: 'Links to the official download pages of well-known free tools. They open outside Aníbal. OSNews does not install or embed them.',
+      vpnProton: 'Proton VPN',
+      vpnProtonS: 'Free plan · protonvpn.com',
+      vpnPsiphon: 'Psiphon',
+      vpnPsiphonS: 'psiphon.ca',
+      vpnTor: 'Tor Browser',
+      vpnTorS: 'torproject.org/download',
+      vpnWarn: 'In some countries the use of a VPN is restricted or illegal. Check the law in your country; each person is responsible for their own use. OSNews receives nothing from these links.',
+      medios: 'TikTok and Facebook',
+      mediosLead: 'Official accounts of news organisations. Only the title and the public link. They open in the app or the system browser. Aníbal does not load Facebook or TikTok, or their ads or trackers.',
+      medioFb: 'Facebook',
+      medioTt: 'TikTok',
       palabra: 'One-word search',
       palabraLead: 'Type a word to see the Spanish dictionary, usage doubts, synonyms, OSNews Museums and free books at once.',
       palabraPh: 'Type a word',
@@ -549,6 +585,10 @@
     $('t-yt-s').textContent = t.ytS;
     textNode($('t-ytw'), t.ytw);
     $('t-ytw-s').textContent = t.ytwS;
+    if ($('t-videos')) { textNode($('t-videos'), t.videosTile); $('t-videos-s').textContent = t.videosTileS; }
+    if ($('h-videos')) $('h-videos').textContent = t.videos;
+    if ($('videos-lead')) $('videos-lead').textContent = t.videosLead;
+    document.querySelectorAll('.yt-out').forEach((a) => { a.textContent = t.ytOut; });
     textNode($('t-canales'), t.canales);
     $('t-canales-s').textContent = t.canalesS;
     textNode($('t-museos'), t.museos);
@@ -563,6 +603,16 @@
     $('starlink-grok-h').textContent = t.starlinkGrok || 'Qué es Starlink, según @grok';
     $('starlink-text').textContent = t.starlinkText;
     $('starlink-link').textContent = t.starlinkGo;
+    if ($('h-vpn')) $('h-vpn').textContent = t.vpn;
+    if ($('vpn-lead')) $('vpn-lead').textContent = t.vpnLead;
+    if ($('vpn-proton')) { textNode($('vpn-proton'), t.vpnProton); $('vpn-proton-s').textContent = t.vpnProtonS; }
+    if ($('vpn-psiphon')) { textNode($('vpn-psiphon'), t.vpnPsiphon); $('vpn-psiphon-s').textContent = t.vpnPsiphonS; }
+    if ($('vpn-tor')) { textNode($('vpn-tor'), t.vpnTor); $('vpn-tor-s').textContent = t.vpnTorS; }
+    if ($('vpn-warn')) $('vpn-warn').textContent = t.vpnWarn;
+    if ($('h-medios')) $('h-medios').textContent = t.medios;
+    if ($('medios-lead')) $('medios-lead').textContent = t.mediosLead;
+    document.querySelectorAll('.medio-fb').forEach((a) => { a.textContent = t.medioFb; });
+    document.querySelectorAll('.medio-tt').forEach((a) => { a.textContent = t.medioTt; });
     $('t-grok-s').textContent = t.grokS;
     $('h-palabra').textContent = t.palabra;
     $('palabra-lead').textContent = t.palabraLead;
