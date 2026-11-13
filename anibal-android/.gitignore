@@ -1,0 +1,5 @@
+out/
+*.apk
+*.jks
+password.txt
+local.properties
