@@ -6,6 +6,24 @@
   <meta name="theme-color" content="#0b1220">
   <title>Aníbal · navegador OSNews</title>
   <meta name="description" content="Página de inicio de OSNews: búsqueda en DuckDuckGo, TV World, Azum (web y bot personal), noticias y el canal de YouTube. Gratis, sin anuncios ni rastreadores. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.">
+  <link rel="canonical" href="https://osnewspedrosg-glitch.github.io/osnews/anibal/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OSNews">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:url" content="https://osnewspedrosg-glitch.github.io/osnews/anibal/">
+  <meta property="og:title" content="Aníbal 1.2 · el navegador gratuito de OSNews para Android">
+  <meta property="og:description" content="Sin anuncios ni rastreadores. Compartir en X, modo oscuro, marcadores e historial solo en tu móvil, y un buscador único: RAE, dudas, sinónimos, Museos y libros gratis.">
+  <meta property="og:image" content="https://osnewspedrosg-glitch.github.io/osnews/anibal/og-anibal.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aníbal 1.2, navegador OSNews para Android, gratis y sin anuncios ni rastreadores">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Osnewsmaygrok">
+  <meta name="twitter:title" content="Aníbal 1.2 · el navegador gratuito de OSNews para Android">
+  <meta name="twitter:description" content="Sin anuncios ni rastreadores. Compartir en X, modo oscuro, marcadores e historial solo en tu móvil, y un buscador único: RAE, dudas, sinónimos, Museos y libros gratis.">
+  <meta name="twitter:image" content="https://osnewspedrosg-glitch.github.io/osnews/anibal/og-anibal.png">
+  <meta name="twitter:image:alt" content="Aníbal 1.2, navegador OSNews para Android, gratis y sin anuncios ni rastreadores">
+  <meta name="color-scheme" content="dark light">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon-192.png">
   <link rel="apple-touch-icon" href="icon-192.png">
@@ -62,6 +80,24 @@
       <p class="hint" id="may-hint">MAY no da opiniones ni inventa nada. Si hay un canal de OSNews, te lleva allí. Si no, abre una búsqueda de noticias en DuckDuckGo.</p>
     </section>
 
+    <section class="panel palabra" aria-labelledby="h-palabra">
+      <h2 id="h-palabra">Buscador único</h2>
+      <p class="palabra-lead" id="palabra-lead">Escribe una palabra y te salen a la vez el diccionario, las dudas, los sinónimos, Museos OSNews y libros gratis.</p>
+      <form class="search" id="palabra-form" role="search">
+        <input type="search" name="w" id="palabra-q" required autocomplete="off" enterkeyhint="search" maxlength="80" placeholder="Escribe una palabra" aria-label="Escribe una palabra">
+        <button type="submit" id="palabra-btn">Ver enlaces</button>
+      </form>
+      <div class="palabra-links" id="palabra-links" hidden aria-live="polite">
+        <a class="plink" id="pl-rae" rel="noopener noreferrer" target="_blank" href="https://dle.rae.es/">Diccionario RAE<small id="pl-rae-s">dle.rae.es</small></a>
+        <a class="plink" id="pl-dpd" rel="noopener noreferrer" target="_blank" href="https://www.rae.es/dpd/">Dudas (panhispánico)<small id="pl-dpd-s">Diccionario panhispánico de dudas · rae.es</small></a>
+        <a class="plink" id="pl-sin" rel="noopener noreferrer" target="_blank" href="https://www.wordreference.com/sinonimos/">Sinónimos<small id="pl-sin-s">WordReference</small></a>
+        <a class="plink" id="pl-museos" href="../museos/">Museos OSNews<small id="pl-museos-s">Fichas que contienen la palabra</small></a>
+        <a class="plink" id="pl-libros" rel="noopener noreferrer" target="_blank" href="https://www.gutenberg.org/">Libros gratis<small id="pl-libros-s">Project Gutenberg, dominio público</small></a>
+        <a class="plink" id="pl-libros-osnews" href="../museos/#libros">Más libros legales<small id="pl-libros-osnews-s">Bibliotecas oficiales en Museos OSNews</small></a>
+      </div>
+      <p class="hint" id="palabra-hint">Solo abre las páginas oficiales. Aníbal no copia su contenido ni guarda lo que escribes.</p>
+    </section>
+
     <section class="panel" aria-labelledby="h-search">
       <h2 id="h-search">Buscar</h2>
       <form class="search" id="search-form" action="https://duckduckgo.com/" method="get" role="search">
@@ -89,23 +125,38 @@
         <a class="tile" id="t-azum" href="../azum/">Azum<small id="t-azum-s">Charla y guía emocional</small></a>
         <a class="tile" id="t-yt" href="https://www.youtube.com/channel/UCsyOKlZTaQ-6auoVQa_2Dhg" rel="noopener noreferrer" target="_blank">Canal YouTube OSNews<small id="t-yt-s">Debates y vídeos del canal actual</small></a>
         <a class="tile" id="t-ytw" href="https://www.youtube.com/@OSNewsWorld" rel="noopener noreferrer" target="_blank">YouTube OSNews World<small id="t-ytw-s">Canal nuevo de debates y vídeos</small></a>
+        <a class="tile tile-x" id="t-x" href="https://x.com/Osnewsmaygrok" rel="noopener noreferrer" target="_blank">X OSNews<small id="t-x-s">@Osnewsmaygrok: boletines de MAY cada hora</small></a>
+        <a class="tile tile-grok" id="t-grok" href="https://grok.com/" rel="noopener noreferrer" target="_blank">Grok<small id="t-grok-s">Abre grok.com con tu propia cuenta. OSNews no guarda claves ni paga nada</small></a>
         <a class="tile" id="t-canales" href="../canales/">Canales OSNews<small id="t-canales-s">Ocho idiomas y un canal por país, con declaraciones literales en X</small></a>
         <a class="tile" id="t-museos" href="../museos/">Museos OSNews<small id="t-museos-s">Museos de Europa y EE. UU., galerías, Instituto Cervantes, diccionarios y libros</small></a>
-        <a class="tile" id="t-apk" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/anibal-v1.1/Anibal-OSNews-v1.1.apk" download="Anibal-OSNews-v1.1.apk">Descargar app Android<small id="t-apk-s">Navegador Aníbal para Android (APK)</small></a>
+        <a class="tile" id="t-apk" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/anibal-v1.2/Anibal-OSNews-v1.2.apk" download="Anibal-OSNews-v1.2.apk">Descargar app Android<small id="t-apk-s">Navegador Aníbal para Android (APK)</small></a>
         <a class="tile" id="t-news" href="../tv-world/#h-countries">Noticias por país<small id="t-news-s">China, India, Marruecos y Cuba</small></a>
         <a class="tile" id="t-app" href="../app/">App OSNews<small id="t-app-s">MAY y las apps para Android</small></a>
       </div>
+    </section>
+
+    <section class="panel starlink" aria-labelledby="h-starlink">
+      <h2 id="h-starlink">Starlink · Conexión a internet satelital</h2>
+      <p class="starlink-sub" id="starlink-sub">invitación de Pedro</p>
+      <figure class="starlink-grok">
+        <figcaption id="starlink-grok-h">Qué es Starlink, según @grok</figcaption>
+        <blockquote lang="es" cite="https://x.com/grok/status/2121221590281040076"><p>«Starlink es el servicio de internet por satélites de SpaceX: miles de satélites en órbita baja que dan conexión de alta velocidad y baja latencia casi en cualquier lugar del planeta. Ventajas principales: funciona donde no hay fibra ni cable (zonas rurales, montaña, barcos), velocidades medianas ~120 Mbps de bajada, latencia baja (25-60 ms), datos ilimitados y sin contratos.»</p></blockquote>
+        <p class="starlink-firma"><a href="https://x.com/grok/status/2121221590281040076" rel="noopener noreferrer" target="_blank">— @grok en X, 13 nov 2026</a></p>
+      </figure>
+      <p id="starlink-text">Enlace de invitación de Pedro: obtén 45 € en efectivo o saldo de servicio de Starlink al registrarte. Se aplican términos.</p>
+      <p class="starlink-actions"><a class="btn-starlink" id="starlink-link" href="https://starlink.com/?referral=RC-DF-9749675-70086-66" rel="noopener noreferrer" target="_blank">Abrir Starlink</a></p>
     </section>
 
     <p class="install-help" id="install-help"></p>
 
     <footer>
       <p id="authors"><strong>Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.</strong></p>
-      <p id="apk-p"><a id="apk-link" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/anibal-v1.1/Anibal-OSNews-v1.1.apk" download="Anibal-OSNews-v1.1.apk">Descargar app Android</a></p>
+      <p id="apk-p"><a id="apk-link" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/anibal-v1.2/Anibal-OSNews-v1.2.apk" download="Anibal-OSNews-v1.2.apk">Descargar app Android</a></p>
       <p id="legal">Aníbal es una página de inicio y un navegador ligero para Android. No sustituye a Chrome ni a Firefox.</p>
     </footer>
   </div>
   <script src="ime.js"></script>
+  <script src="palabra.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

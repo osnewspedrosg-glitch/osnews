@@ -1,11 +1,12 @@
 /* Aníbal · OSNews — local cache only, same origin, no tracking. */
-const C = 'anibal-v4';
+const C = 'anibal-v5';
 const CORE = [
   './',
   './index.html',
   './styles.css',
   './app.js',
   './ime.js',
+  './palabra.js',
   './manifest.webmanifest',
   './icon-192.png',
   './icon-512.png'
