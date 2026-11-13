@@ -86,6 +86,10 @@
       vpnTor: 'Tor Browser',
       vpnTorS: 'torproject.org/download',
       vpnWarn: 'En algunos países el uso de VPN está restringido o es ilegal. Infórmate de la ley de tu país; el uso es responsabilidad de cada persona. OSNews no recibe nada por estos enlaces.',
+      medios: 'TikTok y Facebook',
+      mediosLead: 'Cuentas oficiales de medios de comunicación. Solo el título y el enlace público. Se abren en la app o en el navegador del sistema. Aníbal no carga Facebook ni TikTok, ni sus anuncios ni rastreadores.',
+      medioFb: 'Facebook',
+      medioTt: 'TikTok',
       palabra: 'Buscador único',
       palabraLead: 'Escribe una palabra y te salen a la vez el diccionario, las dudas, los sinónimos, Museos OSNews y libros gratis.',
       palabraPh: 'Escribe una palabra',
@@ -179,6 +183,10 @@
       vpnTor: 'Tor Browser',
       vpnTorS: 'torproject.org/download',
       vpnWarn: 'In some countries the use of a VPN is restricted or illegal. Check the law in your country; each person is responsible for their own use. OSNews receives nothing from these links.',
+      medios: 'TikTok and Facebook',
+      mediosLead: 'Official accounts of news organisations. Only the title and the public link. They open in the app or the system browser. Aníbal does not load Facebook or TikTok, or their ads or trackers.',
+      medioFb: 'Facebook',
+      medioTt: 'TikTok',
       palabra: 'One-word search',
       palabraLead: 'Type a word to see the Spanish dictionary, usage doubts, synonyms, OSNews Museums and free books at once.',
       palabraPh: 'Type a word',
@@ -601,6 +609,10 @@
     if ($('vpn-psiphon')) { textNode($('vpn-psiphon'), t.vpnPsiphon); $('vpn-psiphon-s').textContent = t.vpnPsiphonS; }
     if ($('vpn-tor')) { textNode($('vpn-tor'), t.vpnTor); $('vpn-tor-s').textContent = t.vpnTorS; }
     if ($('vpn-warn')) $('vpn-warn').textContent = t.vpnWarn;
+    if ($('h-medios')) $('h-medios').textContent = t.medios;
+    if ($('medios-lead')) $('medios-lead').textContent = t.mediosLead;
+    document.querySelectorAll('.medio-fb').forEach((a) => { a.textContent = t.medioFb; });
+    document.querySelectorAll('.medio-tt').forEach((a) => { a.textContent = t.medioTt; });
     $('t-grok-s').textContent = t.grokS;
     $('h-palabra').textContent = t.palabra;
     $('palabra-lead').textContent = t.palabraLead;

@@ -14,7 +14,7 @@ Navegador ligero con la WebView del sistema. La página de inicio es [Aníbal](h
   - Marcadores («☆ Marcar», «Marcadores», mantener pulsado para quitar) e historial («Historial», «Borrar historial»), guardados solo en el almacenamiento privado de la app; no se envían a ningún sitio y no hay copia en la nube (`allowBackup=false`)
 - Novedades 1.3:
   - Los enlaces de YouTube y de las páginas oficiales de Proton VPN, Psiphon y Tor Browser se abren en la app del sistema o en un navegador externo, no dentro de Aníbal
-  - En la página de inicio, sección «Vídeos OSNews» con copias propias en un reproductor HTML5, y sección «VPN · acceso libre a la información» (solo enlaces oficiales, con aviso legal; Aníbal no instala ninguna VPN)
+  - En la página de inicio, sección «Vídeos OSNews» con copias propias en un reproductor HTML5; sección «VPN · acceso libre a la información» (solo enlaces oficiales, con aviso legal; Aníbal no instala ninguna VPN); y sección «TikTok y Facebook» con enlaces públicos a cuentas oficiales de medios, que se abren fuera de Aníbal
 - Sin anuncios ni rastreadores
 - Permisos: INTERNET y, solo en Android 8 o anterior, almacenamiento para descargas
 

@@ -352,3 +352,15 @@ footer strong { color: var(--text); }
 .vpn-link small { font-weight: 500; color: var(--muted); }
 .vpn-link:hover, .vpn-link:focus-visible { border-color: var(--accent); }
 .vpn-warn { margin: 0 !important; font-size: 0.92rem; color: var(--muted); }
+
+/* v1.3 · TikTok y Facebook: solo títulos y enlaces públicos a medios, iconos propios */
+.medios-lead { margin: 0 0 14px; color: var(--muted); }
+.medios-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.medios-list li {
+  display: grid; grid-template-columns: 48px 1fr; gap: 12px; align-items: center;
+  padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--btn);
+}
+.medios-list img { display: block; width: 48px; height: 48px; border-radius: 10px; }
+.medios-list h3 { margin: 0 0 4px; font-size: 1.02rem; color: var(--text); }
+.medios-links { margin: 0; display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.medios-links a { font-weight: 700; }
