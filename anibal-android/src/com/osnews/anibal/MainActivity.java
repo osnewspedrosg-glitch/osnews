@@ -51,6 +51,7 @@ public class MainActivity extends Activity {
   ProgressBar progress;
   ImageButton btnBack, btnForward;
   boolean userEditing;
+  long lastGoAt;
   String pendingUrl, pendingUa, pendingCd, pendingMime;
 
   @Override
@@ -80,7 +81,7 @@ public class MainActivity extends Activity {
     s.setAllowFileAccess(false);
     s.setAllowContentAccess(false);
     s.setMixedContentMode(WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE);
-    s.setUserAgentString(s.getUserAgentString() + " AnibalOSNews/1.0");
+    s.setUserAgentString(s.getUserAgentString() + " AnibalOSNews/1.1");
     CookieManager cookies = CookieManager.getInstance();
     cookies.setAcceptCookie(true);
     cookies.setAcceptThirdPartyCookies(web, true);
@@ -165,10 +166,7 @@ public class MainActivity extends Activity {
     });
     btnGo.setOnClickListener(v -> goFromBar());
     address.setOnEditorActionListener((v, action, ev) -> {
-      if (action == EditorInfo.IME_ACTION_GO
-          || action == EditorInfo.IME_ACTION_DONE
-          || (ev != null && ev.getKeyCode() == KeyEvent.KEYCODE_ENTER
-              && ev.getAction() == KeyEvent.ACTION_DOWN)) {
+      if (isImeGo(action, ev)) {
         goFromBar();
         return true;
       }
@@ -187,10 +185,34 @@ public class MainActivity extends Activity {
     updateNav();
   }
 
+  boolean isImeGo(int action, KeyEvent ev) {
+    if (action == EditorInfo.IME_ACTION_GO
+        || action == EditorInfo.IME_ACTION_SEARCH
+        || action == EditorInfo.IME_ACTION_DONE
+        || action == EditorInfo.IME_ACTION_SEND) {
+      return ev == null || ev.getAction() != KeyEvent.ACTION_UP;
+    }
+    if (action == EditorInfo.IME_ACTION_UNSPECIFIED || action == EditorInfo.IME_ACTION_NONE) {
+      if (ev == null) return false;
+      int code = ev.getKeyCode();
+      if (code != KeyEvent.KEYCODE_ENTER && code != KeyEvent.KEYCODE_NUMPAD_ENTER) return false;
+      return ev.getAction() == KeyEvent.ACTION_DOWN || ev.getAction() == KeyEvent.ACTION_UP;
+    }
+    return false;
+  }
+
   void goFromBar() {
+    long now = android.os.SystemClock.uptimeMillis();
+    if (lastGoAt != 0 && now - lastGoAt < 400) return;
+    lastGoAt = now;
+    if (address != null) {
+      InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+      if (imm != null) imm.hideSoftInputFromWindow(address.getWindowToken(), 0);
+      address.clearFocus();
+    }
     String q = address.getText() == null ? "" : address.getText().toString().trim();
     userEditing = false;
-    hideKeyboard();
+    if (web != null) web.requestFocus();
     if (TextUtils.isEmpty(q)) return;
     String lower = q.toLowerCase(Locale.US);
     if (lower.startsWith("javascript:") || lower.startsWith("data:")

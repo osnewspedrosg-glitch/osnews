@@ -321,6 +321,8 @@ export function mount(doc, input = {}) {
   question.maxLength = MAX_PROMPT_CHARS;
   question.rows = 3;
   question.placeholder = "Escribe una pregunta en español";
+  question.setAttribute("enterkeyhint", "send");
+  question.setAttribute("autocomplete", "off");
   questionLabel.appendChild(question);
 
   const ask = button(doc, "azum-local-ask", "Preguntar a la IA local");
@@ -504,7 +506,16 @@ export function mount(doc, input = {}) {
     download.click();
   });
 
+  ask.addEventListener("pointerdown", () => {
+    if (typeof question.blur === "function") question.blur();
+  }, true);
+  question.addEventListener("keydown", (event) => {
+    if ((event.isComposing || event.keyCode === 229) && (event.key === "Enter" || event.keyCode === 13)) {
+      event.preventDefault();
+    }
+  });
   ask.addEventListener("click", async () => {
+    if (typeof question.blur === "function") question.blur();
     const text = question.value.trim();
     if (!text) {
       setStatus("Escribe una pregunta.", "error");

@@ -21,6 +21,18 @@
       placeholder: 'Buscar en la web',
       go: 'Buscar',
       hint: 'La búsqueda se abre en DuckDuckGo, un buscador público que respeta la privacidad. El buscador OSNews World todavía no está publicado en esta web.',
+      may: 'MAY',
+      mayAsk: '¿Qué noticias quieres saber?',
+      mayPlaceholder: 'Escribe un país, un idioma o un tema',
+      mayGo: 'Ver noticias',
+      mayHint: 'MAY no da opiniones ni inventa nada. Si hay un canal de OSNews, te lleva allí. Si no, abre una búsqueda de noticias en DuckDuckGo.',
+      mayAlt: 'MAY, presentadora de OSNews',
+      chipChina: 'China',
+      chipIndia: 'India',
+      chipMorocco: 'Marruecos',
+      chipCuba: 'Cuba',
+      chipTv: 'TV World',
+      chipLite: 'Versión ligera',
       tiles: 'Accesos OSNews',
       tv: 'OSNews TV World',
       tvS: 'Directos oficiales y debates',
@@ -59,6 +71,18 @@
       placeholder: 'Search the web',
       go: 'Search',
       hint: 'Search opens in DuckDuckGo, a public privacy-respecting search engine. The OSNews World search page is not published on this site yet.',
+      may: 'MAY',
+      mayAsk: 'What news would you like to know?',
+      mayPlaceholder: 'Type a country, a language or a topic',
+      mayGo: 'See news',
+      mayHint: 'MAY gives no opinions and invents nothing. If there is an OSNews channel, it takes you there. If not, it opens a DuckDuckGo news search.',
+      mayAlt: 'MAY, OSNews presenter',
+      chipChina: 'China',
+      chipIndia: 'India',
+      chipMorocco: 'Morocco',
+      chipCuba: 'Cuba',
+      chipTv: 'TV World',
+      chipLite: 'Lite version',
       tiles: 'OSNews shortcuts',
       tv: 'OSNews TV World',
       tvS: 'Official live streams and debates',
@@ -97,6 +121,18 @@
       placeholder: 'Rechercher sur le web',
       go: 'Rechercher',
       hint: 'La recherche s’ouvre dans DuckDuckGo, un moteur public respectueux de la vie privée. Le moteur OSNews World n’est pas encore publié sur ce site.',
+      may: 'MAY',
+      mayAsk: 'Quelles actualités veux-tu connaître ?',
+      mayPlaceholder: 'Écris un pays, une langue ou un sujet',
+      mayGo: 'Voir les actualités',
+      mayHint: 'MAY ne donne aucun avis et n’invente rien. S’il y a une chaîne OSNews, elle t’y emmène. Sinon, elle ouvre une recherche d’actualités sur DuckDuckGo.',
+      mayAlt: 'MAY, présentatrice d’OSNews',
+      chipChina: 'Chine',
+      chipIndia: 'Inde',
+      chipMorocco: 'Maroc',
+      chipCuba: 'Cuba',
+      chipTv: 'TV World',
+      chipLite: 'Version légère',
       tiles: 'Accès OSNews',
       tv: 'OSNews TV World',
       tvS: 'Directs officiels et débats',
@@ -135,6 +171,18 @@
       placeholder: 'Im Web suchen',
       go: 'Suchen',
       hint: 'Die Suche öffnet sich in DuckDuckGo, einer öffentlichen Suchmaschine mit Datenschutz. Die OSNews-World-Suche ist auf dieser Website noch nicht veröffentlicht.',
+      may: 'MAY',
+      mayAsk: 'Welche Nachrichten möchtest du erfahren?',
+      mayPlaceholder: 'Schreib ein Land, eine Sprache oder ein Thema',
+      mayGo: 'Nachrichten ansehen',
+      mayHint: 'MAY gibt keine Meinungen ab und erfindet nichts. Wenn es einen OSNews-Kanal gibt, öffnet sie ihn. Wenn nicht, öffnet sie eine Nachrichtensuche bei DuckDuckGo.',
+      mayAlt: 'MAY, Moderatorin von OSNews',
+      chipChina: 'China',
+      chipIndia: 'Indien',
+      chipMorocco: 'Marokko',
+      chipCuba: 'Kuba',
+      chipTv: 'TV World',
+      chipLite: 'Leichte Version',
       tiles: 'OSNews-Zugänge',
       tv: 'OSNews TV World',
       tvS: 'Offizielle Livestreams und Debatten',
@@ -173,6 +221,18 @@
       placeholder: 'Pesquisar na web',
       go: 'Pesquisar',
       hint: 'A pesquisa abre no DuckDuckGo, um motor público que respeita a privacidade. O motor OSNews World ainda não está publicado neste sítio.',
+      may: 'MAY',
+      mayAsk: 'Que notícias queres saber?',
+      mayPlaceholder: 'Escreve um país, um idioma ou um tema',
+      mayGo: 'Ver notícias',
+      mayHint: 'A MAY não dá opiniões nem inventa nada. Se houver um canal OSNews, leva-te até lá. Se não, abre uma pesquisa de notícias no DuckDuckGo.',
+      mayAlt: 'MAY, apresentadora da OSNews',
+      chipChina: 'China',
+      chipIndia: 'Índia',
+      chipMorocco: 'Marrocos',
+      chipCuba: 'Cuba',
+      chipTv: 'TV World',
+      chipLite: 'Versão ligeira',
       tiles: 'Atalhos OSNews',
       tv: 'OSNews TV World',
       tvS: 'Diretos oficiais e debates',
@@ -211,6 +271,18 @@
       placeholder: 'Cerca sul web',
       go: 'Cerca',
       hint: 'La ricerca si apre in DuckDuckGo, un motore pubblico che rispetta la privacy. Il motore OSNews World non è ancora pubblicato su questo sito.',
+      may: 'MAY',
+      mayAsk: 'Quali notizie vuoi sapere?',
+      mayPlaceholder: 'Scrivi un paese, una lingua o un argomento',
+      mayGo: 'Vedi le notizie',
+      mayHint: 'MAY non dà opinioni e non inventa nulla. Se c’è un canale OSNews, ti ci porta. Se no, apre una ricerca di notizie su DuckDuckGo.',
+      mayAlt: 'MAY, presentatrice di OSNews',
+      chipChina: 'Cina',
+      chipIndia: 'India',
+      chipMorocco: 'Marocco',
+      chipCuba: 'Cuba',
+      chipTv: 'TV World',
+      chipLite: 'Versione leggera',
       tiles: 'Accessi OSNews',
       tv: 'OSNews TV World',
       tvS: 'Dirette ufficiali e dibattiti',
@@ -249,6 +321,18 @@
       placeholder: 'البحث في الويب',
       go: 'بحث',
       hint: 'يفتح البحث في DuckDuckGo، وهو محرك بحث عام يحترم الخصوصية. محرك OSNews World غير منشور بعد على هذا الموقع.',
+      may: 'MAY',
+      mayAsk: 'ما الأخبار التي تريد معرفتها؟',
+      mayPlaceholder: 'اكتب بلداً أو لغة أو موضوعاً',
+      mayGo: 'عرض الأخبار',
+      mayHint: 'ماي لا تبدي آراء ولا تختلق شيئاً. إذا وُجدت قناة في OSNews، تنقلك إليها. وإن لم توجد، تفتح بحثاً إخبارياً في DuckDuckGo.',
+      mayAlt: 'ماي، مذيعة OSNews',
+      chipChina: 'الصين',
+      chipIndia: 'الهند',
+      chipMorocco: 'المغرب',
+      chipCuba: 'كوبا',
+      chipTv: 'TV World',
+      chipLite: 'النسخة الخفيفة',
       tiles: 'اختصارات OSNews',
       tv: 'OSNews TV World',
       tvS: 'بثوث مباشرة رسمية ومناظرات',
@@ -287,6 +371,18 @@
       placeholder: '搜索网页',
       go: '搜索',
       hint: '搜索会在 DuckDuckGo 打开，这是一个尊重隐私的公共搜索引擎。OSNews World 搜索尚未发布在本网站。',
+      may: 'MAY',
+      mayAsk: '你想了解什么新闻？',
+      mayPlaceholder: '输入国家、语言或主题',
+      mayGo: '查看新闻',
+      mayHint: 'MAY 不发表意见，也不编造内容。如果有对应的 OSNews 频道，就会带你过去；如果没有，就打开 DuckDuckGo 新闻搜索。',
+      mayAlt: 'MAY，OSNews 主持人',
+      chipChina: '中国',
+      chipIndia: '印度',
+      chipMorocco: '摩洛哥',
+      chipCuba: '古巴',
+      chipTv: 'TV World',
+      chipLite: '轻量版',
       tiles: 'OSNews 入口',
       tv: 'OSNews TV World',
       tvS: '官方直播与辩论',
@@ -342,6 +438,19 @@
     $('q').setAttribute('aria-label', t.placeholder);
     $('search-btn').textContent = t.go;
     $('search-hint').textContent = t.hint;
+    $('h-may').textContent = t.may;
+    $('may-ask').textContent = t.mayAsk;
+    $('may-q').placeholder = t.mayPlaceholder;
+    $('may-q').setAttribute('aria-label', t.mayPlaceholder);
+    $('may-btn').textContent = t.mayGo;
+    $('may-hint').textContent = t.mayHint;
+    $('may-photo').alt = t.mayAlt;
+    $('chip-china').textContent = t.chipChina;
+    $('chip-india').textContent = t.chipIndia;
+    $('chip-marruecos').textContent = t.chipMorocco;
+    $('chip-cuba').textContent = t.chipCuba;
+    $('chip-tv').textContent = t.chipTv;
+    $('chip-lite').textContent = t.chipLite;
     $('h-tiles').textContent = t.tiles;
     textNode($('t-tv'), t.tv);
     $('t-tv-s').textContent = t.tvS;
@@ -413,15 +522,39 @@
     return T[short] ? short : 'es';
   }
 
-  $('search-form').addEventListener('submit', function () {
-    let kl = this.querySelector('input[name="kl"]');
+  const ime = window.ANIBAL_IME;
+  if (!ime) throw new Error('ANIBAL_IME missing');
+
+  ime.wireImeForm($('search-form'), $('q'), function (event) {
+    const q = $('q');
+    if (!q.value.trim()) {
+      event.preventDefault();
+      return;
+    }
+    let kl = event.currentTarget.querySelector('input[name="kl"]');
     if (!kl) {
       kl = document.createElement('input');
       kl.type = 'hidden';
       kl.name = 'kl';
-      this.appendChild(kl);
+      event.currentTarget.appendChild(kl);
     }
     kl.value = DDG_KL[lang] || 'wt-wt';
+  });
+
+  ime.wireImeForm($('may-form'), $('may-q'), function (event, text) {
+    if (!text) {
+      event.preventDefault();
+      return;
+    }
+    const dest = ime.newsDestination(text, '../canales/');
+    if (!dest) {
+      event.preventDefault();
+      return;
+    }
+    if (dest.indexOf('duckduckgo.com') === -1) {
+      event.preventDefault();
+      window.location.href = dest;
+    }
   });
 
   if ('serviceWorker' in navigator) {

@@ -34,10 +34,36 @@
       <div class="langs" id="langs"></div>
     </section>
 
+
+    <section class="panel may-news" aria-labelledby="h-may">
+      <div class="may-head">
+        <img id="may-photo" src="../assets/may-avatar.jpg" width="72" height="72" alt="MAY, presentadora de OSNews">
+        <div>
+          <h2 id="h-may">MAY</h2>
+          <p class="may-ask" id="may-ask">¿Qué noticias quieres saber?</p>
+        </div>
+      </div>
+      <form class="search" id="may-form" action="https://duckduckgo.com/" method="get" role="search">
+        <input type="search" name="q" id="may-q" required autocomplete="off" enterkeyhint="go" placeholder="Escribe un país, un idioma o un tema" aria-label="Escribe un país, un idioma o un tema">
+        <input type="hidden" name="iar" value="news">
+        <input type="hidden" name="ia" value="news">
+        <button type="submit" id="may-btn">Ver noticias</button>
+      </form>
+      <div class="may-chips" id="may-chips">
+        <a class="chip" id="chip-china" href="../canales/china/">China</a>
+        <a class="chip" id="chip-india" href="../canales/india/">India</a>
+        <a class="chip" id="chip-marruecos" href="../canales/marruecos/">Marruecos</a>
+        <a class="chip" id="chip-cuba" href="../canales/cuba/">Cuba</a>
+        <a class="chip" id="chip-tv" href="../tv-world/">TV World</a>
+        <a class="chip" id="chip-lite" href="../tv-world/ligera/">Versión ligera</a>
+      </div>
+      <p class="hint" id="may-hint">MAY no da opiniones ni inventa nada. Si hay un canal de OSNews, te lleva allí. Si no, abre una búsqueda de noticias en DuckDuckGo.</p>
+    </section>
+
     <section class="panel" aria-labelledby="h-search">
       <h2 id="h-search">Buscar</h2>
       <form class="search" id="search-form" action="https://duckduckgo.com/" method="get" role="search">
-        <input type="search" name="q" id="q" required autocomplete="off" placeholder="Buscar en la web" aria-label="Buscar en la web">
+        <input type="search" name="q" id="q" required autocomplete="off" enterkeyhint="search" placeholder="Buscar en la web" aria-label="Buscar en la web">
         <button type="submit" id="search-btn">Buscar</button>
       </form>
       <p class="hint" id="search-hint">La búsqueda se abre en DuckDuckGo, un buscador público que respeta la privacidad. El buscador OSNews World todavía no está publicado en esta web.</p>
@@ -62,7 +88,7 @@
         <a class="tile" id="t-yt" href="https://www.youtube.com/channel/UCsyOKlZTaQ-6auoVQa_2Dhg" rel="noopener noreferrer" target="_blank">Canal YouTube OSNews<small id="t-yt-s">Debates y vídeos del canal actual</small></a>
         <a class="tile" id="t-ytw" href="https://www.youtube.com/@OSNewsWorld" rel="noopener noreferrer" target="_blank">YouTube OSNews World<small id="t-ytw-s">Canal nuevo de debates y vídeos</small></a>
         <a class="tile" id="t-canales" href="../canales/">Canales OSNews<small id="t-canales-s">Ocho idiomas y un canal por país, con declaraciones literales en X</small></a>
-        <a class="tile" id="t-apk" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/anibal-v1.0/Anibal-OSNews-v1.0.apk" download="Anibal-OSNews-v1.0.apk">Descargar app Android<small id="t-apk-s">Navegador Aníbal para Android (APK)</small></a>
+        <a class="tile" id="t-apk" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/anibal-v1.1/Anibal-OSNews-v1.1.apk" download="Anibal-OSNews-v1.1.apk">Descargar app Android<small id="t-apk-s">Navegador Aníbal para Android (APK)</small></a>
         <a class="tile" id="t-news" href="../tv-world/#h-countries">Noticias por país<small id="t-news-s">China, India, Marruecos y Cuba</small></a>
         <a class="tile" id="t-app" href="../app/">App OSNews<small id="t-app-s">MAY y las apps para Android</small></a>
       </div>
@@ -72,10 +98,11 @@
 
     <footer>
       <p id="authors"><strong>Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.</strong></p>
-      <p id="apk-p"><a id="apk-link" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/anibal-v1.0/Anibal-OSNews-v1.0.apk" download="Anibal-OSNews-v1.0.apk">Descargar app Android</a></p>
+      <p id="apk-p"><a id="apk-link" href="https://github.com/osnewspedrosg-glitch/osnews/releases/download/anibal-v1.1/Anibal-OSNews-v1.1.apk" download="Anibal-OSNews-v1.1.apk">Descargar app Android</a></p>
       <p id="legal">Aníbal es una página de inicio y un navegador ligero para Android. No sustituye a Chrome ni a Firefox.</p>
     </footer>
   </div>
+  <script src="ime.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

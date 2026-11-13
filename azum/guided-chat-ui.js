@@ -3,6 +3,17 @@ import { GUIDED_LABEL, dispatch, forgetGuidedMemory, loadMemory, STORAGE_KEY, lo
 
 const KEY = STORAGE_KEY;
 
+function isComposingEvent(event) {
+  return Boolean(event && (event.isComposing || event.keyCode === 229));
+}
+
+function committedValue(el) {
+  if (!el) return "";
+  if (typeof el.blur === "function") el.blur();
+  return String(el.value || "").trim();
+}
+
+
 function add(doc, parent, tag, className, text) {
   const node = doc.createElement(tag);
   if (className) node.className = className;
@@ -123,7 +134,7 @@ export function mount(doc) {
   let lastFire = 0;
   let lastText = "";
   function submitText() {
-    const text = input.value.trim();
+    const text = committedValue(input);
     const now = Date.now();
     if (!text) {
       if (now - lastFire < 500) return;
@@ -150,14 +161,28 @@ export function mount(doc) {
     }
   }
 
+  send.addEventListener("pointerdown", () => {
+    if (typeof input.blur === "function") input.blur();
+  }, true);
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    if (isComposingEvent(event)) return;
     submitText();
   });
   send.addEventListener("pointerup", (event) => {
     if (event.pointerType === "mouse") return;
     event.preventDefault();
     submitText();
+  });
+  input.addEventListener("keydown", (event) => {
+    if (isComposingEvent(event)) {
+      if (event.key === "Enter" || event.keyCode === 13) event.preventDefault();
+      return;
+    }
+    if (event.key === "Enter" && !event.shiftKey) {
+      event.preventDefault();
+      submitText();
+    }
   });
 
   dclear.addEventListener("click", () => {

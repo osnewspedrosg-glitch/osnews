@@ -9,7 +9,7 @@ export JAVA_HOME="${JAVA_HOME:-$T/jdk-17.0.21+9}"
 export PATH="$JAVA_HOME/bin:$PATH"
 BT="${ANDROID_BUILD_TOOLS:-$T/sdk/build-tools/34.0.0}"
 AJ="${ANDROID_JAR:-$T/sdk/platforms/android-34/android.jar}"
-APK_NAME="${APK_NAME:-Anibal-OSNews-v1.0.apk}"
+APK_NAME="${APK_NAME:-Anibal-OSNews-v1.1.apk}"
 
 rm -rf out
 mkdir -p out/c out/gen out/dex
