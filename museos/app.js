@@ -252,6 +252,14 @@
     openDictionary("https://www.wordreference.com/sinonimos/", commitInputValue($("dle-q")));
   });
 
+  try {
+    const initialQ = new URLSearchParams(location.search).get("q");
+    if (initialQ && initialQ.trim() && initialQ.length <= 80) {
+      filterText = initialQ.trim();
+      $("filter-q").value = filterText;
+    }
+  } catch (e) {}
+
   lang = pickLang();
   apply(lang);
   loadObra();

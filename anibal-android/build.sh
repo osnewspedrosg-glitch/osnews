@@ -4,14 +4,20 @@
 # or reuse the local MAY keystore if present. Otherwise a temporary debug key is used.
 set -euo pipefail
 cd "$(dirname "$0")"
+rm -rf out
 T="${ANDROID_TOOLCHAIN:-/workspace/tools}"
 export JAVA_HOME="${JAVA_HOME:-$T/jdk-17.0.21+9}"
 export PATH="$JAVA_HOME/bin:$PATH"
 BT="${ANDROID_BUILD_TOOLS:-$T/sdk/build-tools/34.0.0}"
 AJ="${ANDROID_JAR:-$T/sdk/platforms/android-34/android.jar}"
-APK_NAME="${APK_NAME:-Anibal-OSNews-v1.1.apk}"
+APK_NAME="${APK_NAME:-Anibal-OSNews-v1.2.apk}"
 
-rm -rf out
+# Plain JVM unit checks for the Android-free logic (share-to-X URL, shared links, history, bookmarks, theme).
+rm -rf out/test && mkdir -p out/test
+javac -nowarn -d out/test src/com/osnews/anibal/AnibalLogic.java test/AnibalLogicTest.java
+java -cp out/test com.osnews.anibal.AnibalLogicTest
+if [ "${1:-}" = "test" ]; then exit 0; fi
+
 mkdir -p out/c out/gen out/dex
 "$BT/aapt2" compile --dir res -o out/res.zip
 "$BT/aapt2" link -I "$AJ" --manifest AndroidManifest.xml -o out/base.apk --java out/gen out/res.zip --auto-add-overlay

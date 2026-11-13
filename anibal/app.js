@@ -64,6 +64,30 @@
       installed: 'Aníbal instalado',
       installHelp: 'En Chrome, abre el menú ⋮ y elige Instalar aplicación o Añadir a la pantalla de inicio. En iPhone, abre esta página en Safari, pulsa Compartir y elige Añadir a pantalla de inicio.',
       legal: 'Aníbal es una página de inicio y un navegador ligero para Android. No sustituye a Chrome ni a Firefox.',
+      xosnews: 'X OSNews',
+      xosnewsS: '@Osnewsmaygrok: boletines de MAY cada hora',
+      grok: 'Grok',
+      grokS: 'Abre grok.com con tu propia cuenta. OSNews no guarda claves ni paga nada',
+      starlink: 'Starlink · Conexión a internet satelital',
+      starlinkSub: 'invitación de Pedro',
+      starlinkText: 'Enlace de invitación de Pedro: obtén 45 € en efectivo o saldo de servicio de Starlink al registrarte. Se aplican términos.',
+      starlinkGo: 'Abrir Starlink',
+      palabra: 'Buscador único',
+      palabraLead: 'Escribe una palabra y te salen a la vez el diccionario, las dudas, los sinónimos, Museos OSNews y libros gratis.',
+      palabraPh: 'Escribe una palabra',
+      palabraGo: 'Ver enlaces',
+      palabraHint: 'Solo abre las páginas oficiales. Aníbal no copia su contenido ni guarda lo que escribes.',
+      palabraBad: 'Escribe una sola palabra o expresión corta, sin enlaces.',
+      plRae: 'Diccionario RAE',
+      plDpd: 'Dudas (panhispánico)',
+      plDpdS: 'Diccionario panhispánico de dudas · rae.es',
+      plSin: 'Sinónimos',
+      plMuseos: 'Museos OSNews',
+      plMuseosS: 'Fichas que contienen la palabra',
+      plLibros: 'Libros gratis',
+      plLibrosS: 'Project Gutenberg, dominio público',
+      plLibrosOsnews: 'Más libros legales',
+      plLibrosOsnewsS: 'Bibliotecas oficiales en Museos OSNews',
       authors: 'Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.'
     },
     en: {
@@ -118,6 +142,31 @@
       installed: 'Aníbal installed',
       installHelp: 'In Chrome, open the ⋮ menu and choose Install app or Add to Home screen. On iPhone, open this page in Safari, tap Share, then Add to Home Screen.',
       legal: 'Aníbal is a start page and a lightweight Android browser. It does not replace Chrome or Firefox.',
+      xosnews: 'X OSNews',
+      xosnewsS: '@Osnewsmaygrok: MAY bulletins every hour',
+      grok: 'Grok',
+      grokS: 'Opens grok.com with your own account. OSNews stores no keys and pays nothing',
+      starlink: 'Starlink · Satellite internet',
+      starlinkSub: 'Pedro’s invitation',
+      starlinkGrok: 'What Starlink is, according to @grok (quoted in Spanish)',
+      starlinkText: 'Pedro’s invitation link: get €45 in cash or Starlink service credit when you sign up. Terms apply.',
+      starlinkGo: 'Open Starlink',
+      palabra: 'One-word search',
+      palabraLead: 'Type a word to see the Spanish dictionary, usage doubts, synonyms, OSNews Museums and free books at once.',
+      palabraPh: 'Type a word',
+      palabraGo: 'Show links',
+      palabraHint: 'It only opens the official pages. Aníbal does not copy their content or store what you type.',
+      palabraBad: 'Type a single word or short phrase, without links.',
+      plRae: 'RAE dictionary',
+      plDpd: 'Usage doubts (DPD)',
+      plDpdS: 'Diccionario panhispánico de dudas · rae.es',
+      plSin: 'Synonyms',
+      plMuseos: 'OSNews Museums',
+      plMuseosS: 'Cards that contain the word',
+      plLibros: 'Free books',
+      plLibrosS: 'Project Gutenberg, public domain',
+      plLibrosOsnews: 'More lawful books',
+      plLibrosOsnewsS: 'Official libraries in OSNews Museums',
       authors: 'Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot.'
     },
     fr: {
@@ -456,7 +505,7 @@
   function $(id) { return document.getElementById(id); }
 
   function apply(id) {
-    const t = T[id] || T.es;
+    const t = Object.assign({}, T.es, T[id] || {});
     lang = id;
     document.documentElement.lang = id;
     document.documentElement.dir = LANGS.find((l) => l.id === id).dir;
@@ -506,6 +555,31 @@
     $('t-museos-s').textContent = t.museosS;
     textNode($('t-news'), t.news);
     $('t-news-s').textContent = t.newsS;
+    textNode($('t-x'), t.xosnews);
+    $('t-x-s').textContent = t.xosnewsS;
+    textNode($('t-grok'), t.grok);
+    $('h-starlink').textContent = t.starlink;
+    $('starlink-sub').textContent = t.starlinkSub;
+    $('starlink-grok-h').textContent = t.starlinkGrok || 'Qué es Starlink, según @grok';
+    $('starlink-text').textContent = t.starlinkText;
+    $('starlink-link').textContent = t.starlinkGo;
+    $('t-grok-s').textContent = t.grokS;
+    $('h-palabra').textContent = t.palabra;
+    $('palabra-lead').textContent = t.palabraLead;
+    $('palabra-q').placeholder = t.palabraPh;
+    $('palabra-q').setAttribute('aria-label', t.palabraPh);
+    $('palabra-btn').textContent = t.palabraGo;
+    $('palabra-hint').textContent = t.palabraHint;
+    textNode($('pl-rae'), t.plRae);
+    textNode($('pl-dpd'), t.plDpd);
+    $('pl-dpd-s').textContent = t.plDpdS;
+    textNode($('pl-sin'), t.plSin);
+    textNode($('pl-museos'), t.plMuseos);
+    $('pl-museos-s').textContent = t.plMuseosS;
+    textNode($('pl-libros'), t.plLibros);
+    $('pl-libros-s').textContent = t.plLibrosS;
+    textNode($('pl-libros-osnews'), t.plLibrosOsnews);
+    $('pl-libros-osnews-s').textContent = t.plLibrosOsnewsS;
     textNode($('t-app'), t.app);
     $('t-app-s').textContent = t.appS;
     textNode($('t-apk'), t.apk);
@@ -591,6 +665,26 @@
       event.preventDefault();
       window.location.href = dest;
     }
+  });
+
+  const palabra = window.ANIBAL_PALABRA;
+  ime.wireImeForm($('palabra-form'), $('palabra-q'), function (event, text) {
+    event.preventDefault();
+    const box = $('palabra-links');
+    const links = palabra ? palabra.wordLinks(text, '../museos/') : [];
+    const hint = $('palabra-hint');
+    const t = Object.assign({}, T.es, T[lang] || {});
+    if (!links.length) {
+      box.hidden = true;
+      hint.textContent = text ? t.palabraBad : t.palabraHint;
+      return;
+    }
+    hint.textContent = t.palabraHint;
+    links.forEach(function (l) {
+      const a = $('pl-' + l.id);
+      if (a) a.href = l.href;
+    });
+    box.hidden = false;
   });
 
   if ('serviceWorker' in navigator) {

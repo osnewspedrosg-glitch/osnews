@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:id="@+id/root"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/bg">
@@ -102,4 +103,98 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp">
+        <Button
+            android:id="@+id/btn_share_x"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:maxLines="2"
+            android:text="@string/share_x"
+            android:textAllCaps="false"
+            android:textColor="@color/text"
+            android:textSize="11sp" />
+        <Button
+            android:id="@+id/btn_bookmark"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:maxLines="2"
+            android:text="@string/bookmark_add"
+            android:textAllCaps="false"
+            android:textColor="@color/text"
+            android:textSize="11sp" />
+        <Button
+            android:id="@+id/btn_bookmarks"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:maxLines="2"
+            android:text="@string/bookmarks"
+            android:textAllCaps="false"
+            android:textColor="@color/text"
+            android:textSize="11sp" />
+        <Button
+            android:id="@+id/btn_history"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:maxLines="2"
+            android:text="@string/history"
+            android:textAllCaps="false"
+            android:textColor="@color/text"
+            android:textSize="11sp" />
+        <Button
+            android:id="@+id/btn_grok"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:maxLines="2"
+            android:text="@string/grok"
+            android:textAllCaps="false"
+            android:textColor="@color/text"
+            android:textSize="11sp" />
+        <Button
+            android:id="@+id/btn_theme"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:maxLines="2"
+            android:text="@string/theme"
+            android:textAllCaps="false"
+            android:textColor="@color/text"
+            android:textSize="11sp" />
+    </LinearLayout>
 </LinearLayout>
