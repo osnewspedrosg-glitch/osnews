@@ -1,0 +1,240 @@
+{
+  "fetched_at": "2026-11-13T01:44:53+01:00",
+  "timezone": "Europe/Madrid",
+  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-30T00:00:00Z, -is:retweet -is:reply",
+  "accounts": [
+    "BBCNews",
+    "BBCWorld",
+    "BBCMundo",
+    "nytimes",
+    "washingtonpost",
+    "NPR",
+    "el_pais",
+    "lemondefr",
+    "guardian",
+    "dwnews",
+    "dw_espanol",
+    "euronews",
+    "euronewses",
+    "France24",
+    "France24_es",
+    "France24_fr"
+  ],
+  "countries": {
+    "china": [
+      {
+        "id": "2120978402408890670",
+        "account": "France24_es",
+        "name": "FRANCE 24 Español",
+        "date": "2026-11-12",
+        "time": "21:33",
+        "text": "En Contexto - Nvidia, EE. UU. y China: un caso de romance personal a un asunto de Estado ➡️ https://t.co/wqYpyoOMiS https://t.co/niw6be3dfz",
+        "url": "https://x.com/France24_es/status/2120978402408890670"
+      },
+      {
+        "id": "2120969948734300546",
+        "account": "washingtonpost",
+        "name": "The Washington Post",
+        "date": "2026-11-12",
+        "time": "21:00",
+        "text": "After Nvidia CEO Jensen Huang revealed that he was unfaithful to his wife, some of Silicon Valley’s wealthiest individuals rushed to tell their followers that it was okay if one of the most powerful businessmen had exposed himself to a Chinese spy. https://t.co/uxIpYIwTkk",
+        "url": "https://x.com/washingtonpost/status/2120969948734300546"
+      },
+      {
+        "id": "2120948403177672820",
+        "account": "bbcmundo",
+        "name": "BBC News Mundo",
+        "date": "2026-11-12",
+        "time": "19:34",
+        "text": "La empresa china BYD, el mayor productor de vehículos eléctricos del mundo, instaló en Camaçari su fábrica más grande en América Latina. En este reportaje, BBC Brasil explora el impacto que ha tenido en la ciudad brasileña. 👉 https://t.co/BYchHVDEAj https://t.co/XZmvN7SEdc",
+        "url": "https://x.com/bbcmundo/status/2120948403177672820"
+      },
+      {
+        "id": "2120940168500928546",
+        "account": "dw_espanol",
+        "name": "DW Español",
+        "date": "2026-11-12",
+        "time": "19:01",
+        "text": "Pantuflas, té y rapidez: Latinoamérica se prepara para turistas chinos Un calentador de agua en la habitación puede valer más que la mejor cafetera. En la #ITB Américas, expertos explican cómo conquistar en #AméricaLatina a un viajero de #China que no conoce Instagram ni",
+        "url": "https://x.com/dw_espanol/status/2120940168500928546"
+      },
+      {
+        "id": "2120930496280510943",
+        "account": "euronewses",
+        "name": "euronews español",
+        "date": "2026-11-12",
+        "time": "18:23",
+        "text": "Jensen Huang dimite como líder de Nvidia tras 33 años. Jensen Huang abandona la dirección de Nvidia en Estados Unidos en plena crisis por sus relaciones extramatrimoniales y las sospechas de espionaje vinculado a China, dejando el relevo interino a Colette Kress #Nvidia #IA https://t.co/4j0DtoXAEd",
+        "url": "https://x.com/euronewses/status/2120930496280510943"
+      },
+      {
+        "id": "2120913933607321718",
+        "account": "France24_fr",
+        "name": "FRANCE 24 Français",
+        "date": "2026-11-12",
+        "time": "17:17",
+        "text": "🇺🇸🖥️ Le cofondateur de Nvidia quitte ses fonctions après plusieurs polémiques sur sa vie privée, dont une liaison avec une femme soupçonnée d’espionnage au profit de la Chine https://t.co/0TnRT04yrS",
+        "url": "https://x.com/France24_fr/status/2120913933607321718"
+      }
+    ],
+    "india": [
+      {
+        "id": "2120894243380322449",
+        "account": "euronews",
+        "name": "euronews",
+        "date": "2026-11-12",
+        "time": "15:59",
+        "text": "Announced annually by Travel + Leisure since 2014, India follows in the footsteps of previous destinations of the year including Brazil, Thailand and Costa Rica. https://t.co/qzp1ChYRsq",
+        "url": "https://x.com/euronews/status/2120894243380322449"
+      },
+      {
+        "id": "2120816528417243226",
+        "account": "BBCNews",
+        "name": "BBC News (UK)",
+        "date": "2026-11-12",
+        "time": "10:50",
+        "text": "Was Delhi pollution data during Diwali misleading? https://t.co/GXAnOXuKK3",
+        "url": "https://x.com/BBCNews/status/2120816528417243226"
+      },
+      {
+        "id": "2120804706448474351",
+        "account": "BBCWorld",
+        "name": "BBC News (World)",
+        "date": "2026-11-12",
+        "time": "10:03",
+        "text": "Was Delhi pollution data during Diwali misleading? https://t.co/FLDcikAQMl",
+        "url": "https://x.com/BBCWorld/status/2120804706448474351"
+      },
+      {
+        "id": "2120717035919270176",
+        "account": "washingtonpost",
+        "name": "The Washington Post",
+        "date": "2026-11-12",
+        "time": "04:15",
+        "text": "A Russian paraglider was rescued in India on Nov. 10 after becoming trapped in high-voltage power lines, a rescue official said. Media reports said the man had taken off from one of India’s best-known paragliding sites and was stuck for two hours before being saved. https://t.co/DYgL7eIVhX",
+        "url": "https://x.com/washingtonpost/status/2120717035919270176"
+      },
+      {
+        "id": "2120480403752464498",
+        "account": "BBCWorld",
+        "name": "BBC News (World)",
+        "date": "2026-11-11",
+        "time": "12:34",
+        "text": "New Indian mega library rocked by scandal over 'AI-generated books' https://t.co/uj0LqfdDp2",
+        "url": "https://x.com/BBCWorld/status/2120480403752464498"
+      },
+      {
+        "id": "2120055879231746537",
+        "account": "BBCNews",
+        "name": "BBC News (UK)",
+        "date": "2026-11-10",
+        "time": "08:28",
+        "text": "Oxford museum returns ancestral Naga skulls to India https://t.co/xNifuuciRN",
+        "url": "https://x.com/BBCNews/status/2120055879231746537"
+      }
+    ],
+    "morocco": [
+      {
+        "id": "2120132822102855731",
+        "account": "el_pais",
+        "name": "EL PAÍS",
+        "date": "2026-11-10",
+        "time": "13:33",
+        "text": "📺 TV EN DIRECTO | Saiz informe de que \"se han desmantelado los dos recursos temporales\" en el puerto de Ceuta. A día de ayer, 15.671 migrantes han retornado a Marruecos, de ellas 14.942 por retorno voluntario, 277 expulsiones y 452 devoluciones https://t.co/ddgK2VOa3c",
+        "url": "https://x.com/el_pais/status/2120132822102855731"
+      },
+      {
+        "id": "2120107619184722000",
+        "account": "euronewses",
+        "name": "euronews español",
+        "date": "2026-11-10",
+        "time": "11:53",
+        "text": "El operativo policial busca trasladar a los inmigrantes a otros recursos de acogida o al CATE de El Tarajal. El desmantelamiento del asentamiento ha acelerado los retornos voluntarios a Marruecos. #EuropeNews https://t.co/U3ECp5jAP0",
+        "url": "https://x.com/euronewses/status/2120107619184722000"
+      },
+      {
+        "id": "2118875514060632363",
+        "account": "euronewses",
+        "name": "euronews español",
+        "date": "2026-11-07",
+        "time": "02:17",
+        "text": "La Guardia Civil eleva a 88.146 las devoluciones de Ceuta a Marruecos https://t.co/CUQapJL1Tl",
+        "url": "https://x.com/euronewses/status/2118875514060632363"
+      },
+      {
+        "id": "2118753943924973626",
+        "account": "el_pais",
+        "name": "EL PAÍS",
+        "date": "2026-11-06",
+        "time": "18:14",
+        "text": "🔴 La Guardia Civil cifra en más de 88.000 los retornos de migrantes de Ceuta a Marruecos, más de los que el Gobierno calculó que habían entrado en julio https://t.co/uU3I5VVt7d",
+        "url": "https://x.com/el_pais/status/2118753943924973626"
+      },
+      {
+        "id": "2117520583827103912",
+        "account": "BBCWorld",
+        "name": "BBC News (World)",
+        "date": "2026-11-03",
+        "time": "08:33",
+        "text": "Why a US-Russia showdown left Morocco celebrating https://t.co/p83UCrJNzk",
+        "url": "https://x.com/BBCWorld/status/2117520583827103912"
+      },
+      {
+        "id": "2117237266318045367",
+        "account": "France24_fr",
+        "name": "FRANCE 24 Français",
+        "date": "2026-11-02",
+        "time": "13:47",
+        "text": "🇲🇦🖌️ Yasser #Mounbir avait été placé en détention au mois de juin après avoir dessiné et posté sur son compte Instagram des #caricatures du roi du #Maroc. ➡️ https://t.co/mWKZVuBtkb https://t.co/DJhwUXMHQ0",
+        "url": "https://x.com/France24_fr/status/2117237266318045367"
+      }
+    ],
+    "cuba": [
+      {
+        "id": "2119902032127746556",
+        "account": "dw_espanol",
+        "name": "DW Español",
+        "date": "2026-11-09",
+        "time": "22:16",
+        "text": "Cuba: cada vez menos periodistas independientes y más represión Periodistas, comunicadores, creadores de contenido y organizaciones defensoras de los derechos humanos y la libertad de expresión denuncian el auge de la represión estatal a las voces críticas.",
+        "url": "https://x.com/dw_espanol/status/2119902032127746556"
+      },
+      {
+        "id": "2118543998122127428",
+        "account": "dw_espanol",
+        "name": "DW Español",
+        "date": "2026-11-06",
+        "time": "04:20",
+        "text": "#YoaniSánchez fue liberada tras varias horas detenida en La Habana La #periodista independiente fue liberada nueve horas después de haber sido detenida por la policía política de #Cuba. (jc) https://t.co/3gzL9sAAzz",
+        "url": "https://x.com/dw_espanol/status/2118543998122127428"
+      },
+      {
+        "id": "2118438199920124092",
+        "account": "el_pais",
+        "name": "EL PAÍS",
+        "date": "2026-11-05",
+        "time": "21:20",
+        "text": "La periodista cubana Yoani Sánchez, detenida por la policía en La Habana. La reportera fue apresada la mañana del martes y pudo avisar a la redacción del medio que dirige, en constante acoso de las autoridades cubanas https://t.co/NjUaXPO5En",
+        "url": "https://x.com/el_pais/status/2118438199920124092"
+      },
+      {
+        "id": "2118400895025062037",
+        "account": "dw_espanol",
+        "name": "DW Español",
+        "date": "2026-11-05",
+        "time": "18:51",
+        "text": "#ÚltimoMinuto: Detenida en #Cuba la periodista independiente Yoani Sánchez La directora del diario digital 14ymedio fue interceptada por la policía política cuando salía de su casa en La Habana. Desde entonces, no se tienen noticias de su paradero, según denunció el medio. (ct)",
+        "url": "https://x.com/dw_espanol/status/2118400895025062037"
+      },
+      {
+        "id": "2116057916696400350",
+        "account": "dw_espanol",
+        "name": "DW Español",
+        "date": "2026-10-30",
+        "time": "07:41",
+        "text": "#EEUU expulsa a diplomático cubano tras un altercado en la #ONU El gobierno estadounidense informó que Richard Tur de la Concepción \"no era bienvenido\" en el país. (mg) Lea el artículo completo haciendo clic en la imagen https://t.co/h5t0rbXRpi",
+        "url": "https://x.com/dw_espanol/status/2116057916696400350"
+      }
+    ]
+  }
+}

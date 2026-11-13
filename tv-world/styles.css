@@ -92,3 +92,5 @@ footer strong { color: var(--text); }
   .brand img { width: 52px; height: 52px; }
   button, .chip, .back { min-height: 56px; font-size: 1.05rem; }
 }
+
+.jump { display: flex; flex-wrap: wrap; gap: 10px; }

@@ -1,0 +1,37 @@
+# Daily refresh of the text-only TV World lite headlines from official public RSS.
+# No secrets and no paid services. GitHub Actions cannot call the X connector,
+# so X posts in titulos-x.json are left as last collected; the Europe/Madrid
+# 08:00 routine can refresh that file and rerun the script.
+name: Update OSNews TV World lite headlines
+
+on:
+  schedule:
+    # 07:00 UTC = 08:00 Europe/Madrid in winter (CET) and 09:00 in summer (CEST).
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    if: github.repository == 'osnewspedrosg-glitch/osnews'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Fetch official RSS and rebuild lite pages
+        run: python3 scripts/actualizar-tv-ligera.py
+
+      - name: Commit if headlines changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tv-world/ligera
+          if git diff --cached --quiet; then
+            echo "No headline changes."
+          else
+            git commit -m "Update OSNews TV World lite headlines from official RSS"
+            git push
+          fi
