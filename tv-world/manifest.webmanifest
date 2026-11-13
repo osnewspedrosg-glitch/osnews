@@ -1,0 +1,14 @@
+{
+  "name": "OSNews TV World",
+  "short_name": "OSNews TV",
+  "description": "Debates de OSNews y directos oficiales con reproductor permitido.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220",
+  "lang": "es",
+  "icons": [
+    { "src": "../assets/may-icon-192.png", "sizes": "192x192", "type": "image/png" }
+  ]
+}
