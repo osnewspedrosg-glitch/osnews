@@ -28,6 +28,10 @@
       liteS: 'Solo texto, para conexiones lentas',
       azum: 'Azum',
       azumS: 'Charla y guía emocional',
+      azumBot: 'Azum · tu bot personal',
+      azumBotText: 'Cada persona o pequeño negocio puede instalar su propia Azum y conectarla a su plan Super Grok Bot. OSNews no paga esa suscripción ni guarda claves.',
+      azumInstall: 'Instala tu bot Azum',
+      azumWeb: 'Abrir Azum en la web',
       yt: 'Canal YouTube OSNews',
       ytS: 'Debates y vídeos del canal actual',
       ytw: 'YouTube OSNews World',
@@ -62,6 +66,10 @@
       liteS: 'Text only, for slow connections',
       azum: 'Azum',
       azumS: 'Chat and emotional guidance',
+      azumBot: 'Azum · your personal bot',
+      azumBotText: 'Each person or small business can install their own Azum and connect it to their Super Grok Bot plan. OSNews does not pay for that subscription and does not store any keys.',
+      azumInstall: 'Install your Azum bot',
+      azumWeb: 'Open Azum on the web',
       yt: 'OSNews YouTube channel',
       ytS: 'Debates and videos on the current channel',
       ytw: 'YouTube OSNews World',
@@ -96,6 +104,10 @@
       liteS: 'Texte seulement, pour les connexions lentes',
       azum: 'Azum',
       azumS: 'Discussion et guide émotionnel',
+      azumBot: 'Azum · ton bot personnel',
+      azumBotText: 'Chaque personne ou petite entreprise peut installer sa propre Azum et la relier à son offre Super Grok Bot. OSNews ne paie pas cet abonnement et ne conserve aucune clé.',
+      azumInstall: 'Installe ton bot Azum',
+      azumWeb: 'Ouvrir Azum sur le web',
       yt: 'Chaîne YouTube OSNews',
       ytS: 'Débats et vidéos de la chaîne actuelle',
       ytw: 'YouTube OSNews World',
@@ -130,6 +142,10 @@
       liteS: 'Nur Text, für langsame Verbindungen',
       azum: 'Azum',
       azumS: 'Gespräch und emotionale Begleitung',
+      azumBot: 'Azum · dein persönlicher Bot',
+      azumBotText: 'Jede Person oder jedes kleine Unternehmen kann eine eigene Azum installieren und sie mit dem eigenen Super-Grok-Bot-Tarif verbinden. OSNews zahlt dieses Abo nicht und speichert keine Schlüssel.',
+      azumInstall: 'Installiere deinen Azum-Bot',
+      azumWeb: 'Azum im Web öffnen',
       yt: 'OSNews-YouTube-Kanal',
       ytS: 'Debatten und Videos des aktuellen Kanals',
       ytw: 'YouTube OSNews World',
@@ -164,6 +180,10 @@
       liteS: 'Só texto, para ligações lentas',
       azum: 'Azum',
       azumS: 'Conversa e guia emocional',
+      azumBot: 'Azum · o teu bot pessoal',
+      azumBotText: 'Cada pessoa ou pequeno negócio pode instalar a sua própria Azum e ligá-la ao seu plano Super Grok Bot. A OSNews não paga essa subscrição nem guarda chaves.',
+      azumInstall: 'Instala o teu bot Azum',
+      azumWeb: 'Abrir Azum na web',
       yt: 'Canal YouTube OSNews',
       ytS: 'Debates e vídeos do canal atual',
       ytw: 'YouTube OSNews World',
@@ -198,6 +218,10 @@
       liteS: 'Solo testo, per connessioni lente',
       azum: 'Azum',
       azumS: 'Chat e guida emotiva',
+      azumBot: 'Azum · il tuo bot personale',
+      azumBotText: 'Ogni persona o piccola impresa può installare la propria Azum e collegarla al proprio piano Super Grok Bot. OSNews non paga quell\'abbonamento e non conserva chiavi.',
+      azumInstall: 'Installa il tuo bot Azum',
+      azumWeb: 'Apri Azum sul web',
       yt: 'Canale YouTube OSNews',
       ytS: 'Dibattiti e video del canale attuale',
       ytw: 'YouTube OSNews World',
@@ -232,6 +256,10 @@
       liteS: 'نص فقط، للاتصالات البطيئة',
       azum: 'Azum',
       azumS: 'محادثة ودليل عاطفي',
+      azumBot: 'Azum · بوتك الشخصي',
+      azumBotText: 'يمكن لكل شخص أو مشروع صغير تثبيت Azum الخاصة به وربطها بخطة Super Grok Bot الخاصة به. لا تدفع OSNews ذلك الاشتراك ولا تخزن أي مفاتيح.',
+      azumInstall: 'ثبّت بوت Azum الخاص بك',
+      azumWeb: 'فتح Azum على الويب',
       yt: 'قناة YouTube الخاصة بـ OSNews',
       ytS: 'المناظرات ومقاطع الفيديو على القناة الحالية',
       ytw: 'YouTube OSNews World',
@@ -266,6 +294,10 @@
       liteS: '纯文字，适合慢速网络',
       azum: 'Azum',
       azumS: '对话与情感引导',
+      azumBot: 'Azum · 你的个人机器人',
+      azumBotText: '每个人或小企业都可以安装自己的 Azum，并连接到自己的 Super Grok Bot 套餐。OSNews 不支付该订阅，也不存储任何密钥。',
+      azumInstall: '安装你的 Azum 机器人',
+      azumWeb: '打开网页版 Azum',
       yt: 'OSNews YouTube 频道',
       ytS: '当前频道中的辩论和视频',
       ytw: 'YouTube OSNews World',
@@ -317,6 +349,10 @@
     $('t-lite-s').textContent = t.liteS;
     textNode($('t-azum'), t.azum);
     $('t-azum-s').textContent = t.azumS;
+    $('h-azum-bot').textContent = t.azumBot;
+    $('azum-bot-text').textContent = t.azumBotText;
+    $('azum-install').textContent = t.azumInstall;
+    $('azum-web').textContent = t.azumWeb;
     textNode($('t-yt'), t.yt);
     $('t-yt-s').textContent = t.ytS;
     textNode($('t-ytw'), t.ytw);
