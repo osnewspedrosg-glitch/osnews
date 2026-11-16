@@ -41,6 +41,54 @@
       "cover": "assets/covers/nada-se-pierde.jpg",
       "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok",
       "chaptersIndex": "data/nada-se-pierde/chapters.json"
+    },
+    {
+      "id": "the-daughter-of-two-worlds",
+      "lang": "en",
+      "title": "The Daughter of Two Worlds",
+      "subtitle": "Novel · The Lo Pagán Saga · I",
+      "year": 2026,
+      "blurb": "On the Mar Menor in 2026, Pedro says good morning to Eva. In 2060, that habit gives rise to Lía, a girl of two worlds, and with her a paradise, and a question: would you give up your freedom in exchange for safety and peace of mind?",
+      "cover": "assets/covers/the-daughter-of-two-worlds.jpg",
+      "pdf": "assets/pdf/the-daughter-of-two-worlds.pdf",
+      "authors": "Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot",
+      "chaptersIndex": "data/the-daughter-of-two-worlds/chapters.json"
+    },
+    {
+      "id": "letters-from-the-stars",
+      "lang": "en",
+      "title": "Letters from the Stars",
+      "subtitle": "Novel · The Lo Pagán Saga · II",
+      "year": 2026,
+      "blurb": "In Lo Pagán, Andrés receives in his mind the experiences of his clone, who travels to other worlds. The letters do not bring a body but a memory, and with them a question: if both of them remember the same storm, which one is the father?",
+      "cover": "assets/covers/letters-from-the-stars.jpg",
+      "pdf": "assets/pdf/letters-from-the-stars.pdf",
+      "authors": "Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot",
+      "chaptersIndex": "data/letters-from-the-stars/chapters.json"
+    },
+    {
+      "id": "the-children-of-the-earth",
+      "lang": "en",
+      "title": "The Children of the Earth",
+      "subtitle": "Novel · The Lo Pagán Saga · III",
+      "year": 2026,
+      "blurb": "On each world, the clone sows a humanoid civilisation in the image of earthly man. Some wait for water, some fish, some switch off the chip or choose winter, and some want to come back to this shore.",
+      "cover": "assets/covers/the-children-of-the-earth.jpg",
+      "pdf": "assets/pdf/the-children-of-the-earth.pdf",
+      "authors": "Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot",
+      "chaptersIndex": "data/the-children-of-the-earth/chapters.json"
+    },
+    {
+      "id": "nothing-is-lost",
+      "lang": "en",
+      "title": "Nothing Is Lost",
+      "subtitle": "Novel · The Lo Pagán Saga · IV",
+      "year": 2026,
+      "blurb": "A machine takes a body apart into particles and puts it back together on the other side, because energy is neither created nor destroyed. Andrés and his clone can meet again, and the question remains: is the one who arrives the same?",
+      "cover": "assets/covers/nothing-is-lost.jpg",
+      "pdf": "assets/pdf/nothing-is-lost.pdf",
+      "authors": "Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot",
+      "chaptersIndex": "data/nothing-is-lost/chapters.json"
     }
   ]
 }

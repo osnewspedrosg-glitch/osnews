@@ -1,0 +1,77 @@
+{
+  "bookId": "nothing-is-lost",
+  "chapters": [
+    {
+      "id": "00-prologue",
+      "title": "Prologue. The Phrase",
+      "file": "chapters/00-prologue.json",
+      "kind": "prologo"
+    },
+    {
+      "id": "01-the-machine",
+      "title": "Chapter 1. The Machine",
+      "file": "chapters/01-the-machine.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "02-the-first-to-cross",
+      "title": "Chapter 2. The First to Cross",
+      "file": "chapters/02-the-first-to-cross.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "03-what-is-taken-apart",
+      "title": "Chapter 3. What Is Taken Apart",
+      "file": "chapters/03-what-is-taken-apart.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "04-the-reunion",
+      "title": "Chapter 4. The Reunion",
+      "file": "chapters/04-the-reunion.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "05-what-aya-does-not-cross",
+      "title": "Chapter 5. What Aya Does Not Cross",
+      "file": "chapters/05-what-aya-does-not-cross.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "06-winter-and-the-machine",
+      "title": "Chapter 6. Winter and the Machine",
+      "file": "chapters/06-winter-and-the-machine.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "07-those-who-arrive",
+      "title": "Chapter 7. Those Who Arrive",
+      "file": "chapters/07-those-who-arrive.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "08-the-same",
+      "title": "Chapter 8. The Same?",
+      "file": "chapters/08-the-same.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "09-what-does-not-come-back",
+      "title": "Chapter 9. What Does Not Come Back",
+      "file": "chapters/09-what-does-not-come-back.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "10-on-both-sides",
+      "title": "Chapter 10. On Both Sides",
+      "file": "chapters/10-on-both-sides.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "11-epilogue",
+      "title": "Epilogue. The Science Behind the Machine",
+      "file": "chapters/11-epilogue.json",
+      "kind": "epilogo"
+    }
+  ]
+}

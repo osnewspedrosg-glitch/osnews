@@ -1,0 +1,77 @@
+{
+  "bookId": "the-children-of-the-earth",
+  "chapters": [
+    {
+      "id": "00-prologue",
+      "title": "Prologue. The Sowing",
+      "file": "chapters/00-prologue.json",
+      "kind": "prologo"
+    },
+    {
+      "id": "01-those-who-wait-for-water",
+      "title": "Chapter 1. Those Who Wait for Water",
+      "file": "chapters/01-those-who-wait-for-water.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "02-those-who-fish",
+      "title": "Chapter 2. Those Who Fish",
+      "file": "chapters/02-those-who-fish.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "03-the-people-of-the-threshold",
+      "title": "Chapter 3. The People of the Threshold",
+      "file": "chapters/03-the-people-of-the-threshold.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "04-the-almost-identical-house",
+      "title": "Chapter 4. The Almost-Identical House",
+      "file": "chapters/04-the-almost-identical-house.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "05-those-who-do-not-want-a-chip",
+      "title": "Chapter 5. Those Who Do Not Want a Chip",
+      "file": "chapters/05-those-who-do-not-want-a-chip.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "06-the-priceless-garden",
+      "title": "Chapter 6. The Priceless Garden",
+      "file": "chapters/06-the-priceless-garden.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "07-those-with-the-same-face",
+      "title": "Chapter 7. Those with the Same Face",
+      "file": "chapters/07-those-with-the-same-face.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "08-those-who-chose-winter",
+      "title": "Chapter 8. Those Who Chose Winter",
+      "file": "chapters/08-those-who-chose-winter.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "09-those-who-want-to-return",
+      "title": "Chapter 9. Those Who Want to Return",
+      "file": "chapters/09-those-who-want-to-return.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "10-the-many-shores",
+      "title": "Chapter 10. The Many Shores",
+      "file": "chapters/10-the-many-shores.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "11-epilogue",
+      "title": "Epilogue. The Science Behind the Children",
+      "file": "chapters/11-epilogue.json",
+      "kind": "epilogo"
+    }
+  ]
+}

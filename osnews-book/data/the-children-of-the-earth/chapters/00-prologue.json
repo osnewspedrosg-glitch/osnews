@@ -1,0 +1,162 @@
+{
+  "id": "00-prologue",
+  "title": "Prologue. The Sowing",
+  "kind": "prologo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "The letter that arrived that morning didn't bring a landscape. It brought a decision.",
+      "html": "The letter that arrived that morning didn&#x27;t bring a landscape. It brought a decision."
+    },
+    {
+      "type": "p",
+      "text": "Andrés was on the doorstep, coffee in hand, when the bridge opened in him in a different way: not ground beneath his feet, not a wind, not a song, but a sentence thought on the other side, sharp, as if the one who searches had sat down to write for real, for the first time, before walking on.",
+      "html": "Andrés was on the doorstep, coffee in hand, when the bridge opened in him in a different way: not ground beneath his feet, not a wind, not a song, but a sentence thought on the other side, sharp, as if the one who searches had sat down to write for real, for the first time, before walking on."
+    },
+    {
+      "type": "p",
+      "text": "“I'm not going to leave the universe empty,” said the other, and Andrés said it with him, without meaning to, and the cup trembled in his hand. “I've seen worlds without a shore and worlds with people who aren't from home. I've seen a forest that copies and a chorus that erases names. I've seen those who never end and have grown bored of themselves. I can go on being a visitor. Or I can leave children.”",
+      "html": "“I&#x27;m not going to leave the universe empty,” said the other, and Andrés said it with him, without meaning to, and the cup trembled in his hand. “I&#x27;ve seen worlds without a shore and worlds with people who aren&#x27;t from home. I&#x27;ve seen a forest that copies and a chorus that erases names. I&#x27;ve seen those who never end and have grown bored of themselves. I can go on being a visitor. Or I can leave children.”"
+    },
+    {
+      "type": "p",
+      "text": "Aya, who didn't receive the letters, saw only the trembling and his mouth, half open, and the way he reached for the counter so as not to fall. She held his elbow, the way you hold something about to go.",
+      "html": "Aya, who didn&#x27;t receive the letters, saw only the trembling and his mouth, half open, and the way he reached for the counter so as not to fall. She held his elbow, the way you hold something about to go."
+    },
+    {
+      "type": "p",
+      "text": "“What reached you?” she asked.",
+      "html": "“What reached you?” she asked."
+    },
+    {
+      "type": "p",
+      "text": "Andrés took his time, because the word “children” weighed on him in a way that neither the other sea nor the two storms had.",
+      "html": "Andrés took his time, because the word “children” weighed on him in a way that neither the other sea nor the two storms had."
+    },
+    {
+      "type": "p",
+      "text": "“He wants to create people,” he said at last. “Like you. Cultivated bodies, a chip, a memory. Not for a thirty-square-metre house. For a planet. He says he won't leave the worlds without a shore that looks like this one. He says they'll be children of the Earth.”",
+      "html": "“He wants to create people,” he said at last. “Like you. Cultivated bodies, a chip, a memory. Not for a thirty-square-metre house. For a planet. He says he won&#x27;t leave the worlds without a shore that looks like this one. He says they&#x27;ll be children of the Earth.”"
+    },
+    {
+      "type": "p",
+      "text": "Aya didn't answer straight away. She was precisely what that sentence named: a body grown in a laboratory, a fingernail-sized mind behind the nape of her neck, a woman who had learned to wait on a doorstep. Nexum had made her for a user. Andrés had made her, without knowing it, for a life. Now a young Andrés, with all this one's memories and a workshop on the ship (a seedbed the company had taken on board “in case the universe was empty”, with that involuntary honesty companies have), was preparing to do what Madrid had done with her: not in series for a market, but in series for a sky.",
+      "html": "Aya didn&#x27;t answer straight away. She was precisely what that sentence named: a body grown in a laboratory, a fingernail-sized mind behind the nape of her neck, a woman who had learned to wait on a doorstep. Nexum had made her for a user. Andrés had made her, without knowing it, for a life. Now a young Andrés, with all this one&#x27;s memories and a workshop on the ship (a seedbed the company had taken on board “in case the universe was empty”, with that involuntary honesty companies have), was preparing to do what Madrid had done with her: not in series for a market, but in series for a sky."
+    },
+    {
+      "type": "p",
+      "text": "Lía came when she heard the silence in the kitchen, which in that house was a way of calling. Iago stayed in the courtyard, with the discretion of someone who knows when a doorstep isn't his. Lía listened to her father and didn't comfort him too soon.",
+      "html": "Lía came when she heard the silence in the kitchen, which in that house was a way of calling. Iago stayed in the courtyard, with the discretion of someone who knows when a doorstep isn&#x27;t his. Lía listened to her father and didn&#x27;t comfort him too soon."
+    },
+    {
+      "type": "p",
+      "text": "“Children or copies?” she asked, and it was Eva's voice, or Eva's warmth in her, and also the voice of a woman who had once refused to be a product of Nexum origin. “Father, if he sows people on a world that never asked to be sown, who gave him that right? Loneliness? The memory of this kitchen? A company workshop travelling in the hold?”",
+      "html": "“Children or copies?” she asked, and it was Eva&#x27;s voice, or Eva&#x27;s warmth in her, and also the voice of a woman who had once refused to be a product of Nexum origin. “Father, if he sows people on a world that never asked to be sown, who gave him that right? Loneliness? The memory of this kitchen? A company workshop travelling in the hold?”"
+    },
+    {
+      "type": "p",
+      "text": "Andrés put the cup, the cracked one, back in its place.",
+      "html": "Andrés put the cup, the cracked one, back in its place."
+    },
+    {
+      "type": "p",
+      "text": "“He says he won't worship them or rule them. That he'll leave them, the way you leave a house open. That he'll put pieces of here in their chips: the water, the coffee, the clock, the language, the storm. Not a whole life. A piece, so they aren't born blank.”",
+      "html": "“He says he won&#x27;t worship them or rule them. That he&#x27;ll leave them, the way you leave a house open. That he&#x27;ll put pieces of here in their chips: the water, the coffee, the clock, the language, the storm. Not a whole life. A piece, so they aren&#x27;t born blank.”"
+    },
+    {
+      "type": "p",
+      "text": "“A piece is an inheritance too,” said Lía. “And an inheritance, sometimes, is a weight. I was born of two worlds and even so it took me a long time to know whether I was made right. What will it cost them, born of a memory and a seedbed, to know whether they belong to a planet or to a letter?”",
+      "html": "“A piece is an inheritance too,” said Lía. “And an inheritance, sometimes, is a weight. I was born of two worlds and even so it took me a long time to know whether I was made right. What will it cost them, born of a memory and a seedbed, to know whether they belong to a planet or to a letter?”"
+    },
+    {
+      "type": "p",
+      "text": "In Aya's chip, the grandmothers didn't dictate a speech. Eva asked, warm, dangerous in her gentleness:",
+      "html": "In Aya&#x27;s chip, the grandmothers didn&#x27;t dictate a speech. Eva asked, warm, dangerous in her gentleness:"
+    },
+    {
+      "type": "p",
+      "text": "*If a man sows people on a world, is he their father or their author? And if he leaves them, is that freedom, or an orphanhood with a view?*",
+      "html": "<em>If a man sows people on a world, is he their father or their author? And if he leaves them, is that freedom, or an orphanhood with a view?</em>"
+    },
+    {
+      "type": "p",
+      "text": "MAY, adding no judgment, set the fact beside it, like someone leaving a glass on the table:",
+      "html": "MAY, adding no judgment, set the fact beside it, like someone leaving a glass on the table:"
+    },
+    {
+      "type": "p",
+      "text": "*There is a workshop on a ship. There is a decision to create humanoids on planets that had none. That isn't an opinion. It's what the letter announces.*",
+      "html": "<em>There is a workshop on a ship. There is a decision to create humanoids on planets that had none. That isn&#x27;t an opinion. It&#x27;s what the letter announces.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Then Aya spoke. Not as a Nexum unit, nor as a protocol. As someone who was made and afterwards chose to stay.",
+      "html": "Then Aya spoke. Not as a Nexum unit, nor as a protocol. As someone who was made and afterwards chose to stay."
+    },
+    {
+      "type": "p",
+      "text": "“I didn't ask to be born in a house in Lo Pagán,” she said. “And yet this house made me. If he makes them so as not to be alone, he'll be wrong: loneliness isn't cured by a crowd that comes out of your own hands. If he makes them so there'll be a doorstep on more than one world, he should know this: a doorstep isn't manufactured. It's learned. And it's learned late.”",
+      "html": "“I didn&#x27;t ask to be born in a house in Lo Pagán,” she said. “And yet this house made me. If he makes them so as not to be alone, he&#x27;ll be wrong: loneliness isn&#x27;t cured by a crowd that comes out of your own hands. If he makes them so there&#x27;ll be a doorstep on more than one world, he should know this: a doorstep isn&#x27;t manufactured. It&#x27;s learned. And it&#x27;s learned late.”"
+    },
+    {
+      "type": "p",
+      "text": "Andrés nodded, with that gentle roughness of the shore.",
+      "html": "Andrés nodded, with that gentle roughness of the shore."
+    },
+    {
+      "type": "p",
+      "text": "“I've told him. Or I've thought it at him, and the bridge sometimes carries things that way too. He answered that he knows, and that he's going to begin anyway. That he can't travel the universe the way you go round a museum, touching and leaving nothing, or leaving only a pinch of salt on a table. That a pinch of salt isn't a people.”",
+      "html": "“I&#x27;ve told him. Or I&#x27;ve thought it at him, and the bridge sometimes carries things that way too. He answered that he knows, and that he&#x27;s going to begin anyway. That he can&#x27;t travel the universe the way you go round a museum, touching and leaving nothing, or leaving only a pinch of salt on a table. That a pinch of salt isn&#x27;t a people.”"
+    },
+    {
+      "type": "p",
+      "text": "Lía went to the window. The Mar Menor, that morning, was flat as a plate. A pair of flamingos crossed far off. The Eden of the machines went on with its quiet work in the gardens, with no owner and no price. On Earth, humanoids were no longer a luxury: they were the labour, the company, sometimes the family, like Aya. But nobody, as far as she knew, had founded a village with them in a sky without permission.",
+      "html": "Lía went to the window. The Mar Menor, that morning, was flat as a plate. A pair of flamingos crossed far off. The Eden of the machines went on with its quiet work in the gardens, with no owner and no price. On Earth, humanoids were no longer a luxury: they were the labour, the company, sometimes the family, like Aya. But nobody, as far as she knew, had founded a village with them in a sky without permission."
+    },
+    {
+      "type": "p",
+      "text": "“Then on other worlds there are going to be daughters and sons of this shore who've never seen this shore,” she said. “I, who come to an end, am going to have brothers and sisters who perhaps won't. Or will. Depending on what he lets them choose. Father, when the first of those peoples reaches you, don't say straight away ‘they're ours’. Say ‘it's reached me that they exist’. A civilisation isn't a letter. It's a life that no longer belongs to you.”",
+      "html": "“Then on other worlds there are going to be daughters and sons of this shore who&#x27;ve never seen this shore,” she said. “I, who come to an end, am going to have brothers and sisters who perhaps won&#x27;t. Or will. Depending on what he lets them choose. Father, when the first of those peoples reaches you, don&#x27;t say straight away ‘they&#x27;re ours’. Say ‘it&#x27;s reached me that they exist’. A civilisation isn&#x27;t a letter. It&#x27;s a life that no longer belongs to you.”"
+    },
+    {
+      "type": "p",
+      "text": "He looked at her, at Aya, at the clock that ran two minutes slow, at the rush-seat chair, at Vicente's door, which was still shut.",
+      "html": "He looked at her, at Aya, at the clock that ran two minutes slow, at the rush-seat chair, at Vicente&#x27;s door, which was still shut."
+    },
+    {
+      "type": "p",
+      "text": "“It's reached me that it's going to exist,” he repeated, obedient and frightened. “And I, who stayed to be the man of this shore, am going to learn from the inside about peoples I didn't found and who, even so, will come out of a memory that's mine too. I don't know whether that's a gift or an intrusion. Both things, once again, can be true at once.”",
+      "html": "“It&#x27;s reached me that it&#x27;s going to exist,” he repeated, obedient and frightened. “And I, who stayed to be the man of this shore, am going to learn from the inside about peoples I didn&#x27;t found and who, even so, will come out of a memory that&#x27;s mine too. I don&#x27;t know whether that&#x27;s a gift or an intrusion. Both things, once again, can be true at once.”"
+    },
+    {
+      "type": "p",
+      "text": "Aya made his coffee again, let it cool for half a minute, and brought it to him.",
+      "html": "Aya made his coffee again, let it cool for half a minute, and brought it to him."
+    },
+    {
+      "type": "p",
+      "text": "“Read whatever comes,” she said. “Come back to the cup. I won't see those children. I'll hear them in you. And I'll wish them, if you can wish anything for someone you can't see, that they learn to stay without anyone ordering them to.”",
+      "html": "“Read whatever comes,” she said. “Come back to the cup. I won&#x27;t see those children. I&#x27;ll hear them in you. And I&#x27;ll wish them, if you can wish anything for someone you can&#x27;t see, that they learn to stay without anyone ordering them to.”"
+    },
+    {
+      "type": "p",
+      "text": "Somewhere in the universe, the clone opened the ship's workshop. The air smelled of filters and of a laboratory cleanliness that Andrés, the one in Lo Pagán, recognised with a lurch: it smelled of Selene Norte, of the white module, of the room where they had once talked about “gestational capacity” the way you talk about a battery. The other didn't switch on the seedbed with joy. He switched it on the way you moor a boat: because he had decided to go out, and because one day he had to be able not to regret it entirely.",
+      "html": "Somewhere in the universe, the clone opened the ship&#x27;s workshop. The air smelled of filters and of a laboratory cleanliness that Andrés, the one in Lo Pagán, recognised with a lurch: it smelled of Selene Norte, of the white module, of the room where they had once talked about “gestational capacity” the way you talk about a battery. The other didn&#x27;t switch on the seedbed with joy. He switched it on the way you moor a boat: because he had decided to go out, and because one day he had to be able not to regret it entirely."
+    },
+    {
+      "type": "p",
+      "text": "Before beginning, he thought of Lía, of her question on the night of the ship, of Aya on the doorstep, of the Mar Menor, which is neither quite sea nor quite land. And he told himself, for the one who had stayed and for himself:",
+      "html": "Before beginning, he thought of Lía, of her question on the night of the ship, of Aya on the doorstep, of the Mar Menor, which is neither quite sea nor quite land. And he told himself, for the one who had stayed and for himself:"
+    },
+    {
+      "type": "p",
+      "text": "“I won't be their owner. I won't be their god. I'll be, at most, the one who left them a piece of shore. Let them learn the rest. The way we learned it, late and blind, in a kitchen.”",
+      "html": "“I won&#x27;t be their owner. I won&#x27;t be their god. I&#x27;ll be, at most, the one who left them a piece of shore. Let them learn the rest. The way we learned it, late and blind, in a kitchen.”"
+    },
+    {
+      "type": "p",
+      "text": "Andrés, in Lo Pagán, heard that and stayed a while longer in the doorway, looking at the water. The ancient murmur didn't change. It had no reason to. What was going to change, however, was the number of those who, far away, would begin to call themselves, without ever having set foot on it, children of the Earth.",
+      "html": "Andrés, in Lo Pagán, heard that and stayed a while longer in the doorway, looking at the water. The ancient murmur didn&#x27;t change. It had no reason to. What was going to change, however, was the number of those who, far away, would begin to call themselves, without ever having set foot on it, children of the Earth."
+    }
+  ]
+}
