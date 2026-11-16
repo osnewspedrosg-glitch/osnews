@@ -1,0 +1,77 @@
+{
+  "bookId": "nada-se-pierde",
+  "chapters": [
+    {
+      "id": "00-prologo",
+      "title": "Prólogo. La frase",
+      "file": "chapters/00-prologo.json",
+      "kind": "prologo"
+    },
+    {
+      "id": "01-la-maquina",
+      "title": "Capítulo 1. La máquina",
+      "file": "chapters/01-la-maquina.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "02-el-primero-que-cruza",
+      "title": "Capítulo 2. El primero que cruza",
+      "file": "chapters/02-el-primero-que-cruza.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "03-lo-que-se-descompone",
+      "title": "Capítulo 3. Lo que se descompone",
+      "file": "chapters/03-lo-que-se-descompone.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "04-el-reencuentro",
+      "title": "Capítulo 4. El reencuentro",
+      "file": "chapters/04-el-reencuentro.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "05-lo-que-aya-no-cruza",
+      "title": "Capítulo 5. Lo que Aya no cruza",
+      "file": "chapters/05-lo-que-aya-no-cruza.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "06-el-invierno-y-la-maquina",
+      "title": "Capítulo 6. El invierno y la máquina",
+      "file": "chapters/06-el-invierno-y-la-maquina.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "07-los-que-llegan",
+      "title": "Capítulo 7. Los que llegan",
+      "file": "chapters/07-los-que-llegan.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "08-el-mismo",
+      "title": "Capítulo 8. ¿El mismo?",
+      "file": "chapters/08-el-mismo.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "09-lo-que-no-vuelve",
+      "title": "Capítulo 9. Lo que no vuelve",
+      "file": "chapters/09-lo-que-no-vuelve.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "10-a-los-dos-lados",
+      "title": "Capítulo 10. A los dos lados",
+      "file": "chapters/10-a-los-dos-lados.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "11-epilogo",
+      "title": "Epílogo. La ciencia detrás de la máquina",
+      "file": "chapters/11-epilogo.json",
+      "kind": "epilogo"
+    }
+  ]
+}

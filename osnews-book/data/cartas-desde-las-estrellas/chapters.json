@@ -1,0 +1,77 @@
+{
+  "bookId": "cartas-desde-las-estrellas",
+  "chapters": [
+    {
+      "id": "00-prologo",
+      "title": "Prólogo. La nave se aleja",
+      "file": "chapters/00-prologo.json",
+      "kind": "prologo"
+    },
+    {
+      "id": "01-la-primera-carta",
+      "title": "Capítulo 1. La primera carta",
+      "file": "chapters/01-la-primera-carta.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "02-el-mar-que-no-es-este",
+      "title": "Capítulo 2. El mar que no es este",
+      "file": "chapters/02-el-mar-que-no-es-este.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "03-el-planeta-del-crepusculo",
+      "title": "Capítulo 3. El planeta del crepúsculo",
+      "file": "chapters/03-el-planeta-del-crepusculo.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "04-lo-que-aya-no-recibe",
+      "title": "Capítulo 4. Lo que Aya no recibe",
+      "file": "chapters/04-lo-que-aya-no-recibe.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "05-lia-ya-mujer",
+      "title": "Capítulo 5. Lía, ya mujer",
+      "file": "chapters/05-lia-ya-mujer.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "06-el-bosque-que-recuerda",
+      "title": "Capítulo 6. El bosque que recuerda",
+      "file": "chapters/06-el-bosque-que-recuerda.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "07-el-mundo-sin-yo",
+      "title": "Capítulo 7. El mundo sin yo",
+      "file": "chapters/07-el-mundo-sin-yo.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "08-los-que-no-se-acaban",
+      "title": "Capítulo 8. Los que no se acaban",
+      "file": "chapters/08-los-que-no-se-acaban.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "09-dos-tormentas",
+      "title": "Capítulo 9. Dos tormentas",
+      "file": "chapters/09-dos-tormentas.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "10-el-umbral-y-las-estrellas",
+      "title": "Capítulo 10. El umbral y las estrellas",
+      "file": "chapters/10-el-umbral-y-las-estrellas.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "11-epilogo",
+      "title": "Epílogo. La ciencia detrás de las cartas",
+      "file": "chapters/11-epilogo.json",
+      "kind": "epilogo"
+    }
+  ]
+}

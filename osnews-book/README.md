@@ -12,9 +12,14 @@ Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.
 - Los capítulos se cargan desde JSON, para ir añadiéndolos uno a uno.
 - App estática, gratis, sin anuncios, sin rastreadores y sin claves en el código. Tipografías del sistema, sin recursos externos.
 
-## Primer libro
+## La saga de Lo Pagán
 
-**La hija de dos mundos** — prólogo, diez capítulos, epílogo y Epílogo II.
+Cuatro novelas, en este orden, en la biblioteca:
+
+1. **La hija de dos mundos** — prólogo, diez capítulos, epílogo y Epílogo II.
+2. **Cartas desde las estrellas** — prólogo, diez capítulos y epílogo.
+3. **Los hijos de la Tierra** — prólogo, diez capítulos y epílogo.
+4. **Nada se pierde** — prólogo, diez capítulos y epílogo.
 
 ## Cómo añadir un capítulo
 

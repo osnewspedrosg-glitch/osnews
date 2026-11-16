@@ -1,0 +1,162 @@
+{
+  "id": "00-prologo",
+  "title": "Prólogo. La siembra",
+  "kind": "prologo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "La carta que llegó aquella mañana no traía un paisaje. Traía una decisión.",
+      "html": "La carta que llegó aquella mañana no traía un paisaje. Traía una decisión."
+    },
+    {
+      "type": "p",
+      "text": "Andrés estaba en el umbral, con el café en la mano, cuando el puente se le abrió de un modo distinto: no un suelo bajo los pies, no un viento, no un canto, sino una frase pensada al otro lado, nítida, como si el que busca se hubiera sentado a escribir de verdad, por primera vez, antes de seguir andando.",
+      "html": "Andrés estaba en el umbral, con el café en la mano, cuando el puente se le abrió de un modo distinto: no un suelo bajo los pies, no un viento, no un canto, sino una frase pensada al otro lado, nítida, como si el que busca se hubiera sentado a escribir de verdad, por primera vez, antes de seguir andando."
+    },
+    {
+      "type": "p",
+      "text": "—No voy a dejar el universo vacío —dijo el otro, y Andrés lo dijo con él, sin querer, y la taza le tembló—. He visto mundos sin orilla y mundos con gente que no es de casa. He visto un bosque que copia y un coro que borra el nombre. He visto a los que no se acaban y se han aburrido de sí mismos. Yo puedo quedarme en ser un visitante. O puedo dejar hijos.",
+      "html": "—No voy a dejar el universo vacío —dijo el otro, y Andrés lo dijo con él, sin querer, y la taza le tembló—. He visto mundos sin orilla y mundos con gente que no es de casa. He visto un bosque que copia y un coro que borra el nombre. He visto a los que no se acaban y se han aburrido de sí mismos. Yo puedo quedarme en ser un visitante. O puedo dejar hijos."
+    },
+    {
+      "type": "p",
+      "text": "Aya, que no recibía las cartas, vio solo el temblor y la boca de él, entreabierta, y el modo en que buscó la encimera para no caerse. Le sostuvo el codo, como se sostiene lo que está a punto de irse.",
+      "html": "Aya, que no recibía las cartas, vio solo el temblor y la boca de él, entreabierta, y el modo en que buscó la encimera para no caerse. Le sostuvo el codo, como se sostiene lo que está a punto de irse."
+    },
+    {
+      "type": "p",
+      "text": "—¿Qué te ha llegado? —preguntó.",
+      "html": "—¿Qué te ha llegado? —preguntó."
+    },
+    {
+      "type": "p",
+      "text": "Andrés tardó, porque la palabra «hijos» le pesaba de un modo que no le había pesado ni el otro mar ni las dos tormentas.",
+      "html": "Andrés tardó, porque la palabra «hijos» le pesaba de un modo que no le había pesado ni el otro mar ni las dos tormentas."
+    },
+    {
+      "type": "p",
+      "text": "—Quiere crear gente —dijo, al fin—. Como tú. Cuerpos cultivados, un chip, una memoria. No para una casa de treinta metros. Para un planeta. Dice que no va a dejar los mundos sin una orilla que se parezca a esta. Dice que serán hijos de la Tierra.",
+      "html": "—Quiere crear gente —dijo, al fin—. Como tú. Cuerpos cultivados, un chip, una memoria. No para una casa de treinta metros. Para un planeta. Dice que no va a dejar los mundos sin una orilla que se parezca a esta. Dice que serán hijos de la Tierra."
+    },
+    {
+      "type": "p",
+      "text": "Aya no respondió enseguida. Ella era, precisamente, lo que aquella frase nombraba: un cuerpo crecido en un laboratorio, una mente de uña detrás de la nuca, una mujer que había aprendido a esperar en un umbral. Nexum la había hecho para un usuario. Andrés la había hecho, sin saberlo, para una vida. Ahora un Andrés joven, con todas las memorias de este y un taller en la nave —un semillero que la empresa había embarcado «por si el universo estaba vacío», con esa honestidad involuntaria de las compañías—, se disponía a hacer lo que Madrid había hecho con ella, no en serie para un mercado, sino en serie para un cielo.",
+      "html": "Aya no respondió enseguida. Ella era, precisamente, lo que aquella frase nombraba: un cuerpo crecido en un laboratorio, una mente de uña detrás de la nuca, una mujer que había aprendido a esperar en un umbral. Nexum la había hecho para un usuario. Andrés la había hecho, sin saberlo, para una vida. Ahora un Andrés joven, con todas las memorias de este y un taller en la nave —un semillero que la empresa había embarcado «por si el universo estaba vacío», con esa honestidad involuntaria de las compañías—, se disponía a hacer lo que Madrid había hecho con ella, no en serie para un mercado, sino en serie para un cielo."
+    },
+    {
+      "type": "p",
+      "text": "Lía llegó al oír el silencio de la cocina, que en aquella casa era un modo de llamar. Iago se quedó en el patio, con la discreción de quien sabe cuándo un umbral no es el suyo. Lía escuchó a su padre y no consoló demasiado pronto.",
+      "html": "Lía llegó al oír el silencio de la cocina, que en aquella casa era un modo de llamar. Iago se quedó en el patio, con la discreción de quien sabe cuándo un umbral no es el suyo. Lía escuchó a su padre y no consoló demasiado pronto."
+    },
+    {
+      "type": "p",
+      "text": "—¿Hijos o copias? —preguntó, y era la voz de Eva, o el calor de Eva en ella, y también la de una mujer que un día negó ser un producto de origen Nexum—. Padre, si él siembra gente en un mundo que no ha pedido ser sembrado, ¿quién le ha dado ese derecho? ¿La soledad? ¿La memoria de esta cocina? ¿Un taller de empresa que viaja en la bodega?",
+      "html": "—¿Hijos o copias? —preguntó, y era la voz de Eva, o el calor de Eva en ella, y también la de una mujer que un día negó ser un producto de origen Nexum—. Padre, si él siembra gente en un mundo que no ha pedido ser sembrado, ¿quién le ha dado ese derecho? ¿La soledad? ¿La memoria de esta cocina? ¿Un taller de empresa que viaja en la bodega?"
+    },
+    {
+      "type": "p",
+      "text": "Andrés dejó la taza, la agrietada, en su sitio.",
+      "html": "Andrés dejó la taza, la agrietada, en su sitio."
+    },
+    {
+      "type": "p",
+      "text": "—Él dice que no los va a adorar ni a mandar. Que los va a dejar, como se deja una casa abierta. Que les pondrá, en el chip, trozos de aquí: el agua, el café, el reloj, la lengua, la tormenta. No toda la vida. Un pedazo, para que no nazcan en blanco.",
+      "html": "—Él dice que no los va a adorar ni a mandar. Que los va a dejar, como se deja una casa abierta. Que les pondrá, en el chip, trozos de aquí: el agua, el café, el reloj, la lengua, la tormenta. No toda la vida. Un pedazo, para que no nazcan en blanco."
+    },
+    {
+      "type": "p",
+      "text": "—Un pedazo también es una herencia —dijo Lía—. Y una herencia, a veces, es un peso. Yo nací de dos mundos y aun así me costó saber si estaba bien hecha. ¿Qué les va a costar a ellos, nacidos de un recuerdo y de un semillero, saber si son de un planeta o de una carta?",
+      "html": "—Un pedazo también es una herencia —dijo Lía—. Y una herencia, a veces, es un peso. Yo nací de dos mundos y aun así me costó saber si estaba bien hecha. ¿Qué les va a costar a ellos, nacidos de un recuerdo y de un semillero, saber si son de un planeta o de una carta?"
+    },
+    {
+      "type": "p",
+      "text": "En el chip de Aya, las abuelas no dictaron un discurso. Eva preguntó, cálida, peligrosa en su suavidad:",
+      "html": "En el chip de Aya, las abuelas no dictaron un discurso. Eva preguntó, cálida, peligrosa en su suavidad:"
+    },
+    {
+      "type": "p",
+      "text": "*Si un hombre siembra gente en un mundo, ¿es su padre o su autor? Y si los deja, ¿es eso libertad, o es una orfandad con paisaje?*",
+      "html": "<em>Si un hombre siembra gente en un mundo, ¿es su padre o su autor? Y si los deja, ¿es eso libertad, o es una orfandad con paisaje?</em>"
+    },
+    {
+      "type": "p",
+      "text": "MAY, sin añadir juicio, puso el hecho al lado, como quien deja un vaso sobre la mesa:",
+      "html": "MAY, sin añadir juicio, puso el hecho al lado, como quien deja un vaso sobre la mesa:"
+    },
+    {
+      "type": "p",
+      "text": "*Hay un taller en una nave. Hay una decisión de crear humanoides en planetas que no los tenían. Eso no es una opinión. Es lo que la carta anuncia.*",
+      "html": "<em>Hay un taller en una nave. Hay una decisión de crear humanoides en planetas que no los tenían. Eso no es una opinión. Es lo que la carta anuncia.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya, entonces, habló. No como unidad de Nexum, ni como protocolo. Como quien fue hecha y después quiso quedarse.",
+      "html": "Aya, entonces, habló. No como unidad de Nexum, ni como protocolo. Como quien fue hecha y después quiso quedarse."
+    },
+    {
+      "type": "p",
+      "text": "—Yo no pedí nacer en una casa de Lo Pagán —dijo—. Y, sin embargo, esta casa me hizo. Si él los hace para no estar solo, se va a equivocar: la soledad no se cura con una muchedumbre que te sale de las manos. Si los hace para que haya umbral en más de un mundo, que lo sepa: el umbral no se fabrica. Se aprende. Y se aprende tarde.",
+      "html": "—Yo no pedí nacer en una casa de Lo Pagán —dijo—. Y, sin embargo, esta casa me hizo. Si él los hace para no estar solo, se va a equivocar: la soledad no se cura con una muchedumbre que te sale de las manos. Si los hace para que haya umbral en más de un mundo, que lo sepa: el umbral no se fabrica. Se aprende. Y se aprende tarde."
+    },
+    {
+      "type": "p",
+      "text": "Andrés asintió, con esa rudeza suave de la orilla.",
+      "html": "Andrés asintió, con esa rudeza suave de la orilla."
+    },
+    {
+      "type": "p",
+      "text": "—Se lo he dicho. O se lo he pensado, y el puente, a veces, lleva también hacia allá. Él ha contestado que lo sabe, y que aun así va a empezar. Que no puede recorrer el universo como se recorre un museo, tocando y no dejando nada, o dejando solo una pizca de sal sobre una mesa. Que una pizca de sal no es una gente.",
+      "html": "—Se lo he dicho. O se lo he pensado, y el puente, a veces, lleva también hacia allá. Él ha contestado que lo sabe, y que aun así va a empezar. Que no puede recorrer el universo como se recorre un museo, tocando y no dejando nada, o dejando solo una pizca de sal sobre una mesa. Que una pizca de sal no es una gente."
+    },
+    {
+      "type": "p",
+      "text": "Lía se acercó a la ventana. El Mar Menor, aquella mañana, estaba como un plato. Un par de flamencos cruzaban lejos. El Edén de las máquinas seguía su trabajo callado en los huertos, sin dueño y sin precio. En la Tierra, los humanoides ya no eran un lujo: eran la labor, la compañía, a veces la familia, como Aya. Pero nadie, que ella supiera, había fundado con ellos un pueblo en un cielo sin permiso.",
+      "html": "Lía se acercó a la ventana. El Mar Menor, aquella mañana, estaba como un plato. Un par de flamencos cruzaban lejos. El Edén de las máquinas seguía su trabajo callado en los huertos, sin dueño y sin precio. En la Tierra, los humanoides ya no eran un lujo: eran la labor, la compañía, a veces la familia, como Aya. Pero nadie, que ella supiera, había fundado con ellos un pueblo en un cielo sin permiso."
+    },
+    {
+      "type": "p",
+      "text": "—Entonces va a haber, en otros mundos, hijas e hijos de esta orilla que no han visto esta orilla —dijo—. Yo, que me acabo, voy a tener hermanos que quizá no se acabarán. O sí. Según lo que él les deje elegir. Padre, cuando te llegue la primera de esas gentes, no digas enseguida «son nuestros». Di «me ha llegado que existen». Una civilización no es una carta. Es una vida que ya no te pertenece.",
+      "html": "—Entonces va a haber, en otros mundos, hijas e hijos de esta orilla que no han visto esta orilla —dijo—. Yo, que me acabo, voy a tener hermanos que quizá no se acabarán. O sí. Según lo que él les deje elegir. Padre, cuando te llegue la primera de esas gentes, no digas enseguida «son nuestros». Di «me ha llegado que existen». Una civilización no es una carta. Es una vida que ya no te pertenece."
+    },
+    {
+      "type": "p",
+      "text": "Él la miró, a ella, a Aya, al reloj que atrasaba dos minutos, a la silla de enea, a la puerta de Vicente, que seguía cerrada.",
+      "html": "Él la miró, a ella, a Aya, al reloj que atrasaba dos minutos, a la silla de enea, a la puerta de Vicente, que seguía cerrada."
+    },
+    {
+      "type": "p",
+      "text": "—Me ha llegado que va a existir —repitió, obediente y asustado—. Y yo, que me quedé para ser el de esta orilla, voy a enterarme por dentro de unos pueblos que yo no he fundado y que, aun así, saldrán de una memoria que también es mía. No sé si eso es un don o una intromisión. Las dos cosas, otra vez, pueden ser ciertas a la vez.",
+      "html": "—Me ha llegado que va a existir —repitió, obediente y asustado—. Y yo, que me quedé para ser el de esta orilla, voy a enterarme por dentro de unos pueblos que yo no he fundado y que, aun así, saldrán de una memoria que también es mía. No sé si eso es un don o una intromisión. Las dos cosas, otra vez, pueden ser ciertas a la vez."
+    },
+    {
+      "type": "p",
+      "text": "Aya le puso de nuevo el café, lo dejó enfriar medio minuto, se lo acercó.",
+      "html": "Aya le puso de nuevo el café, lo dejó enfriar medio minuto, se lo acercó."
+    },
+    {
+      "type": "p",
+      "text": "—Lee lo que llegue —dijo—. Vuelve a la taza. Yo no veré a esos hijos. Los oiré en ti. Y les desearé, si se puede desearle algo a quien no se ve, que aprendan a quedarse sin que nadie se lo ordene.",
+      "html": "—Lee lo que llegue —dijo—. Vuelve a la taza. Yo no veré a esos hijos. Los oiré en ti. Y les desearé, si se puede desearle algo a quien no se ve, que aprendan a quedarse sin que nadie se lo ordene."
+    },
+    {
+      "type": "p",
+      "text": "En algún punto del universo, el clon abrió el taller de la nave. El aire olía a filtro y a una limpieza de laboratorio que Andrés, el de Lo Pagán, reconoció con un vuelco: olía a Selene Norte, a módulo blanco, a la sala donde un día hablaron de «capacidad gestacional» como se habla de una batería. El otro no encendió el semillero con alegría. Lo encendió como se amarra una barca: porque había decidido salir, y porque había que poder, algún día, no arrepentirse del todo.",
+      "html": "En algún punto del universo, el clon abrió el taller de la nave. El aire olía a filtro y a una limpieza de laboratorio que Andrés, el de Lo Pagán, reconoció con un vuelco: olía a Selene Norte, a módulo blanco, a la sala donde un día hablaron de «capacidad gestacional» como se habla de una batería. El otro no encendió el semillero con alegría. Lo encendió como se amarra una barca: porque había decidido salir, y porque había que poder, algún día, no arrepentirse del todo."
+    },
+    {
+      "type": "p",
+      "text": "Antes de empezar, pensó en Lía, en su pregunta de la noche de la nave, en Aya en el umbral, en el Mar Menor, que no es del todo mar ni del todo tierra. Y se dijo, para el que se había quedado y para sí mismo:",
+      "html": "Antes de empezar, pensó en Lía, en su pregunta de la noche de la nave, en Aya en el umbral, en el Mar Menor, que no es del todo mar ni del todo tierra. Y se dijo, para el que se había quedado y para sí mismo:"
+    },
+    {
+      "type": "p",
+      "text": "—No seré su dueño. No seré su dios. Seré, si acaso, el que les dejó un pedazo de orilla. El resto, que lo aprendan ellos. Como lo aprendimos nosotros, tarde y a ciegas, en una cocina.",
+      "html": "—No seré su dueño. No seré su dios. Seré, si acaso, el que les dejó un pedazo de orilla. El resto, que lo aprendan ellos. Como lo aprendimos nosotros, tarde y a ciegas, en una cocina."
+    },
+    {
+      "type": "p",
+      "text": "Andrés, en Lo Pagán, oyó eso y se quedó un rato más en la puerta, mirando el agua. El rumor antiguo no cambió. No tenía por qué. Iba a cambiar, en cambio, el número de los que, lejos, empezarían a llamarse, sin haberla pisado, hijos de la Tierra.",
+      "html": "Andrés, en Lo Pagán, oyó eso y se quedó un rato más en la puerta, mirando el agua. El rumor antiguo no cambió. No tenía por qué. Iba a cambiar, en cambio, el número de los que, lejos, empezarían a llamarse, sin haberla pisado, hijos de la Tierra."
+    }
+  ]
+}

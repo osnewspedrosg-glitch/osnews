@@ -1,0 +1,77 @@
+{
+  "bookId": "los-hijos-de-la-tierra",
+  "chapters": [
+    {
+      "id": "00-prologo",
+      "title": "Prólogo. La siembra",
+      "file": "chapters/00-prologo.json",
+      "kind": "prologo"
+    },
+    {
+      "id": "01-los-que-esperan-el-agua",
+      "title": "Capítulo 1. Los que esperan el agua",
+      "file": "chapters/01-los-que-esperan-el-agua.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "02-los-que-faenan",
+      "title": "Capítulo 2. Los que faenan",
+      "file": "chapters/02-los-que-faenan.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "03-los-del-umbral",
+      "title": "Capítulo 3. Los del umbral",
+      "file": "chapters/03-los-del-umbral.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "04-la-casa-casi-igual",
+      "title": "Capítulo 4. La casa casi igual",
+      "file": "chapters/04-la-casa-casi-igual.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "05-los-que-no-quieren-chip",
+      "title": "Capítulo 5. Los que no quieren chip",
+      "file": "chapters/05-los-que-no-quieren-chip.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "06-el-huerto-sin-precio",
+      "title": "Capítulo 6. El huerto sin precio",
+      "file": "chapters/06-el-huerto-sin-precio.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "07-los-del-mismo-rostro",
+      "title": "Capítulo 7. Los del mismo rostro",
+      "file": "chapters/07-los-del-mismo-rostro.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "08-los-que-eligieron-el-invierno",
+      "title": "Capítulo 8. Los que eligieron el invierno",
+      "file": "chapters/08-los-que-eligieron-el-invierno.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "09-los-que-quieren-volver",
+      "title": "Capítulo 9. Los que quieren volver",
+      "file": "chapters/09-los-que-quieren-volver.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "10-las-muchas-orillas",
+      "title": "Capítulo 10. Las muchas orillas",
+      "file": "chapters/10-las-muchas-orillas.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "11-epilogo",
+      "title": "Epílogo. La ciencia detrás de los hijos",
+      "file": "chapters/11-epilogo.json",
+      "kind": "epilogo"
+    }
+  ]
+}
