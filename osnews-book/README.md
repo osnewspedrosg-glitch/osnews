@@ -14,7 +14,7 @@ Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.
 
 ## Primer libro
 
-**La hija de dos mundos** — prólogo, diez capítulos y epílogo.
+**La hija de dos mundos** — prólogo, diez capítulos, epílogo y Epílogo II.
 
 ## Cómo añadir un capítulo
 

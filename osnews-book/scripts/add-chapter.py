@@ -65,6 +65,10 @@ def parse_chapter(raw: str) -> tuple[str, list[dict]]:
                 title = ""
                 body = text
 
+    credit_re = re.compile(
+        r"^Autores:\s*Pedro Sánchez Gómez \(Mar Menor\) y su bot de Grok\.?$",
+        re.IGNORECASE,
+    )
     blocks: list[dict] = []
     for para in re.split(r"\n\s*\n", body.strip()):
         para = para.strip()
@@ -76,6 +80,8 @@ def parse_chapter(raw: str) -> tuple[str, list[dict]]:
             continue
         merged = " ".join(line.strip() for line in para.split("\n") if line.strip())
         blocks.append({"type": "p", "text": merged, "html": md_inline(merged)})
+    if blocks and credit_re.match(blocks[-1]["text"].strip()):
+        blocks.pop()
     return title, blocks
 
 
@@ -98,6 +104,8 @@ def kind_for(chapter_id: str, title: str) -> str:
     blob = f"{chapter_id} {title}".lower()
     if "prologo" in blob or "prólogo" in blob:
         return "prologo"
+    if "epílogo ii" in blob or "epilogo ii" in blob or "epilogo-2" in blob or "epilogo 2" in blob:
+        return "epilogo-2"
     if "epilogo" in blob or "epílogo" in blob:
         return "epilogo"
     return "capitulo"

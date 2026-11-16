@@ -69,6 +69,7 @@
 
   function chapterLabel(entry) {
     if (entry.kind === "prologo") return "Prólogo";
+    if (entry.kind === "epilogo-2") return "Epílogo II";
     if (entry.kind === "epilogo") return "Epílogo";
     var m = /(?:cap[íi]tulo)\s+(\d+)/i.exec(entry.title || "");
     if (m) return "Cap. " + m[1];

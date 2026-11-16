@@ -8,63 +8,63 @@
       "kind": "prologo"
     },
     {
-      "id": "01-2060",
+      "id": "01-capitulo-1",
       "title": "Capítulo 1. 2060",
-      "file": "chapters/01-2060.json",
+      "file": "chapters/01-capitulo-1.json",
       "kind": "capitulo"
     },
     {
-      "id": "02-la-tormenta",
+      "id": "02-capitulo-2",
       "title": "Capítulo 2. La tormenta",
-      "file": "chapters/02-la-tormenta.json",
+      "file": "chapters/02-capitulo-2.json",
       "kind": "capitulo"
     },
     {
-      "id": "03-el-latido",
+      "id": "03-capitulo-3",
       "title": "Capítulo 3. El latido",
-      "file": "chapters/03-el-latido.json",
+      "file": "chapters/03-capitulo-3.json",
       "kind": "capitulo"
     },
     {
-      "id": "04-la-huida",
+      "id": "04-capitulo-4",
       "title": "Capítulo 4. La huida",
-      "file": "chapters/04-la-huida.json",
+      "file": "chapters/04-capitulo-4.json",
       "kind": "capitulo"
     },
     {
-      "id": "05-los-que-no-salen",
+      "id": "05-capitulo-5",
       "title": "Capítulo 5. Los que no salen de casa",
-      "file": "chapters/05-los-que-no-salen.json",
+      "file": "chapters/05-capitulo-5.json",
       "kind": "capitulo"
     },
     {
-      "id": "06-la-luna",
+      "id": "06-capitulo-6",
       "title": "Capítulo 6. La Luna",
-      "file": "chapters/06-la-luna.json",
+      "file": "chapters/06-capitulo-6.json",
       "kind": "capitulo"
     },
     {
-      "id": "07-lia-crece",
+      "id": "07-capitulo-7",
       "title": "Capítulo 7. Lía crece",
-      "file": "chapters/07-lia-crece.json",
+      "file": "chapters/07-capitulo-7.json",
       "kind": "capitulo"
     },
     {
-      "id": "08-el-tomate",
+      "id": "08-capitulo-8",
       "title": "Capítulo 8. El tomate de la vida",
-      "file": "chapters/08-el-tomate.json",
+      "file": "chapters/08-capitulo-8.json",
       "kind": "capitulo"
     },
     {
-      "id": "09-quien-decide",
+      "id": "09-capitulo-9",
       "title": "Capítulo 9. ¿Quién decide qué es un fallo?",
-      "file": "chapters/09-quien-decide.json",
+      "file": "chapters/09-capitulo-9.json",
       "kind": "capitulo"
     },
     {
-      "id": "10-regreso",
+      "id": "10-capitulo-10",
       "title": "Capítulo 10. Regreso al Mar Menor: el Edén de las máquinas",
-      "file": "chapters/10-regreso.json",
+      "file": "chapters/10-capitulo-10.json",
       "kind": "capitulo"
     },
     {
@@ -72,6 +72,12 @@
       "title": "Epílogo. La ciencia detrás de Lía",
       "file": "chapters/11-epilogo.json",
       "kind": "epilogo"
+    },
+    {
+      "id": "12-epilogo-2",
+      "title": "Epílogo II. El clon",
+      "file": "chapters/12-epilogo-2.json",
+      "kind": "epilogo-2"
     }
   ]
 }

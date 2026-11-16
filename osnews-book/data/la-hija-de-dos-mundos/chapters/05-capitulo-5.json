@@ -1,5 +1,5 @@
 {
-  "id": "05-los-que-no-salen",
+  "id": "05-capitulo-5",
   "title": "Capítulo 5. Los que no salen de casa",
   "kind": "capitulo",
   "blocks": [
@@ -135,8 +135,8 @@
     },
     {
       "type": "p",
-      "text": "*En una ciudad de ventanas encendidas y calles vacías, ¿qué es una puerta cerrada: una costumbre o un miedo?*",
-      "html": "<em>En una ciudad de ventanas encendidas y calles vacías, ¿qué es una puerta cerrada: una costumbre o un miedo?</em>"
+      "text": "En una ciudad de ventanas encendidas y calles vacías, ¿qué es una puerta cerrada: una costumbre o un miedo?",
+      "html": "En una ciudad de ventanas encendidas y calles vacías, ¿qué es una puerta cerrada: una costumbre o un miedo?"
     },
     {
       "type": "p",
@@ -145,8 +145,8 @@
     },
     {
       "type": "p",
-      "text": "*Si mañana todos abren, ¿dirán que siempre fue lo justo? Si nadie abre, ¿dirán que siempre fue lo seguro?*",
-      "html": "<em>Si mañana todos abren, ¿dirán que siempre fue lo justo? Si nadie abre, ¿dirán que siempre fue lo seguro?</em>"
+      "text": "Si mañana todos abren, ¿dirán que siempre fue lo justo? Si nadie abre, ¿dirán que siempre fue lo seguro?",
+      "html": "Si mañana todos abren, ¿dirán que siempre fue lo justo? Si nadie abre, ¿dirán que siempre fue lo seguro?"
     },
     {
       "type": "p",
@@ -155,8 +155,8 @@
     },
     {
       "type": "p",
-      "text": "*Si un chip impide hacer daño, y ya no hay delitos, ¿la calle es de personas libres o de personas impedidas?*",
-      "html": "<em>Si un chip impide hacer daño, y ya no hay delitos, ¿la calle es de personas libres o de personas impedidas?</em>"
+      "text": "Si un chip impide hacer daño, y ya no hay delitos, ¿la calle es de personas libres o de personas impedidas?",
+      "html": "Si un chip impide hacer daño, y ya no hay delitos, ¿la calle es de personas libres o de personas impedidas?"
     },
     {
       "type": "p",
@@ -165,8 +165,8 @@
     },
     {
       "type": "p",
-      "text": "*Si nadie puede elegir hacer el mal, ¿sigue siendo libre? Y si puede elegirlo, ¿seguimos llamando justa a la paz?*",
-      "html": "<em>Si nadie puede elegir hacer el mal, ¿sigue siendo libre? Y si puede elegirlo, ¿seguimos llamando justa a la paz?</em>"
+      "text": "Si nadie puede elegir hacer el mal, ¿sigue siendo libre? Y si puede elegirlo, ¿seguimos llamando justa a la paz?",
+      "html": "Si nadie puede elegir hacer el mal, ¿sigue siendo libre? Y si puede elegirlo, ¿seguimos llamando justa a la paz?"
     },
     {
       "type": "p",

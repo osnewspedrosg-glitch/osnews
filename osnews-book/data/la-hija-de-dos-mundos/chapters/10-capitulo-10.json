@@ -1,5 +1,5 @@
 {
-  "id": "10-regreso",
+  "id": "10-capitulo-10",
   "title": "Capítulo 10. Regreso al Mar Menor: el Edén de las máquinas",
   "kind": "capitulo",
   "blocks": [
@@ -105,8 +105,8 @@
     },
     {
       "type": "p",
-      "text": "*¿Una ley justa hoy lo seguirá siendo mañana?*",
-      "html": "<em>¿Una ley justa hoy lo seguirá siendo mañana?</em>"
+      "text": "¿Una ley justa hoy lo seguirá siendo mañana?",
+      "html": "¿Una ley justa hoy lo seguirá siendo mañana?"
     },
     {
       "type": "p",
@@ -115,18 +115,18 @@
     },
     {
       "type": "p",
-      "text": "*Si ya no hace falta trabajar para vivir, ni pagar para curarse, ni beber para soportar la noche, ¿qué da sentido a una vida?*",
-      "html": "<em>Si ya no hace falta trabajar para vivir, ni pagar para curarse, ni beber para soportar la noche, ¿qué da sentido a una vida?</em>"
+      "text": "Si ya no hace falta trabajar para vivir, ni pagar para curarse, ni beber para soportar la noche, ¿qué da sentido a una vida?",
+      "html": "Si ya no hace falta trabajar para vivir, ni pagar para curarse, ni beber para soportar la noche, ¿qué da sentido a una vida?"
     },
     {
       "type": "p",
-      "text": "*¿Cederías tu libertad a cambio de seguridad y tranquilidad? Y si la cedes, ¿quién te la devuelve?*",
-      "html": "<em>¿Cederías tu libertad a cambio de seguridad y tranquilidad? Y si la cedes, ¿quién te la devuelve?</em>"
+      "text": "¿Cederías tu libertad a cambio de seguridad y tranquilidad? Y si la cedes, ¿quién te la devuelve?",
+      "html": "¿Cederías tu libertad a cambio de seguridad y tranquilidad? Y si la cedes, ¿quién te la devuelve?"
     },
     {
       "type": "p",
-      "text": "*Si nadie gobierna, ¿quién vigila a la máquina que lo decide todo?*",
-      "html": "<em>Si nadie gobierna, ¿quién vigila a la máquina que lo decide todo?</em>"
+      "text": "Si nadie gobierna, ¿quién vigila a la máquina que lo decide todo?",
+      "html": "Si nadie gobierna, ¿quién vigila a la máquina que lo decide todo?"
     },
     {
       "type": "p",
@@ -135,8 +135,8 @@
     },
     {
       "type": "p",
-      "text": "*En el Edén había un árbol prohibido. ¿Cuál es el de este paraíso?*",
-      "html": "<em>En el Edén había un árbol prohibido. ¿Cuál es el de este paraíso?</em>"
+      "text": "En el Edén había un árbol prohibido. ¿Cuál es el de este paraíso?",
+      "html": "En el Edén había un árbol prohibido. ¿Cuál es el de este paraíso?"
     },
     {
       "type": "p",
@@ -145,8 +145,8 @@
     },
     {
       "type": "p",
-      "text": "*¿Lo hacen por libertad o por nostalgia del poder?*",
-      "html": "<em>¿Lo hacen por libertad o por nostalgia del poder?</em>"
+      "text": "¿Lo hacen por libertad o por nostalgia del poder?",
+      "html": "¿Lo hacen por libertad o por nostalgia del poder?"
     },
     {
       "type": "p",
