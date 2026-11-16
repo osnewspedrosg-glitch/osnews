@@ -11,6 +11,36 @@
       "cover": "assets/covers/la-hija-de-dos-mundos.jpg",
       "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok",
       "chaptersIndex": "data/la-hija-de-dos-mundos/chapters.json"
+    },
+    {
+      "id": "cartas-desde-las-estrellas",
+      "title": "Cartas desde las estrellas",
+      "subtitle": "Novela · Saga de Lo Pagán · II",
+      "year": 2026,
+      "blurb": "Andrés, en Lo Pagán, recibe en la mente las vivencias de su clon, que recorre otros mundos. Las cartas no traen un cuerpo, sino un recuerdo, y con ellas una pregunta: si los dos recuerdan la misma tormenta, ¿quién es el padre?",
+      "cover": "assets/covers/cartas-desde-las-estrellas.jpg",
+      "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok",
+      "chaptersIndex": "data/cartas-desde-las-estrellas/chapters.json"
+    },
+    {
+      "id": "los-hijos-de-la-tierra",
+      "title": "Los hijos de la Tierra",
+      "subtitle": "Novela · Saga de Lo Pagán · III",
+      "year": 2026,
+      "blurb": "En cada mundo, el clon siembra una civilización humanoide a imagen del hombre terrestre. Algunos esperan el agua, otros faenan, otros apagan el chip o eligen el invierno, y hay quien quiere volver a esta orilla.",
+      "cover": "assets/covers/los-hijos-de-la-tierra.jpg",
+      "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok",
+      "chaptersIndex": "data/los-hijos-de-la-tierra/chapters.json"
+    },
+    {
+      "id": "nada-se-pierde",
+      "title": "Nada se pierde",
+      "subtitle": "Novela · Saga de Lo Pagán · IV",
+      "year": 2026,
+      "blurb": "Una máquina descompone un cuerpo en partículas y lo compone de nuevo al otro lado, porque la energía no se crea ni se destruye. Andrés y su clon pueden reencontrarse, y queda la pregunta: ¿el que llega es el mismo?",
+      "cover": "assets/covers/nada-se-pierde.jpg",
+      "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok",
+      "chaptersIndex": "data/nada-se-pierde/chapters.json"
     }
   ]
 }

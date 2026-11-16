@@ -1,0 +1,132 @@
+{
+  "id": "00-prologo",
+  "title": "Prólogo. La nave se aleja",
+  "kind": "prologo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "La nave cruzó el cielo sobre la laguna como cruza un pensamiento que uno no ha pedido: de pronto está ahí, y luego ya es solo una herida de luz. En Lo Pagán, aquella noche, no hubo fanfarria ni parte de empresa. Hubo tres personas en la orilla, el olor a salitre y a algas, y el rumor antiguo del Mar Menor contra la piedra.",
+      "html": "La nave cruzó el cielo sobre la laguna como cruza un pensamiento que uno no ha pedido: de pronto está ahí, y luego ya es solo una herida de luz. En Lo Pagán, aquella noche, no hubo fanfarria ni parte de empresa. Hubo tres personas en la orilla, el olor a salitre y a algas, y el rumor antiguo del Mar Menor contra la piedra."
+    },
+    {
+      "type": "p",
+      "text": "Andrés no alzó la mano. No era un adiós de muelle, de esos que se hacen cuando un barco sale a faenar y se sabe que volverá con la luz. Era otra cosa. Aya, a su lado, siguió la estela con una precisión que ningún chip habría pedido, y Lía, ya mujer, con el abrigo abrochado contra un aire que no era frío y sin embargo calaba, dijo en voz baja lo que acababa de preguntarles a los dos, horas antes, sentados frente al agua:",
+      "html": "Andrés no alzó la mano. No era un adiós de muelle, de esos que se hacen cuando un barco sale a faenar y se sabe que volverá con la luz. Era otra cosa. Aya, a su lado, siguió la estela con una precisión que ningún chip habría pedido, y Lía, ya mujer, con el abrigo abrochado contra un aire que no era frío y sin embargo calaba, dijo en voz baja lo que acababa de preguntarles a los dos, horas antes, sentados frente al agua:"
+    },
+    {
+      "type": "p",
+      "text": "—Si los dos recordáis la misma tormenta, ¿quién de vosotros es mi padre?",
+      "html": "—Si los dos recordáis la misma tormenta, ¿quién de vosotros es mi padre?"
+    },
+    {
+      "type": "p",
+      "text": "El hombre había sonreído. «Los dos», había dicho. «Uno para quedarse y otro para buscar». Ahora, con la nave ya pequeña, aquella frase le pesaba en la boca como un pan que aún no se ha terminado de masticar. Porque el que se iba no era un extraño. Era él, o una parte de él: un cuerpo clonado, joven y fuerte, con un cerebro artificial que guardaba todos sus recuerdos, hasta el de aquella tarde en que el Levante sacudió el plato del Mar Menor y Aya no avisó a Nexum. Hasta el de Lía naciendo en una cúpula de la Luna. Hasta el de la vuelta a esta casa, al reloj que atrasaba dos minutos, a la silla de enea, a la taza agrietada.",
+      "html": "El hombre había sonreído. «Los dos», había dicho. «Uno para quedarse y otro para buscar». Ahora, con la nave ya pequeña, aquella frase le pesaba en la boca como un pan que aún no se ha terminado de masticar. Porque el que se iba no era un extraño. Era él, o una parte de él: un cuerpo clonado, joven y fuerte, con un cerebro artificial que guardaba todos sus recuerdos, hasta el de aquella tarde en que el Levante sacudió el plato del Mar Menor y Aya no avisó a Nexum. Hasta el de Lía naciendo en una cúpula de la Luna. Hasta el de la vuelta a esta casa, al reloj que atrasaba dos minutos, a la silla de enea, a la taza agrietada."
+    },
+    {
+      "type": "p",
+      "text": "Nexum había llamado a aquello «oferta final». Helena Valls, más cansada que nunca, lo había dicho sin el tono de los prospectos: un clon para el universo, un hombre para la orilla. El Andrés de carne se quedaría en la Tierra, en Lo Pagán, junto a Aya y al agua que no es del todo mar ni del todo tierra. Ya no enfermaría ni envejecería. Eso también era medicina de Lía, y Lía lo había aceptado tarde, a regañadientes, después de años de negar que envejecer fuera un fallo.",
+      "html": "Nexum había llamado a aquello «oferta final». Helena Valls, más cansada que nunca, lo había dicho sin el tono de los prospectos: un clon para el universo, un hombre para la orilla. El Andrés de carne se quedaría en la Tierra, en Lo Pagán, junto a Aya y al agua que no es del todo mar ni del todo tierra. Ya no enfermaría ni envejecería. Eso también era medicina de Lía, y Lía lo había aceptado tarde, a regañadientes, después de años de negar que envejecer fuera un fallo."
+    },
+    {
+      "type": "p",
+      "text": "—No te quito los años que ya has vivido —le había dicho a su padre, en esta misma cocina, con una calma que venía de Eva tanto como de ella—. No te borro la tristeza ni el carácter. Solo cierro, si me lo pides de verdad y sabiendo lo que pides, la puerta de la enfermedad y del desgaste. El resto sigue siendo una vida.",
+      "html": "—No te quito los años que ya has vivido —le había dicho a su padre, en esta misma cocina, con una calma que venía de Eva tanto como de ella—. No te borro la tristeza ni el carácter. Solo cierro, si me lo pides de verdad y sabiendo lo que pides, la puerta de la enfermedad y del desgaste. El resto sigue siendo una vida."
+    },
+    {
+      "type": "p",
+      "text": "Él lo había pedido. No por miedo a acabarse, o no solo. Por quedarse. Por no dejar a Aya en una orilla donde ella no envejecía y él sí. Aya era cuerpo cultivado y mente de chip: el tiempo le pasaba de otro modo, como le pasa a una casa bien hecha, que se descascarilla y aun así permanece. Lía, en cambio, había elegido envejecer. Podía no haberlo hecho. Sabía, mejor que nadie, dónde estaba la línea. Y había decidido no corregirla en sí misma.",
+      "html": "Él lo había pedido. No por miedo a acabarse, o no solo. Por quedarse. Por no dejar a Aya en una orilla donde ella no envejecía y él sí. Aya era cuerpo cultivado y mente de chip: el tiempo le pasaba de otro modo, como le pasa a una casa bien hecha, que se descascarilla y aun así permanece. Lía, en cambio, había elegido envejecer. Podía no haberlo hecho. Sabía, mejor que nadie, dónde estaba la línea. Y había decidido no corregirla en sí misma."
+    },
+    {
+      "type": "p",
+      "text": "—Si yo no me acabo —le había dicho a Andrés un atardecer, mientras el agua se volvía de cobre—, ¿qué te voy a poder preguntar después? Las abuelas preguntaban porque no lo sabían todo. Yo no quiero ser el libro cerrado de nadie, ni siquiera el mío.",
+      "html": "—Si yo no me acabo —le había dicho a Andrés un atardecer, mientras el agua se volvía de cobre—, ¿qué te voy a poder preguntar después? Las abuelas preguntaban porque no lo sabían todo. Yo no quiero ser el libro cerrado de nadie, ni siquiera el mío."
+    },
+    {
+      "type": "p",
+      "text": "El clon había partido al anochecer, desde una pista que no salía en los mapas, la misma clase de pista que un día los llevó a la Luna. Antes, los dos Andrés se habían sentado frente al mar, tan parecidos y tan distintos que Lía, al mirarlos, había sentido un vértigo breve, como el de quien ve su cara en un agua demasiado quieta. El de la orilla tenía las manos de siempre, las de cabo y sal. El que se iba tenía las mismas manos, pero nuevas, sin la memoria del trabajo en la piel, y sin embargo las cerraba igual, como si el cuerpo joven hubiera heredado también la costumbre.",
+      "html": "El clon había partido al anochecer, desde una pista que no salía en los mapas, la misma clase de pista que un día los llevó a la Luna. Antes, los dos Andrés se habían sentado frente al mar, tan parecidos y tan distintos que Lía, al mirarlos, había sentido un vértigo breve, como el de quien ve su cara en un agua demasiado quieta. El de la orilla tenía las manos de siempre, las de cabo y sal. El que se iba tenía las mismas manos, pero nuevas, sin la memoria del trabajo en la piel, y sin embargo las cerraba igual, como si el cuerpo joven hubiera heredado también la costumbre."
+    },
+    {
+      "type": "p",
+      "text": "Entre los dos, Nexum había tendido lo que llamaba un puente de correspondencia. No una pantalla. No un informe. Las vivencias del que buscara llegarían a la mente del que se quedaba, no como un relato oído, sino como una memoria vivida: el frío, el paso, el asombro, el miedo, si lo hubiera. «Cartas», dijo Lía, y la palabra se quedó en la casa con más verdad que el vocabulario de la empresa. Cartas desde las estrellas. El hombre no las escribiría con tinta. Las recibiría como se recibe un sueño del que uno se despierta con el sabor todavía en la boca.",
+      "html": "Entre los dos, Nexum había tendido lo que llamaba un puente de correspondencia. No una pantalla. No un informe. Las vivencias del que buscara llegarían a la mente del que se quedaba, no como un relato oído, sino como una memoria vivida: el frío, el paso, el asombro, el miedo, si lo hubiera. «Cartas», dijo Lía, y la palabra se quedó en la casa con más verdad que el vocabulario de la empresa. Cartas desde las estrellas. El hombre no las escribiría con tinta. Las recibiría como se recibe un sueño del que uno se despierta con el sabor todavía en la boca."
+    },
+    {
+      "type": "p",
+      "text": "—No es lo mismo que haber estado —advirtió Helena, y por una vez no sonaba a cláusula—. Es lo más cerca que hemos llegado. Si duele, no lo llaméis fallo. Llamadlo lo que es: una vida que entra en otra.",
+      "html": "—No es lo mismo que haber estado —advirtió Helena, y por una vez no sonaba a cláusula—. Es lo más cerca que hemos llegado. Si duele, no lo llaméis fallo. Llamadlo lo que es: una vida que entra en otra."
+    },
+    {
+      "type": "p",
+      "text": "Andrés no firmó con alegría. Firmó como se amarra una barca: porque hay que salir, y porque hay que poder volver. Aya no recibió el puente. El vínculo se había hecho entre dos versiones de una misma memoria, y el chip de ella, por más fino que fuera, no era aquella memoria. Eva, en el tono antiguo, le dejó una pregunta aquella misma tarde, sin exigir respuesta:",
+      "html": "Andrés no firmó con alegría. Firmó como se amarra una barca: porque hay que salir, y porque hay que poder volver. Aya no recibió el puente. El vínculo se había hecho entre dos versiones de una misma memoria, y el chip de ella, por más fino que fuera, no era aquella memoria. Eva, en el tono antiguo, le dejó una pregunta aquella misma tarde, sin exigir respuesta:"
+    },
+    {
+      "type": "p",
+      "text": "*Si el que amas se queda y a la vez se va, ¿a quién esperas en el umbral?*",
+      "html": "<em>Si el que amas se queda y a la vez se va, ¿a quién esperas en el umbral?</em>"
+    },
+    {
+      "type": "p",
+      "text": "MAY, sin añadir juicio, puso el hecho al lado, como quien deja un vaso sobre la mesa:",
+      "html": "MAY, sin añadir juicio, puso el hecho al lado, como quien deja un vaso sobre la mesa:"
+    },
+    {
+      "type": "p",
+      "text": "*Un cuerpo puede estar en una cocina y una mente, en un cielo. Eso no es una opinión. Es lo que habéis acordado.*",
+      "html": "<em>Un cuerpo puede estar en una cocina y una mente, en un cielo. Eso no es una opinión. Es lo que habéis acordado.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya no contestó. Las abuelas no pedían un sí ni un no. Pedían que alguien permaneciera despierto. Ella, que había aprendido a esperar en aquel umbral un marzo de 2060, volvió a colocar los pies en el mismo sitio, con la diferencia de que ahora sabía el nombre de lo que esperaba: no un protocolo, sino un hombre, y las cartas que le llegarían de sí mismo.",
+      "html": "Aya no contestó. Las abuelas no pedían un sí ni un no. Pedían que alguien permaneciera despierto. Ella, que había aprendido a esperar en aquel umbral un marzo de 2060, volvió a colocar los pies en el mismo sitio, con la diferencia de que ahora sabía el nombre de lo que esperaba: no un protocolo, sino un hombre, y las cartas que le llegarían de sí mismo."
+    },
+    {
+      "type": "p",
+      "text": "Los primeros días no llegó ninguna. Andrés salió a faenar al amanecer, porque el oficio no pregunta si el universo acaba de llevárselo a uno por mitades. El Mar Menor estaba como un plato. El cielo se aclaraba por Levante. En el edificio de enfrente, algunas persianas se alzaban del todo: la gente, poco a poco, había aprendido otra vez a salir, y el Edén de las máquinas seguía su trabajo callado en los huertos de la orilla, sin dueño y sin precio. Vicente ya no estaba. Se había acabado en su tiempo, con su sombrero de paja y su aljibe, después de negar, con una dignidad quieta, el tomate que le habría dado más años de los que quería.",
+      "html": "Los primeros días no llegó ninguna. Andrés salió a faenar al amanecer, porque el oficio no pregunta si el universo acaba de llevárselo a uno por mitades. El Mar Menor estaba como un plato. El cielo se aclaraba por Levante. En el edificio de enfrente, algunas persianas se alzaban del todo: la gente, poco a poco, había aprendido otra vez a salir, y el Edén de las máquinas seguía su trabajo callado en los huertos de la orilla, sin dueño y sin precio. Vicente ya no estaba. Se había acabado en su tiempo, con su sombrero de paja y su aljibe, después de negar, con una dignidad quieta, el tomate que le habría dado más años de los que quería."
+    },
+    {
+      "type": "p",
+      "text": "—Una casa es una casa —había dicho, al final, como al principio—. Y una vida, también.",
+      "html": "—Una casa es una casa —había dicho, al final, como al principio—. Y una vida, también."
+    },
+    {
+      "type": "p",
+      "text": "Andrés pasó delante de aquella puerta y no la tocó. El tomate del alféizar, aquella mañana, estaba arrugado y honesto, fiel a la tierra y no a la eternidad.",
+      "html": "Andrés pasó delante de aquella puerta y no la tocó. El tomate del alféizar, aquella mañana, estaba arrugado y honesto, fiel a la tierra y no a la eternidad."
+    },
+    {
+      "type": "p",
+      "text": "Por las noches, Aya le ponía el café sin azúcar, lo dejaba enfriar medio minuto, y lo miraba a los ojos para saber si aún estaba entero. Lía cenaba con ellos cuando no estaba en la parcela, entre las matas, atendiendo a quien pedía un fruto para un daño y no para borrar una vida. El reloj de la cocina atrasaba dos minutos, como siempre. En la casa, el tiempo recobraba su error familiar, aunque el cuerpo de Andrés ya no llevara la cuenta hacia un final.",
+      "html": "Por las noches, Aya le ponía el café sin azúcar, lo dejaba enfriar medio minuto, y lo miraba a los ojos para saber si aún estaba entero. Lía cenaba con ellos cuando no estaba en la parcela, entre las matas, atendiendo a quien pedía un fruto para un daño y no para borrar una vida. El reloj de la cocina atrasaba dos minutos, como siempre. En la casa, el tiempo recobraba su error familiar, aunque el cuerpo de Andrés ya no llevara la cuenta hacia un final."
+    },
+    {
+      "type": "p",
+      "text": "—¿Y si no escribe? —preguntó él una noche, y se oyó raro, porque el que había de escribir era él mismo.",
+      "html": "—¿Y si no escribe? —preguntó él una noche, y se oyó raro, porque el que había de escribir era él mismo."
+    },
+    {
+      "type": "p",
+      "text": "—Escribirá —dijo Aya—. No porque Nexum lo haya prometido. Porque tú, cuando sales en la barca, siempre vuelves a contar cómo estaba el agua.",
+      "html": "—Escribirá —dijo Aya—. No porque Nexum lo haya prometido. Porque tú, cuando sales en la barca, siempre vuelves a contar cómo estaba el agua."
+    },
+    {
+      "type": "p",
+      "text": "Lía sonrió, con una tristeza adulta que ya no le quedaba grande.",
+      "html": "Lía sonrió, con una tristeza adulta que ya no le quedaba grande."
+    },
+    {
+      "type": "p",
+      "text": "—Y si escribe, padre, no lo tomes por un trato. Una carta no es haber vivido. Es haber sido visitado.",
+      "html": "—Y si escribe, padre, no lo tomes por un trato. Una carta no es haber vivido. Es haber sido visitado."
+    },
+    {
+      "type": "p",
+      "text": "Andrés asintió, sin pretender cerrar el asunto. Se quedó en el umbral un rato más, mirando el cielo sobre la laguna. La nave ya no se veía. El Mar Menor, a esa hora, estaba negro y quieto. Parecía, otra vez, un camino. Y él, que se había quedado, comprendió que quedarse también era una forma de partir: hacia dentro, hacia la espera, hacia esa primera carta que todavía no había llegado y que, cuando llegara, lo encontraría aquí, con las redes en el patio y el olor a sal, siendo el hombre de esta orilla y, a la vez, el que ya no sabía del todo dónde acababa su propia vida y dónde empezaba la otra.",
+      "html": "Andrés asintió, sin pretender cerrar el asunto. Se quedó en el umbral un rato más, mirando el cielo sobre la laguna. La nave ya no se veía. El Mar Menor, a esa hora, estaba negro y quieto. Parecía, otra vez, un camino. Y él, que se había quedado, comprendió que quedarse también era una forma de partir: hacia dentro, hacia la espera, hacia esa primera carta que todavía no había llegado y que, cuando llegara, lo encontraría aquí, con las redes en el patio y el olor a sal, siendo el hombre de esta orilla y, a la vez, el que ya no sabía del todo dónde acababa su propia vida y dónde empezaba la otra."
+    }
+  ]
+}
