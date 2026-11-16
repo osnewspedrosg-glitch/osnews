@@ -66,7 +66,8 @@ def parse_chapter(raw: str) -> tuple[str, list[dict]]:
                 body = text
 
     credit_re = re.compile(
-        r"^Autores:\s*Pedro Sánchez Gómez \(Mar Menor\) y su bot de Grok\.?$",
+        r"^(?:Autores:\s*Pedro Sánchez Gómez \(Mar Menor\) y su bot de Grok"
+        r"|Authors:\s*Pedro Sánchez Gómez \(Mar Menor\) and his Grok bot)\.?$",
         re.IGNORECASE,
     )
     blocks: list[dict] = []
@@ -102,11 +103,12 @@ def save_json(path: Path, data) -> None:
 
 def kind_for(chapter_id: str, title: str) -> str:
     blob = f"{chapter_id} {title}".lower()
-    if "prologo" in blob or "prólogo" in blob:
+    if "prologo" in blob or "prólogo" in blob or "prologue" in blob:
         return "prologo"
-    if "epílogo ii" in blob or "epilogo ii" in blob or "epilogo-2" in blob or "epilogo 2" in blob:
+    if any(k in blob for k in ("epílogo ii", "epilogo ii", "epilogo-2", "epilogo 2",
+                                "epilogue ii", "epilogue-2", "epilogue 2")):
         return "epilogo-2"
-    if "epilogo" in blob or "epílogo" in blob:
+    if "epilogo" in blob or "epílogo" in blob or "epilogue" in blob:
         return "epilogo"
     return "capitulo"
 

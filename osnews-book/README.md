@@ -21,6 +21,19 @@ Cuatro novelas, en este orden, en la biblioteca:
 3. **Los hijos de la Tierra** — prólogo, diez capítulos y epílogo.
 4. **Nada se pierde** — prólogo, diez capítulos y epílogo.
 
+## English editions
+
+La biblioteca tiene un selector **Español / English**. La sección inglesa está en `#/en` y sus libros se abren en `#/book/<id>` (los españoles siguen en `#/libro/<id>`):
+
+1. **The Daughter of Two Worlds** — prologue, ten chapters, epilogue and Epilogue II.
+2. **Letters from the Stars** — prologue, ten chapters and epilogue.
+3. **The Children of the Earth** — prologue, ten chapters and epilogue.
+4. **Nothing Is Lost** — prologue, ten chapters and epilogue.
+
+Cada libro inglés lleva `"lang": "en"` y `"pdf"` en `data/books.json`; el PDF está en `assets/pdf/<id>.pdf` y se abre con el botón «Download PDF».
+
+Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot.
+
 ## Cómo añadir un capítulo
 
 Desde la raíz de este repositorio (o desde `osnews-book/`):

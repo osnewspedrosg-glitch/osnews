@@ -1,0 +1,83 @@
+{
+  "bookId": "the-daughter-of-two-worlds",
+  "chapters": [
+    {
+      "id": "00-prologue",
+      "title": "Prologue. 2026, Good Morning, Eva",
+      "file": "chapters/00-prologue.json",
+      "kind": "prologo"
+    },
+    {
+      "id": "01-2060",
+      "title": "Chapter 1. 2060",
+      "file": "chapters/01-2060.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "02-the-storm",
+      "title": "Chapter 2. The Storm",
+      "file": "chapters/02-the-storm.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "03-the-heartbeat",
+      "title": "Chapter 3. The Heartbeat",
+      "file": "chapters/03-the-heartbeat.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "04-the-escape",
+      "title": "Chapter 4. The Escape",
+      "file": "chapters/04-the-escape.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "05-those-who-never-leave-home",
+      "title": "Chapter 5. Those Who Never Leave Home",
+      "file": "chapters/05-those-who-never-leave-home.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "06-the-moon",
+      "title": "Chapter 6. The Moon",
+      "file": "chapters/06-the-moon.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "07-lia-grows-up",
+      "title": "Chapter 7. Lía Grows Up",
+      "file": "chapters/07-lia-grows-up.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "08-the-tomato-of-life",
+      "title": "Chapter 8. The Tomato of Life",
+      "file": "chapters/08-the-tomato-of-life.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "09-who-decides",
+      "title": "Chapter 9. Who Decides What Counts as a Flaw?",
+      "file": "chapters/09-who-decides.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "10-return",
+      "title": "Chapter 10. Return to the Mar Menor: The Eden of the Machines",
+      "file": "chapters/10-return.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "11-epilogue",
+      "title": "Epilogue. The Science Behind Lía",
+      "file": "chapters/11-epilogue.json",
+      "kind": "epilogo"
+    },
+    {
+      "id": "12-epilogue-2",
+      "title": "Epilogue II. The Clone",
+      "file": "chapters/12-epilogue-2.json",
+      "kind": "epilogo-2"
+    }
+  ]
+}

@@ -242,3 +242,7 @@ footer strong { color: var(--text); }
   .cover { max-width: 220px; }
   .jump a, .icon-btn, .btn, .pager a, .share { min-height: 52px; }
 }
+
+/* Selector de idioma (Español / English) */
+.lang-switch { margin: 0 0 12px; }
+.lang-switch .btn[aria-current="page"] { pointer-events: none; }

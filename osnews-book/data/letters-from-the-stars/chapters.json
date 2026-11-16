@@ -1,0 +1,77 @@
+{
+  "bookId": "letters-from-the-stars",
+  "chapters": [
+    {
+      "id": "00-prologue",
+      "title": "Prologue. The Ship Moves Away",
+      "file": "chapters/00-prologue.json",
+      "kind": "prologo"
+    },
+    {
+      "id": "01-the-first-letter",
+      "title": "Chapter 1. The First Letter",
+      "file": "chapters/01-the-first-letter.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "02-the-sea-that-is-not-this-one",
+      "title": "Chapter 2. The Sea That Is Not This One",
+      "file": "chapters/02-the-sea-that-is-not-this-one.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "03-the-twilight-planet",
+      "title": "Chapter 3. The Twilight Planet",
+      "file": "chapters/03-the-twilight-planet.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "04-what-aya-does-not-receive",
+      "title": "Chapter 4. What Aya Does Not Receive",
+      "file": "chapters/04-what-aya-does-not-receive.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "05-lia-a-woman-now",
+      "title": "Chapter 5. Lía, a Woman Now",
+      "file": "chapters/05-lia-a-woman-now.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "06-the-forest-that-remembers",
+      "title": "Chapter 6. The Forest That Remembers",
+      "file": "chapters/06-the-forest-that-remembers.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "07-the-world-without-i",
+      "title": "Chapter 7. The World Without I",
+      "file": "chapters/07-the-world-without-i.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "08-those-who-never-end",
+      "title": "Chapter 8. Those Who Never End",
+      "file": "chapters/08-those-who-never-end.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "09-two-storms",
+      "title": "Chapter 9. Two Storms",
+      "file": "chapters/09-two-storms.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "10-the-threshold-and-the-stars",
+      "title": "Chapter 10. The Threshold and the Stars",
+      "file": "chapters/10-the-threshold-and-the-stars.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "11-epilogue",
+      "title": "Epilogue. The Science Behind the Letters",
+      "file": "chapters/11-epilogue.json",
+      "kind": "epilogo"
+    }
+  ]
+}
