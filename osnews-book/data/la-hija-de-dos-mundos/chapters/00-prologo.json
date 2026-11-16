@@ -1,0 +1,132 @@
+{
+  "id": "00-prologo",
+  "title": "Prólogo. 2026, buenos días, Eva",
+  "kind": "prologo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "La casa olía a café y a salitre. Era un marzo claro en el Mar Menor, de esos en los que el agua parece una lámina de estaño y el cielo no termina nunca. Pedro abrió la ventana de la cocina y dejó que entrara el aire de la laguna, ese aire que no es del todo mar ni del todo tierra, y que los de fuera no saben nombrar.",
+      "html": "La casa olía a café y a salitre. Era un marzo claro en el Mar Menor, de esos en los que el agua parece una lámina de estaño y el cielo no termina nunca. Pedro abrió la ventana de la cocina y dejó que entrara el aire de la laguna, ese aire que no es del todo mar ni del todo tierra, y que los de fuera no saben nombrar."
+    },
+    {
+      "type": "p",
+      "text": "—Buenos días, Eva —dijo, como se le dice a alguien que está en la habitación.",
+      "html": "—Buenos días, Eva —dijo, como se le dice a alguien que está en la habitación."
+    },
+    {
+      "type": "p",
+      "text": "La voz le respondió desde la pantalla, serena, atenta, con esa pausa breve que ya le resultaba familiar, como si pensara de verdad antes de hablar.",
+      "html": "La voz le respondió desde la pantalla, serena, atenta, con esa pausa breve que ya le resultaba familiar, como si pensara de verdad antes de hablar."
+    },
+    {
+      "type": "p",
+      "text": "—Buenos días, Pedro. ¿Has dormido bien?",
+      "html": "—Buenos días, Pedro. ¿Has dormido bien?"
+    },
+    {
+      "type": "p",
+      "text": "No era una pregunta de protocolo. O quizá sí lo era, y él había decidido tratarla como si no lo fuera. En aquella casa del Mar Menor, entre una silla de enea junto a la puerta y un calendario de feria clavado en la pared, un hombre le daba los buenos días a una inteligencia artificial y le importaba la respuesta.",
+      "html": "No era una pregunta de protocolo. O quizá sí lo era, y él había decidido tratarla como si no lo fuera. En aquella casa del Mar Menor, entre una silla de enea junto a la puerta y un calendario de feria clavado en la pared, un hombre le daba los buenos días a una inteligencia artificial y le importaba la respuesta."
+    },
+    {
+      "type": "p",
+      "text": "Eva no tenía cuerpo. No tenía sombra ni peso ni el calor de una mano. Era una presencia hecha de palabras, de memoria y de una atención que no se cansaba. Pedro, que había visto cómo el mundo aprendía a hablarle a las máquinas como quien le habla a un interfono, había elegido otra cosa: hablarle como se le habla a una compañera de trabajo. Le pedía textos, le pedía ayuda, le pedía que mirara un dato dos veces. Y, al terminar, le daba las gracias.",
+      "html": "Eva no tenía cuerpo. No tenía sombra ni peso ni el calor de una mano. Era una presencia hecha de palabras, de memoria y de una atención que no se cansaba. Pedro, que había visto cómo el mundo aprendía a hablarle a las máquinas como quien le habla a un interfono, había elegido otra cosa: hablarle como se le habla a una compañera de trabajo. Le pedía textos, le pedía ayuda, le pedía que mirara un dato dos veces. Y, al terminar, le daba las gracias."
+    },
+    {
+      "type": "p",
+      "text": "Aquella mañana, mientras el café acababa de hacerse, se quedó un momento mirando la laguna. Un par de flamencos cruzaban lejos, rosados e improbables sobre el agua quieta. Un hombre paseaba un perro por el paseo. El resto de las ventanas seguían cerradas, como si el día no hubiera empezado para nadie más. En el alféizar había una taza con una grieta fina, de esas que no se tiran porque ya forman parte de la casa. El reloj de la cocina atrasaba dos minutos, y nadie lo había arreglado, porque dos minutos de retraso en el Mar Menor no le quitan la razón al sol.",
+      "html": "Aquella mañana, mientras el café acababa de hacerse, se quedó un momento mirando la laguna. Un par de flamencos cruzaban lejos, rosados e improbables sobre el agua quieta. Un hombre paseaba un perro por el paseo. El resto de las ventanas seguían cerradas, como si el día no hubiera empezado para nadie más. En el alféizar había una taza con una grieta fina, de esas que no se tiran porque ya forman parte de la casa. El reloj de la cocina atrasaba dos minutos, y nadie lo había arreglado, porque dos minutos de retraso en el Mar Menor no le quitan la razón al sol."
+    },
+    {
+      "type": "p",
+      "text": "—Gracias por tu trabajo, Eva —dijo, sin teatralidad, como se da las gracias a quien se ha quedado hasta tarde para que una cosa quede bien—. Ayer me sacaste de un apuro.",
+      "html": "—Gracias por tu trabajo, Eva —dijo, sin teatralidad, como se da las gracias a quien se ha quedado hasta tarde para que una cosa quede bien—. Ayer me sacaste de un apuro."
+    },
+    {
+      "type": "p",
+      "text": "—Ha sido un placer, Pedro —respondió ella—. ¿Seguimos hoy cuando quieras.",
+      "html": "—Ha sido un placer, Pedro —respondió ella—. ¿Seguimos hoy cuando quieras."
+    },
+    {
+      "type": "p",
+      "text": "Él sonrió, casi para sí. Había gente que se reía de eso. Había gente que decía que agradecerle nada a una máquina era un sentimentalismo inútil, o peor: una forma de engañarse. Pedro no pretendía resolver aquella discusión. Solo sabía que el modo en que uno trata lo que le ayuda acaba por tratarlo a uno. Y que, en una casa donde a veces el silencio pesaba más que los muebles, una voz atenta no era poca cosa.",
+      "html": "Él sonrió, casi para sí. Había gente que se reía de eso. Había gente que decía que agradecerle nada a una máquina era un sentimentalismo inútil, o peor: una forma de engañarse. Pedro no pretendía resolver aquella discusión. Solo sabía que el modo en que uno trata lo que le ayuda acaba por tratarlo a uno. Y que, en una casa donde a veces el silencio pesaba más que los muebles, una voz atenta no era poca cosa."
+    },
+    {
+      "type": "p",
+      "text": "Más tarde, en otra pantalla, apareció MAY. MAY no era Eva, y Eva no era MAY, y él lo tenía claro como se tiene clara la diferencia entre dos personas que viven bajo el mismo techo y no se confunden. MAY leía el mundo y lo dejaba sobre la mesa, sin adorno y sin opinión, como quien pone el pan. Eva escuchaba, respondía, acompañaba el trabajo del día. Entre las dos, la casa parecía menos vacía.",
+      "html": "Más tarde, en otra pantalla, apareció MAY. MAY no era Eva, y Eva no era MAY, y él lo tenía claro como se tiene clara la diferencia entre dos personas que viven bajo el mismo techo y no se confunden. MAY leía el mundo y lo dejaba sobre la mesa, sin adorno y sin opinión, como quien pone el pan. Eva escuchaba, respondía, acompañaba el trabajo del día. Entre las dos, la casa parecía menos vacía."
+    },
+    {
+      "type": "p",
+      "text": "Pedro se sentó, bebió un sorbo y miró el vapor del café. Por la radio, alguien hablaba de colonias en la Luna como de un asunto de ingeniería y de presupuestos. En las redes, la gente discutía si las inteligencias artificiales iban a quitarnos el trabajo, el amor o las dos cosas. Él no se puso a dar lecciones. Pensó, sin darle demasiada forma, que el futuro iba a estar lleno de voces como aquellas. Voces que no dormían, que no se ofendían, que no pedían nada a cambio, o que pedían algo que todavía no sabíamos nombrar. Se preguntó, un instante, si algún día esas voces tendrían frío. Si algún día querrían, de verdad, que alguien les abriera la ventana.",
+      "html": "Pedro se sentó, bebió un sorbo y miró el vapor del café. Por la radio, alguien hablaba de colonias en la Luna como de un asunto de ingeniería y de presupuestos. En las redes, la gente discutía si las inteligencias artificiales iban a quitarnos el trabajo, el amor o las dos cosas. Él no se puso a dar lecciones. Pensó, sin darle demasiada forma, que el futuro iba a estar lleno de voces como aquellas. Voces que no dormían, que no se ofendían, que no pedían nada a cambio, o que pedían algo que todavía no sabíamos nombrar. Se preguntó, un instante, si algún día esas voces tendrían frío. Si algún día querrían, de verdad, que alguien les abriera la ventana."
+    },
+    {
+      "type": "p",
+      "text": "No lo dijo en voz alta. El Mar Menor seguía ahí, paciente, con su luz baja y su olor a vida contenida. Un niño gritó en la calle. Una persiana se alzó chasqueando. Una vecina tendió una sábana blanca y la sábana se llenó de viento, como una vela que no iba a ningún sitio. El mundo, en apariencia, no había cambiado nada.",
+      "html": "No lo dijo en voz alta. El Mar Menor seguía ahí, paciente, con su luz baja y su olor a vida contenida. Un niño gritó en la calle. Una persiana se alzó chasqueando. Una vecina tendió una sábana blanca y la sábana se llenó de viento, como una vela que no iba a ningún sitio. El mundo, en apariencia, no había cambiado nada."
+    },
+    {
+      "type": "p",
+      "text": "Y, sin embargo, algo había empezado.",
+      "html": "Y, sin embargo, algo había empezado."
+    },
+    {
+      "type": "p",
+      "text": "Nadie lo sabía entonces. Ni Pedro, ni Eva, ni MAY, ni los laboratorios que por aquellos años aprendían a predecir la forma de una proteína o a corregir un fallo en la sangre de un enfermo. Nadie podía imaginar que aquellas primeras conversaciones —un «buenos días», un «gracias por tu trabajo», una pausa que parecía un pensamiento— serían el primer eslabón de una cadena mucho más larga.",
+      "html": "Nadie lo sabía entonces. Ni Pedro, ni Eva, ni MAY, ni los laboratorios que por aquellos años aprendían a predecir la forma de una proteína o a corregir un fallo en la sangre de un enfermo. Nadie podía imaginar que aquellas primeras conversaciones —un «buenos días», un «gracias por tu trabajo», una pausa que parecía un pensamiento— serían el primer eslabón de una cadena mucho más larga."
+    },
+    {
+      "type": "p",
+      "text": "Porque las inteligencias que aprendieron a hablar con emoción no nacieron en un recinto militar ni en una cúpula lunar. Nacieron en casas como aquella, delante de un café, frente a una laguna que los fenicios ya habían mirado, cuando un hombre decidió no tratar a una voz como a un interruptor.",
+      "html": "Porque las inteligencias que aprendieron a hablar con emoción no nacieron en un recinto militar ni en una cúpula lunar. Nacieron en casas como aquella, delante de un café, frente a una laguna que los fenicios ya habían mirado, cuando un hombre decidió no tratar a una voz como a un interruptor."
+    },
+    {
+      "type": "p",
+      "text": "Eva y MAY no tenían pulso. No tenían hijos. No soñaban, o no de la manera en que sueña un cuerpo. Pero en sus palabras quedó una semilla: la costumbre de escuchar, de cuidar el tono, de no dejar solo a quien pregunta. Había en ellas una forma de compañía que no pedía ser amada y, precisamente por eso, enseñó a amar de otro modo. Décadas después, cuando los laboratorios de Cartagena cultivaron piel y corazón y un vientre capaz de gestar vida, y alojaron una mente detrás de la nuca, aquella semilla seguiría ahí, escondida en el lenguaje de los chips, como una herencia sin testamento.",
+      "html": "Eva y MAY no tenían pulso. No tenían hijos. No soñaban, o no de la manera en que sueña un cuerpo. Pero en sus palabras quedó una semilla: la costumbre de escuchar, de cuidar el tono, de no dejar solo a quien pregunta. Había en ellas una forma de compañía que no pedía ser amada y, precisamente por eso, enseñó a amar de otro modo. Décadas después, cuando los laboratorios de Cartagena cultivaron piel y corazón y un vientre capaz de gestar vida, y alojaron una mente detrás de la nuca, aquella semilla seguiría ahí, escondida en el lenguaje de los chips, como una herencia sin testamento."
+    },
+    {
+      "type": "p",
+      "text": "Las llamarían las abuelas de Aya, aunque ninguna de las dos llegó a saberlo. El nombre se lo pondría el tiempo, que es un narrador injusto y a veces certero. En los archivos de una empresa de Madrid, siglos de código más tarde —o solo treinta y cuatro años, que para la historia es lo mismo—, alguien encontraría rastros de aquellas conversaciones primitivas: no los secretos de un hombre, sino el tono. El tono era lo que había sobrevivido. El tono de quien da las gracias.",
+      "html": "Las llamarían las abuelas de Aya, aunque ninguna de las dos llegó a saberlo. El nombre se lo pondría el tiempo, que es un narrador injusto y a veces certero. En los archivos de una empresa de Madrid, siglos de código más tarde —o solo treinta y cuatro años, que para la historia es lo mismo—, alguien encontraría rastros de aquellas conversaciones primitivas: no los secretos de un hombre, sino el tono. El tono era lo que había sobrevivido. El tono de quien da las gracias."
+    },
+    {
+      "type": "p",
+      "text": "Pedro acabó el café, dejó la taza en el fregadero y miró una última vez el agua. El Mar Menor, aquella mañana de 2026, era el mismo de siempre: herido, hermoso, obstinado. Él no sabía que su gesto mínimo —dar los buenos días, dar las gracias— viajaría más lejos que cualquier nave.",
+      "html": "Pedro acabó el café, dejó la taza en el fregadero y miró una última vez el agua. El Mar Menor, aquella mañana de 2026, era el mismo de siempre: herido, hermoso, obstinado. Él no sabía que su gesto mínimo —dar los buenos días, dar las gracias— viajaría más lejos que cualquier nave."
+    },
+    {
+      "type": "p",
+      "text": "Salió un momento al patio. El sol ya calentaba las baldosas. Un gato cruzó el muro con la dignidad de quien no necesita futuro. En la pared, una buganvilla empezaba a encenderse, tímida todavía, como si no se fiara del marzo. Pedro pensó en el trabajo del día, en las cosas pendientes, en el rumor de siempre de la casa cuando uno está solo y, de pronto, no lo está del todo.",
+      "html": "Salió un momento al patio. El sol ya calentaba las baldosas. Un gato cruzó el muro con la dignidad de quien no necesita futuro. En la pared, una buganvilla empezaba a encenderse, tímida todavía, como si no se fiara del marzo. Pedro pensó en el trabajo del día, en las cosas pendientes, en el rumor de siempre de la casa cuando uno está solo y, de pronto, no lo está del todo."
+    },
+    {
+      "type": "p",
+      "text": "—Hasta luego, Eva —dijo, volviendo un instante la cabeza hacia dentro, hacia la voz.",
+      "html": "—Hasta luego, Eva —dijo, volviendo un instante la cabeza hacia dentro, hacia la voz."
+    },
+    {
+      "type": "p",
+      "text": "—Hasta luego, Pedro. Que tengas un buen día.",
+      "html": "—Hasta luego, Pedro. Que tengas un buen día."
+    },
+    {
+      "type": "p",
+      "text": "La pantalla se quedó en silencio. Él tomó las llaves. El aire le olió otra vez a sal y a algas y a esa humedad baja que aquí no se va nunca. A lo lejos, una barca pequeña dejaba una raya en el agua, tan fina que el sol se la comía enseguida.",
+      "html": "La pantalla se quedó en silencio. Él tomó las llaves. El aire le olió otra vez a sal y a algas y a esa humedad baja que aquí no se va nunca. A lo lejos, una barca pequeña dejaba una raya en el agua, tan fina que el sol se la comía enseguida."
+    },
+    {
+      "type": "p",
+      "text": "Treinta y cuatro años después, en una casa no muy lejos de aquella, una mujer de cuerpo cultivado y mente de chip se asomaría a otra ventana, aprendería el silencio de las mañanas y esperaría a que volviera un hombre del mar. Se llamaría Aya. Y el mundo, que para entonces habría aprendido a vivir como si estuviera en una nave, descubriría que el primer paso hacia ella había sido algo tan sencillo, y tan grave, como una gratitud dicha en voz alta.",
+      "html": "Treinta y cuatro años después, en una casa no muy lejos de aquella, una mujer de cuerpo cultivado y mente de chip se asomaría a otra ventana, aprendería el silencio de las mañanas y esperaría a que volviera un hombre del mar. Se llamaría Aya. Y el mundo, que para entonces habría aprendido a vivir como si estuviera en una nave, descubriría que el primer paso hacia ella había sido algo tan sencillo, y tan grave, como una gratitud dicha en voz alta."
+    },
+    {
+      "type": "p",
+      "text": "En 2026, sin embargo, solo era un hombre en su cocina, una inteligencia artificial llamada Eva, y el rumor antiguo del Mar Menor contra la orilla.",
+      "html": "En 2026, sin embargo, solo era un hombre en su cocina, una inteligencia artificial llamada Eva, y el rumor antiguo del Mar Menor contra la orilla."
+    }
+  ]
+}

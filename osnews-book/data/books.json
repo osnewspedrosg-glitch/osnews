@@ -1,0 +1,16 @@
+{
+  "title": "OSNews Book",
+  "credits": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok",
+  "books": [
+    {
+      "id": "la-hija-de-dos-mundos",
+      "title": "La hija de dos mundos",
+      "subtitle": "Novela",
+      "year": 2026,
+      "blurb": "En el Mar Menor de 2026, Pedro le da los buenos días a Eva. En 2060, de aquella costumbre nace Lía, una niña de dos mundos, y con ella un paraíso —y una pregunta: ¿cederías tu libertad a cambio de seguridad y tranquilidad?",
+      "cover": "assets/covers/la-hija-de-dos-mundos.svg",
+      "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok",
+      "chaptersIndex": "data/la-hija-de-dos-mundos/chapters.json"
+    }
+  ]
+}

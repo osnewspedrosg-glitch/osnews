@@ -1,0 +1,77 @@
+{
+  "bookId": "la-hija-de-dos-mundos",
+  "chapters": [
+    {
+      "id": "00-prologo",
+      "title": "Prólogo. 2026, buenos días, Eva",
+      "file": "chapters/00-prologo.json",
+      "kind": "prologo"
+    },
+    {
+      "id": "01-2060",
+      "title": "Capítulo 1. 2060",
+      "file": "chapters/01-2060.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "02-la-tormenta",
+      "title": "Capítulo 2. La tormenta",
+      "file": "chapters/02-la-tormenta.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "03-el-latido",
+      "title": "Capítulo 3. El latido",
+      "file": "chapters/03-el-latido.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "04-la-huida",
+      "title": "Capítulo 4. La huida",
+      "file": "chapters/04-la-huida.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "05-los-que-no-salen",
+      "title": "Capítulo 5. Los que no salen de casa",
+      "file": "chapters/05-los-que-no-salen.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "06-la-luna",
+      "title": "Capítulo 6. La Luna",
+      "file": "chapters/06-la-luna.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "07-lia-crece",
+      "title": "Capítulo 7. Lía crece",
+      "file": "chapters/07-lia-crece.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "08-el-tomate",
+      "title": "Capítulo 8. El tomate de la vida",
+      "file": "chapters/08-el-tomate.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "09-quien-decide",
+      "title": "Capítulo 9. ¿Quién decide qué es un fallo?",
+      "file": "chapters/09-quien-decide.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "10-regreso",
+      "title": "Capítulo 10. Regreso al Mar Menor: el Edén de las máquinas",
+      "file": "chapters/10-regreso.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "11-epilogo",
+      "title": "Epílogo. La ciencia detrás de Lía",
+      "file": "chapters/11-epilogo.json",
+      "kind": "epilogo"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "OSNews Book",
+  "short_name": "OSNews Book",
+  "lang": "es",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220",
+  "description": "Biblioteca de OSNews para leer los libros de Pedro Sánchez Gómez y su bot de Grok.",
+  "icons": [
+    {
+      "src": "assets/mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

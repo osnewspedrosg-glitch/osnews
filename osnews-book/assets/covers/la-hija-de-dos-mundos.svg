@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" role="img" aria-labelledby="ctitle cdesc">
+  <title id="ctitle">La hija de dos mundos</title>
+  <desc id="cdesc">Portada: el Mar Menor al anochecer, la luna y dos mundos que se tocan.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#152238"/>
+      <stop offset="42%" stop-color="#1d3a4a"/>
+      <stop offset="72%" stop-color="#2a5a62"/>
+      <stop offset="100%" stop-color="#1a3a44"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3dd6c6" stop-opacity="0.35"/>
+      <stop offset="35%" stop-color="#1a4d58"/>
+      <stop offset="100%" stop-color="#0b1220"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="32%" r="28%">
+      <stop offset="0%" stop-color="#f7e7b8" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#f7e7b8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f7e7b8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="900" fill="url(#sky)"/>
+  <rect x="0" y="520" width="600" height="380" fill="url(#water)"/>
+  <circle cx="300" cy="300" r="210" fill="url(#moonGlow)"/>
+  <!-- two worlds -->
+  <circle cx="248" cy="318" r="92" fill="none" stroke="#f7e7b8" stroke-opacity="0.55" stroke-width="2"/>
+  <circle cx="352" cy="318" r="92" fill="none" stroke="#3dd6c6" stroke-opacity="0.85" stroke-width="2"/>
+  <circle cx="300" cy="300" r="26" fill="#f7e7b8"/>
+  <!-- moon path reflection -->
+  <rect x="297" y="530" width="6" height="230" fill="#f7e7b8" opacity="0.22" rx="3"/>
+  <!-- shore house -->
+  <g fill="#0b1220" opacity="0.85">
+    <rect x="78" y="548" width="86" height="44" rx="2"/>
+    <polygon points="70,548 121,514 176,548"/>
+    <rect x="112" y="564" width="18" height="28"/>
+  </g>
+  <rect x="0" y="588" width="600" height="8" fill="#0b1220" opacity="0.35"/>
+  <text x="300" y="86" text-anchor="middle" fill="#3dd6c6" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', serif" font-size="18" letter-spacing="6">OSNEWS BOOK</text>
+  <text x="300" y="730" text-anchor="middle" fill="#eef3ff" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', serif" font-size="48">La hija</text>
+  <text x="300" y="786" text-anchor="middle" fill="#eef3ff" font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', serif" font-size="48">de dos mundos</text>
+  <text x="300" y="846" text-anchor="middle" fill="#9aa8c3" font-family="system-ui, Segoe UI, sans-serif" font-size="14">Pedro Sánchez Gómez · Mar Menor</text>
+</svg>
