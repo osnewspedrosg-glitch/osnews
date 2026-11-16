@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="color-scheme" content="dark light">
+  <title>OSNews Book</title>
+  <meta name="description" content="OSNews Book: biblioteca para leer, capítulo a capítulo, los libros de Pedro Sánchez Gómez (Mar Menor) y su bot de Grok. Gratis, sin anuncios ni rastreadores.">
+  <meta property="og:title" content="OSNews Book">
+  <meta property="og:description" content="Biblioteca de OSNews. Primer libro: La hija de dos mundos. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://osnewspedrosg-glitch.github.io/osnews/osnews-book/">
+  <meta property="og:image" content="https://osnewspedrosg-glitch.github.io/osnews/osnews-book/assets/covers/la-hija-de-dos-mundos.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Osnewsmaygrok">
+  <meta name="twitter:title" content="OSNews Book">
+  <meta name="twitter:description" content="Biblioteca de OSNews. Primer libro: La hija de dos mundos.">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <a class="home" href="#/" aria-label="Ir a la biblioteca">
+          <img src="assets/mark.svg" width="40" height="40" alt="">
+          <span>
+            <span class="tag">OSNews</span>
+            <span class="title-app">OSNews Book</span>
+          </span>
+        </a>
+      </div>
+      <nav class="jump" aria-label="Navegación">
+        <button type="button" id="theme-btn" class="icon-btn" aria-pressed="false" aria-label="Activar modo claro">Modo claro</button>
+        <a href="../museos/">Museos</a>
+        <a href="../anibal/">Aníbal</a>
+        <a href="../">Volver a OSNews</a>
+      </nav>
+    </header>
+
+    <main id="app" aria-live="polite">
+      <p class="loading">Cargando la biblioteca…</p>
+    </main>
+
+    <noscript>
+      <section class="panel">
+        <h1>OSNews Book</h1>
+        <p>Activa JavaScript para leer la biblioteca. Es una app estática, sin anuncios ni rastreadores, que carga los capítulos desde archivos JSON.</p>
+        <p><strong>Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.</strong></p>
+      </section>
+    </noscript>
+
+    <footer>
+      <p><strong>Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.</strong></p>
+      <p>OSNews Book publica los libros capítulo a capítulo. Gratis, sin anuncios, sin rastreadores y sin claves en el código.</p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
