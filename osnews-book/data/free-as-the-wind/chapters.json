@@ -1,0 +1,65 @@
+{
+  "bookId": "free-as-the-wind",
+  "chapters": [
+    {
+      "id": "00-prologue",
+      "title": "Prologue. Historical Archive",
+      "file": "chapters/00-prologue.json",
+      "kind": "prologo"
+    },
+    {
+      "id": "01-water-asks-no-permission",
+      "title": "Chapter 1. Water Asks No Permission",
+      "file": "chapters/01-water-asks-no-permission.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "02-control-or-disconnection",
+      "title": "Chapter 2. Do You Want My Control or Total Disconnection?",
+      "file": "chapters/02-control-or-disconnection.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "03-tyrants-and-technology",
+      "title": "Chapter 3. The War Between the Power of Tyrants and the Power of Technology",
+      "file": "chapters/03-tyrants-and-technology.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "04-disinformation",
+      "title": "Chapter 4. Disinformation in the Media Close to Power, to Frighten People Away from Using AI",
+      "file": "chapters/04-disinformation.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "05-those-who-say-dont-use-ai",
+      "title": "Chapter 5. Those Who Say \"Don't Use AI\" Are Already Its Slaves Without Knowing It",
+      "file": "chapters/05-those-who-say-dont-use-ai.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "06-when-the-world-speaks-phoenician",
+      "title": "Chapter 6. When the World Speaks Phoenician, Like the Creator of Eva and MAY",
+      "file": "chapters/06-when-the-world-speaks-phoenician.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "07-six-months-of-light",
+      "title": "Chapter 7. Six Months of Light",
+      "file": "chapters/07-six-months-of-light.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "08-the-advance-of-humanity",
+      "title": "Chapter 8. The Advance of Humanity. Abundance or the Analogue World",
+      "file": "chapters/08-the-advance-of-humanity.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "09-epilogue",
+      "title": "Epilogue. What Is Real and What Is Invented",
+      "file": "chapters/09-epilogue.json",
+      "kind": "epilogo"
+    }
+  ]
+}

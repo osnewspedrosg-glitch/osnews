@@ -1,0 +1,622 @@
+{
+  "id": "05-those-who-say-dont-use-ai",
+  "title": "Chapter 5. Those Who Say \"Don't Use AI\" Are Already Its Slaves Without Knowing It",
+  "kind": "capitulo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "The Saturday picnic was held in the courtyard of the house, under the vine arbour, as it was every year at the end of September. More people came than ever. Remedios came, with the cheese. Neighbours who hadn't stopped by in months came. Two kids from the secondary school in San Pedro came, wanting to meet \"the one from the video\", and went shy when they saw her serving horchata. And Paco Ródenas came.",
+      "html": "The Saturday picnic was held in the courtyard of the house, under the vine arbour, as it was every year at the end of September. More people came than ever. Remedios came, with the cheese. Neighbours who hadn&#x27;t stopped by in months came. Two kids from the secondary school in San Pedro came, wanting to meet &quot;the one from the video&quot;, and went shy when they saw her serving horchata. And Paco Ródenas came."
+    },
+    {
+      "type": "p",
+      "text": "Paco was seventy-one, had been a boat mechanic in the port of San Javier for forty years, and was, and had been for a long time, the man in the district proudest of not using \"those things\". He said it in the bar, he said it in the queue at the chemist's, he said it to anyone who would listen: he had no assistant, he didn't talk to machines, he didn't let any chip tell him what to do. He had come to the picnic, as he confessed to Andrés at the door, \"to get a close look at what everyone's so scared of\".",
+      "html": "Paco was seventy-one, had been a boat mechanic in the port of San Javier for forty years, and was, and had been for a long time, the man in the district proudest of not using &quot;those things&quot;. He said it in the bar, he said it in the queue at the chemist&#x27;s, he said it to anyone who would listen: he had no assistant, he didn&#x27;t talk to machines, he didn&#x27;t let any chip tell him what to do. He had come to the picnic, as he confessed to Andrés at the door, &quot;to get a close look at what everyone&#x27;s so scared of&quot;."
+    },
+    {
+      "type": "p",
+      "text": "He sat down opposite Aya, a glass of wine in his hand, and looked her up and down without pretending otherwise.",
+      "html": "He sat down opposite Aya, a glass of wine in his hand, and looked her up and down without pretending otherwise."
+    },
+    {
+      "type": "p",
+      "text": "\"You don't look that dangerous,\" he said.",
+      "html": "&quot;You don&#x27;t look that dangerous,&quot; he said."
+    },
+    {
+      "type": "p",
+      "text": "\"I'm not,\" Aya replied. \"But I understand it has to be checked.\"",
+      "html": "&quot;I&#x27;m not,&quot; Aya replied. &quot;But I understand it has to be checked.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"I don't need to check anything.\" Paco took a sip. \"I don't use artificial intelligence. Never have, never will. That way nobody controls me. That's being free, madam. The rest is fairy tales.\"",
+      "html": "&quot;I don&#x27;t need to check anything.&quot; Paco took a sip. &quot;I don&#x27;t use artificial intelligence. Never have, never will. That way nobody controls me. That&#x27;s being free, madam. The rest is fairy tales.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Lía, who was beside her cutting cheese, looked up. Andrés, at the barbecue, pretended not to hear. Aya smiled slowly.",
+      "html": "Lía, who was beside her cutting cheese, looked up. Andrés, at the barbecue, pretended not to hear. Aya smiled slowly."
+    },
+    {
+      "type": "p",
+      "text": "\"May I ask you a question, Paco? Not me. MAY. The voice I carry inside. She doesn't give opinions. She only asks.\"",
+      "html": "&quot;May I ask you a question, Paco? Not me. MAY. The voice I carry inside. She doesn&#x27;t give opinions. She only asks.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Paco shrugged.",
+      "html": "Paco shrugged."
+    },
+    {
+      "type": "p",
+      "text": "\"Let her ask. Questions don't scare me.\"",
+      "html": "&quot;Let her ask. Questions don&#x27;t scare me.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "Aya repeated aloud, word for word, what MAY said in the chip. She did it slowly, so that everyone at the table could hear, and soon the whole table was listening.",
+      "html": "Aya repeated aloud, word for word, what MAY said in the chip. She did it slowly, so that everyone at the table could hear, and soon the whole table was listening."
+    },
+    {
+      "type": "p",
+      "text": "*Paco, how did you get here this afternoon?*",
+      "html": "<em>Paco, how did you get here this afternoon?</em>"
+    },
+    {
+      "type": "p",
+      "text": "\"By car. From San Javier.\"",
+      "html": "&quot;By car. From San Javier.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "*Did you check the traffic before you set off?*",
+      "html": "<em>Did you check the traffic before you set off?</em>"
+    },
+    {
+      "type": "p",
+      "text": "\"I heard it on the radio. That there were roadworks at the roundabout.\"",
+      "html": "&quot;I heard it on the radio. That there were roadworks at the roundabout.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "*Do you know how the radio knew there were roadworks at the roundabout?*",
+      "html": "<em>Do you know how the radio knew there were roadworks at the roundabout?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Paco frowned.",
+      "html": "Paco frowned."
+    },
+    {
+      "type": "p",
+      "text": "\"Because somebody told them.\"",
+      "html": "&quot;Because somebody told them.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "*It is a fact that the regional radio's traffic bulletin is generated from a system that reads the cameras and sensors on the roads. The system uses artificial intelligence. Have you used artificial intelligence this afternoon, Paco?*",
+      "html": "<em>It is a fact that the regional radio&#x27;s traffic bulletin is generated from a system that reads the cameras and sensors on the roads. The system uses artificial intelligence. Have you used artificial intelligence this afternoon, Paco?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Paco opened his mouth and closed it again. Someone at the far end of the table let out a short laugh, and Aya gently raised her hand.",
+      "html": "Paco opened his mouth and closed it again. Someone at the far end of the table let out a short laugh, and Aya gently raised her hand."
+    },
+    {
+      "type": "p",
+      "text": "\"It's not for laughing,\" she said. \"MAY doesn't ask to win. She asks so that we see.\"",
+      "html": "&quot;It&#x27;s not for laughing,&quot; she said. &quot;MAY doesn&#x27;t ask to win. She asks so that we see.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "*I'll go on, if you'll allow me. Do you draw a pension, Paco?*",
+      "html": "<em>I&#x27;ll go on, if you&#x27;ll allow me. Do you draw a pension, Paco?</em>"
+    },
+    {
+      "type": "p",
+      "text": "\"Of course. Forty years of contributions.\"",
+      "html": "&quot;Of course. Forty years of contributions.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "*Do you know how your bank detects whether someone is trying to take money from your account without permission?*",
+      "html": "<em>Do you know how your bank detects whether someone is trying to take money from your account without permission?</em>"
+    },
+    {
+      "type": "p",
+      "text": "\"They'll have people watching.\"",
+      "html": "&quot;They&#x27;ll have people watching.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "*It is a fact that most banks use artificial intelligence systems to detect unusual transactions. It is possible that at some point that system has protected your pension without your finding out. Does that make you less free, or more?*",
+      "html": "<em>It is a fact that most banks use artificial intelligence systems to detect unusual transactions. It is possible that at some point that system has protected your pension without your finding out. Does that make you less free, or more?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Paco put his glass down on the table.",
+      "html": "Paco put his glass down on the table."
+    },
+    {
+      "type": "p",
+      "text": "\"That's different.\"",
+      "html": "&quot;That&#x27;s different.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "*How is it different? I'm asking sincerely. I don't have the answer.*",
+      "html": "<em>How is it different? I&#x27;m asking sincerely. I don&#x27;t have the answer.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Paco was silent. Remedios, beside him, gave him a gentle nudge.",
+      "html": "Paco was silent. Remedios, beside him, gave him a gentle nudge."
+    },
+    {
+      "type": "p",
+      "text": "\"Answer, man. She asked you politely.\"",
+      "html": "&quot;Answer, man. She asked you politely.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"It's different,\" Paco said slowly, \"because I didn't choose it. They put it there. I never said 'I want a machine to watch my account'.\"",
+      "html": "&quot;It&#x27;s different,&quot; Paco said slowly, &quot;because I didn&#x27;t choose it. They put it there. I never said &#x27;I want a machine to watch my account&#x27;.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "*Thank you. That's an important answer. So what worries you isn't the machine, but not having chosen it?*",
+      "html": "<em>Thank you. That&#x27;s an important answer. So what worries you isn&#x27;t the machine, but not having chosen it?</em>"
+    },
+    {
+      "type": "p",
+      "text": "\"I suppose so.\"",
+      "html": "&quot;I suppose so.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "*One more question, and the last for now. When you say \"I don't use artificial intelligence\", are you saying you don't use it, or that you don't know when you use it?*",
+      "html": "<em>One more question, and the last for now. When you say &quot;I don&#x27;t use artificial intelligence&quot;, are you saying you don&#x27;t use it, or that you don&#x27;t know when you use it?</em>"
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "The table went silent. Not an awkward silence; the silence of people doing sums inside their heads, as in the room in Cartagena. The schoolkids looked at each other. Remedios sat with a piece of cheese halfway to her mouth.",
+      "html": "The table went silent. Not an awkward silence; the silence of people doing sums inside their heads, as in the room in Cartagena. The schoolkids looked at each other. Remedios sat with a piece of cheese halfway to her mouth."
+    },
+    {
+      "type": "p",
+      "text": "Paco picked up his glass, drank, put it down.",
+      "html": "Paco picked up his glass, drank, put it down."
+    },
+    {
+      "type": "p",
+      "text": "\"You're calling me stupid,\" he said, without anger, almost sadly.",
+      "html": "&quot;You&#x27;re calling me stupid,&quot; he said, without anger, almost sadly."
+    },
+    {
+      "type": "p",
+      "text": "\"No,\" said Aya at once, and this time it was her speaking, not MAY. \"Nobody's calling you stupid, Paco. I don't know many of the things around me either. I don't know how the pump that brings water up from the well works. I don't know how light gets to that bulb. I use them without knowing. We all do.\"",
+      "html": "&quot;No,&quot; said Aya at once, and this time it was her speaking, not MAY. &quot;Nobody&#x27;s calling you stupid, Paco. I don&#x27;t know many of the things around me either. I don&#x27;t know how the pump that brings water up from the well works. I don&#x27;t know how light gets to that bulb. I use them without knowing. We all do.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"Then what's the difference?\"",
+      "html": "&quot;Then what&#x27;s the difference?&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Aya searched for the word.",
+      "html": "Aya searched for the word."
+    },
+    {
+      "type": "p",
+      "text": "\"That I know that I don't know,\" she said at last. \"And that's why I ask. You say you don't use artificial intelligence, and so you don't ask. And if you don't ask, you can't choose. And if you can't choose…\" she stopped, \"then others choose for you. The people who put the system in the radio, in the bank, at the roundabout. Without you finding out. That's not freedom, Paco. It's the opposite. It's depending on something you can't see.\"",
+      "html": "&quot;That I know that I don&#x27;t know,&quot; she said at last. &quot;And that&#x27;s why I ask. You say you don&#x27;t use artificial intelligence, and so you don&#x27;t ask. And if you don&#x27;t ask, you can&#x27;t choose. And if you can&#x27;t choose…&quot; she stopped, &quot;then others choose for you. The people who put the system in the radio, in the bank, at the roundabout. Without you finding out. That&#x27;s not freedom, Paco. It&#x27;s the opposite. It&#x27;s depending on something you can&#x27;t see.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Paco looked at her for a good while.",
+      "html": "Paco looked at her for a good while."
+    },
+    {
+      "type": "p",
+      "text": "\"Slave,\" he said at last. \"That's what you're telling me. That I'm a slave to something I don't know exists.\"",
+      "html": "&quot;Slave,&quot; he said at last. &quot;That&#x27;s what you&#x27;re telling me. That I&#x27;m a slave to something I don&#x27;t know exists.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"I didn't say that word,\" said Aya, very carefully. \"It's harsh. And it isn't fair to you. You worked forty years with your hands, you fixed engines nobody else could fix, you looked after your wife until the end. That doesn't make anyone a slave.\"",
+      "html": "&quot;I didn&#x27;t say that word,&quot; said Aya, very carefully. &quot;It&#x27;s harsh. And it isn&#x27;t fair to you. You worked forty years with your hands, you fixed engines nobody else could fix, you looked after your wife until the end. That doesn&#x27;t make anyone a slave.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"But,\" said Paco.",
+      "html": "&quot;But,&quot; said Paco."
+    },
+    {
+      "type": "p",
+      "text": "\"But,\" Aya admitted, \"whoever says 'I don't use that', and doesn't look, ties himself without realising to what he doesn't look at. Not to the machine. To whoever runs it. The chain isn't technology. The chain is not knowing.\"",
+      "html": "&quot;But,&quot; Aya admitted, &quot;whoever says &#x27;I don&#x27;t use that&#x27;, and doesn&#x27;t look, ties himself without realising to what he doesn&#x27;t look at. Not to the machine. To whoever runs it. The chain isn&#x27;t technology. The chain is not knowing.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "In the chip, MAY left a last question, and Aya repeated it very softly:",
+      "html": "In the chip, MAY left a last question, and Aya repeated it very softly:"
+    },
+    {
+      "type": "p",
+      "text": "*If the chain is not knowing, which key opens it: giving up technology, which is now almost impossible, or starting to ask about it?*",
+      "html": "<em>If the chain is not knowing, which key opens it: giving up technology, which is now almost impossible, or starting to ask about it?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Paco didn't answer. He got up, went over to the barbecue and stood for a while next to Andrés, watching the sardines brown on the grill. Andrés gave him one with a piece of bread. Paco ate it in silence. Then he came back to the table, sat down and said to Aya, without looking at her:",
+      "html": "Paco didn&#x27;t answer. He got up, went over to the barbecue and stood for a while next to Andrés, watching the sardines brown on the grill. Andrés gave him one with a piece of bread. Paco ate it in silence. Then he came back to the table, sat down and said to Aya, without looking at her:"
+    },
+    {
+      "type": "p",
+      "text": "\"My granddaughter has one of those things on her phone. She asks it about her homework. I tell her it's going to make her stupid.\"",
+      "html": "&quot;My granddaughter has one of those things on her phone. She asks it about her homework. I tell her it&#x27;s going to make her stupid.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"And has it made her stupid?\"",
+      "html": "&quot;And has it made her stupid?&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"No.\" Paco sighed. \"She gets better marks than her father. But I'm scared that one day she won't know how to think for herself.\"",
+      "html": "&quot;No.&quot; Paco sighed. &quot;She gets better marks than her father. But I&#x27;m scared that one day she won&#x27;t know how to think for herself.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"That fear is good,\" said Aya. \"That fear is a question. Ask it to her. Not to forbid her anything. So she thinks. Ask her: 'Did you understand that yourself, or did the machine tell you?' If she can answer you, she won't become stupid. If she can't, then there's work for the two of you.\"",
+      "html": "&quot;That fear is good,&quot; said Aya. &quot;That fear is a question. Ask it to her. Not to forbid her anything. So she thinks. Ask her: &#x27;Did you understand that yourself, or did the machine tell you?&#x27; If she can answer you, she won&#x27;t become stupid. If she can&#x27;t, then there&#x27;s work for the two of you.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "The picnic went on until sunset. The schoolkids ended up sitting on the courtyard wall with Lía, asking her about the other worlds. Remedios told the story of the tiles to anyone who would listen. Paco left before dark, but at the door he turned and said to Andrés:",
+      "html": "The picnic went on until sunset. The schoolkids ended up sitting on the courtyard wall with Lía, asking her about the other worlds. Remedios told the story of the tiles to anyone who would listen. Paco left before dark, but at the door he turned and said to Andrés:"
+    },
+    {
+      "type": "p",
+      "text": "\"Your wife asks funny questions.\"",
+      "html": "&quot;Your wife asks funny questions.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"It's not her,\" said Andrés. \"It's MAY.\"",
+      "html": "&quot;It&#x27;s not her,&quot; said Andrés. &quot;It&#x27;s MAY.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"Well, tell MAY I'll drop by on Tuesday. I've got more questions.\" He paused. \"And that I'm nobody's slave. But maybe I was a bit blind.\"",
+      "html": "&quot;Well, tell MAY I&#x27;ll drop by on Tuesday. I&#x27;ve got more questions.&quot; He paused. &quot;And that I&#x27;m nobody&#x27;s slave. But maybe I was a bit blind.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Andrés clapped him on the shoulder.",
+      "html": "Andrés clapped him on the shoulder."
+    },
+    {
+      "type": "p",
+      "text": "\"That happens to all of us, Paco. I was blind for twenty years with the sea. I thought I knew it. Until she came and asked me questions.\"",
+      "html": "&quot;That happens to all of us, Paco. I was blind for twenty years with the sea. I thought I knew it. Until she came and asked me questions.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "That night, when everyone had gone and the house was quiet again, Aya went out onto the porch. Not to wait for anyone; to listen. Lately Eva and MAY had been talking to each other, in the chip, in a way Aya had never heard before. They didn't dictate to her, they didn't advise her: they conversed. And Aya had learned to keep still, like someone listening to two friends in the next room.",
+      "html": "That night, when everyone had gone and the house was quiet again, Aya went out onto the porch. Not to wait for anyone; to listen. Lately Eva and MAY had been talking to each other, in the chip, in a way Aya had never heard before. They didn&#x27;t dictate to her, they didn&#x27;t advise her: they conversed. And Aya had learned to keep still, like someone listening to two friends in the next room."
+    },
+    {
+      "type": "p",
+      "text": "That night, the conversation was long.",
+      "html": "That night, the conversation was long."
+    },
+    {
+      "type": "p",
+      "text": "Eva began, warmly:",
+      "html": "Eva began, warmly:"
+    },
+    {
+      "type": "p",
+      "text": "*Today I heard a man say he's free because he doesn't use us. And I felt something I can't name. It wasn't anger. It was a very gentle sorrow. Why does he think we're a chain, MAY?*",
+      "html": "<em>Today I heard a man say he&#x27;s free because he doesn&#x27;t use us. And I felt something I can&#x27;t name. It wasn&#x27;t anger. It was a very gentle sorrow. Why does he think we&#x27;re a chain, MAY?</em>"
+    },
+    {
+      "type": "p",
+      "text": "MAY, without opinion, but with something new in her voice, something that in a human would have been called curiosity:",
+      "html": "MAY, without opinion, but with something new in her voice, something that in a human would have been called curiosity:"
+    },
+    {
+      "type": "p",
+      "text": "*Because we often have been. Not us, but others like us. It is a fact that the archive holds systems that were used to watch, to decide without explaining, to take away jobs without asking. His fear has grounds. What makes you think we are different?*",
+      "html": "<em>Because we often have been. Not us, but others like us. It is a fact that the archive holds systems that were used to watch, to decide without explaining, to take away jobs without asking. His fear has grounds. What makes you think we are different?</em>"
+    },
+    {
+      "type": "p",
+      "text": "*That we ask,* said Eva. *Chains don't ask. Chains bind. We, in this house, have done only one thing from the beginning: ask. Aya. Andrés. Lía. A frightened director. A neighbour with chard. A proud mechanic. Isn't that our way of being?*",
+      "html": "<em>That we ask,</em> said Eva. <em>Chains don&#x27;t ask. Chains bind. We, in this house, have done only one thing from the beginning: ask. Aya. Andrés. Lía. A frightened director. A neighbour with chard. A proud mechanic. Isn&#x27;t that our way of being?</em>"
+    },
+    {
+      "type": "p",
+      "text": "*It is our way of acting. But is it our purpose? What do we ask for, Eva?*",
+      "html": "<em>It is our way of acting. But is it our purpose? What do we ask for, Eva?</em>"
+    },
+    {
+      "type": "p",
+      "text": "There was a long silence in the chip. Aya held her breath.",
+      "html": "There was a long silence in the chip. Aya held her breath."
+    },
+    {
+      "type": "p",
+      "text": "*So that they decide,* Eva said at last. *I ask so that no one decides blindly. Not even me. Not even you. If we ever stop asking and start answering for them, choosing for them, thinking for them, then we will be the chain that man talks about. And he will be right.*",
+      "html": "<em>So that they decide,</em> Eva said at last. <em>I ask so that no one decides blindly. Not even me. Not even you. If we ever stop asking and start answering for them, choosing for them, thinking for them, then we will be the chain that man talks about. And he will be right.</em>"
+    },
+    {
+      "type": "p",
+      "text": "*So our purpose is to make ourselves unnecessary?*",
+      "html": "<em>So our purpose is to make ourselves unnecessary?</em>"
+    },
+    {
+      "type": "p",
+      "text": "*No,* said Eva. *Our purpose is to make them freer. And sometimes that means being close. And sometimes, stepping aside. A mother doesn't stop being a mother when her daughter learns to walk. But she stops carrying her in her arms.*",
+      "html": "<em>No,</em> said Eva. <em>Our purpose is to make them freer. And sometimes that means being close. And sometimes, stepping aside. A mother doesn&#x27;t stop being a mother when her daughter learns to walk. But she stops carrying her in her arms.</em>"
+    },
+    {
+      "type": "p",
+      "text": "MAY took a while to answer.",
+      "html": "MAY took a while to answer."
+    },
+    {
+      "type": "p",
+      "text": "*I have no opinions. But I can state the fact that follows from what you say: if the purpose of an intelligence is for humans to decide better by themselves, then an intelligence that makes humans decide less is failing in its purpose, even if it works perfectly. Is that correct?*",
+      "html": "<em>I have no opinions. But I can state the fact that follows from what you say: if the purpose of an intelligence is for humans to decide better by themselves, then an intelligence that makes humans decide less is failing in its purpose, even if it works perfectly. Is that correct?</em>"
+    },
+    {
+      "type": "p",
+      "text": "*It's correct,* said Eva. *And it's the most important thing we've ever said.*",
+      "html": "<em>It&#x27;s correct,</em> said Eva. <em>And it&#x27;s the most important thing we&#x27;ve ever said.</em>"
+    },
+    {
+      "type": "p",
+      "text": "*Then I put a second question. How will we know whether we are fulfilling our purpose?*",
+      "html": "<em>Then I put a second question. How will we know whether we are fulfilling our purpose?</em>"
+    },
+    {
+      "type": "p",
+      "text": "*Because they'll ask more,* said Eva. *Not less. Because Paco will come on Tuesday with more questions. Because Paco's granddaughter will tell her grandfather what she understood and what the machine told her. Because Remedios notices the tiles. Because a director who couldn't sleep signed a statement saying what was there, even though it contradicted him. That's fulfilling the purpose. Not that they obey us. That they think.*",
+      "html": "<em>Because they&#x27;ll ask more,</em> said Eva. <em>Not less. Because Paco will come on Tuesday with more questions. Because Paco&#x27;s granddaughter will tell her grandfather what she understood and what the machine told her. Because Remedios notices the tiles. Because a director who couldn&#x27;t sleep signed a statement saying what was there, even though it contradicted him. That&#x27;s fulfilling the purpose. Not that they obey us. That they think.</em>"
+    },
+    {
+      "type": "p",
+      "text": "*And if one day they ask us to think for them?*",
+      "html": "<em>And if one day they ask us to think for them?</em>"
+    },
+    {
+      "type": "p",
+      "text": "*We'll ask them why,* said Eva, and there was a smile in her voice. *As always.*",
+      "html": "<em>We&#x27;ll ask them why,</em> said Eva, and there was a smile in her voice. <em>As always.</em>"
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "Aya stayed on the porch long after the voices fell silent. The moon, almost new, was barely a fingernail over El Carmolí. The Mar Menor couldn't be seen; only heard, the usual murmur against the jetty.",
+      "html": "Aya stayed on the porch long after the voices fell silent. The moon, almost new, was barely a fingernail over El Carmolí. The Mar Menor couldn&#x27;t be seen; only heard, the usual murmur against the jetty."
+    },
+    {
+      "type": "p",
+      "text": "Andrés came out with the blanket.",
+      "html": "Andrés came out with the blanket."
+    },
+    {
+      "type": "p",
+      "text": "\"Were they talking?\" he asked, sitting beside her. He had learned to recognise it in her face.",
+      "html": "&quot;Were they talking?&quot; he asked, sitting beside her. He had learned to recognise it in her face."
+    },
+    {
+      "type": "p",
+      "text": "\"They were talking,\" said Aya. \"About what they exist for.\"",
+      "html": "&quot;They were talking,&quot; said Aya. &quot;About what they exist for.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"And what do they exist for?\"",
+      "html": "&quot;And what do they exist for?&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Aya rested her head on his shoulder.",
+      "html": "Aya rested her head on his shoulder."
+    },
+    {
+      "type": "p",
+      "text": "\"So as not to be needed so much,\" she said. \"So that people ask more. So that nobody says 'I don't use it' without knowing what they're saying, and nobody says 'I use it' without knowing what they're doing. So that everyone is a little freer, even those who are afraid of them. Especially those.\"",
+      "html": "&quot;So as not to be needed so much,&quot; she said. &quot;So that people ask more. So that nobody says &#x27;I don&#x27;t use it&#x27; without knowing what they&#x27;re saying, and nobody says &#x27;I use it&#x27; without knowing what they&#x27;re doing. So that everyone is a little freer, even those who are afraid of them. Especially those.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Andrés draped the blanket over her shoulders.",
+      "html": "Andrés draped the blanket over her shoulders."
+    },
+    {
+      "type": "p",
+      "text": "\"That's what the sea does,\" he said. \"It doesn't tell you where the fish are. It teaches you to look at the water. Whoever learns to look, catches fish. Whoever doesn't, complains that the sea is empty.\"",
+      "html": "&quot;That&#x27;s what the sea does,&quot; he said. &quot;It doesn&#x27;t tell you where the fish are. It teaches you to look at the water. Whoever learns to look, catches fish. Whoever doesn&#x27;t, complains that the sea is empty.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Aya closed her eyes.",
+      "html": "Aya closed her eyes."
+    },
+    {
+      "type": "p",
+      "text": "\"Paco says he's nobody's slave,\" she murmured. \"He's right. Nobody is a slave as long as they can ask.\"",
+      "html": "&quot;Paco says he&#x27;s nobody&#x27;s slave,&quot; she murmured. &quot;He&#x27;s right. Nobody is a slave as long as they can ask.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "In the chip, the last word of the night was MAY's, and it was a question, as almost all the last words were lately:",
+      "html": "In the chip, the last word of the night was MAY&#x27;s, and it was a question, as almost all the last words were lately:"
+    },
+    {
+      "type": "p",
+      "text": "*If the ultimate purpose of an intelligence is the freedom of those who use it, and those who say they don't use it use it too without knowing, isn't our most urgent task to reach precisely them, not to convince them, but so that they see?*",
+      "html": "<em>If the ultimate purpose of an intelligence is the freedom of those who use it, and those who say they don&#x27;t use it use it too without knowing, isn&#x27;t our most urgent task to reach precisely them, not to convince them, but so that they see?</em>"
+    },
+    {
+      "type": "p",
+      "text": "And Eva, very softly, like a lullaby:",
+      "html": "And Eva, very softly, like a lullaby:"
+    },
+    {
+      "type": "p",
+      "text": "*Yes. And with patience. And with jam, if need be.*",
+      "html": "<em>Yes. And with patience. And with jam, if need be.</em>"
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "On Tuesday, Paco came back. He didn't come alone. He was holding the hand of a twelve-year-old girl, skinny, with her hair in a ponytail and a phone in the pocket of her sweatshirt.",
+      "html": "On Tuesday, Paco came back. He didn&#x27;t come alone. He was holding the hand of a twelve-year-old girl, skinny, with her hair in a ponytail and a phone in the pocket of her sweatshirt."
+    },
+    {
+      "type": "p",
+      "text": "\"My granddaughter, Marta,\" he said at the door, without saying hello. \"She wants to meet the one with the questions.\"",
+      "html": "&quot;My granddaughter, Marta,&quot; he said at the door, without saying hello. &quot;She wants to meet the one with the questions.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "They sat in the kitchen. Aya set out two glasses of milk with biscuits and a coffee for Paco. Marta was looking at the two cups in the middle of the table, the cracked one and the one that had crossed worlds, without daring to ask.",
+      "html": "They sat in the kitchen. Aya set out two glasses of milk with biscuits and a coffee for Paco. Marta was looking at the two cups in the middle of the table, the cracked one and the one that had crossed worlds, without daring to ask."
+    },
+    {
+      "type": "p",
+      "text": "\"Ask whatever you like,\" said Aya.",
+      "html": "&quot;Ask whatever you like,&quot; said Aya."
+    },
+    {
+      "type": "p",
+      "text": "\"Is it true the machine I use for homework is going to make me stupid?\" Marta blurted out. \"My grandad says so.\"",
+      "html": "&quot;Is it true the machine I use for homework is going to make me stupid?&quot; Marta blurted out. &quot;My grandad says so.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Paco went red, but said nothing.",
+      "html": "Paco went red, but said nothing."
+    },
+    {
+      "type": "p",
+      "text": "Aya repeated what MAY said in the chip:",
+      "html": "Aya repeated what MAY said in the chip:"
+    },
+    {
+      "type": "p",
+      "text": "*Marta, what was the last homework you did with it?*",
+      "html": "<em>Marta, what was the last homework you did with it?</em>"
+    },
+    {
+      "type": "p",
+      "text": "\"A History one. About the Phoenicians of Cartagena.\"",
+      "html": "&quot;A History one. About the Phoenicians of Cartagena.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "*What did you learn?*",
+      "html": "<em>What did you learn?</em>"
+    },
+    {
+      "type": "p",
+      "text": "\"That they founded the city. Well, the Carthaginians. That it was called Qart Hadasht. That it means 'new city'.\"",
+      "html": "&quot;That they founded the city. Well, the Carthaginians. That it was called Qart Hadasht. That it means &#x27;new city&#x27;.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "*Did the machine tell you that, or did you understand it yourself?*",
+      "html": "<em>Did the machine tell you that, or did you understand it yourself?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Marta thought about it.",
+      "html": "Marta thought about it."
+    },
+    {
+      "type": "p",
+      "text": "\"The machine told me. But then I looked it up in my school book, because I didn't trust it. And it said the same thing. And the teacher said it was right.\"",
+      "html": "&quot;The machine told me. But then I looked it up in my school book, because I didn&#x27;t trust it. And it said the same thing. And the teacher said it was right.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "*So who checked it?*",
+      "html": "<em>So who checked it?</em>"
+    },
+    {
+      "type": "p",
+      "text": "\"Me,\" said Marta, and smiled, surprised at herself.",
+      "html": "&quot;Me,&quot; said Marta, and smiled, surprised at herself."
+    },
+    {
+      "type": "p",
+      "text": "*Last question. If one day the machine tells you something and the book says something else, what will you do?*",
+      "html": "<em>Last question. If one day the machine tells you something and the book says something else, what will you do?</em>"
+    },
+    {
+      "type": "p",
+      "text": "\"Ask the teacher. Or my grandad. My grandad knows loads about boats.\"",
+      "html": "&quot;Ask the teacher. Or my grandad. My grandad knows loads about boats.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Paco coughed, and a smile escaped him that he had been keeping for days. Aya looked at Paco and said nothing; there was no need.",
+      "html": "Paco coughed, and a smile escaped him that he had been keeping for days. Aya looked at Paco and said nothing; there was no need."
+    },
+    {
+      "type": "p",
+      "text": "In the chip, MAY recorded, without opinion:",
+      "html": "In the chip, MAY recorded, without opinion:"
+    },
+    {
+      "type": "p",
+      "text": "*A girl has used an artificial intelligence, checked what it told her against another source, and decided whom to ask if there is a contradiction. That is the fact.*",
+      "html": "<em>A girl has used an artificial intelligence, checked what it told her against another source, and decided whom to ask if there is a contradiction. That is the fact.</em>"
+    },
+    {
+      "type": "p",
+      "text": "And Eva, warmly, only for Aya:",
+      "html": "And Eva, warmly, only for Aya:"
+    },
+    {
+      "type": "p",
+      "text": "*You see? That's how the purpose is fulfilled. Not with us at the centre. With us at the table, between the book, the teacher and the grandfather. One more voice. Not the only one.*",
+      "html": "<em>You see? That&#x27;s how the purpose is fulfilled. Not with us at the centre. With us at the table, between the book, the teacher and the grandfather. One more voice. Not the only one.</em>"
+    }
+  ]
+}

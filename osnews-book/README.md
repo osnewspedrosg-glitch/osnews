@@ -30,6 +30,7 @@ La biblioteca tiene un selector **Español / English**. La sección inglesa est�
 2. **Letters from the Stars** — prologue, ten chapters and epilogue.
 3. **The Children of the Earth** — prologue, ten chapters and epilogue.
 4. **Nothing Is Lost** — prologue, ten chapters and epilogue.
+5. **Free as the Wind** — prologue (historical archive of real, dated statements), eight chapters and epilogue.
 
 Cada libro inglés lleva `"lang": "en"` y `"pdf"` en `data/books.json`; el PDF está en `assets/pdf/<id>.pdf` y se abre con el botón «Download PDF».
 
