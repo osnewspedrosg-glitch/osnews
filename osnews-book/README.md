@@ -2,7 +2,7 @@
 
 Biblioteca para publicar y leer, capítulo a capítulo, los libros de Pedro Sánchez Gómez y su bot de Grok.
 
-**URL prevista (tras fusionar este cambio):** [https://osnewspedrosg-glitch.github.io/osnews/osnews-book/](https://osnewspedrosg-glitch.github.io/osnews/osnews-book/)
+**URL:** [https://osnewspedrosg-glitch.github.io/osnews/osnews-book/](https://osnewspedrosg-glitch.github.io/osnews/osnews-book/)
 
 Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.
 
@@ -10,7 +10,8 @@ Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.
 - Modo oscuro y modo claro (se recuerda en este navegador).
 - Botón para compartir en X cada libro o capítulo.
 - Los capítulos se cargan desde JSON, para ir añadiéndolos uno a uno.
-- App estática, gratis, sin anuncios, sin rastreadores y sin claves en el código. Tipografías del sistema, sin recursos externos.
+- App estática, gratis, sin anuncios y sin claves en el código. Tipografías del sistema.
+- Hay un [contador anónimo de visitas](https://www.goatcounter.com/) (GoatCounter, cuenta `osnews-may`), el mismo que ya usa el resto de OSNews. No usa cookies ni guarda datos personales. Cuenta las visitas a la ruta del libro (`/osnews/osnews-book/`) y, por el hash de la dirección, también distingue la biblioteca, cada libro y cada capítulo (por ejemplo `/osnews/osnews-book/#/libro/la-hija-de-dos-mundos` o `#/en`). No hay otros rastreadores.
 
 ## La saga de Lo Pagán
 

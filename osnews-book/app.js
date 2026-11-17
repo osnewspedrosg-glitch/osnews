@@ -1,4 +1,4 @@
-/* OSNews Book — lector estático. Sin claves, sin red de terceros, sin rastreadores. */
+/* OSNews Book — lector estático. Sin claves y sin datos personales. El único recurso de terceros es el contador anónimo de GoatCounter. */
 (function () {
   "use strict";
 
@@ -321,7 +321,19 @@
     setTheme(appliedTheme() === "light" ? "dark" : "light", true);
   });
 
-  window.addEventListener("hashchange", route);
+  function countVisit() {
+    try {
+      if (location.protocol === "file:") return;
+      if (window.goatcounter && typeof window.goatcounter.count === "function") {
+        window.goatcounter.count();
+      }
+    } catch (err) {}
+  }
+
+  window.addEventListener("hashchange", function () {
+    route();
+    countVisit();
+  });
   setTheme(appliedTheme(), false);
   route();
 })();

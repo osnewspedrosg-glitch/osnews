@@ -1,4 +1,4 @@
-/* OSNews Book — system fonts only, no trackers, no external assets. */
+/* OSNews Book — system fonts only. CSS has no external assets. */
 :root {
   --bg: #0b1220;
   --bg2: #141c2e;
