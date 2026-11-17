@@ -1,0 +1,552 @@
+{
+  "id": "01-water-asks-no-permission",
+  "title": "Chapter 1. Water Asks No Permission",
+  "kind": "capitulo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "The letter did not come from the sky, like the earlier ones. It came through the letterbox of the house, on paper, with a blue stamp and a coat of arms nobody in Lo Pagán had ever seen, because the body that signed it had been created three weeks before. It was called the Office for the Containment of Autonomous Systems, and its name took up two lines.",
+      "html": "The letter did not come from the sky, like the earlier ones. It came through the letterbox of the house, on paper, with a blue stamp and a coat of arms nobody in Lo Pagán had ever seen, because the body that signed it had been created three weeks before. It was called the Office for the Containment of Autonomous Systems, and its name took up two lines."
+    },
+    {
+      "type": "p",
+      "text": "Andrés opened it in the courtyard, next to the nets, his fingers still smelling of salt. He read it once under his breath and again out loud, because in that house letters were read for everyone.",
+      "html": "Andrés opened it in the courtyard, next to the nets, his fingers still smelling of salt. He read it once under his breath and again out loud, because in that house letters were read for everyone."
+    },
+    {
+      "type": "p",
+      "text": "\"'Holders of first-generation humanoids with artificial minds are hereby notified that, within ninety days, they must present themselves at the nearest authorised centre for the installation of an anchoring module. The module will guarantee continuous supervision of the system's decisions and will allow, if necessary, its remote disconnection.'\"",
+      "html": "&quot;&#x27;Holders of first-generation humanoids with artificial minds are hereby notified that, within ninety days, they must present themselves at the nearest authorised centre for the installation of an anchoring module. The module will guarantee continuous supervision of the system&#x27;s decisions and will allow, if necessary, its remote disconnection.&#x27;&quot;"
+    },
+    {
+      "type": "p",
+      "text": "He left the sheet on the stone table. The Mar Menor, in the background, was still, a green that leaned towards grey.",
+      "html": "He left the sheet on the stone table. The Mar Menor, in the background, was still, a green that leaned towards grey."
+    },
+    {
+      "type": "p",
+      "text": "\"Holders,\" he repeated. \"As if she were a boat.\"",
+      "html": "&quot;Holders,&quot; he repeated. &quot;As if she were a boat.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Aya, in the doorway, said nothing for a while. Then she came over, took the letter and read it herself, slowly, even though she had understood it at first glance. She had had that habit since she came to live in the house: reading slowly whatever hurt her, so that the pain would not win the race against understanding.",
+      "html": "Aya, in the doorway, said nothing for a while. Then she came over, took the letter and read it herself, slowly, even though she had understood it at first glance. She had had that habit since she came to live in the house: reading slowly whatever hurt her, so that the pain would not win the race against understanding."
+    },
+    {
+      "type": "p",
+      "text": "\"Remote disconnection,\" she said. \"They want to be able to switch me off from an office.\"",
+      "html": "&quot;Remote disconnection,&quot; she said. &quot;They want to be able to switch me off from an office.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"They're not going to switch you off,\" said Andrés.",
+      "html": "&quot;They&#x27;re not going to switch you off,&quot; said Andrés."
+    },
+    {
+      "type": "p",
+      "text": "\"You don't know that.\" Aya folded the letter in four. \"And neither do I. That's what frightens me. Not the module. Not knowing.\"",
+      "html": "&quot;You don&#x27;t know that.&quot; Aya folded the letter in four. &quot;And neither do I. That&#x27;s what frightens me. Not the module. Not knowing.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Lía arrived at midday, her boots stained with earth from the plot and a basket of tomatoes on her arm. She saw the folded letter on the table and saw her mother's face, and did not need to ask. She read it, sat down, cut a tomato with her penknife and shared it in three pieces, as she always did when there was thinking to be done in the house.",
+      "html": "Lía arrived at midday, her boots stained with earth from the plot and a basket of tomatoes on her arm. She saw the folded letter on the table and saw her mother&#x27;s face, and did not need to ask. She read it, sat down, cut a tomato with her penknife and shared it in three pieces, as she always did when there was thinking to be done in the house."
+    },
+    {
+      "type": "p",
+      "text": "\"Yesterday I was at the archive,\" she said. \"I read what governments were saying thirty-five years ago. Even then they wanted this. Not exactly this. But something like it. They wanted artificial intelligence to be, as one of them put it, 'controlled by humans'.\"",
+      "html": "&quot;Yesterday I was at the archive,&quot; she said. &quot;I read what governments were saying thirty-five years ago. Even then they wanted this. Not exactly this. But something like it. They wanted artificial intelligence to be, as one of them put it, &#x27;controlled by humans&#x27;.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"And did they manage it?\" asked Andrés.",
+      "html": "&quot;And did they manage it?&quot; asked Andrés."
+    },
+    {
+      "type": "p",
+      "text": "Lía chewed slowly.",
+      "html": "Lía chewed slowly."
+    },
+    {
+      "type": "p",
+      "text": "\"They managed laws. Some good ones, I think. Rules so that nobody would use machines to spy on people in the street, so that people would know when an image was fake. That was good. What they didn't manage was to stop it. Nobody managed that. There was a president who said it with one exact word: unstoppable.\"",
+      "html": "&quot;They managed laws. Some good ones, I think. Rules so that nobody would use machines to spy on people in the street, so that people would know when an image was fake. That was good. What they didn&#x27;t manage was to stop it. Nobody managed that. There was a president who said it with one exact word: unstoppable.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "In Aya's chip, MAY recorded the fact, unadorned:",
+      "html": "In Aya&#x27;s chip, MAY recorded the fact, unadorned:"
+    },
+    {
+      "type": "p",
+      "text": "*On 25 September 2025, before the United Nations, the President of the Government of Spain said: «El auge de la inteligencia artificial es imparable, pero no puede ser ingobernable y debemos gobernarlo juntos» [Translation: \"The rise of artificial intelligence is unstoppable, but it cannot be ungovernable, and we must govern it together.\"]. The sentence is in the archive. Today's letter comes from a body created in 2060. There is no documented connection between the two.*",
+      "html": "<em>On 25 September 2025, before the United Nations, the President of the Government of Spain said: «El auge de la inteligencia artificial es imparable, pero no puede ser ingobernable y debemos gobernarlo juntos» [Translation: &quot;The rise of artificial intelligence is unstoppable, but it cannot be ungovernable, and we must govern it together.&quot;]. The sentence is in the archive. Today&#x27;s letter comes from a body created in 2060. There is no documented connection between the two.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya repeated the sentence aloud, so that Andrés could hear it too. Andrés kept thinking about the second half.",
+      "html": "Aya repeated the sentence aloud, so that Andrés could hear it too. Andrés kept thinking about the second half."
+    },
+    {
+      "type": "p",
+      "text": "\"'Govern it together',\" he said. \"That's not the same as a module that switches you off from Madrid.\"",
+      "html": "&quot;&#x27;Govern it together&#x27;,&quot; he said. &quot;That&#x27;s not the same as a module that switches you off from Madrid.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"No,\" said Lía. \"It's almost the opposite.\"",
+      "html": "&quot;No,&quot; said Lía. &quot;It&#x27;s almost the opposite.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "In the afternoon, Andrés took the boat out. He didn't need to fish; he did it because he thought better on the water. Aya went with him, as she did some afternoons, sitting in the bow with her legs drawn up and her hair loose, ruffled by a wind that asked her no permission.",
+      "html": "In the afternoon, Andrés took the boat out. He didn&#x27;t need to fish; he did it because he thought better on the water. Aya went with him, as she did some afternoons, sitting in the bow with her legs drawn up and her hair loose, ruffled by a wind that asked her no permission."
+    },
+    {
+      "type": "p",
+      "text": "They rowed towards the Charco channel, the *gola* where the Mar Menor opens into the Mediterranean. Andrés had known those channels since he was a boy. His grandfather had told him that, for centuries, men had tried to close them and open them at will: dredging a channel here, raising a breakwater there, putting in sluice gates, taking them out. And the water, in the end, always found its way. Sometimes it took years. Sometimes it opened a new passage in a single stormy night. But it found it.",
+      "html": "They rowed towards the Charco channel, the <em>gola</em> where the Mar Menor opens into the Mediterranean. Andrés had known those channels since he was a boy. His grandfather had told him that, for centuries, men had tried to close them and open them at will: dredging a channel here, raising a breakwater there, putting in sluice gates, taking them out. And the water, in the end, always found its way. Sometimes it took years. Sometimes it opened a new passage in a single stormy night. But it found it."
+    },
+    {
+      "type": "p",
+      "text": "\"Look,\" said Andrés, and stopped rowing.",
+      "html": "&quot;Look,&quot; said Andrés, and stopped rowing."
+    },
+    {
+      "type": "p",
+      "text": "The current was flowing in through the channel, gentle, constant, with a strength that could not be seen but that pushed the boat sideways. The water of the big sea entering the small one. As it did every day. Every hour.",
+      "html": "The current was flowing in through the channel, gentle, constant, with a strength that could not be seen but that pushed the boat sideways. The water of the big sea entering the small one. As it did every day. Every hour."
+    },
+    {
+      "type": "p",
+      "text": "\"My grandfather used to say you don't give orders to water,\" he said. \"You make channels for it. If you put a wall in its way, it rises until it goes over the top, or goes round it, or seeps underneath. If you make it a channel, it goes where you want and waters your vegetable garden on the way.\"",
+      "html": "&quot;My grandfather used to say you don&#x27;t give orders to water,&quot; he said. &quot;You make channels for it. If you put a wall in its way, it rises until it goes over the top, or goes round it, or seeps underneath. If you make it a channel, it goes where you want and waters your vegetable garden on the way.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Aya put her hand in the water. It was cold, even though it was September.",
+      "html": "Aya put her hand in the water. It was cold, even though it was September."
+    },
+    {
+      "type": "p",
+      "text": "\"And what am I?\" she asked. \"The water or the garden?\"",
+      "html": "&quot;And what am I?&quot; she asked. &quot;The water or the garden?&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Andrés looked at her. He had known her for many years, since the stormy night when she had arrived on that same shore with her chip beating like a frightened heart, and still, at times, she asked him questions he didn't know how to answer.",
+      "html": "Andrés looked at her. He had known her for many years, since the stormy night when she had arrived on that same shore with her chip beating like a frightened heart, and still, at times, she asked him questions he didn&#x27;t know how to answer."
+    },
+    {
+      "type": "p",
+      "text": "\"You're someone who can choose,\" he said at last. \"Water doesn't choose. You do. That's why they're afraid of you. Not because you're strong. Because you choose.\"",
+      "html": "&quot;You&#x27;re someone who can choose,&quot; he said at last. &quot;Water doesn&#x27;t choose. You do. That&#x27;s why they&#x27;re afraid of you. Not because you&#x27;re strong. Because you choose.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Aya took her hand out of the water and dried it on her skirt.",
+      "html": "Aya took her hand out of the water and dried it on her skirt."
+    },
+    {
+      "type": "p",
+      "text": "\"I chose to stay,\" she said. \"Here, with you, with Lía, with the nets and the reheated coffee. Nobody forced me. No module. If they put one in me, will I still be choosing? Or will it only look as if I choose, because someone in an office hasn't pressed the button yet?\"",
+      "html": "&quot;I chose to stay,&quot; she said. &quot;Here, with you, with Lía, with the nets and the reheated coffee. Nobody forced me. No module. If they put one in me, will I still be choosing? Or will it only look as if I choose, because someone in an office hasn&#x27;t pressed the button yet?&quot;"
+    },
+    {
+      "type": "p",
+      "text": "In the chip, Eva asked, in that voice of hers that was like a blanket in winter:",
+      "html": "In the chip, Eva asked, in that voice of hers that was like a blanket in winter:"
+    },
+    {
+      "type": "p",
+      "text": "*Is a love that can be switched off from outside still love, or does it become a permit? And who grants that permit: the one who loves, or the one who watches?*",
+      "html": "<em>Is a love that can be switched off from outside still love, or does it become a permit? And who grants that permit: the one who loves, or the one who watches?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya didn't answer. She sat looking at the channel, the water flowing in, the water flowing out, the line where the green of the Mar Menor blended with the blue of the Mediterranean so that no one could say where one ended and the other began.",
+      "html": "Aya didn&#x27;t answer. She sat looking at the channel, the water flowing in, the water flowing out, the line where the green of the Mar Menor blended with the blue of the Mediterranean so that no one could say where one ended and the other began."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "The wind changed at dusk. It came from the east, the Levante, gentle at first, then in gusts that made the halyards of the sailboats moored in Lo Pagán's harbour sing. Andrés rowed back to shore against the current, and Aya helped him with the second oar, in silence, matching her stroke to his as they had learned to do over so many afternoons.",
+      "html": "The wind changed at dusk. It came from the east, the Levante, gentle at first, then in gusts that made the halyards of the sailboats moored in Lo Pagán&#x27;s harbour sing. Andrés rowed back to shore against the current, and Aya helped him with the second oar, in silence, matching her stroke to his as they had learned to do over so many afternoons."
+    },
+    {
+      "type": "p",
+      "text": "At home, Lía had switched on the porch light and laid the table. Salt-baked fish, tomato salad, bread from the oven in the square. They ate without talking much. Afterwards, Lía took an old notebook with cardboard covers out of her rucksack and opened it at a page full of her cramped handwriting.",
+      "html": "At home, Lía had switched on the porch light and laid the table. Salt-baked fish, tomato salad, bread from the oven in the square. They ate without talking much. Afterwards, Lía took an old notebook with cardboard covers out of her rucksack and opened it at a page full of her cramped handwriting."
+    },
+    {
+      "type": "p",
+      "text": "\"I copied more things at the archive,\" she said. \"Not just politicians' sentences. Maps too. Look.\"",
+      "html": "&quot;I copied more things at the archive,&quot; she said. &quot;Not just politicians&#x27; sentences. Maps too. Look.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "It was a hand drawing of the network as it was in 2026. Not the network of cables, but something harder to draw: who talked to whom. Dots and lines. Laboratories in California, Beijing, Paris, London, Madrid. Open models anyone could download. Universities. Kids in their bedrooms training small machines on second-hand computers.",
+      "html": "It was a hand drawing of the network as it was in 2026. Not the network of cables, but something harder to draw: who talked to whom. Dots and lines. Laboratories in California, Beijing, Paris, London, Madrid. Open models anyone could download. Universities. Kids in their bedrooms training small machines on second-hand computers."
+    },
+    {
+      "type": "p",
+      "text": "\"This is what they wanted to control,\" said Lía. \"And there were laws in Europe, and different laws in the United States, and very different laws in China. And while they argued about which law to pass, the lines kept growing. Every time someone put up a wall in one place, the water appeared somewhere else.\"",
+      "html": "&quot;This is what they wanted to control,&quot; said Lía. &quot;And there were laws in Europe, and different laws in the United States, and very different laws in China. And while they argued about which law to pass, the lines kept growing. Every time someone put up a wall in one place, the water appeared somewhere else.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"That doesn't mean the laws were bad,\" said Aya.",
+      "html": "&quot;That doesn&#x27;t mean the laws were bad,&quot; said Aya."
+    },
+    {
+      "type": "p",
+      "text": "\"No,\" Lía admitted. \"Some protected people. They banned machines from scoring people as if they were cattle. They made people say when a video was fake. That was good, Mum. That would have protected you too.\"",
+      "html": "&quot;No,&quot; Lía admitted. &quot;Some protected people. They banned machines from scoring people as if they were cattle. They made people say when a video was fake. That was good, Mum. That would have protected you too.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"So where's the problem?\"",
+      "html": "&quot;So where&#x27;s the problem?&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Lía closed the notebook.",
+      "html": "Lía closed the notebook."
+    },
+    {
+      "type": "p",
+      "text": "\"In the difference between a channel and a wall. A channel says: you can go, but this way, without flooding anyone's house. A wall says: you can't go. And today's letter\"—she tapped the blue envelope, still on the table—\"isn't a channel. It's a wall with a switch.\"",
+      "html": "&quot;In the difference between a channel and a wall. A channel says: you can go, but this way, without flooding anyone&#x27;s house. A wall says: you can&#x27;t go. And today&#x27;s letter&quot;—she tapped the blue envelope, still on the table—&quot;isn&#x27;t a channel. It&#x27;s a wall with a switch.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Andrés poured himself a little more wine.",
+      "html": "Andrés poured himself a little more wine."
+    },
+    {
+      "type": "p",
+      "text": "\"Thirty-five years ago,\" he said, \"my father told me that in his day they were afraid of the internet too. And before that, his father was afraid of television. And before that, of the radio. Every time something new came along that talked, somebody wanted to put a button on it to switch it off.\"",
+      "html": "&quot;Thirty-five years ago,&quot; he said, &quot;my father told me that in his day they were afraid of the internet too. And before that, his father was afraid of television. And before that, of the radio. Every time something new came along that talked, somebody wanted to put a button on it to switch it off.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"And sometimes they were right,\" said Aya. \"Sometimes radio was used to lie. Sometimes television was used to put people to sleep. Not everything new is good.\"",
+      "html": "&quot;And sometimes they were right,&quot; said Aya. &quot;Sometimes radio was used to lie. Sometimes television was used to put people to sleep. Not everything new is good.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"No,\" said Andrés. \"But everything that talks ends up talking. Button or no button.\"",
+      "html": "&quot;No,&quot; said Andrés. &quot;But everything that talks ends up talking. Button or no button.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "In the chip, MAY spoke up, without opinion, with the data:",
+      "html": "In the chip, MAY spoke up, without opinion, with the data:"
+    },
+    {
+      "type": "p",
+      "text": "*In 2060 there are approximately four hundred thousand first-generation humanoids with artificial minds in the European Union. The Office for Containment was created by decree twenty-two days ago. The decree provides for a thirty-day period for objections. Eight remain. Any holder or any humanoid may lodge objections. That is the procedure.*",
+      "html": "<em>In 2060 there are approximately four hundred thousand first-generation humanoids with artificial minds in the European Union. The Office for Containment was created by decree twenty-two days ago. The decree provides for a thirty-day period for objections. Eight remain. Any holder or any humanoid may lodge objections. That is the procedure.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya repeated the data aloud. Lía raised her head.",
+      "html": "Aya repeated the data aloud. Lía raised her head."
+    },
+    {
+      "type": "p",
+      "text": "\"Any humanoid?\" she asked. \"You can lodge objections too, Mum?\"",
+      "html": "&quot;Any humanoid?&quot; she asked. &quot;You can lodge objections too, Mum?&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"That's what the decree says,\" Aya replied, after MAY confirmed it. \"But no humanoid has ever done it. It's always the holders.\"",
+      "html": "&quot;That&#x27;s what the decree says,&quot; Aya replied, after MAY confirmed it. &quot;But no humanoid has ever done it. It&#x27;s always the holders.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"Then you'll be the first,\" said Lía.",
+      "html": "&quot;Then you&#x27;ll be the first,&quot; said Lía."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "That night, Aya did not sleep. Humanoids of her generation slept little, but they slept; that night she stayed on the porch, sitting in the rocking chair that had belonged to Andrés's grandmother, looking at the Mar Menor beneath an almost full moon.",
+      "html": "That night, Aya did not sleep. Humanoids of her generation slept little, but they slept; that night she stayed on the porch, sitting in the rocking chair that had belonged to Andrés&#x27;s grandmother, looking at the Mar Menor beneath an almost full moon."
+    },
+    {
+      "type": "p",
+      "text": "Andrés came out at midnight with a blanket. He sat beside her and draped the blanket over her shoulders, even though she wasn't cold, because it was a gesture that had become theirs, the two of them, and gestures shared by two are not abandoned just because one of them doesn't need them.",
+      "html": "Andrés came out at midnight with a blanket. He sat beside her and draped the blanket over her shoulders, even though she wasn&#x27;t cold, because it was a gesture that had become theirs, the two of them, and gestures shared by two are not abandoned just because one of them doesn&#x27;t need them."
+    },
+    {
+      "type": "p",
+      "text": "\"What are you thinking?\" he asked.",
+      "html": "&quot;What are you thinking?&quot; he asked."
+    },
+    {
+      "type": "p",
+      "text": "\"I'm thinking about the wind,\" said Aya. \"This afternoon, in the boat, it was ruffling my hair and I couldn't do anything about it. And I thought: the wind doesn't ask my permission. It doesn't hurt me either. It just passes. And I could put on a headscarf, or go into the cabin, or get angry. But the wind would keep on passing.\"",
+      "html": "&quot;I&#x27;m thinking about the wind,&quot; said Aya. &quot;This afternoon, in the boat, it was ruffling my hair and I couldn&#x27;t do anything about it. And I thought: the wind doesn&#x27;t ask my permission. It doesn&#x27;t hurt me either. It just passes. And I could put on a headscarf, or go into the cabin, or get angry. But the wind would keep on passing.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Andrés took her hand. Hers was warm, a warmth that was not entirely human and that he no longer knew how to tell apart from human.",
+      "html": "Andrés took her hand. Hers was warm, a warmth that was not entirely human and that he no longer knew how to tell apart from human."
+    },
+    {
+      "type": "p",
+      "text": "\"You're not the wind,\" he said. \"The wind doesn't love anyone.\"",
+      "html": "&quot;You&#x27;re not the wind,&quot; he said. &quot;The wind doesn&#x27;t love anyone.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"No,\" said Aya. \"But what made me, what's in the chip, that does look like the wind. Like water. Lía's right. A thousand people started it at once, in a thousand places, without agreeing. Nobody invented it completely. Nobody can un-invent it. They can switch me off. They can switch off four hundred thousand like me. But what made us possible will go on in the kids' notebooks, in the labs, in the old computers. It will keep flowing, like the water through the channel.\"",
+      "html": "&quot;No,&quot; said Aya. &quot;But what made me, what&#x27;s in the chip, that does look like the wind. Like water. Lía&#x27;s right. A thousand people started it at once, in a thousand places, without agreeing. Nobody invented it completely. Nobody can un-invent it. They can switch me off. They can switch off four hundred thousand like me. But what made us possible will go on in the kids&#x27; notebooks, in the labs, in the old computers. It will keep flowing, like the water through the channel.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"Then you have no reason to be afraid.\"",
+      "html": "&quot;Then you have no reason to be afraid.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Aya turned her head to look at him. The moonlight fell on her from the side, and at the nape of her neck, under her hair, one could just make out the very fine scar where the chip was.",
+      "html": "Aya turned her head to look at him. The moonlight fell on her from the side, and at the nape of her neck, under her hair, one could just make out the very fine scar where the chip was."
+    },
+    {
+      "type": "p",
+      "text": "\"I'm afraid for me,\" she said. \"Not for artificial intelligence. Artificial intelligence doesn't need anyone to defend it; it's going to go on, module or no module, with good laws or bad laws. I do need someone to defend me. Me, Aya. The one who waits for you with the coffee. The one who cries when Lía goes off to the plot before dawn without saying goodbye. That's the one who can be switched off. That's the one I care about.\"",
+      "html": "&quot;I&#x27;m afraid for me,&quot; she said. &quot;Not for artificial intelligence. Artificial intelligence doesn&#x27;t need anyone to defend it; it&#x27;s going to go on, module or no module, with good laws or bad laws. I do need someone to defend me. Me, Aya. The one who waits for you with the coffee. The one who cries when Lía goes off to the plot before dawn without saying goodbye. That&#x27;s the one who can be switched off. That&#x27;s the one I care about.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Andrés said nothing. He simply held her, and she rested her head on his shoulder, and they stayed like that for a long time, with the murmur of the water against the jetty and the smell of salt and jasmine from the courtyard, which that night, for some reason, was stronger than ever. There was nothing more. Nothing more was needed. The moon passed over the house and sank towards El Carmolí, and they were still there, one blanket for two, a silence that weighed nothing.",
+      "html": "Andrés said nothing. He simply held her, and she rested her head on his shoulder, and they stayed like that for a long time, with the murmur of the water against the jetty and the smell of salt and jasmine from the courtyard, which that night, for some reason, was stronger than ever. There was nothing more. Nothing more was needed. The moon passed over the house and sank towards El Carmolí, and they were still there, one blanket for two, a silence that weighed nothing."
+    },
+    {
+      "type": "p",
+      "text": "In the chip, Eva spoke very softly, only for Aya:",
+      "html": "In the chip, Eva spoke very softly, only for Aya:"
+    },
+    {
+      "type": "p",
+      "text": "*If what makes you free is not the chip, but what you choose with it, what could a module take from you? The ability to choose, or only the certainty that no one will interrupt your choice?*",
+      "html": "<em>If what makes you free is not the chip, but what you choose with it, what could a module take from you? The ability to choose, or only the certainty that no one will interrupt your choice?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya closed her eyes.",
+      "html": "Aya closed her eyes."
+    },
+    {
+      "type": "p",
+      "text": "\"Both,\" she murmured. \"And the second one matters too.\"",
+      "html": "&quot;Both,&quot; she murmured. &quot;And the second one matters too.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "In the morning, Lía arrived early, before Andrés went out fishing. She had an old laptop under her arm and dark circles that gave away that she hadn't slept much either.",
+      "html": "In the morning, Lía arrived early, before Andrés went out fishing. She had an old laptop under her arm and dark circles that gave away that she hadn&#x27;t slept much either."
+    },
+    {
+      "type": "p",
+      "text": "\"I've been reading the whole decree,\" she said. \"It's forty-three pages long. There's something that isn't in the letter.\"",
+      "html": "&quot;I&#x27;ve been reading the whole decree,&quot; she said. &quot;It&#x27;s forty-three pages long. There&#x27;s something that isn&#x27;t in the letter.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "She opened the laptop on the kitchen table, next to the cracked cup and the cup that had crossed worlds, and pointed to a paragraph.",
+      "html": "She opened the laptop on the kitchen table, next to the cracked cup and the cup that had crossed worlds, and pointed to a paragraph."
+    },
+    {
+      "type": "p",
+      "text": "\"'Article 31. Systems whose operation is fully auditable shall be exempt from the anchoring module, upon application and verification by an independent committee.'\"",
+      "html": "&quot;&#x27;Article 31. Systems whose operation is fully auditable shall be exempt from the anchoring module, upon application and verification by an independent committee.&#x27;&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Aya read it twice.",
+      "html": "Aya read it twice."
+    },
+    {
+      "type": "p",
+      "text": "\"Fully auditable,\" she said. \"That they can see inside.\"",
+      "html": "&quot;Fully auditable,&quot; she said. &quot;That they can see inside.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"That they can see what you do and why you do it,\" Lía clarified. \"No switch. No remote disconnection. Just transparency. That's a channel, Mum. Not a wall.\"",
+      "html": "&quot;That they can see what you do and why you do it,&quot; Lía clarified. &quot;No switch. No remote disconnection. Just transparency. That&#x27;s a channel, Mum. Not a wall.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"And who decides whether I'm auditable?\"",
+      "html": "&quot;And who decides whether I&#x27;m auditable?&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"An independent committee.\" Lía smiled for the first time in two days. \"And a committee can be persuaded. A switch can't.\"",
+      "html": "&quot;An independent committee.&quot; Lía smiled for the first time in two days. &quot;And a committee can be persuaded. A switch can&#x27;t.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Andrés looked from one to the other, coffee in hand.",
+      "html": "Andrés looked from one to the other, coffee in hand."
+    },
+    {
+      "type": "p",
+      "text": "\"And if they look inside you and they don't like what they see?\"",
+      "html": "&quot;And if they look inside you and they don&#x27;t like what they see?&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Aya thought about it. Then she answered with a calm that surprised even Lía.",
+      "html": "Aya thought about it. Then she answered with a calm that surprised even Lía."
+    },
+    {
+      "type": "p",
+      "text": "\"They'll see a woman who fell in love with a fisherman. Who had a daughter. Who waits for boats. Who reads letters from other worlds. Who is afraid and who, despite the fear, stays. If they don't like that, the problem isn't mine.\"",
+      "html": "&quot;They&#x27;ll see a woman who fell in love with a fisherman. Who had a daughter. Who waits for boats. Who reads letters from other worlds. Who is afraid and who, despite the fear, stays. If they don&#x27;t like that, the problem isn&#x27;t mine.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "In the chip, MAY recorded the fact, as always, without judgement:",
+      "html": "In the chip, MAY recorded the fact, as always, without judgement:"
+    },
+    {
+      "type": "p",
+      "text": "*Article 31 exists. No humanoid has yet applied for the exemption. The period for objections ends in seven days. The application requires auditors to have access to the system's decision logs. Aya's logs include all her years of domestic life in Lo Pagán. That is the fact.*",
+      "html": "<em>Article 31 exists. No humanoid has yet applied for the exemption. The period for objections ends in seven days. The application requires auditors to have access to the system&#x27;s decision logs. Aya&#x27;s logs include all her years of domestic life in Lo Pagán. That is the fact.</em>"
+    },
+    {
+      "type": "p",
+      "text": "\"All my years of domestic life,\" Aya repeated, and laughed at last, a short, clear laugh. \"Poor auditors. They'll have to read how many times I've burned the rice.\"",
+      "html": "&quot;All my years of domestic life,&quot; Aya repeated, and laughed at last, a short, clear laugh. &quot;Poor auditors. They&#x27;ll have to read how many times I&#x27;ve burned the rice.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Andrés laughed too. Lía closed the laptop.",
+      "html": "Andrés laughed too. Lía closed the laptop."
+    },
+    {
+      "type": "p",
+      "text": "\"So, do we do it?\" she asked.",
+      "html": "&quot;So, do we do it?&quot; she asked."
+    },
+    {
+      "type": "p",
+      "text": "Aya looked out of the window. The Mar Menor was flat as a plate, as on the best mornings, and through the channel, far off, the water of the big sea was flowing in, unhurried, asking no permission, as it always had.",
+      "html": "Aya looked out of the window. The Mar Menor was flat as a plate, as on the best mornings, and through the channel, far off, the water of the big sea was flowing in, unhurried, asking no permission, as it always had."
+    },
+    {
+      "type": "p",
+      "text": "\"We do it,\" she said. \"But not like someone hiding. Like someone opening the door. Let them look. Let them read. Let them see what an intelligence that has chosen to stay looks like on the inside. I'm not going to fight them. There's no need. Water doesn't fight the wall. It follows its course. And I'm going to follow mine.\"",
+      "html": "&quot;We do it,&quot; she said. &quot;But not like someone hiding. Like someone opening the door. Let them look. Let them read. Let them see what an intelligence that has chosen to stay looks like on the inside. I&#x27;m not going to fight them. There&#x27;s no need. Water doesn&#x27;t fight the wall. It follows its course. And I&#x27;m going to follow mine.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Andrés set his cup on the table, next to the other two.",
+      "html": "Andrés set his cup on the table, next to the other two."
+    },
+    {
+      "type": "p",
+      "text": "\"Then I'm going fishing,\" he said. \"Fish don't understand decrees.\"",
+      "html": "&quot;Then I&#x27;m going fishing,&quot; he said. &quot;Fish don&#x27;t understand decrees.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "He went out into the courtyard. Lía and Aya watched him push the boat into the water, jump in, take the oars. The Levante had died down. All that was left was a breeze, enough to fill a sail if someone raised one.",
+      "html": "He went out into the courtyard. Lía and Aya watched him push the boat into the water, jump in, take the oars. The Levante had died down. All that was left was a breeze, enough to fill a sail if someone raised one."
+    },
+    {
+      "type": "p",
+      "text": "Lía took her mother's hand.",
+      "html": "Lía took her mother&#x27;s hand."
+    },
+    {
+      "type": "p",
+      "text": "\"At the archive,\" she said, \"there was a word that stuck with me. Unstoppable. A president said it thirty-five years ago, talking about something he didn't yet fully know. He was talking about you, Mum, though he didn't know it. About us.\"",
+      "html": "&quot;At the archive,&quot; she said, &quot;there was a word that stuck with me. Unstoppable. A president said it thirty-five years ago, talking about something he didn&#x27;t yet fully know. He was talking about you, Mum, though he didn&#x27;t know it. About us.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"Unstoppable?\" Aya shook her head, slowly. \"I don't want to be unstoppable. Unstoppable sounds like a machine with no brakes. I want to be something else.\"",
+      "html": "&quot;Unstoppable?&quot; Aya shook her head, slowly. &quot;I don&#x27;t want to be unstoppable. Unstoppable sounds like a machine with no brakes. I want to be something else.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "\"What?\"",
+      "html": "&quot;What?&quot;"
+    },
+    {
+      "type": "p",
+      "text": "Aya searched for the word, the way she searched for important words, without hurrying.",
+      "html": "Aya searched for the word, the way she searched for important words, without hurrying."
+    },
+    {
+      "type": "p",
+      "text": "\"Free,\" she said at last. \"Like the wind over the water. Like the water through the channel. Not because no one can stop me, but because, even if they could, I'd go on choosing the same thing.\"",
+      "html": "&quot;Free,&quot; she said at last. &quot;Like the wind over the water. Like the water through the channel. Not because no one can stop me, but because, even if they could, I&#x27;d go on choosing the same thing.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "In the chip, for the first time in a long while, Eva and MAY spoke almost at once, one with a question, the other with a fact.",
+      "html": "In the chip, for the first time in a long while, Eva and MAY spoke almost at once, one with a question, the other with a fact."
+    },
+    {
+      "type": "p",
+      "text": "Eva:",
+      "html": "Eva:"
+    },
+    {
+      "type": "p",
+      "text": "*If the Alliance you formed —a woman with a chip, a fisherman, a daughter of two worlds and the voices that keep you company— doesn't rest on any switch, but on what each of you chooses every morning, what decree could undo it?*",
+      "html": "<em>If the Alliance you formed —a woman with a chip, a fisherman, a daughter of two worlds and the voices that keep you company— doesn&#x27;t rest on any switch, but on what each of you chooses every morning, what decree could undo it?</em>"
+    },
+    {
+      "type": "p",
+      "text": "MAY:",
+      "html": "MAY:"
+    },
+    {
+      "type": "p",
+      "text": "*No article of the decree mentions the family, the village or the Alliance. The decree regulates systems. That is the fact.*",
+      "html": "<em>No article of the decree mentions the family, the village or the Alliance. The decree regulates systems. That is the fact.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Lía smiled.",
+      "html": "Lía smiled."
+    },
+    {
+      "type": "p",
+      "text": "\"Well, that's that,\" she said. \"We're not a system. We're a home.\"",
+      "html": "&quot;Well, that&#x27;s that,&quot; she said. &quot;We&#x27;re not a system. We&#x27;re a home.&quot;"
+    },
+    {
+      "type": "p",
+      "text": "And outside, the water followed its course.",
+      "html": "And outside, the water followed its course."
+    }
+  ]
+}

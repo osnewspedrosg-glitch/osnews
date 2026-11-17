@@ -99,6 +99,18 @@
       "pdf": "assets/pdf/nothing-is-lost.pdf",
       "authors": "Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot",
       "chaptersIndex": "data/nothing-is-lost/chapters.json"
+    },
+    {
+      "id": "free-as-the-wind",
+      "lang": "en",
+      "title": "Free as the Wind",
+      "subtitle": "Novel · The Lo Pagán Saga · V",
+      "year": 2026,
+      "blurb": "A decree wants to fit Aya with a module so she can be switched off from an office. She asks to be looked at from the inside instead. With real words from the politicians of 2023–2025 as a historical archive, AI follows its course like the wind and the water, even when walls are put in its way.",
+      "cover": "assets/covers/free-as-the-wind.jpg",
+      "pdf": "assets/pdf/free-as-the-wind.pdf",
+      "authors": "Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot",
+      "chaptersIndex": "data/free-as-the-wind/chapters.json"
     }
   ]
 }
