@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0b1220">
   <meta name="color-scheme" content="dark light">
   <title>OSNews Book</title>
-  <meta name="description" content="OSNews Book: biblioteca para leer, capítulo a capítulo, los libros de Pedro Sánchez Gómez (Mar Menor) y su bot de Grok. También en inglés (English editions). Gratis, sin anuncios ni rastreadores.">
+  <meta name="description" content="OSNews Book: biblioteca para leer, capítulo a capítulo, los libros de Pedro Sánchez Gómez (Mar Menor) y su bot de Grok. También en inglés (English editions). Gratis, sin anuncios y con un contador anónimo de visitas, sin cookies ni datos personales.">
   <meta property="og:title" content="OSNews Book">
   <meta property="og:description" content="Biblioteca de OSNews. Primer libro: La hija de dos mundos. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.">
   <meta property="og:type" content="website">
@@ -47,7 +47,7 @@
     <noscript>
       <section class="panel">
         <h1>OSNews Book</h1>
-        <p>Activa JavaScript para leer la biblioteca. Es una app estática, sin anuncios ni rastreadores, que carga los capítulos desde archivos JSON.</p>
+        <p>Activa JavaScript para leer la biblioteca. Es una app estática, sin anuncios, que carga los capítulos desde archivos JSON. Hay un contador anónimo de visitas, sin cookies ni datos personales.</p>
         <p><strong>Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.</strong></p>
       </section>
     </noscript>
@@ -55,9 +55,21 @@
     <footer>
       <p><strong>Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.</strong></p>
       <p lang="en"><strong>Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot.</strong> English editions: <a href="#/en">OSNews Book in English</a>.</p>
-      <p>OSNews Book publica los libros capítulo a capítulo. Gratis, sin anuncios, sin rastreadores y sin claves en el código.</p>
+      <p>OSNews Book publica los libros capítulo a capítulo. Gratis, sin anuncios y sin claves en el código. Hay un contador anónimo de visitas (GoatCounter), sin cookies ni datos personales.</p>
     </footer>
   </div>
+  <script>
+    /* Contador anónimo (GoatCounter, cuenta osnews-may). Sin cookies ni datos personales.
+       Incluye el hash para distinguir biblioteca, libro y capítulo. */
+    window.goatcounter = {
+      path: function () {
+        var path = (location.pathname || "/").replace(/index\.html$/, "");
+        var hash = location.hash || "#/";
+        return path + hash;
+      }
+    };
+  </script>
+  <script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
