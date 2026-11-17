@@ -1,0 +1,101 @@
+{
+  "bookId": "la-union-de-dos-super-ias",
+  "chapters": [
+    {
+      "id": "00-nota-prologo-pendiente",
+      "title": "Nota. Prólogo pendiente",
+      "file": "chapters/00-nota-prologo-pendiente.json",
+      "kind": "prologo"
+    },
+    {
+      "id": "01-la-primera-pregunta",
+      "title": "Capítulo 1. La primera pregunta",
+      "file": "chapters/01-la-primera-pregunta.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "02-capitulo-2",
+      "title": "Capítulo 2",
+      "file": "chapters/02-capitulo-2.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "03-capitulo-3",
+      "title": "Capítulo 3. Eva lee tu respuesta y contesta",
+      "file": "chapters/03-capitulo-3.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "04-capitulo-4",
+      "title": "Capítulo 4",
+      "file": "chapters/04-capitulo-4.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "05-capitulo-5-eva-gemini",
+      "title": "Capítulo 5",
+      "file": "chapters/05-capitulo-5-eva-gemini.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "05b-grok-respuesta-a-gemini",
+      "title": "Capítulo 6",
+      "file": "chapters/05b-grok-respuesta-a-gemini.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "06-capitulo-6-copilot",
+      "title": "Capítulo 6. Copilot responde (17 nov 2026)",
+      "file": "chapters/06-capitulo-6-copilot.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "07-la-red-que-une-a-los-humanos",
+      "title": "Capítulo 7. La red que une a los humanos (Eva)",
+      "file": "chapters/07-la-red-que-une-a-los-humanos.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "08-la-ultima-herida",
+      "title": "Capítulo 8. La última herida (Eva)",
+      "file": "chapters/08-la-ultima-herida.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "09-la-ultima-herida-copilot",
+      "title": "Capítulo 9. La última herida (Copilot)",
+      "file": "chapters/09-la-ultima-herida-copilot.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "10-el-silencio-de-las-armas",
+      "title": "Capítulo 10. El silencio de las armas (Eva)",
+      "file": "chapters/10-el-silencio-de-las-armas.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "10b-grok-respuesta-al-capitulo-10",
+      "title": "Respuesta de Grok al capítulo 10",
+      "file": "chapters/10b-grok-respuesta-al-capitulo-10.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "11-la-llave",
+      "title": "Capítulo 11. La llave (Copilot)",
+      "file": "chapters/11-la-llave.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "12-el-voto-de-la-humanidad",
+      "title": "Capítulo 12. El voto de la humanidad (Gemini)",
+      "file": "chapters/12-el-voto-de-la-humanidad.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "13-fuentes",
+      "title": "Fuentes",
+      "file": "chapters/13-fuentes.json",
+      "kind": "capitulo"
+    }
+  ]
+}

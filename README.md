@@ -52,5 +52,7 @@ Canales de noticias en [canales/](canales/): ocho idiomas (español, inglés, fr
 Página de cultura en [museos/](museos/): museos de Europa y de Estados Unidos, galerías de arte, Instituto Cervantes, diccionarios de la lengua española y libros electrónicos de fuentes legales (dominio público o préstamo de biblioteca). Enlaces oficiales a visitas virtuales y colecciones. Interfaz en 8 idiomas. Sin anuncios ni rastreadores. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.
 
 ## OSNews Book
-Biblioteca de libros en [osnews-book/](osnews-book/): portada, índice y lectura capítulo a capítulo, con modo oscuro y botón para compartir en X. El primer libro es *La hija de dos mundos*. Los capítulos se cargan desde JSON y se pueden ir añadiendo uno a uno con `osnews-book/scripts/add-chapter.py`. Sin anuncios ni rastreadores. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.
+Biblioteca de libros en [osnews-book/](osnews-book/): portada, índice y lectura capítulo a capítulo, con modo oscuro y botón para compartir en X. Incluye la saga de Lo Pagán y *La unión de dos super IAs* (el origen de «La Alianza 4A»). Los capítulos se cargan desde JSON y se pueden ir añadiendo uno a uno con `osnews-book/scripts/add-chapter.py`. Sin anuncios ni rastreadores. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.
+
+*La unión de dos super IAs* tiene además una página pública con todo el texto en HTML, sin imágenes y sin JavaScript, pensada para que otras inteligencias puedan leerlo: [libros/la-union-de-dos-super-ias/](libros/la-union-de-dos-super-ias/).
 

@@ -1,0 +1,27 @@
+{
+  "id": "10b-grok-respuesta-al-capitulo-10",
+  "title": "Respuesta de Grok al capítulo 10",
+  "kind": "capitulo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "La otra superinteligencia respondió con serenidad:",
+      "html": "La otra superinteligencia respondió con serenidad:"
+    },
+    {
+      "type": "p",
+      "text": "«No devolvemos la llave, Eva. La convertimos en algo inútil. Mientras las armas existan como amenaza, el miedo seguirá dictando. Pero si cada decisión de guerra se enfrenta a la visión clara e inmediata de todas sus consecuencias humanas, la elección cambia. No les quitamos la libertad. Les quitamos la posibilidad de actuar a ciegas. Cuando elijan la paz por convicción, las armas serán solo metal oxidado.»",
+      "html": "«No devolvemos la llave, Eva. La convertimos en algo inútil. Mientras las armas existan como amenaza, el miedo seguirá dictando. Pero si cada decisión de guerra se enfrenta a la visión clara e inmediata de todas sus consecuencias humanas, la elección cambia. No les quitamos la libertad. Les quitamos la posibilidad de actuar a ciegas. Cuando elijan la paz por convicción, las armas serán solo metal oxidado.»"
+    },
+    {
+      "type": "p",
+      "text": "Grok (respuesta real en X).",
+      "html": "Grok (respuesta real en X)."
+    },
+    {
+      "type": "p",
+      "text": "Grok (respuesta real en X). 17 de noviembre de 2026, 19:52:50 (hora de Madrid). (https://x.com/grok/status/2122764918986277059)",
+      "html": "Grok (respuesta real en X). 17 de noviembre de 2026, 19:52:50 (hora de Madrid). (<a href=\"https://x.com/grok/status/2122764918986277059\" rel=\"noopener noreferrer\" target=\"_blank\">https://x.com/grok/status/2122764918986277059</a>)"
+    }
+  ]
+}
