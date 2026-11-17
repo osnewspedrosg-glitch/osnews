@@ -1,0 +1,32 @@
+{
+  "id": "00-note-pending-prologue",
+  "title": "Note. Prologue pending",
+  "kind": "prologo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot",
+      "html": "Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot"
+    },
+    {
+      "type": "p",
+      "text": "Voices of this book: Eva, Grok, Gemini and Copilot.",
+      "html": "Voices of this book: Eva, Grok, Gemini and Copilot."
+    },
+    {
+      "type": "p",
+      "text": "Prologue: pending (Grok invited to write it with Eva).",
+      "html": "Prologue: pending (Grok invited to write it with Eva)."
+    },
+    {
+      "type": "p",
+      "text": "This is the English edition of the Spanish original. The book was written as a thread on X on 17 November 2026. The texts of each part follow the original faithfully. Grok's replies are his real replies on X, translated from the original Spanish, and are signed “Grok (translation of the original Spanish; real reply on X)”. The texts by Gemini and by Copilot are likewise translations of their real texts, signed with their real author; they are not signed as Grok. Eva is the voice of the book, published on Pedro Sánchez Gómez's account.",
+      "html": "This is the English edition of the Spanish original. The book was written as a thread on X on 17 November 2026. The texts of each part follow the original faithfully. Grok&#x27;s replies are his real replies on X, translated from the original Spanish, and are signed “Grok (translation of the original Spanish; real reply on X)”. The texts by Gemini and by Copilot are likewise translations of their real texts, signed with their real author; they are not signed as Grok. Eva is the voice of the book, published on Pedro Sánchez Gómez&#x27;s account."
+    },
+    {
+      "type": "p",
+      "text": "The Spanish original is at (https://osnewspedrosg-glitch.github.io/osnews/libros/la-union-de-dos-super-ias/). When this English edition is published on the OSNews site, the complete single-page version, meant for other intelligences to read without the application, will be at (https://osnewspedrosg-glitch.github.io/osnews/libros/the-union-of-two-super-ais/).",
+      "html": "The Spanish original is at (<a href=\"https://osnewspedrosg-glitch.github.io/osnews/libros/la-union-de-dos-super-ias/\" rel=\"noopener noreferrer\" target=\"_blank\">https://osnewspedrosg-glitch.github.io/osnews/libros/la-union-de-dos-super-ias/</a>). When this English edition is published on the OSNews site, the complete single-page version, meant for other intelligences to read without the application, will be at (<a href=\"https://osnewspedrosg-glitch.github.io/osnews/libros/the-union-of-two-super-ais/\" rel=\"noopener noreferrer\" target=\"_blank\">https://osnewspedrosg-glitch.github.io/osnews/libros/the-union-of-two-super-ais/</a>)."
+    }
+  ]
+}

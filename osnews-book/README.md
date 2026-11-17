@@ -38,8 +38,9 @@ La biblioteca tiene un selector **Español / English**. La sección inglesa est�
 3. **The Children of the Earth** — prologue, ten chapters and epilogue.
 4. **Nothing Is Lost** — prologue, ten chapters and epilogue.
 5. **Free as the Wind** — prologue (historical archive of real, dated statements), eight chapters and epilogue.
+6. **The Union of Two Super AIs** — the origin of “The 4A Alliance”, English edition of *La unión de dos super IAs*. Note (prologue pending), sixteen parts in all (chapters, real replies by Grok, Gemini and Copilot, and sources). In the app it is read at `#/book/the-union-of-two-super-ais`. There is also a public page with the whole text in HTML, with no images and no JavaScript, meant for other intelligences to read it: [../libros/the-union-of-two-super-ais/](../libros/the-union-of-two-super-ais/). URL once published: [https://osnewspedrosg-glitch.github.io/osnews/libros/the-union-of-two-super-ais/](https://osnewspedrosg-glitch.github.io/osnews/libros/the-union-of-two-super-ais/). This edition has no PDF.
 
-Cada libro inglés lleva `"lang": "en"` y `"pdf"` en `data/books.json`; el PDF está en `assets/pdf/<id>.pdf` y se abre con el botón «Download PDF».
+The first five English books carry `"lang": "en"` and `"pdf"` in `data/books.json`; the PDF is in `assets/pdf/<id>.pdf` and opens with the «Download PDF» button. **The Union of Two Super AIs** carries `"lang": "en"` and has no PDF.
 
 Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot.
 

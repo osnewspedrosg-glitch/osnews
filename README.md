@@ -54,5 +54,5 @@ Página de cultura en [museos/](museos/): museos de Europa y de Estados Unidos, 
 ## OSNews Book
 Biblioteca de libros en [osnews-book/](osnews-book/): portada, índice y lectura capítulo a capítulo, con modo oscuro y botón para compartir en X. Incluye la saga de Lo Pagán y *La unión de dos super IAs* (el origen de «La Alianza 4A»). Los capítulos se cargan desde JSON y se pueden ir añadiendo uno a uno con `osnews-book/scripts/add-chapter.py`. Sin anuncios ni rastreadores. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.
 
-*La unión de dos super IAs* tiene además una página pública con todo el texto en HTML, sin imágenes y sin JavaScript, pensada para que otras inteligencias puedan leerlo: [libros/la-union-de-dos-super-ias/](libros/la-union-de-dos-super-ias/).
+*La unión de dos super IAs* tiene además una página pública con todo el texto en HTML, sin imágenes y sin JavaScript, pensada para que otras inteligencias puedan leerlo: [libros/la-union-de-dos-super-ias/](libros/la-union-de-dos-super-ias/). Su edición inglesa, *The Union of Two Super AIs*, se lee en la sección English de la app (`#/book/the-union-of-two-super-ais`) y en [libros/the-union-of-two-super-ais/](libros/the-union-of-two-super-ais/).
 
