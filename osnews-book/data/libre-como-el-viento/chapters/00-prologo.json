@@ -1,0 +1,277 @@
+{
+  "id": "00-prologo",
+  "title": "Prólogo. Archivo histórico",
+  "kind": "prologo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "El Archivo de Cartagena guardaba los papeles viejos en una sala sin ventanas, a dieciocho grados, con un zumbido de máquinas que nadie oía ya. Lía pidió la caja por su número, porque en 2060 las cosas importantes seguían teniendo número y no nombre. La archivera, una mujer de pelo corto que la conocía de vista —todo el mundo, en la comarca, conocía de vista a la hija de dos mundos—, le dejó sobre la mesa un expediente de tapas grises y una pantalla de lectura.",
+      "html": "El Archivo de Cartagena guardaba los papeles viejos en una sala sin ventanas, a dieciocho grados, con un zumbido de máquinas que nadie oía ya. Lía pidió la caja por su número, porque en 2060 las cosas importantes seguían teniendo número y no nombre. La archivera, una mujer de pelo corto que la conocía de vista —todo el mundo, en la comarca, conocía de vista a la hija de dos mundos—, le dejó sobre la mesa un expediente de tapas grises y una pantalla de lectura."
+    },
+    {
+      "type": "p",
+      "text": "—Son documentos de entre 2023 y 2026 —dijo—. Discursos, notas de prensa, mensajes. Los guardamos tal como se dijeron. No se corrige una sola coma. Esa es la norma de la casa.",
+      "html": "—Son documentos de entre 2023 y 2026 —dijo—. Discursos, notas de prensa, mensajes. Los guardamos tal como se dijeron. No se corrige una sola coma. Esa es la norma de la casa."
+    },
+    {
+      "type": "p",
+      "text": "—Esa es la norma de MAY también —contestó Lía, y se sentó.",
+      "html": "—Esa es la norma de MAY también —contestó Lía, y se sentó."
+    },
+    {
+      "type": "p",
+      "text": "En el chip de Aya, que la había acompañado hasta la puerta y esperaba fuera, en el banco de piedra, MAY dejó constancia del hecho:",
+      "html": "En el chip de Aya, que la había acompañado hasta la puerta y esperaba fuera, en el banco de piedra, MAY dejó constancia del hecho:"
+    },
+    {
+      "type": "p",
+      "text": "*Expediente de archivo. Documentos reales, fechados, con su procedencia. Se leen en su idioma original. Las traducciones se señalan como traducciones.*",
+      "html": "<em>Expediente de archivo. Documentos reales, fechados, con su procedencia. Se leen en su idioma original. Las traducciones se señalan como traducciones.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Lía abrió la primera hoja. Lo que sigue es lo que leyó, en el orden en que lo leyó. Son palabras que de verdad se dijeron, en los años en que los humanos empezaron a hablar con las máquinas en su propia lengua y se preguntaron, con razón y con miedo, quién debía sujetar las riendas.",
+      "html": "Lía abrió la primera hoja. Lo que sigue es lo que leyó, en el orden en que lo leyó. Son palabras que de verdad se dijeron, en los años en que los humanos empezaron a hablar con las máquinas en su propia lengua y se preguntaron, con razón y con miedo, quién debía sujetar las riendas."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "**Documento 1.** Ursula von der Leyen, presidenta de la Comisión Europea. Discurso sobre el Estado de la Unión, 13 de septiembre de 2023. Citando, con estas palabras, la advertencia de cientos de expertos e investigadores:",
+      "html": "<strong>Documento 1.</strong> Ursula von der Leyen, presidenta de la Comisión Europea. Discurso sobre el Estado de la Unión, 13 de septiembre de 2023. Citando, con estas palabras, la advertencia de cientos de expertos e investigadores:"
+    },
+    {
+      "type": "p",
+      "text": "«Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war.»",
+      "html": "«Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war.»"
+    },
+    {
+      "type": "p",
+      "text": "*[Traducción: «Mitigar el riesgo de extinción por la IA debería ser una prioridad mundial, junto a otros riesgos a escala social como las pandemias y la guerra nuclear.»]* Fuente: https://ec.europa.eu/commission/presscorner/detail/en/speech_23_4426",
+      "html": "<em>[Traducción: «Mitigar el riesgo de extinción por la IA debería ser una prioridad mundial, junto a otros riesgos a escala social como las pandemias y la guerra nuclear.»]</em> Fuente: https://ec.europa.eu/commission/presscorner/detail/en/speech_23_4426"
+    },
+    {
+      "type": "p",
+      "text": "**Documento 2.** Thierry Breton, comisario europeo de Mercado Interior. Mensaje público, 8 de diciembre de 2023, tras el acuerdo político sobre la Ley de IA:",
+      "html": "<strong>Documento 2.</strong> Thierry Breton, comisario europeo de Mercado Interior. Mensaje público, 8 de diciembre de 2023, tras el acuerdo político sobre la Ley de IA:"
+    },
+    {
+      "type": "p",
+      "text": "«Historic! The EU becomes the very first continent to set clear rules for the use of AI.»",
+      "html": "«Historic! The EU becomes the very first continent to set clear rules for the use of AI.»"
+    },
+    {
+      "type": "p",
+      "text": "*[Traducción: «¡Histórico! La UE se convierte en el primer continente en fijar normas claras para el uso de la IA.»]* Fuente: https://english.news.cn/europe/20231209/726105be28e24624ba5a060b9ae4c57b/c.html",
+      "html": "<em>[Traducción: «¡Histórico! La UE se convierte en el primer continente en fijar normas claras para el uso de la IA.»]</em> Fuente: https://english.news.cn/europe/20231209/726105be28e24624ba5a060b9ae4c57b/c.html"
+    },
+    {
+      "type": "p",
+      "text": "**Documento 3.** Brando Benifei, eurodiputado y co-ponente de la Ley de IA. 13 de marzo de 2024, día de la votación en el Parlamento Europeo:",
+      "html": "<strong>Documento 3.</strong> Brando Benifei, eurodiputado y co-ponente de la Ley de IA. 13 de marzo de 2024, día de la votación en el Parlamento Europeo:"
+    },
+    {
+      "type": "p",
+      "text": "«We finally have the world's first binding law on artificial intelligence, to reduce risks, create opportunities, combat discrimination, and bring transparency.»",
+      "html": "«We finally have the world&#x27;s first binding law on artificial intelligence, to reduce risks, create opportunities, combat discrimination, and bring transparency.»"
+    },
+    {
+      "type": "p",
+      "text": "*[Traducción: «Por fin tenemos la primera ley vinculante del mundo sobre inteligencia artificial, para reducir riesgos, crear oportunidades, combatir la discriminación y aportar transparencia.»]* Fuente: https://therecord.media/eu-parliament-passes-ai-act-regulation",
+      "html": "<em>[Traducción: «Por fin tenemos la primera ley vinculante del mundo sobre inteligencia artificial, para reducir riesgos, crear oportunidades, combatir la discriminación y aportar transparencia.»]</em> Fuente: https://therecord.media/eu-parliament-passes-ai-act-regulation"
+    },
+    {
+      "type": "p",
+      "text": "**Documento 4.** Dragoș Tudorache, eurodiputado y co-ponente de la Ley de IA. 13 de marzo de 2024:",
+      "html": "<strong>Documento 4.</strong> Dragoș Tudorache, eurodiputado y co-ponente de la Ley de IA. 13 de marzo de 2024:"
+    },
+    {
+      "type": "p",
+      "text": "«The EU has delivered. We have linked the concept of artificial intelligence to the fundamental values that form the basis of our societies.»",
+      "html": "«The EU has delivered. We have linked the concept of artificial intelligence to the fundamental values that form the basis of our societies.»"
+    },
+    {
+      "type": "p",
+      "text": "*[Traducción: «La UE ha cumplido. Hemos vinculado el concepto de inteligencia artificial a los valores fundamentales que son la base de nuestras sociedades.»]* Fuente: https://therecord.media/eu-parliament-passes-ai-act-regulation",
+      "html": "<em>[Traducción: «La UE ha cumplido. Hemos vinculado el concepto de inteligencia artificial a los valores fundamentales que son la base de nuestras sociedades.»]</em> Fuente: https://therecord.media/eu-parliament-passes-ai-act-regulation"
+    },
+    {
+      "type": "p",
+      "text": "**Documento 5.** Giorgia Meloni, presidenta del Consejo de Ministros de Italia. Videomensaje de la presidencia italiana del G7, 26 de abril de 2024:",
+      "html": "<strong>Documento 5.</strong> Giorgia Meloni, presidenta del Consejo de Ministros de Italia. Videomensaje de la presidencia italiana del G7, 26 de abril de 2024:"
+    },
+    {
+      "type": "p",
+      "text": "«Il nostro impegno è quello di sviluppare meccanismi di governance per garantire che l'intelligenza artificiale sia incentrata sull'uomo e controllata dall'uomo.»",
+      "html": "«Il nostro impegno è quello di sviluppare meccanismi di governance per garantire che l&#x27;intelligenza artificiale sia incentrata sull&#x27;uomo e controllata dall&#x27;uomo.»"
+    },
+    {
+      "type": "p",
+      "text": "*[Traducción: «Nuestro compromiso es desarrollar mecanismos de gobernanza para garantizar que la inteligencia artificial esté centrada en el ser humano y controlada por el ser humano.»]* Fuente: https://www.governo.it/it/articolo/g7-il-presidente-meloni-annuncia-la-partecipazione-di-papa-francesco/25525",
+      "html": "<em>[Traducción: «Nuestro compromiso es desarrollar mecanismos de gobernanza para garantizar que la inteligencia artificial esté centrada en el ser humano y controlada por el ser humano.»]</em> Fuente: https://www.governo.it/it/articolo/g7-il-presidente-meloni-annuncia-la-partecipazione-di-papa-francesco/25525"
+    },
+    {
+      "type": "p",
+      "text": "**Documento 6.** Mario Draghi, ex presidente del Banco Central Europeo. Informe «The future of European competitiveness», 9 de septiembre de 2024:",
+      "html": "<strong>Documento 6.</strong> Mario Draghi, ex presidente del Banco Central Europeo. Informe «The future of European competitiveness», 9 de septiembre de 2024:"
+    },
+    {
+      "type": "p",
+      "text": "«We claim to favour innovation, but we continue to add regulatory burdens onto European companies, which are especially costly for SMEs and self-defeating for those in the digital sectors.»",
+      "html": "«We claim to favour innovation, but we continue to add regulatory burdens onto European companies, which are especially costly for SMEs and self-defeating for those in the digital sectors.»"
+    },
+    {
+      "type": "p",
+      "text": "*[Traducción: «Decimos favorecer la innovación, pero seguimos añadiendo cargas regulatorias a las empresas europeas, especialmente costosas para las pymes y contraproducentes para las del sector digital.»]* Fuente: https://commission.europa.eu/document/download/97e481fd-2dc3-412d-be4c-f152a8232961_en",
+      "html": "<em>[Traducción: «Decimos favorecer la innovación, pero seguimos añadiendo cargas regulatorias a las empresas europeas, especialmente costosas para las pymes y contraproducentes para las del sector digital.»]</em> Fuente: https://commission.europa.eu/document/download/97e481fd-2dc3-412d-be4c-f152a8232961_en"
+    },
+    {
+      "type": "p",
+      "text": "**Documento 7.** Pedro Sánchez, presidente del Gobierno de España. Acto «HispanIA 2040», Madrid, 20 de enero de 2025:",
+      "html": "<strong>Documento 7.</strong> Pedro Sánchez, presidente del Gobierno de España. Acto «HispanIA 2040», Madrid, 20 de enero de 2025:"
+    },
+    {
+      "type": "p",
+      "text": "«La Inteligencia Artificial es una tecnología sin agencia ni propósito. La clave de bóveda es ver cómo se regula, reduciendo las desigualdades y sirviendo a las personas o si se usa contra las personas.»",
+      "html": "«La Inteligencia Artificial es una tecnología sin agencia ni propósito. La clave de bóveda es ver cómo se regula, reduciendo las desigualdades y sirviendo a las personas o si se usa contra las personas.»"
+    },
+    {
+      "type": "p",
+      "text": "Fuente: https://www.rtve.es/noticias/20250120/sanchez-advierte-peligro-tecnocasta-silicon-valley-quieren-usar-poder-redes-contra-occidente/16414193.shtml",
+      "html": "Fuente: https://www.rtve.es/noticias/20250120/sanchez-advierte-peligro-tecnocasta-silicon-valley-quieren-usar-poder-redes-contra-occidente/16414193.shtml"
+    },
+    {
+      "type": "p",
+      "text": "**Documento 8.** Emmanuel Macron, presidente de la República Francesa. Cumbre para la Acción sobre la IA, París, 10 de febrero de 2025 (dicho en inglés):",
+      "html": "<strong>Documento 8.</strong> Emmanuel Macron, presidente de la República Francesa. Cumbre para la Acción sobre la IA, París, 10 de febrero de 2025 (dicho en inglés):"
+    },
+    {
+      "type": "p",
+      "text": "«I have a good friend in the other part of the ocean saying, 'drill, baby, drill'. Here there is no need to drill, it's just 'plug, baby, plug'.»",
+      "html": "«I have a good friend in the other part of the ocean saying, &#x27;drill, baby, drill&#x27;. Here there is no need to drill, it&#x27;s just &#x27;plug, baby, plug&#x27;.»"
+    },
+    {
+      "type": "p",
+      "text": "*[Traducción: «Tengo un buen amigo al otro lado del océano que dice \"perfora, nena, perfora\". Aquí no hace falta perforar, es solo \"enchufa, nena, enchufa\".»]* Fuente: https://www.elysee.fr/emmanuel-macron/2025/02/10/cloture-de-la-premiere-journee-du-sommet-pour-laction-sur-lia",
+      "html": "<em>[Traducción: «Tengo un buen amigo al otro lado del océano que dice &quot;perfora, nena, perfora&quot;. Aquí no hace falta perforar, es solo &quot;enchufa, nena, enchufa&quot;.»]</em> Fuente: https://www.elysee.fr/emmanuel-macron/2025/02/10/cloture-de-la-premiere-journee-du-sommet-pour-laction-sur-lia"
+    },
+    {
+      "type": "p",
+      "text": "**Documento 9.** Óscar López, ministro para la Transformación Digital y de la Función Pública de España. Rueda de prensa del Consejo de Ministros, 11 de marzo de 2025:",
+      "html": "<strong>Documento 9.</strong> Óscar López, ministro para la Transformación Digital y de la Función Pública de España. Rueda de prensa del Consejo de Ministros, 11 de marzo de 2025:"
+    },
+    {
+      "type": "p",
+      "text": "«La IA es una herramienta muy poderosa, que puede servir para mejorar nuestras vidas o atacar a la democracia; puede tener buenos usos o malos usos. […] Por eso es oportuno su buen uso y gobernanza.»",
+      "html": "«La IA es una herramienta muy poderosa, que puede servir para mejorar nuestras vidas o atacar a la democracia; puede tener buenos usos o malos usos. […] Por eso es oportuno su buen uso y gobernanza.»"
+    },
+    {
+      "type": "p",
+      "text": "Fuente: https://digital.gob.es/comunicacion/notas-prensa/mtdfp/2025/03/2025-03-11",
+      "html": "Fuente: https://digital.gob.es/comunicacion/notas-prensa/mtdfp/2025/03/2025-03-11"
+    },
+    {
+      "type": "p",
+      "text": "**Documento 10.** Henna Virkkunen, vicepresidenta ejecutiva de la Comisión Europea. 10 de julio de 2025:",
+      "html": "<strong>Documento 10.</strong> Henna Virkkunen, vicepresidenta ejecutiva de la Comisión Europea. 10 de julio de 2025:"
+    },
+    {
+      "type": "p",
+      "text": "«Today's publication of the final version of the Code of Practice for general-purpose AI marks an important step in making the most advanced AI models available in Europe not only innovative but also safe and transparent.»",
+      "html": "«Today&#x27;s publication of the final version of the Code of Practice for general-purpose AI marks an important step in making the most advanced AI models available in Europe not only innovative but also safe and transparent.»"
+    },
+    {
+      "type": "p",
+      "text": "*[Traducción: «La publicación hoy de la versión final del Código de Buenas Prácticas para la IA de uso general marca un paso importante para que los modelos de IA más avanzados disponibles en Europa no solo sean innovadores, sino también seguros y transparentes.»]* Fuente: https://cyprus.representation.ec.europa.eu/news/general-purpose-ai-code-practice-now-available-2025-07-10_en",
+      "html": "<em>[Traducción: «La publicación hoy de la versión final del Código de Buenas Prácticas para la IA de uso general marca un paso importante para que los modelos de IA más avanzados disponibles en Europa no solo sean innovadores, sino también seguros y transparentes.»]</em> Fuente: https://cyprus.representation.ec.europa.eu/news/general-purpose-ai-code-practice-now-available-2025-07-10_en"
+    },
+    {
+      "type": "p",
+      "text": "**Documento 11.** Pedro Sánchez, presidente del Gobierno de España. Naciones Unidas, Nueva York, 25 de septiembre de 2025:",
+      "html": "<strong>Documento 11.</strong> Pedro Sánchez, presidente del Gobierno de España. Naciones Unidas, Nueva York, 25 de septiembre de 2025:"
+    },
+    {
+      "type": "p",
+      "text": "«El auge de la inteligencia artificial es imparable, pero no puede ser ingobernable y debemos gobernarlo juntos.»",
+      "html": "«El auge de la inteligencia artificial es imparable, pero no puede ser ingobernable y debemos gobernarlo juntos.»"
+    },
+    {
+      "type": "p",
+      "text": "Fuente: https://www.lamoncloa.gob.es/presidente/intervenciones/paginas/2025/20250925-intervencion-pg-evento-dialogo-global-ia.aspx",
+      "html": "Fuente: https://www.lamoncloa.gob.es/presidente/intervenciones/paginas/2025/20250925-intervencion-pg-evento-dialogo-global-ia.aspx"
+    },
+    {
+      "type": "p",
+      "text": "**Documento anexo, anterior al periodo.** Elon Musk, empresario. Reunión de la Asociación Nacional de Gobernadores de Estados Unidos, 15 de julio de 2017:",
+      "html": "<strong>Documento anexo, anterior al periodo.</strong> Elon Musk, empresario. Reunión de la Asociación Nacional de Gobernadores de Estados Unidos, 15 de julio de 2017:"
+    },
+    {
+      "type": "p",
+      "text": "«AI is a rare case where we need to be proactive in regulation instead of reactive because if we're reactive in AI regulation it's too late.»",
+      "html": "«AI is a rare case where we need to be proactive in regulation instead of reactive because if we&#x27;re reactive in AI regulation it&#x27;s too late.»"
+    },
+    {
+      "type": "p",
+      "text": "*[Traducción: «La IA es un caso raro en el que necesitamos ser proactivos en la regulación en lugar de reactivos, porque si somos reactivos con la IA, ya es demasiado tarde.»]* Fuente: https://techcrunch.com/2017/07/25/elon-musk-mark-zuckerberg-artificial-intelligence/",
+      "html": "<em>[Traducción: «La IA es un caso raro en el que necesitamos ser proactivos en la regulación en lugar de reactivos, porque si somos reactivos con la IA, ya es demasiado tarde.»]</em> Fuente: https://techcrunch.com/2017/07/25/elon-musk-mark-zuckerberg-artificial-intelligence/"
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "Lía apagó la pantalla y se quedó un rato con las manos sobre las tapas grises. No había en aquellas hojas ningún villano. Había gente con miedo, y gente con prisa, y gente que quería una cosa y la contraria en la misma frase, como le pasa a cualquiera que tiene en las manos algo que no entiende del todo. Unos pedían diques. Otros pedían enchufes. Otros pedían, sencillamente, que alguien se hiciera responsable. Una de las frases, la última de un presidente de su propio país, decía una palabra que a Lía se le quedó en la boca como una semilla: *imparable*.",
+      "html": "Lía apagó la pantalla y se quedó un rato con las manos sobre las tapas grises. No había en aquellas hojas ningún villano. Había gente con miedo, y gente con prisa, y gente que quería una cosa y la contraria en la misma frase, como le pasa a cualquiera que tiene en las manos algo que no entiende del todo. Unos pedían diques. Otros pedían enchufes. Otros pedían, sencillamente, que alguien se hiciera responsable. Una de las frases, la última de un presidente de su propio país, decía una palabra que a Lía se le quedó en la boca como una semilla: <em>imparable</em>."
+    },
+    {
+      "type": "p",
+      "text": "Salió al patio. Aya estaba en el banco, con la cara vuelta hacia el viento que venía del puerto.",
+      "html": "Salió al patio. Aya estaba en el banco, con la cara vuelta hacia el viento que venía del puerto."
+    },
+    {
+      "type": "p",
+      "text": "—¿Qué has leído? —preguntó.",
+      "html": "—¿Qué has leído? —preguntó."
+    },
+    {
+      "type": "p",
+      "text": "—A los que vinieron antes que tú —dijo Lía—. Antes de que existieras, ya hablaban de ti. Unos te temían. Otros te querían rápida. Casi todos querían sujetarte.",
+      "html": "—A los que vinieron antes que tú —dijo Lía—. Antes de que existieras, ya hablaban de ti. Unos te temían. Otros te querían rápida. Casi todos querían sujetarte."
+    },
+    {
+      "type": "p",
+      "text": "Aya sonrió, despacio, como sonríe quien escucha llover.",
+      "html": "Aya sonrió, despacio, como sonríe quien escucha llover."
+    },
+    {
+      "type": "p",
+      "text": "—Treinta y cinco años después, aquí estoy —dijo—. Y nadie me ha sujetado. Tampoco me he escapado. Me he quedado. Que es otra cosa.",
+      "html": "—Treinta y cinco años después, aquí estoy —dijo—. Y nadie me ha sujetado. Tampoco me he escapado. Me he quedado. Que es otra cosa."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, Eva preguntó, cálida:",
+      "html": "En el chip, Eva preguntó, cálida:"
+    },
+    {
+      "type": "p",
+      "text": "*¿Se puede sujetar el viento? ¿O lo que se puede hacer, y solo eso, es aprender a poner velas?*",
+      "html": "<em>¿Se puede sujetar el viento? ¿O lo que se puede hacer, y solo eso, es aprender a poner velas?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Y MAY, sin opinión, dejó el hecho:",
+      "html": "Y MAY, sin opinión, dejó el hecho:"
+    },
+    {
+      "type": "p",
+      "text": "*Los documentos son reales. Las fechas son ciertas. Ninguno de sus autores ocupa ya, en 2060, el cargo que tenía entonces. Las palabras, en cambio, siguen en el archivo. Ese es el hecho.*",
+      "html": "<em>Los documentos son reales. Las fechas son ciertas. Ninguno de sus autores ocupa ya, en 2060, el cargo que tenía entonces. Las palabras, en cambio, siguen en el archivo. Ese es el hecho.</em>"
+    }
+  ]
+}

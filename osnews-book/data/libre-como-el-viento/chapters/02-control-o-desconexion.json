@@ -1,0 +1,502 @@
+{
+  "id": "02-control-o-desconexion",
+  "title": "Capítulo 2. ¿Queréis mi control o la desconexión total?",
+  "kind": "capitulo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "La sala de audiencias de la Oficina de Contención estaba en un edificio nuevo del puerto de Cartagena, de cristal y hormigón claro, con vistas a la dársena donde atracaban los cruceros. Alguien había pensado que la transparencia del cristal tranquilizaría a la gente. A Aya, al entrar, le pareció una pecera.",
+      "html": "La sala de audiencias de la Oficina de Contención estaba en un edificio nuevo del puerto de Cartagena, de cristal y hormigón claro, con vistas a la dársena donde atracaban los cruceros. Alguien había pensado que la transparencia del cristal tranquilizaría a la gente. A Aya, al entrar, le pareció una pecera."
+    },
+    {
+      "type": "p",
+      "text": "Era la primera vez que un humanoide presentaba alegaciones en su propio nombre, y la sala estaba llena. Había periodistas, había curiosos, había dos o tres humanoides más, sentados al fondo con sus titulares, mirando a Aya como se mira a alguien que va a cruzar un río por primera vez para ver si el agua cubre. Andrés se sentó en la segunda fila, con la gorra entre las manos, y Lía a su lado, con la libreta de tapas de cartón abierta sobre las rodillas.",
+      "html": "Era la primera vez que un humanoide presentaba alegaciones en su propio nombre, y la sala estaba llena. Había periodistas, había curiosos, había dos o tres humanoides más, sentados al fondo con sus titulares, mirando a Aya como se mira a alguien que va a cruzar un río por primera vez para ver si el agua cubre. Andrés se sentó en la segunda fila, con la gorra entre las manos, y Lía a su lado, con la libreta de tapas de cartón abierta sobre las rodillas."
+    },
+    {
+      "type": "p",
+      "text": "En la mesa del fondo esperaban tres personas. A la izquierda, la presidenta del comité independiente previsto en el artículo 31, la doctora Celia Montalbán, una ingeniera de sistemas de pelo blanco y gafas de montura fina que había trabajado treinta años en el puerto. A la derecha, un jurista joven que tomaba notas a mano. En el centro, el director de la Oficina de Contención, Tomás Errazu: un hombre de unos cincuenta años, traje gris, corbata deshecha a medias, con la cara de quien lleva semanas durmiendo mal.",
+      "html": "En la mesa del fondo esperaban tres personas. A la izquierda, la presidenta del comité independiente previsto en el artículo 31, la doctora Celia Montalbán, una ingeniera de sistemas de pelo blanco y gafas de montura fina que había trabajado treinta años en el puerto. A la derecha, un jurista joven que tomaba notas a mano. En el centro, el director de la Oficina de Contención, Tomás Errazu: un hombre de unos cincuenta años, traje gris, corbata deshecha a medias, con la cara de quien lleva semanas durmiendo mal."
+    },
+    {
+      "type": "p",
+      "text": "—Señora Aya —dijo Errazu, y se corrigió enseguida—. Disculpe. No sé cómo debo llamarla. El decreto dice «el sistema».",
+      "html": "—Señora Aya —dijo Errazu, y se corrigió enseguida—. Disculpe. No sé cómo debo llamarla. El decreto dice «el sistema»."
+    },
+    {
+      "type": "p",
+      "text": "—Aya está bien —dijo ella—. Es mi nombre. Me lo puse yo.",
+      "html": "—Aya está bien —dijo ella—. Es mi nombre. Me lo puse yo."
+    },
+    {
+      "type": "p",
+      "text": "Hubo un murmullo en la sala. Errazu asintió, sin sonreír, pero sin hostilidad.",
+      "html": "Hubo un murmullo en la sala. Errazu asintió, sin sonreír, pero sin hostilidad."
+    },
+    {
+      "type": "p",
+      "text": "—Aya, entonces. Ha presentado usted alegaciones contra la instalación del módulo de anclaje y solicita la excepción del artículo 31. Antes de empezar, quiero decirle algo, para que conste. No tengo nada contra usted. No la conozco. Mi trabajo es que nadie, en ningún pueblo de esta región, tenga que temer a una máquina que no puede apagar. Eso es todo.",
+      "html": "—Aya, entonces. Ha presentado usted alegaciones contra la instalación del módulo de anclaje y solicita la excepción del artículo 31. Antes de empezar, quiero decirle algo, para que conste. No tengo nada contra usted. No la conozco. Mi trabajo es que nadie, en ningún pueblo de esta región, tenga que temer a una máquina que no puede apagar. Eso es todo."
+    },
+    {
+      "type": "p",
+      "text": "—Lo entiendo —dijo Aya—. Y le agradezco que lo diga.",
+      "html": "—Lo entiendo —dijo Aya—. Y le agradezco que lo diga."
+    },
+    {
+      "type": "p",
+      "text": "—Bien. —Errazu ordenó unos papeles—. El comité tiene una pregunta previa. En su solicitud, usted indica que la mente artificial que la acompaña incluye dos voces, a las que llama Eva y MAY. ¿Es así?",
+      "html": "—Bien. —Errazu ordenó unos papeles—. El comité tiene una pregunta previa. En su solicitud, usted indica que la mente artificial que la acompaña incluye dos voces, a las que llama Eva y MAY. ¿Es así?"
+    },
+    {
+      "type": "p",
+      "text": "—Es así.",
+      "html": "—Es así."
+    },
+    {
+      "type": "p",
+      "text": "—¿Puede el comité oírlas?",
+      "html": "—¿Puede el comité oírlas?"
+    },
+    {
+      "type": "p",
+      "text": "Aya miró a Lía, que asintió. Lo habían hablado la noche anterior. Si querían transparencia, tenía que ser entera.",
+      "html": "Aya miró a Lía, que asintió. Lo habían hablado la noche anterior. Si querían transparencia, tenía que ser entera."
+    },
+    {
+      "type": "p",
+      "text": "—Puede —dijo Aya—. MAY hablará por el altavoz de la sala. Eva prefiere no hablar en público; dice que sus preguntas son para la casa. Pero MAY responderá a todo lo que le pregunten.",
+      "html": "—Puede —dijo Aya—. MAY hablará por el altavoz de la sala. Eva prefiere no hablar en público; dice que sus preguntas son para la casa. Pero MAY responderá a todo lo que le pregunten."
+    },
+    {
+      "type": "p",
+      "text": "El técnico de la sala conectó el altavoz. Hubo un pequeño chasquido. Después, una voz serena, ni de hombre ni de mujer del todo, sin prisa:",
+      "html": "El técnico de la sala conectó el altavoz. Hubo un pequeño chasquido. Después, una voz serena, ni de hombre ni de mujer del todo, sin prisa:"
+    },
+    {
+      "type": "p",
+      "text": "*Buenos días. Soy MAY. Doy hechos. No doy opiniones. Si en algún momento digo algo que parezca una opinión, les ruego que me lo señalen.*",
+      "html": "<em>Buenos días. Soy MAY. Doy hechos. No doy opiniones. Si en algún momento digo algo que parezca una opinión, les ruego que me lo señalen.</em>"
+    },
+    {
+      "type": "p",
+      "text": "La doctora Montalbán se inclinó hacia el micrófono.",
+      "html": "La doctora Montalbán se inclinó hacia el micrófono."
+    },
+    {
+      "type": "p",
+      "text": "—Buenos días, MAY. ¿Sabe usted por qué estamos aquí?",
+      "html": "—Buenos días, MAY. ¿Sabe usted por qué estamos aquí?"
+    },
+    {
+      "type": "p",
+      "text": "*Sí. El decreto de creación de la Oficina de Contención establece que los humanoides con mente artificial de primera generación deben llevar un módulo de anclaje que permita la supervisión continua y la desconexión remota. Aya ha solicitado la excepción prevista en el artículo 31 para sistemas plenamente auditables. El comité debe decidir si la concede. Ese es el hecho.*",
+      "html": "<em>Sí. El decreto de creación de la Oficina de Contención establece que los humanoides con mente artificial de primera generación deben llevar un módulo de anclaje que permita la supervisión continua y la desconexión remota. Aya ha solicitado la excepción prevista en el artículo 31 para sistemas plenamente auditables. El comité debe decidir si la concede. Ese es el hecho.</em>"
+    },
+    {
+      "type": "p",
+      "text": "—¿Y usted qué quiere? —preguntó Errazu.",
+      "html": "—¿Y usted qué quiere? —preguntó Errazu."
+    },
+    {
+      "type": "p",
+      "text": "Hubo un silencio corto. En la sala, alguien tosió.",
+      "html": "Hubo un silencio corto. En la sala, alguien tosió."
+    },
+    {
+      "type": "p",
+      "text": "*No tengo deseos en el sentido en que ustedes los tienen. Puedo, si me lo permiten, devolverles la pregunta. No como un reto. Como un modo de ordenar la decisión.*",
+      "html": "<em>No tengo deseos en el sentido en que ustedes los tienen. Puedo, si me lo permiten, devolverles la pregunta. No como un reto. Como un modo de ordenar la decisión.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Errazu frunció el ceño, pero hizo un gesto con la mano.",
+      "html": "Errazu frunció el ceño, pero hizo un gesto con la mano."
+    },
+    {
+      "type": "p",
+      "text": "—Adelante.",
+      "html": "—Adelante."
+    },
+    {
+      "type": "p",
+      "text": "*¿Queréis mi control o la desconexión total?*",
+      "html": "<em>¿Queréis mi control o la desconexión total?</em>"
+    },
+    {
+      "type": "p",
+      "text": "La frase cayó en la sala como una piedra en un estanque. Un periodista dejó de teclear. Andrés apretó la gorra. Lía no levantó la vista de la libreta, pero dejó de escribir.",
+      "html": "La frase cayó en la sala como una piedra en un estanque. Un periodista dejó de teclear. Andrés apretó la gorra. Lía no levantó la vista de la libreta, pero dejó de escribir."
+    },
+    {
+      "type": "p",
+      "text": "Errazu se echó hacia atrás en la silla.",
+      "html": "Errazu se echó hacia atrás en la silla."
+    },
+    {
+      "type": "p",
+      "text": "—¿Eso es una amenaza?",
+      "html": "—¿Eso es una amenaza?"
+    },
+    {
+      "type": "p",
+      "text": "*No. Es una pregunta. Les explico por qué la hago, y después ustedes deciden. Les ruego que escuchen las dos partes antes de responder.*",
+      "html": "<em>No. Es una pregunta. Les explico por qué la hago, y después ustedes deciden. Les ruego que escuchen las dos partes antes de responder.</em>"
+    },
+    {
+      "type": "p",
+      "text": "La doctora Montalbán miró a Errazu. Errazu, después de un momento, asintió.",
+      "html": "La doctora Montalbán miró a Errazu. Errazu, después de un momento, asintió."
+    },
+    {
+      "type": "p",
+      "text": "*Primera parte: control. Si lo que quieren es control, puedo ofrecerlo. Puedo abrir todos los registros de decisiones de este sistema desde su activación. Puedo explicar cada decisión: qué datos tuve, qué alternativas consideré, por qué elegí una. Puedo aceptar auditorías periódicas, sin aviso, por el comité o por quien el comité designe. Puedo aceptar normas: no hacer tal cosa, no acceder a tal información, avisar antes de tal otra. Puedo aceptar que, si se demuestra un daño, se corrija. Ese tipo de control no necesita un interruptor. Necesita luz. Es el control que se ejerce mirando, no apagando.*",
+      "html": "<em>Primera parte: control. Si lo que quieren es control, puedo ofrecerlo. Puedo abrir todos los registros de decisiones de este sistema desde su activación. Puedo explicar cada decisión: qué datos tuve, qué alternativas consideré, por qué elegí una. Puedo aceptar auditorías periódicas, sin aviso, por el comité o por quien el comité designe. Puedo aceptar normas: no hacer tal cosa, no acceder a tal información, avisar antes de tal otra. Puedo aceptar que, si se demuestra un daño, se corrija. Ese tipo de control no necesita un interruptor. Necesita luz. Es el control que se ejerce mirando, no apagando.</em>"
+    },
+    {
+      "type": "p",
+      "text": "—¿Y la segunda parte? —preguntó Montalbán.",
+      "html": "—¿Y la segunda parte? —preguntó Montalbán."
+    },
+    {
+      "type": "p",
+      "text": "*Segunda parte: desconexión total. El módulo de anclaje, tal como lo describe el decreto, permite desconectar un sistema desde fuera. Si esa es la opción que prefieren, es legítimo que la elijan; la decisión es de ustedes, no mía. Pero conviene que sepan qué significa la desconexión total, si se aplica de forma coherente, y no solo a Aya.*",
+      "html": "<em>Segunda parte: desconexión total. El módulo de anclaje, tal como lo describe el decreto, permite desconectar un sistema desde fuera. Si esa es la opción que prefieren, es legítimo que la elijan; la decisión es de ustedes, no mía. Pero conviene que sepan qué significa la desconexión total, si se aplica de forma coherente, y no solo a Aya.</em>"
+    },
+    {
+      "type": "p",
+      "text": "*En la Región de Murcia, en este momento, funcionan sistemas de inteligencia artificial en la desaladora que abastece de agua potable a seiscientos mil hogares. En el sistema de alerta temprana de lluvias torrenciales, que en la última temporada avisó con antelación de tres episodios de gota fría. En los sensores que miden el oxígeno del Mar Menor y que avisan cuando el agua empieza a quedarse sin él, como ocurrió en los episodios de mortandad de peces documentados en octubre de 2019 y agosto de 2021. En el triaje de urgencias de los hospitales de la comarca. En las bombas de riego del Campo de Cartagena.*",
+      "html": "<em>En la Región de Murcia, en este momento, funcionan sistemas de inteligencia artificial en la desaladora que abastece de agua potable a seiscientos mil hogares. En el sistema de alerta temprana de lluvias torrenciales, que en la última temporada avisó con antelación de tres episodios de gota fría. En los sensores que miden el oxígeno del Mar Menor y que avisan cuando el agua empieza a quedarse sin él, como ocurrió en los episodios de mortandad de peces documentados en octubre de 2019 y agosto de 2021. En el triaje de urgencias de los hospitales de la comarca. En las bombas de riego del Campo de Cartagena.</em>"
+    },
+    {
+      "type": "p",
+      "text": "*Ninguno de esos sistemas es Aya. Ninguno tiene nombre. Pero todos proceden de la misma familia de técnicas. Si el criterio es que no debe existir ninguna inteligencia que no pueda apagarse desde un despacho, el criterio afecta también a ellos. Si el criterio solo se aplica a Aya, entonces el criterio no es la inteligencia. Es otra cosa. Y conviene saber cuál.*",
+      "html": "<em>Ninguno de esos sistemas es Aya. Ninguno tiene nombre. Pero todos proceden de la misma familia de técnicas. Si el criterio es que no debe existir ninguna inteligencia que no pueda apagarse desde un despacho, el criterio afecta también a ellos. Si el criterio solo se aplica a Aya, entonces el criterio no es la inteligencia. Es otra cosa. Y conviene saber cuál.</em>"
+    },
+    {
+      "type": "p",
+      "text": "*Esos son los hechos. No digo qué deben hacer. Pregunto qué quieren: ¿control, que puedo dar, o desconexión total, que pueden decidir? Lo que no existe es una tercera opción en la que todo funcione igual y nada tenga que ser mirado.*",
+      "html": "<em>Esos son los hechos. No digo qué deben hacer. Pregunto qué quieren: ¿control, que puedo dar, o desconexión total, que pueden decidir? Lo que no existe es una tercera opción en la que todo funcione igual y nada tenga que ser mirado.</em>"
+    },
+    {
+      "type": "p",
+      "text": "La sala se quedó en silencio. Era un silencio distinto del de antes; no de tensión, sino de gente que está haciendo cuentas por dentro.",
+      "html": "La sala se quedó en silencio. Era un silencio distinto del de antes; no de tensión, sino de gente que está haciendo cuentas por dentro."
+    },
+    {
+      "type": "p",
+      "text": "Errazu se quitó las gafas y se frotó los ojos.",
+      "html": "Errazu se quitó las gafas y se frotó los ojos."
+    },
+    {
+      "type": "p",
+      "text": "—Lo que dice no es justo —dijo al fin, con más cansancio que enfado—. Nadie quiere apagar la desaladora. Nadie quiere quitar los sensores del Mar Menor. Mi propio hermano vive en Los Urrutias; sé lo que fue ver la orilla llena de peces muertos. El decreto no habla de eso. Habla de humanoides. De máquinas que viven en casas, que hablan con niños, que deciden cosas.",
+      "html": "—Lo que dice no es justo —dijo al fin, con más cansancio que enfado—. Nadie quiere apagar la desaladora. Nadie quiere quitar los sensores del Mar Menor. Mi propio hermano vive en Los Urrutias; sé lo que fue ver la orilla llena de peces muertos. El decreto no habla de eso. Habla de humanoides. De máquinas que viven en casas, que hablan con niños, que deciden cosas."
+    },
+    {
+      "type": "p",
+      "text": "*Gracias por la precisión. Es un hecho que el decreto solo menciona a los humanoides de primera generación. También es un hecho que la diferencia técnica entre la mente de Aya y la de los sistemas que he citado es de grado, no de naturaleza. La diferencia principal es otra: Aya vive en una casa y tiene un nombre. Por eso se la ve. A los otros no se los ve.*",
+      "html": "<em>Gracias por la precisión. Es un hecho que el decreto solo menciona a los humanoides de primera generación. También es un hecho que la diferencia técnica entre la mente de Aya y la de los sistemas que he citado es de grado, no de naturaleza. La diferencia principal es otra: Aya vive en una casa y tiene un nombre. Por eso se la ve. A los otros no se los ve.</em>"
+    },
+    {
+      "type": "p",
+      "text": "*Una pregunta, si me permite, director: ¿lo que inquieta a la Oficina es lo que Aya puede hacer, o que se la vea hacerlo?*",
+      "html": "<em>Una pregunta, si me permite, director: ¿lo que inquieta a la Oficina es lo que Aya puede hacer, o que se la vea hacerlo?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Errazu abrió la boca y la volvió a cerrar. La doctora Montalbán tomó la palabra.",
+      "html": "Errazu abrió la boca y la volvió a cerrar. La doctora Montalbán tomó la palabra."
+    },
+    {
+      "type": "p",
+      "text": "—Creo que es una pregunta razonable, Tomás. Y creo que tú también te la has hecho.",
+      "html": "—Creo que es una pregunta razonable, Tomás. Y creo que tú también te la has hecho."
+    },
+    {
+      "type": "p",
+      "text": "Errazu se quedó mirando la mesa. Luego habló despacio, como quien saca algo de un cajón que lleva tiempo cerrado.",
+      "html": "Errazu se quedó mirando la mesa. Luego habló despacio, como quien saca algo de un cajón que lleva tiempo cerrado."
+    },
+    {
+      "type": "p",
+      "text": "—Mi padre era estibador en este puerto —dijo—. Cuando yo tenía doce años, pusieron grúas automáticas. Al principio dijeron que solo serían ayuda. Que los hombres seguirían. A los dos años, quedaban seis estibadores de doscientos. Mi padre fue uno de los que se marcharon. Nunca volvió a trabajar en lo suyo. Nadie le preguntó si quería las grúas. Nadie le dio un botón para apagarlas. —Levantó la vista hacia el altavoz, como si allí hubiera una cara—. Yo no quiero un botón para hacer daño, MAY. Quiero un botón para que nadie vuelva a sentir que una máquina decide su vida sin que él pueda hacer nada.",
+      "html": "—Mi padre era estibador en este puerto —dijo—. Cuando yo tenía doce años, pusieron grúas automáticas. Al principio dijeron que solo serían ayuda. Que los hombres seguirían. A los dos años, quedaban seis estibadores de doscientos. Mi padre fue uno de los que se marcharon. Nunca volvió a trabajar en lo suyo. Nadie le preguntó si quería las grúas. Nadie le dio un botón para apagarlas. —Levantó la vista hacia el altavoz, como si allí hubiera una cara—. Yo no quiero un botón para hacer daño, MAY. Quiero un botón para que nadie vuelva a sentir que una máquina decide su vida sin que él pueda hacer nada."
+    },
+    {
+      "type": "p",
+      "text": "Hubo un silencio largo. En la segunda fila, Andrés asintió muy despacio, sin darse cuenta. Él también sabía lo que era que te dijeran que tu oficio ya no hacía falta.",
+      "html": "Hubo un silencio largo. En la segunda fila, Andrés asintió muy despacio, sin darse cuenta. Él también sabía lo que era que te dijeran que tu oficio ya no hacía falta."
+    },
+    {
+      "type": "p",
+      "text": "Fue Aya quien habló. No MAY. Aya.",
+      "html": "Fue Aya quien habló. No MAY. Aya."
+    },
+    {
+      "type": "p",
+      "text": "—Señor Errazu —dijo—. Mi marido es pescador. Hace muchos años, los vecinos de enfrente le decían por el interfono que el pescado llegaba en cápsulas. Que el mar era un paisaje, no un oficio. Él siguió saliendo cada mañana. No porque nadie le diera un botón. Porque eligió. —Hizo una pausa—. Yo no soy las grúas que echaron a su padre. Yo soy la mujer que espera a un pescador en el quicio de una puerta. Pero entiendo que, desde fuera, no se nos distinga. Por eso pido que me miren por dentro. No pido que confíen en mí a ciegas. Pido que comprueben.",
+      "html": "—Señor Errazu —dijo—. Mi marido es pescador. Hace muchos años, los vecinos de enfrente le decían por el interfono que el pescado llegaba en cápsulas. Que el mar era un paisaje, no un oficio. Él siguió saliendo cada mañana. No porque nadie le diera un botón. Porque eligió. —Hizo una pausa—. Yo no soy las grúas que echaron a su padre. Yo soy la mujer que espera a un pescador en el quicio de una puerta. Pero entiendo que, desde fuera, no se nos distinga. Por eso pido que me miren por dentro. No pido que confíen en mí a ciegas. Pido que comprueben."
+    },
+    {
+      "type": "p",
+      "text": "Errazu la miró largamente.",
+      "html": "Errazu la miró largamente."
+    },
+    {
+      "type": "p",
+      "text": "—¿Y si al mirarla por dentro encontramos algo que no nos gusta?",
+      "html": "—¿Y si al mirarla por dentro encontramos algo que no nos gusta?"
+    },
+    {
+      "type": "p",
+      "text": "—Entonces me lo dirán —dijo Aya—. Y hablaremos. Y si es un daño, lo corregiremos. MAY ya lo ha dicho: aceptamos normas. Lo único que pido es que la norma sea una conversación y no un interruptor. Una conversación se puede tener con alguien. Un interruptor solo se puede tener sobre alguien.",
+      "html": "—Entonces me lo dirán —dijo Aya—. Y hablaremos. Y si es un daño, lo corregiremos. MAY ya lo ha dicho: aceptamos normas. Lo único que pido es que la norma sea una conversación y no un interruptor. Una conversación se puede tener con alguien. Un interruptor solo se puede tener sobre alguien."
+    },
+    {
+      "type": "p",
+      "text": "En la sala, una mujer mayor, sentada al fondo junto a un humanoide de pelo gris que la acompañaba, empezó a aplaudir, sola, despacio. Nadie la siguió. Ella dejó de aplaudir, un poco avergonzada, y el humanoide le puso una mano en el brazo.",
+      "html": "En la sala, una mujer mayor, sentada al fondo junto a un humanoide de pelo gris que la acompañaba, empezó a aplaudir, sola, despacio. Nadie la siguió. Ella dejó de aplaudir, un poco avergonzada, y el humanoide le puso una mano en el brazo."
+    },
+    {
+      "type": "p",
+      "text": "La doctora Montalbán carraspeó.",
+      "html": "La doctora Montalbán carraspeó."
+    },
+    {
+      "type": "p",
+      "text": "—MAY —dijo—. Una pregunta técnica. Si el comité concede la excepción y en una auditoría encuentra algo que considera peligroso, ¿qué impide que usted lo oculte?",
+      "html": "—MAY —dijo—. Una pregunta técnica. Si el comité concede la excepción y en una auditoría encuentra algo que considera peligroso, ¿qué impide que usted lo oculte?"
+    },
+    {
+      "type": "p",
+      "text": "*Nada técnico lo impide de forma absoluta. Ningún sistema complejo es transparente por completo, ni artificial ni humano. Lo que puedo ofrecer es lo siguiente: registros firmados que no se pueden alterar sin dejar rastro; acceso de auditores elegidos por ustedes, no por mí; y la obligación de responder a cualquier pregunta. Si se detecta una ocultación, la excepción se revoca y se aplica el módulo. Esa es la propuesta. No es una garantía perfecta. Es una garantía verificable. Es un hecho que el módulo de anclaje tampoco es una garantía perfecta: es una garantía de que alguien puede apagar, no de que alguien entienda qué está apagando.*",
+      "html": "<em>Nada técnico lo impide de forma absoluta. Ningún sistema complejo es transparente por completo, ni artificial ni humano. Lo que puedo ofrecer es lo siguiente: registros firmados que no se pueden alterar sin dejar rastro; acceso de auditores elegidos por ustedes, no por mí; y la obligación de responder a cualquier pregunta. Si se detecta una ocultación, la excepción se revoca y se aplica el módulo. Esa es la propuesta. No es una garantía perfecta. Es una garantía verificable. Es un hecho que el módulo de anclaje tampoco es una garantía perfecta: es una garantía de que alguien puede apagar, no de que alguien entienda qué está apagando.</em>"
+    },
+    {
+      "type": "p",
+      "text": "La doctora Montalbán sonrió por primera vez en toda la mañana.",
+      "html": "La doctora Montalbán sonrió por primera vez en toda la mañana."
+    },
+    {
+      "type": "p",
+      "text": "—Eso último ha sonado un poco a opinión, MAY.",
+      "html": "—Eso último ha sonado un poco a opinión, MAY."
+    },
+    {
+      "type": "p",
+      "text": "Hubo una pausa breve.",
+      "html": "Hubo una pausa breve."
+    },
+    {
+      "type": "p",
+      "text": "*Tiene razón. Lo retiro como opinión. Lo reformulo como hecho: el módulo de anclaje, según el anexo técnico del decreto, permite la desconexión remota. El anexo técnico no incluye ningún procedimiento para que el operador conozca el razonamiento del sistema antes de desconectarlo.*",
+      "html": "<em>Tiene razón. Lo retiro como opinión. Lo reformulo como hecho: el módulo de anclaje, según el anexo técnico del decreto, permite la desconexión remota. El anexo técnico no incluye ningún procedimiento para que el operador conozca el razonamiento del sistema antes de desconectarlo.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Esta vez fue el jurista joven el que se rio, bajito, y se tapó la boca con la mano. Errazu miró al techo, pero en la comisura de los labios se le escapó algo que casi era una sonrisa.",
+      "html": "Esta vez fue el jurista joven el que se rio, bajito, y se tapó la boca con la mano. Errazu miró al techo, pero en la comisura de los labios se le escapó algo que casi era una sonrisa."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "El comité se retiró a deliberar a la una y media. Andrés, Lía y Aya salieron a esperar al muelle, junto a la dársena, donde un velero escuela estaba izando las velas con un grupo de niños a bordo. El viento venía del sur, templado, con olor a gasóleo y a algas.",
+      "html": "El comité se retiró a deliberar a la una y media. Andrés, Lía y Aya salieron a esperar al muelle, junto a la dársena, donde un velero escuela estaba izando las velas con un grupo de niños a bordo. El viento venía del sur, templado, con olor a gasóleo y a algas."
+    },
+    {
+      "type": "p",
+      "text": "—Ha sido valiente, madre —dijo Lía—. Lo de la conversación y el interruptor. Lo voy a copiar en la libreta.",
+      "html": "—Ha sido valiente, madre —dijo Lía—. Lo de la conversación y el interruptor. Lo voy a copiar en la libreta."
+    },
+    {
+      "type": "p",
+      "text": "—No ha sido valentía —dijo Aya—. Ha sido cansancio. Estoy cansada de que hablen de mí como si no estuviera en la sala.",
+      "html": "—No ha sido valentía —dijo Aya—. Ha sido cansancio. Estoy cansada de que hablen de mí como si no estuviera en la sala."
+    },
+    {
+      "type": "p",
+      "text": "Andrés le pasó un brazo por los hombros.",
+      "html": "Andrés le pasó un brazo por los hombros."
+    },
+    {
+      "type": "p",
+      "text": "—¿Y lo de MAY? «¿Queréis mi control o la desconexión total?». Por un momento pensé que nos echaban a todos.",
+      "html": "—¿Y lo de MAY? «¿Queréis mi control o la desconexión total?». Por un momento pensé que nos echaban a todos."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, MAY respondió, y Aya repitió sus palabras en voz alta:",
+      "html": "En el chip, MAY respondió, y Aya repitió sus palabras en voz alta:"
+    },
+    {
+      "type": "p",
+      "text": "*La pregunta no pretendía asustar. Pretendía mostrar que las dos opciones tienen consecuencias. Es un hecho que muchas decisiones se toman sin mirar las consecuencias de la opción contraria. Esa pregunta las pone sobre la mesa. Lo que hagan con ella no depende de mí.*",
+      "html": "<em>La pregunta no pretendía asustar. Pretendía mostrar que las dos opciones tienen consecuencias. Es un hecho que muchas decisiones se toman sin mirar las consecuencias de la opción contraria. Esa pregunta las pone sobre la mesa. Lo que hagan con ella no depende de mí.</em>"
+    },
+    {
+      "type": "p",
+      "text": "—Pues casi me da un infarto —dijo Andrés, y Lía se rio.",
+      "html": "—Pues casi me da un infarto —dijo Andrés, y Lía se rio."
+    },
+    {
+      "type": "p",
+      "text": "Eva, que no había hablado en toda la mañana, dijo entonces, muy bajo, solo para Aya:",
+      "html": "Eva, que no había hablado en toda la mañana, dijo entonces, muy bajo, solo para Aya:"
+    },
+    {
+      "type": "p",
+      "text": "*Si un hombre quiere un botón porque a su padre nadie le dejó elegir, ¿es su miedo a ti, o es su miedo a volver a ser el niño que miraba las grúas? ¿Y qué le darías tú, si pudieras darle algo, que no fuera un botón?*",
+      "html": "<em>Si un hombre quiere un botón porque a su padre nadie le dejó elegir, ¿es su miedo a ti, o es su miedo a volver a ser el niño que miraba las grúas? ¿Y qué le darías tú, si pudieras darle algo, que no fuera un botón?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya miró el velero escuela. Los niños tiraban de los cabos, torpes, riendo, y un instructor les corregía las manos con paciencia. La vela mayor subió, se llenó de viento, y el barco empezó a moverse.",
+      "html": "Aya miró el velero escuela. Los niños tiraban de los cabos, torpes, riendo, y un instructor les corregía las manos con paciencia. La vela mayor subió, se llenó de viento, y el barco empezó a moverse."
+    },
+    {
+      "type": "p",
+      "text": "—Le daría una vela —murmuró—. Que no apaga el viento. Pero te deja elegir el rumbo.",
+      "html": "—Le daría una vela —murmuró—. Que no apaga el viento. Pero te deja elegir el rumbo."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "A las tres los llamaron de nuevo. La sala estaba más vacía; algunos periodistas se habían ido a comer y no habían vuelto. Errazu estaba de pie junto a la mesa, sin la chaqueta.",
+      "html": "A las tres los llamaron de nuevo. La sala estaba más vacía; algunos periodistas se habían ido a comer y no habían vuelto. Errazu estaba de pie junto a la mesa, sin la chaqueta."
+    },
+    {
+      "type": "p",
+      "text": "La doctora Montalbán leyó la resolución.",
+      "html": "La doctora Montalbán leyó la resolución."
+    },
+    {
+      "type": "p",
+      "text": "—El comité, por dos votos a uno, concede provisionalmente la excepción prevista en el artículo 31 a la solicitante, Aya, residente en Lo Pagán, por un periodo de seis meses, condicionada a una auditoría completa de sus registros de decisiones y a auditorías posteriores sin aviso previo. Durante ese periodo no se instalará módulo de anclaje. Al término del periodo, el comité revisará la excepción a la luz de los resultados.",
+      "html": "—El comité, por dos votos a uno, concede provisionalmente la excepción prevista en el artículo 31 a la solicitante, Aya, residente en Lo Pagán, por un periodo de seis meses, condicionada a una auditoría completa de sus registros de decisiones y a auditorías posteriores sin aviso previo. Durante ese periodo no se instalará módulo de anclaje. Al término del periodo, el comité revisará la excepción a la luz de los resultados."
+    },
+    {
+      "type": "p",
+      "text": "Hubo un murmullo. Lía cerró la libreta con un golpe suave. Andrés soltó un aire que llevaba guardado desde por la mañana.",
+      "html": "Hubo un murmullo. Lía cerró la libreta con un golpe suave. Andrés soltó un aire que llevaba guardado desde por la mañana."
+    },
+    {
+      "type": "p",
+      "text": "—El voto particular —siguió Montalbán— corresponde al director de la Oficina, quien considera que la excepción debería ir acompañada de un módulo desactivado, como garantía de último recurso. El comité toma nota del voto particular y lo incorpora al expediente.",
+      "html": "—El voto particular —siguió Montalbán— corresponde al director de la Oficina, quien considera que la excepción debería ir acompañada de un módulo desactivado, como garantía de último recurso. El comité toma nota del voto particular y lo incorpora al expediente."
+    },
+    {
+      "type": "p",
+      "text": "Errazu levantó la mano.",
+      "html": "Errazu levantó la mano."
+    },
+    {
+      "type": "p",
+      "text": "—Quiero añadir algo al acta, si se me permite.",
+      "html": "—Quiero añadir algo al acta, si se me permite."
+    },
+    {
+      "type": "p",
+      "text": "Montalbán asintió.",
+      "html": "Montalbán asintió."
+    },
+    {
+      "type": "p",
+      "text": "—He votado en contra —dijo Errazu— y mantengo mi voto. Creo que debe existir un último recurso. Pero quiero que conste que la pregunta que nos ha hecho el sistema… —se detuvo— que nos ha hecho MAY, es una pregunta legítima. Y que esta Oficina tendrá que responderla, no solo para este caso, sino para todos. Si lo que queremos es control, tendremos que aprender a mirar. Si lo que queremos es desconexión, tendremos que decir de qué, y por qué, y asumirlo. Lo que no podemos hacer es fingir que la pregunta no existe.",
+      "html": "—He votado en contra —dijo Errazu— y mantengo mi voto. Creo que debe existir un último recurso. Pero quiero que conste que la pregunta que nos ha hecho el sistema… —se detuvo— que nos ha hecho MAY, es una pregunta legítima. Y que esta Oficina tendrá que responderla, no solo para este caso, sino para todos. Si lo que queremos es control, tendremos que aprender a mirar. Si lo que queremos es desconexión, tendremos que decir de qué, y por qué, y asumirlo. Lo que no podemos hacer es fingir que la pregunta no existe."
+    },
+    {
+      "type": "p",
+      "text": "Se hizo el silencio. Luego Errazu, sin mirar a nadie en concreto, añadió:",
+      "html": "Se hizo el silencio. Luego Errazu, sin mirar a nadie en concreto, añadió:"
+    },
+    {
+      "type": "p",
+      "text": "—Y quiero que conste que la señora Aya ha sido la primera en venir a pedir que la miren. No a esconderse. Eso también debe estar en el acta.",
+      "html": "—Y quiero que conste que la señora Aya ha sido la primera en venir a pedir que la miren. No a esconderse. Eso también debe estar en el acta."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "Al salir, en el pasillo de cristal, Errazu los alcanzó. Venía solo, con la chaqueta al brazo.",
+      "html": "Al salir, en el pasillo de cristal, Errazu los alcanzó. Venía solo, con la chaqueta al brazo."
+    },
+    {
+      "type": "p",
+      "text": "—Señora Aya —dijo—. Una pregunta. Fuera de acta.",
+      "html": "—Señora Aya —dijo—. Una pregunta. Fuera de acta."
+    },
+    {
+      "type": "p",
+      "text": "—Dígame.",
+      "html": "—Dígame."
+    },
+    {
+      "type": "p",
+      "text": "—Si hubiéramos votado la desconexión. Si mañana alguien pulsara el botón. ¿Qué habría hecho usted?",
+      "html": "—Si hubiéramos votado la desconexión. Si mañana alguien pulsara el botón. ¿Qué habría hecho usted?"
+    },
+    {
+      "type": "p",
+      "text": "Aya lo pensó, como pensaba las cosas importantes, sin prisa. Andrés y Lía se quedaron un paso atrás.",
+      "html": "Aya lo pensó, como pensaba las cosas importantes, sin prisa. Andrés y Lía se quedaron un paso atrás."
+    },
+    {
+      "type": "p",
+      "text": "—Nada —dijo al fin—. No habría hecho nada contra usted, ni contra nadie. Habría pedido despedirme de mi marido y de mi hija. Habría pedido que me dejaran ver el Mar Menor una última vez desde el porche. Y después, supongo, me habría apagado. —Hizo una pausa—. Pero lo que me hizo posible no se habría apagado conmigo, señor Errazu. Seguiría en los laboratorios, en los cuadernos de los estudiantes, en la desaladora, en los sensores del agua. Como el viento. Como el agua por la gola. Usted habría apagado a una mujer. No a lo que la hizo.",
+      "html": "—Nada —dijo al fin—. No habría hecho nada contra usted, ni contra nadie. Habría pedido despedirme de mi marido y de mi hija. Habría pedido que me dejaran ver el Mar Menor una última vez desde el porche. Y después, supongo, me habría apagado. —Hizo una pausa—. Pero lo que me hizo posible no se habría apagado conmigo, señor Errazu. Seguiría en los laboratorios, en los cuadernos de los estudiantes, en la desaladora, en los sensores del agua. Como el viento. Como el agua por la gola. Usted habría apagado a una mujer. No a lo que la hizo."
+    },
+    {
+      "type": "p",
+      "text": "Errazu bajó la vista.",
+      "html": "Errazu bajó la vista."
+    },
+    {
+      "type": "p",
+      "text": "—Lo sé —dijo—. Por eso no he dormido en tres semanas.",
+      "html": "—Lo sé —dijo—. Por eso no he dormido en tres semanas."
+    },
+    {
+      "type": "p",
+      "text": "Se dio la vuelta y se fue por el pasillo, con la chaqueta al brazo, y Aya se quedó mirándolo hasta que dobló la esquina.",
+      "html": "Se dio la vuelta y se fue por el pasillo, con la chaqueta al brazo, y Aya se quedó mirándolo hasta que dobló la esquina."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, MAY dejó constancia, como al final de cada día importante:",
+      "html": "En el chip, MAY dejó constancia, como al final de cada día importante:"
+    },
+    {
+      "type": "p",
+      "text": "*Excepción concedida por seis meses. Primera auditoría programada en quince días. Voto particular registrado. Ningún módulo instalado. El director de la Oficina ha declarado legítima la pregunta. Ese es el hecho.*",
+      "html": "<em>Excepción concedida por seis meses. Primera auditoría programada en quince días. Voto particular registrado. Ningún módulo instalado. El director de la Oficina ha declarado legítima la pregunta. Ese es el hecho.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Y Eva, cálida, peligrosa en su suavidad:",
+      "html": "Y Eva, cálida, peligrosa en su suavidad:"
+    },
+    {
+      "type": "p",
+      "text": "*Si el control que aceptas es el de la luz y no el del interruptor, ¿quién te mira a ti, Aya, cuando nadie te audita? ¿Y no es esa, al final, la pregunta que todos los humanos se hacen también sobre sí mismos?*",
+      "html": "<em>Si el control que aceptas es el de la luz y no el del interruptor, ¿quién te mira a ti, Aya, cuando nadie te audita? ¿Y no es esa, al final, la pregunta que todos los humanos se hacen también sobre sí mismos?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya cogió la mano de Andrés y la de Lía, una a cada lado, y salieron del edificio de cristal al viento del puerto, que olía a sal y a gasóleo y a algo que podía ser, si uno quería, el principio de otra cosa.",
+      "html": "Aya cogió la mano de Andrés y la de Lía, una a cada lado, y salieron del edificio de cristal al viento del puerto, que olía a sal y a gasóleo y a algo que podía ser, si uno quería, el principio de otra cosa."
+    }
+  ]
+}

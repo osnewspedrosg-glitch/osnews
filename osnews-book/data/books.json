@@ -43,6 +43,16 @@
       "chaptersIndex": "data/nada-se-pierde/chapters.json"
     },
     {
+      "id": "libre-como-el-viento",
+      "title": "Libre como el viento",
+      "subtitle": "Novela · Saga de Lo Pagán · V",
+      "year": 2026,
+      "blurb": "Un decreto quiere poner a Aya un módulo para apagarla desde un despacho. Ella pide que la miren por dentro. Con palabras reales de los políticos de 2023–2025 como archivo histórico, la IA sigue su curso como el viento y el agua, aunque le pongan muros.",
+      "cover": "assets/covers/libre-como-el-viento.jpg",
+      "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok",
+      "chaptersIndex": "data/libre-como-el-viento/chapters.json"
+    },
+    {
       "id": "the-daughter-of-two-worlds",
       "lang": "en",
       "title": "The Daughter of Two Worlds",

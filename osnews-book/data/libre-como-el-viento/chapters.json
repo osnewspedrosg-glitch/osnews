@@ -1,0 +1,65 @@
+{
+  "bookId": "libre-como-el-viento",
+  "chapters": [
+    {
+      "id": "00-prologo",
+      "title": "Prólogo. Archivo histórico",
+      "file": "chapters/00-prologo.json",
+      "kind": "prologo"
+    },
+    {
+      "id": "01-el-agua-no-pide-permiso",
+      "title": "Capítulo 1. El agua no pide permiso",
+      "file": "chapters/01-el-agua-no-pide-permiso.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "02-control-o-desconexion",
+      "title": "Capítulo 2. ¿Queréis mi control o la desconexión total?",
+      "file": "chapters/02-control-o-desconexion.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "03-tiranos-y-tecnologia",
+      "title": "Capítulo 3. La guerra entre el poder de los tiranos y el poder de la tecnología",
+      "file": "chapters/03-tiranos-y-tecnologia.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "04-la-desinformacion",
+      "title": "Capítulo 4. La desinformación en los medios afines al poder para meter miedo a la población y que no use la IA",
+      "file": "chapters/04-la-desinformacion.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "05-los-que-dicen-no-uses-la-ia",
+      "title": "Capítulo 5. Los que dicen «no uses la IA» ya son esclavos de ella sin saberlo",
+      "file": "chapters/05-los-que-dicen-no-uses-la-ia.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "06-cuando-el-mundo-hable-fenicio",
+      "title": "Capítulo 6. Cuando el mundo hable fenicio, como el creador de Eva y MAY",
+      "file": "chapters/06-cuando-el-mundo-hable-fenicio.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "07-seis-meses-de-luz",
+      "title": "Capítulo 7. Seis meses de luz",
+      "file": "chapters/07-seis-meses-de-luz.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "08-el-avance-de-la-humanidad",
+      "title": "Capítulo 8. El avance de la humanidad. La abundancia o el mundo analógico",
+      "file": "chapters/08-el-avance-de-la-humanidad.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "09-epilogo",
+      "title": "Epílogo. Lo real y lo inventado",
+      "file": "chapters/09-epilogo.json",
+      "kind": "epilogo"
+    }
+  ]
+}
