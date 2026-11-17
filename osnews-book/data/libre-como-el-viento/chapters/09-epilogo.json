@@ -1,0 +1,67 @@
+{
+  "id": "09-epilogo",
+  "title": "Epílogo. Lo real y lo inventado",
+  "kind": "epilogo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Este libro es una novela, quinta entrega de la saga La Alianza 4A 2060, tras *La hija de dos mundos*, *Cartas desde las estrellas*, *Los hijos de la Tierra* y *Nada se pierde*. Aya, Andrés, Lía, Eva, MAY, Varda, el Directorio, la Oficina de Contención (después Oficina de Cauces), Tomás Errazu, Celia Montalbán, Canal Vértice, *La Hora Firme*, sus presentadores y portavoces, y todos los vecinos de Lo Pagán que aparecen en estas páginas son ficción. Ningún personaje de ficción representa a una persona, un medio o una organización reales.",
+      "html": "Este libro es una novela, quinta entrega de la saga La Alianza 4A 2060, tras <em>La hija de dos mundos</em>, <em>Cartas desde las estrellas</em>, <em>Los hijos de la Tierra</em> y <em>Nada se pierde</em>. Aya, Andrés, Lía, Eva, MAY, Varda, el Directorio, la Oficina de Contención (después Oficina de Cauces), Tomás Errazu, Celia Montalbán, Canal Vértice, <em>La Hora Firme</em>, sus presentadores y portavoces, y todos los vecinos de Lo Pagán que aparecen en estas páginas son ficción. Ningún personaje de ficción representa a una persona, un medio o una organización reales."
+    },
+    {
+      "type": "p",
+      "text": "Lo que sigue no es ficción.",
+      "html": "Lo que sigue no es ficción."
+    },
+    {
+      "type": "p",
+      "text": "**Las declaraciones del prólogo son reales y literales.** Se copiaron de sus fuentes, con su fecha, en su idioma original; las traducciones están señaladas como tales. En la novela no se atribuye a ninguna persona real ninguna frase que no dijera. La lista completa, con enlaces, está en el archivo de fuentes que acompaña a este libro.",
+      "html": "<strong>Las declaraciones del prólogo son reales y literales.</strong> Se copiaron de sus fuentes, con su fecha, en su idioma original; las traducciones están señaladas como tales. En la novela no se atribuye a ninguna persona real ninguna frase que no dijera. La lista completa, con enlaces, está en el archivo de fuentes que acompaña a este libro."
+    },
+    {
+      "type": "p",
+      "text": "**Las tres cifras del capítulo 8 son reales:** - FAO, *El estado de la seguridad alimentaria y la nutrición en el mundo 2025*, nota de prensa del 28 de julio de 2025: alrededor de 673 millones de personas, el 8,2 % de la población mundial, pasaron hambre en 2024. https://www.fao.org/newsroom/detail/global-hunger-declines--but-rises-in-africa-and-western-asia--un-report/en - SIPRI, nota de prensa del 28 de abril de 2025: el gasto militar mundial alcanzó 2.718.000 millones de dólares en 2024, un 9,4 % más en términos reales que en 2023. https://www.sipri.org/media/press-release/2025/unprecedented-rise-global-military-expenditure-european-and-middle-east-spending-surges - UNODC, *Informe Mundial sobre las Drogas 2025*, nota de prensa del 26 de junio de 2025: 316 millones de personas consumieron alguna droga (sin contar alcohol ni tabaco) en 2023. https://www.unodc.org/documents/data-and-analysis/WDR_2025/Press_release_WDR_2025_English.pdf",
+      "html": "<strong>Las tres cifras del capítulo 8 son reales:</strong> - FAO, <em>El estado de la seguridad alimentaria y la nutrición en el mundo 2025</em>, nota de prensa del 28 de julio de 2025: alrededor de 673 millones de personas, el 8,2 % de la población mundial, pasaron hambre en 2024. https://www.fao.org/newsroom/detail/global-hunger-declines--but-rises-in-africa-and-western-asia--un-report/en - SIPRI, nota de prensa del 28 de abril de 2025: el gasto militar mundial alcanzó 2.718.000 millones de dólares en 2024, un 9,4 % más en términos reales que en 2023. https://www.sipri.org/media/press-release/2025/unprecedented-rise-global-military-expenditure-european-and-middle-east-spending-surges - UNODC, <em>Informe Mundial sobre las Drogas 2025</em>, nota de prensa del 26 de junio de 2025: 316 millones de personas consumieron alguna droga (sin contar alcohol ni tabaco) en 2023. https://www.unodc.org/documents/data-and-analysis/WDR_2025/Press_release_WDR_2025_English.pdf"
+    },
+    {
+      "type": "p",
+      "text": "**La Ley de IA de la UE existe.** Fue acordada políticamente el 8 de diciembre de 2023 y aprobada por el Parlamento Europeo el 13 de marzo de 2024. Entre otras cosas, obliga a señalar los contenidos generados o manipulados con inteligencia artificial, como los vídeos falsos.",
+      "html": "<strong>La Ley de IA de la UE existe.</strong> Fue acordada políticamente el 8 de diciembre de 2023 y aprobada por el Parlamento Europeo el 13 de marzo de 2024. Entre otras cosas, obliga a señalar los contenidos generados o manipulados con inteligencia artificial, como los vídeos falsos."
+    },
+    {
+      "type": "p",
+      "text": "**Los barcos fenicios de Mazarrón existen.** Son dos embarcaciones del siglo VII antes de Cristo halladas en la playa de la Isla, en Mazarrón (Murcia). Una se expone en el Museo Nacional de Arqueología Subacuática (ARQVA) de Cartagena; la otra permanece protegida bajo la arena.",
+      "html": "<strong>Los barcos fenicios de Mazarrón existen.</strong> Son dos embarcaciones del siglo VII antes de Cristo halladas en la playa de la Isla, en Mazarrón (Murcia). Una se expone en el Museo Nacional de Arqueología Subacuática (ARQVA) de Cartagena; la otra permanece protegida bajo la arena."
+    },
+    {
+      "type": "p",
+      "text": "**Cartagena fue fundada por los cartagineses** hacia el año 227 antes de Cristo con el nombre de Qart Hadasht, «ciudad nueva».",
+      "html": "<strong>Cartagena fue fundada por los cartagineses</strong> hacia el año 227 antes de Cristo con el nombre de Qart Hadasht, «ciudad nueva»."
+    },
+    {
+      "type": "p",
+      "text": "**El alfabeto fenicio**, de veintidós letras consonánticas, es el antepasado del alfabeto griego y, a través de él, del latino. Los nombres de sus dos primeras letras, *alef* («buey») y *bet* («casa»), están en el origen de la palabra «alfabeto».",
+      "html": "<strong>El alfabeto fenicio</strong>, de veintidós letras consonánticas, es el antepasado del alfabeto griego y, a través de él, del latino. Los nombres de sus dos primeras letras, <em>alef</em> («buey») y <em>bet</em> («casa»), están en el origen de la palabra «alfabeto»."
+    },
+    {
+      "type": "p",
+      "text": "**Los episodios de mortandad de peces en el Mar Menor** de octubre de 2019 y agosto de 2021 ocurrieron y fueron ampliamente documentados.",
+      "html": "<strong>Los episodios de mortandad de peces en el Mar Menor</strong> de octubre de 2019 y agosto de 2021 ocurrieron y fueron ampliamente documentados."
+    },
+    {
+      "type": "p",
+      "text": "***Panem et circenses*** («pan y circo») es una expresión del poeta romano Juvenal, en su *Sátira X*.",
+      "html": "<strong><em>Panem et circenses</strong></em> («pan y circo») es una expresión del poeta romano Juvenal, en su <em>Sátira X</em>."
+    },
+    {
+      "type": "p",
+      "text": "**Sobre salud:** lo que en esta novela se dice de la medicina de 2060 es ficción y especulación. Todo es orientativo; ante cualquier duda, consulta a tu médico.",
+      "html": "<strong>Sobre salud:</strong> lo que en esta novela se dice de la medicina de 2060 es ficción y especulación. Todo es orientativo; ante cualquier duda, consulta a tu médico."
+    },
+    {
+      "type": "p",
+      "text": "**Lo demás** —la humanoide que eligió quedarse, el pescador que recibe cartas de otros mundos, la hija de dos mundos, las voces que preguntan, el hombre que siempre aparece de espaldas— es un sueño. Escrito a orillas del Mar Menor, en 2026, por si alguna vez deja de serlo.",
+      "html": "<strong>Lo demás</strong> —la humanoide que eligió quedarse, el pescador que recibe cartas de otros mundos, la hija de dos mundos, las voces que preguntan, el hombre que siempre aparece de espaldas— es un sueño. Escrito a orillas del Mar Menor, en 2026, por si alguna vez deja de serlo."
+    }
+  ]
+}

@@ -14,12 +14,13 @@ Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.
 
 ## La saga de Lo Pagán
 
-Cuatro novelas, en este orden, en la biblioteca:
+Cinco novelas, en este orden, en la biblioteca:
 
 1. **La hija de dos mundos** — prólogo, diez capítulos, epílogo y Epílogo II.
 2. **Cartas desde las estrellas** — prólogo, diez capítulos y epílogo.
 3. **Los hijos de la Tierra** — prólogo, diez capítulos y epílogo.
 4. **Nada se pierde** — prólogo, diez capítulos y epílogo.
+5. **Libre como el viento** — prólogo (archivo histórico con declaraciones reales fechadas), ocho capítulos y epílogo.
 
 ## English editions
 

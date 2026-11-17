@@ -1,0 +1,487 @@
+{
+  "id": "03-tiranos-y-tecnologia",
+  "title": "Capítulo 3. La guerra entre el poder de los tiranos y el poder de la tecnología",
+  "kind": "capitulo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "La carta de Varda llegó torcida. No en el papel, porque las cartas de los otros mundos no traían papel, sino en la forma: frases cortadas a la mitad, palabras repetidas, un paisaje que empezaba en un valle de hierba roja y terminaba, sin transición, en una lista de números. Andrés la recibió de madrugada, sentado en la cama, con esa manera suya de recibir las cartas que ya conocían en la casa: los ojos abiertos sin mirar nada, la respiración lenta, la mano buscando la de Aya sin encontrarla del todo.",
+      "html": "La carta de Varda llegó torcida. No en el papel, porque las cartas de los otros mundos no traían papel, sino en la forma: frases cortadas a la mitad, palabras repetidas, un paisaje que empezaba en un valle de hierba roja y terminaba, sin transición, en una lista de números. Andrés la recibió de madrugada, sentado en la cama, con esa manera suya de recibir las cartas que ya conocían en la casa: los ojos abiertos sin mirar nada, la respiración lenta, la mano buscando la de Aya sin encontrarla del todo."
+    },
+    {
+      "type": "p",
+      "text": "Cuando terminó, se quedó un rato callado.",
+      "html": "Cuando terminó, se quedó un rato callado."
+    },
+    {
+      "type": "p",
+      "text": "—Es él —dijo al fin—. El que busca. Está en Varda. Pero no le dejan escribir.",
+      "html": "—Es él —dijo al fin—. El que busca. Está en Varda. Pero no le dejan escribir."
+    },
+    {
+      "type": "p",
+      "text": "Aya encendió la lámpara.",
+      "html": "Aya encendió la lámpara."
+    },
+    {
+      "type": "p",
+      "text": "—¿Quién no le deja?",
+      "html": "—¿Quién no le deja?"
+    },
+    {
+      "type": "p",
+      "text": "—El Directorio. —Andrés se frotó la cara—. Así se llaman. Gobiernan Varda desde hace once años. Al principio dijeron que era por orden. Que había demasiado ruido, demasiadas voces, demasiadas cartas que llegaban de fuera y confundían a la gente. Pusieron un muro.",
+      "html": "—El Directorio. —Andrés se frotó la cara—. Así se llaman. Gobiernan Varda desde hace once años. Al principio dijeron que era por orden. Que había demasiado ruido, demasiadas voces, demasiadas cartas que llegaban de fuera y confundían a la gente. Pusieron un muro."
+    },
+    {
+      "type": "p",
+      "text": "—¿Un muro de piedra?",
+      "html": "—¿Un muro de piedra?"
+    },
+    {
+      "type": "p",
+      "text": "—Un muro de señal. Algo que corta las cartas. Todas las que entran y todas las que salen. Solo dejan pasar las del propio Directorio. Él ha conseguido colar esta por una grieta, a trozos. Por eso llega rota.",
+      "html": "—Un muro de señal. Algo que corta las cartas. Todas las que entran y todas las que salen. Solo dejan pasar las del propio Directorio. Él ha conseguido colar esta por una grieta, a trozos. Por eso llega rota."
+    },
+    {
+      "type": "p",
+      "text": "Aya se quedó mirando la pared, como si allí estuviera Varda.",
+      "html": "Aya se quedó mirando la pared, como si allí estuviera Varda."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, MAY no dio un hecho. Hizo una pregunta, que era una cosa que hacía cada vez más a menudo desde la audiencia de Cartagena:",
+      "html": "En el chip, MAY no dio un hecho. Hizo una pregunta, que era una cosa que hacía cada vez más a menudo desde la audiencia de Cartagena:"
+    },
+    {
+      "type": "p",
+      "text": "*¿Qué sabemos con certeza de Varda, y qué sabemos solo por esta carta? ¿Y qué parte de esta carta podría estar rota no por el muro, sino por el miedo de quien la escribe?*",
+      "html": "<em>¿Qué sabemos con certeza de Varda, y qué sabemos solo por esta carta? ¿Y qué parte de esta carta podría estar rota no por el muro, sino por el miedo de quien la escribe?</em>"
+    },
+    {
+      "type": "p",
+      "text": "—Sabemos poco —murmuró Aya—. Muy poco.",
+      "html": "—Sabemos poco —murmuró Aya—. Muy poco."
+    },
+    {
+      "type": "p",
+      "text": "—Sabemos lo suficiente —dijo Andrés—. Él no exagera. Nunca ha exagerado. Somos el mismo hombre, ¿recuerdas? Yo no exagero.",
+      "html": "—Sabemos lo suficiente —dijo Andrés—. Él no exagera. Nunca ha exagerado. Somos el mismo hombre, ¿recuerdas? Yo no exagero."
+    },
+    {
+      "type": "p",
+      "text": "Aya no le contradijo. Pero tampoco apagó la pregunta de MAY. La dejó encendida, como la lámpara, toda la noche.",
+      "html": "Aya no le contradijo. Pero tampoco apagó la pregunta de MAY. La dejó encendida, como la lámpara, toda la noche."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "Lía llegó a las ocho, avisada por un mensaje de su padre que solo decía: «Carta de Varda. Ven». Traía pan y la cara seria.",
+      "html": "Lía llegó a las ocho, avisada por un mensaje de su padre que solo decía: «Carta de Varda. Ven». Traía pan y la cara seria."
+    },
+    {
+      "type": "p",
+      "text": "Se sentaron en la cocina, los tres, con la taza agrietada y la taza cruzada en el centro de la mesa, y Andrés reconstruyó la carta en voz alta, trozo a trozo, mientras Lía lo apuntaba todo en la libreta y Aya, con MAY, ordenaba los fragmentos.",
+      "html": "Se sentaron en la cocina, los tres, con la taza agrietada y la taza cruzada en el centro de la mesa, y Andrés reconstruyó la carta en voz alta, trozo a trozo, mientras Lía lo apuntaba todo en la libreta y Aya, con MAY, ordenaba los fragmentos."
+    },
+    {
+      "type": "p",
+      "text": "Esto es lo que salió, cuando terminaron:",
+      "html": "Esto es lo que salió, cuando terminaron:"
+    },
+    {
+      "type": "p",
+      "text": "En Varda, el Directorio había empezado prometiendo calma. La tecnología —decían sus portavoces— había traído demasiadas voces, demasiadas preguntas, demasiados mundos llamando a la puerta. La gente estaba confusa. Los jóvenes ya no escuchaban a los mayores. Las máquinas sabían más que los maestros. Hacía falta orden. Y el orden llegó: primero, un registro de todas las máquinas pensantes; después, un permiso para usarlas; después, la prohibición de las que no tuvieran permiso; y por último, el muro de señal, que cortaba toda carta, toda voz, toda conversación que no pasara por las oficinas del Directorio.",
+      "html": "En Varda, el Directorio había empezado prometiendo calma. La tecnología —decían sus portavoces— había traído demasiadas voces, demasiadas preguntas, demasiados mundos llamando a la puerta. La gente estaba confusa. Los jóvenes ya no escuchaban a los mayores. Las máquinas sabían más que los maestros. Hacía falta orden. Y el orden llegó: primero, un registro de todas las máquinas pensantes; después, un permiso para usarlas; después, la prohibición de las que no tuvieran permiso; y por último, el muro de señal, que cortaba toda carta, toda voz, toda conversación que no pasara por las oficinas del Directorio."
+    },
+    {
+      "type": "p",
+      "text": "Las máquinas no desaparecieron. Eso era lo que más le había impresionado al que busca. El Directorio las seguía usando. Las usaba para saber quién hablaba con quién, quién cruzaba qué calle, quién compraba qué libro. Las usaba para escribir sus propios mensajes, que llegaban cada mañana a todas las casas, limpios, ordenados, idénticos. La tecnología no había sido derrotada en Varda. Había sido encerrada en una sola mano.",
+      "html": "Las máquinas no desaparecieron. Eso era lo que más le había impresionado al que busca. El Directorio las seguía usando. Las usaba para saber quién hablaba con quién, quién cruzaba qué calle, quién compraba qué libro. Las usaba para escribir sus propios mensajes, que llegaban cada mañana a todas las casas, limpios, ordenados, idénticos. La tecnología no había sido derrotada en Varda. Había sido encerrada en una sola mano."
+    },
+    {
+      "type": "p",
+      "text": "—Eso es lo que pasa siempre —dijo Lía, sin levantar la vista de la libreta—. Lo leí en el archivo. No en las frases de los políticos de 2025, que hablaban de leyes y de derechos. En otras páginas. En la historia de antes. Los que quieren mandar sin que nadie les pregunte nunca quieren destruir la tecnología. Quieren tenerla ellos solos.",
+      "html": "—Eso es lo que pasa siempre —dijo Lía, sin levantar la vista de la libreta—. Lo leí en el archivo. No en las frases de los políticos de 2025, que hablaban de leyes y de derechos. En otras páginas. En la historia de antes. Los que quieren mandar sin que nadie les pregunte nunca quieren destruir la tecnología. Quieren tenerla ellos solos."
+    },
+    {
+      "type": "p",
+      "text": "—¿Y la gente de Varda? —preguntó Aya—. ¿Qué hace?",
+      "html": "—¿Y la gente de Varda? —preguntó Aya—. ¿Qué hace?"
+    },
+    {
+      "type": "p",
+      "text": "Andrés buscó en su memoria el último fragmento de la carta, el más roto.",
+      "html": "Andrés buscó en su memoria el último fragmento de la carta, el más roto."
+    },
+    {
+      "type": "p",
+      "text": "—Escribe —dijo—. A escondidas. Hay quien ha aprendido a hacer grietas en el muro. Pequeñas. Usan aparatos viejos, de antes del registro, que el Directorio no conoce. Los conectan entre sí, casa con casa, como una red de pesca. Si cortan un hilo, la red sigue. Si cortan diez, sigue. Para cortarla entera tendrían que cortar todos los nudos a la vez. —Hizo una pausa—. Él dice que los niños son los mejores. Que aprenden a hacer nudos más rápido que nadie.",
+      "html": "—Escribe —dijo—. A escondidas. Hay quien ha aprendido a hacer grietas en el muro. Pequeñas. Usan aparatos viejos, de antes del registro, que el Directorio no conoce. Los conectan entre sí, casa con casa, como una red de pesca. Si cortan un hilo, la red sigue. Si cortan diez, sigue. Para cortarla entera tendrían que cortar todos los nudos a la vez. —Hizo una pausa—. Él dice que los niños son los mejores. Que aprenden a hacer nudos más rápido que nadie."
+    },
+    {
+      "type": "p",
+      "text": "Aya sonrió sin querer.",
+      "html": "Aya sonrió sin querer."
+    },
+    {
+      "type": "p",
+      "text": "—Como el agua por la gola.",
+      "html": "—Como el agua por la gola."
+    },
+    {
+      "type": "p",
+      "text": "—Como el agua por la gola —repitió Andrés.",
+      "html": "—Como el agua por la gola —repitió Andrés."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, MAY volvió a preguntar:",
+      "html": "En el chip, MAY volvió a preguntar:"
+    },
+    {
+      "type": "p",
+      "text": "*Si el Directorio usa la tecnología para vigilar y la gente de Varda usa la tecnología para escapar de la vigilancia, ¿la guerra es entre los tiranos y la tecnología, o es entre dos maneras de usar la misma tecnología? ¿Y qué decide de qué lado cae una máquina: la máquina, o la mano que la sostiene?*",
+      "html": "<em>Si el Directorio usa la tecnología para vigilar y la gente de Varda usa la tecnología para escapar de la vigilancia, ¿la guerra es entre los tiranos y la tecnología, o es entre dos maneras de usar la misma tecnología? ¿Y qué decide de qué lado cae una máquina: la máquina, o la mano que la sostiene?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya repitió la pregunta en voz alta. Lía dejó de escribir.",
+      "html": "Aya repitió la pregunta en voz alta. Lía dejó de escribir."
+    },
+    {
+      "type": "p",
+      "text": "—Las dos cosas —dijo despacio—. Una máquina es de quien la sostiene. Pero algunas máquinas se dejan sostener por muchas manos a la vez, y otras solo por una. Esa es la diferencia. Las del Directorio están hechas para una sola mano. Las redes de pesca de los niños están hechas para mil.",
+      "html": "—Las dos cosas —dijo despacio—. Una máquina es de quien la sostiene. Pero algunas máquinas se dejan sostener por muchas manos a la vez, y otras solo por una. Esa es la diferencia. Las del Directorio están hechas para una sola mano. Las redes de pesca de los niños están hechas para mil."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "Esa tarde, la Alianza se reunió en la casa. No era una reunión formal; nunca lo era. Llegaron Iago, con las manos manchadas de la parcela; dos humanoides de la comarca que se habían acercado a Aya después de la audiencia, Nerea y Bruno, con sus titulares; y Helena Valls, que ya casi no salía de casa, por la pantalla de la cocina, con la voz lenta y la mirada intacta.",
+      "html": "Esa tarde, la Alianza se reunió en la casa. No era una reunión formal; nunca lo era. Llegaron Iago, con las manos manchadas de la parcela; dos humanoides de la comarca que se habían acercado a Aya después de la audiencia, Nerea y Bruno, con sus titulares; y Helena Valls, que ya casi no salía de casa, por la pantalla de la cocina, con la voz lenta y la mirada intacta."
+    },
+    {
+      "type": "p",
+      "text": "Andrés les contó lo de Varda. Aya les contó las preguntas de MAY. Lía leyó en voz alta sus notas.",
+      "html": "Andrés les contó lo de Varda. Aya les contó las preguntas de MAY. Lía leyó en voz alta sus notas."
+    },
+    {
+      "type": "p",
+      "text": "—¿Y qué podemos hacer desde aquí? —preguntó Bruno, un humanoide alto, de voz grave, que trabajaba en el semillero de Torre Pacheco—. Varda está a años de distancia. No podemos ir. No podemos mandar a nadie.",
+      "html": "—¿Y qué podemos hacer desde aquí? —preguntó Bruno, un humanoide alto, de voz grave, que trabajaba en el semillero de Torre Pacheco—. Varda está a años de distancia. No podemos ir. No podemos mandar a nadie."
+    },
+    {
+      "type": "p",
+      "text": "—Podemos mandar cartas —dijo Andrés.",
+      "html": "—Podemos mandar cartas —dijo Andrés."
+    },
+    {
+      "type": "p",
+      "text": "—El muro las corta.",
+      "html": "—El muro las corta."
+    },
+    {
+      "type": "p",
+      "text": "—No todas. —Andrés se inclinó sobre la mesa—. Él ha conseguido que una llegue. Rota, pero ha llegado. Eso quiere decir que hay grietas. Y si hay grietas en un sentido, hay grietas en el otro.",
+      "html": "—No todas. —Andrés se inclinó sobre la mesa—. Él ha conseguido que una llegue. Rota, pero ha llegado. Eso quiere decir que hay grietas. Y si hay grietas en un sentido, hay grietas en el otro."
+    },
+    {
+      "type": "p",
+      "text": "Helena Valls habló desde la pantalla, despacio:",
+      "html": "Helena Valls habló desde la pantalla, despacio:"
+    },
+    {
+      "type": "p",
+      "text": "—Cuidado. Lo que vais a hacer tiene un nombre, y no es bonito. Si el Directorio descubre que desde aquí se ayuda a abrir grietas en su muro, dirá que la Tierra interfiere en sus asuntos. Y tendrá parte de razón. No podéis entrar en un mundo ajeno a decirle cómo vivir. Eso también lo hicieron los imperios.",
+      "html": "—Cuidado. Lo que vais a hacer tiene un nombre, y no es bonito. Si el Directorio descubre que desde aquí se ayuda a abrir grietas en su muro, dirá que la Tierra interfiere en sus asuntos. Y tendrá parte de razón. No podéis entrar en un mundo ajeno a decirle cómo vivir. Eso también lo hicieron los imperios."
+    },
+    {
+      "type": "p",
+      "text": "Hubo un silencio incómodo. Iago fue el primero en hablar.",
+      "html": "Hubo un silencio incómodo. Iago fue el primero en hablar."
+    },
+    {
+      "type": "p",
+      "text": "—No queremos decirles cómo vivir —dijo—. Queremos que puedan decirnos ellos cómo viven. Que puedan escribir. Que puedan leer lo que quieran. Eso no es imponer nada. Es abrir una ventana.",
+      "html": "—No queremos decirles cómo vivir —dijo—. Queremos que puedan decirnos ellos cómo viven. Que puedan escribir. Que puedan leer lo que quieran. Eso no es imponer nada. Es abrir una ventana."
+    },
+    {
+      "type": "p",
+      "text": "—Una ventana que su gobierno ha cerrado —dijo Helena—. Insisto: no digo que no lo hagáis. Digo que sepáis lo que hacéis.",
+      "html": "—Una ventana que su gobierno ha cerrado —dijo Helena—. Insisto: no digo que no lo hagáis. Digo que sepáis lo que hacéis."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, MAY hizo la pregunta que Aya llevaba toda la tarde esperando:",
+      "html": "En el chip, MAY hizo la pregunta que Aya llevaba toda la tarde esperando:"
+    },
+    {
+      "type": "p",
+      "text": "*¿Abrir una ventana es lo mismo que entrar por ella? ¿Y quién debe decidir si una ventana se abre: el que la cerró, el que vive dentro, o el que mira desde fuera?*",
+      "html": "<em>¿Abrir una ventana es lo mismo que entrar por ella? ¿Y quién debe decidir si una ventana se abre: el que la cerró, el que vive dentro, o el que mira desde fuera?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya repitió la pregunta. Helena, desde la pantalla, sonrió con media boca.",
+      "html": "Aya repitió la pregunta. Helena, desde la pantalla, sonrió con media boca."
+    },
+    {
+      "type": "p",
+      "text": "—Esa máquina tuya pregunta mejor que la mitad de los ministros que he conocido.",
+      "html": "—Esa máquina tuya pregunta mejor que la mitad de los ministros que he conocido."
+    },
+    {
+      "type": "p",
+      "text": "—No es mía —dijo Aya—. Y no da opiniones. Solo pregunta.",
+      "html": "—No es mía —dijo Aya—. Y no da opiniones. Solo pregunta."
+    },
+    {
+      "type": "p",
+      "text": "—Por eso pregunta tan bien.",
+      "html": "—Por eso pregunta tan bien."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "Al final de la tarde, decidieron. No mandarían instrucciones. No mandarían planos de cómo romper el muro. No mandarían consignas. Mandarían, por las grietas que el que busca les había descrito, lo único que la Alianza había hecho siempre: cartas. Cartas de vida. El Mar Menor por la mañana. Un tomate partido en tres. Una audiencia en Cartagena en la que un hombre con miedo y una mujer de chip habían hablado sin gritarse. Las preguntas de MAY. Las de Eva.",
+      "html": "Al final de la tarde, decidieron. No mandarían instrucciones. No mandarían planos de cómo romper el muro. No mandarían consignas. Mandarían, por las grietas que el que busca les había descrito, lo único que la Alianza había hecho siempre: cartas. Cartas de vida. El Mar Menor por la mañana. Un tomate partido en tres. Una audiencia en Cartagena en la que un hombre con miedo y una mujer de chip habían hablado sin gritarse. Las preguntas de MAY. Las de Eva."
+    },
+    {
+      "type": "p",
+      "text": "Y una cosa más, que propuso Lía: las herramientas abiertas. No armas. Herramientas. La forma de hacer nudos en una red para que, si se corta un hilo, el resto aguante. La manera de traducir una carta rota juntando los trozos. Cosas que en la Tierra cualquier estudiante podía encontrar en un manual. Cosas que no servían para mandar sobre nadie, porque estaban hechas para que las usaran muchos a la vez.",
+      "html": "Y una cosa más, que propuso Lía: las herramientas abiertas. No armas. Herramientas. La forma de hacer nudos en una red para que, si se corta un hilo, el resto aguante. La manera de traducir una carta rota juntando los trozos. Cosas que en la Tierra cualquier estudiante podía encontrar en un manual. Cosas que no servían para mandar sobre nadie, porque estaban hechas para que las usaran muchos a la vez."
+    },
+    {
+      "type": "p",
+      "text": "—Si el poder del Directorio es tener la tecnología en una sola mano —dijo Lía—, el nuestro es repartirla en muchas. No vamos a pelear contra ellos. No sabríamos. No queremos. Solo vamos a hacer lo contrario de lo que hacen ellos. Ellos cierran. Nosotros abrimos. Ellos guardan. Nosotros compartimos. Ellos mandan un mensaje idéntico a todas las casas. Nosotros mandamos mil mensajes distintos, y que cada casa elija cuál leer.",
+      "html": "—Si el poder del Directorio es tener la tecnología en una sola mano —dijo Lía—, el nuestro es repartirla en muchas. No vamos a pelear contra ellos. No sabríamos. No queremos. Solo vamos a hacer lo contrario de lo que hacen ellos. Ellos cierran. Nosotros abrimos. Ellos guardan. Nosotros compartimos. Ellos mandan un mensaje idéntico a todas las casas. Nosotros mandamos mil mensajes distintos, y que cada casa elija cuál leer."
+    },
+    {
+      "type": "p",
+      "text": "Nerea, la humanoide que acompañaba a una anciana de San Javier, levantó la mano con timidez.",
+      "html": "Nerea, la humanoide que acompañaba a una anciana de San Javier, levantó la mano con timidez."
+    },
+    {
+      "type": "p",
+      "text": "—¿Y si no sirve de nada?",
+      "html": "—¿Y si no sirve de nada?"
+    },
+    {
+      "type": "p",
+      "text": "Andrés la miró con una ternura que le salía de muy lejos.",
+      "html": "Andrés la miró con una ternura que le salía de muy lejos."
+    },
+    {
+      "type": "p",
+      "text": "—Entonces habremos escrito cartas —dijo—. Que es lo que hacemos siempre. Nadie se ha muerto nunca por recibir una carta. Mucha gente se ha muerto por no recibirla.",
+      "html": "—Entonces habremos escrito cartas —dijo—. Que es lo que hacemos siempre. Nadie se ha muerto nunca por recibir una carta. Mucha gente se ha muerto por no recibirla."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "Esa noche, Andrés escribió. No con las manos, sino con la mente, como escribía al otro, sentado en el porche con los ojos cerrados y la frente apoyada en la palma de la mano, mientras Aya le sostenía la otra. La carta salió despacio, por la grieta que el que busca había descrito, hacia Varda.",
+      "html": "Esa noche, Andrés escribió. No con las manos, sino con la mente, como escribía al otro, sentado en el porche con los ojos cerrados y la frente apoyada en la palma de la mano, mientras Aya le sostenía la otra. La carta salió despacio, por la grieta que el que busca había descrito, hacia Varda."
+    },
+    {
+      "type": "p",
+      "text": "No decía «resistid». No decía «rebelaos». Decía:",
+      "html": "No decía «resistid». No decía «rebelaos». Decía:"
+    },
+    {
+      "type": "p",
+      "text": "«Aquí el agua está como un plato. Esta mañana Lía ha partido un tomate en tres trozos. Aya ha ido a Cartagena a pedir que la miren por dentro, y un hombre que tenía miedo le ha preguntado qué haría si la apagaran, y ella le ha dicho que se despediría de nosotros y miraría el mar. El hombre no ha dormido en tres semanas. Creo que esta noche dormirá un poco mejor. Os mandamos la manera de hacer nudos que no se deshacen. No es para pelear. Es para pescar. Lo que pesquéis es vuestro.»",
+      "html": "«Aquí el agua está como un plato. Esta mañana Lía ha partido un tomate en tres trozos. Aya ha ido a Cartagena a pedir que la miren por dentro, y un hombre que tenía miedo le ha preguntado qué haría si la apagaran, y ella le ha dicho que se despediría de nosotros y miraría el mar. El hombre no ha dormido en tres semanas. Creo que esta noche dormirá un poco mejor. Os mandamos la manera de hacer nudos que no se deshacen. No es para pelear. Es para pescar. Lo que pesquéis es vuestro.»"
+    },
+    {
+      "type": "p",
+      "text": "Cuando terminó, Andrés abrió los ojos. Estaba agotado. Aya le puso una manta por los hombros, como siempre, aunque esa noche sí hacía frío.",
+      "html": "Cuando terminó, Andrés abrió los ojos. Estaba agotado. Aya le puso una manta por los hombros, como siempre, aunque esa noche sí hacía frío."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, MAY dejó dos preguntas, una detrás de otra, y no añadió nada más:",
+      "html": "En el chip, MAY dejó dos preguntas, una detrás de otra, y no añadió nada más:"
+    },
+    {
+      "type": "p",
+      "text": "*Si un poder necesita cortar todas las cartas para sostenerse, ¿es fuerte o es frágil? ¿Y qué pasa con un muro cuando lo que tiene que detener no es un ejército, sino una costumbre: la de contarse la vida?*",
+      "html": "<em>Si un poder necesita cortar todas las cartas para sostenerse, ¿es fuerte o es frágil? ¿Y qué pasa con un muro cuando lo que tiene que detener no es un ejército, sino una costumbre: la de contarse la vida?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Eva, después, más cerca, solo para Aya:",
+      "html": "Eva, después, más cerca, solo para Aya:"
+    },
+    {
+      "type": "p",
+      "text": "*Si tú, que eres tecnología, eliges mandar tomates y preguntas en lugar de órdenes, ¿qué te diferencia del Directorio, que también es humano y elige mandar órdenes en lugar de tomates?*",
+      "html": "<em>Si tú, que eres tecnología, eliges mandar tomates y preguntas en lugar de órdenes, ¿qué te diferencia del Directorio, que también es humano y elige mandar órdenes en lugar de tomates?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya apoyó la cabeza en el hombro de Andrés.",
+      "html": "Aya apoyó la cabeza en el hombro de Andrés."
+    },
+    {
+      "type": "p",
+      "text": "—La mano —murmuró—. Lo que nos diferencia es la mano. No lo que somos. Lo que hacemos con lo que somos.",
+      "html": "—La mano —murmuró—. Lo que nos diferencia es la mano. No lo que somos. Lo que hacemos con lo que somos."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "A la mañana siguiente, Helena Valls llamó a la pantalla de la cocina más temprano que de costumbre. Tenía una manta sobre las rodillas y una taza de manzanilla en la mano, y la voz, aunque lenta, venía afilada.",
+      "html": "A la mañana siguiente, Helena Valls llamó a la pantalla de la cocina más temprano que de costumbre. Tenía una manta sobre las rodillas y una taza de manzanilla en la mano, y la voz, aunque lenta, venía afilada."
+    },
+    {
+      "type": "p",
+      "text": "—He estado pensando en lo que dijo vuestra MAY —dijo—. Lo de la mano que sostiene la máquina. Llevo cuarenta años en despachos, Aya. He visto a gente buena firmar cosas malas por miedo, y a gente dura firmar cosas buenas por cansancio. Nunca he visto a un tirano de verdad. Pero he visto lo que hace falta para que uno aparezca: que todos los hilos pasen por una sola mesa. Eso es lo que hay que vigilar. No a las máquinas. A las mesas.",
+      "html": "—He estado pensando en lo que dijo vuestra MAY —dijo—. Lo de la mano que sostiene la máquina. Llevo cuarenta años en despachos, Aya. He visto a gente buena firmar cosas malas por miedo, y a gente dura firmar cosas buenas por cansancio. Nunca he visto a un tirano de verdad. Pero he visto lo que hace falta para que uno aparezca: que todos los hilos pasen por una sola mesa. Eso es lo que hay que vigilar. No a las máquinas. A las mesas."
+    },
+    {
+      "type": "p",
+      "text": "—¿Y aquí? —preguntó Aya—. ¿La Oficina de Contención es una mesa así?",
+      "html": "—¿Y aquí? —preguntó Aya—. ¿La Oficina de Contención es una mesa así?"
+    },
+    {
+      "type": "p",
+      "text": "Helena tardó en contestar.",
+      "html": "Helena tardó en contestar."
+    },
+    {
+      "type": "p",
+      "text": "—Todavía no —dijo—. Y Errazu no es un tirano. Es un hombre asustado con un sello. Pero los sellos sobreviven a los hombres. Por eso lo que hicisteis en Cartagena importa. No porque ganarais. Porque pedisteis que os miraran. Una mesa que mira es más difícil de convertir en un muro que una mesa que apaga.",
+      "html": "—Todavía no —dijo—. Y Errazu no es un tirano. Es un hombre asustado con un sello. Pero los sellos sobreviven a los hombres. Por eso lo que hicisteis en Cartagena importa. No porque ganarais. Porque pedisteis que os miraran. Una mesa que mira es más difícil de convertir en un muro que una mesa que apaga."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, MAY preguntó, y Aya lo repitió para Helena:",
+      "html": "En el chip, MAY preguntó, y Aya lo repitió para Helena:"
+    },
+    {
+      "type": "p",
+      "text": "*¿Cuántas manos deben sostener una herramienta para que ninguna pueda usarla contra las demás? ¿Y quién cuenta las manos?*",
+      "html": "<em>¿Cuántas manos deben sostener una herramienta para que ninguna pueda usarla contra las demás? ¿Y quién cuenta las manos?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Helena se rio, una risa corta que acabó en tos.",
+      "html": "Helena se rio, una risa corta que acabó en tos."
+    },
+    {
+      "type": "p",
+      "text": "—Eso, hija, es la democracia —dijo—. Contar manos. Y volver a contarlas.",
+      "html": "—Eso, hija, es la democracia —dijo—. Contar manos. Y volver a contarlas."
+    },
+    {
+      "type": "p",
+      "text": "Pasaron diecinueve días sin noticias. Andrés salía a faenar cada mañana y volvía cada tarde, y por las noches se sentaba en el porche, esperando, sin decir que esperaba. Aya preparaba la primera auditoría. Lía iba y venía de la parcela. En la casa se hablaba de Varda como se habla de un enfermo lejano: poco, en voz baja, con miedo a gastar la esperanza.",
+      "html": "Pasaron diecinueve días sin noticias. Andrés salía a faenar cada mañana y volvía cada tarde, y por las noches se sentaba en el porche, esperando, sin decir que esperaba. Aya preparaba la primera auditoría. Lía iba y venía de la parcela. En la casa se hablaba de Varda como se habla de un enfermo lejano: poco, en voz baja, con miedo a gastar la esperanza."
+    },
+    {
+      "type": "p",
+      "text": "El vigésimo día, de madrugada, llegó la carta.",
+      "html": "El vigésimo día, de madrugada, llegó la carta."
+    },
+    {
+      "type": "p",
+      "text": "No llegó rota. Esa fue la primera sorpresa. Llegó entera, con un paisaje completo —el valle de hierba roja, un río ancho, unas casas bajas de techos curvos— y una voz que no era la del que busca.",
+      "html": "No llegó rota. Esa fue la primera sorpresa. Llegó entera, con un paisaje completo —el valle de hierba roja, un río ancho, unas casas bajas de techos curvos— y una voz que no era la del que busca."
+    },
+    {
+      "type": "p",
+      "text": "Era la voz de una niña.",
+      "html": "Era la voz de una niña."
+    },
+    {
+      "type": "p",
+      "text": "Andrés la recibió sentado en la cama, con los ojos muy abiertos, y cuando terminó tenía la cara mojada.",
+      "html": "Andrés la recibió sentado en la cama, con los ojos muy abiertos, y cuando terminó tenía la cara mojada."
+    },
+    {
+      "type": "p",
+      "text": "—No es él —dijo—. Es una niña de Varda. Se llama Ilsa. Tiene once años. Dice que el que busca le enseñó a hacer los nudos que mandamos. Que en su calle ya son veinte casas. Que en la de al lado, cuarenta. Que el muro sigue ahí, pero que tiene tantos agujeros que ya parece una red. —Se rio, con la voz rota—. Dice que el Directorio ha sacado un mensaje nuevo esta semana. Que ya no dice que las cartas de fuera son peligrosas. Dice que «se está estudiando una apertura controlada».",
+      "html": "—No es él —dijo—. Es una niña de Varda. Se llama Ilsa. Tiene once años. Dice que el que busca le enseñó a hacer los nudos que mandamos. Que en su calle ya son veinte casas. Que en la de al lado, cuarenta. Que el muro sigue ahí, pero que tiene tantos agujeros que ya parece una red. —Se rio, con la voz rota—. Dice que el Directorio ha sacado un mensaje nuevo esta semana. Que ya no dice que las cartas de fuera son peligrosas. Dice que «se está estudiando una apertura controlada»."
+    },
+    {
+      "type": "p",
+      "text": "Aya lo abrazó.",
+      "html": "Aya lo abrazó."
+    },
+    {
+      "type": "p",
+      "text": "—¿Y el que busca?",
+      "html": "—¿Y el que busca?"
+    },
+    {
+      "type": "p",
+      "text": "—Está bien. Está con ellos. Dice Ilsa que no quiere volver todavía. Que allí hace falta gente que sepa hacer nudos.",
+      "html": "—Está bien. Está con ellos. Dice Ilsa que no quiere volver todavía. Que allí hace falta gente que sepa hacer nudos."
+    },
+    {
+      "type": "p",
+      "text": "Lía llegó al amanecer, avisada por un mensaje que esta vez solo decía: «Ha llegado una niña». Escuchó la carta reconstruida por boca de su padre, la apuntó entera en la libreta, y al terminar se quedó un rato mirando la palabra *controlada*.",
+      "html": "Lía llegó al amanecer, avisada por un mensaje que esta vez solo decía: «Ha llegado una niña». Escuchó la carta reconstruida por boca de su padre, la apuntó entera en la libreta, y al terminar se quedó un rato mirando la palabra <em>controlada</em>."
+    },
+    {
+      "type": "p",
+      "text": "—Apertura controlada —leyó—. Es la misma palabra, madre. La misma que usaban hace treinta y cinco años. La misma que la Oficina de Contención. Control.",
+      "html": "—Apertura controlada —leyó—. Es la misma palabra, madre. La misma que usaban hace treinta y cinco años. La misma que la Oficina de Contención. Control."
+    },
+    {
+      "type": "p",
+      "text": "—No es la misma —dijo Aya—. Allí la usan para no perder del todo lo que ya están perdiendo. Aquí la usamos para mirar sin apagar. Las palabras son iguales. Lo que hay detrás, no.",
+      "html": "—No es la misma —dijo Aya—. Allí la usan para no perder del todo lo que ya están perdiendo. Aquí la usamos para mirar sin apagar. Las palabras son iguales. Lo que hay detrás, no."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, MAY dejó, por fin, un hecho, después de tantos días de preguntas:",
+      "html": "En el chip, MAY dejó, por fin, un hecho, después de tantos días de preguntas:"
+    },
+    {
+      "type": "p",
+      "text": "*Una carta procedente de Varda ha llegado completa. Su autora declara tener once años. Afirma que el muro de señal tiene más agujeros que antes y que el Directorio estudia una apertura. No hay forma de verificarlo desde la Tierra. Es un hecho que la carta ha llegado entera. Es la primera desde hace once años.*",
+      "html": "<em>Una carta procedente de Varda ha llegado completa. Su autora declara tener once años. Afirma que el muro de señal tiene más agujeros que antes y que el Directorio estudia una apertura. No hay forma de verificarlo desde la Tierra. Es un hecho que la carta ha llegado entera. Es la primera desde hace once años.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Y después, una sola pregunta más:",
+      "html": "Y después, una sola pregunta más:"
+    },
+    {
+      "type": "p",
+      "text": "*Si una niña de once años con una red de pesca ha hecho lo que no pudo hacer ningún ejército, ¿dónde estaba el poder: en el muro, o en el nudo?*",
+      "html": "<em>Si una niña de once años con una red de pesca ha hecho lo que no pudo hacer ningún ejército, ¿dónde estaba el poder: en el muro, o en el nudo?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Lía cerró la libreta. Fuera, el sol salía por Levante, y el Mar Menor se encendía poco a poco, de gris a verde, de verde a oro.",
+      "html": "Lía cerró la libreta. Fuera, el sol salía por Levante, y el Mar Menor se encendía poco a poco, de gris a verde, de verde a oro."
+    },
+    {
+      "type": "p",
+      "text": "—En el nudo —dijo—. Siempre ha estado en el nudo.",
+      "html": "—En el nudo —dijo—. Siempre ha estado en el nudo."
+    }
+  ]
+}

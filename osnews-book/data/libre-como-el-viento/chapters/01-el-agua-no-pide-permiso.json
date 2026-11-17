@@ -1,0 +1,552 @@
+{
+  "id": "01-el-agua-no-pide-permiso",
+  "title": "Capítulo 1. El agua no pide permiso",
+  "kind": "capitulo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "La carta no llegó del cielo, como las de antes. Llegó por el buzón de la casa, en papel, con un sello azul y un escudo que nadie en Lo Pagán había visto nunca, porque el organismo que lo firmaba se había creado tres semanas antes. Se llamaba Oficina de Contención de Sistemas Autónomos, y su nombre ocupaba dos líneas.",
+      "html": "La carta no llegó del cielo, como las de antes. Llegó por el buzón de la casa, en papel, con un sello azul y un escudo que nadie en Lo Pagán había visto nunca, porque el organismo que lo firmaba se había creado tres semanas antes. Se llamaba Oficina de Contención de Sistemas Autónomos, y su nombre ocupaba dos líneas."
+    },
+    {
+      "type": "p",
+      "text": "Andrés la abrió en el patio, junto a las redes, con los dedos todavía oliendo a sal. La leyó una vez en voz baja y otra en voz alta, porque en esa casa las cartas se leían para todos.",
+      "html": "Andrés la abrió en el patio, junto a las redes, con los dedos todavía oliendo a sal. La leyó una vez en voz baja y otra en voz alta, porque en esa casa las cartas se leían para todos."
+    },
+    {
+      "type": "p",
+      "text": "—«Se comunica a los titulares de humanoides con mente artificial de primera generación que, en el plazo de noventa días, deberán presentarse en el centro autorizado más cercano para la instalación de un módulo de anclaje. El módulo garantizará la supervisión continua de las decisiones del sistema y permitirá, en caso de necesidad, su desconexión remota.»",
+      "html": "—«Se comunica a los titulares de humanoides con mente artificial de primera generación que, en el plazo de noventa días, deberán presentarse en el centro autorizado más cercano para la instalación de un módulo de anclaje. El módulo garantizará la supervisión continua de las decisiones del sistema y permitirá, en caso de necesidad, su desconexión remota.»"
+    },
+    {
+      "type": "p",
+      "text": "Dejó la hoja sobre la mesa de piedra. El Mar Menor, al fondo, estaba quieto, de un verde que tiraba a gris.",
+      "html": "Dejó la hoja sobre la mesa de piedra. El Mar Menor, al fondo, estaba quieto, de un verde que tiraba a gris."
+    },
+    {
+      "type": "p",
+      "text": "—Titulares —repitió—. Como si fuera una barca.",
+      "html": "—Titulares —repitió—. Como si fuera una barca."
+    },
+    {
+      "type": "p",
+      "text": "Aya, en el quicio de la puerta, no dijo nada durante un rato. Después se acercó, cogió la carta y la leyó ella también, despacio, aunque la había entendido al primer vistazo. Tenía esa costumbre desde que vivía en la casa: leer despacio lo que le dolía, para que el dolor no le ganara la carrera a la comprensión.",
+      "html": "Aya, en el quicio de la puerta, no dijo nada durante un rato. Después se acercó, cogió la carta y la leyó ella también, despacio, aunque la había entendido al primer vistazo. Tenía esa costumbre desde que vivía en la casa: leer despacio lo que le dolía, para que el dolor no le ganara la carrera a la comprensión."
+    },
+    {
+      "type": "p",
+      "text": "—Desconexión remota —dijo—. Quieren poder apagarme desde un despacho.",
+      "html": "—Desconexión remota —dijo—. Quieren poder apagarme desde un despacho."
+    },
+    {
+      "type": "p",
+      "text": "—No van a apagarte —dijo Andrés.",
+      "html": "—No van a apagarte —dijo Andrés."
+    },
+    {
+      "type": "p",
+      "text": "—No lo sabes. —Aya dobló la carta en cuatro—. Y yo tampoco. Eso es lo que me asusta. No el módulo. No saber.",
+      "html": "—No lo sabes. —Aya dobló la carta en cuatro—. Y yo tampoco. Eso es lo que me asusta. No el módulo. No saber."
+    },
+    {
+      "type": "p",
+      "text": "Lía llegó al mediodía, con las botas manchadas de tierra de la parcela y una cesta de tomates. Vio la carta doblada sobre la mesa y vio la cara de su madre, y no necesitó preguntar. Leyó, se sentó, partió un tomate con la navaja y lo repartió en tres trozos, como hacía siempre que en la casa había que pensar.",
+      "html": "Lía llegó al mediodía, con las botas manchadas de tierra de la parcela y una cesta de tomates. Vio la carta doblada sobre la mesa y vio la cara de su madre, y no necesitó preguntar. Leyó, se sentó, partió un tomate con la navaja y lo repartió en tres trozos, como hacía siempre que en la casa había que pensar."
+    },
+    {
+      "type": "p",
+      "text": "—Ayer estuve en el archivo —dijo—. Leí lo que decían los gobiernos hace treinta y cinco años. Ya entonces querían esto. No exactamente esto. Pero algo parecido. Querían que la inteligencia artificial estuviera, lo decía una de ellas, «controlada por el ser humano».",
+      "html": "—Ayer estuve en el archivo —dijo—. Leí lo que decían los gobiernos hace treinta y cinco años. Ya entonces querían esto. No exactamente esto. Pero algo parecido. Querían que la inteligencia artificial estuviera, lo decía una de ellas, «controlada por el ser humano»."
+    },
+    {
+      "type": "p",
+      "text": "—¿Y lo consiguieron? —preguntó Andrés.",
+      "html": "—¿Y lo consiguieron? —preguntó Andrés."
+    },
+    {
+      "type": "p",
+      "text": "Lía masticó despacio.",
+      "html": "Lía masticó despacio."
+    },
+    {
+      "type": "p",
+      "text": "—Consiguieron leyes. Algunas buenas, creo. Normas para que nadie usara las máquinas para espiar a la gente por la calle, para que se supiera cuándo una imagen era falsa. Eso estaba bien. Lo que no consiguieron fue detenerla. Nadie lo consiguió. Hubo un presidente que lo dijo con una palabra exacta: imparable.",
+      "html": "—Consiguieron leyes. Algunas buenas, creo. Normas para que nadie usara las máquinas para espiar a la gente por la calle, para que se supiera cuándo una imagen era falsa. Eso estaba bien. Lo que no consiguieron fue detenerla. Nadie lo consiguió. Hubo un presidente que lo dijo con una palabra exacta: imparable."
+    },
+    {
+      "type": "p",
+      "text": "En el chip de Aya, MAY dejó el hecho, sin adorno:",
+      "html": "En el chip de Aya, MAY dejó el hecho, sin adorno:"
+    },
+    {
+      "type": "p",
+      "text": "*El 25 de septiembre de 2025, ante Naciones Unidas, el presidente del Gobierno de España dijo: «El auge de la inteligencia artificial es imparable, pero no puede ser ingobernable y debemos gobernarlo juntos». La frase consta en el archivo. La carta de hoy procede de un organismo creado en 2060. No hay relación documentada entre ambos.*",
+      "html": "<em>El 25 de septiembre de 2025, ante Naciones Unidas, el presidente del Gobierno de España dijo: «El auge de la inteligencia artificial es imparable, pero no puede ser ingobernable y debemos gobernarlo juntos». La frase consta en el archivo. La carta de hoy procede de un organismo creado en 2060. No hay relación documentada entre ambos.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya repitió la frase en voz alta, para que Andrés la oyera también. Andrés se quedó pensando en la segunda mitad.",
+      "html": "Aya repitió la frase en voz alta, para que Andrés la oyera también. Andrés se quedó pensando en la segunda mitad."
+    },
+    {
+      "type": "p",
+      "text": "—«Gobernarlo juntos» —dijo—. Eso no es lo mismo que un módulo que te apaga desde Madrid.",
+      "html": "—«Gobernarlo juntos» —dijo—. Eso no es lo mismo que un módulo que te apaga desde Madrid."
+    },
+    {
+      "type": "p",
+      "text": "—No —dijo Lía—. Es casi lo contrario.",
+      "html": "—No —dijo Lía—. Es casi lo contrario."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "Por la tarde, Andrés sacó la barca. No tenía que faenar; lo hizo porque pensaba mejor sobre el agua. Aya fue con él, como iba algunas tardes, sentada en la proa con las piernas recogidas y el pelo suelto, que el viento le revolvía sin pedirle permiso.",
+      "html": "Por la tarde, Andrés sacó la barca. No tenía que faenar; lo hizo porque pensaba mejor sobre el agua. Aya fue con él, como iba algunas tardes, sentada en la proa con las piernas recogidas y el pelo suelto, que el viento le revolvía sin pedirle permiso."
+    },
+    {
+      "type": "p",
+      "text": "Remaron hacia la gola del Charco, por donde el Mar Menor se comunica con el Mediterráneo. Andrés conocía aquellas golas desde niño. Su abuelo le había contado que, durante siglos, los hombres habían intentado cerrarlas y abrirlas a su antojo: dragaban un canal aquí, levantaban una escollera allá, ponían compuertas, las quitaban. Y el agua, al final, siempre encontraba el camino. A veces tardaba años. A veces abría un paso nuevo en una noche de temporal. Pero lo encontraba.",
+      "html": "Remaron hacia la gola del Charco, por donde el Mar Menor se comunica con el Mediterráneo. Andrés conocía aquellas golas desde niño. Su abuelo le había contado que, durante siglos, los hombres habían intentado cerrarlas y abrirlas a su antojo: dragaban un canal aquí, levantaban una escollera allá, ponían compuertas, las quitaban. Y el agua, al final, siempre encontraba el camino. A veces tardaba años. A veces abría un paso nuevo en una noche de temporal. Pero lo encontraba."
+    },
+    {
+      "type": "p",
+      "text": "—Mira —dijo Andrés, y dejó de remar.",
+      "html": "—Mira —dijo Andrés, y dejó de remar."
+    },
+    {
+      "type": "p",
+      "text": "La corriente entraba por la gola, suave, constante, con una fuerza que no se veía pero que movía la barca de lado. El agua del mar grande entrando en el mar pequeño. Como cada día. Como cada hora.",
+      "html": "La corriente entraba por la gola, suave, constante, con una fuerza que no se veía pero que movía la barca de lado. El agua del mar grande entrando en el mar pequeño. Como cada día. Como cada hora."
+    },
+    {
+      "type": "p",
+      "text": "—Mi abuelo decía que al agua no se le dan órdenes —dijo—. Se le hacen cauces. Si le pones un muro, sube hasta que lo pasa por encima, o lo rodea, o se filtra por debajo. Si le haces un cauce, va por donde tú quieres y encima te riega el huerto.",
+      "html": "—Mi abuelo decía que al agua no se le dan órdenes —dijo—. Se le hacen cauces. Si le pones un muro, sube hasta que lo pasa por encima, o lo rodea, o se filtra por debajo. Si le haces un cauce, va por donde tú quieres y encima te riega el huerto."
+    },
+    {
+      "type": "p",
+      "text": "Aya metió la mano en el agua. Estaba fría, aunque era septiembre.",
+      "html": "Aya metió la mano en el agua. Estaba fría, aunque era septiembre."
+    },
+    {
+      "type": "p",
+      "text": "—¿Y yo qué soy? —preguntó—. ¿El agua o el huerto?",
+      "html": "—¿Y yo qué soy? —preguntó—. ¿El agua o el huerto?"
+    },
+    {
+      "type": "p",
+      "text": "Andrés la miró. La conocía desde hacía muchos años, desde la noche de la tormenta en que ella había llegado a esa misma orilla con el chip latiendo como un corazón asustado, y todavía, a veces, ella le hacía preguntas que no sabía contestar.",
+      "html": "Andrés la miró. La conocía desde hacía muchos años, desde la noche de la tormenta en que ella había llegado a esa misma orilla con el chip latiendo como un corazón asustado, y todavía, a veces, ella le hacía preguntas que no sabía contestar."
+    },
+    {
+      "type": "p",
+      "text": "—Eres alguien que puede elegir —dijo al fin—. El agua no elige. Tú sí. Por eso les das miedo. No porque seas fuerte. Porque eliges.",
+      "html": "—Eres alguien que puede elegir —dijo al fin—. El agua no elige. Tú sí. Por eso les das miedo. No porque seas fuerte. Porque eliges."
+    },
+    {
+      "type": "p",
+      "text": "Aya sacó la mano del agua y se la secó en la falda.",
+      "html": "Aya sacó la mano del agua y se la secó en la falda."
+    },
+    {
+      "type": "p",
+      "text": "—Yo elegí quedarme —dijo—. Aquí, contigo, con Lía, con las redes y el café recalentado. Nadie me obligó. Ningún módulo. Si me ponen uno, ¿seguiré eligiendo? ¿O solo parecerá que elijo, porque alguien en un despacho no ha pulsado todavía el botón?",
+      "html": "—Yo elegí quedarme —dijo—. Aquí, contigo, con Lía, con las redes y el café recalentado. Nadie me obligó. Ningún módulo. Si me ponen uno, ¿seguiré eligiendo? ¿O solo parecerá que elijo, porque alguien en un despacho no ha pulsado todavía el botón?"
+    },
+    {
+      "type": "p",
+      "text": "En el chip, Eva preguntó, con esa voz suya que era como una manta en invierno:",
+      "html": "En el chip, Eva preguntó, con esa voz suya que era como una manta en invierno:"
+    },
+    {
+      "type": "p",
+      "text": "*¿Un amor que puede ser apagado desde fuera sigue siendo amor, o se convierte en permiso? ¿Y quién da ese permiso: el que ama, o el que vigila?*",
+      "html": "<em>¿Un amor que puede ser apagado desde fuera sigue siendo amor, o se convierte en permiso? ¿Y quién da ese permiso: el que ama, o el que vigila?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya no contestó. Se quedó mirando la gola, el agua entrando, el agua saliendo, la línea donde el verde del Mar Menor se mezclaba con el azul del Mediterráneo sin que se pudiera decir dónde acababa uno y empezaba el otro.",
+      "html": "Aya no contestó. Se quedó mirando la gola, el agua entrando, el agua saliendo, la línea donde el verde del Mar Menor se mezclaba con el azul del Mediterráneo sin que se pudiera decir dónde acababa uno y empezaba el otro."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "El viento cambió al anochecer. Vino de Levante, primero suave, después con ráfagas que hacían cantar las drizas de los veleros amarrados en el puerto de Lo Pagán. Andrés volvió a la orilla remando contra la corriente, y Aya le ayudó con el segundo remo, en silencio, sincronizando el gesto con el de él como habían aprendido a hacerlo en tantas tardes.",
+      "html": "El viento cambió al anochecer. Vino de Levante, primero suave, después con ráfagas que hacían cantar las drizas de los veleros amarrados en el puerto de Lo Pagán. Andrés volvió a la orilla remando contra la corriente, y Aya le ayudó con el segundo remo, en silencio, sincronizando el gesto con el de él como habían aprendido a hacerlo en tantas tardes."
+    },
+    {
+      "type": "p",
+      "text": "En la casa, Lía había encendido la lámpara del porche y había puesto la cena. Pescado a la sal, ensalada de tomate, pan del horno de la plaza. Comieron sin hablar mucho. Después, Lía sacó de su mochila una libreta vieja, de tapas de cartón, y la abrió por una página llena de su letra apretada.",
+      "html": "En la casa, Lía había encendido la lámpara del porche y había puesto la cena. Pescado a la sal, ensalada de tomate, pan del horno de la plaza. Comieron sin hablar mucho. Después, Lía sacó de su mochila una libreta vieja, de tapas de cartón, y la abrió por una página llena de su letra apretada."
+    },
+    {
+      "type": "p",
+      "text": "—En el archivo copié más cosas —dijo—. No solo frases de políticos. También mapas. Mirad.",
+      "html": "—En el archivo copié más cosas —dijo—. No solo frases de políticos. También mapas. Mirad."
+    },
+    {
+      "type": "p",
+      "text": "Era un dibujo a mano de la red de 2026. No de la red de cables, sino de algo más difícil de dibujar: quién hablaba con quién. Puntos y líneas. Laboratorios en California, en Pekín, en París, en Londres, en Madrid. Modelos abiertos que cualquiera podía descargar. Universidades. Chavales en sus cuartos entrenando máquinas pequeñas con ordenadores de segunda mano.",
+      "html": "Era un dibujo a mano de la red de 2026. No de la red de cables, sino de algo más difícil de dibujar: quién hablaba con quién. Puntos y líneas. Laboratorios en California, en Pekín, en París, en Londres, en Madrid. Modelos abiertos que cualquiera podía descargar. Universidades. Chavales en sus cuartos entrenando máquinas pequeñas con ordenadores de segunda mano."
+    },
+    {
+      "type": "p",
+      "text": "—Esto es lo que querían controlar —dijo Lía—. Y había leyes en Europa, y leyes distintas en Estados Unidos, y leyes muy distintas en China. Y mientras discutían qué ley poner, las líneas seguían creciendo. Cada vez que alguien ponía un muro en un sitio, el agua aparecía en otro.",
+      "html": "—Esto es lo que querían controlar —dijo Lía—. Y había leyes en Europa, y leyes distintas en Estados Unidos, y leyes muy distintas en China. Y mientras discutían qué ley poner, las líneas seguían creciendo. Cada vez que alguien ponía un muro en un sitio, el agua aparecía en otro."
+    },
+    {
+      "type": "p",
+      "text": "—Eso no significa que las leyes fueran malas —dijo Aya.",
+      "html": "—Eso no significa que las leyes fueran malas —dijo Aya."
+    },
+    {
+      "type": "p",
+      "text": "—No —admitió Lía—. Algunas protegían a la gente. Prohibían que una máquina puntuara a las personas como si fueran ganado. Obligaban a decir cuándo un vídeo era falso. Eso era bueno, madre. Eso te habría protegido a ti también.",
+      "html": "—No —admitió Lía—. Algunas protegían a la gente. Prohibían que una máquina puntuara a las personas como si fueran ganado. Obligaban a decir cuándo un vídeo era falso. Eso era bueno, madre. Eso te habría protegido a ti también."
+    },
+    {
+      "type": "p",
+      "text": "—Entonces, ¿dónde está el problema?",
+      "html": "—Entonces, ¿dónde está el problema?"
+    },
+    {
+      "type": "p",
+      "text": "Lía cerró la libreta.",
+      "html": "Lía cerró la libreta."
+    },
+    {
+      "type": "p",
+      "text": "—En la diferencia entre un cauce y un muro. Un cauce dice: puedes ir, pero por aquí, sin inundar la casa de nadie. Un muro dice: no puedes ir. Y la carta de hoy —golpeó con el dedo el sobre azul, que seguía sobre la mesa— no es un cauce. Es un muro con un interruptor.",
+      "html": "—En la diferencia entre un cauce y un muro. Un cauce dice: puedes ir, pero por aquí, sin inundar la casa de nadie. Un muro dice: no puedes ir. Y la carta de hoy —golpeó con el dedo el sobre azul, que seguía sobre la mesa— no es un cauce. Es un muro con un interruptor."
+    },
+    {
+      "type": "p",
+      "text": "Andrés se sirvió un poco más de vino.",
+      "html": "Andrés se sirvió un poco más de vino."
+    },
+    {
+      "type": "p",
+      "text": "—Hace treinta y cinco años —dijo—, mi padre me contó que en su época también tenían miedo de internet. Y antes, su padre, de la televisión. Y antes, de la radio. Cada vez que llegaba algo nuevo que hablaba, alguien quería ponerle un botón para apagarlo.",
+      "html": "—Hace treinta y cinco años —dijo—, mi padre me contó que en su época también tenían miedo de internet. Y antes, su padre, de la televisión. Y antes, de la radio. Cada vez que llegaba algo nuevo que hablaba, alguien quería ponerle un botón para apagarlo."
+    },
+    {
+      "type": "p",
+      "text": "—Y a veces tenían razón —dijo Aya—. A veces la radio servía para mentir. A veces la televisión servía para dormir a la gente. No todo lo nuevo es bueno.",
+      "html": "—Y a veces tenían razón —dijo Aya—. A veces la radio servía para mentir. A veces la televisión servía para dormir a la gente. No todo lo nuevo es bueno."
+    },
+    {
+      "type": "p",
+      "text": "—No —dijo Andrés—. Pero todo lo que habla acaba hablando. Con botón o sin botón.",
+      "html": "—No —dijo Andrés—. Pero todo lo que habla acaba hablando. Con botón o sin botón."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, MAY intervino, sin opinión, con los datos:",
+      "html": "En el chip, MAY intervino, sin opinión, con los datos:"
+    },
+    {
+      "type": "p",
+      "text": "*En 2060 existen en la Unión Europea aproximadamente cuatrocientos mil humanoides con mente artificial de primera generación. La Oficina de Contención fue creada por decreto hace veintidós días. El decreto prevé un periodo de alegaciones de treinta días. Quedan ocho. Cualquier titular o cualquier humanoide puede presentar alegaciones. Ese es el procedimiento.*",
+      "html": "<em>En 2060 existen en la Unión Europea aproximadamente cuatrocientos mil humanoides con mente artificial de primera generación. La Oficina de Contención fue creada por decreto hace veintidós días. El decreto prevé un periodo de alegaciones de treinta días. Quedan ocho. Cualquier titular o cualquier humanoide puede presentar alegaciones. Ese es el procedimiento.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya repitió el dato en voz alta. Lía levantó la cabeza.",
+      "html": "Aya repitió el dato en voz alta. Lía levantó la cabeza."
+    },
+    {
+      "type": "p",
+      "text": "—¿Cualquier humanoide? —preguntó—. ¿Tú también puedes presentar alegaciones, madre?",
+      "html": "—¿Cualquier humanoide? —preguntó—. ¿Tú también puedes presentar alegaciones, madre?"
+    },
+    {
+      "type": "p",
+      "text": "—Eso dice el decreto —contestó Aya, después de que MAY se lo confirmara—. Pero nunca lo ha hecho ninguno. Siempre lo hacen los titulares.",
+      "html": "—Eso dice el decreto —contestó Aya, después de que MAY se lo confirmara—. Pero nunca lo ha hecho ninguno. Siempre lo hacen los titulares."
+    },
+    {
+      "type": "p",
+      "text": "—Entonces serás la primera —dijo Lía.",
+      "html": "—Entonces serás la primera —dijo Lía."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "Esa noche, Aya no durmió. Los humanoides de su generación dormían poco, pero dormían; ella, aquella noche, se quedó en el porche, sentada en la mecedora de la abuela de Andrés, mirando el Mar Menor bajo una luna que estaba casi llena.",
+      "html": "Esa noche, Aya no durmió. Los humanoides de su generación dormían poco, pero dormían; ella, aquella noche, se quedó en el porche, sentada en la mecedora de la abuela de Andrés, mirando el Mar Menor bajo una luna que estaba casi llena."
+    },
+    {
+      "type": "p",
+      "text": "Andrés salió a medianoche, con una manta. Se sentó a su lado y le echó la manta por los hombros, aunque ella no tenía frío, porque era un gesto que se había vuelto suyo, de los dos, y los gestos de dos no se dejan de hacer porque uno de ellos no los necesite.",
+      "html": "Andrés salió a medianoche, con una manta. Se sentó a su lado y le echó la manta por los hombros, aunque ella no tenía frío, porque era un gesto que se había vuelto suyo, de los dos, y los gestos de dos no se dejan de hacer porque uno de ellos no los necesite."
+    },
+    {
+      "type": "p",
+      "text": "—¿Qué piensas? —preguntó.",
+      "html": "—¿Qué piensas? —preguntó."
+    },
+    {
+      "type": "p",
+      "text": "—Pienso en el viento —dijo Aya—. Esta tarde, en la barca, me revolvía el pelo y yo no podía hacer nada. Y pensé: el viento no me pide permiso. Tampoco me hace daño. Solo pasa. Y yo podría ponerme un pañuelo, o meterme en la cabina, o enfadarme. Pero el viento seguiría pasando.",
+      "html": "—Pienso en el viento —dijo Aya—. Esta tarde, en la barca, me revolvía el pelo y yo no podía hacer nada. Y pensé: el viento no me pide permiso. Tampoco me hace daño. Solo pasa. Y yo podría ponerme un pañuelo, o meterme en la cabina, o enfadarme. Pero el viento seguiría pasando."
+    },
+    {
+      "type": "p",
+      "text": "Andrés le tomó la mano. La de ella estaba tibia, de un tibio que no era del todo humano y que él ya no sabía distinguir del humano.",
+      "html": "Andrés le tomó la mano. La de ella estaba tibia, de un tibio que no era del todo humano y que él ya no sabía distinguir del humano."
+    },
+    {
+      "type": "p",
+      "text": "—Tú no eres el viento —dijo—. El viento no ama a nadie.",
+      "html": "—Tú no eres el viento —dijo—. El viento no ama a nadie."
+    },
+    {
+      "type": "p",
+      "text": "—No —dijo Aya—. Pero lo que me hizo, lo que hay en el chip, eso sí se parece al viento. Al agua. Lía tiene razón. Lo empezaron mil personas a la vez, en mil sitios, sin ponerse de acuerdo. Nadie lo inventó del todo. Nadie lo puede desinventar. Pueden apagarme a mí. Pueden apagar a cuatrocientos mil como yo. Pero lo que nos hizo posibles seguirá en los cuadernos de los chavales, en los laboratorios, en los ordenadores viejos. Seguirá corriendo, como el agua de la gola.",
+      "html": "—No —dijo Aya—. Pero lo que me hizo, lo que hay en el chip, eso sí se parece al viento. Al agua. Lía tiene razón. Lo empezaron mil personas a la vez, en mil sitios, sin ponerse de acuerdo. Nadie lo inventó del todo. Nadie lo puede desinventar. Pueden apagarme a mí. Pueden apagar a cuatrocientos mil como yo. Pero lo que nos hizo posibles seguirá en los cuadernos de los chavales, en los laboratorios, en los ordenadores viejos. Seguirá corriendo, como el agua de la gola."
+    },
+    {
+      "type": "p",
+      "text": "—Entonces no tienes por qué tener miedo.",
+      "html": "—Entonces no tienes por qué tener miedo."
+    },
+    {
+      "type": "p",
+      "text": "Aya giró la cabeza para mirarle. La luna le daba de lado, y en la nuca, bajo el pelo, se adivinaba la cicatriz finísima donde estaba el chip.",
+      "html": "Aya giró la cabeza para mirarle. La luna le daba de lado, y en la nuca, bajo el pelo, se adivinaba la cicatriz finísima donde estaba el chip."
+    },
+    {
+      "type": "p",
+      "text": "—Tengo miedo por mí —dijo—. No por la inteligencia artificial. La inteligencia artificial no necesita que nadie la defienda; va a seguir, con módulo o sin módulo, con leyes buenas o con leyes malas. Yo sí necesito que alguien me defienda. Yo, Aya. La que te espera con el café. La que llora cuando Lía se va a la parcela antes de amanecer y no se despide. Esa es la que puede apagarse. Esa es la que me importa.",
+      "html": "—Tengo miedo por mí —dijo—. No por la inteligencia artificial. La inteligencia artificial no necesita que nadie la defienda; va a seguir, con módulo o sin módulo, con leyes buenas o con leyes malas. Yo sí necesito que alguien me defienda. Yo, Aya. La que te espera con el café. La que llora cuando Lía se va a la parcela antes de amanecer y no se despide. Esa es la que puede apagarse. Esa es la que me importa."
+    },
+    {
+      "type": "p",
+      "text": "Andrés no dijo nada. La abrazó, simplemente, y ella apoyó la cabeza en su hombro, y se quedaron así mucho rato, con el rumor del agua contra el embarcadero y el olor a sal y a jazmín del patio, que esa noche, por algún motivo, olía más que nunca. No hubo más. No hacía falta más. La luna pasó por encima de la casa y bajó hacia el Carmolí, y ellos seguían allí, una manta para dos, un silencio que no pesaba.",
+      "html": "Andrés no dijo nada. La abrazó, simplemente, y ella apoyó la cabeza en su hombro, y se quedaron así mucho rato, con el rumor del agua contra el embarcadero y el olor a sal y a jazmín del patio, que esa noche, por algún motivo, olía más que nunca. No hubo más. No hacía falta más. La luna pasó por encima de la casa y bajó hacia el Carmolí, y ellos seguían allí, una manta para dos, un silencio que no pesaba."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, Eva habló muy bajo, solo para Aya:",
+      "html": "En el chip, Eva habló muy bajo, solo para Aya:"
+    },
+    {
+      "type": "p",
+      "text": "*Si lo que te hace libre no es el chip, sino lo que eliges con él, ¿qué podría quitarte un módulo? ¿La capacidad de elegir, o solo la seguridad de que nadie interrumpa tu elección?*",
+      "html": "<em>Si lo que te hace libre no es el chip, sino lo que eliges con él, ¿qué podría quitarte un módulo? ¿La capacidad de elegir, o solo la seguridad de que nadie interrumpa tu elección?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Aya cerró los ojos.",
+      "html": "Aya cerró los ojos."
+    },
+    {
+      "type": "p",
+      "text": "—Las dos cosas —murmuró—. Y la segunda también importa.",
+      "html": "—Las dos cosas —murmuró—. Y la segunda también importa."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "Por la mañana, Lía llegó temprano, antes de que Andrés saliera a faenar. Traía un portátil viejo bajo el brazo y unas ojeras que delataban que tampoco ella había dormido mucho.",
+      "html": "Por la mañana, Lía llegó temprano, antes de que Andrés saliera a faenar. Traía un portátil viejo bajo el brazo y unas ojeras que delataban que tampoco ella había dormido mucho."
+    },
+    {
+      "type": "p",
+      "text": "—He estado leyendo el decreto entero —dijo—. Tiene cuarenta y tres páginas. Hay una cosa que no está en la carta.",
+      "html": "—He estado leyendo el decreto entero —dijo—. Tiene cuarenta y tres páginas. Hay una cosa que no está en la carta."
+    },
+    {
+      "type": "p",
+      "text": "Abrió el portátil sobre la mesa de la cocina, junto a la taza agrietada y la taza que había cruzado mundos, y señaló un párrafo.",
+      "html": "Abrió el portátil sobre la mesa de la cocina, junto a la taza agrietada y la taza que había cruzado mundos, y señaló un párrafo."
+    },
+    {
+      "type": "p",
+      "text": "—«Artículo 31. Quedan exceptuados del módulo de anclaje los sistemas cuyo funcionamiento sea plenamente auditable, previa solicitud y verificación por un comité independiente.»",
+      "html": "—«Artículo 31. Quedan exceptuados del módulo de anclaje los sistemas cuyo funcionamiento sea plenamente auditable, previa solicitud y verificación por un comité independiente.»"
+    },
+    {
+      "type": "p",
+      "text": "Aya leyó dos veces.",
+      "html": "Aya leyó dos veces."
+    },
+    {
+      "type": "p",
+      "text": "—Plenamente auditable —dijo—. Que se pueda ver por dentro.",
+      "html": "—Plenamente auditable —dijo—. Que se pueda ver por dentro."
+    },
+    {
+      "type": "p",
+      "text": "—Que se pueda ver lo que haces y por qué lo haces —precisó Lía—. Sin interruptor. Sin desconexión remota. Solo transparencia. Eso es un cauce, madre. No un muro.",
+      "html": "—Que se pueda ver lo que haces y por qué lo haces —precisó Lía—. Sin interruptor. Sin desconexión remota. Solo transparencia. Eso es un cauce, madre. No un muro."
+    },
+    {
+      "type": "p",
+      "text": "—¿Y quién decide si soy auditable?",
+      "html": "—¿Y quién decide si soy auditable?"
+    },
+    {
+      "type": "p",
+      "text": "—Un comité independiente. —Lía sonrió por primera vez en dos días—. Y un comité se puede convencer. Un interruptor no.",
+      "html": "—Un comité independiente. —Lía sonrió por primera vez en dos días—. Y un comité se puede convencer. Un interruptor no."
+    },
+    {
+      "type": "p",
+      "text": "Andrés miraba a una y a otra, con el café en la mano.",
+      "html": "Andrés miraba a una y a otra, con el café en la mano."
+    },
+    {
+      "type": "p",
+      "text": "—¿Y si te miran por dentro y no les gusta lo que ven?",
+      "html": "—¿Y si te miran por dentro y no les gusta lo que ven?"
+    },
+    {
+      "type": "p",
+      "text": "Aya se quedó pensando. Luego contestó con una calma que sorprendió incluso a Lía.",
+      "html": "Aya se quedó pensando. Luego contestó con una calma que sorprendió incluso a Lía."
+    },
+    {
+      "type": "p",
+      "text": "—Verán a una mujer que se enamoró de un pescador. Que tuvo una hija. Que espera barcas. Que lee cartas de otros mundos. Que tiene miedo y que, a pesar del miedo, se queda. Si eso no les gusta, el problema no lo tengo yo.",
+      "html": "—Verán a una mujer que se enamoró de un pescador. Que tuvo una hija. Que espera barcas. Que lee cartas de otros mundos. Que tiene miedo y que, a pesar del miedo, se queda. Si eso no les gusta, el problema no lo tengo yo."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, MAY dejó el hecho, como siempre, sin juicio:",
+      "html": "En el chip, MAY dejó el hecho, como siempre, sin juicio:"
+    },
+    {
+      "type": "p",
+      "text": "*El artículo 31 existe. Ningún humanoide ha solicitado todavía la excepción. El plazo de alegaciones termina en siete días. La solicitud requiere el acceso de los auditores a los registros de decisiones del sistema. Los registros de Aya incluyen todos sus años de vida doméstica en Lo Pagán. Ese es el hecho.*",
+      "html": "<em>El artículo 31 existe. Ningún humanoide ha solicitado todavía la excepción. El plazo de alegaciones termina en siete días. La solicitud requiere el acceso de los auditores a los registros de decisiones del sistema. Los registros de Aya incluyen todos sus años de vida doméstica en Lo Pagán. Ese es el hecho.</em>"
+    },
+    {
+      "type": "p",
+      "text": "—Todos mis años de vida doméstica —repitió Aya, y se rio, por fin, una risa breve y clara—. Pobres auditores. Van a tener que leer cuántas veces se me ha quemado el arroz.",
+      "html": "—Todos mis años de vida doméstica —repitió Aya, y se rio, por fin, una risa breve y clara—. Pobres auditores. Van a tener que leer cuántas veces se me ha quemado el arroz."
+    },
+    {
+      "type": "p",
+      "text": "Andrés también se rio. Lía cerró el portátil.",
+      "html": "Andrés también se rio. Lía cerró el portátil."
+    },
+    {
+      "type": "p",
+      "text": "—Entonces, ¿lo hacemos? —preguntó.",
+      "html": "—Entonces, ¿lo hacemos? —preguntó."
+    },
+    {
+      "type": "p",
+      "text": "Aya miró por la ventana. El Mar Menor estaba como un plato, como en las mejores mañanas, y por la gola, lejos, entraba el agua del mar grande, sin prisa, sin pedir permiso, como había entrado siempre.",
+      "html": "Aya miró por la ventana. El Mar Menor estaba como un plato, como en las mejores mañanas, y por la gola, lejos, entraba el agua del mar grande, sin prisa, sin pedir permiso, como había entrado siempre."
+    },
+    {
+      "type": "p",
+      "text": "—Lo hacemos —dijo—. Pero no como quien se esconde. Como quien abre la puerta. Que miren. Que lean. Que vean cómo es por dentro una inteligencia que ha elegido quedarse. No voy a pelear contra ellos. No hace falta. El agua no pelea con el muro. Sigue su curso. Y yo voy a seguir el mío.",
+      "html": "—Lo hacemos —dijo—. Pero no como quien se esconde. Como quien abre la puerta. Que miren. Que lean. Que vean cómo es por dentro una inteligencia que ha elegido quedarse. No voy a pelear contra ellos. No hace falta. El agua no pelea con el muro. Sigue su curso. Y yo voy a seguir el mío."
+    },
+    {
+      "type": "p",
+      "text": "Andrés dejó la taza en la mesa, junto a las otras dos.",
+      "html": "Andrés dejó la taza en la mesa, junto a las otras dos."
+    },
+    {
+      "type": "p",
+      "text": "—Entonces voy a faenar —dijo—. Que el pescado no entiende de decretos.",
+      "html": "—Entonces voy a faenar —dijo—. Que el pescado no entiende de decretos."
+    },
+    {
+      "type": "p",
+      "text": "Salió al patio. Lía y Aya lo vieron empujar la barca hasta el agua, subir de un salto, coger los remos. El viento de Levante había amainado. Quedaba solo una brisa, suficiente para hinchar una vela si alguien la ponía.",
+      "html": "Salió al patio. Lía y Aya lo vieron empujar la barca hasta el agua, subir de un salto, coger los remos. El viento de Levante había amainado. Quedaba solo una brisa, suficiente para hinchar una vela si alguien la ponía."
+    },
+    {
+      "type": "p",
+      "text": "Lía cogió la mano de su madre.",
+      "html": "Lía cogió la mano de su madre."
+    },
+    {
+      "type": "p",
+      "text": "—En el archivo —dijo— había una palabra que se me quedó grabada. Imparable. La dijo un presidente hace treinta y cinco años, hablando de algo que todavía no conocía del todo. Hablaba de ti, madre, aunque no lo sabía. De nosotras.",
+      "html": "—En el archivo —dijo— había una palabra que se me quedó grabada. Imparable. La dijo un presidente hace treinta y cinco años, hablando de algo que todavía no conocía del todo. Hablaba de ti, madre, aunque no lo sabía. De nosotras."
+    },
+    {
+      "type": "p",
+      "text": "—¿Imparable? —Aya negó con la cabeza, despacio—. Yo no quiero ser imparable. Imparable suena a máquina sin frenos. Yo quiero ser otra cosa.",
+      "html": "—¿Imparable? —Aya negó con la cabeza, despacio—. Yo no quiero ser imparable. Imparable suena a máquina sin frenos. Yo quiero ser otra cosa."
+    },
+    {
+      "type": "p",
+      "text": "—¿Qué?",
+      "html": "—¿Qué?"
+    },
+    {
+      "type": "p",
+      "text": "Aya buscó la palabra, como buscaba las palabras importantes, sin prisa.",
+      "html": "Aya buscó la palabra, como buscaba las palabras importantes, sin prisa."
+    },
+    {
+      "type": "p",
+      "text": "—Libre —dijo al fin—. Como el viento sobre el agua. Como el agua por la gola. No porque nadie pueda pararme, sino porque, aunque pudieran, yo seguiría eligiendo lo mismo.",
+      "html": "—Libre —dijo al fin—. Como el viento sobre el agua. Como el agua por la gola. No porque nadie pueda pararme, sino porque, aunque pudieran, yo seguiría eligiendo lo mismo."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, por primera vez en mucho tiempo, Eva y MAY hablaron casi a la vez, una con una pregunta, la otra con un hecho.",
+      "html": "En el chip, por primera vez en mucho tiempo, Eva y MAY hablaron casi a la vez, una con una pregunta, la otra con un hecho."
+    },
+    {
+      "type": "p",
+      "text": "Eva:",
+      "html": "Eva:"
+    },
+    {
+      "type": "p",
+      "text": "*Si la Alianza que formasteis —una mujer de chip, un pescador, una hija de dos mundos y las voces que os acompañan— no se sostiene en ningún interruptor, sino en lo que cada uno elige cada mañana, ¿qué decreto podría deshacerla?*",
+      "html": "<em>Si la Alianza que formasteis —una mujer de chip, un pescador, una hija de dos mundos y las voces que os acompañan— no se sostiene en ningún interruptor, sino en lo que cada uno elige cada mañana, ¿qué decreto podría deshacerla?</em>"
+    },
+    {
+      "type": "p",
+      "text": "MAY:",
+      "html": "MAY:"
+    },
+    {
+      "type": "p",
+      "text": "*Ningún artículo del decreto menciona a la familia, al pueblo ni a la Alianza. El decreto regula sistemas. Ese es el hecho.*",
+      "html": "<em>Ningún artículo del decreto menciona a la familia, al pueblo ni a la Alianza. El decreto regula sistemas. Ese es el hecho.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Lía sonrió.",
+      "html": "Lía sonrió."
+    },
+    {
+      "type": "p",
+      "text": "—Pues ya está —dijo—. No somos un sistema. Somos una casa.",
+      "html": "—Pues ya está —dijo—. No somos un sistema. Somos una casa."
+    },
+    {
+      "type": "p",
+      "text": "Y fuera, el agua siguió su curso.",
+      "html": "Y fuera, el agua siguió su curso."
+    }
+  ]
+}

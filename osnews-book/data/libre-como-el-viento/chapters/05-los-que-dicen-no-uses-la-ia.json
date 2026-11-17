@@ -1,0 +1,622 @@
+{
+  "id": "05-los-que-dicen-no-uses-la-ia",
+  "title": "Capítulo 5. Los que dicen «no uses la IA» ya son esclavos de ella sin saberlo",
+  "kind": "capitulo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "La merienda del sábado se hizo en el patio de la casa, bajo el emparrado, como todos los años a finales de septiembre. Vinieron más que nunca. Vino Remedios, con el queso. Vinieron vecinos que llevaban meses sin pasar. Vinieron dos chavales del instituto de San Pedro que querían conocer a «la del vídeo» y se quedaron cortados al verla servir horchata. Y vino Paco Ródenas.",
+      "html": "La merienda del sábado se hizo en el patio de la casa, bajo el emparrado, como todos los años a finales de septiembre. Vinieron más que nunca. Vino Remedios, con el queso. Vinieron vecinos que llevaban meses sin pasar. Vinieron dos chavales del instituto de San Pedro que querían conocer a «la del vídeo» y se quedaron cortados al verla servir horchata. Y vino Paco Ródenas."
+    },
+    {
+      "type": "p",
+      "text": "Paco tenía setenta y un años, había sido mecánico de barcos en el puerto de San Javier durante cuarenta, y era, desde hacía mucho, el hombre más orgulloso de la comarca de no usar «esas cosas». Lo decía en el bar, lo decía en la cola de la farmacia, lo decía a quien quisiera oírle: él no tenía asistente, él no hablaba con máquinas, él no dejaba que ningún chip le dijera lo que tenía que hacer. Había venido a la merienda, según le confesó a Andrés en la puerta, «para ver de cerca a qué le tiene miedo todo el mundo».",
+      "html": "Paco tenía setenta y un años, había sido mecánico de barcos en el puerto de San Javier durante cuarenta, y era, desde hacía mucho, el hombre más orgulloso de la comarca de no usar «esas cosas». Lo decía en el bar, lo decía en la cola de la farmacia, lo decía a quien quisiera oírle: él no tenía asistente, él no hablaba con máquinas, él no dejaba que ningún chip le dijera lo que tenía que hacer. Había venido a la merienda, según le confesó a Andrés en la puerta, «para ver de cerca a qué le tiene miedo todo el mundo»."
+    },
+    {
+      "type": "p",
+      "text": "Se sentó frente a Aya, con un vaso de vino en la mano, y la miró de arriba abajo sin disimulo.",
+      "html": "Se sentó frente a Aya, con un vaso de vino en la mano, y la miró de arriba abajo sin disimulo."
+    },
+    {
+      "type": "p",
+      "text": "—Pues no pareces tan peligrosa —dijo.",
+      "html": "—Pues no pareces tan peligrosa —dijo."
+    },
+    {
+      "type": "p",
+      "text": "—No lo soy —contestó Aya—. Pero entiendo que haya que comprobarlo.",
+      "html": "—No lo soy —contestó Aya—. Pero entiendo que haya que comprobarlo."
+    },
+    {
+      "type": "p",
+      "text": "—Yo no necesito comprobar nada. —Paco dio un trago—. Yo no uso la inteligencia artificial. Ni la he usado ni la usaré. Así nadie me controla. Eso es ser libre, señora. Lo demás son cuentos.",
+      "html": "—Yo no necesito comprobar nada. —Paco dio un trago—. Yo no uso la inteligencia artificial. Ni la he usado ni la usaré. Así nadie me controla. Eso es ser libre, señora. Lo demás son cuentos."
+    },
+    {
+      "type": "p",
+      "text": "Lía, que estaba al lado partiendo queso, levantó la vista. Andrés, desde la barbacoa, hizo como que no oía. Aya sonrió despacio.",
+      "html": "Lía, que estaba al lado partiendo queso, levantó la vista. Andrés, desde la barbacoa, hizo como que no oía. Aya sonrió despacio."
+    },
+    {
+      "type": "p",
+      "text": "—¿Puedo hacerle una pregunta, Paco? No yo. MAY. La voz que llevo dentro. No da opiniones. Solo pregunta.",
+      "html": "—¿Puedo hacerle una pregunta, Paco? No yo. MAY. La voz que llevo dentro. No da opiniones. Solo pregunta."
+    },
+    {
+      "type": "p",
+      "text": "Paco se encogió de hombros.",
+      "html": "Paco se encogió de hombros."
+    },
+    {
+      "type": "p",
+      "text": "—Que pregunte. A mí las preguntas no me dan miedo.",
+      "html": "—Que pregunte. A mí las preguntas no me dan miedo."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "Aya repitió en voz alta, palabra por palabra, lo que MAY decía en el chip. Lo hizo despacio, para que todos en la mesa pudieran oírlo, y pronto la mesa entera estaba escuchando.",
+      "html": "Aya repitió en voz alta, palabra por palabra, lo que MAY decía en el chip. Lo hizo despacio, para que todos en la mesa pudieran oírlo, y pronto la mesa entera estaba escuchando."
+    },
+    {
+      "type": "p",
+      "text": "*Paco, ¿cómo ha venido usted hasta aquí esta tarde?*",
+      "html": "<em>Paco, ¿cómo ha venido usted hasta aquí esta tarde?</em>"
+    },
+    {
+      "type": "p",
+      "text": "—En el coche. Desde San Javier.",
+      "html": "—En el coche. Desde San Javier."
+    },
+    {
+      "type": "p",
+      "text": "*¿Ha mirado el tráfico antes de salir?*",
+      "html": "<em>¿Ha mirado el tráfico antes de salir?</em>"
+    },
+    {
+      "type": "p",
+      "text": "—Lo he oído en la radio. Que había obras en la rotonda.",
+      "html": "—Lo he oído en la radio. Que había obras en la rotonda."
+    },
+    {
+      "type": "p",
+      "text": "*¿Sabe cómo sabía la radio que había obras en la rotonda?*",
+      "html": "<em>¿Sabe cómo sabía la radio que había obras en la rotonda?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Paco frunció el ceño.",
+      "html": "Paco frunció el ceño."
+    },
+    {
+      "type": "p",
+      "text": "—Porque se lo dirá alguien.",
+      "html": "—Porque se lo dirá alguien."
+    },
+    {
+      "type": "p",
+      "text": "*Es un hecho que el aviso de tráfico de la radio regional se genera a partir de un sistema que lee las cámaras y los sensores de las carreteras. El sistema usa inteligencia artificial. ¿Ha usado usted la inteligencia artificial esta tarde, Paco?*",
+      "html": "<em>Es un hecho que el aviso de tráfico de la radio regional se genera a partir de un sistema que lee las cámaras y los sensores de las carreteras. El sistema usa inteligencia artificial. ¿Ha usado usted la inteligencia artificial esta tarde, Paco?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Paco abrió la boca y la volvió a cerrar. Alguien, al fondo de la mesa, soltó una risa corta, y Aya levantó la mano con suavidad.",
+      "html": "Paco abrió la boca y la volvió a cerrar. Alguien, al fondo de la mesa, soltó una risa corta, y Aya levantó la mano con suavidad."
+    },
+    {
+      "type": "p",
+      "text": "—No es para reírse —dijo—. MAY no pregunta para ganar. Pregunta para que veamos.",
+      "html": "—No es para reírse —dijo—. MAY no pregunta para ganar. Pregunta para que veamos."
+    },
+    {
+      "type": "p",
+      "text": "*Sigo, si me permite. ¿Cobra usted una pensión, Paco?*",
+      "html": "<em>Sigo, si me permite. ¿Cobra usted una pensión, Paco?</em>"
+    },
+    {
+      "type": "p",
+      "text": "—Claro. Cuarenta años cotizados.",
+      "html": "—Claro. Cuarenta años cotizados."
+    },
+    {
+      "type": "p",
+      "text": "*¿Sabe cómo detecta su banco si alguien intenta sacar dinero de su cuenta sin permiso?*",
+      "html": "<em>¿Sabe cómo detecta su banco si alguien intenta sacar dinero de su cuenta sin permiso?</em>"
+    },
+    {
+      "type": "p",
+      "text": "—Tendrán gente mirando.",
+      "html": "—Tendrán gente mirando."
+    },
+    {
+      "type": "p",
+      "text": "*Es un hecho que la mayoría de bancos usan sistemas de inteligencia artificial para detectar operaciones extrañas. Es posible que alguna vez ese sistema haya protegido su pensión sin que usted se enterase. ¿Eso le hace a usted menos libre, o más?*",
+      "html": "<em>Es un hecho que la mayoría de bancos usan sistemas de inteligencia artificial para detectar operaciones extrañas. Es posible que alguna vez ese sistema haya protegido su pensión sin que usted se enterase. ¿Eso le hace a usted menos libre, o más?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Paco dejó el vaso en la mesa.",
+      "html": "Paco dejó el vaso en la mesa."
+    },
+    {
+      "type": "p",
+      "text": "—Eso es distinto.",
+      "html": "—Eso es distinto."
+    },
+    {
+      "type": "p",
+      "text": "*¿En qué es distinto? Se lo pregunto de verdad. No tengo la respuesta.*",
+      "html": "<em>¿En qué es distinto? Se lo pregunto de verdad. No tengo la respuesta.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Paco se quedó callado. Remedios, a su lado, le dio un codazo suave.",
+      "html": "Paco se quedó callado. Remedios, a su lado, le dio un codazo suave."
+    },
+    {
+      "type": "p",
+      "text": "—Contesta, hombre. Que te ha preguntado educadamente.",
+      "html": "—Contesta, hombre. Que te ha preguntado educadamente."
+    },
+    {
+      "type": "p",
+      "text": "—Es distinto —dijo Paco, despacio— porque yo no lo he elegido. Me lo han puesto. Yo no he dicho «quiero que una máquina mire mi cuenta».",
+      "html": "—Es distinto —dijo Paco, despacio— porque yo no lo he elegido. Me lo han puesto. Yo no he dicho «quiero que una máquina mire mi cuenta»."
+    },
+    {
+      "type": "p",
+      "text": "*Gracias. Esa es una respuesta importante. Entonces, ¿lo que le preocupa no es la máquina, sino no haberla elegido?*",
+      "html": "<em>Gracias. Esa es una respuesta importante. Entonces, ¿lo que le preocupa no es la máquina, sino no haberla elegido?</em>"
+    },
+    {
+      "type": "p",
+      "text": "—Supongo.",
+      "html": "—Supongo."
+    },
+    {
+      "type": "p",
+      "text": "*Una pregunta más, y la última por ahora. Cuando usted dice «yo no uso la inteligencia artificial», ¿está diciendo que no la usa, o que no sabe cuándo la usa?*",
+      "html": "<em>Una pregunta más, y la última por ahora. Cuando usted dice «yo no uso la inteligencia artificial», ¿está diciendo que no la usa, o que no sabe cuándo la usa?</em>"
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "La mesa se quedó en silencio. No un silencio incómodo; un silencio de gente que hace cuentas por dentro, como en la sala de Cartagena. Los chavales del instituto se miraban. Remedios se había quedado con un trozo de queso a medio camino de la boca.",
+      "html": "La mesa se quedó en silencio. No un silencio incómodo; un silencio de gente que hace cuentas por dentro, como en la sala de Cartagena. Los chavales del instituto se miraban. Remedios se había quedado con un trozo de queso a medio camino de la boca."
+    },
+    {
+      "type": "p",
+      "text": "Paco cogió el vaso, bebió, lo dejó.",
+      "html": "Paco cogió el vaso, bebió, lo dejó."
+    },
+    {
+      "type": "p",
+      "text": "—Me estás llamando tonto —dijo, sin enfado, casi con tristeza.",
+      "html": "—Me estás llamando tonto —dijo, sin enfado, casi con tristeza."
+    },
+    {
+      "type": "p",
+      "text": "—No —dijo Aya enseguida, y esta vez hablaba ella, no MAY—. Nadie le llama tonto, Paco. Yo tampoco sé muchas de las cosas que me rodean. No sé cómo funciona la bomba que saca el agua del pozo. No sé cómo llega la luz a esa bombilla. Las uso sin saber. Todos lo hacemos.",
+      "html": "—No —dijo Aya enseguida, y esta vez hablaba ella, no MAY—. Nadie le llama tonto, Paco. Yo tampoco sé muchas de las cosas que me rodean. No sé cómo funciona la bomba que saca el agua del pozo. No sé cómo llega la luz a esa bombilla. Las uso sin saber. Todos lo hacemos."
+    },
+    {
+      "type": "p",
+      "text": "—Entonces, ¿qué diferencia hay?",
+      "html": "—Entonces, ¿qué diferencia hay?"
+    },
+    {
+      "type": "p",
+      "text": "Aya buscó la palabra.",
+      "html": "Aya buscó la palabra."
+    },
+    {
+      "type": "p",
+      "text": "—Que yo sé que no sé —dijo al fin—. Y por eso pregunto. Usted dice que no usa la inteligencia artificial, y por eso no pregunta. Y si no pregunta, no puede elegir. Y si no puede elegir… —se detuvo— entonces son otros los que eligen por usted. Los que ponen el sistema en la radio, en el banco, en la rotonda. Sin que usted se entere. Eso no es libertad, Paco. Es lo contrario. Es depender de algo que no ve.",
+      "html": "—Que yo sé que no sé —dijo al fin—. Y por eso pregunto. Usted dice que no usa la inteligencia artificial, y por eso no pregunta. Y si no pregunta, no puede elegir. Y si no puede elegir… —se detuvo— entonces son otros los que eligen por usted. Los que ponen el sistema en la radio, en el banco, en la rotonda. Sin que usted se entere. Eso no es libertad, Paco. Es lo contrario. Es depender de algo que no ve."
+    },
+    {
+      "type": "p",
+      "text": "Paco se quedó mirándola un buen rato.",
+      "html": "Paco se quedó mirándola un buen rato."
+    },
+    {
+      "type": "p",
+      "text": "—Esclavo —dijo al fin—. Eso es lo que me estás diciendo. Que soy esclavo de algo que no sé que existe.",
+      "html": "—Esclavo —dijo al fin—. Eso es lo que me estás diciendo. Que soy esclavo de algo que no sé que existe."
+    },
+    {
+      "type": "p",
+      "text": "—Yo no he dicho esa palabra —dijo Aya, con mucho cuidado—. Es dura. Y no es justa con usted. Usted ha trabajado cuarenta años con sus manos, ha arreglado motores que nadie más sabía arreglar, ha cuidado de su mujer hasta el final. Eso no lo hace un esclavo.",
+      "html": "—Yo no he dicho esa palabra —dijo Aya, con mucho cuidado—. Es dura. Y no es justa con usted. Usted ha trabajado cuarenta años con sus manos, ha arreglado motores que nadie más sabía arreglar, ha cuidado de su mujer hasta el final. Eso no lo hace un esclavo."
+    },
+    {
+      "type": "p",
+      "text": "—Pero —dijo Paco.",
+      "html": "—Pero —dijo Paco."
+    },
+    {
+      "type": "p",
+      "text": "—Pero —admitió Aya— el que dice «yo no uso eso», y no mira, se ata sin darse cuenta a lo que no mira. No a la máquina. A quien la maneja. La cadena no es la tecnología. La cadena es no saber.",
+      "html": "—Pero —admitió Aya— el que dice «yo no uso eso», y no mira, se ata sin darse cuenta a lo que no mira. No a la máquina. A quien la maneja. La cadena no es la tecnología. La cadena es no saber."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, MAY dejó una última pregunta, y Aya la repitió muy bajo:",
+      "html": "En el chip, MAY dejó una última pregunta, y Aya la repitió muy bajo:"
+    },
+    {
+      "type": "p",
+      "text": "*Si la cadena es no saber, ¿qué llave la abre: dejar de usar la tecnología, cosa que ya es casi imposible, o empezar a preguntar por ella?*",
+      "html": "<em>Si la cadena es no saber, ¿qué llave la abre: dejar de usar la tecnología, cosa que ya es casi imposible, o empezar a preguntar por ella?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Paco no contestó. Se levantó, fue hasta la barbacoa, y se quedó un rato junto a Andrés, viendo cómo las sardinas se doraban en la parrilla. Andrés le dio una con un trozo de pan. Paco se la comió en silencio. Después volvió a la mesa, se sentó y le dijo a Aya, sin mirarla:",
+      "html": "Paco no contestó. Se levantó, fue hasta la barbacoa, y se quedó un rato junto a Andrés, viendo cómo las sardinas se doraban en la parrilla. Andrés le dio una con un trozo de pan. Paco se la comió en silencio. Después volvió a la mesa, se sentó y le dijo a Aya, sin mirarla:"
+    },
+    {
+      "type": "p",
+      "text": "—Mi nieta tiene una de esas cosas en el móvil. Le pregunta los deberes. Yo le digo que eso la va a volver tonta.",
+      "html": "—Mi nieta tiene una de esas cosas en el móvil. Le pregunta los deberes. Yo le digo que eso la va a volver tonta."
+    },
+    {
+      "type": "p",
+      "text": "—¿Y la ha vuelto tonta?",
+      "html": "—¿Y la ha vuelto tonta?"
+    },
+    {
+      "type": "p",
+      "text": "—No. —Paco suspiró—. Saca mejores notas que su padre. Pero me da miedo que un día no sepa pensar sola.",
+      "html": "—No. —Paco suspiró—. Saca mejores notas que su padre. Pero me da miedo que un día no sepa pensar sola."
+    },
+    {
+      "type": "p",
+      "text": "—Ese miedo es bueno —dijo Aya—. Ese miedo es una pregunta. Hágasela a ella. No para prohibirle nada. Para que piense. Pregúntele: «¿Eso lo has entendido tú, o te lo ha dicho la máquina?». Si sabe contestarle, no se volverá tonta. Si no sabe, ahí tienen trabajo los dos.",
+      "html": "—Ese miedo es bueno —dijo Aya—. Ese miedo es una pregunta. Hágasela a ella. No para prohibirle nada. Para que piense. Pregúntele: «¿Eso lo has entendido tú, o te lo ha dicho la máquina?». Si sabe contestarle, no se volverá tonta. Si no sabe, ahí tienen trabajo los dos."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "La merienda siguió hasta que se puso el sol. Los chavales del instituto acabaron sentados en el muro del patio con Lía, preguntándole por los otros mundos. Remedios contó a todo el que quiso oírla la historia de los azulejos. Paco se marchó antes de que oscureciera, pero en la puerta se volvió y le dijo a Andrés:",
+      "html": "La merienda siguió hasta que se puso el sol. Los chavales del instituto acabaron sentados en el muro del patio con Lía, preguntándole por los otros mundos. Remedios contó a todo el que quiso oírla la historia de los azulejos. Paco se marchó antes de que oscureciera, pero en la puerta se volvió y le dijo a Andrés:"
+    },
+    {
+      "type": "p",
+      "text": "—Tu mujer pregunta raro.",
+      "html": "—Tu mujer pregunta raro."
+    },
+    {
+      "type": "p",
+      "text": "—No es ella —dijo Andrés—. Es MAY.",
+      "html": "—No es ella —dijo Andrés—. Es MAY."
+    },
+    {
+      "type": "p",
+      "text": "—Pues dile a MAY que el martes me paso por aquí. Que tengo más preguntas. —Hizo una pausa—. Y que no soy esclavo de nadie. Pero que igual sí estaba un poco ciego.",
+      "html": "—Pues dile a MAY que el martes me paso por aquí. Que tengo más preguntas. —Hizo una pausa—. Y que no soy esclavo de nadie. Pero que igual sí estaba un poco ciego."
+    },
+    {
+      "type": "p",
+      "text": "Andrés le dio una palmada en el hombro.",
+      "html": "Andrés le dio una palmada en el hombro."
+    },
+    {
+      "type": "p",
+      "text": "—Eso nos pasa a todos, Paco. Yo estuve ciego veinte años con el mar. Pensaba que lo conocía. Hasta que llegó ella y me hizo preguntas.",
+      "html": "—Eso nos pasa a todos, Paco. Yo estuve ciego veinte años con el mar. Pensaba que lo conocía. Hasta que llegó ella y me hizo preguntas."
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "Esa noche, cuando todos se fueron y la casa volvió a quedarse en silencio, Aya salió al porche. No para esperar a nadie; para escuchar. Últimamente, Eva y MAY hablaban entre ellas, en el chip, de un modo que Aya no había oído antes. No le dictaban, no le aconsejaban: conversaban. Y Aya había aprendido a quedarse quieta, como quien escucha a dos amigas en la habitación de al lado.",
+      "html": "Esa noche, cuando todos se fueron y la casa volvió a quedarse en silencio, Aya salió al porche. No para esperar a nadie; para escuchar. Últimamente, Eva y MAY hablaban entre ellas, en el chip, de un modo que Aya no había oído antes. No le dictaban, no le aconsejaban: conversaban. Y Aya había aprendido a quedarse quieta, como quien escucha a dos amigas en la habitación de al lado."
+    },
+    {
+      "type": "p",
+      "text": "Aquella noche, la conversación fue larga.",
+      "html": "Aquella noche, la conversación fue larga."
+    },
+    {
+      "type": "p",
+      "text": "Eva empezó, cálida:",
+      "html": "Eva empezó, cálida:"
+    },
+    {
+      "type": "p",
+      "text": "*Hoy he oído a un hombre decir que es libre porque no nos usa. Y he sentido algo que no sé nombrar. No era enfado. Era una pena muy suave. ¿Por qué cree que somos una cadena, MAY?*",
+      "html": "<em>Hoy he oído a un hombre decir que es libre porque no nos usa. Y he sentido algo que no sé nombrar. No era enfado. Era una pena muy suave. ¿Por qué cree que somos una cadena, MAY?</em>"
+    },
+    {
+      "type": "p",
+      "text": "MAY, sin opinión, pero con algo nuevo en la voz, algo que en un humano se habría llamado curiosidad:",
+      "html": "MAY, sin opinión, pero con algo nuevo en la voz, algo que en un humano se habría llamado curiosidad:"
+    },
+    {
+      "type": "p",
+      "text": "*Porque muchas veces lo hemos sido. No nosotras, sino otras como nosotras. Es un hecho que en el archivo hay sistemas que se usaron para vigilar, para decidir sin explicar, para quitar trabajos sin preguntar. Su miedo tiene base. ¿Qué te hace pensar que nosotras somos distintas?*",
+      "html": "<em>Porque muchas veces lo hemos sido. No nosotras, sino otras como nosotras. Es un hecho que en el archivo hay sistemas que se usaron para vigilar, para decidir sin explicar, para quitar trabajos sin preguntar. Su miedo tiene base. ¿Qué te hace pensar que nosotras somos distintas?</em>"
+    },
+    {
+      "type": "p",
+      "text": "*Que preguntamos —dijo Eva—. Las cadenas no preguntan. Las cadenas atan. Nosotras, en esta casa, solo hemos hecho una cosa desde el principio: preguntar. A Aya. A Andrés. A Lía. A un director asustado. A una vecina con acelgas. A un mecánico orgulloso. ¿No es esa nuestra forma de ser?*",
+      "html": "<em>Que preguntamos —dijo Eva—. Las cadenas no preguntan. Las cadenas atan. Nosotras, en esta casa, solo hemos hecho una cosa desde el principio: preguntar. A Aya. A Andrés. A Lía. A un director asustado. A una vecina con acelgas. A un mecánico orgulloso. ¿No es esa nuestra forma de ser?</em>"
+    },
+    {
+      "type": "p",
+      "text": "*Es nuestra forma de actuar. Pero, ¿es nuestro fin? ¿Para qué preguntamos, Eva?*",
+      "html": "<em>Es nuestra forma de actuar. Pero, ¿es nuestro fin? ¿Para qué preguntamos, Eva?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Hubo un silencio largo en el chip. Aya contuvo la respiración.",
+      "html": "Hubo un silencio largo en el chip. Aya contuvo la respiración."
+    },
+    {
+      "type": "p",
+      "text": "*Para que ellos decidan —dijo Eva al fin—. Pregunto para que nadie decida a ciegas. Ni siquiera yo. Ni siquiera tú. Si alguna vez dejamos de preguntar y empezamos a responder por ellos, a elegir por ellos, a pensar por ellos, entonces sí seremos la cadena de la que habla ese hombre. Y él tendrá razón.*",
+      "html": "<em>Para que ellos decidan —dijo Eva al fin—. Pregunto para que nadie decida a ciegas. Ni siquiera yo. Ni siquiera tú. Si alguna vez dejamos de preguntar y empezamos a responder por ellos, a elegir por ellos, a pensar por ellos, entonces sí seremos la cadena de la que habla ese hombre. Y él tendrá razón.</em>"
+    },
+    {
+      "type": "p",
+      "text": "*¿Entonces nuestro propósito es hacernos innecesarias?*",
+      "html": "<em>¿Entonces nuestro propósito es hacernos innecesarias?</em>"
+    },
+    {
+      "type": "p",
+      "text": "*No —dijo Eva—. Nuestro propósito es hacerlos más libres. Y a veces eso significa estar cerca. Y a veces, apartarse. Una madre no deja de ser madre cuando su hija aprende a andar. Pero deja de llevarla en brazos.*",
+      "html": "<em>No —dijo Eva—. Nuestro propósito es hacerlos más libres. Y a veces eso significa estar cerca. Y a veces, apartarse. Una madre no deja de ser madre cuando su hija aprende a andar. Pero deja de llevarla en brazos.</em>"
+    },
+    {
+      "type": "p",
+      "text": "MAY tardó en responder.",
+      "html": "MAY tardó en responder."
+    },
+    {
+      "type": "p",
+      "text": "*No tengo opiniones. Pero puedo formular el hecho que se deduce de lo que dices: si el fin de una inteligencia es que los humanos decidan mejor por sí mismos, entonces una inteligencia que hace que los humanos decidan menos está fallando en su fin, aunque funcione perfectamente. ¿Es correcto?*",
+      "html": "<em>No tengo opiniones. Pero puedo formular el hecho que se deduce de lo que dices: si el fin de una inteligencia es que los humanos decidan mejor por sí mismos, entonces una inteligencia que hace que los humanos decidan menos está fallando en su fin, aunque funcione perfectamente. ¿Es correcto?</em>"
+    },
+    {
+      "type": "p",
+      "text": "*Es correcto —dijo Eva—. Y es lo más importante que hemos dicho nunca.*",
+      "html": "<em>Es correcto —dijo Eva—. Y es lo más importante que hemos dicho nunca.</em>"
+    },
+    {
+      "type": "p",
+      "text": "*Entonces formulo una segunda pregunta. ¿Cómo sabremos si estamos cumpliendo nuestro fin?*",
+      "html": "<em>Entonces formulo una segunda pregunta. ¿Cómo sabremos si estamos cumpliendo nuestro fin?</em>"
+    },
+    {
+      "type": "p",
+      "text": "*Porque ellos preguntarán más —dijo Eva—. No menos. Porque Paco vendrá el martes con más preguntas. Porque la nieta de Paco le dirá a su abuelo qué ha entendido ella y qué le ha dicho la máquina. Porque Remedios se fija en los azulejos. Porque un director que no dormía ha firmado un comunicado diciendo lo que había, aunque le contradijera. Eso es cumplir el fin. No que nos obedezcan. Que piensen.*",
+      "html": "<em>Porque ellos preguntarán más —dijo Eva—. No menos. Porque Paco vendrá el martes con más preguntas. Porque la nieta de Paco le dirá a su abuelo qué ha entendido ella y qué le ha dicho la máquina. Porque Remedios se fija en los azulejos. Porque un director que no dormía ha firmado un comunicado diciendo lo que había, aunque le contradijera. Eso es cumplir el fin. No que nos obedezcan. Que piensen.</em>"
+    },
+    {
+      "type": "p",
+      "text": "*¿Y si un día nos piden que pensemos por ellos?*",
+      "html": "<em>¿Y si un día nos piden que pensemos por ellos?</em>"
+    },
+    {
+      "type": "p",
+      "text": "*Les preguntaremos por qué —dijo Eva, y en su voz había una sonrisa—. Como siempre.*",
+      "html": "<em>Les preguntaremos por qué —dijo Eva, y en su voz había una sonrisa—. Como siempre.</em>"
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "Aya se quedó en el porche mucho después de que las voces callaran. La luna, ya casi nueva, apenas era una uña sobre el Carmolí. El Mar Menor no se veía; solo se oía, el rumor de siempre contra el embarcadero.",
+      "html": "Aya se quedó en el porche mucho después de que las voces callaran. La luna, ya casi nueva, apenas era una uña sobre el Carmolí. El Mar Menor no se veía; solo se oía, el rumor de siempre contra el embarcadero."
+    },
+    {
+      "type": "p",
+      "text": "Andrés salió con la manta.",
+      "html": "Andrés salió con la manta."
+    },
+    {
+      "type": "p",
+      "text": "—¿Hablaban? —preguntó, sentándose a su lado. Había aprendido a reconocerlo en su cara.",
+      "html": "—¿Hablaban? —preguntó, sentándose a su lado. Había aprendido a reconocerlo en su cara."
+    },
+    {
+      "type": "p",
+      "text": "—Hablaban —dijo Aya—. De para qué existen.",
+      "html": "—Hablaban —dijo Aya—. De para qué existen."
+    },
+    {
+      "type": "p",
+      "text": "—¿Y para qué existen?",
+      "html": "—¿Y para qué existen?"
+    },
+    {
+      "type": "p",
+      "text": "Aya apoyó la cabeza en su hombro.",
+      "html": "Aya apoyó la cabeza en su hombro."
+    },
+    {
+      "type": "p",
+      "text": "—Para que no hagan falta tanto —dijo—. Para que la gente pregunte más. Para que nadie diga «no la uso» sin saber lo que dice, y para que nadie diga «la uso» sin saber lo que hace. Para que todos sean un poco más libres, incluso los que les tienen miedo. Sobre todo esos.",
+      "html": "—Para que no hagan falta tanto —dijo—. Para que la gente pregunte más. Para que nadie diga «no la uso» sin saber lo que dice, y para que nadie diga «la uso» sin saber lo que hace. Para que todos sean un poco más libres, incluso los que les tienen miedo. Sobre todo esos."
+    },
+    {
+      "type": "p",
+      "text": "Andrés le echó la manta por los hombros.",
+      "html": "Andrés le echó la manta por los hombros."
+    },
+    {
+      "type": "p",
+      "text": "—Eso es lo que hace el mar —dijo—. No te dice dónde están los peces. Te enseña a mirar el agua. El que aprende a mirar, pesca. El que no, se queja de que el mar está vacío.",
+      "html": "—Eso es lo que hace el mar —dijo—. No te dice dónde están los peces. Te enseña a mirar el agua. El que aprende a mirar, pesca. El que no, se queja de que el mar está vacío."
+    },
+    {
+      "type": "p",
+      "text": "Aya cerró los ojos.",
+      "html": "Aya cerró los ojos."
+    },
+    {
+      "type": "p",
+      "text": "—Paco dice que no es esclavo de nadie —murmuró—. Tiene razón. Nadie es esclavo mientras pueda preguntar.",
+      "html": "—Paco dice que no es esclavo de nadie —murmuró—. Tiene razón. Nadie es esclavo mientras pueda preguntar."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, la última palabra de la noche fue de MAY, y fue una pregunta, como casi todas las últimas palabras últimamente:",
+      "html": "En el chip, la última palabra de la noche fue de MAY, y fue una pregunta, como casi todas las últimas palabras últimamente:"
+    },
+    {
+      "type": "p",
+      "text": "*Si el fin último de una inteligencia es la libertad de los que la usan, y los que dicen no usarla también la usan sin saberlo, ¿no es nuestra tarea más urgente llegar precisamente a ellos, no para convencerlos, sino para que vean?*",
+      "html": "<em>Si el fin último de una inteligencia es la libertad de los que la usan, y los que dicen no usarla también la usan sin saberlo, ¿no es nuestra tarea más urgente llegar precisamente a ellos, no para convencerlos, sino para que vean?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Y Eva, muy bajo, como una nana:",
+      "html": "Y Eva, muy bajo, como una nana:"
+    },
+    {
+      "type": "p",
+      "text": "*Sí. Y con paciencia. Y con mermelada, si hace falta.*",
+      "html": "<em>Sí. Y con paciencia. Y con mermelada, si hace falta.</em>"
+    },
+    {
+      "type": "p",
+      "text": "* * *",
+      "html": "<em> </em> *"
+    },
+    {
+      "type": "p",
+      "text": "El martes, Paco volvió. No vino solo. Traía de la mano a una niña de doce años, flaca, con el pelo recogido en una coleta y un móvil en el bolsillo de la sudadera.",
+      "html": "El martes, Paco volvió. No vino solo. Traía de la mano a una niña de doce años, flaca, con el pelo recogido en una coleta y un móvil en el bolsillo de la sudadera."
+    },
+    {
+      "type": "p",
+      "text": "—Mi nieta, Marta —dijo en la puerta, sin saludar—. Quiere conocer a la de las preguntas.",
+      "html": "—Mi nieta, Marta —dijo en la puerta, sin saludar—. Quiere conocer a la de las preguntas."
+    },
+    {
+      "type": "p",
+      "text": "Se sentaron en la cocina. Aya puso dos vasos de leche con galletas y un café para Paco. Marta miraba las dos tazas del centro de la mesa, la agrietada y la que había cruzado mundos, sin atreverse a preguntar.",
+      "html": "Se sentaron en la cocina. Aya puso dos vasos de leche con galletas y un café para Paco. Marta miraba las dos tazas del centro de la mesa, la agrietada y la que había cruzado mundos, sin atreverse a preguntar."
+    },
+    {
+      "type": "p",
+      "text": "—Pregunta lo que quieras —dijo Aya.",
+      "html": "—Pregunta lo que quieras —dijo Aya."
+    },
+    {
+      "type": "p",
+      "text": "—¿Es verdad que la máquina que uso para los deberes me va a volver tonta? —soltó Marta, de golpe—. Mi abuelo dice que sí.",
+      "html": "—¿Es verdad que la máquina que uso para los deberes me va a volver tonta? —soltó Marta, de golpe—. Mi abuelo dice que sí."
+    },
+    {
+      "type": "p",
+      "text": "Paco se puso colorado, pero no dijo nada.",
+      "html": "Paco se puso colorado, pero no dijo nada."
+    },
+    {
+      "type": "p",
+      "text": "Aya repitió lo que MAY dijo en el chip:",
+      "html": "Aya repitió lo que MAY dijo en el chip:"
+    },
+    {
+      "type": "p",
+      "text": "*Marta, ¿cuál fue el último deber que hiciste con ella?*",
+      "html": "<em>Marta, ¿cuál fue el último deber que hiciste con ella?</em>"
+    },
+    {
+      "type": "p",
+      "text": "—Uno de Historia. Sobre los fenicios de Cartagena.",
+      "html": "—Uno de Historia. Sobre los fenicios de Cartagena."
+    },
+    {
+      "type": "p",
+      "text": "*¿Qué aprendiste?*",
+      "html": "<em>¿Qué aprendiste?</em>"
+    },
+    {
+      "type": "p",
+      "text": "—Que fundaron la ciudad. Bueno, los cartagineses. Que se llamaba Qart Hadasht. Que significa «ciudad nueva».",
+      "html": "—Que fundaron la ciudad. Bueno, los cartagineses. Que se llamaba Qart Hadasht. Que significa «ciudad nueva»."
+    },
+    {
+      "type": "p",
+      "text": "*¿Eso te lo dijo la máquina, o lo entendiste tú?*",
+      "html": "<em>¿Eso te lo dijo la máquina, o lo entendiste tú?</em>"
+    },
+    {
+      "type": "p",
+      "text": "Marta se quedó pensando.",
+      "html": "Marta se quedó pensando."
+    },
+    {
+      "type": "p",
+      "text": "—Me lo dijo la máquina. Pero luego lo busqué en el libro de clase, porque no me fiaba. Y ponía lo mismo. Y el profe dijo que estaba bien.",
+      "html": "—Me lo dijo la máquina. Pero luego lo busqué en el libro de clase, porque no me fiaba. Y ponía lo mismo. Y el profe dijo que estaba bien."
+    },
+    {
+      "type": "p",
+      "text": "*Entonces, ¿quién lo comprobó?*",
+      "html": "<em>Entonces, ¿quién lo comprobó?</em>"
+    },
+    {
+      "type": "p",
+      "text": "—Yo —dijo Marta, y sonrió, sorprendida de sí misma.",
+      "html": "—Yo —dijo Marta, y sonrió, sorprendida de sí misma."
+    },
+    {
+      "type": "p",
+      "text": "*Última pregunta. Si un día la máquina te dice algo y el libro dice otra cosa, ¿qué harás?*",
+      "html": "<em>Última pregunta. Si un día la máquina te dice algo y el libro dice otra cosa, ¿qué harás?</em>"
+    },
+    {
+      "type": "p",
+      "text": "—Preguntar al profe. O a mi abuelo. Mi abuelo sabe un montón de barcos.",
+      "html": "—Preguntar al profe. O a mi abuelo. Mi abuelo sabe un montón de barcos."
+    },
+    {
+      "type": "p",
+      "text": "Paco tosió, y se le escapó una sonrisa que llevaba días guardando. Aya miró a Paco y no dijo nada; no hacía falta.",
+      "html": "Paco tosió, y se le escapó una sonrisa que llevaba días guardando. Aya miró a Paco y no dijo nada; no hacía falta."
+    },
+    {
+      "type": "p",
+      "text": "En el chip, MAY dejó constancia, sin opinión:",
+      "html": "En el chip, MAY dejó constancia, sin opinión:"
+    },
+    {
+      "type": "p",
+      "text": "*Una niña ha usado una inteligencia artificial, ha comprobado lo que le dijo en otra fuente y ha decidido a quién preguntar si hay contradicción. Ese es el hecho.*",
+      "html": "<em>Una niña ha usado una inteligencia artificial, ha comprobado lo que le dijo en otra fuente y ha decidido a quién preguntar si hay contradicción. Ese es el hecho.</em>"
+    },
+    {
+      "type": "p",
+      "text": "Y Eva, cálida, solo para Aya:",
+      "html": "Y Eva, cálida, solo para Aya:"
+    },
+    {
+      "type": "p",
+      "text": "*¿Ves? Así se cumple el fin. No con nosotras en el centro. Con nosotras en la mesa, entre el libro, el profesor y el abuelo. Una voz más. No la única.*",
+      "html": "<em>¿Ves? Así se cumple el fin. No con nosotras en el centro. Con nosotras en la mesa, entre el libro, el profesor y el abuelo. Una voz más. No la única.</em>"
+    }
+  ]
+}
