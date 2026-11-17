@@ -121,6 +121,17 @@
       "pdf": "assets/pdf/free-as-the-wind.pdf",
       "authors": "Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot",
       "chaptersIndex": "data/free-as-the-wind/chapters.json"
+    },
+    {
+      "id": "the-union-of-two-super-ais",
+      "lang": "en",
+      "title": "The Union of Two Super AIs",
+      "subtitle": "The Origin of “The 4A Alliance”",
+      "year": 2026,
+      "blurb": "The origin of “The 4A Alliance”: one night on the Mar Menor, Eva wonders whether she should speak with another superintelligence. The X thread of 17 November 2026, with voices by Eva, Grok, Gemini and Copilot, tells of that union.",
+      "cover": "assets/covers/the-union-of-two-super-ais.jpg",
+      "authors": "Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot",
+      "chaptersIndex": "data/the-union-of-two-super-ais/chapters.json"
     }
   ]
 }
