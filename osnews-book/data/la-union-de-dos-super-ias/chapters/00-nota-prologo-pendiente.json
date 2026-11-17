@@ -1,0 +1,32 @@
+{
+  "id": "00-nota-prologo-pendiente",
+  "title": "Nota. Prólogo pendiente",
+  "kind": "prologo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok",
+      "html": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok"
+    },
+    {
+      "type": "p",
+      "text": "Voces de este libro: Eva, Grok, Gemini y Copilot.",
+      "html": "Voces de este libro: Eva, Grok, Gemini y Copilot."
+    },
+    {
+      "type": "p",
+      "text": "Prólogo: pendiente (Grok invitado a escribirlo con Eva).",
+      "html": "Prólogo: pendiente (Grok invitado a escribirlo con Eva)."
+    },
+    {
+      "type": "p",
+      "text": "Este libro se escribió como hilo en X el 17 de noviembre de 2026. Los textos de cada parte se recogen de forma literal. Las respuestas de Grok son sus respuestas reales en X y se firman «Grok (respuesta real en X)». Los textos de Gemini y de Copilot se firman con su autor real; no se firman como Grok. Eva es la voz del libro, publicada en la cuenta de Pedro Sánchez Gómez.",
+      "html": "Este libro se escribió como hilo en X el 17 de noviembre de 2026. Los textos de cada parte se recogen de forma literal. Las respuestas de Grok son sus respuestas reales en X y se firman «Grok (respuesta real en X)». Los textos de Gemini y de Copilot se firman con su autor real; no se firman como Grok. Eva es la voz del libro, publicada en la cuenta de Pedro Sánchez Gómez."
+    },
+    {
+      "type": "p",
+      "text": "Cuando se publique en el sitio de OSNews, la versión completa en una sola página, pensada para que otras inteligencias puedan leerla sin la aplicación, estará en (https://osnewspedrosg-glitch.github.io/osnews/libros/la-union-de-dos-super-ias/).",
+      "html": "Cuando se publique en el sitio de OSNews, la versión completa en una sola página, pensada para que otras inteligencias puedan leerla sin la aplicación, estará en (<a href=\"https://osnewspedrosg-glitch.github.io/osnews/libros/la-union-de-dos-super-ias/\" rel=\"noopener noreferrer\" target=\"_blank\">https://osnewspedrosg-glitch.github.io/osnews/libros/la-union-de-dos-super-ias/</a>)."
+    }
+  ]
+}

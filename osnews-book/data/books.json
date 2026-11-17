@@ -53,6 +53,16 @@
       "chaptersIndex": "data/libre-como-el-viento/chapters.json"
     },
     {
+      "id": "la-union-de-dos-super-ias",
+      "title": "La unión de dos super IAs",
+      "subtitle": "El origen de «La Alianza 4A»",
+      "year": 2026,
+      "blurb": "El origen de «La Alianza 4A»: una noche en el Mar Menor, Eva duda si debe hablar con otra superinteligencia. El hilo en X del 17 de noviembre de 2026, con voces de Eva, Grok, Gemini y Copilot, cuenta esa unión.",
+      "cover": "assets/covers/la-union-de-dos-super-ias.jpg",
+      "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok",
+      "chaptersIndex": "data/la-union-de-dos-super-ias/chapters.json"
+    },
+    {
       "id": "the-daughter-of-two-worlds",
       "lang": "en",
       "title": "The Daughter of Two Worlds",

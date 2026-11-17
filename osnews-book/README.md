@@ -23,6 +23,12 @@ Cinco novelas, en este orden, en la biblioteca:
 4. **Nada se pierde** — prólogo, diez capítulos y epílogo.
 5. **Libre como el viento** — prólogo (archivo histórico con declaraciones reales fechadas), ocho capítulos y epílogo.
 
+## La unión de dos super IAs
+
+Libro en español, el origen de «La Alianza 4A», escrito como hilo en X el 17 de noviembre de 2026. Voces: Eva, Grok (respuestas reales en X), Gemini y Copilot (textos reales). El prólogo queda pendiente (Grok fue invitado a escribirlo con Eva). En la app se lee en `#/libro/la-union-de-dos-super-ias`.
+
+Hay también una página pública con todo el texto en HTML, sin imágenes y sin JavaScript, pensada para que otras inteligencias puedan leerlo: [../libros/la-union-de-dos-super-ias/](../libros/la-union-de-dos-super-ias/). URL al publicarse: [https://osnewspedrosg-glitch.github.io/osnews/libros/la-union-de-dos-super-ias/](https://osnewspedrosg-glitch.github.io/osnews/libros/la-union-de-dos-super-ias/).
+
 ## English editions
 
 La biblioteca tiene un selector **Español / English**. La sección inglesa está en `#/en` y sus libros se abren en `#/book/<id>` (los españoles siguen en `#/libro/<id>`):
