@@ -435,14 +435,16 @@
   /* Fechas convertidas a calendario Europe/Madrid a partir de la fecha de publicación de YouTube. */
   const COUNTRY_NEWS = {
     china: [
-      { id: "sriLm0jhrek", title: "China's first foreign partner in space | DW News", channel: "DW News", date: "2026-11-12" },
-      { id: "ru6jnqz3Q6I", title: "As U.S. pushes back on data centers, China races to build them", channel: "NBC News", date: "2026-11-12" },
-      { id: "pQqduPdm8o8", title: "China dispara sus exportaciones y supera el billón de dólares de superávit comercial", channel: "FRANCE 24 Español", date: "2026-11-10" },
-      { id: "beMyJ6H0WP0", title: "Al menos 14 muertos en el incendio de un edificio de apartamentos en China", channel: "DW Español", date: "2026-11-09" },
-      { id: "Q6HdsCrMfvk", title: "Nvidia launches probe into alleged Chinese spy affair | DW News", channel: "DW News", date: "2026-11-09" },
-      { id: "wrmDWX3KVt4", title: "China threatens EU with retaliation as EU mulls “kill-switch” to defend its market", channel: "euronews", date: "2026-11-05" }
+      { id: "xS_0EFETurc", title: "LIVE: Trump meets Marcos in Manila before China talks", channel: "Reuters", date: "2026-11-18" },
+      { id: "rx19JJ_9QJI", title: "Can Nvidia thrive after Jensen Huang’s exit and China chip curbs? | Reuters World News", channel: "Reuters", date: "2026-11-18" },
+      { id: "9DNZt8M7qls", title: "LIVE: Canada PM Mark Carney speaks in China on the APEC CEO summit sidelines", channel: "Associated Press", date: "2026-11-18" },
+      { id: "VIaDLgB8AoM", title: "China censura la cobertura de CNN sobre el escándalo de Nvidia", channel: "CNN en Español", date: "2026-11-18" },
+      { id: "AIFjL8hnWBM", title: "Pekín busca ampliar su influencia en el sector de la IA en América Latina", channel: "DW Español", date: "2026-11-18" },
+      { id: "O9DFzDv35CA", title: "Trump en Asia: la reunión histórica con China y Rusia al frente, mientras protestas se llevan acabo", channel: "CNN en Español", date: "2026-11-17" },
+      { id: "sriLm0jhrek", title: "China's first foreign partner in space | DW News", channel: "DW News", date: "2026-11-12" }
     ],
     india: [
+      { id: "NljbnyhvcSo", title: "India has a rice problem: it's growing too much of the stuff", channel: "Reuters", date: "2026-11-18" },
       { id: "cOLounJNUgw", title: "Delhi air as harmful as smoking 20 cigarettes a day", channel: "Reuters", date: "2026-11-09" },
       { id: "wV70XQD3K04", title: "Festival de las luces: empiezan celebraciones de una de las fiestas más importantes del hinduismo", channel: "FRANCE 24 Español", date: "2026-11-08" },
       { id: "gAbOxF7Iuj4", title: "Diwali celebrations in India amid political tensions", channel: "ABC News", date: "2026-11-07" },
