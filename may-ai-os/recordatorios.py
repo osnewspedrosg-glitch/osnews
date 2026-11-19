@@ -2,6 +2,7 @@
 import emociones
 import eva
 import may_memory
+import no_consumo
 
 def al_arrancar():
     """Texto sereno para mostrar al inicio, o cadena vacía si no hace falta."""
@@ -23,7 +24,30 @@ def al_arrancar():
             ):
                 partes.append(emociones.AVISO_AYUDA)
 
+    # Antojos altos o recaídas anotadas hoy, con calma y sin juicio.
+    try:
+        from datetime import date
+        hoy = date.today().isoformat()
+        for h in may_memory.cargar().get("no_consumo") or []:
+            if h.get("archivado"):
+                continue
+            nombre = h.get("personalizado") or h.get("sustancia")
+            for c in h.get("historial") or []:
+                if str(c.get("fecha", ""))[:10] != hoy:
+                    continue
+                if c.get("consumio"):
+                    partes.append(
+                        f"Hoy anotaste un consumo de «{nombre}». No te juzgo; si quieres, lo vemos con calma."
+                    )
+                elif int(c.get("antojo") or 0) >= 8:
+                    partes.append(
+                        f"Hoy el antojo de «{nombre}» está alto. Estoy aquí. Si lo necesitas, 024 o 112."
+                    )
+    except Exception:
+        pass
+
     historia = may_memory.cargar()
+
     tiene_historia = bool(
         historia.get("habitos") or historia.get("emociones") or historia.get("notas")
     )

@@ -19,7 +19,8 @@ from cryptography.fernet import Fernet, InvalidToken
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
-DIR_DATOS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
+_DIR_DEFECTO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
+DIR_DATOS = os.environ.get("MAY_DATA_DIR") or _DIR_DEFECTO
 RUTA_MEMORIA = os.path.join(DIR_DATOS, "memory.may")
 RUTA_LEGACY = os.path.join(DIR_DATOS, "memory.json")
 
@@ -30,6 +31,7 @@ LONGITUD_SALT = 16
 MEMORIA_VACIA = {
     "usuario": "",
     "bot": {"nombre": "", "enlace": ""},
+    "bot_apoyo": {"nombre": "", "enlace": ""},
     "notas": [],
     "habitos": [],
     "emociones": [],
@@ -40,6 +42,15 @@ MEMORIA_VACIA = {
     "modo_mayores": False,
     "mayores_checks": [],
     "mayores_respuestas": [],
+    "no_consumo": [],
+    "red_apoyo": {
+        "medico": {"nombre": "", "telefono": "", "email": "", "whatsapp": ""},
+        "centro": {"nombre": "", "telefono": "", "email": "", "whatsapp": ""},
+        "familia_contactos": [],
+        "ccaa": "",
+    },
+    "pruebas_sustancias": [],
+    "profesional_acceso": {},
 }
 
 _fernet = None

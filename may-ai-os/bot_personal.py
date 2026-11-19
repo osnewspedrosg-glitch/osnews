@@ -20,27 +20,35 @@ API_URL = os.environ.get("MAY_API_URL", "https://api.x.ai/v1/chat/completions")
 MODELO = os.environ.get("MAY_MODEL", "grok-4")
 
 
-def datos():
-    return may_memory.cargar().get("bot", {"nombre": "", "enlace": ""})
+def datos(cual="bot"):
+    clave = "bot_apoyo" if cual in ("apoyo", "bot_apoyo") else "bot"
+    return may_memory.cargar().get(clave, {"nombre": "", "enlace": ""})
 
 
-def configurar(nombre, enlace):
+def configurar(nombre, enlace, cual="bot"):
     m = may_memory.cargar()
-    m["bot"] = {"nombre": nombre.strip(), "enlace": enlace.strip()}
+    clave = "bot_apoyo" if cual in ("apoyo", "bot_apoyo") else "bot"
+    m[clave] = {"nombre": nombre.strip(), "enlace": enlace.strip()}
     may_memory.guardar(m)
 
 
-def hablar(mensaje, usuario, extra=None):
-    """Envía solo el mensaje actual (y, si se pide, un texto compartido a propósito)."""
-    bot = datos()
-    nombre_bot = bot.get("nombre") or "tu bot"
-    clave = os.environ.get("MAY_API_KEY")
+def hablar(mensaje, usuario, extra=None, contexto=None, cual="bot"):
+    """Envía solo el mensaje actual (y, si se pide, un texto o técnicas elegidas a propósito)."""
+    bot = datos(cual)
+    nombre_bot = bot.get("nombre") or ("tu bot de apoyo" if cual == "apoyo" else "tu bot")
+    clave = os.environ.get("MAY_API_KEY_APOYO" if cual == "apoyo" else "MAY_API_KEY")
     if not clave:
         enlace = bot.get("enlace")
         if enlace:
+            extra_txt = ""
+            if contexto or extra:
+                extra_txt = "\n\nPuedes pegar esto (solo lo que has elegido enviar):\n" + "\n\n".join(
+                    x for x in (extra, contexto) if x
+                )
             return (
                 f"Para charlar abre {nombre_bot}: {enlace}\n"
                 "Tu memoria local se queda en este aparato; no se la envío."
+                + extra_txt
             )
         return (
             "Aún no has conectado tu bot personal. Escribe: mi bot <nombre> <enlace>\n"
@@ -49,7 +57,13 @@ def hablar(mensaje, usuario, extra=None):
 
     # Solo el mensaje actual. Nada de memoria local, salvo un texto que el
     # usuario haya pedido compartir expresamente.
-    contenido = mensaje if not extra else f"{mensaje}\n\n{extra}"
+    partes = [mensaje]
+    if extra:
+        partes.append(extra)
+    if contexto:
+        partes.append(contexto)
+    contenido = "\n\n".join(partes)
+
     cuerpo = json.dumps(
         {
             "model": MODELO,

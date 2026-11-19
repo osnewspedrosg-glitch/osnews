@@ -1,0 +1,88 @@
+:root {
+  --bg: #f3efe6;
+  --card: #fffdf8;
+  --ink: #1d2a24;
+  --muted: #5a675f;
+  --teal: #1b6b58;
+  --teal-2: #24856c;
+  --help: #0b5cab;
+  --alert: #8b2f2f;
+  --ok: #1c6b3c;
+  --line: #e2d9cc;
+  --r: 16px;
+  --shadow: 0 1px 3px rgba(29, 42, 36, 0.08);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink);
+  font: 18px/1.45 system-ui, "Segoe UI", Roboto, Ubuntu, sans-serif; }
+body { min-height: 100vh; max-width: 720px; margin: 0 auto; padding-bottom: 88px; }
+button, input, select, textarea { font: inherit; }
+button { min-height: 44px; border-radius: 12px; border: 0; padding: 0.55rem 0.9rem;
+  background: var(--teal); color: #fff; cursor: pointer; }
+button.sec { background: #fff; color: var(--teal); border: 1px solid var(--teal); }
+button.danger { background: var(--alert); }
+button.link { background: none; color: var(--help); padding: 0.3rem; min-height: 44px; text-decoration: underline; }
+button:disabled { opacity: 0.5; cursor: default; }
+a { color: var(--help); }
+header.app {
+  padding: 1rem 1rem 0.6rem; position: sticky; top: 0; background: var(--bg);
+  z-index: 5; border-bottom: 1px solid var(--line);
+}
+header.app h1 { font-size: 1.15rem; margin: 0; }
+.muted, .aviso { color: var(--muted); font-size: 0.92rem; }
+.aviso { margin: 0.4rem 0 0; }
+.contadores { font-size: 0.85rem; color: var(--muted); margin-top: 0.25rem; }
+main { padding: 1rem; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r);
+  padding: 1rem; margin: 0 0 0.9rem; box-shadow: var(--shadow); }
+.card h2 { font-size: 1.05rem; margin: 0 0 0.6rem; }
+.row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.row > * { flex: 1 1 auto; }
+label { display: block; margin: 0.4rem 0 0.2rem; color: var(--muted); font-size: 0.92rem; }
+input, select, textarea {
+  width: 100%; min-height: 44px; border: 1px solid var(--line); border-radius: 10px;
+  padding: 0.45rem 0.7rem; background: #fff;
+}
+textarea { min-height: 88px; resize: vertical; }
+.rueda { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+.rueda button, .chip {
+  background: #fff; color: var(--ink); border: 1px solid var(--line); text-align: left;
+}
+.rueda button.on, .chip.on { border-color: var(--teal); background: #e7f4ef; color: var(--teal); }
+.niveles { display: flex; gap: 0.4rem; margin: 0.5rem 0; }
+.niveles button { flex: 1; background: #fff; color: var(--ink); border: 1px solid var(--line); }
+.niveles button.on { background: var(--teal); color: #fff; }
+.ayuda { background: #f8ecec; border: 1px solid #e4c3c3; border-radius: var(--r); padding: 0.9rem; margin: 0.7rem 0; }
+.ayuda a.tel {
+  display: inline-block; margin: 0.3rem 0.3rem 0 0; padding: 0.55rem 0.8rem;
+  background: var(--help); color: #fff; border-radius: 12px; text-decoration: none; min-height: 44px;
+}
+.ayuda a.tel.emer { background: var(--alert); }
+.lista { list-style: none; margin: 0; padding: 0; }
+.lista li { padding: 0.45rem 0; border-bottom: 1px solid var(--line); }
+.nav {
+  position: fixed; left: 0; right: 0; bottom: 0; display: flex; background: #fffdf8;
+  border-top: 1px solid var(--line); max-width: 720px; margin: 0 auto; padding: 0.2rem 0 env(safe-area-inset-bottom);
+}
+.nav button {
+  flex: 1; background: none; color: var(--muted); border-radius: 0; font-size: 0.78rem;
+  display: flex; flex-direction: column; align-items: center; gap: 0.1rem; padding: 0.35rem 0.2rem;
+}
+.nav button.on { color: var(--teal); font-weight: 600; }
+.hide { display: none !important; }
+.dias { font-size: 2.2rem; font-weight: 700; color: var(--teal); margin: 0.2rem 0; }
+.credits { font-size: 0.8rem; color: var(--muted); padding: 0 1rem 1.2rem; }
+canvas.chart { width: 100%; height: 160px; background: #fff; border-radius: 10px; border: 1px solid var(--line); }
+.pro { font-size: 0.85rem; color: var(--muted); }
+.tabla { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.tabla th, .tabla td { border-bottom: 1px solid var(--line); padding: 0.35rem 0.25rem; text-align: left; vertical-align: top; }
+.badge { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 999px; background: #e7f4ef; color: var(--teal); }
+.badge.casa { background: #f3efe0; color: #6a5a20; }
+.badge.futuro { background: #eceff8; color: #334; }
+.ok { color: var(--ok); }
+.err { color: var(--alert); }
+#vista-juego p { font-size: 1.15rem; }
+#qrcode img, #qrcode canvas { max-width: 220px; height: auto; }
+@media (min-width: 600px) {
+  .rueda { grid-template-columns: 1fr 1fr 1fr 1fr; }
+}

@@ -1,6 +1,7 @@
 """Rueda de emociones: 8 emociones básicas, cada una con 3 intensidades."""
 import datetime
 import may_memory
+import conocimiento
 
 RUEDA = {
     "alegría":   ["serenidad", "alegría", "éxtasis"],
@@ -44,12 +45,16 @@ def registrar(emocion, intensidad=2):
             "nombre": nombre,
         },
     )
+    etiquetas = [emocion]
+    alta = intensidad == 3 and emocion in NEGATIVAS
+    if alta:
+        etiquetas.append("intensidad-alta")
+    tec = conocimiento.elegir(etiquetas, 2 if alta or emocion in NEGATIVAS else 1)
     if emocion in NEGATIVAS:
-        mensaje = f"Anoto {nombre}. Gracias por decírmelo; estoy aquí. ¿Quieres contarme qué ha pasado?"
-        if intensidad == 3 and emocion in {"tristeza", "miedo"}:
-            mensaje += "\n" + AVISO_AYUDA
-        return mensaje
-    return f"Anoto {nombre}. Me alegra; guardémoslo."
+        mensaje = f"Anoto {nombre}. Gracias por decírmelo; estoy aquí, sin juicio."
+    else:
+        mensaje = f"Anoto {nombre}. Me alegra que lo hayas apuntado."
+    return conocimiento.formatear_respuesta(mensaje, tec, alta=alta)
 
 
 def historial():
