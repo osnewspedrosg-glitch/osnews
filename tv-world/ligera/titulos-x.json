@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-18T08:06:21+01:00",
+ "fetched_at": "2026-11-19T15:59:24+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
  "accounts": [
@@ -20,6 +20,231 @@
  ],
  "countries": {
   "china": [
+   {
+    "id": "2123422780217508085",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-19",
+    "time": "15:26",
+    "text": "\"Amigos\" autoritarios, el potencial de la IA y otras claves del viaje de Trump a China y su cumbre con Putin y Xi Jinping https://t.co/ExL8lzbMif",
+    "url": "https://x.com/CNNEE/status/2123422780217508085"
+   },
+   {
+    "id": "2123415817203155112",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-19",
+    "time": "14:59",
+    "text": "“Nosotros espiamos a China, ellos nos espian a nosotros”, dice Trump en una entrevista a Fox News https://t.co/uzOU7OQ985",
+    "url": "https://x.com/CNNEE/status/2123415817203155112"
+   },
+   {
+    "id": "2123409708866511307",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "14:35",
+    "text": "A member of President Vladimir Putin's delegation carried what is said to be Russia's nuclear briefcase used to order a nuclear strike during the APEC summit in China, footage broadcast by Russian state television showed https://t.co/Aczuhd1jiv https://t.co/Xv5fsXdEzH",
+    "url": "https://x.com/Reuters/status/2123409708866511307"
+   },
+   {
+    "id": "2123408693521998167",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "14:30",
+    "text": "🇺🇦 Après la rencontre historique en #Chine entre les dirigeants russe, chinois et américain, les yeux se tournent vers l'#Europe, où un sommet de la Coalition des volontaires pour l'#Ukraine se réunit\n\nLe décryptage de Gauthier Rybinski, chroniqueur international ⬇️ https://t.co/Lq2tsFSzN6",
+    "url": "https://x.com/France24_fr/status/2123408693521998167"
+   },
+   {
+    "id": "2123400505170796595",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-19",
+    "time": "13:58",
+    "text": "US consortium wins huge Kenya mining deal, beating Chinese rivals https://t.co/OKd5Je3KwE",
+    "url": "https://x.com/BBCWorld/status/2123400505170796595"
+   },
+   {
+    "id": "2123400436963328481",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "13:58",
+    "text": "U.S. President Donald Trump met with Chinese President Xi Jinping in Shenzhen ahead of a trilateral summit with Russian President Vladimir Putin. \n\nTrump pushed for more U.S. farm exports, Strait of Hormuz security, and progress on ending the Russia-Ukraine war. https://t.co/e22rqdxr4J",
+    "url": "https://x.com/euronews/status/2123400436963328481"
+   },
+   {
+    "id": "2123399310444249426",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "13:53",
+    "text": "Donald Trump praised the first ever meeting between the U.S., China and Russia to discuss ending the wars in Ukraine and Iran. https://t.co/wxkrAF9keI",
+    "url": "https://x.com/euronews/status/2123399310444249426"
+   },
+   {
+    "id": "2123395297988784208",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "13:37",
+    "text": "U.S. President Donald Trump attended the APEC Summit today and for the first time ever met with both Russian President Putin and Chinese President Xi. He called the summit \"very successful.\" https://t.co/oOxrSw2pcd",
+    "url": "https://x.com/euronews/status/2123395297988784208"
+   },
+   {
+    "id": "2123393550444319002",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-19",
+    "time": "13:30",
+    "text": "🇺🇸🇨🇳🇷🇺 El presidente chino, #XiJinping, y sus homólogos estadounidense, #DonaldTrump, y ruso, #VladimirPutin, se reunieron este 19 de noviembre en Shenzhen en un encuentro inédito, en el marco de la cumbre del Foro de Cooperación Económica Asia-Pacífico (APEC) ➡️ https://t.co/3HeM5Uxqn5",
+    "url": "https://x.com/France24_es/status/2123393550444319002"
+   },
+   {
+    "id": "2123386960274235843",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-19",
+    "time": "13:04",
+    "text": "El presidente estadounidense, Donald Trump ha afirmado en la cumbre de #Shenzhen que Estados Unidos y China quieren ayudar a poner fin a la guerra en Ucrania.\nLa cumbre entre #Putin, #Xi y #Trump se celebra cuando la ofensiva rusa en #Ucrania se acerca a su quinto año. https://t.co/JBNTioTWSn",
+    "url": "https://x.com/euronewses/status/2123386960274235843"
+   },
+   {
+    "id": "2123385143763046471",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-19",
+    "time": "12:57",
+    "text": "Riesgos nucleares, reforma de la ONU y petróleo: Xi, Trump y Putin emiten \"Declaración de Paz\"\n\nEn la cumbre sin precedentes de sus líderes, China, EE.UU. y Rusia adoptaron una declaración conjunta, según informaron el Kremlin y medios de comunicación estatales chinos.",
+    "url": "https://x.com/dw_espanol/status/2123385143763046471"
+   },
+   {
+    "id": "2123379509802238000",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "12:35",
+    "text": "Japanese Prime Minister Sanae Takaichi received a muted welcome in China during her first visit to the country for the APEC summit, after her comments last year on Taiwan strained ties with Beijing. Ju-min Park has more https://t.co/kNJlua5cOc https://t.co/cKjObllpXO",
+    "url": "https://x.com/Reuters/status/2123379509802238000"
+   },
+   {
+    "id": "2123379288892125416",
+    "account": "AP",
+    "name": "The Associated Press",
+    "date": "2026-11-19",
+    "time": "12:34",
+    "text": "U.S. President Donald Trump, Chinese President Xi Jinping and Russian President Vladimir Putin posed for photographs ahead of a trilateral meeting in Shenzhen, China, on Thursday. https://t.co/16KFBJVn34",
+    "url": "https://x.com/AP/status/2123379288892125416"
+   },
+   {
+    "id": "2123378629362975100",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "12:31",
+    "text": "🇨🇳 Le sommet entre les dirigeants russe, chinois et américain en #Chine a pris fin après plus de 80 minutes d'échanges, aucune communication officielle n'a été donnée après cette rencontre\n\nLe décryptage d'Antoine Mariotti, chroniqueur international ⬇️ https://t.co/heIP9pzxYk",
+    "url": "https://x.com/France24_fr/status/2123378629362975100"
+   },
+   {
+    "id": "2123372469923029442",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "12:07",
+    "text": "While meeting with Russian President Putin and U.S. President Trump, Chinese President Xi Jinping called on nations to come together and that world powers \"bear a special responsibility.\" https://t.co/OLO1zk8DUX",
+    "url": "https://x.com/euronews/status/2123372469923029442"
+   },
+   {
+    "id": "2123369338979971373",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "11:54",
+    "text": "President Donald Trump met with Chinese President Xi Jinping and Russian President Vladimir Putin on Thursday at the APEC summit.\n\nThe leaders discussed nuclear arms control and the ongoing wars in Ukraine and Iran. https://t.co/O1BauAuOo5",
+    "url": "https://x.com/euronews/status/2123369338979971373"
+   },
+   {
+    "id": "2123366548609888739",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "11:43",
+    "text": "La rencontre inédite entre Xi Jinping, Vladimir Poutine et Donald Trump s'est conclue le jeudi 19 novembre à #Shenzhen, en Chine, après une session d'échanges d'environ 80 minutes https://t.co/PuTCQ83e8a",
+    "url": "https://x.com/France24_fr/status/2123366548609888739"
+   },
+   {
+    "id": "2123361690666344543",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "11:24",
+    "text": "🇨🇳 Le sommet tripartite inédit entre les présidents chinois, russe et américain s'est achevé jeudi 19 novembre à Shenzhen, en #Chine.\n\n🇺🇸 Après une rencontre d'environ 80 minutes, Donald #Trump a quitté immédiatement la villa Kylin, où se tenaient les entretiens, avant de prendre https://t.co/gWVzXW0z8T",
+    "url": "https://x.com/France24_fr/status/2123361690666344543"
+   },
+   {
+    "id": "2123361253196238943",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "11:22",
+    "text": "Russian President Putin says China, the U.S. and Russia have \"common interests\" on resolving regional conflicts, including the crisis in Ukraine. Russia already discussed it with China yesterday. https://t.co/BdYncrYkPy",
+    "url": "https://x.com/euronews/status/2123361253196238943"
+   },
+   {
+    "id": "2123360925977591975",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "11:21",
+    "text": "🇨🇳 En #Chine, #Xi Jinping, Donald #Trump et Vladimir #Poutine sont réunis pour un sommet tripartite.\n\nLes explications de Maud Quessard, spécialiste de la politique étrangère américaine 👇 https://t.co/Zh3nvLn67M",
+    "url": "https://x.com/France24_fr/status/2123360925977591975"
+   },
+   {
+    "id": "2123358378869342672",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "11:11",
+    "text": "U.S. President Donald Trump says he is looking forward to the trilateral meeting in China with Xi and Putin. He also called China an \"incredible country\" and that Xi, the totalitarian leader, has done an \"unbelievable job.\" https://t.co/VgODDz8Cy6",
+    "url": "https://x.com/euronews/status/2123358378869342672"
+   },
+   {
+    "id": "2123355997087658055",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "11:01",
+    "text": "🇨🇳 En #Chine, #Xi, #Poutine et #Trump ont débuté une réunion tripartite en marge d'un sommet de l'#Apec.\n\n🗣️ Les explications de Baptiste Fallevoz notre correspondant à Shenzhen https://t.co/DVE5BBK7y3",
+    "url": "https://x.com/France24_fr/status/2123355997087658055"
+   },
+   {
+    "id": "2123355586670543321",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-19",
+    "time": "10:59",
+    "text": "Zelenski aseguró que los enviados estadounidenses informarán a Kiev sobre las conversaciones de Trump en China durante las reuniones previstas para este jueves en Berlín.\n➡️ https://t.co/JehXJ5LmuG https://t.co/6oImztuGD3",
+    "url": "https://x.com/euronewses/status/2123355586670543321"
+   },
+   {
+    "id": "2123351226238587109",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "10:42",
+    "text": "🇨🇳 Donald #Trump, Vladimir #Poutine et Xi #Jinping se sont réunis jeudi 19 novembre en Chine pour un sommet inédit qui fait craindre, dans une période de crises multiples, des arrangements entre grandes puissances aux dépens d'autres acteurs internationaux comme l'#Ukraine. https://t.co/vHtSfeEM2E",
+    "url": "https://x.com/France24_fr/status/2123351226238587109"
+   },
+   {
+    "id": "2123350591724265746",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "10:40",
+    "text": "From her arrival in China without the fanfare that greeted other world leaders to her seat near the end of a summit table, Japanese Prime Minister Sanae Takaichi cut an isolated figure at the two-day APEC summit https://t.co/ik4YsW0wug",
+    "url": "https://x.com/Reuters/status/2123350591724265746"
+   },
    {
     "id": "2122941295496740918",
     "account": "France24_es",
@@ -536,6 +761,78 @@
   ],
   "india": [
    {
+    "id": "2123395931605213637",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "13:40",
+    "text": "India's gamers skip work, crowd cafes for Grand Theft Auto VI as Modi joins buzz https://t.co/t30EDRRM6m",
+    "url": "https://x.com/Reuters/status/2123395931605213637"
+   },
+   {
+    "id": "2123335507132227760",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "09:40",
+    "text": "EXCLUSIVE: India to charge bulk Scotch imports 162.5% duty and tax amid UK pact standoff https://t.co/ZWDlQSiL0t",
+    "url": "https://x.com/Reuters/status/2123335507132227760"
+   },
+   {
+    "id": "2123302858560880858",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-19",
+    "time": "07:30",
+    "text": "Casi 50.000 evacuados por la llegada del potente ciclón Akvan en India\n\nLas autoridades del gobierno han habilitado más de 400 refugios para albergar a las personas evacuadas. (mg)\n\nLea el artículo completo haciendo clic en la imagen \nhttps://t.co/diEtDfrEDO",
+    "url": "https://x.com/dw_espanol/status/2123302858560880858"
+   },
+   {
+    "id": "2123270071577366664",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "05:20",
+    "text": "Exclusive: Amid a raging dispute over the India-UK trade pact, India is now imposing an effective duty of 162.5% on bulk Scotch imports, jolting liquor firms as the levies exceed the 150% charged before the landmark agreement https://t.co/1HqEmoGtFd",
+    "url": "https://x.com/Reuters/status/2123270071577366664"
+   },
+   {
+    "id": "2123078818948604136",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-18",
+    "time": "16:40",
+    "text": "Indian economic growth seen at annual 7.6% in July-September quarter - Reuters poll https://t.co/a21yhgunBg",
+    "url": "https://x.com/Reuters/status/2123078818948604136"
+   },
+   {
+    "id": "2123077938300027168",
+    "account": "BBCNews",
+    "name": "BBC News (UK)",
+    "date": "2026-11-18",
+    "time": "16:36",
+    "text": "William and Kate meet Indian Prime Minister Modi in New Delhi https://t.co/ZNvdOlFKS1",
+    "url": "https://x.com/BBCNews/status/2123077938300027168"
+   },
+   {
+    "id": "2123039758339215444",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-18",
+    "time": "14:04",
+    "text": "William and Kate to meet Indian Prime Minister Modi in New Delhi https://t.co/NQ4nyPS07c",
+    "url": "https://x.com/BBCWorld/status/2123039758339215444"
+   },
+   {
+    "id": "2122986962684432441",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-18",
+    "time": "10:35",
+    "text": "Indian economic growth seen at annual 7.6% in July-September quarter - Reuters poll https://t.co/gv5W9ShTt9",
+    "url": "https://x.com/Reuters/status/2122986962684432441"
+   },
+   {
     "id": "2122931557753299372",
     "account": "Reuters",
     "name": "Reuters",
@@ -1006,6 +1303,24 @@
   ],
   "morocco": [
    {
+    "id": "2123300157068603669",
+    "account": "FRANCE24",
+    "name": "FRANCE24",
+    "date": "2026-11-19",
+    "time": "07:19",
+    "text": "Sports - FIFA rankings: France finish the year on the podium, Morocco break into the top five\n➡️ https://t.co/liqKE0KFqL https://t.co/7HFGIG0zoh",
+    "url": "https://x.com/FRANCE24/status/2123300157068603669"
+   },
+   {
+    "id": "2123050187430011339",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-18",
+    "time": "14:46",
+    "text": "🇸🇳 #JTA - Le #Sénégal sera bien au rendez-vous de la #CAN2027.  Les Lions de la Teranga sont devenus la première équipe à décrocher leur billet pour la phase finale.\n\n⚽Une qualification qui intervient alorsque  le sort du titre remporté lors de la #CAN2025 face au #Maroc reste https://t.co/KxJM7gzh0i",
+    "url": "https://x.com/France24_fr/status/2123050187430011339"
+   },
+   {
     "id": "2122812911433527587",
     "account": "France24_fr",
     "name": "FRANCE 24 Français",
@@ -1393,6 +1708,24 @@
     "time": "00:22",
     "text": "EE.UU. y Cuba protagonizan un acalorado intercambio en la asamblea general de la ONU https://t.co/1uZOl2ffc1",
     "url": "https://x.com/CNNEE/status/2115222514154508544"
+   },
+   {
+    "id": "2114150559158808686",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-10-25",
+    "time": "02:22",
+    "text": "🇺🇸 #DonaldTrump volvió a referirse a #Cuba durante un acto de campaña celebrado en Fort Myers, Florida. El presidente estadounidense afirmó que, una vez resuelto el conflicto con Irán, Washington centrará su atención en la isla ⤵️\nhttps://t.co/1e58fubiMF",
+    "url": "https://x.com/France24_es/status/2114150559158808686"
+   },
+   {
+    "id": "2113911037997293692",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-10-24",
+    "time": "10:30",
+    "text": "La administración Trump ha reiterado que su objetivo es provocar un cambio en la cúpula de La Habana; el propio Donald Trump ha asegurado que el país está «a punto de caer».\n➡️ https://t.co/YizGDNJRcv https://t.co/CKTLeJfihb",
+    "url": "https://x.com/euronewses/status/2113911037997293692"
    }
   ]
  }
