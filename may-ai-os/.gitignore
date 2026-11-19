@@ -1,0 +1,10 @@
+# Memoria cifrada, exports y restos locales (nunca se suben)
+data/memory.may
+data/memory.json
+data/memory.may.tmp
+data/export-*.may
+data/export-*.json
+__pycache__/
+*.pyc
+.venv/
+venv/
