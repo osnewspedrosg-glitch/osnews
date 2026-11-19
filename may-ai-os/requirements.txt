@@ -1,0 +1,2 @@
+# MAY AI OS — Python 3.10+
+cryptography>=42.0.0
