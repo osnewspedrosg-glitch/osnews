@@ -435,15 +435,17 @@
   /* Fechas convertidas a calendario Europe/Madrid a partir de la fecha de publicación de YouTube. */
   const COUNTRY_NEWS = {
     china: [
-      { id: "xS_0EFETurc", title: "LIVE: Trump meets Marcos in Manila before China talks", channel: "Reuters", date: "2026-11-18" },
-      { id: "rx19JJ_9QJI", title: "Can Nvidia thrive after Jensen Huang’s exit and China chip curbs? | Reuters World News", channel: "Reuters", date: "2026-11-18" },
-      { id: "9DNZt8M7qls", title: "LIVE: Canada PM Mark Carney speaks in China on the APEC CEO summit sidelines", channel: "Associated Press", date: "2026-11-18" },
-      { id: "VIaDLgB8AoM", title: "China censura la cobertura de CNN sobre el escándalo de Nvidia", channel: "CNN en Español", date: "2026-11-18" },
-      { id: "AIFjL8hnWBM", title: "Pekín busca ampliar su influencia en el sector de la IA en América Latina", channel: "DW Español", date: "2026-11-18" },
-      { id: "O9DFzDv35CA", title: "Trump en Asia: la reunión histórica con China y Rusia al frente, mientras protestas se llevan acabo", channel: "CNN en Español", date: "2026-11-17" },
-      { id: "sriLm0jhrek", title: "China's first foreign partner in space | DW News", channel: "DW News", date: "2026-11-12" }
+      { id: "CL77AWeihNg", title: "Russian nuclear briefcase follows Putin to China", channel: "Reuters", date: "2026-11-19" },
+      { id: "rJnSZRqVcxg", title: "Trump, Putin and Xi make history with meeting in China | Reuters World News", channel: "Reuters", date: "2026-11-19" },
+      { id: "v3xE1QI1jOE", title: "Russian nuclear briefcase follows Putin to China", channel: "Reuters", date: "2026-11-19" },
+      { id: "IPuGdGbwQE4", title: "Trump, Xi and Putin arrive for a meeting on the sidelines of APEC Summit in China", channel: "Associated Press", date: "2026-11-19" },
+      { id: "aJiBMHVahEI", title: "Trump, Xi and Putin hold an unprecedented three-way summit in China", channel: "Associated Press", date: "2026-11-19" },
+      { id: "g1HM1UbDB-Q", title: "Trump calls Putin 'my friend' as they shake hands before meeting Xi in China", channel: "Associated Press", date: "2026-11-19" },
+      { id: "FdDK1tN3dXs", title: "Trump, Xi and Putin arrive for a meeting on the sidelines of APEC Summit in China", channel: "Associated Press", date: "2026-11-19" },
+      { id: "9WjGvO3-GM8", title: "WATCH: Trump, Xi and Putin have a 3-way meeting in China", channel: "Associated Press", date: "2026-11-19" }
     ],
     india: [
+      { id: "ZDZoZzN-1ms", title: "What we learned from William and Kate's visit to India. #BBCNews", channel: "BBC News", date: "2026-11-19" },
       { id: "NljbnyhvcSo", title: "India has a rice problem: it's growing too much of the stuff", channel: "Reuters", date: "2026-11-18" },
       { id: "cOLounJNUgw", title: "Delhi air as harmful as smoking 20 cigarettes a day", channel: "Reuters", date: "2026-11-09" },
       { id: "wV70XQD3K04", title: "Festival de las luces: empiezan celebraciones de una de las fiestas más importantes del hinduismo", channel: "FRANCE 24 Español", date: "2026-11-08" },
@@ -453,6 +455,7 @@
       { id: "9fNl0jLR3N4", title: "India's Black Sea dilemma | DW News", channel: "DW News", date: "2026-10-27" }
     ],
     morocco: [
+      { id: "9TV7uyC3OtE", title: "Classement Fifa : la France termine l'année sur le podium, le Maroc dans le top 5 • FRANCE 24", channel: "FRANCE 24", date: "2026-11-19" },
       { id: "W0SHyWsjz6g", title: "JOJ Dakar 2026 : Ghali Bougja, un jeune cavalier marocain prêt à relever le défi • FRANCE 24", channel: "FRANCE 24", date: "2026-11-12" },
       { id: "gY3vBkbXiIE", title: "El desalojo del puerto de Ceuta acelera los retornos a Marruecos", channel: "euronews (en español)", date: "2026-11-10" },
       { id: "rdANsCrKkac", title: "What Morocco's first female premier means for the Arab world | DW News", channel: "DW News", date: "2026-09-30" },
