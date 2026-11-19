@@ -8,11 +8,11 @@ import recordatorios
 import juegos
 import mayores
 
-MENU = "[Chat] [Hábitos] [Emociones] [Memoria] [Automatizaciones] [Panel] [Juegos] [Mayores]"
+MENU = "[Chat] [Hábitos] [No consumo] [Emociones] [Seguimiento] [Red de apoyo] [Pruebas] [Memoria] [Panel] [Juegos] [Mayores] [Fuentes]"
 MENU_MAYOR = (
     "\n"
-    "  [ Chat ]     [ Hábitos ]     [ Emociones ]     [ Memoria ]\n"
-    "  [ Automatizaciones ]  [ Panel ]  [ Juegos ]  [ Mayores ]\n"
+    "  [ Chat ]  [ Hábitos ]  [ No consumo ]  [ Emociones ]  [ Seguimiento ]\n"
+    "  [ Red de apoyo ]  [ Pruebas ]  [ Memoria ]  [ Panel ]  [ Juegos ]  [ Mayores ]  [ Fuentes ]\n"
 )
 
 
@@ -69,9 +69,9 @@ def main():
     else:
         print(MENU)
     print(
-        "(chat, habito, siento tristeza 2, nota, panel, juegos, mayores,\n"
-        " recordar 09:00 pastilla del azúcar, sí / no, familia añadir Ana hija,\n"
-        " exportar, exportar claro, comparte <texto>, ayuda, salir)\n"
+        "(chat, habito, no consumo alcohol, checkin alcohol no 4, siento tristeza 2,\n"
+        " seguimiento, red apoyo, comunidad Madrid, importar prueba, fuentes,\n"
+        " nota, panel, juegos, mayores, exportar, ayuda, salir)\n"
     )
 
     while True:

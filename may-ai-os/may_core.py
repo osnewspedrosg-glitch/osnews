@@ -8,6 +8,10 @@ import emociones
 import bot_personal
 import juegos
 import mayores
+import conocimiento
+import no_consumo
+import red_apoyo
+import detector
 
 def nombre_usuario():
     return may_memory.cargar().get("usuario") or ""
@@ -69,6 +73,14 @@ def panel():
     if bloque:
         lineas.append(bloque)
 
+    nc = no_consumo.resumen_panel()
+    if nc:
+        lineas.append(nc)
+
+    pruebas = [x for x in m.get("pruebas_sustancias") or [] if not x.get("ocultar_en_resumen")]
+    if pruebas:
+        lineas.append(f"Pruebas de sustancias visibles: {len(pruebas)} (el parche es un concepto; hoy no existe).")
+
     lineas.append("Tu memoria está solo en este aparato, cifrada. El bot no la ve.")
     lineas.append("===================")
     return "\n".join(lineas)
@@ -118,6 +130,20 @@ def _ayuda():
         "  sí / no                  Responder a una comprobación pendiente",
         "  exportar                 Copia cifrada de tu memoria",
         "  exportar claro           Copia en JSON (pide confirmación)",
+        "  no consumo alcohol [fecha]  Hábito de no consumo (días en limpio)",
+        "  checkin alcohol no 4 [nota]  Anotar el día (sí/no, antojo 0-10)",
+        "  seguimiento              Rachas, emociones y antojos",
+        "  fuentes                  Técnicas y recursos verificados que usa MAY",
+        "  red apoyo                Contactos, bot de apoyo y directorio autonómico",
+        "  mi medico / mi centro    Apuntar teléfono, correo o WhatsApp",
+        "  apoyo familia Ana hija 600...  Contacto familiar",
+        "  comunidad Madrid         Elegir tu CCAA (recursos oficiales)",
+        "  bot apoyo <nombre> <url> Bot agente de apoyo (solo lo que tú elijas)",
+        "  pruebas                  Resultados (los clínicos los introduce el profesional)",
+        "  importar prueba          Pegar el código del profesional o del sensor futuro",
+        "  autotest orina ...       Autotest casero, aparte de las pruebas profesionales",
+        "  ocultar prueba 1         Ocultar una prueba profesional en los resúmenes",
+        "  modo profesional         El profesional de la unidad introduce una prueba (PIN propio)",
         "  mi bot <nombre> <enlace> Conectar tu bot personal",
         "  salir                    Cerrar MAY",
         "",
@@ -141,6 +167,28 @@ def _exportar(claro=False, confirmar=None):
     ruta = os.path.join(carpeta, f"export-{marca}.may")
     may_memory.exportar_cifrado(ruta)
     return f"Copia cifrada guardada en {ruta}. Se abre con tu mismo PIN."
+
+
+
+def resumen_apoyo(incluir_pruebas=False):
+    """Texto que la persona puede compartir a propósito. Nunca se envía solo."""
+    m = may_memory.cargar()
+    nombre = m.get("usuario") or "la persona usuaria"
+    lineas = [
+        f"Resumen de MAY AI OS para {nombre}.",
+        "Lo envía la propia persona; MAY no lo manda en segundo plano.",
+        no_consumo.seguimiento_texto(),
+        "",
+        "Últimas emociones:",
+        emociones.historial(),
+    ]
+    extra = detector.resumen_para_compartir(incluir=incluir_pruebas)
+    if extra:
+        lineas.append("")
+        lineas.append(extra)
+    lineas.append("")
+    lineas.append("Orientativo, consulta a tu médico. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok")
+    return "\n".join(lineas)
 
 
 def responder(mensaje, confirmar_claro=None):
@@ -190,7 +238,21 @@ def responder(mensaje, confirmar_claro=None):
         partes = baja[7:].split()
         nivel = int(partes[-1]) if partes and partes[-1].isdigit() else 2
         emo = " ".join(p for p in partes if not p.isdigit())
-        return emociones.registrar(emo, nivel)
+        respuesta = emociones.registrar(emo, nivel)
+        etiquetas = [emo]
+        if nivel >= 3:
+            etiquetas.append("intensidad-alta")
+        ctx = conocimiento.contexto_para_bot(conocimiento.elegir(etiquetas, 2))
+        bot = bot_personal.datos()
+        if os.environ.get("MAY_API_KEY") or bot.get("enlace"):
+            extra = bot_personal.hablar(
+                f"El usuario acaba de anotar la emoción «{emo}» con intensidad {nivel}. "
+                "Acompáñalo en español, sin juicio, sin diagnóstico.",
+                nombre_usuario(),
+                contexto=ctx,
+            )
+            return respuesta + "\n\n" + extra
+        return respuesta
     if baja in ("mis emociones", "historial emociones"):
         return emociones.historial()
 
@@ -249,6 +311,148 @@ def responder(mensaje, confirmar_claro=None):
         return _exportar(claro=True, confirmar=confirmacion)
     if baja == "exportar":
         return _exportar(claro=False)
+
+    if baja in ("fuentes", "biblioteca", "recursos"):
+        return conocimiento.listar_fuentes()
+    if baja in ("seguimiento",):
+        emos = emociones.historial()
+        return no_consumo.seguimiento_texto() + "\n\nÚltimas emociones:\n" + emos
+    if baja in ("no consumo", "noconsumo", "hábitos limpios", "habitos limpios"):
+        return no_consumo.listar()
+    if baja.startswith("no consumo "):
+        resto = mensaje[11:].strip()
+        partes = resto.split()
+        fecha = None
+        if partes and len(partes[-1]) == 10 and partes[-1][4] == "-":
+            fecha = partes[-1]
+            partes = partes[:-1]
+        sustancia = " ".join(partes)
+        return no_consumo.anadir(sustancia, inicio=fecha)
+    if baja.startswith("checkin ") or baja.startswith("chequeo "):
+        resto = mensaje.split(" ", 1)[-1].strip()
+        partes = resto.split()
+        if len(partes) < 2:
+            return "Por ejemplo: checkin alcohol no 4 gatillo fiesta"
+        clave = partes[0]
+        consumio = partes[1].lower() in ("sí", "si", "yes", "consumo")
+        antojo = 0
+        nota = ""
+        if len(partes) >= 3 and partes[2].isdigit():
+            antojo = int(partes[2])
+            nota = " ".join(partes[3:])
+        else:
+            nota = " ".join(partes[2:])
+        return no_consumo.checkin(clave, consumio, antojo, nota)
+
+    if baja in ("red apoyo", "red de apoyo", "apoyo"):
+        return red_apoyo.ver()
+    if baja in ("comunidad", "comunidades", "ccaa"):
+        return red_apoyo.listar_ccaa()
+    if baja.startswith("comunidad "):
+        return red_apoyo.poner_ccaa(mensaje[10:].strip())
+    if baja.startswith("mi medico ") or baja.startswith("mi médico "):
+        resto = mensaje.split(" ", 2)[-1].strip()
+        partes = resto.split()
+        nombre, tel, email, wa = [], "", "", ""
+        for p in partes:
+            if "@" in p:
+                email = p
+            elif p.replace("+", "").isdigit() and len(p.replace("+", "")) >= 9:
+                tel = p
+            else:
+                nombre.append(p)
+        return red_apoyo.poner_contacto("medico", " ".join(nombre), tel, email, tel)
+    if baja.startswith("mi centro "):
+        resto = mensaje.split(" ", 2)[-1].strip()
+        partes = resto.split()
+        nombre, tel, email = [], "", ""
+        for p in partes:
+            if "@" in p:
+                email = p
+            elif p.replace("+", "").isdigit() and len(p.replace("+", "")) >= 9:
+                tel = p
+            else:
+                nombre.append(p)
+        return red_apoyo.poner_contacto("centro", " ".join(nombre), tel, email, tel)
+    if baja.startswith("apoyo familia "):
+        resto = mensaje.split(" ", 2)[-1].strip()
+        partes = resto.split()
+        nombre, rel, tel, email = [], "", "", ""
+        for p in partes:
+            if "@" in p:
+                email = p
+            elif p.replace("+", "").isdigit() and len(p.replace("+", "")) >= 9:
+                tel = p
+            else:
+                if not nombre:
+                    nombre.append(p)
+                else:
+                    rel = (rel + " " + p).strip() if not tel else rel
+                    if not tel and not p.replace("+", "").isdigit():
+                        # remaining words before phone are relacion or more name; treat after first as relacion
+                        pass
+        # simpler: first token name, optional following non-contact as relacion already handled loosely
+        nom = partes[0] if partes else ""
+        otros = []
+        tel = email = ""
+        for p in partes[1:]:
+            if "@" in p:
+                email = p
+            elif p.replace("+", "").isdigit() and len(p.replace("+", "")) >= 9:
+                tel = p
+            else:
+                otros.append(p)
+        return red_apoyo.anadir_familia(nom, " ".join(otros), tel, email, tel)
+    if baja.startswith("bot apoyo "):
+        resto = mensaje[10:].strip()
+        partes = resto.rsplit(" ", 1)
+        if len(partes) == 2 and partes[1].startswith("http"):
+            bot_personal.configurar(partes[0], partes[1], cual="apoyo")
+            return f"Bot agente de apoyo conectado: {partes[0]}. Solo se le enviará lo que tú elijas."
+        bot_personal.configurar(resto, "", cual="apoyo")
+        return f"Guardado el nombre del bot de apoyo: {resto}."
+    if baja.startswith("enviar a medico") or baja.startswith("enviar a médico") or baja.startswith("enviar a centro") or baja.startswith("enviar a familia"):
+        return (
+            "En esta pantalla de texto te preparo el resumen; el envío se hace en la app web "
+            "(tel, SMS, correo, WhatsApp o compartir), solo cuando tú pulsas. "
+            "Escribe «resumen apoyo» para ver el texto. Nunca se envía solo."
+        )
+    if baja in ("resumen apoyo", "resumen para el medico", "resumen para el médico"):
+        return resumen_apoyo(incluir_pruebas=False) + "\n\nSi quieres incluir las pruebas visibles, escribe: resumen apoyo con pruebas"
+    if baja in ("resumen apoyo con pruebas", "resumen apoyo pruebas"):
+        return resumen_apoyo(incluir_pruebas=True)
+
+    if baja in ("pruebas", "detector", "analiticas", "analíticas"):
+        return detector.listar()
+    if baja.startswith("ocultar prueba "):
+        resto = baja[15:].strip()
+        if resto.isdigit():
+            return detector.ocultar(int(resto), True)
+        return "Dime el número, por ejemplo: ocultar prueba 1"
+    if baja.startswith("mostrar prueba "):
+        resto = baja[15:].strip()
+        if resto.isdigit():
+            return detector.ocultar(int(resto), False)
+        return "Dime el número, por ejemplo: mostrar prueba 1"
+    if baja in ("importar prueba", "importar detector"):
+        return "Pega a continuación el código (JSON o MAY1:...) así: importar prueba MAY1:..."
+    if baja.startswith("importar prueba "):
+        return detector.importar_codigo(mensaje.split(" ", 2)[-1])
+    if baja.startswith("autotest "):
+        return (
+            "El autotest casero se apunta en la app web, claramente separado de las pruebas "
+            "profesionales, o aquí: aún es más seguro que el resultado clínico lo introduzca "
+            "tu profesional con «modo profesional» o un código de importación. "
+            + detector.AVISO
+        )
+    if baja in ("modo profesional", "modo profesional pruebas"):
+        return (
+            "El modo profesional está pensado para que lo use el profesional de tu unidad, "
+            "en la consulta, con un PIN profesional distinto del tuyo. "
+            "En esta versión de consola genera el código con: python3 profesional.py "
+            "y luego pégalo con «importar prueba». En la web está la página Profesional "
+            "y el modo profesional dentro de MAY. " + detector.AVISO_IDENTIDAD
+        )
 
     if baja.startswith("mi bot "):
         partes = mensaje[7:].rsplit(" ", 1)

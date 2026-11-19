@@ -1,0 +1,206 @@
+{
+  "aviso": "Directorio de servicios oficiales de atención a las adicciones, a partir del listado de Planes Autonómicos sobre Drogas del Plan Nacional sobre Drogas. Solo se incluye el enlace de cada territorio si esa página cargó el 19 de noviembre de 2026. Si no cargó, aparece «pendiente de verificar», sin inventar teléfonos ni direcciones. Orientativo, consulta a tu médico o a tu centro de salud.",
+  "fuente_listado": {
+    "titulo": "Planes Autonómicos sobre Drogas (PNSD)",
+    "enlace": "https://pnsd.sanidad.gob.es/enlaces/ordentematica/paginasInstitucionales/ordentema_CCAA.htm",
+    "consultado": "2026-11-19"
+  },
+  "ccaa": [
+    {
+      "id": "andalucia",
+      "nombre": "Andalucía",
+      "organismo": "Junta de Andalucía. Consejería de Salud y Consumo. Dirección General de Atención Sociosanitaria, Salud Mental y Adicciones.",
+      "servicio": "Adicciones",
+      "telefono": null,
+      "enlace": "https://www.juntadeandalucia.es/organismos/saludyconsumo/areas/adicciones.html",
+      "verificado": true,
+      "estado": "verificado"
+    },
+    {
+      "id": "aragon",
+      "nombre": "Aragón",
+      "organismo": "Gobierno de Aragón. Departamento de Sanidad. Dirección General de Salud Pública.",
+      "servicio": "Prevención e información relativa a adicciones",
+      "telefono": null,
+      "enlace": null,
+      "verificado": false,
+      "estado": "pendiente de verificar",
+      "nota": "El enlace que figura en el listado del PNSD no cargó el 19 de noviembre de 2026 (respuesta 404). Consulta el listado oficial del PNSD."
+    },
+    {
+      "id": "asturias",
+      "nombre": "Principado de Asturias",
+      "organismo": "Principado de Asturias. Consejería de Salud. Dirección General de Salud Pública. AsturSalud.",
+      "servicio": "Plan sobre Drogas para Asturias y sus actuaciones",
+      "telefono": null,
+      "enlace": "https://www.astursalud.es/noticias/-/noticias/plan-sobre-drogas-para-asturias-y-sus-actuacion-1",
+      "verificado": true,
+      "estado": "verificado"
+    },
+    {
+      "id": "illes-balears",
+      "nombre": "Illes Balears",
+      "organismo": "Illes Balears. Consejería de Salud y Consumo. Dirección General de Salud Pública y Participación.",
+      "servicio": "PADIB. Pla d'addiccions de les Illes Balears",
+      "telefono": null,
+      "enlace": "https://www.caib.es/sites/padib/ca/portada-9943/",
+      "verificado": true,
+      "estado": "verificado"
+    },
+    {
+      "id": "canarias",
+      "nombre": "Canarias",
+      "organismo": "Gobierno de Canarias. Servicio Canario de Salud. Dirección General de Salud Pública.",
+      "servicio": "Salud Pública. Drogodependencias",
+      "telefono": null,
+      "enlace": null,
+      "verificado": false,
+      "estado": "pendiente de verificar",
+      "nota": "La ficha específica de drogodependencias que figura en el PNSD devolvió error 500 el 19 de noviembre de 2026. Consulta el listado oficial del PNSD."
+    },
+    {
+      "id": "cantabria",
+      "nombre": "Cantabria",
+      "organismo": "Gobierno de Cantabria. Dirección General de Salud Pública.",
+      "servicio": "Conductas adictivas",
+      "telefono": null,
+      "enlace": null,
+      "verificado": false,
+      "estado": "pendiente de verificar",
+      "nota": "La página oficial enlazada por el PNSD no respondió el 19 de noviembre de 2026. Consulta el listado oficial del PNSD."
+    },
+    {
+      "id": "castilla-la-mancha",
+      "nombre": "Castilla-La Mancha",
+      "organismo": "Gobierno de Castilla-La Mancha. Consejería de Sanidad. Dirección General de Salud Pública.",
+      "servicio": "Plan Regional de Adicciones Castilla-La Mancha",
+      "telefono": null,
+      "enlace": "https://sanidad.castillalamancha.es/ciudadanos/plan-regional-de-drogas/quienes-somos",
+      "verificado": true,
+      "estado": "verificado"
+    },
+    {
+      "id": "castilla-y-leon",
+      "nombre": "Castilla y León",
+      "organismo": "Junta de Castilla y León. Consejería de Familia e Igualdad de Oportunidades.",
+      "servicio": "Familia, Mujer, Adicciones",
+      "telefono": null,
+      "enlace": "https://familia.jcyl.es/web/es/adicciones.html",
+      "verificado": true,
+      "estado": "verificado"
+    },
+    {
+      "id": "cataluna",
+      "nombre": "Cataluña",
+      "organismo": "Generalitat de Catalunya. Departament de Salut.",
+      "servicio": "Drogues.gencat.cat",
+      "telefono": null,
+      "enlace": "https://drogues.gencat.cat/ca/inici/",
+      "verificado": true,
+      "estado": "verificado"
+    },
+    {
+      "id": "extremadura",
+      "nombre": "Extremadura",
+      "organismo": "Junta de Extremadura. Servicio Extremeño de Salud. Dirección General de Salud Pública. Secretaría Técnica de Drogodependencias.",
+      "servicio": "Drogas Extremadura",
+      "telefono": null,
+      "enlace": "https://saludextremadura.ses.es/drogasextremadura/",
+      "verificado": true,
+      "estado": "verificado"
+    },
+    {
+      "id": "galicia",
+      "nombre": "Galicia",
+      "organismo": "Xunta de Galicia. Consellería de Sanidade. Servizo Galego de Saúde.",
+      "servicio": "Prevención de condutas adictivas",
+      "telefono": null,
+      "enlace": "https://www.sergas.es/Saude-publica/Drogas?idioma=es",
+      "verificado": true,
+      "estado": "verificado"
+    },
+    {
+      "id": "madrid",
+      "nombre": "Comunidad de Madrid",
+      "organismo": "Comunidad de Madrid. Consejería de Sanidad.",
+      "servicio": "Adicciones",
+      "telefono": null,
+      "enlace": "https://www.comunidad.madrid/servicios/salud/adicciones",
+      "verificado": true,
+      "estado": "verificado"
+    },
+    {
+      "id": "murcia",
+      "nombre": "Región de Murcia",
+      "organismo": "Región de Murcia. Consejería de Salud. Dirección General de Salud Pública y Adicciones.",
+      "servicio": "Portal e-drogas",
+      "telefono": null,
+      "enlace": "https://www.e-drogas.es/",
+      "verificado": true,
+      "estado": "verificado"
+    },
+    {
+      "id": "navarra",
+      "nombre": "Comunidad Foral de Navarra",
+      "organismo": "Comunidad Foral de Navarra. Departamento de Salud. Instituto de Salud Pública y Laboral de Navarra.",
+      "servicio": "Plan de prevención: drogas y adicciones",
+      "telefono": null,
+      "enlace": null,
+      "verificado": false,
+      "estado": "pendiente de verificar",
+      "nota": "La ficha específica del plan foral enlazada por el PNSD devolvió error 502 el 19 de noviembre de 2026. Consulta el listado oficial del PNSD."
+    },
+    {
+      "id": "pais-vasco",
+      "nombre": "País Vasco",
+      "organismo": "País Vasco. Departamento de Salud (Euskadi.eus).",
+      "servicio": "Adicciones",
+      "telefono": null,
+      "enlace": "https://www.euskadi.eus/gobierno-vasco/adicciones/inicio/",
+      "verificado": true,
+      "estado": "verificado"
+    },
+    {
+      "id": "la-rioja",
+      "nombre": "La Rioja",
+      "organismo": "Gobierno de La Rioja. Consejería de Salud. Dirección General de Salud Pública, Consumo y Cuidados.",
+      "servicio": "Infodrogas. Información y prevención sobre drogas",
+      "telefono": null,
+      "enlace": null,
+      "verificado": false,
+      "estado": "pendiente de verificar",
+      "nota": "La página Infodrogas enlazada por el PNSD no respondió el 19 de noviembre de 2026. Consulta el listado oficial del PNSD."
+    },
+    {
+      "id": "comunitat-valenciana",
+      "nombre": "Comunitat Valenciana",
+      "organismo": "Generalitat Valenciana. Conselleria de Sanitat. Dirección General de Salud Pública y Adicciones.",
+      "servicio": "Drogodependències",
+      "telefono": null,
+      "enlace": null,
+      "verificado": false,
+      "estado": "pendiente de verificar",
+      "nota": "La ficha de drogodependències enlazada por el PNSD devolvió 404 el 19 de noviembre de 2026. Consulta el listado oficial del PNSD."
+    },
+    {
+      "id": "ceuta",
+      "nombre": "Ciudad Autónoma de Ceuta",
+      "organismo": "Ciudad Autónoma de Ceuta. Consejería de Sanidad y Consumo.",
+      "servicio": "Plan sobre drogas",
+      "telefono": null,
+      "enlace": "https://www.ceuta.es/ceuta/plan-sobre-drogas",
+      "verificado": true,
+      "estado": "verificado"
+    },
+    {
+      "id": "melilla",
+      "nombre": "Ciudad Autónoma de Melilla",
+      "organismo": "Ciudad Autónoma de Melilla. Consejería de Políticas Sociales, Salud Pública y Bienestar Animal.",
+      "servicio": "Atención al drogodependiente",
+      "telefono": null,
+      "enlace": "https://www.melilla.es/melillaportal/contenedor.jsp?seccion=s_fdes_d4_v1.jsp&codbusqueda=174&language=es&codResi=1&codMenuPN=601&codMenuSN=2&codMenu=150&layout=contenedor.jsp",
+      "verificado": true,
+      "estado": "verificado"
+    }
+  ]
+}

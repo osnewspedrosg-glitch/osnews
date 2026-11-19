@@ -1,0 +1,210 @@
+{
+  "aviso": "Orientativo, consulta a tu médico. MAY no es un dispositivo médico ni un profesional sanitario. Los textos están escritos con palabras propias a partir de principios conocidos; no copian el texto de ningún libro.",
+  "consultado": "2026-11-19",
+  "tecnicas": [
+    {
+      "id": "reencuadre-cognitivo",
+      "titulo": "Reencuadre de un pensamiento",
+      "resumen": "Cuando un pensamiento te aprieta (por ejemplo «no voy a poder» o «ya lo he estropeado todo»), puedes anotarlo, preguntarte qué hechos lo apoyan y cuáles no, y buscar una frase más justa y realista. No se trata de fingir que todo va bien, sino de comprobar si ese pensamiento encaja con lo que está pasando.",
+      "fuente": "Aaron T. Beck, terapia cognitiva; David D. Burns, «Sentirse bien»",
+      "cita_breve": "Técnica basada en Aaron Beck, terapia cognitiva",
+      "enlace": null,
+      "etiquetas": ["tristeza", "miedo", "ira", "aversión", "anticipación", "antojo", "recaida"]
+    },
+    {
+      "id": "nombrar-emocion",
+      "titulo": "Poner nombre a lo que sientes",
+      "resumen": "Nombrar la emoción con un poco de precisión (por ejemplo, inquietud en vez de un malestar sin forma) ayuda a tomar distancia y a elegir un siguiente paso, en lugar de dejarte arrastrar. Puedes decirte: «Ahora siento esto, con esta intensidad, y puedo acompañarlo un rato».",
+      "fuente": "Daniel Goleman, «Inteligencia emocional»",
+      "cita_breve": "Técnica basada en Daniel Goleman, inteligencia emocional",
+      "enlace": "https://www.editorialkairos.com/catalogo/p/inteligencia-emocional",
+      "etiquetas": ["alegría", "confianza", "miedo", "sorpresa", "tristeza", "aversión", "ira", "anticipación"]
+    },
+    {
+      "id": "sentido-logoterapia",
+      "titulo": "Buscar un sentido o un paso que importe",
+      "resumen": "En un momento difícil puedes preguntarte qué sigue importándote: una persona, un valor, o un paso pequeño que esté en tu mano hoy. Eso no niega el dolor; solo ofrece un apoyo para no quedarte solo frente a él.",
+      "fuente": "Viktor E. Frankl, «El hombre en busca de sentido» (logoterapia)",
+      "cita_breve": "Técnica basada en Viktor Frankl, logoterapia",
+      "enlace": null,
+      "etiquetas": ["tristeza", "miedo", "anticipación", "recaida"]
+    },
+    {
+      "id": "surfear-antojo",
+      "titulo": "Surfear el antojo y esperar un rato",
+      "resumen": "Un antojo suele subir y bajar como una ola. Si no actúas enseguida, a menudo llega a un pico y se suaviza en unos minutos. Puedes notarlo, respirar, beber agua, salir a caminar un poco y esperar 15 minutos, sin juzgarte. Si aparece un consumo, no es un fracaso de la persona: se vuelve a empezar con calma.",
+      "fuente": "G. Alan Marlatt, prevención de recaídas (urge surfing)",
+      "cita_breve": "Técnica basada en G. Alan Marlatt, prevención de recaídas",
+      "enlace": null,
+      "etiquetas": ["antojo", "recaida", "alcohol", "tabaco", "cannabis", "cocaina"]
+    },
+    {
+      "id": "entrevista-motivacional",
+      "titulo": "Escuchar tus propias razones para el cambio",
+      "resumen": "El cambio suele ser más posible cuando escuchas tus propias razones, sin que nadie te empuje ni te avergüence. Pregúntate, con calma: ¿qué te gustaría que fuera distinto? ¿Qué paso pequeño ya está en tu mano? No hace falta decidirlo todo hoy.",
+      "fuente": "William R. Miller y Stephen Rollnick, entrevista motivacional",
+      "cita_breve": "Técnica basada en Miller y Rollnick, entrevista motivacional",
+      "enlace": null,
+      "etiquetas": ["recaida", "antojo", "anticipación", "ira", "confianza"]
+    },
+    {
+      "id": "tierra-54321",
+      "titulo": "Respirar y poner los pies en el suelo (5-4-3-2-1)",
+      "resumen": "Si la intensidad es alta, para un momento. Nombra 5 cosas que ves, 4 que puedes tocar, 3 que escuchas, 2 que hueles y 1 que puedes saborear o que te recuerde que estás aquí. Respira despacio, soltando el aire un poco más largo que la entrada. Es una ayuda para bajar el cuerpo; no sustituye a un profesional.",
+      "fuente": "Técnica de puesta a tierra de uso habitual en apoyo psicológico (5-4-3-2-1)",
+      "cita_breve": "Técnica de puesta a tierra 5-4-3-2-1",
+      "enlace": null,
+      "etiquetas": ["miedo", "ira", "tristeza", "sorpresa", "antojo", "intensidad-alta"]
+    },
+    {
+      "id": "linea-024",
+      "titulo": "Pedir ayuda al 024 o al 112",
+      "resumen": "Si lo estás pasando muy mal, sobre todo si aparece desesperanza o ideas de no querer vivir, en España puedes llamar al 024: es gratuito, confidencial y está disponible las 24 horas. En una emergencia llama al 112. Esta línea no sustituye la consulta presencial con un profesional sanitario.",
+      "fuente": "Ministerio de Sanidad, Línea 024 de atención a la conducta suicida",
+      "cita_breve": "Orientación del Ministerio de Sanidad, Línea 024",
+      "enlace": "https://www.sanidad.gob.es/linea024/",
+      "etiquetas": ["tristeza", "miedo", "intensidad-alta"]
+    },
+    {
+      "id": "red-pnsd",
+      "titulo": "Pedir ayuda profesional por el consumo",
+      "resumen": "En España hay una red pública de atención a las adicciones en todas las comunidades y ciudades autónomas. Acudir a tu centro de salud, a una unidad de conductas adictivas o a un centro de drogodependencias es un paso válido, no una derrota. MAY puede ayudarte a localizar el recurso oficial de tu comunidad.",
+      "fuente": "Plan Nacional sobre Drogas (Ministerio de Sanidad), red de atención",
+      "cita_breve": "Orientación del Plan Nacional sobre Drogas",
+      "enlace": "https://pnsd.sanidad.gob.es/profesionales/atencionIntegral/red/home.htm",
+      "etiquetas": ["antojo", "recaida", "alcohol", "tabaco", "cannabis", "cocaina"]
+    },
+    {
+      "id": "oms-cuidado",
+      "titulo": "Cuidado cotidiano y pedir apoyo",
+      "resumen": "La salud mental forma parte de la salud. Ayuda hablar con alguien de confianza, mantener en lo posible el sueño, el movimiento y el contacto con otras personas, y pedir ayuda profesional cuando lo necesites. El consumo de alcohol u otras drogas no es una buena forma de calmar el malestar a medio plazo.",
+      "fuente": "Organización Mundial de la Salud, salud mental",
+      "cita_breve": "Orientación de la Organización Mundial de la Salud",
+      "enlace": "https://www.who.int/es/news-room/fact-sheets/detail/mental-health-strengthening-our-response",
+      "etiquetas": ["tristeza", "miedo", "ira", "anticipación", "antojo"]
+    },
+    {
+      "id": "consaludmental",
+      "titulo": "Pedir apoyo sin vergüenza",
+      "resumen": "Puedes pedir ayuda sin avergonzarte. El cuidado de la salud mental y la recuperación son un derecho. Las asociaciones, la familia y los servicios públicos pueden acompañarte; no tienes que hacerlo solo.",
+      "fuente": "Confederación Salud Mental España",
+      "cita_breve": "Orientación de la Confederación Salud Mental España",
+      "enlace": "https://www.consaludmental.org/",
+      "etiquetas": ["tristeza", "miedo", "recaida", "intensidad-alta"]
+    }
+  ],
+  "recursos": [
+    {
+      "titulo": "024. Línea de atención a la conducta suicida",
+      "autor": "Ministerio de Sanidad",
+      "tipo": "servicio",
+      "enlace": "https://www.sanidad.gob.es/linea024/",
+      "descripcion": "Servicio nacional, gratuito, confidencial y disponible 24 horas, para personas con ideación o riesgo de conducta suicida y para familiares o allegados. En emergencia, 112."
+    },
+    {
+      "titulo": "Plan Nacional sobre Drogas",
+      "autor": "Delegación del Gobierno para el Plan Nacional sobre Drogas, Ministerio de Sanidad",
+      "tipo": "organismo",
+      "enlace": "https://pnsd.sanidad.gob.es/",
+      "descripcion": "Portal oficial de información, prevención y red de atención a las adicciones en España."
+    },
+    {
+      "titulo": "Red pública de atención a las drogodependencias en España",
+      "autor": "Plan Nacional sobre Drogas",
+      "tipo": "organismo",
+      "enlace": "https://pnsd.sanidad.gob.es/profesionales/atencionIntegral/red/home.htm",
+      "descripcion": "Explica los niveles de la red pública de atención a las adicciones en las comunidades y ciudades autónomas."
+    },
+    {
+      "titulo": "Planes autonómicos sobre drogas",
+      "autor": "Plan Nacional sobre Drogas",
+      "tipo": "organismo",
+      "enlace": "https://pnsd.sanidad.gob.es/enlaces/ordentematica/paginasInstitucionales/ordentema_CCAA.htm",
+      "descripcion": "Listado oficial de los organismos de cada comunidad y ciudad autónoma responsables de los planes sobre drogas."
+    },
+    {
+      "titulo": "FAD Juventud",
+      "autor": "Fundación FAD Juventud",
+      "tipo": "organismo",
+      "enlace": "https://fad.es/",
+      "descripcion": "Organización de prevención y educación sobre adicciones y bienestar de la juventud."
+    },
+    {
+      "titulo": "Alcohólicos Anónimos España",
+      "autor": "Alcohólicos Anónimos España",
+      "tipo": "servicio",
+      "enlace": "https://www.alcoholicos-anonimos.org/",
+      "descripcion": "Comunidades de apoyo mutuo para personas que quieren dejar de beber."
+    },
+    {
+      "titulo": "Narcóticos Anónimos España",
+      "autor": "Narcóticos Anónimos España",
+      "tipo": "servicio",
+      "enlace": "https://narcoticosanonimos.es/",
+      "descripcion": "Comunidades de apoyo mutuo para personas con adicción a las drogas que buscan recuperarse."
+    },
+    {
+      "titulo": "Confederación Salud Mental España",
+      "autor": "Confederación Salud Mental España",
+      "tipo": "organismo",
+      "enlace": "https://www.consaludmental.org/",
+      "descripcion": "Movimiento asociativo de personas con problemas de salud mental y sus familias."
+    },
+    {
+      "titulo": "Consejo General de la Psicología de España",
+      "autor": "Consejo General de la Psicología (COP)",
+      "tipo": "organismo",
+      "enlace": "https://www.cop.es/",
+      "descripcion": "Organización colegial de la psicología en España."
+    },
+    {
+      "titulo": "Sociedad Española de Psiquiatría y Salud Mental",
+      "autor": "SEPSM",
+      "tipo": "organismo",
+      "enlace": "https://sepsm.org/",
+      "descripcion": "Sociedad científica de psiquiatría y salud mental en España."
+    },
+    {
+      "titulo": "Salud mental",
+      "autor": "Organización Mundial de la Salud",
+      "tipo": "organismo",
+      "enlace": "https://www.who.int/es/health-topics/mental-health",
+      "descripcion": "Página de la OMS sobre salud mental."
+    },
+    {
+      "titulo": "Salud mental: fortalecer nuestra respuesta",
+      "autor": "Organización Mundial de la Salud",
+      "tipo": "organismo",
+      "enlace": "https://www.who.int/es/news-room/fact-sheets/detail/mental-health-strengthening-our-response",
+      "descripcion": "Hoja informativa de la OMS sobre salud mental y cómo fortalecer la respuesta."
+    },
+    {
+      "titulo": "Inteligencia emocional",
+      "autor": "Daniel Goleman",
+      "tipo": "libro",
+      "enlace": "https://www.editorialkairos.com/catalogo/p/inteligencia-emocional",
+      "descripcion": "Libro sobre el reconocimiento y el manejo de las emociones. Enlace a la ficha de la editorial Kairós, comprobada el 19 de noviembre de 2026."
+    },
+    {
+      "titulo": "El hombre en busca de sentido",
+      "autor": "Viktor E. Frankl",
+      "tipo": "libro",
+      "enlace": null,
+      "descripcion": "Libro de logoterapia sobre el sentido en circunstancias difíciles. No se incluye enlace de editorial porque las fichas consultadas no cargaron de forma verificable."
+    },
+    {
+      "titulo": "Sentirse bien",
+      "autor": "David D. Burns",
+      "tipo": "libro",
+      "enlace": null,
+      "descripcion": "Libro de autoayuda basado en la terapia cognitiva. No se incluye enlace de editorial porque las fichas consultadas no cargaron de forma verificable."
+    },
+    {
+      "titulo": "Cómo hacer que te pasen cosas buenas",
+      "autor": "Marian Rojas Estapé",
+      "tipo": "libro",
+      "enlace": null,
+      "descripcion": "Libro de divulgación sobre emociones y hábitos. No se incluye enlace de editorial porque las fichas consultadas no cargaron de forma verificable."
+    }
+  ]
+}
