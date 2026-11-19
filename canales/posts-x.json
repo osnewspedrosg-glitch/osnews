@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-19T15:59:24+01:00",
+ "fetched_at": "2026-11-20T00:04:48+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, official politician (government-verified) and official European/US TV-news accounts; start_time 2026-09-01T00:00:00Z (TV China/India/Morocco/Cuba from 2026-10-01T00:00:00Z); -is:retweet -is:reply; literal text only, country must appear in the post",
  "accounts": {
@@ -258,6 +258,114 @@
  },
  "countries": {
   "china": [
+   {
+    "id": "2123551943289176452",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-11-20",
+    "time": "00:00",
+    "text": "The waters unleashed by the collapse of a Himalayan glacier in August swept away thousands in Nepal and China. At least 5,600 remain missing.\n\nWith the official search now over, some loved ones are continuing to look for the missing. https://t.co/HXk7AuBlEI",
+    "url": "https://x.com/washingtonpost/status/2123551943289176452",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123544663885783442",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-19",
+    "time": "23:31",
+    "text": "Líderes de EE.UU. y China defendieron posturas opuestas sobre la gobernanza de la IA en Shenzhen: Trump teme que regular frene la innovación, Xi exige mantenerla bajo control humano.\n➡️ https://t.co/UIDdGGb8gw https://t.co/04WZvnuooZ",
+    "url": "https://x.com/euronewses/status/2123544663885783442",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123538775678603389",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "23:07",
+    "text": "The US, Chinese and Russian leaders pledged to hold talks on nuclear risk reduction, but made no mention of North Korea in their joint peace declaration. https://t.co/dfld8S0Htb",
+    "url": "https://x.com/euronews/status/2123538775678603389",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123533589161681102",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "22:47",
+    "text": "🇨🇳 La réunion inédite en #Chine entre Xi #Jinping, Donald #Trump et Vladimir #Poutine a été accompagnée d'un protocole qui semble avoir tourné au désavantage du président russe.\n\n➡️ Une manière pour le dirigeant chinois de punir son homologue russe ou plutôt une mise en scène",
+    "url": "https://x.com/France24_fr/status/2123533589161681102",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123526778828341601",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "22:20",
+    "text": "FCC votes to ban Chinese telecoms from direct access to US phone numbers https://t.co/a1X4wUebm3",
+    "url": "https://x.com/Reuters/status/2123526778828341601",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123525936620720621",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "22:16",
+    "text": "Trump, Putin and Xi sign a joint declaration in China with no breakthrough on Ukraine, European leaders meet US envoys in Berlin, Spain’s election rivals debate, and COP31 talks enter their final stretch in Turkey.\n➡️ https://t.co/J2CN5XSDzS https://t.co/utu5HnIRtk",
+    "url": "https://x.com/euronews/status/2123525936620720621",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123523864139644983",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-19",
+    "time": "22:08",
+    "text": "Coalición de los Voluntarios en Berlín: \"Apoyamos a Ucrania\" \n\nLa llamada Coalición de Voluntarios refuerza su apoyo a Ucrania en Berlín, mientras todas las miradas estaban puestas a la cumbre de EE. UU., Rusia y China en Shenzhen.(ms)\n\nhttps://t.co/4jDclcF2rZ",
+    "url": "https://x.com/dw_espanol/status/2123523864139644983",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123454219516887160",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "17:31",
+    "text": "🇨🇳 La rencontre tripartite historique entre #Trump, #Poutine et Xi #Jinping a duré 1 h 30 jeudi en #Chine, au menu de laquelle figurait la guerre en Ukraine et le contrôle des armements nucléaires https://t.co/fdRx2Kg2nC",
+    "url": "https://x.com/France24_fr/status/2123454219516887160",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123438604353458199",
+    "account": "WhiteHouse",
+    "name": "The White House",
+    "date": "2026-11-19",
+    "time": "16:29",
+    "text": "President Trump departs China after a historic trip.\n\n- Secured $17 billion for U.S. companies.\n- Met with the world's most important leaders and nations, including President Xi, President Putin, and President Marcos.\n- Delivered key remarks at both the ASEAN and APEC Summits. https://t.co/YVqOqnABEY",
+    "url": "https://x.com/WhiteHouse/status/2123438604353458199",
+    "lang": "",
+    "role": "politician",
+    "scope": "us_eu"
+   },
    {
     "id": "2123422780217508085",
     "account": "CNNEE",
@@ -1483,6 +1591,18 @@
     "scope": "country"
    },
    {
+    "id": "2121434710484320712",
+    "account": "Chinamission2un",
+    "name": "Chinese Mission to UN",
+    "date": "2026-11-17",
+    "time": "04:29",
+    "text": "傅聪大使在安理会表决联合国阿卜耶伊临时安全部队授权延期决议草案后的解释性发言 \nhttps://t.co/Zw5ogQYFku| https://t.co/l8m9G5zaJy",
+    "url": "https://x.com/Chinamission2un/status/2121434710484320712",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
     "id": "2122530952740036925",
     "account": "Chinamission2un",
     "name": "Chinese Mission to UN",
@@ -1682,18 +1802,6 @@
     "time": "03:49",
     "text": "International representatives attending the 31st United Nations Climate Change Conference (COP31) praised China for its progress in the green transition. \n#COP31 #BeautifulChina https://t.co/Lk6eUumKNv",
     "url": "https://x.com/Chinamission2un/status/2121435400732541214",
-    "lang": "",
-    "role": "politician",
-    "scope": "country"
-   },
-   {
-    "id": "2121434710484320712",
-    "account": "Chinamission2un",
-    "name": "Chinese Mission to UN",
-    "date": "2026-11-17",
-    "time": "04:29",
-    "text": "傅聪大使在安理会表决联合国阿卜耶伊临时安全部队授权延期决议草案后的解释性发言 \nhttps://t.co/Zw5ogQYFku| https://t.co/l8m9G5zaJy",
-    "url": "https://x.com/Chinamission2un/status/2121434710484320712",
     "lang": "",
     "role": "politician",
     "scope": "country"
@@ -2516,6 +2624,90 @@
    }
   ],
   "india": [
+   {
+    "id": "2123548177886228688",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "23:45",
+    "text": "Indian lender Yes Bank's AT-1 bond investors urge RBI to focus on investor protection https://t.co/KT5Vf3lfou",
+    "url": "https://x.com/Reuters/status/2123548177886228688",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123541380903391432",
+    "account": "BBCNews",
+    "name": "BBC News (UK)",
+    "date": "2026-11-19",
+    "time": "23:18",
+    "text": "William and Catherine's India tour was 'particularly special', aide says https://t.co/UluVA8lPIL",
+    "url": "https://x.com/BBCNews/status/2123541380903391432",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123537987220689084",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-19",
+    "time": "23:04",
+    "text": "William and Catherine's India tour was 'particularly special', aide says https://t.co/mUjKzNp98r",
+    "url": "https://x.com/BBCWorld/status/2123537987220689084",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123488129638117480",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-19",
+    "time": "19:46",
+    "text": "Weekly quiz: Which star played cricket with Catherine in India? https://t.co/hRO4X7KMf8",
+    "url": "https://x.com/BBCWorld/status/2123488129638117480",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123484078087233944",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "19:30",
+    "text": "Indian lender Yes Bank's AT-1 bond investors urge RBI to focus on investor protection https://t.co/U6zjqFicLX",
+    "url": "https://x.com/Reuters/status/2123484078087233944",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123457568240464317",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "17:45",
+    "text": "India's gamers skip work, crowd cafes for Grand Theft Auto VI as Modi joins buzz https://t.co/YRdl6p07Cd",
+    "url": "https://x.com/Reuters/status/2123457568240464317",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123457523881509200",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-19",
+    "time": "17:45",
+    "text": "La caída del GTA VI no se ha dado de manera simultánea en todo el mundo, sino que se ha registrado en momentos diferentes. El número más alto de problemas se reporta poco antes del estreno en India y el segundo pico coincide aproximadamente con el lanzamiento en EE UU",
+    "url": "https://x.com/el_pais/status/2123457523881509200",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
    {
     "id": "2123409689270743155",
     "account": "MEAIndia",
@@ -4523,6 +4715,30 @@
   ],
   "morocco": [
    {
+    "id": "2123544761856364966",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-19",
+    "time": "23:31",
+    "text": "📺 TV en DIRECTO | Feijóo: \"Sigue habiendo 15.000 invasores en Ceuta [...]. ¿Qué le debe usted a Marruecos?\" https://t.co/QTvA9XCsFL https://t.co/ORQw50Tqfe",
+    "url": "https://x.com/el_pais/status/2123544761856364966",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123433041452204295",
+    "account": "USAmbUN",
+    "name": "Ambassador Mike Waltz",
+    "date": "2026-11-19",
+    "time": "16:07",
+    "text": "So pleased to meet the Head of Government &amp; Mayor of Marrakesh Fatima Ezzahra El Mansouri—the first EVER Arab woman in her role. \n\nShe has a long history of combating radical Islam, common sense policies, and will be a fantastic leader for Morocco! https://t.co/saVo7SDKkL",
+    "url": "https://x.com/USAmbUN/status/2123433041452204295",
+    "lang": "en",
+    "role": "politician",
+    "scope": "us_eu"
+   },
+   {
     "id": "2123300157068603669",
     "account": "FRANCE24",
     "name": "FRANCE24",
@@ -5220,6 +5436,30 @@
    }
   ],
   "cuba": [
+   {
+    "id": "2123541231942713548",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-19",
+    "time": "23:17",
+    "text": "#Trump vuelve a agitar el fantasma de una intervención en #Cuba\n\nLas maniobras de #EEUU en #Guantánamo coinciden con las amenazas de Trump contra Cuba. ¿Son preparativos para una intervención o una demostración de fuerza en medio de la presión sobre La Habana? (ct)",
+    "url": "https://x.com/dw_espanol/status/2123541231942713548",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123538362472800434",
+    "account": "USAmbUN",
+    "name": "Ambassador Mike Waltz",
+    "date": "2026-11-19",
+    "time": "23:06",
+    "text": "When I confronted the Cuban regime at the UN about their stolen billions, luxury yachts, and political prisoners, they tried to silence us as if we were in Havana—and had ZERO answers.\n \nThe world is waking up to Havana's lies. The Cuban people WILL be free. https://t.co/1GcdlRKOFD",
+    "url": "https://x.com/USAmbUN/status/2123538362472800434",
+    "lang": "",
+    "role": "politician",
+    "scope": "us_eu"
+   },
    {
     "id": "2123418481987051533",
     "account": "BrunoRguezP",
