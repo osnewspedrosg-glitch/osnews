@@ -338,6 +338,15 @@ def declaraciones_block(ui, by_country, page_lang, all_countries=True):
     return "".join(parts)
 
 
+def goat_tags(css_prefix):
+    depth = 1 if css_prefix in ("./", "", ".") else css_prefix.count("..") + 1
+    rel = "../" * depth + "contador-osnews.js"
+    return (
+        '  <script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>\n'
+        f'  <script src="{rel}" data-uso="/osnews/canales/uso" data-uso-titulo="Uso Canales OSNews"></script>\n'
+    )
+
+
 def page_shell(lang, title, description, body, css_prefix, js=True):
     direction = "rtl" if lang == "ar" else "ltr"
     js_tag = f'  <script src="{css_prefix}buscar.js"></script>\n' if js else ""
@@ -357,6 +366,7 @@ def page_shell(lang, title, description, body, css_prefix, js=True):
         f"{body}"
         "  </div>\n"
         f"{js_tag}"
+        f"{goat_tags(css_prefix)}"
         "</body>\n"
         "</html>\n"
     )
@@ -477,7 +487,7 @@ def build_index(generated_at, x_fetched):
         "        <p class=\"lead\">Ocho canales en ocho idiomas y un canal por país (China, India, Marruecos y Cuba), "
         "con titulares de medios oficiales europeos y de EE. UU., vídeos oficiales insertables, "
         "una sección destacada de Declaraciones con el texto literal de posts reales en X, y un buscador hacia X. "
-        "Gratis, sin anuncios ni rastreadores.</p>\n      </div>\n"
+        "Gratis, sin anuncios. Contador anónimo de visitas y de uso (GoatCounter), sin cookies ni datos personales.</p>\n      </div>\n"
         + nav_links(ui, "../")
         + "    </header>\n"
         '    <section class="panel" aria-labelledby="h-langs">\n'

@@ -37,7 +37,7 @@ MADRID = ZoneInfo("Europe/Madrid")
 UA = (
     "OSNewsTVLigera/1.0 "
     "(+https://osnewspedrosg-glitch.github.io/osnews/tv-world/ligera/; "
-    "public official RSS aggregator, text-only, no tracking)"
+    "public official RSS aggregator, text-only; anonymous GoatCounter on the page)"
 )
 MAX_MAIN = 8
 MAX_COUNTRY = 8
@@ -178,7 +178,7 @@ EXCLUDE = {
 I18N = {
     "es": {
         "title": "OSNews TV World · versión ligera",
-        "tagline": "Solo texto, para conexiones lentas. Titulares de canales RSS oficiales, con enlace a la noticia original. Sin vídeos, sin rastreadores y sin recogida de datos.",
+        "tagline": "Solo texto, para conexiones lentas. Titulares de canales RSS oficiales, con enlace a la noticia original. Sin vídeos. El único recuento es un contador anónimo de visitas y de uso (GoatCounter, cuenta osnews-may), sin cookies ni datos personales.",
         "back_full": "Versión completa (con vídeos)",
         "back_home": "Volver a OSNews",
         "language": "Idioma",
@@ -199,13 +199,13 @@ I18N = {
         "failed": "Este canal no pudo leerse en esta actualización.",
         "stale": "Se mantienen los titulares de una actualización anterior; el canal no respondió ahora.",
         "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.",
-        "legal": "Página de solo texto. No incrusta vídeos ni scripts de X, no carga fuentes externas, no usa rastreadores y no recoge datos. Los titulares salen de canales RSS públicos oficiales; el texto de X, de cuentas oficiales, sin inventar ni traducir como si fuera de la fuente. Cada enlace abre la página o la publicación original.",
+        "legal": "Página de solo texto. No incrusta vídeos ni scripts de X. El único recuento es un contador anónimo de visitas y de uso (GoatCounter, cuenta osnews-may), sin cookies ni datos personales. Los titulares salen de canales RSS públicos oficiales; el texto de X, de cuentas oficiales, sin inventar ni traducir como si fuera de la fuente. Cada enlace abre la página o la publicación original.",
         "open_article": "Abrir el artículo original",
         "open_post": "Abrir la publicación en X",
     },
     "en": {
         "title": "OSNews TV World · lite",
-        "tagline": "Text only, for slow connections. Headlines from official RSS feeds, each linking to the original article. No video, no trackers, and no data collection.",
+        "tagline": "Text only, for slow connections. Headlines from official RSS feeds, each linking to the original article. No video. The only count is an anonymous visit and app-usage counter (GoatCounter, account osnews-may), with no cookies and no personal data.",
         "back_full": "Full version (with video)",
         "back_home": "Back to OSNews",
         "language": "Language",
@@ -226,13 +226,13 @@ I18N = {
         "failed": "This feed could not be read in this update.",
         "stale": "Headlines from a previous update are kept; the feed did not respond this time.",
         "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.",
-        "legal": "Text-only page. It does not embed videos or X scripts, does not load external fonts, uses no trackers and collects no data. Headlines come from official public RSS feeds; X text comes from official accounts, never invented or presented as a translation of the source. Each link opens the original article or post.",
+        "legal": "Text-only page. It does not embed videos or X scripts. The only count is an anonymous visit and app-usage counter (GoatCounter, account osnews-may), with no cookies and no personal data. Headlines come from official public RSS feeds; X text comes from official accounts, never invented or presented as a translation of the source. Each link opens the original article or post.",
         "open_article": "Open the original article",
         "open_post": "Open the post on X",
     },
     "fr": {
         "title": "OSNews TV World · version légère",
-        "tagline": "Texte seul, pour les connexions lentes. Titres issus de flux RSS officiels, avec lien vers l’article d’origine. Pas de vidéo, pas de traceurs, pas de collecte de données.",
+        "tagline": "Texte seul, pour les connexions lentes. Titres issus de flux RSS officiels, avec lien vers l’article d’origine. Pas de vidéo. Le seul comptage est un compteur anonyme de visites et d’usage (GoatCounter, compte osnews-may), sans cookies ni données personnelles.",
         "back_full": "Version complète (avec vidéos)",
         "back_home": "Retour à OSNews",
         "language": "Langue",
@@ -253,13 +253,13 @@ I18N = {
         "failed": "Ce flux n’a pas pu être lu lors de cette mise à jour.",
         "stale": "Les titres d’une mise à jour précédente sont conservés ; le flux n’a pas répondu cette fois.",
         "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.",
-        "legal": "Page en texte seul. Elle n’intègre ni vidéos ni scripts X, ne charge pas de polices externes, n’utilise pas de traceurs et ne collecte pas de données. Les titres viennent de flux RSS publics officiels ; le texte X, de comptes officiels, sans invention ni traduction présentée comme celle de la source. Chaque lien ouvre l’article ou la publication d’origine.",
+        "legal": "Page en texte seul. Elle n’intègre ni vidéos ni scripts X. Le seul comptage est un compteur anonyme de visites et d’usage (GoatCounter, compte osnews-may), sans cookies ni données personnelles. Les titres viennent de flux RSS publics officiels ; le texte X, de comptes officiels, sans invention ni traduction présentée comme celle de la source. Chaque lien ouvre l’article ou la publication d’origine.",
         "open_article": "Ouvrir l’article d’origine",
         "open_post": "Ouvrir la publication sur X",
     },
     "de": {
         "title": "OSNews TV World · Leichtversion",
-        "tagline": "Nur Text, für langsame Verbindungen. Schlagzeilen aus offiziellen RSS-Feeds, jeweils mit Link zum Originalartikel. Keine Videos, keine Tracker, keine Datenerfassung.",
+        "tagline": "Nur Text, für langsame Verbindungen. Schlagzeilen aus offiziellen RSS-Feeds, jeweils mit Link zum Originalartikel. Keine Videos. Die einzige Zählung ist ein anonymer Besuchs- und Nutzungszähler (GoatCounter, Konto osnews-may), ohne Cookies und ohne personenbezogene Daten.",
         "back_full": "Vollversion (mit Videos)",
         "back_home": "Zurück zu OSNews",
         "language": "Sprache",
@@ -280,13 +280,13 @@ I18N = {
         "failed": "Dieser Feed konnte in dieser Aktualisierung nicht gelesen werden.",
         "stale": "Schlagzeilen einer früheren Aktualisierung werden behalten; der Feed hat diesmal nicht geantwortet.",
         "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.",
-        "legal": "Nur-Text-Seite. Keine Videos oder X-Skripte, keine externen Schriften, keine Tracker, keine Datenerfassung. Schlagzeilen stammen aus offiziellen öffentlichen RSS-Feeds; X-Text aus offiziellen Konten, nie erfunden und nie als Übersetzung der Quelle ausgegeben. Jeder Link öffnet den Originalartikel oder -beitrag.",
+        "legal": "Nur-Text-Seite. Keine Videos oder X-Skripte. Die einzige Zählung ist ein anonymer Besuchs- und Nutzungszähler (GoatCounter, Konto osnews-may), ohne Cookies und ohne personenbezogene Daten. Schlagzeilen stammen aus offiziellen öffentlichen RSS-Feeds; X-Text aus offiziellen Konten, nie erfunden und nie als Übersetzung der Quelle ausgegeben. Jeder Link öffnet den Originalartikel oder -beitrag.",
         "open_article": "Originalartikel öffnen",
         "open_post": "Beitrag auf X öffnen",
     },
     "pt": {
         "title": "OSNews TV World · versão leve",
-        "tagline": "Só texto, para ligações lentas. Titulares de canais RSS oficiais, com ligação para o artigo original. Sem vídeos, sem rastreadores e sem recolha de dados.",
+        "tagline": "Só texto, para ligações lentas. Titulares de canais RSS oficiais, com ligação para o artigo original. Sem vídeos. O único cômputo é um contador anónimo de visitas e de uso (GoatCounter, conta osnews-may), sem cookies nem dados pessoais.",
         "back_full": "Versão completa (com vídeos)",
         "back_home": "Voltar à OSNews",
         "language": "Idioma",
@@ -307,13 +307,13 @@ I18N = {
         "failed": "Este canal não pôde ser lido nesta atualização.",
         "stale": "Mantêm-se os titulares de uma atualização anterior; o canal não respondeu agora.",
         "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.",
-        "legal": "Página só de texto. Não incorpora vídeos nem scripts do X, não carrega tipos de letra externos, não usa rastreadores e não recolhe dados. Os titulares vêm de canais RSS públicos oficiais; o texto do X, de contas oficiais, sem inventar nem traduzir como se fosse da fonte. Cada ligação abre o artigo ou a publicação original.",
+        "legal": "Página só de texto. Não incorpora vídeos nem scripts do X. O único cômputo é um contador anónimo de visitas e de uso (GoatCounter, conta osnews-may), sem cookies nem dados pessoais. Os titulares vêm de canais RSS públicos oficiais; o texto do X, de contas oficiais, sem inventar nem traduzir como se fosse da fonte. Cada ligação abre o artigo ou a publicação original.",
         "open_article": "Abrir o artigo original",
         "open_post": "Abrir a publicação no X",
     },
     "it": {
         "title": "OSNews TV World · versione leggera",
-        "tagline": "Solo testo, per connessioni lente. Titoli da feed RSS ufficiali, con collegamento all’articolo originale. Niente video, niente tracker e nessuna raccolta di dati.",
+        "tagline": "Solo testo, per connessioni lente. Titoli da feed RSS ufficiali, con collegamento all’articolo originale. Niente video. L’unico conteggio è un contatore anonimo di visite e di uso (GoatCounter, account osnews-may), senza cookie né dati personali.",
         "back_full": "Versione completa (con video)",
         "back_home": "Torna a OSNews",
         "language": "Lingua",
@@ -334,13 +334,13 @@ I18N = {
         "failed": "Questo feed non è stato letto in questo aggiornamento.",
         "stale": "Sono conservati i titoli di un aggiornamento precedente; il feed non ha risposto questa volta.",
         "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.",
-        "legal": "Pagina solo testuale. Non incorpora video né script di X, non carica font esterni, non usa tracker e non raccoglie dati. I titoli arrivano da feed RSS pubblici ufficiali; il testo di X, da account ufficiali, senza inventare né tradurre presentandolo come della fonte. Ogni collegamento apre l’articolo o il post originale.",
+        "legal": "Pagina solo testuale. Non incorpora video né script di X. L’unico conteggio è un contatore anonimo di visite e di uso (GoatCounter, account osnews-may), senza cookie né dati personali. I titoli arrivano da feed RSS pubblici ufficiali; il testo di X, da account ufficiali, senza inventare né tradurre presentandolo come della fonte. Ogni collegamento apre l’articolo o il post originale.",
         "open_article": "Apri l’articolo originale",
         "open_post": "Apri il post su X",
     },
     "ar": {
         "title": "OSNews TV World · نسخة خفيفة",
-        "tagline": "نص فقط، للاتصالات البطيئة. عناوين من خلاصات RSS الرسمية، مع رابط إلى المقال الأصلي. بلا فيديو ولا متعقّبات ولا جمع للبيانات.",
+        "tagline": "نص فقط، للاتصالات البطيئة. عناوين من خلاصات RSS الرسمية، مع رابط إلى المقال الأصلي. بلا فيديو. العدّ الوحيد هو عدّاد مجهول للزيارات والاستخدام (GoatCounter، حساب osnews-may)، بدون ملفات تعريف ارتباط ولا بيانات شخصية.",
         "back_full": "النسخة الكاملة (مع الفيديو)",
         "back_home": "العودة إلى OSNews",
         "language": "اللغة",
@@ -361,13 +361,13 @@ I18N = {
         "failed": "تعذّر قراءة هذه الخلاصة في هذا التحديث.",
         "stale": "يُحتفظ بعناوين من تحديث سابق؛ لم تستجب الخلاصة هذه المرة.",
         "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.",
-        "legal": "صفحة نصية فقط. لا تضمّن فيديو ولا سكربتات X، ولا تحمّل خطوطًا خارجية، ولا تستخدم متعقّبات ولا تجمع بيانات. العناوين من خلاصات RSS الرسمية؛ ونص X من حسابات رسمية، دون اختراع أو ترجمة تُقدَّم على أنها من المصدر. كل رابط يفتح المقال أو المنشور الأصلي.",
+        "legal": "صفحة نصية فقط. لا تضمّن فيديو ولا سكربتات X. العدّ الوحيد هو عدّاد مجهول للزيارات والاستخدام (GoatCounter، حساب osnews-may)، بدون ملفات تعريف ارتباط ولا بيانات شخصية. العناوين من خلاصات RSS الرسمية؛ ونص X من حسابات رسمية، دون اختراع أو ترجمة تُقدَّم على أنها من المصدر. كل رابط يفتح المقال أو المنشور الأصلي.",
         "open_article": "فتح المقال الأصلي",
         "open_post": "فتح المنشور على X",
     },
     "zh": {
         "title": "OSNews TV World · 轻量版",
-        "tagline": "纯文字，适合较慢的网络。标题来自官方 RSS，并链向原文。无视频、无跟踪器、不收集数据。",
+        "tagline": "纯文字，适合较慢的网络。标题来自官方 RSS，并链向原文。无视频。唯一的统计是匿名的访问与使用计数器（GoatCounter，账户 osnews-may），无 Cookie，不收集个人数据。",
         "back_full": "完整版（含视频）",
         "back_home": "返回 OSNews",
         "language": "语言",
@@ -388,7 +388,7 @@ I18N = {
         "failed": "本次更新未能读取该源。",
         "stale": "保留上次更新的标题；此次源未响应。",
         "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.",
-        "legal": "纯文字页面。不嵌入视频或 X 脚本，不加载外部字体，不使用跟踪器，不收集数据。标题来自官方公开 RSS；X 文本来自官方账号，绝不编造，也绝不把机翻当成原文。每个链接打开原始文章或帖文。",
+        "legal": "纯文字页面。不嵌入视频或 X 脚本。唯一的统计是匿名的访问与使用计数器（GoatCounter，账户 osnews-may），无 Cookie，不收集个人数据。标题来自官方公开 RSS；X 文本来自官方账号，绝不编造，也绝不把机翻当成原文。每个链接打开原始文章或帖文。",
         "open_article": "打开原文",
         "open_post": "打开 X 上的帖文",
     },
@@ -829,6 +829,8 @@ def render_html(lang, data, generated_at, x_fetched, errors):
       <p>{html.escape(ui['legal'])}</p>
     </footer>
   </div>
+  <script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  <script src="../../contador-osnews.js" data-uso="/osnews/tv-world/ligera/uso" data-uso-titulo="Uso TV World ligera"></script>
 </body>
 </html>
 """

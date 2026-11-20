@@ -1,5 +1,5 @@
-/* Aníbal · OSNews — local cache only, same origin, no tracking. */
-const C = 'anibal-v6';
+/* Aníbal · OSNews — local cache only, same origin. Visit/usage counter is GoatCounter (third-party). */
+const C = 'anibal-v7';
 const CORE = [
   './',
   './index.html',
@@ -7,6 +7,7 @@ const CORE = [
   './app.js',
   './ime.js',
   './palabra.js',
+  '../contador-osnews.js',
   './manifest.webmanifest',
   './icon-192.png',
   './icon-512.png'

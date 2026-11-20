@@ -1,4 +1,4 @@
-/* OSNews Museos — interface logic only. No tracking, no API keys. */
+/* OSNews Museos — interface logic only. No API keys. Visit/usage counter is in the page. */
 (function () {
   const LANGS = window.OSNEWS_MUSEOS_LANGS;
   const T = window.OSNEWS_MUSEOS_T;

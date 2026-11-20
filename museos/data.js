@@ -1,4 +1,4 @@
-/* OSNews Museos — translations and official links only. No tracking, no API keys. */
+/* OSNews Museos — translations and official links only. No API keys. Anonymous GoatCounter only. */
 (function (root) {
   var LANGS = [
     { id: "es", label: "Español", dir: "ltr" },
@@ -13,7 +13,7 @@
   var T = {
   "es": {
     "title": "OSNews Museos",
-    "lead": "Museos de Europa y de Estados Unidos, galerías de arte, Instituto Cervantes, la lengua española y libros electrónicos de fuentes legales. Enlaces oficiales a visitas virtuales, colecciones y diccionarios. Gratis, sin anuncios ni rastreadores.",
+    "lead": "Museos de Europa y de Estados Unidos, galerías de arte, Instituto Cervantes, la lengua española y libros electrónicos de fuentes legales. Enlaces oficiales a visitas virtuales, colecciones y diccionarios. Gratis, sin anuncios. Contador anónimo de visitas y de uso (GoatCounter), sin cookies ni datos personales.",
     "navAnibal": "Aníbal",
     "navCanales": "Canales OSNews",
     "navTv": "OSNews TV World",
@@ -45,11 +45,11 @@
     "agenda": "Agenda cultural",
     "library": "Biblioteca",
     "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.",
-    "legal": "OSNews Museos no copia ni aloja las obras ni los libros: solo abre las páginas oficiales de cada institución. La obra del día, si se muestra, se carga desde la API de acceso abierto del Cleveland Museum of Art (CC0), con su crédito. Sin anuncios ni rastreadores."
+    "legal": "OSNews Museos no copia ni aloja las obras ni los libros: solo abre las páginas oficiales de cada institución. La obra del día, si se muestra, se carga desde la API de acceso abierto del Cleveland Museum of Art (CC0), con su crédito. El único recuento es un contador anónimo de visitas y de uso (GoatCounter, cuenta osnews-may), sin cookies ni datos personales."
   },
   "en": {
     "title": "OSNews Museums",
-    "lead": "Museums in Europe and the United States, art galleries, Instituto Cervantes, the Spanish language and free e-books from legal sources, with official links to virtual tours, collections and dictionaries. Free, with no ads and no trackers.",
+    "lead": "Museums in Europe and the United States, art galleries, Instituto Cervantes, the Spanish language and free e-books from legal sources, with official links to virtual tours, collections and dictionaries. Free, with no ads. The only count is an anonymous visit and app-usage counter (GoatCounter, account osnews-may), with no cookies and no personal data.",
     "navAnibal": "Aníbal",
     "navCanales": "OSNews Channels",
     "navTv": "OSNews TV World",
@@ -81,11 +81,11 @@
     "agenda": "Cultural programme",
     "library": "Library",
     "authors": "Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot.",
-    "legal": "OSNews Museums does not copy or host artworks or books: it only opens each institution’s official pages. The work of the day, when shown, is loaded from the Cleveland Museum of Art’s open-access API (CC0), with credit. No ads and no trackers."
+    "legal": "OSNews Museums does not copy or host artworks or books: it only opens each institution’s official pages. The work of the day, when shown, is loaded from the Cleveland Museum of Art’s open-access API (CC0), with credit. The only count is an anonymous visit and app-usage counter (GoatCounter, account osnews-may), with no cookies and no personal data."
   },
   "fr": {
     "title": "OSNews Musées",
-    "lead": "Musées d’Europe et des États-Unis, galeries d’art, Instituto Cervantes, langue espagnole et livres numériques de sources légales, avec des liens officiels vers des visites virtuelles, des collections et des dictionnaires. Gratuit, sans publicité ni traceurs.",
+    "lead": "Musées d’Europe et des États-Unis, galeries d’art, Instituto Cervantes, langue espagnole et livres numériques de sources légales, avec des liens officiels vers des visites virtuelles, des collections et des dictionnaires. Gratuit, sans publicité. Le seul comptage est un compteur anonyme de visites et d’usage (GoatCounter, compte osnews-may), sans cookies ni données personnelles.",
     "navAnibal": "Aníbal",
     "navCanales": "Chaînes OSNews",
     "navTv": "OSNews TV World",
@@ -117,11 +117,11 @@
     "agenda": "Agenda culturel",
     "library": "Bibliothèque",
     "authors": "Auteurs : Pedro Sánchez Gómez (Mar Menor) et son bot Grok.",
-    "legal": "OSNews Musées ne copie ni n’héberge les œuvres ni les livres : il ouvre seulement les pages officielles de chaque institution. L’œuvre du jour, le cas échéant, est chargée depuis l’API en accès libre du Cleveland Museum of Art (CC0), avec mention. Sans publicité ni traceurs."
+    "legal": "OSNews Musées ne copie ni n’héberge les œuvres ni les livres : il ouvre seulement les pages officielles de chaque institution. L’œuvre du jour, le cas échéant, est chargée depuis l’API en accès libre du Cleveland Museum of Art (CC0), avec mention. Le seul comptage est un compteur anonyme de visites et d’usage (GoatCounter, compte osnews-may), sans cookies ni données personnelles."
   },
   "de": {
     "title": "OSNews Museen",
-    "lead": "Museen in Europa und den USA, Kunstgalerien, das Instituto Cervantes, die spanische Sprache und kostenlose E-Books aus legalen Quellen, mit offiziellen Links zu virtuellen Rundgängen, Sammlungen und Wörterbüchern. Kostenlos, ohne Werbung und ohne Tracker.",
+    "lead": "Museen in Europa und den USA, Kunstgalerien, das Instituto Cervantes, die spanische Sprache und kostenlose E-Books aus legalen Quellen, mit offiziellen Links zu virtuellen Rundgängen, Sammlungen und Wörterbüchern. Kostenlos, ohne Werbung. Die einzige Zählung ist ein anonymer Besuchs- und Nutzungszähler (GoatCounter, Konto osnews-may), ohne Cookies und ohne personenbezogene Daten.",
     "navAnibal": "Aníbal",
     "navCanales": "OSNews-Kanäle",
     "navTv": "OSNews TV World",
@@ -153,11 +153,11 @@
     "agenda": "Kulturprogramm",
     "library": "Bibliothek",
     "authors": "Autoren: Pedro Sánchez Gómez (Mar Menor) und sein Grok-Bot.",
-    "legal": "OSNews Museen kopiert oder hostet keine Kunstwerke und keine Bücher: es öffnet nur die offiziellen Seiten jeder Institution. Das Werk des Tages wird, wenn angezeigt, über die Open-Access-API des Cleveland Museum of Art (CC0) geladen, mit Quellenangabe. Keine Werbung, keine Tracker."
+    "legal": "OSNews Museen kopiert oder hostet keine Kunstwerke und keine Bücher: es öffnet nur die offiziellen Seiten jeder Institution. Das Werk des Tages wird, wenn angezeigt, über die Open-Access-API des Cleveland Museum of Art (CC0) geladen, mit Quellenangabe. Die einzige Zählung ist ein anonymer Besuchs- und Nutzungszähler (GoatCounter, Konto osnews-may), ohne Cookies und ohne personenbezogene Daten."
   },
   "pt": {
     "title": "OSNews Museus",
-    "lead": "Museus da Europa e dos Estados Unidos, galerias de arte, Instituto Cervantes, a língua espanhola e livros eletrónicos de fontes legais, com ligações oficiais a visitas virtuais, coleções e dicionários. Gratuito, sem anúncios nem rastreadores.",
+    "lead": "Museus da Europa e dos Estados Unidos, galerias de arte, Instituto Cervantes, a língua espanhola e livros eletrónicos de fontes legais, com ligações oficiais a visitas virtuais, coleções e dicionários. Gratuito, sem anúncios. O único cômputo é um contador anónimo de visitas e de uso (GoatCounter, conta osnews-may), sem cookies nem dados pessoais.",
     "navAnibal": "Aníbal",
     "navCanales": "Canais OSNews",
     "navTv": "OSNews TV World",
@@ -189,11 +189,11 @@
     "agenda": "Agenda cultural",
     "library": "Biblioteca",
     "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) e o seu bot de Grok.",
-    "legal": "O OSNews Museus não copia nem aloja as obras nem os livros: apenas abre as páginas oficiais de cada instituição. A obra do dia, quando aparece, é carregada a partir da API de acesso aberto do Cleveland Museum of Art (CC0), com os devidos créditos. Sem anúncios nem rastreadores."
+    "legal": "O OSNews Museus não copia nem aloja as obras nem os livros: apenas abre as páginas oficiais de cada instituição. A obra do dia, quando aparece, é carregada a partir da API de acesso aberto do Cleveland Museum of Art (CC0), com os devidos créditos. O único cômputo é um contador anónimo de visitas e de uso (GoatCounter, conta osnews-may), sem cookies nem dados pessoais."
   },
   "it": {
     "title": "OSNews Musei",
-    "lead": "Musei d’Europa e degli Stati Uniti, gallerie d’arte, Instituto Cervantes, lingua spagnola e libri elettronici da fonti legali, con collegamenti ufficiali a visite virtuali, collezioni e dizionari. Gratis, senza pubblicità né tracciatori.",
+    "lead": "Musei d’Europa e degli Stati Uniti, gallerie d’arte, Instituto Cervantes, lingua spagnola e libri elettronici da fonti legali, con collegamenti ufficiali a visite virtuali, collezioni e dizionari. Gratis, senza pubblicità. L’unico conteggio è un contatore anonimo di visite e di uso (GoatCounter, account osnews-may), senza cookie né dati personali.",
     "navAnibal": "Aníbal",
     "navCanales": "Canali OSNews",
     "navTv": "OSNews TV World",
@@ -225,11 +225,11 @@
     "agenda": "Agenda culturale",
     "library": "Biblioteca",
     "authors": "Autori: Pedro Sánchez Gómez (Mar Menor) e il suo bot di Grok.",
-    "legal": "OSNews Musei non copia né ospita le opere né i libri: apre solo le pagine ufficiali di ogni istituzione. L’opera del giorno, se mostrata, è caricata dall’API open access del Cleveland Museum of Art (CC0), con la fonte. Senza pubblicità né tracciatori."
+    "legal": "OSNews Musei non copia né ospita le opere né i libri: apre solo le pagine ufficiali di ogni istituzione. L’opera del giorno, se mostrata, è caricata dall’API open access del Cleveland Museum of Art (CC0), con la fonte. L’unico conteggio è un contatore anonimo di visite e di uso (GoatCounter, account osnews-may), senza cookie né dati personali."
   },
   "ar": {
     "title": "متاحف OSNews",
-    "lead": "متاحف أوروبا والولايات المتحدة ومعارض الفن ومعهد ثيربانتس واللغة الإسبانية وكتب إلكترونية من مصادر قانونية، مع روابط رسمية إلى جولات افتراضية ومجموعات وقواميس. مجاناً، بلا إعلانات ولا أدوات تتبع.",
+    "lead": "متاحف أوروبا والولايات المتحدة ومعارض الفن ومعهد ثيربانتس واللغة الإسبانية وكتب إلكترونية من مصادر قانونية، مع روابط رسمية إلى جولات افتراضية ومجموعات وقواميس. مجاناً، بلا إعلانات. العدّ الوحيد هو عدّاد مجهول للزيارات والاستخدام (GoatCounter، حساب osnews-may)، بدون ملفات تعريف ارتباط ولا بيانات شخصية.",
     "navAnibal": "أنيبال",
     "navCanales": "قنوات OSNews",
     "navTv": "OSNews TV World",
@@ -261,11 +261,11 @@
     "agenda": "الأجندة الثقافية",
     "library": "المكتبة",
     "authors": "المؤلفان: Pedro Sánchez Gómez (مار مينور) وروبوت Grok الخاص به.",
-    "legal": "متاحف OSNews لا تنسخ الأعمال ولا الكتب ولا تستضيفها: بل تفتح الصفحات الرسمية لكل مؤسسة فقط. يُحمَّل عمل اليوم، إن ظهر، من واجهة الوصول المفتوح لمتحف كليفلاند للفن (CC0) مع ذكر المصدر. بلا إعلانات ولا أدوات تتبع."
+    "legal": "متاحف OSNews لا تنسخ الأعمال ولا الكتب ولا تستضيفها: بل تفتح الصفحات الرسمية لكل مؤسسة فقط. يُحمَّل عمل اليوم، إن ظهر، من واجهة الوصول المفتوح لمتحف كليفلاند للفن (CC0) مع ذكر المصدر. العدّ الوحيد هو عدّاد مجهول للزيارات والاستخدام (GoatCounter، حساب osnews-may)، بدون ملفات تعريف ارتباط ولا بيانات شخصية."
   },
   "zh": {
     "title": "OSNews 博物馆",
-    "lead": "欧洲与美国的博物馆、美术馆、塞万提斯学院、西班牙语资源，以及来自合法来源的免费电子书，提供官方虚拟参观、馆藏和词典链接。免费，无广告，无追踪。",
+    "lead": "欧洲与美国的博物馆、美术馆、塞万提斯学院、西班牙语资源，以及来自合法来源的免费电子书，提供官方虚拟参观、馆藏和词典链接。免费，无广告。唯一的统计是匿名的访问与使用计数器（GoatCounter，账户 osnews-may），无 Cookie，不收集个人数据。",
     "navAnibal": "Aníbal",
     "navCanales": "OSNews 频道",
     "navTv": "OSNews TV World",
@@ -297,7 +297,7 @@
     "agenda": "文化活动",
     "library": "图书馆",
     "authors": "作者：Pedro Sánchez Gómez（马尔梅诺）及其 Grok 机器人。",
-    "legal": "OSNews 博物馆不复制、不托管作品或图书，只打开各机构的官方页面。每日作品（如显示）来自克利夫兰艺术博物馆开放获取 API（CC0），并注明来源。无广告，无追踪。"
+    "legal": "OSNews 博物馆不复制、不托管作品或图书，只打开各机构的官方页面。每日作品（如显示）来自克利夫兰艺术博物馆开放获取 API（CC0），并注明来源。唯一的统计是匿名的访问与使用计数器（GoatCounter，账户 osnews-may），无 Cookie，不收集个人数据。"
   }
 };
   var ITEMS = [
