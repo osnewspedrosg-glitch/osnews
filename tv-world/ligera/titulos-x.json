@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-20T00:04:48+01:00",
+ "fetched_at": "2026-11-20T08:04:32+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
  "accounts": [
@@ -20,6 +20,69 @@
  ],
  "countries": {
   "china": [
+   {
+    "id": "2123668916618891756",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "07:45",
+    "text": "US President Donald Trump has long reveled in the pomp and ceremony of international summitry but has often come away with little to show for his signature brand of personalized diplomacy.\n\nHis meeting with Chinese President Xi Jinping and Russian President Vladimir Putin has",
+    "url": "https://x.com/Reuters/status/2123668916618891756"
+   },
+   {
+    "id": "2123660108504994077",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "07:10",
+    "text": "Exclusive: The US government should not certify Chinese-made airplanes and pull contracts from defense contractors, including European aerospace manufacturer Airbus, if they do not halt investments in China's aerospace industrial base, a congressional report reviewed by Reuters",
+    "url": "https://x.com/Reuters/status/2123660108504994077"
+   },
+   {
+    "id": "2123655095086649369",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "06:50",
+    "text": "China and Australia can cooperate more in areas such as agriculture and AI, President Xi Jinping told Prime Minister Anthony Albanese, hailing a ‘comprehensive turnaround’ in the countries' relationship https://t.co/WHCO6FqQCp",
+    "url": "https://x.com/Reuters/status/2123655095086649369"
+   },
+   {
+    "id": "2123652603561037982",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "06:40",
+    "text": "Exclusive: Taiwan has flagged nearly 2,700 social media accounts to Meta that it says appear to be part of a Chinese information warfare campaign seeking to influence elections on the island next week https://t.co/GxdoE2YWPr",
+    "url": "https://x.com/Reuters/status/2123652603561037982"
+   },
+   {
+    "id": "2123634950628872198",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-11-20",
+    "time": "05:30",
+    "text": "All the pomp and spectacle of a summit that drew thousands of delegates from four continents, among them President Trump, could not distract from what was unmistakable: This was Chinese leader Xi Jinping’s moment. https://t.co/wDs94Xrkbw",
+    "url": "https://x.com/washingtonpost/status/2123634950628872198"
+   },
+   {
+    "id": "2123632976651067538",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-20",
+    "time": "05:22",
+    "text": "Inusuales restricciones a #teléfonos de #periodistas en el #AirForceOne\n\nAl salir de #China, todos los dispositivos fueron colocados en bolsas que bloquean la señal, hasta que el avión aterrizó en Estados Unidos. (jc)\nhttps://t.co/KUEnkKu6gW",
+    "url": "https://x.com/dw_espanol/status/2123632976651067538"
+   },
+   {
+    "id": "2123632478019608651",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "05:20",
+    "text": "Trump says aide raised with Chinese side detention of two Americans https://t.co/DRRTviftgG",
+    "url": "https://x.com/Reuters/status/2123632478019608651"
+   },
    {
     "id": "2123551943289176452",
     "account": "washingtonpost",
@@ -832,6 +895,33 @@
    }
   ],
   "india": [
+   {
+    "id": "2123665195645939736",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "07:30",
+    "text": "US religious freedom panel says India is targeting minorities in voter roll revisions https://t.co/5g4kfcZojx",
+    "url": "https://x.com/Reuters/status/2123665195645939736"
+   },
+   {
+    "id": "2123602245556047930",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "03:20",
+    "text": "India has escalated its targeting of religious minorities during a voter list revision that struck off tens of millions of names nationwide, a US panel on religious freedom said https://t.co/vrLtgHQ5FK",
+    "url": "https://x.com/Reuters/status/2123602245556047930"
+   },
+   {
+    "id": "2123560059812581701",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-20",
+    "time": "00:32",
+    "text": "Cumin-laced fizzy sodas are giving cola giants a tough fight in India https://t.co/yATMNoLE0g",
+    "url": "https://x.com/BBCWorld/status/2123560059812581701"
+   },
    {
     "id": "2123548177886228688",
     "account": "Reuters",
