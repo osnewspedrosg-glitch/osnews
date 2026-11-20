@@ -8,7 +8,7 @@ Página de inicio ligera de OSNews, en [https://osnewspedrosg-glitch.github.io/o
 - Sección «Starlink · Conexión a internet satelital» (invitación de Pedro): cita literal de [@grok](https://x.com/grok/status/2121221590281040076) del 13 nov 2026 y el enlace de invitación. Sin rastreadores.
 - Tarjeta para X y redes (Open Graph y `summary_large_image`) con la imagen `og-anibal.png` de 1200×630.
 - Modo claro u oscuro: sigue el sistema (`prefers-color-scheme`) y, dentro de la app Aníbal, el tema elegido.
-- Búsqueda general en [DuckDuckGo](https://duckduckgo.com/) (formulario GET normal, sin rastreador en esta página).
+- Búsqueda general en [DuckDuckGo](https://duckduckgo.com/) (formulario GET normal).
 - El buscador OSNews World (`/buscador/`) existe en el material de trabajo, pero todavía no está publicado en GitHub Pages, así que no hay enlace a él.
 - Sección destacada «Azum · tu bot personal»: botón [Instala tu bot Azum](https://x.ai/bot/HN5oMXEOftu3wGLT-uD_m) (cada usuario o pequeño negocio usa su propio plan Super Grok Bot; OSNews no paga ni guarda claves) y enlace a la [web de Azum](../azum/).
 - Teselas: OSNews TV World, versión ligera, Vídeos OSNews, Azum, Canal YouTube OSNews, [YouTube OSNews World](https://www.youtube.com/@OSNewsWorld), Canales OSNews, [OSNews Museos](../museos/), Noticias por país, la app OSNews y [Descargar app Android](https://github.com/osnewspedrosg-glitch/osnews/releases/download/anibal-v1.3/Anibal-OSNews-v1.3.apk).
@@ -17,7 +17,7 @@ Página de inicio ligera de OSNews, en [https://osnewspedrosg-glitch.github.io/o
 - Sección «Vídeos OSNews» (v1.3): copias propias de debates y anuncios en un reproductor HTML5, alojadas en la publicación de GitHub, sin incrustar YouTube ni rastreadores. El enlace «Ver en YouTube» (cuando hay un vídeo coincidente del canal OSNews) se abre fuera de Aníbal.
 - Interfaz en 8 idiomas (es, en, fr, de, pt, it, ar con RTL, zh).
 - PWA: `manifest.webmanifest`, iconos propios y `sw.js` (solo esta carpeta).
-- Sin anuncios, sin rastreadores, sin fuentes externas.
+- Sin anuncios. Hay un contador anónimo de visitas y de uso (GoatCounter, cuenta `osnews-may`), sin cookies ni datos personales.
 
 Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.
 

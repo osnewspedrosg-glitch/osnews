@@ -13,7 +13,7 @@ En cada canal hay:
 - Publicaciones de cuentas oficiales del propio país, también con el texto literal y el enlace al original.
 - Un buscador que abre la búsqueda en directo de X en el idioma del canal, y botones estáticos por país filtrados a fuentes oficiales. Esta página no envía la consulta a ningún servidor de OSNews ni usa claves.
 
-Sin retransmisión de señales ajenas, sin scripts de X, sin anuncios, sin rastreadores y sin recogida de datos.
+Sin retransmisión de señales ajenas, sin scripts de X y sin anuncios. El único recuento es un contador anónimo de visitas y de uso (GoatCounter, cuenta osnews-may), sin cookies ni datos personales.
 
 Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.
 

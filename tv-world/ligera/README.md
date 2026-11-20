@@ -6,7 +6,7 @@ Página de solo texto para conexiones lentas: [ligera/](./) (y [versión complet
 - Si un idioma no tiene canal oficial, se muestra el canal oficial más cercano, etiquetado.
 - «Noticias por país» (China, India, Marruecos, Cuba) filtra esos titulares. También incluye, cuando aparecen en el titular, medios europeos y estadounidenses con RSS oficial (BBC, The New York Times, The Washington Post, NPR, El País, Le Monde, The Guardian, DW, Euronews, France 24).
 - El bloque de X cita publicaciones reales de las cuentas oficiales de esos medios (extracto, cuenta, fecha y enlace a x.com). No hay scripts ni incrustaciones de X.
-- Sin vídeos, sin rastreadores, sin fuentes externas y sin recogida de datos.
+- Sin vídeos ni scripts de X. El único recuento es un contador anónimo de visitas y de uso (GoatCounter, cuenta osnews-may), sin cookies ni datos personales.
 - Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.
 
 Actualización: el flujo programado de GitHub Actions (`tv-ligera.yml`, 07:00 UTC) vuelve a leer los RSS y regenera estas páginas, sin claves ni servicios de pago. Las publicaciones de X se guardan en `titulos-x.json` y las actualiza la rutina diaria de las 8:00 (Europe/Madrid), porque Actions no tiene acceso a X.

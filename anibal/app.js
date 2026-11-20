@@ -1,4 +1,4 @@
-/* Aníbal · navegador OSNews — interface text only, no tracking, no remote calls. */
+/* Aníbal · navegador OSNews — interface text only, no remote app calls. Visit/usage counter is in the page. */
 (function () {
   const LANGS = [
     { id: 'es', label: 'Español', dir: 'ltr' },
@@ -14,7 +14,7 @@
   const T = {
     es: {
       title: 'Aníbal · navegador OSNews',
-      tagline: 'Página de inicio de OSNews, sin anuncios ni rastreadores.',
+      tagline: 'Página de inicio de OSNews, sin anuncios. Contador anónimo de visitas y de uso (GoatCounter), sin cookies ni datos personales.',
       back: 'Volver a OSNews',
       lang: 'Idioma',
       search: 'Buscar',
@@ -63,7 +63,7 @@
       install: 'Instalar Aníbal',
       installed: 'Aníbal instalado',
       installHelp: 'En Chrome, abre el menú ⋮ y elige Instalar aplicación o Añadir a la pantalla de inicio. En iPhone, abre esta página en Safari, pulsa Compartir y elige Añadir a pantalla de inicio.',
-      legal: 'Aníbal es una página de inicio y un navegador ligero para Android. No sustituye a Chrome ni a Firefox.',
+      legal: 'Aníbal es una página de inicio y un navegador ligero para Android. No sustituye a Chrome ni a Firefox. El único recuento es un contador anónimo de visitas y de uso (GoatCounter, cuenta osnews-may), sin cookies ni datos personales.',
       xosnews: 'X OSNews',
       xosnewsS: '@Osnewsmaygrok: boletines de MAY cada hora',
       grok: 'Grok',
@@ -113,7 +113,7 @@
     },
     en: {
       title: 'Aníbal · OSNews browser',
-      tagline: 'OSNews start page, with no ads and no trackers.',
+      tagline: 'OSNews start page, with no ads. Anonymous visit and app-usage counter (GoatCounter), with no cookies and no personal data.',
       back: 'Back to OSNews',
       lang: 'Language',
       search: 'Search',
@@ -162,7 +162,7 @@
       install: 'Install Aníbal',
       installed: 'Aníbal installed',
       installHelp: 'In Chrome, open the ⋮ menu and choose Install app or Add to Home screen. On iPhone, open this page in Safari, tap Share, then Add to Home Screen.',
-      legal: 'Aníbal is a start page and a lightweight Android browser. It does not replace Chrome or Firefox.',
+      legal: 'Aníbal is a start page and a lightweight Android browser. It does not replace Chrome or Firefox. The only count is an anonymous visit and app-usage counter (GoatCounter, account osnews-may), with no cookies and no personal data.',
       xosnews: 'X OSNews',
       xosnewsS: '@Osnewsmaygrok: MAY bulletins every hour',
       grok: 'Grok',
@@ -213,7 +213,7 @@
     },
     fr: {
       title: 'Aníbal · navigateur OSNews',
-      tagline: 'Page d’accueil OSNews, sans publicités ni traqueurs.',
+      tagline: 'Page d’accueil OSNews, sans publicités. Compteur anonyme de visites et d’usage (GoatCounter), sans cookies ni données personnelles.',
       back: 'Retour à OSNews',
       lang: 'Langue',
       search: 'Rechercher',
@@ -262,12 +262,12 @@
       install: 'Installer Aníbal',
       installed: 'Aníbal installé',
       installHelp: 'Dans Chrome, ouvrez le menu ⋮ et choisissez Installer l’application ou Ajouter à l’écran d’accueil. Sur iPhone, ouvrez cette page dans Safari, touchez Partager, puis Ajouter à l’écran d’accueil.',
-      legal: 'Aníbal est une page d’accueil et un navigateur léger pour Android. Il ne remplace pas Chrome ni Firefox.',
+      legal: 'Aníbal est une page d’accueil et un navigateur léger pour Android. Il ne remplace pas Chrome ni Firefox. Le seul comptage est un compteur anonyme de visites et d’usage (GoatCounter, compte osnews-may), sans cookies ni données personnelles.',
       authors: 'Auteurs : Pedro Sánchez Gómez (Mar Menor) et son bot de Grok.'
     },
     de: {
       title: 'Aníbal · OSNews-Browser',
-      tagline: 'OSNews-Startseite, ohne Werbung und ohne Tracker.',
+      tagline: 'OSNews-Startseite, ohne Werbung. Anonymer Besuchs- und Nutzungszähler (GoatCounter), ohne Cookies und ohne personenbezogene Daten.',
       back: 'Zurück zu OSNews',
       lang: 'Sprache',
       search: 'Suchen',
@@ -316,12 +316,12 @@
       install: 'Aníbal installieren',
       installed: 'Aníbal installiert',
       installHelp: 'Öffne in Chrome das Menü ⋮ und wähle App installieren oder Zum Startbildschirm hinzufügen. Auf dem iPhone öffne diese Seite in Safari, tippe auf Teilen und dann auf Zum Home-Bildschirm.',
-      legal: 'Aníbal ist eine Startseite und ein schlanker Android-Browser. Er ersetzt weder Chrome noch Firefox.',
+      legal: 'Aníbal ist eine Startseite und ein schlanker Android-Browser. Er ersetzt weder Chrome noch Firefox. Die einzige Zählung ist ein anonymer Besuchs- und Nutzungszähler (GoatCounter, Konto osnews-may), ohne Cookies und ohne personenbezogene Daten.',
       authors: 'Autoren: Pedro Sánchez Gómez (Mar Menor) und sein Grok-Bot.'
     },
     pt: {
       title: 'Aníbal · navegador OSNews',
-      tagline: 'Página inicial da OSNews, sem anúncios nem rastreadores.',
+      tagline: 'Página inicial da OSNews, sem anúncios. Contador anónimo de visitas e de uso (GoatCounter), sem cookies nem dados pessoais.',
       back: 'Voltar à OSNews',
       lang: 'Idioma',
       search: 'Pesquisar',
@@ -370,12 +370,12 @@
       install: 'Instalar Aníbal',
       installed: 'Aníbal instalado',
       installHelp: 'No Chrome, abra o menu ⋮ e escolha Instalar aplicação ou Adicionar ao ecrã principal. No iPhone, abra esta página no Safari, toque em Partilhar e escolha Adicionar ao ecrã principal.',
-      legal: 'Aníbal é uma página inicial e um navegador leve para Android. Não substitui o Chrome nem o Firefox.',
+      legal: 'Aníbal é uma página inicial e um navegador leve para Android. Não substitui o Chrome nem o Firefox. O único cômputo é um contador anónimo de visitas e de uso (GoatCounter, conta osnews-may), sem cookies nem dados pessoais.',
       authors: 'Autores: Pedro Sánchez Gómez (Mar Menor) e o seu bot de Grok.'
     },
     it: {
       title: 'Aníbal · browser OSNews',
-      tagline: 'Pagina iniziale di OSNews, senza annunci né tracker.',
+      tagline: 'Pagina iniziale di OSNews, senza annunci. Contatore anonimo di visite e di uso (GoatCounter), senza cookie né dati personali.',
       back: 'Torna a OSNews',
       lang: 'Lingua',
       search: 'Cerca',
@@ -424,12 +424,12 @@
       install: 'Installa Aníbal',
       installed: 'Aníbal installato',
       installHelp: 'In Chrome, apri il menu ⋮ e scegli Installa app o Aggiungi alla schermata Home. Su iPhone, apri questa pagina in Safari, tocca Condividi e scegli Aggiungi a Home.',
-      legal: 'Aníbal è una pagina iniziale e un browser leggero per Android. Non sostituisce Chrome né Firefox.',
+      legal: 'Aníbal è una pagina iniziale e un browser leggero per Android. Non sostituisce Chrome né Firefox. L’unico conteggio è un contatore anonimo di visite e di uso (GoatCounter, account osnews-may), senza cookie né dati personali.',
       authors: 'Autori: Pedro Sánchez Gómez (Mar Menor) e il suo bot di Grok.'
     },
     ar: {
       title: 'أنيبال · متصفح OSNews',
-      tagline: 'صفحة بداية OSNews، بلا إعلانات ولا متعقّبات.',
+      tagline: 'صفحة بداية OSNews، بلا إعلانات. العدّ الوحيد هو عدّاد مجهول للزيارات والاستخدام (GoatCounter، حساب osnews-may)، بدون ملفات تعريف ارتباط ولا بيانات شخصية.',
       back: 'العودة إلى OSNews',
       lang: 'اللغة',
       search: 'بحث',
@@ -478,12 +478,12 @@
       install: 'تثبيت أنيبال',
       installed: 'تم تثبيت أنيبال',
       installHelp: 'في Chrome، افتح القائمة ⋮ واختر تثبيت التطبيق أو إضافة إلى الشاشة الرئيسية. على iPhone، افتح هذه الصفحة في Safari، ثم مشاركة، ثم إضافة إلى الشاشة الرئيسية.',
-      legal: 'أنيبال صفحة بداية ومتصفح خفيف لأندرويد. لا تحل محل Chrome أو Firefox.',
+      legal: 'أنيبال صفحة بداية ومتصفح خفيف لأندرويد. لا تحل محل Chrome أو Firefox. العدّ الوحيد هو عدّاد مجهول للزيارات والاستخدام (GoatCounter، حساب osnews-may)، بدون ملفات تعريف ارتباط ولا بيانات شخصية.',
       authors: 'المؤلفان: Pedro Sánchez Gómez (Mar Menor) وروبوت Grok الخاص به.'
     },
     zh: {
       title: 'Aníbal · OSNews 浏览器',
-      tagline: 'OSNews 起始页，无广告、无跟踪器。',
+      tagline: 'OSNews 起始页，无广告。唯一的统计是匿名的访问与使用计数器（GoatCounter，账户 osnews-may），无 Cookie，不收集个人数据。',
       back: '返回 OSNews',
       lang: '语言',
       search: '搜索',
@@ -532,7 +532,7 @@
       install: '安装 Aníbal',
       installed: 'Aníbal 已安装',
       installHelp: '在 Chrome 中打开 ⋮ 菜单，选择“安装应用”或“添加到主屏幕”。在 iPhone 上用 Safari 打开本页，点“共享”，再选择“添加到主屏幕”。',
-      legal: 'Aníbal 是起始页，也是一款轻量 Android 浏览器，不能替代 Chrome 或 Firefox。',
+      legal: 'Aníbal 是起始页，也是一款轻量 Android 浏览器，不能替代 Chrome 或 Firefox。唯一的统计是匿名的访问与使用计数器（GoatCounter，账户 osnews-may），无 Cookie，不收集个人数据。',
       authors: '作者：Pedro Sánchez Gómez（Mar Menor）及其 Grok 机器人。'
     }
   };
