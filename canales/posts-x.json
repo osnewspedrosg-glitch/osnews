@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-20T00:04:48+01:00",
+ "fetched_at": "2026-11-20T08:04:32+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, official politician (government-verified) and official European/US TV-news accounts; start_time 2026-09-01T00:00:00Z (TV China/India/Morocco/Cuba from 2026-10-01T00:00:00Z); -is:retweet -is:reply; literal text only, country must appear in the post",
  "accounts": {
@@ -259,6 +259,186 @@
  "countries": {
   "china": [
    {
+    "id": "2123668916618891756",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "07:45",
+    "text": "US President Donald Trump has long reveled in the pomp and ceremony of international summitry but has often come away with little to show for his signature brand of personalized diplomacy.\n\nHis meeting with Chinese President Xi Jinping and Russian President Vladimir Putin has",
+    "url": "https://x.com/Reuters/status/2123668916618891756",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123660108504994077",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "07:10",
+    "text": "Exclusive: The US government should not certify Chinese-made airplanes and pull contracts from defense contractors, including European aerospace manufacturer Airbus, if they do not halt investments in China's aerospace industrial base, a congressional report reviewed by Reuters",
+    "url": "https://x.com/Reuters/status/2123660108504994077",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123655095086649369",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "06:50",
+    "text": "China and Australia can cooperate more in areas such as agriculture and AI, President Xi Jinping told Prime Minister Anthony Albanese, hailing a ‘comprehensive turnaround’ in the countries' relationship https://t.co/WHCO6FqQCp",
+    "url": "https://x.com/Reuters/status/2123655095086649369",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123652603561037982",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "06:40",
+    "text": "Exclusive: Taiwan has flagged nearly 2,700 social media accounts to Meta that it says appear to be part of a Chinese information warfare campaign seeking to influence elections on the island next week https://t.co/GxdoE2YWPr",
+    "url": "https://x.com/Reuters/status/2123652603561037982",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123634950628872198",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-11-20",
+    "time": "05:30",
+    "text": "All the pomp and spectacle of a summit that drew thousands of delegates from four continents, among them President Trump, could not distract from what was unmistakable: This was Chinese leader Xi Jinping’s moment. https://t.co/wDs94Xrkbw",
+    "url": "https://x.com/washingtonpost/status/2123634950628872198",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123632976651067538",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-20",
+    "time": "05:22",
+    "text": "Inusuales restricciones a #teléfonos de #periodistas en el #AirForceOne\n\nAl salir de #China, todos los dispositivos fueron colocados en bolsas que bloquean la señal, hasta que el avión aterrizó en Estados Unidos. (jc)\nhttps://t.co/KUEnkKu6gW",
+    "url": "https://x.com/dw_espanol/status/2123632976651067538",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123632478019608651",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "05:20",
+    "text": "Trump says aide raised with Chinese side detention of two Americans https://t.co/DRRTviftgG",
+    "url": "https://x.com/Reuters/status/2123632478019608651",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123613870657048971",
+    "account": "Chinamission2un",
+    "name": "Chinese Mission to UN",
+    "date": "2026-11-20",
+    "time": "04:06",
+    "text": "\"Building an Asia-Pacific community has truly set sail from Shenzhen.\"\n\nSpeaking at the conclusion of the #APEC2026 Economic Leaders’ Meeting, Chinese Foreign Minister Wang Yi underscored that the summit established a key roadmap for advancing the Putrajaya Vision 2040. https://t.co/JrkmxTvMsr",
+    "url": "https://x.com/Chinamission2un/status/2123613870657048971",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2123612964309684440",
+    "account": "Chinamission2un",
+    "name": "Chinese Mission to UN",
+    "date": "2026-11-20",
+    "time": "04:02",
+    "text": "The China-Russia-U.S. summit was the first-ever face-to-face meeting between the heads of state of the three countries and is of great significance with a far-reaching impact, Chinese Foreign Minister Wang Yi said on Thursday, calling it a landmark event that will go down in https://t.co/yw402GFr7Q",
+    "url": "https://x.com/Chinamission2un/status/2123612964309684440",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2123612291098669301",
+    "account": "Chinamission2un",
+    "name": "Chinese Mission to UN",
+    "date": "2026-11-20",
+    "time": "03:59",
+    "text": "Shenzhen-made robots are winning over the world.\n\nIn the first three quarters of 2026, exports of Shenzhen robots to APEC economies reached 4.86 billion yuan — up 7.5 times year on year.\n\nFrom factory floors to global markets, the city’s high-tech manufacturing is delivering. https://t.co/Nb3G8z4shW",
+    "url": "https://x.com/Chinamission2un/status/2123612291098669301",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2123611802441552181",
+    "account": "Chinamission2un",
+    "name": "Chinese Mission to UN",
+    "date": "2026-11-20",
+    "time": "03:58",
+    "text": "Scan a QR code, hop in a taxi.\nOrder food by drone.\nWork out at an outdoor smart gym.\nRide the futuristic subway business class.\n\nForeign visitors in Shenzhen kept saying the same thing: “The future is already here.”\n#Shenzhen #InnovativeChina https://t.co/gszzRt3xpX",
+    "url": "https://x.com/Chinamission2un/status/2123611802441552181",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2123611490968367271",
+    "account": "Chinamission2un",
+    "name": "Chinese Mission to UN",
+    "date": "2026-11-20",
+    "time": "03:56",
+    "text": "China’s ocean drilling vessel Mengxiang has completed a 33-day sea trial of its 2,000-meter-class riserless mud recovery system, setting a new world record for maximum operational water depth of its kind.\n#ChinaScience #DeepSeaExploration https://t.co/PDfQ9x9Qlo",
+    "url": "https://x.com/Chinamission2un/status/2123611490968367271",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2123611296428167250",
+    "account": "Chinamission2un",
+    "name": "Chinese Mission to UN",
+    "date": "2026-11-20",
+    "time": "03:56",
+    "text": "Experts have praised China’s hosting of the 33rd APEC Economic Leaders’ Meeting as a catalyst for innovation and broader regional cooperation.\n#APEC2026 #Shenzhen https://t.co/Czy5bmR2PB",
+    "url": "https://x.com/Chinamission2un/status/2123611296428167250",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2123610874619249050",
+    "account": "Chinamission2un",
+    "name": "Chinese Mission to UN",
+    "date": "2026-11-20",
+    "time": "03:54",
+    "text": "On the morning of November 19, 2026, Chinese President Xi Jinping chaired the 33rd APEC Economic Leaders’ Meeting at the Shenzhen International Communication Center and delivered important remarks titled “Building an Asia-Pacific Community and Writing a New Chapter of the",
+    "url": "https://x.com/Chinamission2un/status/2123610874619249050",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2123609207681527810",
+    "account": "Chinamission2un",
+    "name": "Chinese Mission to UN",
+    "date": "2026-11-20",
+    "time": "03:47",
+    "text": "孙磊大使在安理会反恐及相关机构联合通报会上的发言\nhttps://t.co/xvn4tbB1GE\nRemarks by Ambassador Sun Lei at the UN Security Council Joint Briefing by the Counter-Terrorism Committee and Related Committees\nhttps://t.co/B8H6QwLXMB https://t.co/TpYKpLtkIc",
+    "url": "https://x.com/Chinamission2un/status/2123609207681527810",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
     "id": "2123551943289176452",
     "account": "washingtonpost",
     "name": "The Washington Post",
@@ -329,6 +509,18 @@
     "lang": "",
     "role": "tv",
     "scope": "tv"
+   },
+   {
+    "id": "2123524036106035557",
+    "account": "Chinamission2un",
+    "name": "Chinese Mission to UN",
+    "date": "2026-11-19",
+    "time": "22:09",
+    "text": "Remarks by Ambassador Sun Lei at the Security Council Meeting on Counterterrorism and Nonproliferation https://t.co/Fpjj3poGp8",
+    "url": "https://x.com/Chinamission2un/status/2123524036106035557",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
    },
    {
     "id": "2123523864139644983",
@@ -2625,6 +2817,78 @@
   ],
   "india": [
    {
+    "id": "2123665195645939736",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "07:30",
+    "text": "US religious freedom panel says India is targeting minorities in voter roll revisions https://t.co/5g4kfcZojx",
+    "url": "https://x.com/Reuters/status/2123665195645939736",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123652349780701298",
+    "account": "PMOIndia",
+    "name": "PMO India",
+    "date": "2026-11-20",
+    "time": "06:39",
+    "text": "पिछले 12 वर्षों में किसान भाई-बहनों की समृद्धि और ग्रामीण भारत को सशक्त बनाने की दिशा में कई ऐतिहासिक कदम उठाए गए हैं।\n\nकेंद्रीय कृषि एवं किसान कल्याण मंत्री @ChouhanShivraj जी ने अपने इस आलेख में विस्तार से बताया है कि कैसे स्वदेशी टीकों के विकसित होने से पशु-पक्षियों को https://t.co/Lai2EM02Dx",
+    "url": "https://x.com/PMOIndia/status/2123652349780701298",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2123602245556047930",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "03:20",
+    "text": "India has escalated its targeting of religious minorities during a voter list revision that struck off tens of millions of names nationwide, a US panel on religious freedom said https://t.co/vrLtgHQ5FK",
+    "url": "https://x.com/Reuters/status/2123602245556047930",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2123597197115560137",
+    "account": "narendramodi",
+    "name": "Narendra Modi",
+    "date": "2026-11-20",
+    "time": "03:00",
+    "text": "तपःशौचवता नित्यं सत्यधर्मरतेन च।\n\nमातापित्रोरहरहः पूजनं कार्यमञ्जसा॥ https://t.co/PPMrlKHVkE",
+    "url": "https://x.com/narendramodi/status/2123597197115560137",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2123583750676344879",
+    "account": "MEAIndia",
+    "name": "Randhir Jaiswal",
+    "date": "2026-11-20",
+    "time": "02:06",
+    "text": "A warm welcome to Foreign Minister Velislava Petrova of Bulgaria on her arrival in New Delhi for an official visit.\n\nThe visit will provide an opportunity to further strengthen the longstanding and friendly 🇮🇳 🇧🇬 relations and deepen bilateral cooperation across diverse sectors. https://t.co/6lDBe9JMwC",
+    "url": "https://x.com/MEAIndia/status/2123583750676344879",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2123560059812581701",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-20",
+    "time": "00:32",
+    "text": "Cumin-laced fizzy sodas are giving cola giants a tough fight in India https://t.co/yATMNoLE0g",
+    "url": "https://x.com/BBCWorld/status/2123560059812581701",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
     "id": "2123548177886228688",
     "account": "Reuters",
     "name": "Reuters",
@@ -2659,6 +2923,30 @@
     "lang": "en",
     "role": "tv",
     "scope": "tv"
+   },
+   {
+    "id": "2123536251097862256",
+    "account": "DrSJaishankar",
+    "name": "Dr. S. Jaishankar",
+    "date": "2026-11-19",
+    "time": "22:57",
+    "text": "मेरे मंत्रिपरिषद के सहयोगी श्री पंकज चौधरी जी को जन्मदिन की हार्दिक शुभकामनाएँ। \n\nआने वाला वर्ष आपके लिए उत्तम स्वास्थ्य और यश लेकर आए तथा आपके सभी प्रयासों को सफलता प्रदान करे।\n\n@mppchaudhary",
+    "url": "https://x.com/DrSJaishankar/status/2123536251097862256",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2123533673920340194",
+    "account": "DrSJaishankar",
+    "name": "Dr. S. Jaishankar",
+    "date": "2026-11-19",
+    "time": "22:47",
+    "text": "Warm felicitations to FM @badralbusaidi, the Government and people of the Sultanate of Oman on their National Day.\n\nCommitted to further strengthening our Strategic Partnership.\n\n🇮🇳 🇴🇲 https://t.co/Jxy9mdpcQu",
+    "url": "https://x.com/DrSJaishankar/status/2123533673920340194",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
    },
    {
     "id": "2123488129638117480",
