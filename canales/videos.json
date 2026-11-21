@@ -1,6 +1,13 @@
 {
  "china": [
   {
+   "id": "U9Vkj-H5OJQ",
+   "title": "EE. UU., China y Rusia: ¿guerra híbrida en medio de llamados de paz? • FRANCE 24 Español",
+   "channel": "FRANCE 24 Español",
+   "date": "2026-11-21",
+   "lang": "es"
+  },
+  {
    "id": "CL77AWeihNg",
    "title": "Russian nuclear briefcase follows Putin to China",
    "channel": "Reuters",
@@ -48,16 +55,23 @@
    "channel": "Associated Press",
    "date": "2026-11-19",
    "lang": "en"
-  },
-  {
-   "id": "9WjGvO3-GM8",
-   "title": "WATCH: Trump, Xi and Putin have a 3-way meeting in China",
-   "channel": "Associated Press",
-   "date": "2026-11-19",
-   "lang": "en"
   }
  ],
  "india": [
+  {
+   "id": "1MQ0WnDAKls",
+   "title": "Indian man jailed for over 19 years for failed plot to kill Sikh leader | DW News",
+   "channel": "DW News",
+   "date": "2026-11-21",
+   "lang": "en"
+  },
+  {
+   "id": "DOJyP7h17as",
+   "title": "Cómo India abrió su sector espacial y desató una ola de startups",
+   "channel": "DW Español",
+   "date": "2026-11-21",
+   "lang": "es"
+  },
   {
    "id": "ZDZoZzN-1ms",
    "title": "What we learned from William and Kate's visit to India. #BBCNews",
@@ -98,20 +112,6 @@
    "title": "India's AI ambitions: Can it become a global tech superpower? | DW News",
    "channel": "DW News",
    "date": "2026-11-07",
-   "lang": "en"
-  },
-  {
-   "id": "ymikbun6Da4",
-   "title": "Mass protests challenge Modi over voter-list controversy | DW News",
-   "channel": "DW News",
-   "date": "2026-11-01",
-   "lang": "en"
-  },
-  {
-   "id": "9fNl0jLR3N4",
-   "title": "India's Black Sea dilemma | DW News",
-   "channel": "DW News",
-   "date": "2026-10-27",
    "lang": "en"
   }
  ],
