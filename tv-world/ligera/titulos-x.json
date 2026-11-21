@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-21T00:18:24+01:00",
+ "fetched_at": "2026-11-21T07:58:05+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
  "accounts": [
@@ -21,139 +21,877 @@
  "countries": {
   "china": [
    {
-    "id": "2123804850496409736",
+    "id": "2120437651358544174",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-20",
-    "time": "16:45",
-    "text": "US AI chip curbs hit China tech stocks, spur self-sufficiency push https://t.co/7NFDGw7Kv5",
-    "url": "https://x.com/Reuters/status/2123804850496409736"
+    "date": "2026-11-11",
+    "time": "09:45",
+    "text": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support', Xinhua reports https://t.co/cmy3TzlM54",
+    "url": "https://x.com/Reuters/status/2120437651358544174"
    },
    {
-    "id": "2123809443322404937",
+    "id": "2120499296093045100",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-11",
+    "time": "13:50",
+    "text": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support', Xinhua reports https://t.co/WX9zSH6szk",
+    "url": "https://x.com/Reuters/status/2120499296093045100"
+   },
+   {
+    "id": "2120901979056583043",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-11-12",
+    "time": "16:30",
+    "text": "Jensen Huang’s affair with an alleged Chinese spy has plunged Nvidia into its biggest crisis in decades, with Huang resigning as chief executive.\n\nHere’s a timeline of how the controversy at one of the most influential tech companies unfolded: https://t.co/CGaRyXEOEo https://t.co/TDsZiKJlfr",
+    "url": "https://x.com/washingtonpost/status/2120901979056583043"
+   },
+   {
+    "id": "2120913933607321718",
     "account": "France24_fr",
     "name": "FRANCE 24 Français",
-    "date": "2026-11-20",
-    "time": "17:03",
-    "text": "Le monde dans tous ses États - Sommet historique entre Xi Jinping, Donald Trump et Vladimir Poutine : la Chine au centre du jeu ?\n➡️ https://t.co/bxyXJX3vio https://t.co/YAYf2i0GGy",
-    "url": "https://x.com/France24_fr/status/2123809443322404937"
+    "date": "2026-11-12",
+    "time": "17:17",
+    "text": "🇺🇸🖥️ Le cofondateur de Nvidia quitte ses fonctions après plusieurs polémiques sur sa vie privée, dont une liaison avec une femme soupçonnée d’espionnage au profit de la Chine https://t.co/0TnRT04yrS",
+    "url": "https://x.com/France24_fr/status/2120913933607321718"
    },
    {
-    "id": "2123813654093009080",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-20",
-    "time": "17:20",
-    "text": "EXCLUSIVE: Beijing to bar young 'red-chip' firms from listing outside mainland China, sources say https://t.co/jVDQYC962L",
-    "url": "https://x.com/Reuters/status/2123813654093009080"
+    "id": "2120930496280510943",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-12",
+    "time": "18:23",
+    "text": "Jensen Huang dimite como líder de Nvidia tras 33 años. Jensen Huang abandona la dirección de Nvidia en Estados Unidos en plena crisis por sus relaciones extramatrimoniales y las sospechas de espionaje vinculado a China, dejando el relevo interino a Colette Kress\n#Nvidia #IA https://t.co/4j0DtoXAEd",
+    "url": "https://x.com/euronewses/status/2120930496280510943"
    },
    {
-    "id": "2123817428513624557",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-20",
-    "time": "17:35",
-    "text": "Global investment banks see Chinese yuan's gradual appreciation extending into 2027 https://t.co/3YANBNBS7C",
-    "url": "https://x.com/Reuters/status/2123817428513624557"
+    "id": "2120940168500928546",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-12",
+    "time": "19:01",
+    "text": "Pantuflas, té y rapidez: Latinoamérica se prepara para turistas chinos\n\nUn calentador de agua en la habitación puede valer más que la mejor cafetera. En la #ITB Américas, expertos explican cómo conquistar en #AméricaLatina a un viajero de #China que no conoce Instagram ni",
+    "url": "https://x.com/dw_espanol/status/2120940168500928546"
    },
    {
-    "id": "2123833183817081244",
-    "account": "France24_es",
-    "name": "FRANCE 24 Español",
-    "date": "2026-11-20",
-    "time": "18:37",
-    "text": "🔴 🔴 En vivo: Trump entrega un balance de su reunión con Xi y Putin en China https://t.co/akA3WeAx02",
-    "url": "https://x.com/France24_es/status/2123833183817081244"
+    "id": "2120948403177672820",
+    "account": "bbcmundo",
+    "name": "BBC News Mundo",
+    "date": "2026-11-12",
+    "time": "19:34",
+    "text": "La empresa china BYD, el mayor productor de vehículos eléctricos del mundo, instaló en Camaçari su fábrica más grande en América Latina. En este reportaje, BBC Brasil explora el impacto que ha tenido en la ciudad brasileña. 👉 https://t.co/BYchHVDEAj https://t.co/XZmvN7SEdc",
+    "url": "https://x.com/bbcmundo/status/2120948403177672820"
    },
    {
-    "id": "2123835027423182985",
+    "id": "2120969948734300546",
     "account": "washingtonpost",
     "name": "The Washington Post",
-    "date": "2026-11-20",
-    "time": "18:45",
-    "text": "The Interior Department sold the first-ever U.S. leases for deep-sea mining, alarming environmentalists amid the government’s bid to secure domestic critical mineral supplies that the Trump administration argues are key to competition with China. https://t.co/PjPARJoQeo https://t.co/RX6CcG3jVs",
-    "url": "https://x.com/washingtonpost/status/2123835027423182985"
+    "date": "2026-11-12",
+    "time": "21:00",
+    "text": "After Nvidia CEO Jensen Huang revealed that he was unfaithful to his wife, some of Silicon Valley’s wealthiest individuals rushed to tell their followers that it was okay if one of the most powerful businessmen had exposed himself to a Chinese spy. https://t.co/uxIpYIwTkk",
+    "url": "https://x.com/washingtonpost/status/2120969948734300546"
    },
    {
-    "id": "2123844070409679248",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-20",
-    "time": "19:21",
-    "text": "Dientes hallados en China replantean lo que sabíamos del Homo erectus\n\nEl estudio de datación de las piezas dentales revela que el Homo erectus sobrevivió en la selva tropical del sudeste asiático 200.000 años más de lo que se creía. /ju https://t.co/9AIzDwuBf8",
-    "url": "https://x.com/dw_espanol/status/2123844070409679248"
-   },
-   {
-    "id": "2123846478489702889",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-20",
-    "time": "19:30",
-    "text": "Why China is unwilling to be the world's next climate leader https://t.co/8yaSU6uuUf",
-    "url": "https://x.com/Reuters/status/2123846478489702889"
-   },
-   {
-    "id": "2123849595339882846",
+    "id": "2120978402408890670",
     "account": "France24_es",
     "name": "FRANCE 24 Español",
-    "date": "2026-11-20",
-    "time": "19:42",
-    "text": "🇺🇸 El presidente de #EstadosUnidos, Donald Trump, ofreció una rueda de prensa en la Casa Blanca este 20 de noviembre, tras su regreso a Washington después de un viaje de cuatro días por Asia, durante el cual mantuvo una reunión —la primera de este tipo— con el presidente chino, https://t.co/9o4zQ0jH9c",
-    "url": "https://x.com/France24_es/status/2123849595339882846"
+    "date": "2026-11-12",
+    "time": "21:33",
+    "text": "En Contexto - Nvidia, EE. UU. y China: un caso de romance personal a un asunto de Estado\n➡️ https://t.co/wqYpyoOMiS https://t.co/niw6be3dfz",
+    "url": "https://x.com/France24_es/status/2120978402408890670"
    },
    {
-    "id": "2123865263791628379",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-20",
-    "time": "20:45",
-    "text": "SpaceX's Cursor weighs phasing out Chinese AI models over geopolitical risk, CNBC reports https://t.co/B1tMApfIQ1",
-    "url": "https://x.com/Reuters/status/2123865263791628379"
-   },
-   {
-    "id": "2123876283079606535",
+    "id": "2121004203422490823",
     "account": "dw_espanol",
     "name": "DW Español",
-    "date": "2026-11-20",
-    "time": "21:29",
-    "text": "El código del mar de China naufraga ante los intereses de Pekín\n\nFilipinas quería cerrar un código de #conducta para el mar de la China Meridional en 2026. Sin embargo, #China y los países de la #ASEAN siguen en #disputa sobre cuestiones fundamentales. (cp).",
-    "url": "https://x.com/dw_espanol/status/2123876283079606535"
+    "date": "2026-11-12",
+    "time": "23:16",
+    "text": "Mercedes-Benz analiza el cierre de fábricas en Alemania\n\nLa firma enfrenta una caída de sus beneficios por el desplome de sus ventas en el mercado chino y el alto costo de producción en el país europeo. https://t.co/PUqqZx8EnW (dz)",
+    "url": "https://x.com/dw_espanol/status/2121004203422490823"
    },
    {
-    "id": "2123881567789437399",
+    "id": "2121017723459096670",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-20",
+    "date": "2026-11-13",
+    "time": "00:10",
+    "text": "US Justice Department has not concluded Alice Huang was Chinese spy, Blanche says https://t.co/zDUfZ9hVkt",
+    "url": "https://x.com/Reuters/status/2121017723459096670"
+   },
+   {
+    "id": "2121020265031188931",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "00:20",
+    "text": "Tibetan exile leader laments absence of rights in Trump China dealings https://t.co/6p27Z2mgLQ",
+    "url": "https://x.com/Reuters/status/2121020265031188931"
+   },
+   {
+    "id": "2121030490513657903",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "01:00",
+    "text": "Explainer: Tougher curbs on AI chip sales to China likely after Nvidia CEO resigns https://t.co/sCEP74mWKI",
+    "url": "https://x.com/Reuters/status/2121030490513657903"
+   },
+   {
+    "id": "2121041612021051792",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-11-13",
+    "time": "01:45",
+    "text": "The U.S. rebuffed requests from Singaporean authorities to assist with its investigation into Alice Huang, the alleged Chinese espionage asset whose affair with Nvidia CEO Jensen Huang has raised national security concerns, Singapore's government said. https://t.co/BxaO3xFNrA",
+    "url": "https://x.com/washingtonpost/status/2121041612021051792"
+   },
+   {
+    "id": "2121053698726178856",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "02:33",
+    "text": "US Attorney General Todd Blanche said the Justice Department has not yet reached a conclusion on whether Alice Huang, the Chinese businesswoman who had an affair with former Nvidia CEO Jensen Huang, was a Chinese spy https://t.co/TOYvF8LOgR https://t.co/5yowPXxcXz",
+    "url": "https://x.com/Reuters/status/2121053698726178856"
+   },
+   {
+    "id": "2121057965390110827",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-13",
+    "time": "02:50",
+    "text": "China aprovecharía cualquier tropiezo de Nvidia para avanzar en la IA: experto https://t.co/II4LwXpXyP",
+    "url": "https://x.com/CNNEE/status/2121057965390110827"
+   },
+   {
+    "id": "2121069542038274317",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-13",
+    "time": "03:36",
+    "text": "Los vínculos de Alice Huang con Beijing y el fundador de Nvidia dividen a funcionarios de Estados Unidos https://t.co/CEPIZSbZIA",
+    "url": "https://x.com/CNNEE/status/2121069542038274317"
+   },
+   {
+    "id": "2121070560964714532",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "03:40",
+    "text": "Nvidia CEO Jensen Huang stepped down after revelations of extramarital affairs, including one involving a suspected Chinese spy, plunged the chipmaker into crisis and sent shockwaves across an AI industry he helped bankroll https://t.co/RPSAkm9eNT",
+    "url": "https://x.com/Reuters/status/2121070560964714532"
+   },
+   {
+    "id": "2121073090654310699",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "03:50",
+    "text": "Exclusive: Japan has warned defense contractors of deep cuts to expected orders as fiscal constraints threaten to scale back a military buildup that Prime Minister Sanae Takaichi's government says is needed to counter China https://t.co/fACtB2OF0Q",
+    "url": "https://x.com/Reuters/status/2121073090654310699"
+   },
+   {
+    "id": "2121074349574660192",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "03:55",
+    "text": "US House Speaker Mike Johnson said there was growing consensus in Congress on limiting chip exports to China after a spy scandal forced out Nvidia CEO Jensen Huang https://t.co/2rZXkCcMHu",
+    "url": "https://x.com/Reuters/status/2121074349574660192"
+   },
+   {
+    "id": "2121083171189993567",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "04:30",
+    "text": "Tibetan exile leader laments absence of rights in Trump China dealings https://t.co/fq20nWsD8V",
+    "url": "https://x.com/Reuters/status/2121083171189993567"
+   },
+   {
+    "id": "2121090715941835030",
+    "account": "CNN",
+    "name": "CNN",
+    "date": "2026-11-13",
+    "time": "05:00",
+    "text": "The US intelligence community is still working to understand the relationship between a Chinese businesswoman who had an affair with Nvidia CEO Jensen Huang and the Chinese government, with multiple sources telling CNN that the intelligence collected on her to date does not prove",
+    "url": "https://x.com/CNN/status/2121090715941835030"
+   },
+   {
+    "id": "2121093224018198903",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "05:10",
+    "text": "US Attorney General Todd Blanche said  that the Justice Department has not yet reached a conclusion on whether Alice Huang, the Chinese businesswoman who had an affair with former Nvidia CEO Jensen Huang, was a Chinese spy https://t.co/0QymfaEnPD",
+    "url": "https://x.com/Reuters/status/2121093224018198903"
+   },
+   {
+    "id": "2121095758401220748",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "05:20",
+    "text": "China stages unannounced Pacific drills in 'silent intimidation' of Taiwan, officials say https://t.co/nM1lD19arV",
+    "url": "https://x.com/Reuters/status/2121095758401220748"
+   },
+   {
+    "id": "2121128449129562288",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "07:30",
+    "text": "Explainer: Tougher curbs on AI chip sales to China likely after Nvidia CEO resigns https://t.co/4ntnBt8tEh",
+    "url": "https://x.com/Reuters/status/2121128449129562288"
+   },
+   {
+    "id": "2121172668313485774",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "10:25",
+    "text": "Exclusive: Nvidia has said US export controls have effectively shut it out of China's AI data-center market, but a Reuters review has identified more than $3 billion in Chinese computing projects built around the American chipmaker's restricted processors https://t.co/Fg7hQHm5zA",
+    "url": "https://x.com/Reuters/status/2121030490513657903"
+   },
+   {
+    "id": "2121175447690199228",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-13",
+    "time": "10:36",
+    "text": "\"We will discover if it's actually China orchestrating all of this. Or it's a businessman with this sort of tacit consent from the US administration.\"\n\nAndrea Renda, head of research at the CEPS on #EuropeToday, as the chief executive of Nvidia resigns. https://t.co/0IknkPJk52",
+    "url": "https://x.com/euronews/status/2121175447690199228"
+   },
+   {
+    "id": "2121177500479049792",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "10:45",
+    "text": "World leaders are set to gather in Shenzhen for the APEC summit, with attention on a meeting involving US, Chinese and Russian leaders. But what exactly is APEC, who are its 21 members, and what does the forum do? https://t.co/ruNsGorMsv https://t.co/jOvSjMXGge",
+    "url": "https://x.com/Reuters/status/2121177500479049792"
+   },
+   {
+    "id": "2121205906259997051",
+    "account": "bbcmundo",
+    "name": "BBC News Mundo",
+    "date": "2026-11-13",
+    "time": "12:37",
+    "text": "\"Nací en España y un día me miré al espejo y me di cuenta de que era china\" https://t.co/gTj327cfix",
+    "url": "https://x.com/bbcmundo/status/2121205906259997051"
+   },
+   {
+    "id": "2121229089940124022",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-13",
+    "time": "14:10",
+    "text": "El Congreso de EE UU inicia el escrutinio por el caso de Nvidia y la infidelidad de Jensen Huang con una supuesta espía china. La empresa proporciona el 90% de los chips usados en los centros de datos, donde se entrenan los modelos más sofisticados de IA https://t.co/zuK7fng6a6",
+    "url": "https://x.com/el_pais/status/2121229089940124022"
+   },
+   {
+    "id": "2121240414640615744",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "14:55",
+    "text": "Chinese AI stocks fell on concerns that Jensen Huang’s exit could further restrict access to US chips. But Joachim Klement of Panmure Liberum says China could emerge as the biggest winner, as a slowdown in US AI expansion gives Beijing room to catch up https://t.co/YZdHdMR7Ns https://t.co/o2Ce9gNlSD",
+    "url": "https://x.com/Reuters/status/2121240414640615744"
+   },
+   {
+    "id": "2121242289385484326",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-13",
+    "time": "15:02",
+    "text": "🇺🇸💻 Scandale #Nvidia : qui est Alice Huang, soupçonnée d’espionnage au profit de la Chine ? https://t.co/YFpCTiwnl4",
+    "url": "https://x.com/France24_fr/status/2121242289385484326"
+   },
+   {
+    "id": "2122344087621718327",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-11-16",
+    "time": "16:00",
+    "text": "The number of international students in the U.S. fell 3 percent during the 2025-2026 academic year, according to data.\n\nMore than 1.1 million international students attended U.S. colleges and universities, with India and China sending by far the most. https://t.co/58xxTHz3Ef",
+    "url": "https://x.com/washingtonpost/status/2122344087621718327"
+   },
+   {
+    "id": "2122755397383815563",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "19:15",
+    "text": "President Trump met the leaders of regional allies India, Japan and Australia in the Philippines at the start of an Asian trip that also includes a much-anticipated trilateral meeting with his Chinese and Russian counterparts https://t.co/TRsBgvng6y https://t.co/sPz94WdVNB",
+    "url": "https://x.com/Reuters/status/2122755397383815563"
+   },
+   {
+    "id": "2122794451923792069",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
     "time": "21:50",
-    "text": "US President Trump said he and Russian leader Putin held 'very good talks' on Ukraine during their meeting in China, but said he didn't want to discuss security guarantees for Ukraine without a deal https://t.co/S15GkZVTcT https://t.co/BorZcccBvb",
-    "url": "https://x.com/Reuters/status/2123881567789437399"
+    "text": "Vestas boss calls for tougher EU rules on Chinese software in wind sector https://t.co/jBcHiqEm9W",
+    "url": "https://x.com/Reuters/status/2122794451923792069"
    },
    {
-    "id": "2123884087467266395",
+    "id": "2122804497143550031",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-11-17",
+    "time": "22:30",
+    "text": "President Trump touches down in China on Wednesday after flying halfway across the globe for a visit designed to project friendship and mutual respect even as a technological and economic rivalry intensifies between the world’s two largest economies. https://t.co/afUuhLRAEc",
+    "url": "https://x.com/washingtonpost/status/2122804497143550031"
+   },
+   {
+    "id": "2122808296142729488",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-20",
-    "time": "22:00",
-    "text": "President Donald Trump held a briefing after his trip to Asia, covering his meetings with Chinese President Xi Jinping and Russian President Vladimir Putin, the sale of chips to China and the recent tech outages in the US https://t.co/pOFxTHXDe0 https://t.co/Ulii8Zf4ar",
-    "url": "https://x.com/Reuters/status/2123884087467266395"
+    "date": "2026-11-17",
+    "time": "22:45",
+    "text": "US lawmakers want Mercedes-Benz to disclose details of Chinese ties https://t.co/Ugc2WOLrQE",
+    "url": "https://x.com/Reuters/status/2122808296142729488"
    },
    {
-    "id": "2123910516984680521",
+    "id": "2122809550214418836",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "22:50",
+    "text": "China says it will take countermeasures if US imposes new chip curbs https://t.co/26RqE5pK33",
+    "url": "https://x.com/Reuters/status/2122809550214418836"
+   },
+   {
+    "id": "2122812482775290039",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-17",
+    "time": "23:01",
+    "text": "“Compartimos una visión de desarrollo y prosperidad”: Sheinbaum sobre la relación de México con China https://t.co/JYHBd38e9o",
+    "url": "https://x.com/CNNEE/status/2122812482775290039"
+   },
+   {
+    "id": "2122829058488533010",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-18",
+    "time": "00:07",
+    "text": "ANÁLISIS l Europa teme lo que Trump, Xi y Putin puedan discutir a puerta cerrada en China https://t.co/nqIY6AV8wl",
+    "url": "https://x.com/CNNEE/status/2122829058488533010"
+   },
+   {
+    "id": "2122834865116594419",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-18",
+    "time": "00:30",
+    "text": "🇷🇺🇨🇳 El presidente ruso #VladimirPutin llegó el miércoles 18 de noviembre a #China, donde se espera que se reúna con sus homólogos Donald Trump y Xi Jinping, en el marco de la cumbre de la #APEC ➡️https://t.co/CuXxaIG71q https://t.co/VsCEduMcjw",
+    "url": "https://x.com/France24_es/status/2122834865116594419"
+   },
+   {
+    "id": "2122838502588952841",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-18",
+    "time": "00:45",
+    "text": "Trump to meet Marcos in Manila before China talks https://t.co/T0KX32mV0A",
+    "url": "https://x.com/Reuters/status/2122838502588952841"
+   },
+   {
+    "id": "2122865116492279814",
+    "account": "AP",
+    "name": "The Associated Press",
+    "date": "2026-11-18",
+    "time": "02:30",
+    "text": "Secretary of State Marco Rubio says there is no meeting with North Korea’s Kim Jong Un yet scheduled for President Trump’s China visit but Trump is “prepared” for dialogue. https://t.co/gd1NCOMcJ9",
+    "url": "https://x.com/AP/status/2122865116492279814"
+   },
+   {
+    "id": "2122868643411444218",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-18",
+    "time": "02:45",
+    "text": "Pekín busca ampliar su influencia en el sector de la IA en América Latina\n\nLa inteligencia artificial se perfila como un nuevo campo de batalla entre China y Estados Unidos en Latinoamérica. En sus encuentros en China con los presidentes de México, Perú y Chile antes de la cumbre https://t.co/MnVspMxjTK",
+    "url": "https://x.com/dw_espanol/status/2122868643411444218"
+   },
+   {
+    "id": "2122871944378761642",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-18",
+    "time": "02:58",
+    "text": "China censura la cobertura de CNN sobre el escándalo de Nvidia https://t.co/tVhmV5Su1z",
+    "url": "https://x.com/CNNEE/status/2122871944378761642"
+   },
+   {
+    "id": "2122872257353511378",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-18",
+    "time": "02:59",
+    "text": "Sheinbaum se reunió con Xi Jinping antes de la cumbre de la APEC en China; conoce de qué hablaron https://t.co/X3I4sR2p4e",
+    "url": "https://x.com/CNNEE/status/2122872257353511378"
+   },
+   {
+    "id": "2122879967914770450",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-18",
+    "time": "03:30",
+    "text": "US President Donald Trump is in Asia this week for talks with foreign leaders in Manila, followed by a visit to China to meet President Xi Jinping, Russian President Vladimir Putin and possibly the elusive North Korean leader Kim Jong Un. Here are some takeaways from Trump's",
+    "url": "https://x.com/Reuters/status/2122879967914770450"
+   },
+   {
+    "id": "2122889206032732466",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-18",
+    "time": "04:06",
+    "text": "Trump comprobará por qué EE.UU. no puede frenar el ascenso tecnológico de China\nhttps://t.co/XTCKk6VQs9",
+    "url": "https://x.com/CNNEE/status/2122889206032732466"
+   },
+   {
+    "id": "2122892621165027796",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-18",
+    "time": "04:20",
+    "text": "Taiwan's APEC envoy says he will speak with other members at China-hosted summit https://t.co/kQkE976Eca",
+    "url": "https://x.com/Reuters/status/2122892621165027796"
+   },
+   {
+    "id": "2122897640782213524",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-18",
+    "time": "04:40",
+    "text": "Trump meets Marcos in Manila before China talks https://t.co/5lGvPqTjy7",
+    "url": "https://x.com/Reuters/status/2122897640782213524"
+   },
+   {
+    "id": "2122902707610489308",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-18",
+    "time": "05:00",
+    "text": "Trump to meet Marcos in Manila before China talks https://t.co/t2pev2Ft3U",
+    "url": "https://x.com/Reuters/status/2122902707610489308"
+   },
+   {
+    "id": "2122906888962523317",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-18",
+    "time": "05:16",
+    "text": "Xi defiende estabilidad en región Asia-Pacífico ante \"proteccionismo\"\n\n\"No puede haber prosperidad sin seguridad, ni seguridad sin estabilidad\", dijo el presidente chino ante empresarios. (gs)\nhttps://t.co/FDXDzwyTRM",
+    "url": "https://x.com/dw_espanol/status/2122906888962523317"
+   },
+   {
+    "id": "2122906756854517935",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-18",
+    "time": "05:16",
+    "text": "Xi defiende estabilidad en región Asia-Pacífico ante \"proteccionismo\"\n\n\"No puede haber prosperidad sin seguridad, ni seguridad sin estabilidad\", dijo el presidente chino ante empresarios. (gs)\nhttps://t.co/FDXDzwyTRM",
+    "url": "https://x.com/dw_espanol/status/2122906756854517935"
+   },
+   {
+    "id": "2122916855052374104",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-18",
+    "time": "05:56",
+    "text": "#China y #EEUU se acusan mutuamente en #México por crisis de fentanilo\n\nLa embajada de EE.UU. en México afirmó que los precursores del fentanilo provienen de China, que respondió, que el problema responde al abuso de fármacos en Estados Unidos.\n\nLea el artículo completo haciendo",
+    "url": "https://x.com/dw_espanol/status/2122916855052374104"
+   },
+   {
+    "id": "2122919869943599408",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-18",
+    "time": "06:08",
+    "text": "The preliminary findings point to weak product checks, content moderation and seller sanctions, potentially exposing the Chinese online marketplace to a fine of up to 6% of its global annual turnover.\n➡️ https://t.co/2MuQ2h33I2 https://t.co/8rFZ0bGRN9",
+    "url": "https://x.com/euronews/status/2122919869943599408"
+   },
+   {
+    "id": "2122941295496740918",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-18",
+    "time": "07:33",
+    "text": "🇨🇳 La cumbre del Foro de Cooperación Económica Asia-Pacífico (#APEC) reúne este año a 18 presidentes y primeros ministros de las 21 economías miembros en Shenzhen, China, para debatir asuntos que tendrán impacto global, como la inteligencia artificial, la productividad, el",
+    "url": "https://x.com/France24_es/status/2122941295496740918"
+   },
+   {
+    "id": "2122941281588457958",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-18",
+    "time": "07:33",
+    "text": "Chinese President Xi Jinping and Russian President Vladimir Putin are holding talks in Shenzhen, a day before a first-of-its-kind trilateral summit with US President Donald Trump in the southern Chinese city. https://t.co/xClaCGDdj9",
+    "url": "https://x.com/euronews/status/2122941281588457958"
+   },
+   {
+    "id": "2123350591724265746",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "10:40",
+    "text": "From her arrival in China without the fanfare that greeted other world leaders to her seat near the end of a summit table, Japanese Prime Minister Sanae Takaichi cut an isolated figure at the two-day APEC summit https://t.co/ik4YsW0wug",
+    "url": "https://x.com/Reuters/status/2123350591724265746"
+   },
+   {
+    "id": "2123351226238587109",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "10:42",
+    "text": "🇨🇳 Donald #Trump, Vladimir #Poutine et Xi #Jinping se sont réunis jeudi 19 novembre en Chine pour un sommet inédit qui fait craindre, dans une période de crises multiples, des arrangements entre grandes puissances aux dépens d'autres acteurs internationaux comme l'#Ukraine. https://t.co/vHtSfeEM2E",
+    "url": "https://x.com/France24_fr/status/2123351226238587109"
+   },
+   {
+    "id": "2123355586670543321",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-19",
+    "time": "10:59",
+    "text": "Zelenski aseguró que los enviados estadounidenses informarán a Kiev sobre las conversaciones de Trump en China durante las reuniones previstas para este jueves en Berlín.\n➡️ https://t.co/JehXJ5LmuG https://t.co/6oImztuGD3",
+    "url": "https://x.com/euronewses/status/2123355586670543321"
+   },
+   {
+    "id": "2123355997087658055",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "11:01",
+    "text": "🇨🇳 En #Chine, #Xi, #Poutine et #Trump ont débuté une réunion tripartite en marge d'un sommet de l'#Apec.\n\n🗣️ Les explications de Baptiste Fallevoz notre correspondant à Shenzhen https://t.co/DVE5BBK7y3",
+    "url": "https://x.com/France24_fr/status/2123355997087658055"
+   },
+   {
+    "id": "2123358378869342672",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "11:11",
+    "text": "U.S. President Donald Trump says he is looking forward to the trilateral meeting in China with Xi and Putin. He also called China an \"incredible country\" and that Xi, the totalitarian leader, has done an \"unbelievable job.\" https://t.co/VgODDz8Cy6",
+    "url": "https://x.com/euronews/status/2123358378869342672"
+   },
+   {
+    "id": "2123360925977591975",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "11:21",
+    "text": "🇨🇳 En #Chine, #Xi Jinping, Donald #Trump et Vladimir #Poutine sont réunis pour un sommet tripartite.\n\nLes explications de Maud Quessard, spécialiste de la politique étrangère américaine 👇 https://t.co/Zh3nvLn67M",
+    "url": "https://x.com/France24_fr/status/2123360925977591975"
+   },
+   {
+    "id": "2123361253196238943",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "11:22",
+    "text": "Russian President Putin says China, the U.S. and Russia have \"common interests\" on resolving regional conflicts, including the crisis in Ukraine. Russia already discussed it with China yesterday. https://t.co/BdYncrYkPy",
+    "url": "https://x.com/euronews/status/2123361253196238943"
+   },
+   {
+    "id": "2123361690666344543",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "11:24",
+    "text": "🇨🇳 Le sommet tripartite inédit entre les présidents chinois, russe et américain s'est achevé jeudi 19 novembre à Shenzhen, en #Chine.\n\n🇺🇸 Après une rencontre d'environ 80 minutes, Donald #Trump a quitté immédiatement la villa Kylin, où se tenaient les entretiens, avant de prendre https://t.co/gWVzXW0z8T",
+    "url": "https://x.com/France24_fr/status/2123361690666344543"
+   },
+   {
+    "id": "2123366548609888739",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "11:43",
+    "text": "La rencontre inédite entre Xi Jinping, Vladimir Poutine et Donald Trump s'est conclue le jeudi 19 novembre à #Shenzhen, en Chine, après une session d'échanges d'environ 80 minutes https://t.co/PuTCQ83e8a",
+    "url": "https://x.com/France24_fr/status/2123366548609888739"
+   },
+   {
+    "id": "2123369338979971373",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "11:54",
+    "text": "President Donald Trump met with Chinese President Xi Jinping and Russian President Vladimir Putin on Thursday at the APEC summit.\n\nThe leaders discussed nuclear arms control and the ongoing wars in Ukraine and Iran. https://t.co/O1BauAuOo5",
+    "url": "https://x.com/euronews/status/2123369338979971373"
+   },
+   {
+    "id": "2123372469923029442",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "12:07",
+    "text": "While meeting with Russian President Putin and U.S. President Trump, Chinese President Xi Jinping called on nations to come together and that world powers \"bear a special responsibility.\" https://t.co/OLO1zk8DUX",
+    "url": "https://x.com/euronews/status/2123372469923029442"
+   },
+   {
+    "id": "2123378629362975100",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "12:31",
+    "text": "🇨🇳 Le sommet entre les dirigeants russe, chinois et américain en #Chine a pris fin après plus de 80 minutes d'échanges, aucune communication officielle n'a été donnée après cette rencontre\n\nLe décryptage d'Antoine Mariotti, chroniqueur international ⬇️ https://t.co/heIP9pzxYk",
+    "url": "https://x.com/France24_fr/status/2123378629362975100"
+   },
+   {
+    "id": "2123379288892125416",
+    "account": "AP",
+    "name": "The Associated Press",
+    "date": "2026-11-19",
+    "time": "12:34",
+    "text": "U.S. President Donald Trump, Chinese President Xi Jinping and Russian President Vladimir Putin posed for photographs ahead of a trilateral meeting in Shenzhen, China, on Thursday. https://t.co/16KFBJVn34",
+    "url": "https://x.com/AP/status/2123379288892125416"
+   },
+   {
+    "id": "2123379509802238000",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "12:35",
+    "text": "Japanese Prime Minister Sanae Takaichi received a muted welcome in China during her first visit to the country for the APEC summit, after her comments last year on Taiwan strained ties with Beijing. Ju-min Park has more https://t.co/kNJlua5cOc https://t.co/cKjObllpXO",
+    "url": "https://x.com/Reuters/status/2123379509802238000"
+   },
+   {
+    "id": "2123385143763046471",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-19",
+    "time": "12:57",
+    "text": "Riesgos nucleares, reforma de la ONU y petróleo: Xi, Trump y Putin emiten \"Declaración de Paz\"\n\nEn la cumbre sin precedentes de sus líderes, China, EE.UU. y Rusia adoptaron una declaración conjunta, según informaron el Kremlin y medios de comunicación estatales chinos.",
+    "url": "https://x.com/dw_espanol/status/2123385143763046471"
+   },
+   {
+    "id": "2123386960274235843",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-19",
+    "time": "13:04",
+    "text": "El presidente estadounidense, Donald Trump ha afirmado en la cumbre de #Shenzhen que Estados Unidos y China quieren ayudar a poner fin a la guerra en Ucrania.\nLa cumbre entre #Putin, #Xi y #Trump se celebra cuando la ofensiva rusa en #Ucrania se acerca a su quinto año. https://t.co/JBNTioTWSn",
+    "url": "https://x.com/euronewses/status/2123386960274235843"
+   },
+   {
+    "id": "2123393550444319002",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-19",
+    "time": "13:30",
+    "text": "🇺🇸🇨🇳🇷🇺 El presidente chino, #XiJinping, y sus homólogos estadounidense, #DonaldTrump, y ruso, #VladimirPutin, se reunieron este 19 de noviembre en Shenzhen en un encuentro inédito, en el marco de la cumbre del Foro de Cooperación Económica Asia-Pacífico (APEC) ➡️ https://t.co/3HeM5Uxqn5",
+    "url": "https://x.com/France24_es/status/2123393550444319002"
+   },
+   {
+    "id": "2123395297988784208",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "13:37",
+    "text": "U.S. President Donald Trump attended the APEC Summit today and for the first time ever met with both Russian President Putin and Chinese President Xi. He called the summit \"very successful.\" https://t.co/oOxrSw2pcd",
+    "url": "https://x.com/euronews/status/2123395297988784208"
+   },
+   {
+    "id": "2123399310444249426",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "13:53",
+    "text": "Donald Trump praised the first ever meeting between the U.S., China and Russia to discuss ending the wars in Ukraine and Iran. https://t.co/wxkrAF9keI",
+    "url": "https://x.com/euronews/status/2123399310444249426"
+   },
+   {
+    "id": "2123400505170796595",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-19",
+    "time": "13:58",
+    "text": "US consortium wins huge Kenya mining deal, beating Chinese rivals https://t.co/OKd5Je3KwE",
+    "url": "https://x.com/BBCWorld/status/2123400505170796595"
+   },
+   {
+    "id": "2123400436963328481",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "13:58",
+    "text": "U.S. President Donald Trump met with Chinese President Xi Jinping in Shenzhen ahead of a trilateral summit with Russian President Vladimir Putin. \n\nTrump pushed for more U.S. farm exports, Strait of Hormuz security, and progress on ending the Russia-Ukraine war. https://t.co/e22rqdxr4J",
+    "url": "https://x.com/euronews/status/2123400436963328481"
+   },
+   {
+    "id": "2123408693521998167",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "14:30",
+    "text": "🇺🇦 Après la rencontre historique en #Chine entre les dirigeants russe, chinois et américain, les yeux se tournent vers l'#Europe, où un sommet de la Coalition des volontaires pour l'#Ukraine se réunit\n\nLe décryptage de Gauthier Rybinski, chroniqueur international ⬇️ https://t.co/Lq2tsFSzN6",
+    "url": "https://x.com/France24_fr/status/2123408693521998167"
+   },
+   {
+    "id": "2123409708866511307",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "14:35",
+    "text": "A member of President Vladimir Putin's delegation carried what is said to be Russia's nuclear briefcase used to order a nuclear strike during the APEC summit in China, footage broadcast by Russian state television showed https://t.co/Aczuhd1jiv https://t.co/Xv5fsXdEzH",
+    "url": "https://x.com/Reuters/status/2123409708866511307"
+   },
+   {
+    "id": "2123415817203155112",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-19",
+    "time": "14:59",
+    "text": "“Nosotros espiamos a China, ellos nos espian a nosotros”, dice Trump en una entrevista a Fox News https://t.co/uzOU7OQ985",
+    "url": "https://x.com/CNNEE/status/2123415817203155112"
+   },
+   {
+    "id": "2123422780217508085",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-19",
+    "time": "15:26",
+    "text": "\"Amigos\" autoritarios, el potencial de la IA y otras claves del viaje de Trump a China y su cumbre con Putin y Xi Jinping https://t.co/ExL8lzbMif",
+    "url": "https://x.com/CNNEE/status/2123422780217508085"
+   },
+   {
+    "id": "2123454219516887160",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "17:31",
+    "text": "🇨🇳 La rencontre tripartite historique entre #Trump, #Poutine et Xi #Jinping a duré 1 h 30 jeudi en #Chine, au menu de laquelle figurait la guerre en Ukraine et le contrôle des armements nucléaires https://t.co/fdRx2Kg2nC",
+    "url": "https://x.com/France24_fr/status/2123454219516887160"
+   },
+   {
+    "id": "2123523864139644983",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-19",
+    "time": "22:08",
+    "text": "Coalición de los Voluntarios en Berlín: \"Apoyamos a Ucrania\" \n\nLa llamada Coalición de Voluntarios refuerza su apoyo a Ucrania en Berlín, mientras todas las miradas estaban puestas a la cumbre de EE. UU., Rusia y China en Shenzhen.(ms)\n\nhttps://t.co/4jDclcF2rZ",
+    "url": "https://x.com/dw_espanol/status/2123523864139644983"
+   },
+   {
+    "id": "2123525936620720621",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "22:16",
+    "text": "Trump, Putin and Xi sign a joint declaration in China with no breakthrough on Ukraine, European leaders meet US envoys in Berlin, Spain’s election rivals debate, and COP31 talks enter their final stretch in Turkey.\n➡️ https://t.co/J2CN5XSDzS https://t.co/utu5HnIRtk",
+    "url": "https://x.com/euronews/status/2123525936620720621"
+   },
+   {
+    "id": "2123526778828341601",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "22:20",
+    "text": "FCC votes to ban Chinese telecoms from direct access to US phone numbers https://t.co/a1X4wUebm3",
+    "url": "https://x.com/Reuters/status/2123526778828341601"
+   },
+   {
+    "id": "2123533589161681102",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-19",
+    "time": "22:47",
+    "text": "🇨🇳 La réunion inédite en #Chine entre Xi #Jinping, Donald #Trump et Vladimir #Poutine a été accompagnée d'un protocole qui semble avoir tourné au désavantage du président russe.\n\n➡️ Une manière pour le dirigeant chinois de punir son homologue russe ou plutôt une mise en scène",
+    "url": "https://x.com/France24_fr/status/2123533589161681102"
+   },
+   {
+    "id": "2123538775678603389",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-19",
+    "time": "23:07",
+    "text": "The US, Chinese and Russian leaders pledged to hold talks on nuclear risk reduction, but made no mention of North Korea in their joint peace declaration. https://t.co/dfld8S0Htb",
+    "url": "https://x.com/euronews/status/2123538775678603389"
+   },
+   {
+    "id": "2123544663885783442",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-19",
+    "time": "23:31",
+    "text": "Líderes de EE.UU. y China defendieron posturas opuestas sobre la gobernanza de la IA en Shenzhen: Trump teme que regular frene la innovación, Xi exige mantenerla bajo control humano.\n➡️ https://t.co/UIDdGGb8gw https://t.co/04WZvnuooZ",
+    "url": "https://x.com/euronewses/status/2123544663885783442"
+   },
+   {
+    "id": "2123551943289176452",
     "account": "washingtonpost",
     "name": "The Washington Post",
     "date": "2026-11-20",
-    "time": "23:45",
-    "text": "President Trump declared that he would penalize U.S.-based companies that build data centers in other countries, a surprise announcement that came following a high-profile meeting with Chinese President Xi Jinping and Russian President Vladimir Putin. https://t.co/KMDPSyEb1Z",
-    "url": "https://x.com/washingtonpost/status/2123910516984680521"
+    "time": "00:00",
+    "text": "The waters unleashed by the collapse of a Himalayan glacier in August swept away thousands in Nepal and China. At least 5,600 remain missing.\n\nWith the official search now over, some loved ones are continuing to look for the missing. https://t.co/HXk7AuBlEI",
+    "url": "https://x.com/washingtonpost/status/2123551943289176452"
    },
    {
-    "id": "2123914421915238672",
+    "id": "2123632478019608651",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-21",
-    "time": "00:00",
-    "text": "Why China is unwilling to be the world's next climate leader https://t.co/V5W9EeYmje",
-    "url": "https://x.com/Reuters/status/2123914421915238672"
+    "date": "2026-11-20",
+    "time": "05:20",
+    "text": "Trump says aide raised with Chinese side detention of two Americans https://t.co/DRRTviftgG",
+    "url": "https://x.com/Reuters/status/2123632478019608651"
+   },
+   {
+    "id": "2123632976651067538",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-20",
+    "time": "05:22",
+    "text": "Inusuales restricciones a #teléfonos de #periodistas en el #AirForceOne\n\nAl salir de #China, todos los dispositivos fueron colocados en bolsas que bloquean la señal, hasta que el avión aterrizó en Estados Unidos. (jc)\nhttps://t.co/KUEnkKu6gW",
+    "url": "https://x.com/dw_espanol/status/2123632976651067538"
+   },
+   {
+    "id": "2123634950628872198",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-11-20",
+    "time": "05:30",
+    "text": "All the pomp and spectacle of a summit that drew thousands of delegates from four continents, among them President Trump, could not distract from what was unmistakable: This was Chinese leader Xi Jinping’s moment. https://t.co/wDs94Xrkbw",
+    "url": "https://x.com/washingtonpost/status/2123634950628872198"
+   },
+   {
+    "id": "2123652603561037982",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "06:40",
+    "text": "Exclusive: Taiwan has flagged nearly 2,700 social media accounts to Meta that it says appear to be part of a Chinese information warfare campaign seeking to influence elections on the island next week https://t.co/GxdoE2YWPr",
+    "url": "https://x.com/Reuters/status/2123652603561037982"
+   },
+   {
+    "id": "2123655095086649369",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "06:50",
+    "text": "China and Australia can cooperate more in areas such as agriculture and AI, President Xi Jinping told Prime Minister Anthony Albanese, hailing a ‘comprehensive turnaround’ in the countries' relationship https://t.co/WHCO6FqQCp",
+    "url": "https://x.com/Reuters/status/2123655095086649369"
+   },
+   {
+    "id": "2123660108504994077",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "07:10",
+    "text": "Exclusive: The US government should not certify Chinese-made airplanes and pull contracts from defense contractors, including European aerospace manufacturer Airbus, if they do not halt investments in China's aerospace industrial base, a congressional report reviewed by Reuters",
+    "url": "https://x.com/Reuters/status/2123660108504994077"
+   },
+   {
+    "id": "2123668916618891756",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "07:45",
+    "text": "US President Donald Trump has long reveled in the pomp and ceremony of international summitry but has often come away with little to show for his signature brand of personalized diplomacy.\n\nHis meeting with Chinese President Xi Jinping and Russian President Vladimir Putin has",
+    "url": "https://x.com/Reuters/status/2123668916618891756"
    },
    {
     "id": "2123673526163100115",
@@ -318,580 +1056,438 @@
     "url": "https://x.com/euronewses/status/2123786375187321014"
    },
    {
-    "id": "2123668916618891756",
+    "id": "2123804850496409736",
     "account": "Reuters",
     "name": "Reuters",
     "date": "2026-11-20",
-    "time": "07:45",
-    "text": "US President Donald Trump has long reveled in the pomp and ceremony of international summitry but has often come away with little to show for his signature brand of personalized diplomacy.\n\nHis meeting with Chinese President Xi Jinping and Russian President Vladimir Putin has",
-    "url": "https://x.com/Reuters/status/2123668916618891756"
+    "time": "16:45",
+    "text": "US AI chip curbs hit China tech stocks, spur self-sufficiency push https://t.co/7NFDGw7Kv5",
+    "url": "https://x.com/Reuters/status/2123804850496409736"
    },
    {
-    "id": "2123660108504994077",
+    "id": "2123809443322404937",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-20",
+    "time": "17:03",
+    "text": "Le monde dans tous ses États - Sommet historique entre Xi Jinping, Donald Trump et Vladimir Poutine : la Chine au centre du jeu ?\n➡️ https://t.co/bxyXJX3vio https://t.co/YAYf2i0GGy",
+    "url": "https://x.com/France24_fr/status/2123809443322404937"
+   },
+   {
+    "id": "2123813654093009080",
     "account": "Reuters",
     "name": "Reuters",
     "date": "2026-11-20",
-    "time": "07:10",
-    "text": "Exclusive: The US government should not certify Chinese-made airplanes and pull contracts from defense contractors, including European aerospace manufacturer Airbus, if they do not halt investments in China's aerospace industrial base, a congressional report reviewed by Reuters",
-    "url": "https://x.com/Reuters/status/2123660108504994077"
+    "time": "17:20",
+    "text": "EXCLUSIVE: Beijing to bar young 'red-chip' firms from listing outside mainland China, sources say https://t.co/jVDQYC962L",
+    "url": "https://x.com/Reuters/status/2123813654093009080"
    },
    {
-    "id": "2123655095086649369",
+    "id": "2123817428513624557",
     "account": "Reuters",
     "name": "Reuters",
     "date": "2026-11-20",
-    "time": "06:50",
-    "text": "China and Australia can cooperate more in areas such as agriculture and AI, President Xi Jinping told Prime Minister Anthony Albanese, hailing a ‘comprehensive turnaround’ in the countries' relationship https://t.co/WHCO6FqQCp",
-    "url": "https://x.com/Reuters/status/2123655095086649369"
+    "time": "17:35",
+    "text": "Global investment banks see Chinese yuan's gradual appreciation extending into 2027 https://t.co/3YANBNBS7C",
+    "url": "https://x.com/Reuters/status/2123817428513624557"
    },
    {
-    "id": "2123652603561037982",
-    "account": "Reuters",
-    "name": "Reuters",
+    "id": "2123833183817081244",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
     "date": "2026-11-20",
-    "time": "06:40",
-    "text": "Exclusive: Taiwan has flagged nearly 2,700 social media accounts to Meta that it says appear to be part of a Chinese information warfare campaign seeking to influence elections on the island next week https://t.co/GxdoE2YWPr",
-    "url": "https://x.com/Reuters/status/2123652603561037982"
+    "time": "18:37",
+    "text": "🔴 🔴 En vivo: Trump entrega un balance de su reunión con Xi y Putin en China https://t.co/akA3WeAx02",
+    "url": "https://x.com/France24_es/status/2123833183817081244"
    },
    {
-    "id": "2123634950628872198",
+    "id": "2123835027423182985",
     "account": "washingtonpost",
     "name": "The Washington Post",
     "date": "2026-11-20",
-    "time": "05:30",
-    "text": "All the pomp and spectacle of a summit that drew thousands of delegates from four continents, among them President Trump, could not distract from what was unmistakable: This was Chinese leader Xi Jinping’s moment. https://t.co/wDs94Xrkbw",
-    "url": "https://x.com/washingtonpost/status/2123634950628872198"
+    "time": "18:45",
+    "text": "The Interior Department sold the first-ever U.S. leases for deep-sea mining, alarming environmentalists amid the government’s bid to secure domestic critical mineral supplies that the Trump administration argues are key to competition with China. https://t.co/PjPARJoQeo https://t.co/RX6CcG3jVs",
+    "url": "https://x.com/washingtonpost/status/2123835027423182985"
    },
    {
-    "id": "2123632976651067538",
+    "id": "2123844070409679248",
     "account": "dw_espanol",
     "name": "DW Español",
     "date": "2026-11-20",
-    "time": "05:22",
-    "text": "Inusuales restricciones a #teléfonos de #periodistas en el #AirForceOne\n\nAl salir de #China, todos los dispositivos fueron colocados en bolsas que bloquean la señal, hasta que el avión aterrizó en Estados Unidos. (jc)\nhttps://t.co/KUEnkKu6gW",
-    "url": "https://x.com/dw_espanol/status/2123632976651067538"
+    "time": "19:21",
+    "text": "Dientes hallados en China replantean lo que sabíamos del Homo erectus\n\nEl estudio de datación de las piezas dentales revela que el Homo erectus sobrevivió en la selva tropical del sudeste asiático 200.000 años más de lo que se creía. /ju https://t.co/9AIzDwuBf8",
+    "url": "https://x.com/dw_espanol/status/2123844070409679248"
    },
    {
-    "id": "2123632478019608651",
+    "id": "2123846478489702889",
     "account": "Reuters",
     "name": "Reuters",
     "date": "2026-11-20",
-    "time": "05:20",
-    "text": "Trump says aide raised with Chinese side detention of two Americans https://t.co/DRRTviftgG",
-    "url": "https://x.com/Reuters/status/2123632478019608651"
+    "time": "19:30",
+    "text": "Why China is unwilling to be the world's next climate leader https://t.co/8yaSU6uuUf",
+    "url": "https://x.com/Reuters/status/2123846478489702889"
    },
    {
-    "id": "2123551943289176452",
+    "id": "2123849595339882846",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-20",
+    "time": "19:42",
+    "text": "🇺🇸 El presidente de #EstadosUnidos, Donald Trump, ofreció una rueda de prensa en la Casa Blanca este 20 de noviembre, tras su regreso a Washington después de un viaje de cuatro días por Asia, durante el cual mantuvo una reunión —la primera de este tipo— con el presidente chino, https://t.co/9o4zQ0jH9c",
+    "url": "https://x.com/France24_es/status/2123849595339882846"
+   },
+   {
+    "id": "2123865263791628379",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "20:45",
+    "text": "SpaceX's Cursor weighs phasing out Chinese AI models over geopolitical risk, CNBC reports https://t.co/B1tMApfIQ1",
+    "url": "https://x.com/Reuters/status/2123865263791628379"
+   },
+   {
+    "id": "2123876283079606535",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-20",
+    "time": "21:29",
+    "text": "El código del mar de China naufraga ante los intereses de Pekín\n\nFilipinas quería cerrar un código de #conducta para el mar de la China Meridional en 2026. Sin embargo, #China y los países de la #ASEAN siguen en #disputa sobre cuestiones fundamentales. (cp).",
+    "url": "https://x.com/dw_espanol/status/2123876283079606535"
+   },
+   {
+    "id": "2123881567789437399",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "21:50",
+    "text": "US President Trump said he and Russian leader Putin held 'very good talks' on Ukraine during their meeting in China, but said he didn't want to discuss security guarantees for Ukraine without a deal https://t.co/S15GkZVTcT https://t.co/BorZcccBvb",
+    "url": "https://x.com/Reuters/status/2123881567789437399"
+   },
+   {
+    "id": "2123884087467266395",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "22:00",
+    "text": "President Donald Trump held a briefing after his trip to Asia, covering his meetings with Chinese President Xi Jinping and Russian President Vladimir Putin, the sale of chips to China and the recent tech outages in the US https://t.co/pOFxTHXDe0 https://t.co/Ulii8Zf4ar",
+    "url": "https://x.com/Reuters/status/2123884087467266395"
+   },
+   {
+    "id": "2123910516984680521",
     "account": "washingtonpost",
     "name": "The Washington Post",
     "date": "2026-11-20",
+    "time": "23:45",
+    "text": "President Trump declared that he would penalize U.S.-based companies that build data centers in other countries, a surprise announcement that came following a high-profile meeting with Chinese President Xi Jinping and Russian President Vladimir Putin. https://t.co/KMDPSyEb1Z",
+    "url": "https://x.com/washingtonpost/status/2123910516984680521"
+   },
+   {
+    "id": "2123914421915238672",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-21",
     "time": "00:00",
-    "text": "The waters unleashed by the collapse of a Himalayan glacier in August swept away thousands in Nepal and China. At least 5,600 remain missing.\n\nWith the official search now over, some loved ones are continuing to look for the missing. https://t.co/HXk7AuBlEI",
-    "url": "https://x.com/washingtonpost/status/2123551943289176452"
+    "text": "Why China is unwilling to be the world's next climate leader https://t.co/V5W9EeYmje",
+    "url": "https://x.com/Reuters/status/2123914421915238672"
    },
    {
-    "id": "2123544663885783442",
-    "account": "euronewses",
-    "name": "euronews español",
-    "date": "2026-11-19",
-    "time": "23:31",
-    "text": "Líderes de EE.UU. y China defendieron posturas opuestas sobre la gobernanza de la IA en Shenzhen: Trump teme que regular frene la innovación, Xi exige mantenerla bajo control humano.\n➡️ https://t.co/UIDdGGb8gw https://t.co/04WZvnuooZ",
-    "url": "https://x.com/euronewses/status/2123544663885783442"
+    "id": "2123918067306512709",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-11-21",
+    "time": "00:15",
+    "text": "The Commerce Department approved the sale of almost 580,000 Nvidia AI chips to China under a Trump administration plan to allow the sales for a cut of the revenue. \n\nThe customers included companies that the Pentagon lists as having ties to China’s military.",
+    "url": "https://x.com/washingtonpost/status/2123918067306512709"
    },
    {
-    "id": "2123538775678603389",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-19",
-    "time": "23:07",
-    "text": "The US, Chinese and Russian leaders pledged to hold talks on nuclear risk reduction, but made no mention of North Korea in their joint peace declaration. https://t.co/dfld8S0Htb",
-    "url": "https://x.com/euronews/status/2123538775678603389"
-   },
-   {
-    "id": "2123533589161681102",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-19",
-    "time": "22:47",
-    "text": "🇨🇳 La réunion inédite en #Chine entre Xi #Jinping, Donald #Trump et Vladimir #Poutine a été accompagnée d'un protocole qui semble avoir tourné au désavantage du président russe.\n\n➡️ Une manière pour le dirigeant chinois de punir son homologue russe ou plutôt une mise en scène",
-    "url": "https://x.com/France24_fr/status/2123533589161681102"
-   },
-   {
-    "id": "2123526778828341601",
+    "id": "2123926903551676514",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-19",
-    "time": "22:20",
-    "text": "FCC votes to ban Chinese telecoms from direct access to US phone numbers https://t.co/a1X4wUebm3",
-    "url": "https://x.com/Reuters/status/2123526778828341601"
+    "date": "2026-11-21",
+    "time": "00:50",
+    "text": "SpaceX's Cursor weighs phasing out Chinese AI models over geopolitical risk, CNBC reports https://t.co/SRXRDS5v8t",
+    "url": "https://x.com/Reuters/status/2123926903551676514"
    },
    {
-    "id": "2123525936620720621",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-19",
-    "time": "22:16",
-    "text": "Trump, Putin and Xi sign a joint declaration in China with no breakthrough on Ukraine, European leaders meet US envoys in Berlin, Spain’s election rivals debate, and COP31 talks enter their final stretch in Turkey.\n➡️ https://t.co/J2CN5XSDzS https://t.co/utu5HnIRtk",
-    "url": "https://x.com/euronews/status/2123525936620720621"
-   },
-   {
-    "id": "2123523864139644983",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-19",
-    "time": "22:08",
-    "text": "Coalición de los Voluntarios en Berlín: \"Apoyamos a Ucrania\" \n\nLa llamada Coalición de Voluntarios refuerza su apoyo a Ucrania en Berlín, mientras todas las miradas estaban puestas a la cumbre de EE. UU., Rusia y China en Shenzhen.(ms)\n\nhttps://t.co/4jDclcF2rZ",
-    "url": "https://x.com/dw_espanol/status/2123523864139644983"
-   },
-   {
-    "id": "2123454219516887160",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-19",
-    "time": "17:31",
-    "text": "🇨🇳 La rencontre tripartite historique entre #Trump, #Poutine et Xi #Jinping a duré 1 h 30 jeudi en #Chine, au menu de laquelle figurait la guerre en Ukraine et le contrôle des armements nucléaires https://t.co/fdRx2Kg2nC",
-    "url": "https://x.com/France24_fr/status/2123454219516887160"
-   },
-   {
-    "id": "2123422780217508085",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-11-19",
-    "time": "15:26",
-    "text": "\"Amigos\" autoritarios, el potencial de la IA y otras claves del viaje de Trump a China y su cumbre con Putin y Xi Jinping https://t.co/ExL8lzbMif",
-    "url": "https://x.com/CNNEE/status/2123422780217508085"
-   },
-   {
-    "id": "2123415817203155112",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-11-19",
-    "time": "14:59",
-    "text": "“Nosotros espiamos a China, ellos nos espian a nosotros”, dice Trump en una entrevista a Fox News https://t.co/uzOU7OQ985",
-    "url": "https://x.com/CNNEE/status/2123415817203155112"
-   },
-   {
-    "id": "2123409708866511307",
+    "id": "2123987313378099457",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-19",
-    "time": "14:35",
-    "text": "A member of President Vladimir Putin's delegation carried what is said to be Russia's nuclear briefcase used to order a nuclear strike during the APEC summit in China, footage broadcast by Russian state television showed https://t.co/Aczuhd1jiv https://t.co/Xv5fsXdEzH",
-    "url": "https://x.com/Reuters/status/2123409708866511307"
-   },
+    "date": "2026-11-21",
+    "time": "04:50",
+    "text": "Fresh off China trip, Trump bobs and weaves in freewheeling press conference https://t.co/xjtUMwzYrt",
+    "url": "https://x.com/Reuters/status/2123987313378099457"
+   }
+  ],
+  "india": [
    {
-    "id": "2123408693521998167",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-19",
-    "time": "14:30",
-    "text": "🇺🇦 Après la rencontre historique en #Chine entre les dirigeants russe, chinois et américain, les yeux se tournent vers l'#Europe, où un sommet de la Coalition des volontaires pour l'#Ukraine se réunit\n\nLe décryptage de Gauthier Rybinski, chroniqueur international ⬇️ https://t.co/Lq2tsFSzN6",
-    "url": "https://x.com/France24_fr/status/2123408693521998167"
-   },
-   {
-    "id": "2123400505170796595",
+    "id": "2119968072714932598",
     "account": "BBCWorld",
     "name": "BBC News (World)",
-    "date": "2026-11-19",
-    "time": "13:58",
-    "text": "US consortium wins huge Kenya mining deal, beating Chinese rivals https://t.co/OKd5Je3KwE",
-    "url": "https://x.com/BBCWorld/status/2123400505170796595"
+    "date": "2026-11-10",
+    "time": "02:39",
+    "text": "Qantas to outsource 850 local jobs with most roles moving to India https://t.co/nCRUtXPEoT",
+    "url": "https://x.com/BBCWorld/status/2119968072714932598"
    },
    {
-    "id": "2123400436963328481",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-19",
-    "time": "13:58",
-    "text": "U.S. President Donald Trump met with Chinese President Xi Jinping in Shenzhen ahead of a trilateral summit with Russian President Vladimir Putin. \n\nTrump pushed for more U.S. farm exports, Strait of Hormuz security, and progress on ending the Russia-Ukraine war. https://t.co/e22rqdxr4J",
-    "url": "https://x.com/euronews/status/2123400436963328481"
-   },
-   {
-    "id": "2123399310444249426",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-19",
-    "time": "13:53",
-    "text": "Donald Trump praised the first ever meeting between the U.S., China and Russia to discuss ending the wars in Ukraine and Iran. https://t.co/wxkrAF9keI",
-    "url": "https://x.com/euronews/status/2123399310444249426"
-   },
-   {
-    "id": "2123395297988784208",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-19",
-    "time": "13:37",
-    "text": "U.S. President Donald Trump attended the APEC Summit today and for the first time ever met with both Russian President Putin and Chinese President Xi. He called the summit \"very successful.\" https://t.co/oOxrSw2pcd",
-    "url": "https://x.com/euronews/status/2123395297988784208"
-   },
-   {
-    "id": "2123393550444319002",
-    "account": "France24_es",
-    "name": "FRANCE 24 Español",
-    "date": "2026-11-19",
-    "time": "13:30",
-    "text": "🇺🇸🇨🇳🇷🇺 El presidente chino, #XiJinping, y sus homólogos estadounidense, #DonaldTrump, y ruso, #VladimirPutin, se reunieron este 19 de noviembre en Shenzhen en un encuentro inédito, en el marco de la cumbre del Foro de Cooperación Económica Asia-Pacífico (APEC) ➡️ https://t.co/3HeM5Uxqn5",
-    "url": "https://x.com/France24_es/status/2123393550444319002"
-   },
-   {
-    "id": "2123386960274235843",
-    "account": "euronewses",
-    "name": "euronews español",
-    "date": "2026-11-19",
-    "time": "13:04",
-    "text": "El presidente estadounidense, Donald Trump ha afirmado en la cumbre de #Shenzhen que Estados Unidos y China quieren ayudar a poner fin a la guerra en Ucrania.\nLa cumbre entre #Putin, #Xi y #Trump se celebra cuando la ofensiva rusa en #Ucrania se acerca a su quinto año. https://t.co/JBNTioTWSn",
-    "url": "https://x.com/euronewses/status/2123386960274235843"
-   },
-   {
-    "id": "2123385143763046471",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-19",
-    "time": "12:57",
-    "text": "Riesgos nucleares, reforma de la ONU y petróleo: Xi, Trump y Putin emiten \"Declaración de Paz\"\n\nEn la cumbre sin precedentes de sus líderes, China, EE.UU. y Rusia adoptaron una declaración conjunta, según informaron el Kremlin y medios de comunicación estatales chinos.",
-    "url": "https://x.com/dw_espanol/status/2123385143763046471"
-   },
-   {
-    "id": "2123379509802238000",
+    "id": "2120008560704676302",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-19",
-    "time": "12:35",
-    "text": "Japanese Prime Minister Sanae Takaichi received a muted welcome in China during her first visit to the country for the APEC summit, after her comments last year on Taiwan strained ties with Beijing. Ju-min Park has more https://t.co/kNJlua5cOc https://t.co/cKjObllpXO",
-    "url": "https://x.com/Reuters/status/2123379509802238000"
+    "date": "2026-11-10",
+    "time": "05:20",
+    "text": "Three contract workers died of asphyxiation at a Tata Electronics factory in southern India which makes parts for Apple iPhones, a source said https://t.co/oFFr6HUHke",
+    "url": "https://x.com/Reuters/status/2120008560704676302"
    },
    {
-    "id": "2123379288892125416",
-    "account": "AP",
-    "name": "The Associated Press",
-    "date": "2026-11-19",
+    "id": "2120040561860133344",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-10",
+    "time": "07:27",
+    "text": "Oxford museum returns ancestral Naga skulls to India https://t.co/ajpywcn88K",
+    "url": "https://x.com/BBCWorld/status/2120040561860133344"
+   },
+   {
+    "id": "2120055879231746537",
+    "account": "BBCNews",
+    "name": "BBC News (UK)",
+    "date": "2026-11-10",
+    "time": "08:28",
+    "text": "Oxford museum returns ancestral Naga skulls to India https://t.co/xNifuuciRN",
+    "url": "https://x.com/BBCNews/status/2120055879231746537"
+   },
+   {
+    "id": "2120071482759909781",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-10",
+    "time": "09:30",
+    "text": "Three workers die at Tata's India iPhone parts factory in latest safety incident https://t.co/19qt0Srdk1",
+    "url": "https://x.com/Reuters/status/2120071482759909781"
+   },
+   {
+    "id": "2120102919546785912",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-10",
+    "time": "11:35",
+    "text": "An Indian sailor’s mother has not heard from her son in more than six months, but continues to hope for his return. Naveen Kumar was among six crew members aboard two Iran-linked vessels that disappeared in Iranian waters in May https://t.co/DpDkO7GY5G https://t.co/RhmF873u5V",
+    "url": "https://x.com/Reuters/status/2120102919546785912"
+   },
+   {
+    "id": "2120178767003799612",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-10",
+    "time": "16:36",
+    "text": "La bielorrusa Aryna Sabalenka se impuso a la checa Karolina Muchova en dos sets y comenzó con buen pie su participación en las WTA Finals, el torneo que reúne en Indian Wells a las ocho mejores tenistas de la temporada\nhttps://t.co/diZ7Kl3ypV",
+    "url": "https://x.com/France24_es/status/2120178767003799612"
+   },
+   {
+    "id": "2120312789843521552",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-11",
+    "time": "01:28",
+    "text": "'They will kill you too': Sonia Gandhi's turbulent journey in Indian politics https://t.co/RtdLhwMfHQ",
+    "url": "https://x.com/BBCWorld/status/2120312789843521552"
+   },
+   {
+    "id": "2120381147733475815",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-11",
+    "time": "06:00",
+    "text": "Indian stocks open higher on softer crude, robust foreign buying https://t.co/ujl2q2LiEk",
+    "url": "https://x.com/Reuters/status/2120381147733475815"
+   },
+   {
+    "id": "2120411339872940098",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-11",
+    "time": "08:00",
+    "text": "India garment makers rethink reliance on US after tariff shock https://t.co/103F69pgg4",
+    "url": "https://x.com/Reuters/status/2120411339872940098"
+   },
+   {
+    "id": "2120426310027682181",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-11",
+    "time": "09:00",
+    "text": "Exclusive: Indian customs is holding dozens of containers of bulk Scotch imported by Pernod Ricard and Diageo as investigators press for a 150% tariff, even though the companies rely on a New Delhi assurance of lower duties under the India-UK trade pact https://t.co/rNFOKyCMjM",
+    "url": "https://x.com/Reuters/status/2120426310027682181"
+   },
+   {
+    "id": "2120443926905520180",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-11",
+    "time": "10:10",
+    "text": "Indian stocks hit eight-month high as foreign investors return https://t.co/gGn7tX9xuQ",
+    "url": "https://x.com/Reuters/status/2120443926905520180"
+   },
+   {
+    "id": "2120465332527677836",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-11",
+    "time": "11:35",
+    "text": "EXCLUSIVE: India ordered website takedowns on fake court orders, Reuters finds; police launch probe https://t.co/ZmGtD2mQNx",
+    "url": "https://x.com/Reuters/status/2120465332527677836"
+   },
+   {
+    "id": "2120474127022588410",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-11",
+    "time": "12:10",
+    "text": "India garment makers rethink reliance on US after tariff shock https://t.co/0Iw5pwv0dw",
+    "url": "https://x.com/Reuters/status/2120474127022588410"
+   },
+   {
+    "id": "2120480403752464498",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-11",
     "time": "12:34",
-    "text": "U.S. President Donald Trump, Chinese President Xi Jinping and Russian President Vladimir Putin posed for photographs ahead of a trilateral meeting in Shenzhen, China, on Thursday. https://t.co/16KFBJVn34",
-    "url": "https://x.com/AP/status/2123379288892125416"
+    "text": "New Indian mega library rocked by scandal over 'AI-generated books' https://t.co/uj0LqfdDp2",
+    "url": "https://x.com/BBCWorld/status/2120480403752464498"
    },
    {
-    "id": "2123378629362975100",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-19",
-    "time": "12:31",
-    "text": "🇨🇳 Le sommet entre les dirigeants russe, chinois et américain en #Chine a pris fin après plus de 80 minutes d'échanges, aucune communication officielle n'a été donnée après cette rencontre\n\nLe décryptage d'Antoine Mariotti, chroniqueur international ⬇️ https://t.co/heIP9pzxYk",
-    "url": "https://x.com/France24_fr/status/2123378629362975100"
-   },
-   {
-    "id": "2123372469923029442",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-19",
-    "time": "12:07",
-    "text": "While meeting with Russian President Putin and U.S. President Trump, Chinese President Xi Jinping called on nations to come together and that world powers \"bear a special responsibility.\" https://t.co/OLO1zk8DUX",
-    "url": "https://x.com/euronews/status/2123372469923029442"
-   },
-   {
-    "id": "2123369338979971373",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-19",
-    "time": "11:54",
-    "text": "President Donald Trump met with Chinese President Xi Jinping and Russian President Vladimir Putin on Thursday at the APEC summit.\n\nThe leaders discussed nuclear arms control and the ongoing wars in Ukraine and Iran. https://t.co/O1BauAuOo5",
-    "url": "https://x.com/euronews/status/2123369338979971373"
-   },
-   {
-    "id": "2123366548609888739",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-19",
-    "time": "11:43",
-    "text": "La rencontre inédite entre Xi Jinping, Vladimir Poutine et Donald Trump s'est conclue le jeudi 19 novembre à #Shenzhen, en Chine, après une session d'échanges d'environ 80 minutes https://t.co/PuTCQ83e8a",
-    "url": "https://x.com/France24_fr/status/2123366548609888739"
-   },
-   {
-    "id": "2123361690666344543",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-19",
-    "time": "11:24",
-    "text": "🇨🇳 Le sommet tripartite inédit entre les présidents chinois, russe et américain s'est achevé jeudi 19 novembre à Shenzhen, en #Chine.\n\n🇺🇸 Après une rencontre d'environ 80 minutes, Donald #Trump a quitté immédiatement la villa Kylin, où se tenaient les entretiens, avant de prendre https://t.co/gWVzXW0z8T",
-    "url": "https://x.com/France24_fr/status/2123361690666344543"
-   },
-   {
-    "id": "2123361253196238943",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-19",
-    "time": "11:22",
-    "text": "Russian President Putin says China, the U.S. and Russia have \"common interests\" on resolving regional conflicts, including the crisis in Ukraine. Russia already discussed it with China yesterday. https://t.co/BdYncrYkPy",
-    "url": "https://x.com/euronews/status/2123361253196238943"
-   },
-   {
-    "id": "2123360925977591975",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-19",
-    "time": "11:21",
-    "text": "🇨🇳 En #Chine, #Xi Jinping, Donald #Trump et Vladimir #Poutine sont réunis pour un sommet tripartite.\n\nLes explications de Maud Quessard, spécialiste de la politique étrangère américaine 👇 https://t.co/Zh3nvLn67M",
-    "url": "https://x.com/France24_fr/status/2123360925977591975"
-   },
-   {
-    "id": "2123358378869342672",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-19",
-    "time": "11:11",
-    "text": "U.S. President Donald Trump says he is looking forward to the trilateral meeting in China with Xi and Putin. He also called China an \"incredible country\" and that Xi, the totalitarian leader, has done an \"unbelievable job.\" https://t.co/VgODDz8Cy6",
-    "url": "https://x.com/euronews/status/2123358378869342672"
-   },
-   {
-    "id": "2123355997087658055",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-19",
-    "time": "11:01",
-    "text": "🇨🇳 En #Chine, #Xi, #Poutine et #Trump ont débuté une réunion tripartite en marge d'un sommet de l'#Apec.\n\n🗣️ Les explications de Baptiste Fallevoz notre correspondant à Shenzhen https://t.co/DVE5BBK7y3",
-    "url": "https://x.com/France24_fr/status/2123355997087658055"
-   },
-   {
-    "id": "2123355586670543321",
-    "account": "euronewses",
-    "name": "euronews español",
-    "date": "2026-11-19",
-    "time": "10:59",
-    "text": "Zelenski aseguró que los enviados estadounidenses informarán a Kiev sobre las conversaciones de Trump en China durante las reuniones previstas para este jueves en Berlín.\n➡️ https://t.co/JehXJ5LmuG https://t.co/6oImztuGD3",
-    "url": "https://x.com/euronewses/status/2123355586670543321"
-   },
-   {
-    "id": "2123351226238587109",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-19",
-    "time": "10:42",
-    "text": "🇨🇳 Donald #Trump, Vladimir #Poutine et Xi #Jinping se sont réunis jeudi 19 novembre en Chine pour un sommet inédit qui fait craindre, dans une période de crises multiples, des arrangements entre grandes puissances aux dépens d'autres acteurs internationaux comme l'#Ukraine. https://t.co/vHtSfeEM2E",
-    "url": "https://x.com/France24_fr/status/2123351226238587109"
-   },
-   {
-    "id": "2123350591724265746",
+    "id": "2120495515905216575",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-19",
-    "time": "10:40",
-    "text": "From her arrival in China without the fanfare that greeted other world leaders to her seat near the end of a summit table, Japanese Prime Minister Sanae Takaichi cut an isolated figure at the two-day APEC summit https://t.co/ik4YsW0wug",
-    "url": "https://x.com/Reuters/status/2123350591724265746"
+    "date": "2026-11-11",
+    "time": "13:35",
+    "text": "EXCLUSIVE: India holds Pernod, Diageo Scotch shipments as investigators seek higher tariff https://t.co/Rj5MAI702D",
+    "url": "https://x.com/Reuters/status/2120495515905216575"
    },
    {
-    "id": "2122941295496740918",
-    "account": "France24_es",
-    "name": "FRANCE 24 Español",
-    "date": "2026-11-18",
-    "time": "07:33",
-    "text": "🇨🇳 La cumbre del Foro de Cooperación Económica Asia-Pacífico (#APEC) reúne este año a 18 presidentes y primeros ministros de las 21 economías miembros en Shenzhen, China, para debatir asuntos que tendrán impacto global, como la inteligencia artificial, la productividad, el",
-    "url": "https://x.com/France24_es/status/2122941295496740918"
-   },
-   {
-    "id": "2122941281588457958",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-18",
-    "time": "07:33",
-    "text": "Chinese President Xi Jinping and Russian President Vladimir Putin are holding talks in Shenzhen, a day before a first-of-its-kind trilateral summit with US President Donald Trump in the southern Chinese city. https://t.co/xClaCGDdj9",
-    "url": "https://x.com/euronews/status/2122941281588457958"
-   },
-   {
-    "id": "2122919869943599408",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-18",
-    "time": "06:08",
-    "text": "The preliminary findings point to weak product checks, content moderation and seller sanctions, potentially exposing the Chinese online marketplace to a fine of up to 6% of its global annual turnover.\n➡️ https://t.co/2MuQ2h33I2 https://t.co/8rFZ0bGRN9",
-    "url": "https://x.com/euronews/status/2122919869943599408"
-   },
-   {
-    "id": "2122916855052374104",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-18",
-    "time": "05:56",
-    "text": "#China y #EEUU se acusan mutuamente en #México por crisis de fentanilo\n\nLa embajada de EE.UU. en México afirmó que los precursores del fentanilo provienen de China, que respondió, que el problema responde al abuso de fármacos en Estados Unidos.\n\nLea el artículo completo haciendo",
-    "url": "https://x.com/dw_espanol/status/2122916855052374104"
-   },
-   {
-    "id": "2122906888962523317",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-18",
-    "time": "05:16",
-    "text": "Xi defiende estabilidad en región Asia-Pacífico ante \"proteccionismo\"\n\n\"No puede haber prosperidad sin seguridad, ni seguridad sin estabilidad\", dijo el presidente chino ante empresarios. (gs)\nhttps://t.co/FDXDzwyTRM",
-    "url": "https://x.com/dw_espanol/status/2122906888962523317"
-   },
-   {
-    "id": "2122906756854517935",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-18",
-    "time": "05:16",
-    "text": "Xi defiende estabilidad en región Asia-Pacífico ante \"proteccionismo\"\n\n\"No puede haber prosperidad sin seguridad, ni seguridad sin estabilidad\", dijo el presidente chino ante empresarios. (gs)\nhttps://t.co/FDXDzwyTRM",
-    "url": "https://x.com/dw_espanol/status/2122906756854517935"
-   },
-   {
-    "id": "2122902707610489308",
+    "id": "2120526979304771873",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-18",
-    "time": "05:00",
-    "text": "Trump to meet Marcos in Manila before China talks https://t.co/t2pev2Ft3U",
-    "url": "https://x.com/Reuters/status/2122902707610489308"
+    "date": "2026-11-11",
+    "time": "15:40",
+    "text": "EXCLUSIVE: India ordered website takedowns on fake court orders, Reuters finds; police launch probe https://t.co/1BvjKce5ZH",
+    "url": "https://x.com/Reuters/status/2120526979304771873"
    },
    {
-    "id": "2122897640782213524",
+    "id": "2120709432044642429",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-18",
-    "time": "04:40",
-    "text": "Trump meets Marcos in Manila before China talks https://t.co/5lGvPqTjy7",
-    "url": "https://x.com/Reuters/status/2122897640782213524"
+    "date": "2026-11-12",
+    "time": "03:45",
+    "text": "A tiny, $900 wearable device being developed by an Indian billionaire entrepreneur and showcased by some of the country's top sportspersons has sparked criticism from doctors who say its claims of tracking blood flow to the brain are exaggerated https://t.co/IOjyZQHrAr",
+    "url": "https://x.com/Reuters/status/2120709432044642429"
    },
    {
-    "id": "2122892621165027796",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-18",
-    "time": "04:20",
-    "text": "Taiwan's APEC envoy says he will speak with other members at China-hosted summit https://t.co/kQkE976Eca",
-    "url": "https://x.com/Reuters/status/2122892621165027796"
-   },
-   {
-    "id": "2122889206032732466",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-11-18",
-    "time": "04:06",
-    "text": "Trump comprobará por qué EE.UU. no puede frenar el ascenso tecnológico de China\nhttps://t.co/XTCKk6VQs9",
-    "url": "https://x.com/CNNEE/status/2122889206032732466"
-   },
-   {
-    "id": "2122879967914770450",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-18",
-    "time": "03:30",
-    "text": "US President Donald Trump is in Asia this week for talks with foreign leaders in Manila, followed by a visit to China to meet President Xi Jinping, Russian President Vladimir Putin and possibly the elusive North Korean leader Kim Jong Un. Here are some takeaways from Trump's",
-    "url": "https://x.com/Reuters/status/2122879967914770450"
-   },
-   {
-    "id": "2122872257353511378",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-11-18",
-    "time": "02:59",
-    "text": "Sheinbaum se reunió con Xi Jinping antes de la cumbre de la APEC en China; conoce de qué hablaron https://t.co/X3I4sR2p4e",
-    "url": "https://x.com/CNNEE/status/2122872257353511378"
-   },
-   {
-    "id": "2122871944378761642",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-11-18",
-    "time": "02:58",
-    "text": "China censura la cobertura de CNN sobre el escándalo de Nvidia https://t.co/tVhmV5Su1z",
-    "url": "https://x.com/CNNEE/status/2122871944378761642"
-   },
-   {
-    "id": "2122868643411444218",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-18",
-    "time": "02:45",
-    "text": "Pekín busca ampliar su influencia en el sector de la IA en América Latina\n\nLa inteligencia artificial se perfila como un nuevo campo de batalla entre China y Estados Unidos en Latinoamérica. En sus encuentros en China con los presidentes de México, Perú y Chile antes de la cumbre https://t.co/MnVspMxjTK",
-    "url": "https://x.com/dw_espanol/status/2122868643411444218"
-   },
-   {
-    "id": "2122865116492279814",
-    "account": "AP",
-    "name": "The Associated Press",
-    "date": "2026-11-18",
-    "time": "02:30",
-    "text": "Secretary of State Marco Rubio says there is no meeting with North Korea’s Kim Jong Un yet scheduled for President Trump’s China visit but Trump is “prepared” for dialogue. https://t.co/gd1NCOMcJ9",
-    "url": "https://x.com/AP/status/2122865116492279814"
-   },
-   {
-    "id": "2122838502588952841",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-18",
-    "time": "00:45",
-    "text": "Trump to meet Marcos in Manila before China talks https://t.co/T0KX32mV0A",
-    "url": "https://x.com/Reuters/status/2122838502588952841"
-   },
-   {
-    "id": "2122834865116594419",
-    "account": "France24_es",
-    "name": "FRANCE 24 Español",
-    "date": "2026-11-18",
-    "time": "00:30",
-    "text": "🇷🇺🇨🇳 El presidente ruso #VladimirPutin llegó el miércoles 18 de noviembre a #China, donde se espera que se reúna con sus homólogos Donald Trump y Xi Jinping, en el marco de la cumbre de la #APEC ➡️https://t.co/CuXxaIG71q https://t.co/VsCEduMcjw",
-    "url": "https://x.com/France24_es/status/2122834865116594419"
-   },
-   {
-    "id": "2122829058488533010",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-11-18",
-    "time": "00:07",
-    "text": "ANÁLISIS l Europa teme lo que Trump, Xi y Putin puedan discutir a puerta cerrada en China https://t.co/nqIY6AV8wl",
-    "url": "https://x.com/CNNEE/status/2122829058488533010"
-   },
-   {
-    "id": "2122812482775290039",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-11-17",
-    "time": "23:01",
-    "text": "“Compartimos una visión de desarrollo y prosperidad”: Sheinbaum sobre la relación de México con China https://t.co/JYHBd38e9o",
-    "url": "https://x.com/CNNEE/status/2122812482775290039"
-   },
-   {
-    "id": "2122809550214418836",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "22:50",
-    "text": "China says it will take countermeasures if US imposes new chip curbs https://t.co/26RqE5pK33",
-    "url": "https://x.com/Reuters/status/2122809550214418836"
-   },
-   {
-    "id": "2122808296142729488",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "22:45",
-    "text": "US lawmakers want Mercedes-Benz to disclose details of Chinese ties https://t.co/Ugc2WOLrQE",
-    "url": "https://x.com/Reuters/status/2122808296142729488"
-   },
-   {
-    "id": "2122804497143550031",
+    "id": "2120717035919270176",
     "account": "washingtonpost",
     "name": "The Washington Post",
-    "date": "2026-11-17",
-    "time": "22:30",
-    "text": "President Trump touches down in China on Wednesday after flying halfway across the globe for a visit designed to project friendship and mutual respect even as a technological and economic rivalry intensifies between the world’s two largest economies. https://t.co/afUuhLRAEc",
-    "url": "https://x.com/washingtonpost/status/2122804497143550031"
+    "date": "2026-11-12",
+    "time": "04:15",
+    "text": "A Russian paraglider was rescued in India on Nov. 10 after becoming trapped in high-voltage power lines, a rescue official said.\n\nMedia reports said the man had taken off from one of India’s best-known paragliding sites and was stuck for two hours before being saved. https://t.co/DYgL7eIVhX",
+    "url": "https://x.com/washingtonpost/status/2120717035919270176"
    },
    {
-    "id": "2122794451923792069",
+    "id": "2120771084106519014",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "21:50",
-    "text": "Vestas boss calls for tougher EU rules on Chinese software in wind sector https://t.co/jBcHiqEm9W",
-    "url": "https://x.com/Reuters/status/2122794451923792069"
+    "date": "2026-11-12",
+    "time": "07:50",
+    "text": "Indian billionaire, doctors spar over $900 brain blood-flow tracker Temple https://t.co/624Ryt1UfW",
+    "url": "https://x.com/Reuters/status/2120771084106519014"
    },
    {
-    "id": "2122755397383815563",
+    "id": "2120798779494252607",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "19:15",
-    "text": "President Trump met the leaders of regional allies India, Japan and Australia in the Philippines at the start of an Asian trip that also includes a much-anticipated trilateral meeting with his Chinese and Russian counterparts https://t.co/TRsBgvng6y https://t.co/sPz94WdVNB",
-    "url": "https://x.com/Reuters/status/2122755397383815563"
+    "date": "2026-11-12",
+    "time": "09:40",
+    "text": "EXCLUSIVE: India to ban private equity firms from controlling multiple non-bank lenders, sources say https://t.co/mSfH7LSe7P",
+    "url": "https://x.com/Reuters/status/2120798779494252607"
+   },
+   {
+    "id": "2120804706448474351",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-12",
+    "time": "10:03",
+    "text": "Was Delhi pollution data during Diwali misleading? https://t.co/FLDcikAQMl",
+    "url": "https://x.com/BBCWorld/status/2120804706448474351"
+   },
+   {
+    "id": "2120816528417243226",
+    "account": "BBCNews",
+    "name": "BBC News (UK)",
+    "date": "2026-11-12",
+    "time": "10:50",
+    "text": "Was Delhi pollution data during Diwali misleading? https://t.co/GXAnOXuKK3",
+    "url": "https://x.com/BBCNews/status/2120816528417243226"
+   },
+   {
+    "id": "2120860430935433344",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-12",
+    "time": "13:45",
+    "text": "EXCLUSIVE: India to ban private equity firms from controlling multiple non-bank lenders, sources say https://t.co/1n79OuR5ns",
+    "url": "https://x.com/Reuters/status/2120860430935433344"
+   },
+   {
+    "id": "2120894243380322449",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-12",
+    "time": "15:59",
+    "text": "Announced annually by Travel + Leisure since 2014, India follows in the footsteps of previous destinations of the year including Brazil, Thailand and Costa Rica. https://t.co/qzp1ChYRsq",
+    "url": "https://x.com/euronews/status/2120894243380322449"
+   },
+   {
+    "id": "2121178781259866582",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "10:50",
+    "text": "India orders audit of electronic waste recyclers to catch fake compliance https://t.co/hYEUrPa7ul",
+    "url": "https://x.com/Reuters/status/2121178781259866582"
+   },
+   {
+    "id": "2121241766636536170",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-13",
+    "time": "15:00",
+    "text": "India orders audit of electronic waste recyclers to catch fake compliance https://t.co/891a7CoaY7",
+    "url": "https://x.com/Reuters/status/2121241766636536170"
+   },
+   {
+    "id": "2122218129136750720",
+    "account": "BBCNews",
+    "name": "BBC News (UK)",
+    "date": "2026-11-16",
+    "time": "07:40",
+    "text": "Prince and Princess of Wales arrive in India ahead of meeting with Modi https://t.co/G7MCXYkSj6",
+    "url": "https://x.com/BBCNews/status/2122218129136750720"
+   },
+   {
+    "id": "2122280320485433365",
+    "account": "BBCNews",
+    "name": "BBC News (UK)",
+    "date": "2026-11-16",
+    "time": "11:47",
+    "text": "Is India rethinking its short-term military recruitment scheme? https://t.co/0bb4bmMhWN",
+    "url": "https://x.com/BBCNews/status/2122280320485433365"
+   },
+   {
+    "id": "2122293604169499025",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-16",
+    "time": "12:40",
+    "text": "🏏 Britain's Prince William and Kate Middleton played a game of street cricket in Mumbai with Indian cricket legend Sachin Tendulkar https://t.co/Wiiea1ILkQ https://t.co/8o7ctPhS0Y",
+    "url": "https://x.com/Reuters/status/2122293604169499025"
    },
    {
     "id": "2122344087621718327",
@@ -903,339 +1499,355 @@
     "url": "https://x.com/washingtonpost/status/2122344087621718327"
    },
    {
-    "id": "2121242289385484326",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-13",
-    "time": "15:02",
-    "text": "🇺🇸💻 Scandale #Nvidia : qui est Alice Huang, soupçonnée d’espionnage au profit de la Chine ? https://t.co/YFpCTiwnl4",
-    "url": "https://x.com/France24_fr/status/2121242289385484326"
+    "id": "2122354020048122124",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-16",
+    "time": "16:40",
+    "text": "William y Kate juegan críquet con la estrella Sachin Tendulkar durante su visita a la India https://t.co/cLupHu7U9O",
+    "url": "https://x.com/CNNEE/status/2122354020048122124"
    },
    {
-    "id": "2121240414640615744",
+    "id": "2122413180731187541",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "14:55",
-    "text": "Chinese AI stocks fell on concerns that Jensen Huang’s exit could further restrict access to US chips. But Joachim Klement of Panmure Liberum says China could emerge as the biggest winner, as a slowdown in US AI expansion gives Beijing room to catch up https://t.co/YZdHdMR7Ns https://t.co/o2Ce9gNlSD",
-    "url": "https://x.com/Reuters/status/2121240414640615744"
+    "date": "2026-11-16",
+    "time": "20:35",
+    "text": "India raises diesel, jet fuel export levies as inflation stays elevated https://t.co/2iwroCD5H7",
+    "url": "https://x.com/Reuters/status/2122413180731187541"
    },
    {
-    "id": "2121229089940124022",
+    "id": "2122474829882294684",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "00:40",
+    "text": "India raises diesel, jet fuel export levies as inflation stays elevated https://t.co/Agy67bvlGI",
+    "url": "https://x.com/Reuters/status/2122474829882294684"
+   },
+   {
+    "id": "2122575468784148749",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "07:20",
+    "text": "Meta said it had modified Instagram's recommendation systems specifically for India to show less sexually suggestive and violent content, as the government tightens oversight of online content https://t.co/Zle8ZtgWMm",
+    "url": "https://x.com/Reuters/status/2122575468784148749"
+   },
+   {
+    "id": "2122588100425572774",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "08:10",
+    "text": "EXCLUSIVE: India may limit leveraged stock bets to curb volatility, sources say https://t.co/xon8C7opBy",
+    "url": "https://x.com/Reuters/status/2122588100425572774"
+   },
+   {
+    "id": "2122621770070995022",
+    "account": "BBCNews",
+    "name": "BBC News (UK)",
+    "date": "2026-11-17",
+    "time": "10:24",
+    "text": "Trump about to land in Manila ahead of meeting with leaders of India, Japan and Australia https://t.co/TOsmDyPqIX",
+    "url": "https://x.com/BBCNews/status/2122621770070995022"
+   },
+   {
+    "id": "2122628371481780552",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "10:50",
+    "text": "India Inc logs best quarterly profit growth in four years, fuelling market revival hopes https://t.co/RvMUNWALgn",
+    "url": "https://x.com/Reuters/status/2122628371481780552"
+   },
+   {
+    "id": "2122635926891299172",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "11:20",
+    "text": "India says Xiaomi, Flextronics hid royalty deals in tariff fight https://t.co/hgXdaF6mkB",
+    "url": "https://x.com/Reuters/status/2122635926891299172"
+   },
+   {
+    "id": "2122639676859183261",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "11:35",
+    "text": "Meta says it tuned Instagram to curb suggestive, violent content in India https://t.co/BiiJVZ0056",
+    "url": "https://x.com/Reuters/status/2122639676859183261"
+   },
+   {
+    "id": "2122667879904485658",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "13:27",
+    "text": "Earthshot Prize ceremony in Mumbai, India https://t.co/X6UGAHlo93",
+    "url": "https://x.com/Reuters/status/2122667879904485658"
+   },
+   {
+    "id": "2122691354199204218",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "15:00",
+    "text": "India Inc logs best quarterly profit growth in four years, fuelling market revival hopes https://t.co/2zD5odDQPW",
+    "url": "https://x.com/Reuters/status/2122691354199204218"
+   },
+   {
+    "id": "2122698850641035324",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "15:30",
+    "text": "India says Xiaomi, Flextronics hid royalty deals in tariff fight https://t.co/W0DeAeeB07",
+    "url": "https://x.com/Reuters/status/2122698850641035324"
+   },
+   {
+    "id": "2122703807511498924",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "15:50",
+    "text": "US President Trump met regional allies India, Japan and Australia in the Philippines. He said the countries had struck several joint critical minerals agreements aimed at securing supply chains and reducing their reliance on foreign suppliers https://t.co/a6Zx5ITPgL https://t.co/E33s9t3En3",
+    "url": "https://x.com/Reuters/status/2122703807511498924"
+   },
+   {
+    "id": "2122711437764083951",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "16:20",
+    "text": "BMW bets on luxury Alpina brand to woo wealthy Indian buyers in challenge to Mercedes https://t.co/dEJR9uH0VR",
+    "url": "https://x.com/Reuters/status/2122711437764083951"
+   },
+   {
+    "id": "2122733989773394124",
+    "account": "AP",
+    "name": "The Associated Press",
+    "date": "2026-11-17",
+    "time": "17:49",
+    "text": "Inde Navarrette details her “Saturday Night Live” experience: “I was losing my marbles … I’d do it again!”\n\n#IndeNavarrette #SNL https://t.co/zq929nQCNI",
+    "url": "https://x.com/AP/status/2122733989773394124"
+   },
+   {
+    "id": "2122755397383815563",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "19:15",
+    "text": "President Trump met the leaders of regional allies India, Japan and Australia in the Philippines at the start of an Asian trip that also includes a much-anticipated trilateral meeting with his Chinese and Russian counterparts https://t.co/TRsBgvng6y https://t.co/sPz94WdVNB",
+    "url": "https://x.com/Reuters/status/2122755397383815563"
+   },
+   {
+    "id": "2122774336540922311",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-17",
+    "time": "20:30",
+    "text": "BMW bets on luxury Alpina brand to woo wealthy Indian buyers in challenge to Mercedes https://t.co/zokGleyJ8n",
+    "url": "https://x.com/Reuters/status/2122774336540922311"
+   },
+   {
+    "id": "2122867462664225040",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-18",
+    "time": "02:40",
+    "text": "Insight: How India became a rice powerhouse - and why it's becoming a problem https://t.co/xaEvlnXEsO",
+    "url": "https://x.com/Reuters/status/2122867462664225040"
+   },
+   {
+    "id": "2122876193296851332",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-18",
+    "time": "03:15",
+    "text": "India has grown into a rice-producing powerhouse, thanks to crop-science advances and subsidies designed decades ago to keep the nation fed. It's also generated a growing rice surplus — much of it exported — even as India's government shoulders the rising cost of subsidies",
+    "url": "https://x.com/Reuters/status/2122876193296851332"
+   },
+   {
+    "id": "2122930345578295308",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-18",
+    "time": "06:50",
+    "text": "How India became a rice powerhouse - and why it's becoming a problem https://t.co/ZG2mAuebu4",
+    "url": "https://x.com/Reuters/status/2122930345578295308"
+   },
+   {
+    "id": "2122931557753299372",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-18",
+    "time": "06:55",
+    "text": "India has grown into a rice-producing powerhouse, thanks to crop-science advances and subsidies designed decades ago to keep the nation fed. Much of the growing rice surplus is exported. But the government must bear the rising cost of subsidies https://t.co/QQNRZmZTIF https://t.co/U4uIl7XAUv",
+    "url": "https://x.com/Reuters/status/2122931557753299372"
+   },
+   {
+    "id": "2122986962684432441",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-18",
+    "time": "10:35",
+    "text": "Indian economic growth seen at annual 7.6% in July-September quarter - Reuters poll https://t.co/gv5W9ShTt9",
+    "url": "https://x.com/Reuters/status/2122986962684432441"
+   },
+   {
+    "id": "2123039758339215444",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-18",
+    "time": "14:04",
+    "text": "William and Kate to meet Indian Prime Minister Modi in New Delhi https://t.co/NQ4nyPS07c",
+    "url": "https://x.com/BBCWorld/status/2123039758339215444"
+   },
+   {
+    "id": "2123077938300027168",
+    "account": "BBCNews",
+    "name": "BBC News (UK)",
+    "date": "2026-11-18",
+    "time": "16:36",
+    "text": "William and Kate meet Indian Prime Minister Modi in New Delhi https://t.co/ZNvdOlFKS1",
+    "url": "https://x.com/BBCNews/status/2123077938300027168"
+   },
+   {
+    "id": "2123078818948604136",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-18",
+    "time": "16:40",
+    "text": "Indian economic growth seen at annual 7.6% in July-September quarter - Reuters poll https://t.co/a21yhgunBg",
+    "url": "https://x.com/Reuters/status/2123078818948604136"
+   },
+   {
+    "id": "2123270071577366664",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "05:20",
+    "text": "Exclusive: Amid a raging dispute over the India-UK trade pact, India is now imposing an effective duty of 162.5% on bulk Scotch imports, jolting liquor firms as the levies exceed the 150% charged before the landmark agreement https://t.co/1HqEmoGtFd",
+    "url": "https://x.com/Reuters/status/2123270071577366664"
+   },
+   {
+    "id": "2123302858560880858",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-19",
+    "time": "07:30",
+    "text": "Casi 50.000 evacuados por la llegada del potente ciclón Akvan en India\n\nLas autoridades del gobierno han habilitado más de 400 refugios para albergar a las personas evacuadas. (mg)\n\nLea el artículo completo haciendo clic en la imagen \nhttps://t.co/diEtDfrEDO",
+    "url": "https://x.com/dw_espanol/status/2123302858560880858"
+   },
+   {
+    "id": "2123335507132227760",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "09:40",
+    "text": "EXCLUSIVE: India to charge bulk Scotch imports 162.5% duty and tax amid UK pact standoff https://t.co/ZWDlQSiL0t",
+    "url": "https://x.com/Reuters/status/2123335507132227760"
+   },
+   {
+    "id": "2123395931605213637",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "13:40",
+    "text": "India's gamers skip work, crowd cafes for Grand Theft Auto VI as Modi joins buzz https://t.co/t30EDRRM6m",
+    "url": "https://x.com/Reuters/status/2123395931605213637"
+   },
+   {
+    "id": "2123457568240464317",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-19",
+    "time": "17:45",
+    "text": "India's gamers skip work, crowd cafes for Grand Theft Auto VI as Modi joins buzz https://t.co/YRdl6p07Cd",
+    "url": "https://x.com/Reuters/status/2123457568240464317"
+   },
+   {
+    "id": "2123457523881509200",
     "account": "el_pais",
     "name": "EL PAÍS",
-    "date": "2026-11-13",
-    "time": "14:10",
-    "text": "El Congreso de EE UU inicia el escrutinio por el caso de Nvidia y la infidelidad de Jensen Huang con una supuesta espía china. La empresa proporciona el 90% de los chips usados en los centros de datos, donde se entrenan los modelos más sofisticados de IA https://t.co/zuK7fng6a6",
-    "url": "https://x.com/el_pais/status/2121229089940124022"
+    "date": "2026-11-19",
+    "time": "17:45",
+    "text": "La caída del GTA VI no se ha dado de manera simultánea en todo el mundo, sino que se ha registrado en momentos diferentes. El número más alto de problemas se reporta poco antes del estreno en India y el segundo pico coincide aproximadamente con el lanzamiento en EE UU",
+    "url": "https://x.com/el_pais/status/2123457523881509200"
    },
    {
-    "id": "2121205906259997051",
-    "account": "bbcmundo",
-    "name": "BBC News Mundo",
-    "date": "2026-11-13",
-    "time": "12:37",
-    "text": "\"Nací en España y un día me miré al espejo y me di cuenta de que era china\" https://t.co/gTj327cfix",
-    "url": "https://x.com/bbcmundo/status/2121205906259997051"
-   },
-   {
-    "id": "2121177500479049792",
+    "id": "2123484078087233944",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "10:45",
-    "text": "World leaders are set to gather in Shenzhen for the APEC summit, with attention on a meeting involving US, Chinese and Russian leaders. But what exactly is APEC, who are its 21 members, and what does the forum do? https://t.co/ruNsGorMsv https://t.co/jOvSjMXGge",
-    "url": "https://x.com/Reuters/status/2121177500479049792"
+    "date": "2026-11-19",
+    "time": "19:30",
+    "text": "Indian lender Yes Bank's AT-1 bond investors urge RBI to focus on investor protection https://t.co/U6zjqFicLX",
+    "url": "https://x.com/Reuters/status/2123484078087233944"
    },
    {
-    "id": "2121175447690199228",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-13",
-    "time": "10:36",
-    "text": "\"We will discover if it's actually China orchestrating all of this. Or it's a businessman with this sort of tacit consent from the US administration.\"\n\nAndrea Renda, head of research at the CEPS on #EuropeToday, as the chief executive of Nvidia resigns. https://t.co/0IknkPJk52",
-    "url": "https://x.com/euronews/status/2121175447690199228"
+    "id": "2123488129638117480",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-19",
+    "time": "19:46",
+    "text": "Weekly quiz: Which star played cricket with Catherine in India? https://t.co/hRO4X7KMf8",
+    "url": "https://x.com/BBCWorld/status/2123488129638117480"
    },
    {
-    "id": "2121172668313485774",
+    "id": "2123537987220689084",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-19",
+    "time": "23:04",
+    "text": "William and Catherine's India tour was 'particularly special', aide says https://t.co/mUjKzNp98r",
+    "url": "https://x.com/BBCWorld/status/2123537987220689084"
+   },
+   {
+    "id": "2123541380903391432",
+    "account": "BBCNews",
+    "name": "BBC News (UK)",
+    "date": "2026-11-19",
+    "time": "23:18",
+    "text": "William and Catherine's India tour was 'particularly special', aide says https://t.co/UluVA8lPIL",
+    "url": "https://x.com/BBCNews/status/2123541380903391432"
+   },
+   {
+    "id": "2123548177886228688",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "10:25",
-    "text": "Exclusive: Nvidia has said US export controls have effectively shut it out of China's AI data-center market, but a Reuters review has identified more than $3 billion in Chinese computing projects built around the American chipmaker's restricted processors https://t.co/Fg7hQHm5zA",
-    "url": "https://x.com/Reuters/status/2121030490513657903"
+    "date": "2026-11-19",
+    "time": "23:45",
+    "text": "Indian lender Yes Bank's AT-1 bond investors urge RBI to focus on investor protection https://t.co/KT5Vf3lfou",
+    "url": "https://x.com/Reuters/status/2123548177886228688"
    },
    {
-    "id": "2121128449129562288",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "07:30",
-    "text": "Explainer: Tougher curbs on AI chip sales to China likely after Nvidia CEO resigns https://t.co/4ntnBt8tEh",
-    "url": "https://x.com/Reuters/status/2121128449129562288"
-   },
-   {
-    "id": "2121095758401220748",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "05:20",
-    "text": "China stages unannounced Pacific drills in 'silent intimidation' of Taiwan, officials say https://t.co/nM1lD19arV",
-    "url": "https://x.com/Reuters/status/2121095758401220748"
-   },
-   {
-    "id": "2121093224018198903",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "05:10",
-    "text": "US Attorney General Todd Blanche said  that the Justice Department has not yet reached a conclusion on whether Alice Huang, the Chinese businesswoman who had an affair with former Nvidia CEO Jensen Huang, was a Chinese spy https://t.co/0QymfaEnPD",
-    "url": "https://x.com/Reuters/status/2121093224018198903"
-   },
-   {
-    "id": "2121090715941835030",
-    "account": "CNN",
-    "name": "CNN",
-    "date": "2026-11-13",
-    "time": "05:00",
-    "text": "The US intelligence community is still working to understand the relationship between a Chinese businesswoman who had an affair with Nvidia CEO Jensen Huang and the Chinese government, with multiple sources telling CNN that the intelligence collected on her to date does not prove",
-    "url": "https://x.com/CNN/status/2121090715941835030"
-   },
-   {
-    "id": "2121083171189993567",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "04:30",
-    "text": "Tibetan exile leader laments absence of rights in Trump China dealings https://t.co/fq20nWsD8V",
-    "url": "https://x.com/Reuters/status/2121083171189993567"
-   },
-   {
-    "id": "2121074349574660192",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "03:55",
-    "text": "US House Speaker Mike Johnson said there was growing consensus in Congress on limiting chip exports to China after a spy scandal forced out Nvidia CEO Jensen Huang https://t.co/2rZXkCcMHu",
-    "url": "https://x.com/Reuters/status/2121074349574660192"
-   },
-   {
-    "id": "2121073090654310699",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "03:50",
-    "text": "Exclusive: Japan has warned defense contractors of deep cuts to expected orders as fiscal constraints threaten to scale back a military buildup that Prime Minister Sanae Takaichi's government says is needed to counter China https://t.co/fACtB2OF0Q",
-    "url": "https://x.com/Reuters/status/2121073090654310699"
-   },
-   {
-    "id": "2121070560964714532",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "03:40",
-    "text": "Nvidia CEO Jensen Huang stepped down after revelations of extramarital affairs, including one involving a suspected Chinese spy, plunged the chipmaker into crisis and sent shockwaves across an AI industry he helped bankroll https://t.co/RPSAkm9eNT",
-    "url": "https://x.com/Reuters/status/2121070560964714532"
-   },
-   {
-    "id": "2121069542038274317",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-11-13",
-    "time": "03:36",
-    "text": "Los vínculos de Alice Huang con Beijing y el fundador de Nvidia dividen a funcionarios de Estados Unidos https://t.co/CEPIZSbZIA",
-    "url": "https://x.com/CNNEE/status/2121069542038274317"
-   },
-   {
-    "id": "2121057965390110827",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-11-13",
-    "time": "02:50",
-    "text": "China aprovecharía cualquier tropiezo de Nvidia para avanzar en la IA: experto https://t.co/II4LwXpXyP",
-    "url": "https://x.com/CNNEE/status/2121057965390110827"
-   },
-   {
-    "id": "2121053698726178856",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "02:33",
-    "text": "US Attorney General Todd Blanche said the Justice Department has not yet reached a conclusion on whether Alice Huang, the Chinese businesswoman who had an affair with former Nvidia CEO Jensen Huang, was a Chinese spy https://t.co/TOYvF8LOgR https://t.co/5yowPXxcXz",
-    "url": "https://x.com/Reuters/status/2121053698726178856"
-   },
-   {
-    "id": "2121041612021051792",
-    "account": "washingtonpost",
-    "name": "The Washington Post",
-    "date": "2026-11-13",
-    "time": "01:45",
-    "text": "The U.S. rebuffed requests from Singaporean authorities to assist with its investigation into Alice Huang, the alleged Chinese espionage asset whose affair with Nvidia CEO Jensen Huang has raised national security concerns, Singapore's government said. https://t.co/BxaO3xFNrA",
-    "url": "https://x.com/washingtonpost/status/2121041612021051792"
-   },
-   {
-    "id": "2121030490513657903",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "01:00",
-    "text": "Explainer: Tougher curbs on AI chip sales to China likely after Nvidia CEO resigns https://t.co/sCEP74mWKI",
-    "url": "https://x.com/Reuters/status/2121030490513657903"
-   },
-   {
-    "id": "2121020265031188931",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "00:20",
-    "text": "Tibetan exile leader laments absence of rights in Trump China dealings https://t.co/6p27Z2mgLQ",
-    "url": "https://x.com/Reuters/status/2121020265031188931"
-   },
-   {
-    "id": "2121017723459096670",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "00:10",
-    "text": "US Justice Department has not concluded Alice Huang was Chinese spy, Blanche says https://t.co/zDUfZ9hVkt",
-    "url": "https://x.com/Reuters/status/2121017723459096670"
-   },
-   {
-    "id": "2121004203422490823",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-12",
-    "time": "23:16",
-    "text": "Mercedes-Benz analiza el cierre de fábricas en Alemania\n\nLa firma enfrenta una caída de sus beneficios por el desplome de sus ventas en el mercado chino y el alto costo de producción en el país europeo. https://t.co/PUqqZx8EnW (dz)",
-    "url": "https://x.com/dw_espanol/status/2121004203422490823"
-   },
-   {
-    "id": "2120978402408890670",
-    "account": "France24_es",
-    "name": "FRANCE 24 Español",
-    "date": "2026-11-12",
-    "time": "21:33",
-    "text": "En Contexto - Nvidia, EE. UU. y China: un caso de romance personal a un asunto de Estado\n➡️ https://t.co/wqYpyoOMiS https://t.co/niw6be3dfz",
-    "url": "https://x.com/France24_es/status/2120978402408890670"
-   },
-   {
-    "id": "2120969948734300546",
-    "account": "washingtonpost",
-    "name": "The Washington Post",
-    "date": "2026-11-12",
-    "time": "21:00",
-    "text": "After Nvidia CEO Jensen Huang revealed that he was unfaithful to his wife, some of Silicon Valley’s wealthiest individuals rushed to tell their followers that it was okay if one of the most powerful businessmen had exposed himself to a Chinese spy. https://t.co/uxIpYIwTkk",
-    "url": "https://x.com/washingtonpost/status/2120969948734300546"
-   },
-   {
-    "id": "2120948403177672820",
-    "account": "bbcmundo",
-    "name": "BBC News Mundo",
-    "date": "2026-11-12",
-    "time": "19:34",
-    "text": "La empresa china BYD, el mayor productor de vehículos eléctricos del mundo, instaló en Camaçari su fábrica más grande en América Latina. En este reportaje, BBC Brasil explora el impacto que ha tenido en la ciudad brasileña. 👉 https://t.co/BYchHVDEAj https://t.co/XZmvN7SEdc",
-    "url": "https://x.com/bbcmundo/status/2120948403177672820"
-   },
-   {
-    "id": "2120940168500928546",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-12",
-    "time": "19:01",
-    "text": "Pantuflas, té y rapidez: Latinoamérica se prepara para turistas chinos\n\nUn calentador de agua en la habitación puede valer más que la mejor cafetera. En la #ITB Américas, expertos explican cómo conquistar en #AméricaLatina a un viajero de #China que no conoce Instagram ni",
-    "url": "https://x.com/dw_espanol/status/2120940168500928546"
-   },
-   {
-    "id": "2120930496280510943",
-    "account": "euronewses",
-    "name": "euronews español",
-    "date": "2026-11-12",
-    "time": "18:23",
-    "text": "Jensen Huang dimite como líder de Nvidia tras 33 años. Jensen Huang abandona la dirección de Nvidia en Estados Unidos en plena crisis por sus relaciones extramatrimoniales y las sospechas de espionaje vinculado a China, dejando el relevo interino a Colette Kress\n#Nvidia #IA https://t.co/4j0DtoXAEd",
-    "url": "https://x.com/euronewses/status/2120930496280510943"
-   },
-   {
-    "id": "2120913933607321718",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-12",
-    "time": "17:17",
-    "text": "🇺🇸🖥️ Le cofondateur de Nvidia quitte ses fonctions après plusieurs polémiques sur sa vie privée, dont une liaison avec une femme soupçonnée d’espionnage au profit de la Chine https://t.co/0TnRT04yrS",
-    "url": "https://x.com/France24_fr/status/2120913933607321718"
-   },
-   {
-    "id": "2120901979056583043",
-    "account": "washingtonpost",
-    "name": "The Washington Post",
-    "date": "2026-11-12",
-    "time": "16:30",
-    "text": "Jensen Huang’s affair with an alleged Chinese spy has plunged Nvidia into its biggest crisis in decades, with Huang resigning as chief executive.\n\nHere’s a timeline of how the controversy at one of the most influential tech companies unfolded: https://t.co/CGaRyXEOEo https://t.co/TDsZiKJlfr",
-    "url": "https://x.com/washingtonpost/status/2120901979056583043"
-   },
-   {
-    "id": "2120499296093045100",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-11",
-    "time": "13:50",
-    "text": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support', Xinhua reports https://t.co/WX9zSH6szk",
-    "url": "https://x.com/Reuters/status/2120499296093045100"
-   },
-   {
-    "id": "2120437651358544174",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-11",
-    "time": "09:45",
-    "text": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support', Xinhua reports https://t.co/cmy3TzlM54",
-    "url": "https://x.com/Reuters/status/2120437651358544174"
-   }
-  ],
-  "india": [
-   {
-    "id": "2123808630310904064",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-20",
-    "time": "17:00",
-    "text": "Indian space startup SatSure raises $7 million from sovereign space fund https://t.co/VhlDMaksST",
-    "url": "https://x.com/Reuters/status/2123808630310904064"
-   },
-   {
-    "id": "2123823720418480311",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-20",
-    "time": "18:00",
-    "text": "Indian central bank clarifies forex reporting rules for service imports, exports https://t.co/xDcVDFp5ec",
-    "url": "https://x.com/Reuters/status/2123823720418480311"
-   },
-   {
-    "id": "2123824986179740135",
+    "id": "2123560059812581701",
     "account": "BBCWorld",
     "name": "BBC News (World)",
     "date": "2026-11-20",
-    "time": "18:05",
-    "text": "Indian man sentenced to 19-plus years in plot to assassinate US-based Sikh separatist leader https://t.co/vpubBDuVPC",
-    "url": "https://x.com/BBCWorld/status/2123824986179740135"
+    "time": "00:32",
+    "text": "Cumin-laced fizzy sodas are giving cola giants a tough fight in India https://t.co/yATMNoLE0g",
+    "url": "https://x.com/BBCWorld/status/2123560059812581701"
    },
    {
-    "id": "2123826237239955955",
+    "id": "2123602245556047930",
     "account": "Reuters",
     "name": "Reuters",
     "date": "2026-11-20",
-    "time": "18:10",
-    "text": "Nepal PM Balendra Shah to visit India, meet Modi https://t.co/a7GUTZGpZD",
-    "url": "https://x.com/Reuters/status/2123826237239955955"
+    "time": "03:20",
+    "text": "India has escalated its targeting of religious minorities during a voter list revision that struck off tens of millions of names nationwide, a US panel on religious freedom said https://t.co/vrLtgHQ5FK",
+    "url": "https://x.com/Reuters/status/2123602245556047930"
    },
    {
-    "id": "2123881616791552127",
+    "id": "2123665195645939736",
     "account": "Reuters",
     "name": "Reuters",
     "date": "2026-11-20",
-    "time": "21:50",
-    "text": "India cyber agency warns of unauthorised payment transactions https://t.co/NDLf1HATv7",
-    "url": "https://x.com/Reuters/status/2123881616791552127"
+    "time": "07:30",
+    "text": "US religious freedom panel says India is targeting minorities in voter roll revisions https://t.co/5g4kfcZojx",
+    "url": "https://x.com/Reuters/status/2123665195645939736"
    },
    {
     "id": "2123707971540537676",
@@ -1301,834 +1913,78 @@
     "url": "https://x.com/Reuters/status/2123789751178199436"
    },
    {
-    "id": "2123665195645939736",
+    "id": "2123808630310904064",
     "account": "Reuters",
     "name": "Reuters",
     "date": "2026-11-20",
-    "time": "07:30",
-    "text": "US religious freedom panel says India is targeting minorities in voter roll revisions https://t.co/5g4kfcZojx",
-    "url": "https://x.com/Reuters/status/2123665195645939736"
+    "time": "17:00",
+    "text": "Indian space startup SatSure raises $7 million from sovereign space fund https://t.co/VhlDMaksST",
+    "url": "https://x.com/Reuters/status/2123808630310904064"
    },
    {
-    "id": "2123602245556047930",
+    "id": "2123823720418480311",
     "account": "Reuters",
     "name": "Reuters",
     "date": "2026-11-20",
-    "time": "03:20",
-    "text": "India has escalated its targeting of religious minorities during a voter list revision that struck off tens of millions of names nationwide, a US panel on religious freedom said https://t.co/vrLtgHQ5FK",
-    "url": "https://x.com/Reuters/status/2123602245556047930"
+    "time": "18:00",
+    "text": "Indian central bank clarifies forex reporting rules for service imports, exports https://t.co/xDcVDFp5ec",
+    "url": "https://x.com/Reuters/status/2123823720418480311"
    },
    {
-    "id": "2123560059812581701",
+    "id": "2123824986179740135",
     "account": "BBCWorld",
     "name": "BBC News (World)",
     "date": "2026-11-20",
+    "time": "18:05",
+    "text": "Indian man sentenced to 19-plus years in plot to assassinate US-based Sikh separatist leader https://t.co/vpubBDuVPC",
+    "url": "https://x.com/BBCWorld/status/2123824986179740135"
+   },
+   {
+    "id": "2123826237239955955",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "18:10",
+    "text": "Nepal PM Balendra Shah to visit India, meet Modi https://t.co/a7GUTZGpZD",
+    "url": "https://x.com/Reuters/status/2123826237239955955"
+   },
+   {
+    "id": "2123881616791552127",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-20",
+    "time": "21:50",
+    "text": "India cyber agency warns of unauthorised payment transactions https://t.co/NDLf1HATv7",
+    "url": "https://x.com/Reuters/status/2123881616791552127"
+   },
+   {
+    "id": "2123922386437243022",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-21",
     "time": "00:32",
-    "text": "Cumin-laced fizzy sodas are giving cola giants a tough fight in India https://t.co/yATMNoLE0g",
-    "url": "https://x.com/BBCWorld/status/2123560059812581701"
+    "text": "A new Nepal, an old neighbour - Balendra Shah's India test https://t.co/LDgCyXBJ3L",
+    "url": "https://x.com/BBCWorld/status/2123922386437243022"
    },
    {
-    "id": "2123548177886228688",
+    "id": "2123944595146825981",
     "account": "Reuters",
     "name": "Reuters",
-    "date": "2026-11-19",
-    "time": "23:45",
-    "text": "Indian lender Yes Bank's AT-1 bond investors urge RBI to focus on investor protection https://t.co/KT5Vf3lfou",
-    "url": "https://x.com/Reuters/status/2123548177886228688"
-   },
-   {
-    "id": "2123541380903391432",
-    "account": "BBCNews",
-    "name": "BBC News (UK)",
-    "date": "2026-11-19",
-    "time": "23:18",
-    "text": "William and Catherine's India tour was 'particularly special', aide says https://t.co/UluVA8lPIL",
-    "url": "https://x.com/BBCNews/status/2123541380903391432"
-   },
-   {
-    "id": "2123537987220689084",
-    "account": "BBCWorld",
-    "name": "BBC News (World)",
-    "date": "2026-11-19",
-    "time": "23:04",
-    "text": "William and Catherine's India tour was 'particularly special', aide says https://t.co/mUjKzNp98r",
-    "url": "https://x.com/BBCWorld/status/2123537987220689084"
-   },
-   {
-    "id": "2123488129638117480",
-    "account": "BBCWorld",
-    "name": "BBC News (World)",
-    "date": "2026-11-19",
-    "time": "19:46",
-    "text": "Weekly quiz: Which star played cricket with Catherine in India? https://t.co/hRO4X7KMf8",
-    "url": "https://x.com/BBCWorld/status/2123488129638117480"
-   },
-   {
-    "id": "2123484078087233944",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-19",
-    "time": "19:30",
-    "text": "Indian lender Yes Bank's AT-1 bond investors urge RBI to focus on investor protection https://t.co/U6zjqFicLX",
-    "url": "https://x.com/Reuters/status/2123484078087233944"
-   },
-   {
-    "id": "2123457568240464317",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-19",
-    "time": "17:45",
-    "text": "India's gamers skip work, crowd cafes for Grand Theft Auto VI as Modi joins buzz https://t.co/YRdl6p07Cd",
-    "url": "https://x.com/Reuters/status/2123457568240464317"
-   },
-   {
-    "id": "2123457523881509200",
-    "account": "el_pais",
-    "name": "EL PAÍS",
-    "date": "2026-11-19",
-    "time": "17:45",
-    "text": "La caída del GTA VI no se ha dado de manera simultánea en todo el mundo, sino que se ha registrado en momentos diferentes. El número más alto de problemas se reporta poco antes del estreno en India y el segundo pico coincide aproximadamente con el lanzamiento en EE UU",
-    "url": "https://x.com/el_pais/status/2123457523881509200"
-   },
-   {
-    "id": "2123395931605213637",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-19",
-    "time": "13:40",
-    "text": "India's gamers skip work, crowd cafes for Grand Theft Auto VI as Modi joins buzz https://t.co/t30EDRRM6m",
-    "url": "https://x.com/Reuters/status/2123395931605213637"
-   },
-   {
-    "id": "2123335507132227760",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-19",
-    "time": "09:40",
-    "text": "EXCLUSIVE: India to charge bulk Scotch imports 162.5% duty and tax amid UK pact standoff https://t.co/ZWDlQSiL0t",
-    "url": "https://x.com/Reuters/status/2123335507132227760"
-   },
-   {
-    "id": "2123302858560880858",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-19",
-    "time": "07:30",
-    "text": "Casi 50.000 evacuados por la llegada del potente ciclón Akvan en India\n\nLas autoridades del gobierno han habilitado más de 400 refugios para albergar a las personas evacuadas. (mg)\n\nLea el artículo completo haciendo clic en la imagen \nhttps://t.co/diEtDfrEDO",
-    "url": "https://x.com/dw_espanol/status/2123302858560880858"
-   },
-   {
-    "id": "2123270071577366664",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-19",
-    "time": "05:20",
-    "text": "Exclusive: Amid a raging dispute over the India-UK trade pact, India is now imposing an effective duty of 162.5% on bulk Scotch imports, jolting liquor firms as the levies exceed the 150% charged before the landmark agreement https://t.co/1HqEmoGtFd",
-    "url": "https://x.com/Reuters/status/2123270071577366664"
-   },
-   {
-    "id": "2123078818948604136",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-18",
-    "time": "16:40",
-    "text": "Indian economic growth seen at annual 7.6% in July-September quarter - Reuters poll https://t.co/a21yhgunBg",
-    "url": "https://x.com/Reuters/status/2123078818948604136"
-   },
-   {
-    "id": "2123077938300027168",
-    "account": "BBCNews",
-    "name": "BBC News (UK)",
-    "date": "2026-11-18",
-    "time": "16:36",
-    "text": "William and Kate meet Indian Prime Minister Modi in New Delhi https://t.co/ZNvdOlFKS1",
-    "url": "https://x.com/BBCNews/status/2123077938300027168"
-   },
-   {
-    "id": "2123039758339215444",
-    "account": "BBCWorld",
-    "name": "BBC News (World)",
-    "date": "2026-11-18",
-    "time": "14:04",
-    "text": "William and Kate to meet Indian Prime Minister Modi in New Delhi https://t.co/NQ4nyPS07c",
-    "url": "https://x.com/BBCWorld/status/2123039758339215444"
-   },
-   {
-    "id": "2122986962684432441",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-18",
-    "time": "10:35",
-    "text": "Indian economic growth seen at annual 7.6% in July-September quarter - Reuters poll https://t.co/gv5W9ShTt9",
-    "url": "https://x.com/Reuters/status/2122986962684432441"
-   },
-   {
-    "id": "2122931557753299372",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-18",
-    "time": "06:55",
-    "text": "India has grown into a rice-producing powerhouse, thanks to crop-science advances and subsidies designed decades ago to keep the nation fed. Much of the growing rice surplus is exported. But the government must bear the rising cost of subsidies https://t.co/QQNRZmZTIF https://t.co/U4uIl7XAUv",
-    "url": "https://x.com/Reuters/status/2122931557753299372"
-   },
-   {
-    "id": "2122930345578295308",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-18",
-    "time": "06:50",
-    "text": "How India became a rice powerhouse - and why it's becoming a problem https://t.co/ZG2mAuebu4",
-    "url": "https://x.com/Reuters/status/2122930345578295308"
-   },
-   {
-    "id": "2122876193296851332",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-18",
-    "time": "03:15",
-    "text": "India has grown into a rice-producing powerhouse, thanks to crop-science advances and subsidies designed decades ago to keep the nation fed. It's also generated a growing rice surplus — much of it exported — even as India's government shoulders the rising cost of subsidies",
-    "url": "https://x.com/Reuters/status/2122876193296851332"
-   },
-   {
-    "id": "2122867462664225040",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-18",
-    "time": "02:40",
-    "text": "Insight: How India became a rice powerhouse - and why it's becoming a problem https://t.co/xaEvlnXEsO",
-    "url": "https://x.com/Reuters/status/2122867462664225040"
-   },
-   {
-    "id": "2122774336540922311",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "20:30",
-    "text": "BMW bets on luxury Alpina brand to woo wealthy Indian buyers in challenge to Mercedes https://t.co/zokGleyJ8n",
-    "url": "https://x.com/Reuters/status/2122774336540922311"
-   },
-   {
-    "id": "2122755397383815563",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "19:15",
-    "text": "President Trump met the leaders of regional allies India, Japan and Australia in the Philippines at the start of an Asian trip that also includes a much-anticipated trilateral meeting with his Chinese and Russian counterparts https://t.co/TRsBgvng6y https://t.co/sPz94WdVNB",
-    "url": "https://x.com/Reuters/status/2122755397383815563"
-   },
-   {
-    "id": "2122733989773394124",
-    "account": "AP",
-    "name": "The Associated Press",
-    "date": "2026-11-17",
-    "time": "17:49",
-    "text": "Inde Navarrette details her “Saturday Night Live” experience: “I was losing my marbles … I’d do it again!”\n\n#IndeNavarrette #SNL https://t.co/zq929nQCNI",
-    "url": "https://x.com/AP/status/2122733989773394124"
-   },
-   {
-    "id": "2122711437764083951",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "16:20",
-    "text": "BMW bets on luxury Alpina brand to woo wealthy Indian buyers in challenge to Mercedes https://t.co/dEJR9uH0VR",
-    "url": "https://x.com/Reuters/status/2122711437764083951"
-   },
-   {
-    "id": "2122703807511498924",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "15:50",
-    "text": "US President Trump met regional allies India, Japan and Australia in the Philippines. He said the countries had struck several joint critical minerals agreements aimed at securing supply chains and reducing their reliance on foreign suppliers https://t.co/a6Zx5ITPgL https://t.co/E33s9t3En3",
-    "url": "https://x.com/Reuters/status/2122703807511498924"
-   },
-   {
-    "id": "2122698850641035324",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "15:30",
-    "text": "India says Xiaomi, Flextronics hid royalty deals in tariff fight https://t.co/W0DeAeeB07",
-    "url": "https://x.com/Reuters/status/2122698850641035324"
-   },
-   {
-    "id": "2122691354199204218",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "15:00",
-    "text": "India Inc logs best quarterly profit growth in four years, fuelling market revival hopes https://t.co/2zD5odDQPW",
-    "url": "https://x.com/Reuters/status/2122691354199204218"
-   },
-   {
-    "id": "2122667879904485658",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "13:27",
-    "text": "Earthshot Prize ceremony in Mumbai, India https://t.co/X6UGAHlo93",
-    "url": "https://x.com/Reuters/status/2122667879904485658"
-   },
-   {
-    "id": "2122639676859183261",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "11:35",
-    "text": "Meta says it tuned Instagram to curb suggestive, violent content in India https://t.co/BiiJVZ0056",
-    "url": "https://x.com/Reuters/status/2122639676859183261"
-   },
-   {
-    "id": "2122635926891299172",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "11:20",
-    "text": "India says Xiaomi, Flextronics hid royalty deals in tariff fight https://t.co/hgXdaF6mkB",
-    "url": "https://x.com/Reuters/status/2122635926891299172"
-   },
-   {
-    "id": "2122628371481780552",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "10:50",
-    "text": "India Inc logs best quarterly profit growth in four years, fuelling market revival hopes https://t.co/RvMUNWALgn",
-    "url": "https://x.com/Reuters/status/2122628371481780552"
-   },
-   {
-    "id": "2122621770070995022",
-    "account": "BBCNews",
-    "name": "BBC News (UK)",
-    "date": "2026-11-17",
-    "time": "10:24",
-    "text": "Trump about to land in Manila ahead of meeting with leaders of India, Japan and Australia https://t.co/TOsmDyPqIX",
-    "url": "https://x.com/BBCNews/status/2122621770070995022"
-   },
-   {
-    "id": "2122588100425572774",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "08:10",
-    "text": "EXCLUSIVE: India may limit leveraged stock bets to curb volatility, sources say https://t.co/xon8C7opBy",
-    "url": "https://x.com/Reuters/status/2122588100425572774"
-   },
-   {
-    "id": "2122575468784148749",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "07:20",
-    "text": "Meta said it had modified Instagram's recommendation systems specifically for India to show less sexually suggestive and violent content, as the government tightens oversight of online content https://t.co/Zle8ZtgWMm",
-    "url": "https://x.com/Reuters/status/2122575468784148749"
-   },
-   {
-    "id": "2122474829882294684",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-17",
-    "time": "00:40",
-    "text": "India raises diesel, jet fuel export levies as inflation stays elevated https://t.co/Agy67bvlGI",
-    "url": "https://x.com/Reuters/status/2122474829882294684"
-   },
-   {
-    "id": "2122413180731187541",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-16",
-    "time": "20:35",
-    "text": "India raises diesel, jet fuel export levies as inflation stays elevated https://t.co/2iwroCD5H7",
-    "url": "https://x.com/Reuters/status/2122413180731187541"
-   },
-   {
-    "id": "2122354020048122124",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-11-16",
-    "time": "16:40",
-    "text": "William y Kate juegan críquet con la estrella Sachin Tendulkar durante su visita a la India https://t.co/cLupHu7U9O",
-    "url": "https://x.com/CNNEE/status/2122354020048122124"
-   },
-   {
-    "id": "2122344087621718327",
-    "account": "washingtonpost",
-    "name": "The Washington Post",
-    "date": "2026-11-16",
-    "time": "16:00",
-    "text": "The number of international students in the U.S. fell 3 percent during the 2025-2026 academic year, according to data.\n\nMore than 1.1 million international students attended U.S. colleges and universities, with India and China sending by far the most. https://t.co/58xxTHz3Ef",
-    "url": "https://x.com/washingtonpost/status/2122344087621718327"
-   },
-   {
-    "id": "2122293604169499025",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-16",
-    "time": "12:40",
-    "text": "🏏 Britain's Prince William and Kate Middleton played a game of street cricket in Mumbai with Indian cricket legend Sachin Tendulkar https://t.co/Wiiea1ILkQ https://t.co/8o7ctPhS0Y",
-    "url": "https://x.com/Reuters/status/2122293604169499025"
-   },
-   {
-    "id": "2122280320485433365",
-    "account": "BBCNews",
-    "name": "BBC News (UK)",
-    "date": "2026-11-16",
-    "time": "11:47",
-    "text": "Is India rethinking its short-term military recruitment scheme? https://t.co/0bb4bmMhWN",
-    "url": "https://x.com/BBCNews/status/2122280320485433365"
-   },
-   {
-    "id": "2122218129136750720",
-    "account": "BBCNews",
-    "name": "BBC News (UK)",
-    "date": "2026-11-16",
-    "time": "07:40",
-    "text": "Prince and Princess of Wales arrive in India ahead of meeting with Modi https://t.co/G7MCXYkSj6",
-    "url": "https://x.com/BBCNews/status/2122218129136750720"
-   },
-   {
-    "id": "2121241766636536170",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "15:00",
-    "text": "India orders audit of electronic waste recyclers to catch fake compliance https://t.co/891a7CoaY7",
-    "url": "https://x.com/Reuters/status/2121241766636536170"
-   },
-   {
-    "id": "2121178781259866582",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-13",
-    "time": "10:50",
-    "text": "India orders audit of electronic waste recyclers to catch fake compliance https://t.co/hYEUrPa7ul",
-    "url": "https://x.com/Reuters/status/2121178781259866582"
-   },
-   {
-    "id": "2120894243380322449",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-12",
-    "time": "15:59",
-    "text": "Announced annually by Travel + Leisure since 2014, India follows in the footsteps of previous destinations of the year including Brazil, Thailand and Costa Rica. https://t.co/qzp1ChYRsq",
-    "url": "https://x.com/euronews/status/2120894243380322449"
-   },
-   {
-    "id": "2120860430935433344",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-12",
-    "time": "13:45",
-    "text": "EXCLUSIVE: India to ban private equity firms from controlling multiple non-bank lenders, sources say https://t.co/1n79OuR5ns",
-    "url": "https://x.com/Reuters/status/2120860430935433344"
-   },
-   {
-    "id": "2120816528417243226",
-    "account": "BBCNews",
-    "name": "BBC News (UK)",
-    "date": "2026-11-12",
-    "time": "10:50",
-    "text": "Was Delhi pollution data during Diwali misleading? https://t.co/GXAnOXuKK3",
-    "url": "https://x.com/BBCNews/status/2120816528417243226"
-   },
-   {
-    "id": "2120804706448474351",
-    "account": "BBCWorld",
-    "name": "BBC News (World)",
-    "date": "2026-11-12",
-    "time": "10:03",
-    "text": "Was Delhi pollution data during Diwali misleading? https://t.co/FLDcikAQMl",
-    "url": "https://x.com/BBCWorld/status/2120804706448474351"
-   },
-   {
-    "id": "2120798779494252607",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-12",
-    "time": "09:40",
-    "text": "EXCLUSIVE: India to ban private equity firms from controlling multiple non-bank lenders, sources say https://t.co/mSfH7LSe7P",
-    "url": "https://x.com/Reuters/status/2120798779494252607"
-   },
-   {
-    "id": "2120771084106519014",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-12",
-    "time": "07:50",
-    "text": "Indian billionaire, doctors spar over $900 brain blood-flow tracker Temple https://t.co/624Ryt1UfW",
-    "url": "https://x.com/Reuters/status/2120771084106519014"
-   },
-   {
-    "id": "2120717035919270176",
-    "account": "washingtonpost",
-    "name": "The Washington Post",
-    "date": "2026-11-12",
-    "time": "04:15",
-    "text": "A Russian paraglider was rescued in India on Nov. 10 after becoming trapped in high-voltage power lines, a rescue official said.\n\nMedia reports said the man had taken off from one of India’s best-known paragliding sites and was stuck for two hours before being saved. https://t.co/DYgL7eIVhX",
-    "url": "https://x.com/washingtonpost/status/2120717035919270176"
-   },
-   {
-    "id": "2120709432044642429",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-12",
-    "time": "03:45",
-    "text": "A tiny, $900 wearable device being developed by an Indian billionaire entrepreneur and showcased by some of the country's top sportspersons has sparked criticism from doctors who say its claims of tracking blood flow to the brain are exaggerated https://t.co/IOjyZQHrAr",
-    "url": "https://x.com/Reuters/status/2120709432044642429"
-   },
-   {
-    "id": "2120526979304771873",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-11",
-    "time": "15:40",
-    "text": "EXCLUSIVE: India ordered website takedowns on fake court orders, Reuters finds; police launch probe https://t.co/1BvjKce5ZH",
-    "url": "https://x.com/Reuters/status/2120526979304771873"
-   },
-   {
-    "id": "2120495515905216575",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-11",
-    "time": "13:35",
-    "text": "EXCLUSIVE: India holds Pernod, Diageo Scotch shipments as investigators seek higher tariff https://t.co/Rj5MAI702D",
-    "url": "https://x.com/Reuters/status/2120495515905216575"
-   },
-   {
-    "id": "2120480403752464498",
-    "account": "BBCWorld",
-    "name": "BBC News (World)",
-    "date": "2026-11-11",
-    "time": "12:34",
-    "text": "New Indian mega library rocked by scandal over 'AI-generated books' https://t.co/uj0LqfdDp2",
-    "url": "https://x.com/BBCWorld/status/2120480403752464498"
-   },
-   {
-    "id": "2120474127022588410",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-11",
-    "time": "12:10",
-    "text": "India garment makers rethink reliance on US after tariff shock https://t.co/0Iw5pwv0dw",
-    "url": "https://x.com/Reuters/status/2120474127022588410"
-   },
-   {
-    "id": "2120465332527677836",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-11",
-    "time": "11:35",
-    "text": "EXCLUSIVE: India ordered website takedowns on fake court orders, Reuters finds; police launch probe https://t.co/ZmGtD2mQNx",
-    "url": "https://x.com/Reuters/status/2120465332527677836"
-   },
-   {
-    "id": "2120443926905520180",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-11",
-    "time": "10:10",
-    "text": "Indian stocks hit eight-month high as foreign investors return https://t.co/gGn7tX9xuQ",
-    "url": "https://x.com/Reuters/status/2120443926905520180"
-   },
-   {
-    "id": "2120426310027682181",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-11",
-    "time": "09:00",
-    "text": "Exclusive: Indian customs is holding dozens of containers of bulk Scotch imported by Pernod Ricard and Diageo as investigators press for a 150% tariff, even though the companies rely on a New Delhi assurance of lower duties under the India-UK trade pact https://t.co/rNFOKyCMjM",
-    "url": "https://x.com/Reuters/status/2120426310027682181"
-   },
-   {
-    "id": "2120411339872940098",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-11",
-    "time": "08:00",
-    "text": "India garment makers rethink reliance on US after tariff shock https://t.co/103F69pgg4",
-    "url": "https://x.com/Reuters/status/2120411339872940098"
-   },
-   {
-    "id": "2120381147733475815",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-11",
-    "time": "06:00",
-    "text": "Indian stocks open higher on softer crude, robust foreign buying https://t.co/ujl2q2LiEk",
-    "url": "https://x.com/Reuters/status/2120381147733475815"
-   },
-   {
-    "id": "2120312789843521552",
-    "account": "BBCWorld",
-    "name": "BBC News (World)",
-    "date": "2026-11-11",
-    "time": "01:28",
-    "text": "'They will kill you too': Sonia Gandhi's turbulent journey in Indian politics https://t.co/RtdLhwMfHQ",
-    "url": "https://x.com/BBCWorld/status/2120312789843521552"
-   },
-   {
-    "id": "2120178767003799612",
-    "account": "France24_es",
-    "name": "FRANCE 24 Español",
-    "date": "2026-11-10",
-    "time": "16:36",
-    "text": "La bielorrusa Aryna Sabalenka se impuso a la checa Karolina Muchova en dos sets y comenzó con buen pie su participación en las WTA Finals, el torneo que reúne en Indian Wells a las ocho mejores tenistas de la temporada\nhttps://t.co/diZ7Kl3ypV",
-    "url": "https://x.com/France24_es/status/2120178767003799612"
-   },
-   {
-    "id": "2120102919546785912",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-10",
-    "time": "11:35",
-    "text": "An Indian sailor’s mother has not heard from her son in more than six months, but continues to hope for his return. Naveen Kumar was among six crew members aboard two Iran-linked vessels that disappeared in Iranian waters in May https://t.co/DpDkO7GY5G https://t.co/RhmF873u5V",
-    "url": "https://x.com/Reuters/status/2120102919546785912"
-   },
-   {
-    "id": "2120071482759909781",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-10",
-    "time": "09:30",
-    "text": "Three workers die at Tata's India iPhone parts factory in latest safety incident https://t.co/19qt0Srdk1",
-    "url": "https://x.com/Reuters/status/2120071482759909781"
-   },
-   {
-    "id": "2120055879231746537",
-    "account": "BBCNews",
-    "name": "BBC News (UK)",
-    "date": "2026-11-10",
-    "time": "08:28",
-    "text": "Oxford museum returns ancestral Naga skulls to India https://t.co/xNifuuciRN",
-    "url": "https://x.com/BBCNews/status/2120055879231746537"
-   },
-   {
-    "id": "2120040561860133344",
-    "account": "BBCWorld",
-    "name": "BBC News (World)",
-    "date": "2026-11-10",
-    "time": "07:27",
-    "text": "Oxford museum returns ancestral Naga skulls to India https://t.co/ajpywcn88K",
-    "url": "https://x.com/BBCWorld/status/2120040561860133344"
-   },
-   {
-    "id": "2120008560704676302",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-10",
-    "time": "05:20",
-    "text": "Three contract workers died of asphyxiation at a Tata Electronics factory in southern India which makes parts for Apple iPhones, a source said https://t.co/oFFr6HUHke",
-    "url": "https://x.com/Reuters/status/2120008560704676302"
-   },
-   {
-    "id": "2119968072714932598",
-    "account": "BBCWorld",
-    "name": "BBC News (World)",
-    "date": "2026-11-10",
-    "time": "02:39",
-    "text": "Qantas to outsource 850 local jobs with most roles moving to India https://t.co/nCRUtXPEoT",
-    "url": "https://x.com/BBCWorld/status/2119968072714932598"
+    "date": "2026-11-21",
+    "time": "02:00",
+    "text": "India cyber agency warns of unauthorised payment transactions https://t.co/HSHdOyiSor",
+    "url": "https://x.com/Reuters/status/2123944595146825981"
    }
   ],
   "morocco": [
    {
-    "id": "2123837130900136344",
-    "account": "France24_es",
-    "name": "FRANCE 24 Español",
-    "date": "2026-11-20",
-    "time": "18:53",
-    "text": "🇪🇸 A días de las elecciones generales del 29 de noviembre, el líder del PP, Alberto Núñez Feijóo, acusó al presidente Pedro Sánchez de no haber construido las viviendas prometidas y lo criticó por su relación con Marruecos tras la crisis migratoria en Ceuta. Directo desde España https://t.co/ZNx9OWuHC1",
-    "url": "https://x.com/France24_es/status/2123837130900136344"
-   },
-   {
-    "id": "2123544761856364966",
+    "id": "2117568721233527108",
     "account": "el_pais",
     "name": "EL PAÍS",
-    "date": "2026-11-19",
-    "time": "23:31",
-    "text": "📺 TV en DIRECTO | Feijóo: \"Sigue habiendo 15.000 invasores en Ceuta [...]. ¿Qué le debe usted a Marruecos?\" https://t.co/QTvA9XCsFL https://t.co/ORQw50Tqfe",
-    "url": "https://x.com/el_pais/status/2123544761856364966"
-   },
-   {
-    "id": "2123300157068603669",
-    "account": "FRANCE24",
-    "name": "FRANCE24",
-    "date": "2026-11-19",
-    "time": "07:19",
-    "text": "Sports - FIFA rankings: France finish the year on the podium, Morocco break into the top five\n➡️ https://t.co/liqKE0KFqL https://t.co/7HFGIG0zoh",
-    "url": "https://x.com/FRANCE24/status/2123300157068603669"
-   },
-   {
-    "id": "2123050187430011339",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-18",
-    "time": "14:46",
-    "text": "🇸🇳 #JTA - Le #Sénégal sera bien au rendez-vous de la #CAN2027.  Les Lions de la Teranga sont devenus la première équipe à décrocher leur billet pour la phase finale.\n\n⚽Une qualification qui intervient alorsque  le sort du titre remporté lors de la #CAN2025 face au #Maroc reste https://t.co/KxJM7gzh0i",
-    "url": "https://x.com/France24_fr/status/2123050187430011339"
-   },
-   {
-    "id": "2122812911433527587",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-17",
-    "time": "23:03",
-    "text": "CAN 2027: en attendant la verdict du TAS, le Maroc rejoint le Sénégal parmi les qualifiés\n➡️ https://t.co/7vlBUqFEiD https://t.co/s94yXZXx7R",
-    "url": "https://x.com/France24_fr/status/2122812911433527587"
-   },
-   {
-    "id": "2122671091873120364",
-    "account": "el_pais",
-    "name": "EL PAÍS",
-    "date": "2026-11-17",
-    "time": "13:40",
-    "text": "El CNI detalla diez diferencias entre el asalto de Ceuta de 2021 y el de julio pasado para excluir la autoría de Marruecos https://t.co/1yePB69NYo",
-    "url": "https://x.com/el_pais/status/2122671091873120364"
-   },
-   {
-    "id": "2122491635753697289",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-17",
-    "time": "01:46",
-    "text": "The next FIFA presidential election is due to take place at the 77th FIFA Congress on Thursday, 18 March 2027 in Rabat, Morocco. https://t.co/xcf39a9yXU",
-    "url": "https://x.com/euronews/status/2122491635753697289"
-   },
-   {
-    "id": "2122407905261457753",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-16",
-    "time": "20:14",
-    "text": "🎮 Vous en avez forcément entendu parler ! Jeudi 19 novembre, sortira le nouvel opus de la célèbre saga de jeux vidéo : GTA 6. Pour les fans, cela fait treize ans qu'ils attendent avec impatience ce nouveau volet.\n\n🇲🇦 Et au #Maroc, les salles de gaming se préparent déjà à https://t.co/K3aBkLanHK",
-    "url": "https://x.com/France24_fr/status/2122407905261457753"
-   },
-   {
-    "id": "2122402682648564176",
-    "account": "el_pais",
-    "name": "EL PAÍS",
-    "date": "2026-11-16",
-    "time": "19:53",
-    "text": "Los primeros mensajes de la Guardia Civil sobre Marruecos por la entrada en Ceuta: “Los están dejando pasar. No quieren liarse a palos” https://t.co/pDuhLFMdoa",
-    "url": "https://x.com/el_pais/status/2122402682648564176"
-   },
-   {
-    "id": "2122327099545735365",
-    "account": "euronewses",
-    "name": "euronews español",
-    "date": "2026-11-16",
-    "time": "14:53",
-    "text": "El CNI no halla pruebas de que Marruecos organizara la crisis en Ceuta https://t.co/ZBqhCYLRFT",
-    "url": "https://x.com/euronewses/status/2122327099545735365"
-   },
-   {
-    "id": "2120132822102855731",
-    "account": "el_pais",
-    "name": "EL PAÍS",
-    "date": "2026-11-10",
-    "time": "13:33",
-    "text": "📺 TV EN DIRECTO | Saiz informe de que \"se han desmantelado los dos recursos temporales\" en el puerto de Ceuta. A día de ayer, 15.671 migrantes han retornado a Marruecos, de ellas 14.942 por retorno voluntario, 277 expulsiones y 452 devoluciones https://t.co/ddgK2VOa3c https://t.co/XmbO43bBDn",
-    "url": "https://x.com/el_pais/status/2120132822102855731"
-   },
-   {
-    "id": "2120107619184722000",
-    "account": "euronewses",
-    "name": "euronews español",
-    "date": "2026-11-10",
-    "time": "11:53",
-    "text": "El operativo policial busca trasladar a los inmigrantes a otros recursos de acogida o al CATE de El Tarajal. El desmantelamiento del asentamiento ha acelerado los retornos voluntarios a Marruecos. #EuropeNews https://t.co/U3ECp5jAP0",
-    "url": "https://x.com/euronewses/status/2120107619184722000"
-   },
-   {
-    "id": "2119490176883831220",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-08",
-    "time": "19:00",
-    "text": "In Rabat, Friday is for couscous. From mint tea overlooking the Bouregreg River to caftans in the medina and sunsets over the Atlantic, here are our Reuters correspondent’s tips for experiencing the Moroccan capital like a local: https://t.co/fpXbkNjFgN https://t.co/P1bd5MZ2H0",
-    "url": "https://x.com/Reuters/status/2119490176883831220"
-   },
-   {
-    "id": "2119309010624974849",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-08",
-    "time": "07:00",
-    "text": "‘No other Moroccan city matches Rabat's museums and cultural calendar.’ From book fairs and music festivals to preparations for the 2030 World Cup, our correspondent shares his guide to experiencing Morocco’s capital like a local:\nhttps://t.co/xpof9XCuZT https://t.co/6VtaRzE9YN",
-    "url": "https://x.com/Reuters/status/2119309010624974849"
-   },
-   {
-    "id": "2119127800686735370",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-07",
-    "time": "19:00",
-    "text": "Rabat is Morocco’s administrative capital, but there’s more to the city than government buildings: blue-and-white alleys, bustling medinas and a growing cultural scene. Our Reuters correspondent shares his guide to exploring the city like a local: https://t.co/l8R3Oy4kWZ https://t.co/wYbGNRwD7g",
-    "url": "https://x.com/Reuters/status/2119127800686735370"
-   },
-   {
-    "id": "2119100077654315480",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-07",
-    "time": "17:10",
-    "text": "Rabat like a local https://t.co/ZDtNDzD6kJ",
-    "url": "https://x.com/Reuters/status/2119100077654315480"
-   },
-   {
-    "id": "2119037218442432604",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-07",
-    "time": "13:00",
-    "text": "Where can you wander through a 12th-century kasbah, eat $6 couscous and watch the sun set over the Atlantic? Our Reuters correspondent shares his local guide to Morocco’s capital, Rabat: https://t.co/IdKcyGlASO https://t.co/vVKRHw9Nxv",
-    "url": "https://x.com/Reuters/status/2119037218442432604"
-   },
-   {
-    "id": "2118875514060632363",
-    "account": "euronewses",
-    "name": "euronews español",
-    "date": "2026-11-07",
-    "time": "02:17",
-    "text": "La Guardia Civil eleva a 88.146 las devoluciones de Ceuta a Marruecos https://t.co/CUQapJL1Tl",
-    "url": "https://x.com/euronewses/status/2118875514060632363"
-   },
-   {
-    "id": "2118753943924973626",
-    "account": "el_pais",
-    "name": "EL PAÍS",
-    "date": "2026-11-06",
-    "time": "18:14",
-    "text": "🔴 La Guardia Civil cifra en más de 88.000 los retornos de migrantes de Ceuta a Marruecos, más de los que el Gobierno calculó que habían entrado en julio\nhttps://t.co/uU3I5VVt7d",
-    "url": "https://x.com/el_pais/status/2118753943924973626"
-   },
-   {
-    "id": "2118507554640744814",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-06",
-    "time": "01:55",
-    "text": "Students clashed with police in Santiago, Chile, as they demanded the resignation of Justice Minister Fernando Rabat over prison sentence cuts for people convicted of sexual abuse and rape of minors, as well as human rights violations https://t.co/224skytees",
-    "url": "https://x.com/Reuters/status/2118507554640744814"
-   },
-   {
-    "id": "2118352985512149168",
-    "account": "el_pais",
-    "name": "EL PAÍS",
-    "date": "2026-11-05",
-    "time": "15:41",
-    "text": "La Policía identifica en la frontera con Marruecos a dos altos cargos de las fuerzas marroquíes el día del asalto masivo\nhttps://t.co/qHAWpBeYw8",
-    "url": "https://x.com/el_pais/status/2118352985512149168"
-   },
-   {
-    "id": "2118204186332389535",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-05",
-    "time": "05:50",
-    "text": "Morocco says it will uphold Western Sahara ceasefire after UN mission ends https://t.co/9InpVcKnCv",
-    "url": "https://x.com/Reuters/status/2118204186332389535"
+    "date": "2026-11-03",
+    "time": "11:45",
+    "text": "Natalia Lartitegui (Bilbao, 26 años) lleva un año pedaleando por el continente africano en solitario, desde Marruecos hacia el sur, y ha recorrido ya 13 países. \"Este viaje es sinónimo de vivir mi vida como quiero\", cuenta https://t.co/cP4DgPSDVH",
+    "url": "https://x.com/el_pais/status/2117568721233527108"
    },
    {
     "id": "2118140020317913102",
@@ -2140,16 +1996,448 @@
     "url": "https://x.com/Reuters/status/2118140020317913102"
    },
    {
-    "id": "2117568721233527108",
+    "id": "2118204186332389535",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-05",
+    "time": "05:50",
+    "text": "Morocco says it will uphold Western Sahara ceasefire after UN mission ends https://t.co/9InpVcKnCv",
+    "url": "https://x.com/Reuters/status/2118204186332389535"
+   },
+   {
+    "id": "2118352985512149168",
     "account": "el_pais",
     "name": "EL PAÍS",
-    "date": "2026-11-03",
-    "time": "11:45",
-    "text": "Natalia Lartitegui (Bilbao, 26 años) lleva un año pedaleando por el continente africano en solitario, desde Marruecos hacia el sur, y ha recorrido ya 13 países. \"Este viaje es sinónimo de vivir mi vida como quiero\", cuenta https://t.co/cP4DgPSDVH",
-    "url": "https://x.com/el_pais/status/2117568721233527108"
+    "date": "2026-11-05",
+    "time": "15:41",
+    "text": "La Policía identifica en la frontera con Marruecos a dos altos cargos de las fuerzas marroquíes el día del asalto masivo\nhttps://t.co/qHAWpBeYw8",
+    "url": "https://x.com/el_pais/status/2118352985512149168"
+   },
+   {
+    "id": "2118507554640744814",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-06",
+    "time": "01:55",
+    "text": "Students clashed with police in Santiago, Chile, as they demanded the resignation of Justice Minister Fernando Rabat over prison sentence cuts for people convicted of sexual abuse and rape of minors, as well as human rights violations https://t.co/224skytees",
+    "url": "https://x.com/Reuters/status/2118507554640744814"
+   },
+   {
+    "id": "2118753943924973626",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-06",
+    "time": "18:14",
+    "text": "🔴 La Guardia Civil cifra en más de 88.000 los retornos de migrantes de Ceuta a Marruecos, más de los que el Gobierno calculó que habían entrado en julio\nhttps://t.co/uU3I5VVt7d",
+    "url": "https://x.com/el_pais/status/2118753943924973626"
+   },
+   {
+    "id": "2118875514060632363",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-07",
+    "time": "02:17",
+    "text": "La Guardia Civil eleva a 88.146 las devoluciones de Ceuta a Marruecos https://t.co/CUQapJL1Tl",
+    "url": "https://x.com/euronewses/status/2118875514060632363"
+   },
+   {
+    "id": "2119037218442432604",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-07",
+    "time": "13:00",
+    "text": "Where can you wander through a 12th-century kasbah, eat $6 couscous and watch the sun set over the Atlantic? Our Reuters correspondent shares his local guide to Morocco’s capital, Rabat: https://t.co/IdKcyGlASO https://t.co/vVKRHw9Nxv",
+    "url": "https://x.com/Reuters/status/2119037218442432604"
+   },
+   {
+    "id": "2119100077654315480",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-07",
+    "time": "17:10",
+    "text": "Rabat like a local https://t.co/ZDtNDzD6kJ",
+    "url": "https://x.com/Reuters/status/2119100077654315480"
+   },
+   {
+    "id": "2119127800686735370",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "text": "Rabat is Morocco’s administrative capital, but there’s more to the city than government buildings: blue-and-white alleys, bustling medinas and a growing cultural scene. Our Reuters correspondent shares his guide to exploring the city like a local: https://t.co/l8R3Oy4kWZ https://t.co/wYbGNRwD7g",
+    "url": "https://x.com/Reuters/status/2119127800686735370"
+   },
+   {
+    "id": "2119309010624974849",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-08",
+    "time": "07:00",
+    "text": "‘No other Moroccan city matches Rabat's museums and cultural calendar.’ From book fairs and music festivals to preparations for the 2030 World Cup, our correspondent shares his guide to experiencing Morocco’s capital like a local:\nhttps://t.co/xpof9XCuZT https://t.co/6VtaRzE9YN",
+    "url": "https://x.com/Reuters/status/2119309010624974849"
+   },
+   {
+    "id": "2119490176883831220",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-08",
+    "time": "19:00",
+    "text": "In Rabat, Friday is for couscous. From mint tea overlooking the Bouregreg River to caftans in the medina and sunsets over the Atlantic, here are our Reuters correspondent’s tips for experiencing the Moroccan capital like a local: https://t.co/fpXbkNjFgN https://t.co/P1bd5MZ2H0",
+    "url": "https://x.com/Reuters/status/2119490176883831220"
+   },
+   {
+    "id": "2120107619184722000",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-10",
+    "time": "11:53",
+    "text": "El operativo policial busca trasladar a los inmigrantes a otros recursos de acogida o al CATE de El Tarajal. El desmantelamiento del asentamiento ha acelerado los retornos voluntarios a Marruecos. #EuropeNews https://t.co/U3ECp5jAP0",
+    "url": "https://x.com/euronewses/status/2120107619184722000"
+   },
+   {
+    "id": "2120132822102855731",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-10",
+    "time": "13:33",
+    "text": "📺 TV EN DIRECTO | Saiz informe de que \"se han desmantelado los dos recursos temporales\" en el puerto de Ceuta. A día de ayer, 15.671 migrantes han retornado a Marruecos, de ellas 14.942 por retorno voluntario, 277 expulsiones y 452 devoluciones https://t.co/ddgK2VOa3c https://t.co/XmbO43bBDn",
+    "url": "https://x.com/el_pais/status/2120132822102855731"
+   },
+   {
+    "id": "2122327099545735365",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-16",
+    "time": "14:53",
+    "text": "El CNI no halla pruebas de que Marruecos organizara la crisis en Ceuta https://t.co/ZBqhCYLRFT",
+    "url": "https://x.com/euronewses/status/2122327099545735365"
+   },
+   {
+    "id": "2122402682648564176",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-16",
+    "time": "19:53",
+    "text": "Los primeros mensajes de la Guardia Civil sobre Marruecos por la entrada en Ceuta: “Los están dejando pasar. No quieren liarse a palos” https://t.co/pDuhLFMdoa",
+    "url": "https://x.com/el_pais/status/2122402682648564176"
+   },
+   {
+    "id": "2122407905261457753",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-16",
+    "time": "20:14",
+    "text": "🎮 Vous en avez forcément entendu parler ! Jeudi 19 novembre, sortira le nouvel opus de la célèbre saga de jeux vidéo : GTA 6. Pour les fans, cela fait treize ans qu'ils attendent avec impatience ce nouveau volet.\n\n🇲🇦 Et au #Maroc, les salles de gaming se préparent déjà à https://t.co/K3aBkLanHK",
+    "url": "https://x.com/France24_fr/status/2122407905261457753"
+   },
+   {
+    "id": "2122491635753697289",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-17",
+    "time": "01:46",
+    "text": "The next FIFA presidential election is due to take place at the 77th FIFA Congress on Thursday, 18 March 2027 in Rabat, Morocco. https://t.co/xcf39a9yXU",
+    "url": "https://x.com/euronews/status/2122491635753697289"
+   },
+   {
+    "id": "2122671091873120364",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-17",
+    "time": "13:40",
+    "text": "El CNI detalla diez diferencias entre el asalto de Ceuta de 2021 y el de julio pasado para excluir la autoría de Marruecos https://t.co/1yePB69NYo",
+    "url": "https://x.com/el_pais/status/2122671091873120364"
+   },
+   {
+    "id": "2122812911433527587",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-17",
+    "time": "23:03",
+    "text": "CAN 2027: en attendant la verdict du TAS, le Maroc rejoint le Sénégal parmi les qualifiés\n➡️ https://t.co/7vlBUqFEiD https://t.co/s94yXZXx7R",
+    "url": "https://x.com/France24_fr/status/2122812911433527587"
+   },
+   {
+    "id": "2123050187430011339",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-18",
+    "time": "14:46",
+    "text": "🇸🇳 #JTA - Le #Sénégal sera bien au rendez-vous de la #CAN2027.  Les Lions de la Teranga sont devenus la première équipe à décrocher leur billet pour la phase finale.\n\n⚽Une qualification qui intervient alorsque  le sort du titre remporté lors de la #CAN2025 face au #Maroc reste https://t.co/KxJM7gzh0i",
+    "url": "https://x.com/France24_fr/status/2123050187430011339"
+   },
+   {
+    "id": "2123300157068603669",
+    "account": "FRANCE24",
+    "name": "FRANCE24",
+    "date": "2026-11-19",
+    "time": "07:19",
+    "text": "Sports - FIFA rankings: France finish the year on the podium, Morocco break into the top five\n➡️ https://t.co/liqKE0KFqL https://t.co/7HFGIG0zoh",
+    "url": "https://x.com/FRANCE24/status/2123300157068603669"
+   },
+   {
+    "id": "2123544761856364966",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-19",
+    "time": "23:31",
+    "text": "📺 TV en DIRECTO | Feijóo: \"Sigue habiendo 15.000 invasores en Ceuta [...]. ¿Qué le debe usted a Marruecos?\" https://t.co/QTvA9XCsFL https://t.co/ORQw50Tqfe",
+    "url": "https://x.com/el_pais/status/2123544761856364966"
+   },
+   {
+    "id": "2123837130900136344",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-20",
+    "time": "18:53",
+    "text": "🇪🇸 A días de las elecciones generales del 29 de noviembre, el líder del PP, Alberto Núñez Feijóo, acusó al presidente Pedro Sánchez de no haber construido las viviendas prometidas y lo criticó por su relación con Marruecos tras la crisis migratoria en Ceuta. Directo desde España https://t.co/ZNx9OWuHC1",
+    "url": "https://x.com/France24_es/status/2123837130900136344"
+   },
+   {
+    "id": "2123965003787125015",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-21",
+    "time": "03:21",
+    "text": "Morocco commits €366m to build a national defence industry by 2035 https://t.co/uVaJFfZmGq",
+    "url": "https://x.com/euronews/status/2123965003787125015"
    }
   ],
   "cuba": [
+   {
+    "id": "2113911037997293692",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-10-24",
+    "time": "10:30",
+    "text": "La administración Trump ha reiterado que su objetivo es provocar un cambio en la cúpula de La Habana; el propio Donald Trump ha asegurado que el país está «a punto de caer».\n➡️ https://t.co/YizGDNJRcv https://t.co/CKTLeJfihb",
+    "url": "https://x.com/euronewses/status/2113911037997293692"
+   },
+   {
+    "id": "2114150559158808686",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-10-25",
+    "time": "02:22",
+    "text": "🇺🇸 #DonaldTrump volvió a referirse a #Cuba durante un acto de campaña celebrado en Fort Myers, Florida. El presidente estadounidense afirmó que, una vez resuelto el conflicto con Irán, Washington centrará su atención en la isla ⤵️\nhttps://t.co/1e58fubiMF",
+    "url": "https://x.com/France24_es/status/2114150559158808686"
+   },
+   {
+    "id": "2115222514154508544",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-10-28",
+    "time": "00:22",
+    "text": "EE.UU. y Cuba protagonizan un acalorado intercambio en la asamblea general de la ONU https://t.co/1uZOl2ffc1",
+    "url": "https://x.com/CNNEE/status/2115222514154508544"
+   },
+   {
+    "id": "2115258498262946266",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-10-28",
+    "time": "02:45",
+    "text": "A UN General Assembly session debating the US embargo of Cuba was suspended after US Ambassador Michael Waltz and Cuban representatives exchanged sharp accusations during a tense floor confrontation https://t.co/YJZS7zQaGN",
+    "url": "https://x.com/Reuters/status/2115258498262946266"
+   },
+   {
+    "id": "2115283208241590342",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-10-28",
+    "time": "04:23",
+    "text": "“¡Esto es Estados Unidos!”: altercado entre funcionarios de EE.UU. y Cuba en la ONU https://t.co/YfltgnhXbh",
+    "url": "https://x.com/CNNEE/status/2115283208241590342"
+   },
+   {
+    "id": "2115428455969857870",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-10-28",
+    "time": "14:00",
+    "text": "🔊 ‘You are a liar, Mr. Ambassador.’ A fiery US-Cuba clash at the UN embargo vote saw the debate briefly suspended. Listen now on the Reuters World News podcast https://t.co/6LU1VhyNLh https://t.co/DYtzRWXdL9",
+    "url": "https://x.com/Reuters/status/2115428455969857870"
+   },
+   {
+    "id": "2115435574194508059",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-10-28",
+    "time": "14:28",
+    "text": "\"¡Esto no es La Habana!\", gritos en la ONU entre embajadores de Cuba y Estados Unidos\n\nLa sesión de este martes de la Asamblea General de la ONU sobre el embargo estadounidense a Cuba terminó entre gritos y acusaciones. Las críticas del embajador de EE. UU., Mike Waltz, a Fidel https://t.co/RiWZiRP5xS",
+    "url": "https://x.com/dw_espanol/status/2115435574194508059"
+   },
+   {
+    "id": "2115473949500854622",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-10-28",
+    "time": "17:01",
+    "text": "U.S. and Cuban officials clashed on the floor of the United Nations General Assembly.\n\nAs the U.S. ambassador to the U.N. detailed alleged corruption by Cuba, the island’s delegation slammed on their designated table and yelled for a point of order. https://t.co/4AnZGiwWl3 https://t.co/87y4WbdwUo",
+    "url": "https://x.com/washingtonpost/status/2115473949500854622"
+   },
+   {
+    "id": "2115483498861506611",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-10-28",
+    "time": "17:39",
+    "text": "Resolución contra el embargo a Cuba con menos apoyos\n\nA pesar de la ofensiva diplomática de EE.UU., se aprobó con 130 votos a favor (frente a 165 el año pasado). Varios países latinoamericanos votaron en contra. Alemania se abstuvo por primera vez (lgc)\n\nhttps://t.co/EGuYODaStv",
+    "url": "https://x.com/dw_espanol/status/2115483498861506611"
+   },
+   {
+    "id": "2115495220011839629",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-10-28",
+    "time": "18:25",
+    "text": "La ONU aprueba una resolución contra el embargo a Cuba, aunque EE. UU. suma adeptos al bloqueo\n➡️ https://t.co/bEZeTyb1wQ https://t.co/swV8rT4yFe",
+    "url": "https://x.com/France24_es/status/2115495220011839629"
+   },
+   {
+    "id": "2115501402868859276",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-10-28",
+    "time": "18:50",
+    "text": "US gets more countries to oppose UN resolution condemning its Cuba embargo https://t.co/RLCRhXVdnf",
+    "url": "https://x.com/Reuters/status/2115501402868859276"
+   },
+   {
+    "id": "2115503251428876532",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-10-28",
+    "time": "18:57",
+    "text": "🇨🇺 #NacionesUnidas aboga mayoritariamente por el fin del embargo económico estadounidense contra #Cuba, aunque una presión de la Administración #Trump llevó a varios países a oponerse a la resolución o a abstenerse por primera vez en años ➡️ https://t.co/OY6GbqoveK https://t.co/2jUfylVVVJ",
+    "url": "https://x.com/France24_es/status/2115503251428876532"
+   },
+   {
+    "id": "2115564389830914411",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-10-28",
+    "time": "23:00",
+    "text": "US sways more countries to oppose UN resolution condemning its Cuba embargo https://t.co/quS4jiZJ7s",
+    "url": "https://x.com/Reuters/status/2115564389830914411"
+   },
+   {
+    "id": "2115581655729504502",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-10-29",
+    "time": "00:09",
+    "text": "Gobierno de Trump expulsa a un diplomático cubano de EE.UU. en medio del aumento de tensiones entre ambos países https://t.co/j8HYXiPLlh",
+    "url": "https://x.com/CNNEE/status/2115581655729504502"
+   },
+   {
+    "id": "2115582067564069124",
+    "account": "CNN",
+    "name": "CNN",
+    "date": "2026-10-29",
+    "time": "00:10",
+    "text": "The Trump administration is ejecting a Cuban diplomat from the US, a decision that comes after a shouting match between US Ambassador to the UN Mike Waltz and the Cuban diplomat during a United Nations session on the US economic embargo against Cuba  — and as administration",
+    "url": "https://x.com/CNN/status/2115582067564069124"
+   },
+   {
+    "id": "2116057916696400350",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-10-30",
+    "time": "07:41",
+    "text": "#EEUU expulsa a diplomático cubano tras un altercado en la #ONU\n\nEl gobierno estadounidense informó que Richard Tur de la Concepción \"no era bienvenido\" en el país. (mg)\n\nLea el artículo completo haciendo clic en la imagen\nhttps://t.co/h5t0rbXRpi",
+    "url": "https://x.com/dw_espanol/status/2116057916696400350"
+   },
+   {
+    "id": "2118400895025062037",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-05",
+    "time": "18:51",
+    "text": "#ÚltimoMinuto: Detenida en #Cuba la periodista independiente Yoani Sánchez\n\nLa directora del diario digital 14ymedio fue interceptada por la policía política cuando salía de su casa en La Habana. Desde entonces, no se tienen noticias de su paradero, según denunció el medio. (ct)",
+    "url": "https://x.com/dw_espanol/status/2118400895025062037"
+   },
+   {
+    "id": "2118438199920124092",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-05",
+    "time": "21:20",
+    "text": "La periodista cubana Yoani Sánchez, detenida por la policía en La Habana. La reportera fue apresada la mañana del martes y pudo avisar a la redacción del medio que dirige, en constante acoso de las autoridades cubanas https://t.co/NjUaXPO5En",
+    "url": "https://x.com/el_pais/status/2118438199920124092"
+   },
+   {
+    "id": "2118543998122127428",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-06",
+    "time": "04:20",
+    "text": "#YoaniSánchez fue liberada tras varias horas detenida en La Habana\n\nLa #periodista independiente fue liberada nueve horas después de haber sido detenida por la policía política de #Cuba. (jc)\nhttps://t.co/3gzL9sAAzz",
+    "url": "https://x.com/dw_espanol/status/2118543998122127428"
+   },
+   {
+    "id": "2119052296889798883",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-07",
+    "time": "14:00",
+    "text": "Sabor cubano en el escenario: el musical \"Buena Vista Social Club\" llega a México https://t.co/Y5oF2fsVxw",
+    "url": "https://x.com/CNNEE/status/2119052296889798883"
+   },
+   {
+    "id": "2119902032127746556",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-09",
+    "time": "22:16",
+    "text": "Cuba: cada vez menos periodistas independientes y más represión\n\nPeriodistas, comunicadores, creadores de contenido y organizaciones defensoras de los derechos humanos y la libertad de expresión denuncian el auge de la represión estatal a las voces críticas.",
+    "url": "https://x.com/dw_espanol/status/2119902032127746556"
+   },
+   {
+    "id": "2120437651358544174",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-11",
+    "time": "09:45",
+    "text": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support', Xinhua reports https://t.co/cmy3TzlM54",
+    "url": "https://x.com/Reuters/status/2120437651358544174"
+   },
+   {
+    "id": "2120499296093045100",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-11",
+    "time": "13:50",
+    "text": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support', Xinhua reports https://t.co/WX9zSH6szk",
+    "url": "https://x.com/Reuters/status/2120499296093045100"
+   },
+   {
+    "id": "2120580321619894656",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-11",
+    "time": "19:12",
+    "text": "Rubio dice que el \"objetivo final\" es un destino mejor para Cuba. Díaz-Canel responde que \"el futuro no se decidirá\" al norte https://t.co/U7ngGoXnEm",
+    "url": "https://x.com/CNNEE/status/2120580321619894656"
+   },
+   {
+    "id": "2122725254405542348",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-17",
+    "time": "17:15",
+    "text": "Exfutbolista cubano logra una nueva marca personal al dominar el balón por más de una hora https://t.co/eudwdsYFYe",
+    "url": "https://x.com/CNNEE/status/2122725254405542348"
+   },
+   {
+    "id": "2123541231942713548",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-19",
+    "time": "23:17",
+    "text": "#Trump vuelve a agitar el fantasma de una intervención en #Cuba\n\nLas maniobras de #EEUU en #Guantánamo coinciden con las amenazas de Trump contra Cuba. ¿Son preparativos para una intervención o una demostración de fuerza en medio de la presión sobre La Habana? (ct)",
+    "url": "https://x.com/dw_espanol/status/2123541231942713548"
+   },
    {
     "id": "2123837888370504056",
     "account": "CNNEE",
@@ -2169,238 +2457,22 @@
     "url": "https://x.com/France24_es/status/2123875805734560060"
    },
    {
-    "id": "2123541231942713548",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-19",
-    "time": "23:17",
-    "text": "#Trump vuelve a agitar el fantasma de una intervención en #Cuba\n\nLas maniobras de #EEUU en #Guantánamo coinciden con las amenazas de Trump contra Cuba. ¿Son preparativos para una intervención o una demostración de fuerza en medio de la presión sobre La Habana? (ct)",
-    "url": "https://x.com/dw_espanol/status/2123541231942713548"
+    "id": "2123947121489362944",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-21",
+    "time": "02:10",
+    "text": "\"Torturado hasta morir”: la ejecución de un cubano en Texas reabre el debate sobre la pena capital\n➡️ https://t.co/MLLoJW3VP1 https://t.co/NNkkX85WBz",
+    "url": "https://x.com/France24_es/status/2123947121489362944"
    },
    {
-    "id": "2122725254405542348",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-11-17",
-    "time": "17:15",
-    "text": "Exfutbolista cubano logra una nueva marca personal al dominar el balón por más de una hora https://t.co/eudwdsYFYe",
-    "url": "https://x.com/CNNEE/status/2122725254405542348"
-   },
-   {
-    "id": "2120580321619894656",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-11-11",
-    "time": "19:12",
-    "text": "Rubio dice que el \"objetivo final\" es un destino mejor para Cuba. Díaz-Canel responde que \"el futuro no se decidirá\" al norte https://t.co/U7ngGoXnEm",
-    "url": "https://x.com/CNNEE/status/2120580321619894656"
-   },
-   {
-    "id": "2120499296093045100",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-11",
-    "time": "13:50",
-    "text": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support', Xinhua reports https://t.co/WX9zSH6szk",
-    "url": "https://x.com/Reuters/status/2120499296093045100"
-   },
-   {
-    "id": "2120437651358544174",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-11",
-    "time": "09:45",
-    "text": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support', Xinhua reports https://t.co/cmy3TzlM54",
-    "url": "https://x.com/Reuters/status/2120437651358544174"
-   },
-   {
-    "id": "2119902032127746556",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-09",
-    "time": "22:16",
-    "text": "Cuba: cada vez menos periodistas independientes y más represión\n\nPeriodistas, comunicadores, creadores de contenido y organizaciones defensoras de los derechos humanos y la libertad de expresión denuncian el auge de la represión estatal a las voces críticas.",
-    "url": "https://x.com/dw_espanol/status/2119902032127746556"
-   },
-   {
-    "id": "2119052296889798883",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-11-07",
-    "time": "14:00",
-    "text": "Sabor cubano en el escenario: el musical \"Buena Vista Social Club\" llega a México https://t.co/Y5oF2fsVxw",
-    "url": "https://x.com/CNNEE/status/2119052296889798883"
-   },
-   {
-    "id": "2118543998122127428",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-06",
-    "time": "04:20",
-    "text": "#YoaniSánchez fue liberada tras varias horas detenida en La Habana\n\nLa #periodista independiente fue liberada nueve horas después de haber sido detenida por la policía política de #Cuba. (jc)\nhttps://t.co/3gzL9sAAzz",
-    "url": "https://x.com/dw_espanol/status/2118543998122127428"
-   },
-   {
-    "id": "2118438199920124092",
-    "account": "el_pais",
-    "name": "EL PAÍS",
-    "date": "2026-11-05",
-    "time": "21:20",
-    "text": "La periodista cubana Yoani Sánchez, detenida por la policía en La Habana. La reportera fue apresada la mañana del martes y pudo avisar a la redacción del medio que dirige, en constante acoso de las autoridades cubanas https://t.co/NjUaXPO5En",
-    "url": "https://x.com/el_pais/status/2118438199920124092"
-   },
-   {
-    "id": "2118400895025062037",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-05",
-    "time": "18:51",
-    "text": "#ÚltimoMinuto: Detenida en #Cuba la periodista independiente Yoani Sánchez\n\nLa directora del diario digital 14ymedio fue interceptada por la policía política cuando salía de su casa en La Habana. Desde entonces, no se tienen noticias de su paradero, según denunció el medio. (ct)",
-    "url": "https://x.com/dw_espanol/status/2118400895025062037"
-   },
-   {
-    "id": "2116057916696400350",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-10-30",
-    "time": "07:41",
-    "text": "#EEUU expulsa a diplomático cubano tras un altercado en la #ONU\n\nEl gobierno estadounidense informó que Richard Tur de la Concepción \"no era bienvenido\" en el país. (mg)\n\nLea el artículo completo haciendo clic en la imagen\nhttps://t.co/h5t0rbXRpi",
-    "url": "https://x.com/dw_espanol/status/2116057916696400350"
-   },
-   {
-    "id": "2115582067564069124",
+    "id": "2124016212610789487",
     "account": "CNN",
     "name": "CNN",
-    "date": "2026-10-29",
-    "time": "00:10",
-    "text": "The Trump administration is ejecting a Cuban diplomat from the US, a decision that comes after a shouting match between US Ambassador to the UN Mike Waltz and the Cuban diplomat during a United Nations session on the US economic embargo against Cuba  — and as administration",
-    "url": "https://x.com/CNN/status/2115582067564069124"
-   },
-   {
-    "id": "2115581655729504502",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-10-29",
-    "time": "00:09",
-    "text": "Gobierno de Trump expulsa a un diplomático cubano de EE.UU. en medio del aumento de tensiones entre ambos países https://t.co/j8HYXiPLlh",
-    "url": "https://x.com/CNNEE/status/2115581655729504502"
-   },
-   {
-    "id": "2115564389830914411",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-10-28",
-    "time": "23:00",
-    "text": "US sways more countries to oppose UN resolution condemning its Cuba embargo https://t.co/quS4jiZJ7s",
-    "url": "https://x.com/Reuters/status/2115564389830914411"
-   },
-   {
-    "id": "2115503251428876532",
-    "account": "France24_es",
-    "name": "FRANCE 24 Español",
-    "date": "2026-10-28",
-    "time": "18:57",
-    "text": "🇨🇺 #NacionesUnidas aboga mayoritariamente por el fin del embargo económico estadounidense contra #Cuba, aunque una presión de la Administración #Trump llevó a varios países a oponerse a la resolución o a abstenerse por primera vez en años ➡️ https://t.co/OY6GbqoveK https://t.co/2jUfylVVVJ",
-    "url": "https://x.com/France24_es/status/2115503251428876532"
-   },
-   {
-    "id": "2115501402868859276",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-10-28",
-    "time": "18:50",
-    "text": "US gets more countries to oppose UN resolution condemning its Cuba embargo https://t.co/RLCRhXVdnf",
-    "url": "https://x.com/Reuters/status/2115501402868859276"
-   },
-   {
-    "id": "2115495220011839629",
-    "account": "France24_es",
-    "name": "FRANCE 24 Español",
-    "date": "2026-10-28",
-    "time": "18:25",
-    "text": "La ONU aprueba una resolución contra el embargo a Cuba, aunque EE. UU. suma adeptos al bloqueo\n➡️ https://t.co/bEZeTyb1wQ https://t.co/swV8rT4yFe",
-    "url": "https://x.com/France24_es/status/2115495220011839629"
-   },
-   {
-    "id": "2115483498861506611",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-10-28",
-    "time": "17:39",
-    "text": "Resolución contra el embargo a Cuba con menos apoyos\n\nA pesar de la ofensiva diplomática de EE.UU., se aprobó con 130 votos a favor (frente a 165 el año pasado). Varios países latinoamericanos votaron en contra. Alemania se abstuvo por primera vez (lgc)\n\nhttps://t.co/EGuYODaStv",
-    "url": "https://x.com/dw_espanol/status/2115483498861506611"
-   },
-   {
-    "id": "2115473949500854622",
-    "account": "washingtonpost",
-    "name": "The Washington Post",
-    "date": "2026-10-28",
-    "time": "17:01",
-    "text": "U.S. and Cuban officials clashed on the floor of the United Nations General Assembly.\n\nAs the U.S. ambassador to the U.N. detailed alleged corruption by Cuba, the island’s delegation slammed on their designated table and yelled for a point of order. https://t.co/4AnZGiwWl3 https://t.co/87y4WbdwUo",
-    "url": "https://x.com/washingtonpost/status/2115473949500854622"
-   },
-   {
-    "id": "2115435574194508059",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-10-28",
-    "time": "14:28",
-    "text": "\"¡Esto no es La Habana!\", gritos en la ONU entre embajadores de Cuba y Estados Unidos\n\nLa sesión de este martes de la Asamblea General de la ONU sobre el embargo estadounidense a Cuba terminó entre gritos y acusaciones. Las críticas del embajador de EE. UU., Mike Waltz, a Fidel https://t.co/RiWZiRP5xS",
-    "url": "https://x.com/dw_espanol/status/2115435574194508059"
-   },
-   {
-    "id": "2115428455969857870",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-10-28",
-    "time": "14:00",
-    "text": "🔊 ‘You are a liar, Mr. Ambassador.’ A fiery US-Cuba clash at the UN embargo vote saw the debate briefly suspended. Listen now on the Reuters World News podcast https://t.co/6LU1VhyNLh https://t.co/DYtzRWXdL9",
-    "url": "https://x.com/Reuters/status/2115428455969857870"
-   },
-   {
-    "id": "2115283208241590342",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-10-28",
-    "time": "04:23",
-    "text": "“¡Esto es Estados Unidos!”: altercado entre funcionarios de EE.UU. y Cuba en la ONU https://t.co/YfltgnhXbh",
-    "url": "https://x.com/CNNEE/status/2115283208241590342"
-   },
-   {
-    "id": "2115258498262946266",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-10-28",
-    "time": "02:45",
-    "text": "A UN General Assembly session debating the US embargo of Cuba was suspended after US Ambassador Michael Waltz and Cuban representatives exchanged sharp accusations during a tense floor confrontation https://t.co/YJZS7zQaGN",
-    "url": "https://x.com/Reuters/status/2115258498262946266"
-   },
-   {
-    "id": "2115222514154508544",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-10-28",
-    "time": "00:22",
-    "text": "EE.UU. y Cuba protagonizan un acalorado intercambio en la asamblea general de la ONU https://t.co/1uZOl2ffc1",
-    "url": "https://x.com/CNNEE/status/2115222514154508544"
-   },
-   {
-    "id": "2114150559158808686",
-    "account": "France24_es",
-    "name": "FRANCE 24 Español",
-    "date": "2026-10-25",
-    "time": "02:22",
-    "text": "🇺🇸 #DonaldTrump volvió a referirse a #Cuba durante un acto de campaña celebrado en Fort Myers, Florida. El presidente estadounidense afirmó que, una vez resuelto el conflicto con Irán, Washington centrará su atención en la isla ⤵️\nhttps://t.co/1e58fubiMF",
-    "url": "https://x.com/France24_es/status/2114150559158808686"
-   },
-   {
-    "id": "2113911037997293692",
-    "account": "euronewses",
-    "name": "euronews español",
-    "date": "2026-10-24",
-    "time": "10:30",
-    "text": "La administración Trump ha reiterado que su objetivo es provocar un cambio en la cúpula de La Habana; el propio Donald Trump ha asegurado que el país está «a punto de caer».\n➡️ https://t.co/YizGDNJRcv https://t.co/CKTLeJfihb",
-    "url": "https://x.com/euronewses/status/2113911037997293692"
+    "date": "2026-11-21",
+    "time": "06:45",
+    "text": "Exclusive: An American held for nearly a decade in Cuba was quietly released earlier this year, two sources familiar with the matter and a State Department spokesperson told CNN. https://t.co/tYCcQkkSKs https://t.co/2xrT3u9Ll7",
+    "url": "https://x.com/CNN/status/2124016212610789487"
    }
   ]
  }
