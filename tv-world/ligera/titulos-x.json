@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-21T15:58:38+01:00",
+ "fetched_at": "2026-11-21T23:59:24+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
  "accounts": [
@@ -1234,6 +1234,15 @@
     "time": "14:01",
     "text": "Una Semana en el Mundo - EE. UU., China y Rusia: ¿guerra híbrida en medio de llamados de paz?\n➡️ https://t.co/bljxe3Yu6d https://t.co/TVx1J6eGy9",
     "url": "https://x.com/France24_es/status/2124125928905458095"
+   },
+   {
+    "id": "2124274319857418417",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-21",
+    "time": "23:50",
+    "text": "Elon Musk dice que su hijo ve a China como un “paraíso de los juguetes” https://t.co/24ZxVoEBfu",
+    "url": "https://x.com/CNNEE/status/2124274319857418417"
    }
   ],
   "india": [
@@ -2010,6 +2019,24 @@
     "time": "13:50",
     "text": "Meta's India offices hit by opposition protests over account removals https://t.co/EMHheTlp0j",
     "url": "https://x.com/Reuters/status/2124123194323771519"
+   },
+   {
+    "id": "2124158438301172185",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-21",
+    "time": "16:10",
+    "text": "Perez announces record revenue for Real, UEFA to trial free viewing in India https://t.co/ooxmzz9639",
+    "url": "https://x.com/Reuters/status/2124158438301172185"
+   },
+   {
+    "id": "2124221343314919730",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-21",
+    "time": "20:20",
+    "text": "Perez announces record revenue for Real, UEFA to trial free viewing in India https://t.co/FWwo87t7dh",
+    "url": "https://x.com/Reuters/status/2124221343314919730"
    }
   ],
   "morocco": [

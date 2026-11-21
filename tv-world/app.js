@@ -435,24 +435,24 @@
   /* Fechas convertidas a calendario Europe/Madrid a partir de la fecha de publicación de YouTube. */
   const COUNTRY_NEWS = {
     china: [
+      { id: "U9Vkj-H5OJQ", title: "EE. UU., China y Rusia: ¿guerra híbrida en medio de llamados de paz? • FRANCE 24 Español", channel: "FRANCE 24 Español", date: "2026-11-21" },
       { id: "qDxjfdkzegY", title: "Trump Calls China Trip a Success Despite Little from Xi, Putin", channel: "CNN", date: "2026-11-20" },
       { id: "vNiNewJGAes", title: "US, China, Russia hold unprecedented trilateral summit: Making history or just headlines? | DW News", channel: "DW News", date: "2026-11-20" },
       { id: "Bjcu7SVapS8", title: "Líderes de EE. UU., China y Rusia celebran una inédita cumbre trilateral al margen de la APEC", channel: "DW Español", date: "2026-11-20" },
       { id: "s4WRZIjVgaA", title: "Donald Trump appears to reach for Xi Jinping’s hand on an escalator", channel: "Associated Press", date: "2026-11-20" },
       { id: "OI0lFh1MVKM", title: "Experts assess what was addressed and overlooked at trilateral meeting in China", channel: "PBS NewsHour", date: "2026-11-20" },
       { id: "CL77AWeihNg", title: "Russian nuclear briefcase follows Putin to China", channel: "Reuters", date: "2026-11-19" },
-      { id: "rJnSZRqVcxg", title: "Trump, Putin and Xi make history with meeting in China | Reuters World News", channel: "Reuters", date: "2026-11-19" },
-      { id: "v3xE1QI1jOE", title: "Russian nuclear briefcase follows Putin to China", channel: "Reuters", date: "2026-11-19" }
+      { id: "rJnSZRqVcxg", title: "Trump, Putin and Xi make history with meeting in China | Reuters World News", channel: "Reuters", date: "2026-11-19" }
     ],
     india: [
+      { id: "1MQ0WnDAKls", title: "Indian man jailed for over 19 years for failed plot to kill Sikh leader | DW News", channel: "DW News", date: "2026-11-21" },
+      { id: "DOJyP7h17as", title: "Cómo India abrió su sector espacial y desató una ola de startups", channel: "DW Español", date: "2026-11-21" },
       { id: "yWWAKIfCZp0", title: "Amid Tensions in India, Sikhs and Hindus are building mosques for Muslims | DW News", channel: "DW News", date: "2026-11-20" },
       { id: "fSY9sIKScTk", title: "India's EV boom has a charging problem | DW News", channel: "DW News", date: "2026-11-20" },
       { id: "ZDZoZzN-1ms", title: "What we learned from William and Kate's visit to India. #BBCNews", channel: "BBC News", date: "2026-11-19" },
       { id: "NljbnyhvcSo", title: "India has a rice problem: it's growing too much of the stuff", channel: "Reuters", date: "2026-11-18" },
       { id: "cOLounJNUgw", title: "Delhi air as harmful as smoking 20 cigarettes a day", channel: "Reuters", date: "2026-11-09" },
-      { id: "wV70XQD3K04", title: "Festival de las luces: empiezan celebraciones de una de las fiestas más importantes del hinduismo", channel: "FRANCE 24 Español", date: "2026-11-08" },
-      { id: "gAbOxF7Iuj4", title: "Diwali celebrations in India amid political tensions", channel: "ABC News", date: "2026-11-07" },
-      { id: "S2sRA5pDgtE", title: "India's AI ambitions: Can it become a global tech superpower? | DW News", channel: "DW News", date: "2026-11-07" }
+      { id: "wV70XQD3K04", title: "Festival de las luces: empiezan celebraciones de una de las fiestas más importantes del hinduismo", channel: "FRANCE 24 Español", date: "2026-11-08" }
     ],
     morocco: [
       { id: "9TV7uyC3OtE", title: "Classement Fifa : la France termine l'année sur le podium, le Maroc dans le top 5 • FRANCE 24", channel: "FRANCE 24", date: "2026-11-19" },
