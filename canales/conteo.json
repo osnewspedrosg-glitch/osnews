@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-21T09:00:57+01:00",
-  "x_fetched_at": "2026-11-21T07:58:05+01:00",
+  "generated_at": "2026-11-21T15:58:38+01:00",
+  "x_fetched_at": "2026-11-21T15:58:38+01:00",
   "errors": [],
   "counts": {
     "es": {
@@ -10,7 +10,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 34,
-        "decl_tv_all": 158,
+        "decl_tv_all": 160,
         "local": 59
       },
       "india": {
@@ -19,7 +19,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 22,
-        "decl_tv_all": 84,
+        "decl_tv_all": 86,
         "local": 98
       },
       "morocco": {
@@ -37,8 +37,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 26,
-        "decl_tv_all": 30,
-        "local": 61
+        "decl_tv_all": 31,
+        "local": 62
       }
     },
     "en": {
@@ -48,7 +48,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 34,
-        "decl_tv_all": 158,
+        "decl_tv_all": 160,
         "local": 59
       },
       "india": {
@@ -57,7 +57,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 22,
-        "decl_tv_all": 84,
+        "decl_tv_all": 86,
         "local": 98
       },
       "morocco": {
@@ -75,8 +75,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 26,
-        "decl_tv_all": 30,
-        "local": 61
+        "decl_tv_all": 31,
+        "local": 62
       }
     },
     "fr": {
@@ -86,7 +86,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 34,
-        "decl_tv_all": 158,
+        "decl_tv_all": 160,
         "local": 59
       },
       "india": {
@@ -95,7 +95,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 22,
-        "decl_tv_all": 84,
+        "decl_tv_all": 86,
         "local": 98
       },
       "morocco": {
@@ -113,8 +113,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 26,
-        "decl_tv_all": 30,
-        "local": 61
+        "decl_tv_all": 31,
+        "local": 62
       }
     },
     "de": {
@@ -124,7 +124,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 34,
-        "decl_tv_all": 158,
+        "decl_tv_all": 160,
         "local": 59
       },
       "india": {
@@ -133,7 +133,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 22,
-        "decl_tv_all": 84,
+        "decl_tv_all": 86,
         "local": 98
       },
       "morocco": {
@@ -151,8 +151,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 26,
-        "decl_tv_all": 30,
-        "local": 61
+        "decl_tv_all": 31,
+        "local": 62
       }
     },
     "pt": {
@@ -162,7 +162,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 34,
-        "decl_tv_all": 158,
+        "decl_tv_all": 160,
         "local": 59
       },
       "india": {
@@ -171,7 +171,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 22,
-        "decl_tv_all": 84,
+        "decl_tv_all": 86,
         "local": 98
       },
       "morocco": {
@@ -189,8 +189,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 26,
-        "decl_tv_all": 30,
-        "local": 61
+        "decl_tv_all": 31,
+        "local": 62
       }
     },
     "it": {
@@ -200,7 +200,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 34,
-        "decl_tv_all": 158,
+        "decl_tv_all": 160,
         "local": 59
       },
       "india": {
@@ -209,7 +209,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 22,
-        "decl_tv_all": 84,
+        "decl_tv_all": 86,
         "local": 98
       },
       "morocco": {
@@ -227,8 +227,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 26,
-        "decl_tv_all": 30,
-        "local": 61
+        "decl_tv_all": 31,
+        "local": 62
       }
     },
     "ar": {
@@ -238,7 +238,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 34,
-        "decl_tv_all": 158,
+        "decl_tv_all": 160,
         "local": 59
       },
       "india": {
@@ -247,7 +247,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 22,
-        "decl_tv_all": 84,
+        "decl_tv_all": 86,
         "local": 98
       },
       "morocco": {
@@ -265,8 +265,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 26,
-        "decl_tv_all": 30,
-        "local": 61
+        "decl_tv_all": 31,
+        "local": 62
       }
     },
     "zh": {
@@ -276,7 +276,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 34,
-        "decl_tv_all": 158,
+        "decl_tv_all": 160,
         "local": 59
       },
       "india": {
@@ -285,7 +285,7 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 22,
-        "decl_tv_all": 84,
+        "decl_tv_all": 86,
         "local": 98
       },
       "morocco": {
@@ -303,8 +303,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 26,
-        "decl_tv_all": 30,
-        "local": 61
+        "decl_tv_all": 31,
+        "local": 62
       }
     }
   }

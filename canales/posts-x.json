@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-21T07:58:05+01:00",
+ "fetched_at": "2026-11-21T15:58:38+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, official politician (government-verified) and official European/US TV-news accounts; start_time 2026-09-01T00:00:00Z (TV China/India/Morocco/Cuba from 2026-10-01T00:00:00Z); -is:retweet -is:reply; literal text only, country must appear in the post",
  "accounts": {
@@ -3269,6 +3269,30 @@
     "lang": "en",
     "role": "tv",
     "scope": "tv"
+   },
+   {
+    "id": "2124050237413081492",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-21",
+    "time": "09:00",
+    "text": "Fresh off China trip, Trump bobs and weaves in freewheeling press conference https://t.co/SwdbZAtQmP",
+    "url": "https://x.com/Reuters/status/2124050237413081492",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2124125928905458095",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-21",
+    "time": "14:01",
+    "text": "Una Semana en el Mundo - EE. UU., China y Rusia: ¿guerra híbrida en medio de llamados de paz?\n➡️ https://t.co/bljxe3Yu6d https://t.co/TVx1J6eGy9",
+    "url": "https://x.com/France24_es/status/2124125928905458095",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
    }
   ],
   "india": [
@@ -5719,6 +5743,30 @@
     "lang": "hi",
     "role": "politician",
     "scope": "country"
+   },
+   {
+    "id": "2124061564193890420",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-21",
+    "time": "09:45",
+    "text": "Meta's India offices hit by opposition protests over account removals https://t.co/7ycPrD9ge4",
+    "url": "https://x.com/Reuters/status/2124061564193890420",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2124123194323771519",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-21",
+    "time": "13:50",
+    "text": "Meta's India offices hit by opposition protests over account removals https://t.co/EMHheTlp0j",
+    "url": "https://x.com/Reuters/status/2124123194323771519",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
    }
   ],
   "morocco": [
@@ -7871,6 +7919,30 @@
     "lang": "en",
     "role": "tv",
     "scope": "tv"
+   },
+   {
+    "id": "2124099907900387534",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-21",
+    "time": "12:17",
+    "text": "Cuban posters on show after blackouts cause delays https://t.co/HUp2793TKn",
+    "url": "https://x.com/BBCWorld/status/2124099907900387534",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2124154616145199545",
+    "account": "BrunoRguezP",
+    "name": "Bruno Rodríguez P",
+    "date": "2026-11-21",
+    "time": "15:55",
+    "text": "Extiendo una fraternal  felicitación a Esterline Gonçalves Gènero por su designación como nuevo Ministro de Dipomacia, Cooperaciòn y Diáspora de la República Democrática de Santo Tomé y Príncipe\n\nLe reiteramos la voluntad de #Cuba de continuar  fortaleciendo los históricos lazos https://t.co/IFcoC2uer0",
+    "url": "https://x.com/BrunoRguezP/status/2124154616145199545",
+    "lang": "",
+    "role": "politician",
+    "scope": "country"
    }
   ]
  }
