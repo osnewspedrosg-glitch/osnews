@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-21T23:59:24+01:00",
+ "fetched_at": "2026-11-22T07:58:53+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
  "accounts": [
@@ -1243,6 +1243,42 @@
     "time": "23:50",
     "text": "Elon Musk dice que su hijo ve a China como un “paraíso de los juguetes” https://t.co/24ZxVoEBfu",
     "url": "https://x.com/CNNEE/status/2124274319857418417"
+   },
+   {
+    "id": "2124394410515255337",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-22",
+    "time": "07:47",
+    "text": "En la meca tecnológica de China, Trump y Xi promovieron la cooperación en IA. Ahora llega la dura realidad\nhttps://t.co/sw6rZN9F6Q",
+    "url": "https://x.com/CNNEE/status/2124394410515255337"
+   },
+   {
+    "id": "2124369824755159382",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-22",
+    "time": "06:10",
+    "text": "China opposes US FCC ban on Chinese telecoms' direct access to US phone numbers https://t.co/nOrQtK3Jct",
+    "url": "https://x.com/Reuters/status/2124369824755159382"
+   },
+   {
+    "id": "2124314452765888861",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-22",
+    "time": "02:30",
+    "text": "Find out how China is pushing for schools to use AI. Laurie Chen reports from Beijing in the Reuters World News podcast https://t.co/fZkl0O8tjt https://t.co/Y8ztvzfsOV",
+    "url": "https://x.com/Reuters/status/2124314452765888861"
+   },
+   {
+    "id": "2124284255530275305",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-22",
+    "time": "00:30",
+    "text": "China wants all its children to be AI literate by 2030. Laurie Chen reports in this edition of the Reuters World News podcast https://t.co/PRrOwF4Q5Q https://t.co/nVoexNapOh",
+    "url": "https://x.com/Reuters/status/2124284255530275305"
    }
   ],
   "india": [
@@ -2037,6 +2073,15 @@
     "time": "20:20",
     "text": "Perez announces record revenue for Real, UEFA to trial free viewing in India https://t.co/FWwo87t7dh",
     "url": "https://x.com/Reuters/status/2124221343314919730"
+   },
+   {
+    "id": "2124354728666484931",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-22",
+    "time": "05:10",
+    "text": "Bumrah strikes again after India build imposing lead in Wellington https://t.co/7ZuqWxofaU",
+    "url": "https://x.com/Reuters/status/2124354728666484931"
    }
   ],
   "morocco": [

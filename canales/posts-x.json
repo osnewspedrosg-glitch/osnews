@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-21T23:59:24+01:00",
+ "fetched_at": "2026-11-22T07:58:53+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, official politician (government-verified) and official European/US TV-news accounts; start_time 2026-09-01T00:00:00Z (TV China/India/Morocco/Cuba from 2026-10-01T00:00:00Z); -is:retweet -is:reply; literal text only, country must appear in the post",
  "accounts": {
@@ -3305,6 +3305,78 @@
     "lang": "es",
     "role": "tv",
     "scope": "tv"
+   },
+   {
+    "id": "2124394410515255337",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "role": "tv",
+    "date": "2026-11-22",
+    "time": "07:47",
+    "text": "En la meca tecnológica de China, Trump y Xi promovieron la cooperación en IA. Ahora llega la dura realidad\nhttps://t.co/sw6rZN9F6Q",
+    "url": "https://x.com/CNNEE/status/2124394410515255337",
+    "lang": "es",
+    "scope": "tv"
+   },
+   {
+    "id": "2124369824755159382",
+    "account": "Reuters",
+    "name": "Reuters",
+    "role": "tv",
+    "date": "2026-11-22",
+    "time": "06:10",
+    "text": "China opposes US FCC ban on Chinese telecoms' direct access to US phone numbers https://t.co/nOrQtK3Jct",
+    "url": "https://x.com/Reuters/status/2124369824755159382",
+    "lang": "en",
+    "scope": "tv"
+   },
+   {
+    "id": "2124314452765888861",
+    "account": "Reuters",
+    "name": "Reuters",
+    "role": "tv",
+    "date": "2026-11-22",
+    "time": "02:30",
+    "text": "Find out how China is pushing for schools to use AI. Laurie Chen reports from Beijing in the Reuters World News podcast https://t.co/fZkl0O8tjt https://t.co/Y8ztvzfsOV",
+    "url": "https://x.com/Reuters/status/2124314452765888861",
+    "lang": "en",
+    "scope": "tv"
+   },
+   {
+    "id": "2124284255530275305",
+    "account": "Reuters",
+    "name": "Reuters",
+    "role": "tv",
+    "date": "2026-11-22",
+    "time": "00:30",
+    "text": "China wants all its children to be AI literate by 2030. Laurie Chen reports in this edition of the Reuters World News podcast https://t.co/PRrOwF4Q5Q https://t.co/nVoexNapOh",
+    "url": "https://x.com/Reuters/status/2124284255530275305",
+    "lang": "en",
+    "scope": "tv"
+   },
+   {
+    "id": "2124370116901315029",
+    "account": "MFA_China",
+    "name": "CHINA MFA Spokesperson 中国外交部发言人",
+    "role": "politician",
+    "date": "2026-11-22",
+    "time": "06:11",
+    "text": "Member of the Political Bureau of the CPC Central Committee and Secretary of the Central Political and Legal Affairs Commission of the CPC Chen Wenqing will attend the sixth China-Germany high-level security dialogue in Germany and visit Germany and Austria from November 22 to",
+    "url": "https://x.com/MFA_China/status/2124370116901315029",
+    "lang": "en",
+    "scope": "country"
+   },
+   {
+    "id": "2124332441792029002",
+    "account": "MFA_China",
+    "name": "CHINA MFA Spokesperson 中国外交部发言人",
+    "role": "politician",
+    "date": "2026-11-22",
+    "time": "03:41",
+    "text": "A 12-year-old Russian girl, once paralyzed, stood up again and took her first steps after surgery in China. 👏\n\nA miracle made possible by Chinese medical technology and genuine China-Russia friendship. ❤️ https://t.co/OhGePLPsK0",
+    "url": "https://x.com/MFA_China/status/2124332441792029002",
+    "lang": "en",
+    "scope": "country"
    }
   ],
   "india": [
@@ -5802,6 +5874,18 @@
     "url": "https://x.com/Reuters/status/2124221343314919730",
     "lang": "en",
     "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2124354728666484931",
+    "account": "Reuters",
+    "name": "Reuters",
+    "role": "tv",
+    "date": "2026-11-22",
+    "time": "05:10",
+    "text": "Bumrah strikes again after India build imposing lead in Wellington https://t.co/7ZuqWxofaU",
+    "url": "https://x.com/Reuters/status/2124354728666484931",
+    "lang": "en",
     "scope": "tv"
    }
   ],
