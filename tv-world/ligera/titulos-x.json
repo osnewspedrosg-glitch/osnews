@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-22T15:56:59+01:00",
+ "fetched_at": "2026-11-23T00:03:11+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
  "accounts": [
@@ -1351,6 +1351,60 @@
     "time": "09:45",
     "text": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support', Xinhua reports https://t.co/cmy3TzlM54",
     "url": "https://x.com/Reuters/status/2120437651358544174"
+   },
+   {
+    "id": "2124631610481872949",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-22",
+    "time": "23:30",
+    "text": "Chinese player Liu suspended amid match-fixing probe https://t.co/ChgmrG2Vfm",
+    "url": "https://x.com/Reuters/status/2124631610481872949"
+   },
+   {
+    "id": "2124627739453816835",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-11-22",
+    "time": "23:15",
+    "text": "Sen. John Kennedy (R-Louisiana) said that Commerce Secretary Howard Lutnick should face “hard questions” from Congress about whether he allowed Chinese companies to “circumvent” export rules to get access to Nvidia artificial intelligence chips.\nhttps://t.co/iaTtmApHN5",
+    "url": "https://x.com/washingtonpost/status/2124627739453816835"
+   },
+   {
+    "id": "2124593806225887710",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-11-22",
+    "time": "21:00",
+    "text": "China is expanding border restrictions, including on outgoing travel, in a selective effort to keep people and proprietary technology at home amid an artificial intelligence race with the United States. https://t.co/tlAhNXc1P0",
+    "url": "https://x.com/washingtonpost/status/2124593806225887710"
+   },
+   {
+    "id": "2124587510596575679",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-22",
+    "time": "20:35",
+    "text": "US seeks answers on Nvidia's sale of chips to China, Bessent says https://t.co/QrpkHS9fS9",
+    "url": "https://x.com/Reuters/status/2124587510596575679"
+   },
+   {
+    "id": "2124556063454236700",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-22",
+    "time": "18:30",
+    "text": "Chinese exchanges ease margin trading requirements to aid stock markets https://t.co/IzgorSy33a",
+    "url": "https://x.com/Reuters/status/2124556063454236700"
+   },
+   {
+    "id": "2124493149636583673",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-22",
+    "time": "14:20",
+    "text": "Chinese exchanges ease margin trading requirements to aid stock markets https://t.co/I0aGzoCtD3",
+    "url": "https://x.com/Reuters/status/2124493149636583673"
    }
   ],
   "india": [
@@ -2172,6 +2226,15 @@
     "time": "02:39",
     "text": "Qantas to outsource 850 local jobs with most roles moving to India https://t.co/nCRUtXPEoT",
     "url": "https://x.com/BBCWorld/status/2119968072714932598"
+   },
+   {
+    "id": "2124630001941119269",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-22",
+    "time": "23:24",
+    "text": "Manifestantes irrumpen en el edificio de oficinas de Meta en India https://t.co/kbcIxSONWr",
+    "url": "https://x.com/CNNEE/status/2124630001941119269"
    }
   ],
   "morocco": [
