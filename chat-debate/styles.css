@@ -1,0 +1,160 @@
+/* OSNews Chat del debate — system fonts only, no trackers, no paid services. */
+:root {
+  --bg: #0b1220;
+  --bg2: #141c2e;
+  --card: #1a2438;
+  --line: #2c3a55;
+  --text: #eef3ff;
+  --muted: #9aa8c3;
+  --accent: #3dd6c6;
+  --accent2: #7ab8ff;
+  --btn: #243250;
+  --btn-on: #1e6b62;
+  --warn: #f3d27a;
+  --ayuda: #3a2140;
+  --ayuda-line: #7a3d6a;
+  --radius: 16px;
+  --focus: 0 0 0 3px #3dd6c6;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); }
+body {
+  font-family: system-ui, "Segoe UI", "Noto Sans", sans-serif;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+a { color: var(--accent2); }
+a:focus-visible, button:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}
+.skip {
+  position: absolute;
+  left: 12px;
+  top: -40px;
+  background: var(--btn-on);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  z-index: 10;
+}
+.skip:focus { top: 12px; }
+.wrap { max-width: 840px; margin: 0 auto; padding: 16px 16px 48px; }
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+h1 { font-size: clamp(1.35rem, 4.2vw, 2rem); margin: 0 0 8px; line-height: 1.25; }
+.tag { margin: 0 0 8px; color: var(--accent); font-weight: 700; }
+.lead { margin: 0; color: var(--muted); max-width: 62ch; }
+.lead strong { color: var(--text); }
+.jump { display: flex; flex-wrap: wrap; gap: 10px; }
+.jump a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--btn);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+}
+.panel {
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+h2 { margin: 0 0 12px; font-size: 1.15rem; color: var(--accent); }
+.norma { border-color: var(--accent); }
+.norma-text {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+.ayuda { background: var(--ayuda); border-color: var(--ayuda-line); }
+.ayuda h2 { color: #f3c6e0; }
+.ayuda-lista { margin: 0; padding-left: 1.2em; }
+.ayuda-lista li { margin: 0 0 10px; }
+.ayuda-lista li:last-child { margin-bottom: 0; }
+.hint { margin: 12px 0 0; color: var(--muted); font-size: 0.98rem; }
+.hint:first-of-type { margin-top: 0; }
+.video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.votos { display: grid; gap: 10px; }
+.voto {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  text-align: start;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font: inherit;
+  cursor: pointer;
+  min-height: 56px;
+}
+.voto:hover, .voto:focus-visible { border-color: var(--accent); }
+.voto-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.voto-label { font-weight: 700; }
+.voto-cuenta { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.barra {
+  height: 10px;
+  background: #0d1524;
+  border-radius: 99px;
+  overflow: hidden;
+}
+.barra > i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius: 99px;
+  transition: width .3s ease;
+}
+.estado { margin: 12px 0 0; color: var(--warn); font-size: 0.95rem; }
+.estado.ok { color: var(--accent); }
+.estado a { color: var(--accent2); }
+#giscus-host { margin-top: 12px; min-height: 80px; }
+footer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 1rem;
+}
+footer strong { color: var(--text); }
+#contadores { margin: 0 0 10px; }
+@media (max-width: 700px) {
+  h1 { font-size: 1.4rem; }
+  .jump a, .voto { min-height: 56px; }
+}

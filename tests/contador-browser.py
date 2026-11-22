@@ -16,6 +16,7 @@ PAGES = [
     ("/canales/", ["Canales", "OSNews"]),
     ("/canales/es/", ["OSNews"]),
     ("/tv-world/ligera/", ["TV World", "OSNews"]),
+    ("/chat-debate/", ["Chat del debate", "OSNews"]),
 ]
 
 
@@ -43,16 +44,13 @@ def main():
                 count_hits = []
                 script_hits = []
                 page = browser.new_page()
-                page.on(
-                    "request",
-                    lambda req: (
-                        count_hits.append(req.url)
-                        if "osnews-may.goatcounter.com/count" in req.url
-                        else script_hits.append(req.url)
-                        if "gc.zgo.at/count.js" in req.url
-                        else None
-                    ),
-                )
+                def _track(req, _c=count_hits, _s=script_hits):
+                    u = req.url
+                    if "gc.zgo.at/count.js" in u:
+                        _s.append(u)
+                    elif "osnews-may.goatcounter.com/count" in u and "/counter/" not in u:
+                        _c.append(u)
+                page.on("request", _track)
                 res = page.goto(f"http://127.0.0.1:{port}{path}", wait_until="networkidle", timeout=45000)
                 if not res or not res.ok:
                     errors.append(f"{path}: HTTP {res.status if res else 'no response'}")

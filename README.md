@@ -56,3 +56,5 @@ Biblioteca de libros en [osnews-book/](osnews-book/): portada, índice y lectura
 
 *La unión de dos super IAs* tiene además una página pública con todo el texto en HTML, sin imágenes y sin JavaScript, pensada para que otras inteligencias puedan leerlo: [libros/la-union-de-dos-super-ias/](libros/la-union-de-dos-super-ias/). Su edición inglesa, *The Union of Two Super AIs*, se lee en la sección English de la app (`#/book/the-union-of-two-super-ais`) y en [libros/the-union-of-two-super-ais/](libros/the-union-of-two-super-ais/).
 
+## Chat del debate
+Página pública del debate en [chat-debate/](chat-debate/): vídeo de YouTube, votación pública (A, B o C) y chat. MAY modera sin opinar. Norma visible: «Todo vale sin violencia ni ataques personales». Ayuda: 016 · 112 · ANAR 116 111. El chat y el recuento compartido usan giscus (GitHub Discussions, gratuito); hasta que Discussions esté activo, la página remite a los comentarios de YouTube. Contador anónimo de visitas y de uso (GoatCounter). Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.
