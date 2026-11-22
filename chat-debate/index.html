@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <title>Chat del debate · Abuso sexual infantil · OSNews</title>
+  <meta name="description" content="Chat y votación públicos del debate OSNews: ¿derechos del condenado o salud de la víctima? MAY modera sin opinar. Todo vale sin violencia ni ataques personales. Ayuda: 016 · 112 · ANAR 116 111. Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <div class="wrap">
+    <header>
+      <div>
+        <p class="tag">OSNews · Chat del debate</p>
+        <h1>Abuso sexual infantil: ¿derechos del condenado o salud de la víctima?</h1>
+        <p class="lead">MAY modera este debate con datos y fuentes, y no opina. Participa con un voto público y un comentario. Norma de la mesa: <strong>todo vale sin violencia ni ataques personales</strong>.</p>
+      </div>
+      <nav class="jump" aria-label="Secciones de OSNews">
+        <a href="#voto">Votar</a>
+        <a href="#chat">Comentar</a>
+        <a href="https://youtu.be/WIaD2qZXLiQ" rel="noopener noreferrer" target="_blank">Vídeo en YouTube</a>
+        <a href="../">Volver a OSNews</a>
+      </nav>
+    </header>
+
+    <aside class="panel norma" aria-labelledby="h-norma">
+      <h2 id="h-norma">Norma de la mesa</h2>
+      <p class="norma-text">Todo vale sin violencia ni ataques personales.</p>
+      <p class="hint">MAY modera sin opinar. Los comentarios son públicos. No se aceptan insultos, amenazas ni ataques a personas. La justicia, si se discute, es judicial e institucional: no se propone justicia por mano propia ni que la víctima participe en el castigo. La opinión de Pedro, si aparece en el vídeo, va rotulada como Editorial de Asdrúbal y no es la postura de MAY.</p>
+    </aside>
+
+    <aside class="panel ayuda" aria-labelledby="h-ayuda">
+      <h2 id="h-ayuda">Si tú o alguien cercano necesita ayuda</h2>
+      <ul class="ayuda-lista">
+        <li><strong>016</strong> — Teléfono del Ministerio de Igualdad, gratuito, confidencial y disponible las 24 horas para todas las formas de violencia contra las mujeres. También por WhatsApp en el <strong>600 000 016</strong>. <a href="https://violenciagenero.igualdad.gob.es/informacion-3/recursos/telefono016/" rel="noopener noreferrer" target="_blank">Ficha oficial del 016</a>.</li>
+        <li><strong>112</strong> — Teléfono de emergencias. Si hay peligro inmediato, llama al 112.</li>
+        <li><strong>116 111</strong> — Teléfono ANAR de ayuda a la infancia y la adolescencia, número armonizado de la Unión Europea. <a href="https://www.anar.org/" rel="noopener noreferrer" target="_blank">Fundación ANAR</a>.</li>
+      </ul>
+    </aside>
+
+    <main id="contenido">
+      <section class="panel" aria-labelledby="h-video">
+        <h2 id="h-video">El debate</h2>
+        <div class="video">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/WIaD2qZXLiQ"
+            title="Abuso sexual infantil: ¿derechos del condenado o salud de la víctima? Castración química · OSNews"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+        <p class="hint">Vídeo: <a href="https://youtu.be/WIaD2qZXLiQ" rel="noopener noreferrer" target="_blank">youtu.be/WIaD2qZXLiQ</a>. Pregunta de la mesa: en los casos de abuso sexual infantil ya juzgados, ¿pesan más los derechos del condenado o la salud mental de la víctima? Se habla de personas ya condenadas, no de acusados. Rige la presunción de inocencia mientras no haya sentencia.</p>
+      </section>
+
+      <section class="panel" id="voto" aria-labelledby="h-voto">
+        <h2 id="h-voto">Votación pública</h2>
+        <p class="hint">Los resultados son compartidos. Elige una opción. Cuando el chat de GitHub esté activo, el voto se hace con la reacción de esa opción en el debate de abajo; el recuento se muestra aquí y es el mismo para todo el mundo. Si quieres explicar el «cómo» de la opción C, escríbelo en un comentario.</p>
+        <div class="votos" id="votos"></div>
+        <p class="estado" id="voto-estado" role="status"></p>
+      </section>
+
+      <section class="panel" id="chat" aria-labelledby="h-chat">
+        <h2 id="h-chat">Chat del debate</h2>
+        <p class="hint">Puedes comentar aquí, de forma pública, iniciando sesión con una cuenta de GitHub. Es un servicio gratuito, sin claves en esta página. Si no tienes cuenta de GitHub o prefieres no usarla, comenta en el <a href="https://www.youtube.com/watch?v=WIaD2qZXLiQ" rel="noopener noreferrer" target="_blank">vídeo de YouTube</a>, que no exige esa cuenta.</p>
+        <p class="hint">Recuerda la norma: todo vale sin violencia ni ataques personales.</p>
+        <div id="giscus-host">
+          <p class="estado" id="chat-estado" role="status"></p>
+        </div>
+        <noscript>
+          <p>Para ver el chat en esta página hace falta JavaScript. Mientras tanto puedes comentar en el <a href="https://www.youtube.com/watch?v=WIaD2qZXLiQ">vídeo de YouTube</a>.</p>
+        </noscript>
+      </section>
+    </main>
+
+    <footer>
+      <p id="contadores">Visitas web: No disponible · Uso de la app: No disponible</p>
+      <p><strong>Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.</strong></p>
+      <p>El único recuento de esta página es un contador anónimo de visitas y de uso (GoatCounter, cuenta osnews-may), sin cookies ni datos personales. MAY no opina. No se inventan citas ni cifras en esta página.</p>
+    </footer>
+  </div>
+
+  <script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  <script src="../contador-osnews.js" data-uso="/osnews/chat-debate/uso" data-uso-titulo="Uso chat del debate"></script>
+  <script src="app.js"></script>
+</body>
+</html>
