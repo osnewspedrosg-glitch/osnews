@@ -1,5 +1,6 @@
 import "./lorena.js"; // Módulo Lorena — diseño de Pedro Sánchez Gómez (OSNews): define globalThis.OSN_LORENA
 import { GUIDED_LABEL, dispatch, forgetGuidedMemory, loadMemory, STORAGE_KEY, loadDecisions, clearDecisions } from "./guided-chat.js";
+import { answer as booksAnswer, loadIndex as loadBooks, isBookQuestion, EXAMPLES as BOOK_EXAMPLES } from "./libros-qa.js";
 
 const KEY = STORAGE_KEY;
 
@@ -81,7 +82,44 @@ export function mount(doc) {
   dclear.className = "azum-guided-forget";
   dclear.textContent = "Borrar registro de decisión";
   decisions.appendChild(dclear);
-  section.append(form, log, tools, decisions);
+  // «Pregunta sobre los libros»: índice local de los libros de Pedro, sin servidor ni IA generativa.
+  const books = doc.createElement("div");
+  books.id = "azum-libros";
+  books.className = "azum-libros";
+  add(doc, books, "h3", null, "Pregunta sobre los libros");
+  add(doc, books, "p", "azum-libros-note", "Azum responde solo con el texto real de los libros de Pedro, citado tal cual, con el libro y el capítulo. Si no está en los libros, te lo dice. Busca en este aparato: tu pregunta no sale de aquí.");
+  const bform = doc.createElement("form");
+  bform.id = "azum-libros-form";
+  bform.autocomplete = "off";
+  const blabel = doc.createElement("label");
+  blabel.className = "azum-guided-field";
+  blabel.append("Tu pregunta sobre los libros");
+  const binput = doc.createElement("input");
+  binput.type = "search";
+  binput.id = "azum-libros-input";
+  binput.maxLength = 200;
+  binput.placeholder = "Por ejemplo: ¿Quién es Aya?";
+  blabel.appendChild(binput);
+  const bsend = doc.createElement("button");
+  bsend.type = "submit";
+  bsend.id = "azum-libros-send";
+  bsend.className = "azum-guided-send";
+  bsend.textContent = "Preguntar a los libros";
+  bform.append(blabel, bsend);
+  const chips = add(doc, books, "div", "azum-libros-chips", "");
+  chips.id = "azum-libros-ejemplos";
+  BOOK_EXAMPLES.forEach((q) => {
+    const b = doc.createElement("button");
+    b.type = "button";
+    b.className = "azum-libros-chip";
+    b.textContent = q;
+    b.addEventListener("click", () => { binput.value = q; askBooks(q); });
+    chips.appendChild(b);
+  });
+  books.insertBefore(bform, chips);
+  add(doc, books, "p", "azum-libros-credit", "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.");
+
+  section.append(form, books, log, tools, decisions);
   const stack = doc.querySelector("#contenido .stack") || doc.querySelector("#contenido") || body;
   stack.insertBefore(section, stack.firstChild);
 
@@ -127,6 +165,74 @@ export function mount(doc) {
   }
   paintDecisions();
 
+  let bookIndex = null;
+  let usageSent = false;
+  function countBookUse() {
+    // Contador anónimo GoatCounter (cuenta osnews-may, el mismo de Azum): solo cuenta que se usó
+    // la sección, nunca el texto de la pregunta. Solo en la página publicada.
+    if (usageSent) return;
+    const win = doc.defaultView;
+    if (!win || win.location?.hostname !== "osnewspedrosg-glitch.github.io") return;
+    const gc = win.goatcounter;
+    if (!gc || typeof gc.count !== "function") return;
+    usageSent = true;
+    try { gc.count({ path: "/osnews/azum/libros-pregunta", title: "Azum · Pregunta sobre los libros", event: true }); } catch {}
+  }
+
+  function paintBooks(question, result) {
+    const turn = doc.createElement("div");
+    turn.className = "azum-libros-turn" + (result.found ? "" : " azum-libros-none");
+    turn.dataset.kind = result.kind;
+    add(doc, turn, "p", "azum-libros-q", `Tú: ${question}`);
+    add(doc, turn, "p", "azum-libros-a", `Azum · Libros: ${result.text}`);
+    if (result.links && result.links.length) {
+      const ul = add(doc, turn, "ul", "azum-libros-links", "");
+      result.links.forEach((l) => {
+        const li = add(doc, ul, "li", null, "");
+        const a = doc.createElement("a");
+        a.href = l.url;
+        a.textContent = l.label;
+        a.rel = "noopener noreferrer";
+        a.target = "_blank";
+        if (l.grok) a.className = "azum-libros-grok";
+        li.appendChild(a);
+      });
+    }
+    log.appendChild(turn);
+    turn.scrollIntoView({ block: "nearest" });
+  }
+
+  async function askBooks(text) {
+    const question = String(text || "").trim();
+    if (!question) {
+      status.dataset.kind = "error";
+      status.textContent = "Escribe una pregunta sobre los libros.";
+      return null;
+    }
+    status.dataset.kind = "ready";
+    status.textContent = "Buscando en los libros, en este aparato…";
+    try {
+      bookIndex = bookIndex || await loadBooks(doc.defaultView.fetch.bind(doc.defaultView), new URL("./libros-index.json", import.meta.url));
+      const result = booksAnswer(bookIndex, question);
+      paintBooks(question, result);
+      status.textContent = result.found ? "Respuesta sacada de los libros, citada tal cual." : "No está en los libros. No invento respuestas.";
+      binput.value = "";
+      countBookUse();
+      return result;
+    } catch (error) {
+      status.dataset.kind = "error";
+      status.textContent = `No se pudo abrir el índice de los libros: ${error?.message || error}`;
+      return null;
+    }
+  }
+  section.askBooks = askBooks;
+
+  bform.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (isComposingEvent(event)) return;
+    askBooks(committedValue(binput));
+  });
+
   function roleId() {
     return doc.querySelector(".app select")?.value || "core";
   }
@@ -145,6 +251,12 @@ export function mount(doc) {
     if (text === lastText && now - lastFire < 500) return;
     lastFire = now;
     lastText = text;
+    // Si la pregunta es sobre los libros, responde la sección de libros (una sola respuesta).
+    if (isBookQuestion(bookIndex, text) && /[?¿]|\b(de que|quien|que dice|que pasa|who|what)\b/i.test(text.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))) {
+      input.value = "";
+      askBooks(text);
+      return;
+    }
     try {
       // One send → Lorena analyzes → Azum picks one reply → Lorena adapts its tone.
       const result = dispatch(text, loadMemory(storage), roleId(), storage, lorena);
