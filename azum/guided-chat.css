@@ -92,3 +92,37 @@
 .azum-decision-note, .azum-decision-empty { margin: 0.35rem 0; font-size: 0.9rem; color: #3d4a44; }
 .azum-decision-log { margin: 0.3rem 0 0; padding-left: 1.2rem; font-size: 0.9rem; }
 .azum-decision-log li { margin: 0.25rem 0; }
+
+/* Pregunta sobre los libros */
+.azum-libros {
+  margin: 0.9rem 0 0.4rem;
+  padding: 0.8rem;
+  border: 2px dashed #1f6b4a;
+  border-radius: 12px;
+  background: #fff;
+}
+.azum-libros h3 { margin: 0 0 0.3rem; font-size: 1.15rem; }
+.azum-libros-note, .azum-libros-credit { margin: 0.3rem 0; color: #3d4a44; }
+.azum-libros-credit { font-size: 0.85rem; font-weight: 700; }
+.azum-libros input[type="search"] {
+  display: block; width: 100%; box-sizing: border-box; margin-top: 0.3rem;
+  min-height: 2.6rem; font: inherit; padding: 0.4rem 0.6rem;
+  border: 2px solid #1f6b4a; border-radius: 10px; background: #fff; color: #1b1612;
+}
+.azum-libros-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0 0; }
+.azum-guided .azum-libros-chip {
+  display: inline-block; width: auto; min-height: 2.4rem; margin: 0;
+  padding: 0.4rem 0.75rem; border-radius: 999px; background: #eef6f1; color: #1b1612;
+  font-size: 0.9rem; font-weight: 600;
+}
+.azum-libros-turn {
+  margin: 0.4rem 0; padding: 0.7rem; border: 2px solid #1f6b4a; background: #fff;
+}
+.azum-libros-turn p { margin: 0.25rem 0; white-space: pre-wrap; border: 0; padding: 0; }
+.azum-libros-none { border-color: #9a3412; }
+.azum-libros-links { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+.azum-libros-links a { color: #1f6b4a; font-weight: 700; word-break: break-word; }
+.azum-libros-links a.azum-libros-grok {
+  display: inline-block; padding: 0.45rem 0.8rem; border-radius: 10px;
+  background: #111; color: #fff; text-decoration: none;
+}
