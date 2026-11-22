@@ -7,10 +7,11 @@ OUT = sys.argv[2] if len(sys.argv) > 2 else "/tmp"
 QS = [
     "¿De qué trata La hija de dos mundos?",
     "¿Quién es MAY?",
-    "¿Qué dice el libro de Ave César sobre Numancia?",
     "¿Quién es Aya?",
+    "¿Qué dice el libro sobre la desaladora?",
     "What is Free as the Wind about?",
     "¿Quién ganó el Mundial de fútbol de 2010?",
+    "¿Qué dice el libro de Ave César sobre Numancia?",
 ]
 res = []
 with sync_playwright() as p:

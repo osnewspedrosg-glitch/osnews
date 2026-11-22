@@ -9,7 +9,7 @@ export const GROK_URL = "https://grok.com/";
 export const EXAMPLES = [
   "¿De qué trata La hija de dos mundos?",
   "¿Quién es MAY?",
-  "¿Qué dice el libro de Ave César sobre Numancia?",
+  "¿Qué dice el libro sobre la desaladora?",
   "¿Quién es Aya?",
   "¿De qué trata Libre como el viento?",
   "¿Qué libros hay?",
@@ -42,7 +42,6 @@ const ALIASES = {
   "nothing-is-lost": ["nothing is lost"],
   "free-as-the-wind": ["free as the wind"],
   "the-union-of-two-super-ais": ["union of two super ais", "two super ais"],
-  "ave-cesar-ave-sanchez": ["ave cesar ave sanchez", "ave cesar"],
 };
 
 function words(folded) {

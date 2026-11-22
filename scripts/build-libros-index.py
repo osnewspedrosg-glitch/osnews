@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Construye azum/libros-index.json: índice local de los libros de Pedro para
 «Pregunta sobre los libros» de Azum. Solo texto ya escrito en los libros
-(OSNews Book publicado + fuentes de «Ave César, Ave Sánchez»). Sin datos
+(solo OSNews Book publicado; «Ave César, Ave Sánchez» no se incluye). Sin datos
 privados ni de salud: se excluyen el anexo del cuaderno y la transcripción
 de trabajo, y cualquier párrafo con datos de salud del autor."""
 import json, re, unicodedata, collections
@@ -9,7 +9,6 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 BOOK = REPO / "osnews-book"
-AVE = Path("/workspace/libros/ave-cesar-ave-sanchez/fuentes")
 OUT = REPO / "azum" / "libros-index.json"
 LIVE = "https://osnewspedrosg-glitch.github.io/osnews/osnews-book/"
 YT = "https://youtu.be/"
@@ -29,10 +28,6 @@ VIDEOS = {
     "nothing-is-lost": [("The 4A Alliance 2060 · Chapter 4: Nothing Is Lost", "zukeqhJky0s")],
     "free-as-the-wind": [("The 4A · Free as the Wind · Ep. 1: Historical Archive (Prologue)", "Q5B8V54ilA4")],
     "the-union-of-two-super-ais": [("The Union of Two Super AIs · Audiobook in English", "ax3WmyL5RpQ")],
-    "ave-cesar-ave-sanchez": [
-        ("Evnom – Había una vez un pequeño tirano (videoclip con letra)", "KAKLBz5ZZlQ"),
-        ("Ave César, ave Sánchez: el Coliseo es la tele y los leones son los opinadores · Debate IA", "vh8KEgRDDIs"),
-    ],
 }
 
 PRIVADO = re.compile(r"alcohol|coca\b|droga|adicci|médic|medic|diagn|psiqui|hospital|tel[eé]fono|dni\b|@gmail", re.I)
@@ -77,29 +72,7 @@ for b in meta["books"]:
         "names": names(texts), "chapters": chapters,
     })
 
-# «Ave César, Ave Sánchez» (aún sin publicar: sin PDF ni página de OSNews Book)
-FILES = ["00-nota.md", "01-prologo.md", "02-fenicia.md", "03-iberia.md", "04-roma.md",
-         "05-espana-en-pie.md", "06-epilogo.md", "07-cancion.md", "09-fuentes.md"]  # sin 08-anexo (cuaderno literal)
-bi = len(books); chapters, texts = [], []
-about = ""
-for f in FILES:
-    md = (AVE / f).read_text()
-    title = md.splitlines()[0].lstrip("# ").strip()
-    ci = len(chapters); chapters.append({"t": title, "u": None})
-    for para in re.split(r"\n\s*\n", "\n".join(md.splitlines()[1:])):
-        txt = plain(para)
-        if len(txt) <= 25 or txt.startswith("Viñeta") or PRIVADO.search(txt):
-            continue
-        passages.append([bi, ci, txt]); texts.append(txt)
-        if f == "01-prologo.md" and txt.startswith("De ahí sale la pregunta"):
-            about = txt
-books.append({
-    "id": "ave-cesar-ave-sanchez", "lang": "es", "title": "Ave César, Ave Sánchez",
-    "sub": "Sátira, historia y opinión · en preparación", "about": about,
-    "aboutSrc": "Prólogo. Desde mi cuadrícula", "book": None, "pdf": None,
-    "videos": [{"t": t, "u": YT + v} for t, v in VIDEOS["ave-cesar-ave-sanchez"]],
-    "names": names(texts), "chapters": chapters,
-})
+# «Ave César, Ave Sánchez» queda fuera del índice por decisión de Pedro (22 nov 2026).
 
 OUT.write_text(json.dumps({
     "v": 1, "built": "2026-11-22",

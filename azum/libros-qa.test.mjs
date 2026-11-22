@@ -15,12 +15,11 @@ function assertLiteral(result) {
 }
 
 test("el índice tiene los 13 libros, crédito y nada privado", () => {
-  assert.equal(index.books.length, 13);
+  assert.equal(index.books.length, 12);
+  assert.equal(index.books.some((b) => /ave-cesar/.test(b.id)), false);
   assert.equal(index.credits, "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok");
-  const ave = index.books.find((b) => b.id === "ave-cesar-ave-sanchez");
-  assert.equal(ave.pdf, null);
-  assert.equal(ave.book, null);
   const raw = JSON.stringify(index);
+  assert.equal(/Ave César, Ave Sánchez|Numancia/.test(raw), false);
   assert.equal(/alcohol y la coca/i.test(raw), false);
   assert.equal(raw.includes("Transcripción literal"), false);
 });
@@ -44,13 +43,18 @@ test("¿Quién es MAY? responde con frases literales de los libros", () => {
   assertLiteral(r);
 });
 
-test("Ave César y Numancia: cita el capítulo de Iberia, sin PDF", () => {
-  const r = answer(index, "¿Qué dice el libro de Ave César sobre Numancia?");
+test("«Ave César, Ave Sánchez» no está en el índice: Numancia no se encuentra", () => {
+  for (const q of ["¿Qué dice el libro de Ave César sobre Numancia?", "¿De qué trata Ave César, Ave Sánchez?"]) {
+    const r = answer(index, q);
+    assert.equal(r.found, false, q);
+    assert.ok(r.text.startsWith(NOT_FOUND));
+  }
+});
+
+test("la desaladora: cita literal de Libre como el viento", () => {
+  const r = answer(index, "¿Qué dice el libro sobre la desaladora?");
   assert.equal(r.found, true);
-  assert.equal(r.items[0].book, "Ave César, Ave Sánchez");
-  assert.match(r.items[0].chapter, /Iberia/);
-  assert.match(r.items[0].quote, /Numancia/);
-  assert.equal(r.links.some((l) => /\.pdf/.test(l.url)), false);
+  assert.equal(r.items[0].book, "Libre como el viento");
   assertLiteral(r);
 });
 
