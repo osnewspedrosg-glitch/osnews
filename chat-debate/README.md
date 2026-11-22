@@ -19,20 +19,15 @@ Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok.
 - Incluye el contador anónimo de visitas y de uso (GoatCounter, cuenta osnews-may), igual que el resto de apps MAY. En local no se envían visitas.
 - No incluye claves, ni servicios de pago, ni PayPal.
 
-## Qué falta (lo tiene que activar Pedro, sin coste)
+## Estado de giscus
 
-El chat y el recuento público usan [giscus](https://giscus.app), que se apoya en
-GitHub Discussions. Es gratis. Hoy el repositorio `osnewspedrosg-glitch/osnews`
-tiene las Discusiones desactivadas y la aplicación giscus no está instalada.
-Hasta que eso cambie, la página lo explica y envía a los comentarios de YouTube.
+El chat y el recuento público usan [giscus](https://giscus.app) (gratis, sin claves en el código).
 
-Pasos, en este orden:
-
-1. En el repositorio, activar **Discussions** (Settings → General → Features).
-2. Instalar la aplicación gratuita [giscus](https://github.com/apps/giscus) solo en este repositorio.
-3. En [giscus.app](https://giscus.app) elegir el repositorio, una categoría (por ejemplo «General» o una nueva llamada «Debates»), idioma español, reacciones activas y «Emit discussion metadata».
-4. Copiar `data-category` y `data-category-id` en `app.js` (`GISCUS.category` y `GISCUS.categoryId`) y abrir otro PR, o pedir que se actualice este. No hace falta ninguna clave en el código.
-5. Opcional: crear también una encuesta nativa de GitHub Discussions con las mismas tres opciones, como respaldo del recuento.
+- Discussions está activo en `osnewspedrosg-glitch/osnews`.
+- La categoría usada es **General** (`DIC_kwDOVgxwPM4DLvS_`). GitHub no ofrece una mutación pública para crear una categoría nueva («Debates»), así que se usa la categoría General que el repositorio ya tiene.
+- El `repo-id` es `R_kgDOVgxwPA`.
+- Falta, si aún no está, instalar la aplicación gratuita [giscus](https://github.com/apps/giscus) solo en este repositorio. Hasta que esté instalada, la página remite a los comentarios de YouTube.
+- Opcional: crear una encuesta nativa de GitHub Discussions con las mismas tres opciones, como respaldo del recuento.
 
 Mapeo de la votación, cuando giscus esté activo:
 

@@ -11,13 +11,12 @@
   var PATH_USO = "/osnews/chat-debate/uso";
   var YT = "https://www.youtube.com/watch?v=WIaD2qZXLiQ";
 
-  /* category y categoryId se rellenan cuando Discussions y giscus estén listos.
-     repoId ya es el del repositorio público osnewspedrosg-glitch/osnews. */
+  /* IDs públicos de GraphQL (repo y categoría General). Sin claves. */
   var GISCUS = {
     repo: "osnewspedrosg-glitch/osnews",
     repoId: "R_kgDOVgxwPA",
-    category: "",
-    categoryId: "",
+    category: "General",
+    categoryId: "DIC_kwDOVgxwPM4DLvS_",
     mapping: "specific",
     term: "Chat del debate OSNews · castración química · 2026-11-22",
     reactionsEnabled: "1",
