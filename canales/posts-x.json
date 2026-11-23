@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-23T00:03:11+01:00",
+ "fetched_at": "2026-11-23T07:57:28+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, official politician (government-verified) and official European/US TV-news accounts; start_time 2026-09-01T00:00:00Z (TV China/India/Morocco/Cuba from 2026-10-01T00:00:00Z); -is:retweet -is:reply; literal text only, country must appear in the post",
  "accounts": {
@@ -258,6 +258,90 @@
  },
  "countries": {
   "china": [
+   {
+    "id": "2124649162230596010",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-23",
+    "time": "00:40",
+    "text": "US seeks answers on Nvidia's sale of chips to China, Bessent says https://t.co/Pz5kxZmiiC",
+    "url": "https://x.com/Reuters/status/2124649162230596010",
+    "role": "tv",
+    "lang": "en",
+    "scope": "us_eu"
+   },
+   {
+    "id": "2124661803875549274",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-23",
+    "time": "01:30",
+    "text": "COMMENTARY: AI bust hurts Chinese stocks far more than GDP https://t.co/JJnzzTcxp0",
+    "url": "https://x.com/Reuters/status/2124661803875549274",
+    "role": "tv",
+    "lang": "en",
+    "scope": "us_eu"
+   },
+   {
+    "id": "2124694460839674124",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-23",
+    "time": "03:40",
+    "text": "Chinese player Liu suspended amid match-fixing probe https://t.co/rMZyUaT6ad",
+    "url": "https://x.com/Reuters/status/2124694460839674124",
+    "role": "tv",
+    "lang": "en",
+    "scope": "us_eu"
+   },
+   {
+    "id": "2124724659295842583",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-23",
+    "time": "05:40",
+    "text": "COMMENTARY: AI bust hurts Chinese stocks far more than GDP https://t.co/vhjsIr2f3V",
+    "url": "https://x.com/Reuters/status/2124724659295842583",
+    "role": "tv",
+    "lang": "en",
+    "scope": "us_eu"
+   },
+   {
+    "id": "2124734731187089669",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-23",
+    "time": "06:20",
+    "text": "Alice Huang in touch with Chinese spy agency during affair with Nvidia CEO, NYT says https://t.co/pbo6o2Fuwp",
+    "url": "https://x.com/Reuters/status/2124734731187089669",
+    "role": "tv",
+    "lang": "en",
+    "scope": "us_eu"
+   },
+   {
+    "id": "2124751674677825917",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-23",
+    "time": "07:27",
+    "text": "The warning came days after Carney met Chinese President Xi Jinping in Shenzhen, where the two sides agreed further tariff cuts as Canada looks for new markets as Trump's trade war continues.\n➡️ https://t.co/RnrXpxwRdJ https://t.co/RABOhERGFU",
+    "url": "https://x.com/euronews/status/2124751674677825917",
+    "role": "tv",
+    "lang": "en",
+    "scope": "us_eu"
+   },
+   {
+    "id": "2124757368651104520",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-23",
+    "time": "07:50",
+    "text": "China is introducing measures to upgrade care facilities for older people and children by 2030, aiming to adapt to a rapidly aging population and falling birth rates https://t.co/Lv2TpAMF1R",
+    "url": "https://x.com/Reuters/status/2124757368651104520",
+    "role": "tv",
+    "lang": "en",
+    "scope": "us_eu"
+   },
    {
     "id": "2103181076722323643",
     "account": "WhiteHouse",
@@ -3488,6 +3572,30 @@
    }
   ],
   "india": [
+   {
+    "id": "2124712097133006964",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-23",
+    "time": "04:50",
+    "text": "India need five wickets for victory over New Zealand in first test https://t.co/Xh3Jc9H6BM",
+    "url": "https://x.com/Reuters/status/2124712097133006964",
+    "role": "tv",
+    "lang": "",
+    "scope": "us_eu"
+   },
+   {
+    "id": "2124747310131298540",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-23",
+    "time": "07:10",
+    "text": "Financials drag Indian shares down on profit-taking after four-week rally https://t.co/UPHQ0yIgTm",
+    "url": "https://x.com/Reuters/status/2124747310131298540",
+    "role": "tv",
+    "lang": "",
+    "scope": "us_eu"
+   },
    {
     "id": "2095847576171925957",
     "account": "GiorgiaMeloni",
