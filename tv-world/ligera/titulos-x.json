@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-24T08:00:59+01:00",
+ "fetched_at": "2026-11-25T00:04:46+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
  "accounts": [
@@ -20,6 +20,285 @@
  ],
  "countries": {
   "china": [
+   {
+    "id": "2125339681080381871",
+    "account": "FRANCE24",
+    "name": "FRANCE 24",
+    "date": "2026-11-24",
+    "time": "22:24",
+    "text": "Spotlight - Did Nvidia knowingly send chips to China 'cutout'? Was there ‘pay-to-play’ involving Trump, Lutnick?\n➡️ https://t.co/jG0Y2kaPRB https://t.co/lcvskkVhkz",
+    "url": "https://x.com/FRANCE24/status/2125339681080381871"
+   },
+   {
+    "id": "2125337410615517263",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-24",
+    "time": "22:15",
+    "text": "Debido a las restricciones impuestas por Estados Unidos, es difícil conseguir chips de IA de alto rendimiento en China. Empresas chinas recurren a capacidades de computación ubicadas, sobre todo, en el sureste asiático.\nhttps://t.co/7swGAunCzn",
+    "url": "https://x.com/dw_espanol/status/2125337410615517263"
+   },
+   {
+    "id": "2125334464842580306",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "22:03",
+    "text": "China holds ceremony before launch of Shenzhou-24 spacecraft https://t.co/Clp459VbkP",
+    "url": "https://x.com/Reuters/status/2125334464842580306"
+   },
+   {
+    "id": "2125328627210305866",
+    "account": "nytimes",
+    "name": "The New York Times",
+    "date": "2026-11-24",
+    "time": "21:40",
+    "text": "Breaking News: A U.S. jury found that the Chinese telecommunications giant Huawei stole trade secrets and evaded sanctions against Iran. https://t.co/LHkH7r5mJH",
+    "url": "https://x.com/nytimes/status/2125328627210305866"
+   },
+   {
+    "id": "2125295887249449121",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-24",
+    "time": "19:30",
+    "text": "El inquietante efecto de los vídeos cortos en la mente adolescente\n\nMás de uno de cada cinco #adolescentes ve vídeos cortos más de dos horas al día, y un 17,3 % de los más de 18.000 jóvenes seguidos en China durante tres años declaró ideas suicidas. (few) https://t.co/cyXM57nknk",
+    "url": "https://x.com/dw_espanol/status/2125295887249449121"
+   },
+   {
+    "id": "2125290240252539223",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-24",
+    "time": "19:07",
+    "text": "El pakistaní Muhammad Zeeshan Ali está a punto de convertirse en el primer astronauta extranjero en participar en una misión espacial china. Viajará, junto a dos astronautas chinos, a la estación espacial china Tiangong a bordo del Shenzhou-24, donde llevará a cabo experimentos. https://t.co/eiI8CyU5HX",
+    "url": "https://x.com/dw_espanol/status/2125290240252539223"
+   },
+   {
+    "id": "2125288524660228346",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "19:00",
+    "text": "Nvidia's Huang returns to cheers in China, but political hurdles mount https://t.co/xuZPbKq9Ko",
+    "url": "https://x.com/Reuters/status/2125288524660228346"
+   },
+   {
+    "id": "2125282877608726647",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-24",
+    "time": "18:38",
+    "text": "Figura clave del Partido Comunista Chino, bajo investigación por corrupción en medio de una intensificación de la purga de Xi https://t.co/dZ8BDn7kUr",
+    "url": "https://x.com/CNNEE/status/2125282877608726647"
+   },
+   {
+    "id": "2125280792767246730",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-24",
+    "time": "18:30",
+    "text": "Estados Unidos ultima nuevos aranceles a China, la UE y otra docena de países, en un intento de restituir el muro comercial de Trump tumbado por el Tribunal Supremo https://t.co/0ltLsfyjpB",
+    "url": "https://x.com/el_pais/status/2125280792767246730"
+   },
+   {
+    "id": "2125278331041882472",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "18:20",
+    "text": "China probes Shanghai party boss Chen Jining, marking fourth Politburo member to fall since 2025 https://t.co/kRZWoesaC1",
+    "url": "https://x.com/Reuters/status/2125278331041882472"
+   },
+   {
+    "id": "2125253973447975021",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-24",
+    "time": "16:43",
+    "text": "La nueva economía espacial mueve miles de millones de euros y atrae a un número creciente de empresas privadas. Ante el avance de Estados Unidos y China, Europa busca una estrategia común para reforzar su autonomía.\n➡️ https://t.co/fgU84YcB1L https://t.co/lZddJVXVzu",
+    "url": "https://x.com/euronewses/status/2125253973447975021"
+   },
+   {
+    "id": "2125248140315938965",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "16:20",
+    "text": "China Southern Airlines unit to buy 50 Boeing 737-8 aircraft at $7.4 billion list price https://t.co/BqtYkYZ1Cv",
+    "url": "https://x.com/Reuters/status/2125248140315938965"
+   },
+   {
+    "id": "2125240326969503771",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-24",
+    "time": "15:49",
+    "text": "En 5 minutos - ¿Puede el dólar perder su trono? China, el euro y el oro\n➡️ https://t.co/q5dg0LjwY4 https://t.co/gcC3OOxw9e",
+    "url": "https://x.com/France24_es/status/2125240326969503771"
+   },
+   {
+    "id": "2125236782086148459",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "15:35",
+    "text": "EU sets limits on hybrid vehicle imports from China and other countries https://t.co/ah2YP6bS20",
+    "url": "https://x.com/Reuters/status/2125236782086148459"
+   },
+   {
+    "id": "2125233047175930274",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "15:20",
+    "text": "Xiaomi profit falls as China auto downturn weighs, eyes Europe car market https://t.co/dJmMjHpHXc",
+    "url": "https://x.com/Reuters/status/2125233047175930274"
+   },
+   {
+    "id": "2125230492001661294",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "15:10",
+    "text": "India seizes Nepal flood crisis to rebuild influence as China gains ground https://t.co/vF0yEZgqNP",
+    "url": "https://x.com/Reuters/status/2125230492001661294"
+   },
+   {
+    "id": "2125216615054672002",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "14:15",
+    "text": "With Jensen Huang's return as Nvidia CEO, the company is still facing an FBI probe into his relationship with an alleged Chinese spy and an SEC enquiry into accounting practices. RBC Brewin Dolphin's Janet Mui talks about steps the company is taking to address investor concerns https://t.co/sR3EPgwo4J",
+    "url": "https://x.com/Reuters/status/2125216615054672002"
+   },
+   {
+    "id": "2125210373984776530",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "13:50",
+    "text": "China, India set for record Russian oil imports in 2026, but demand seen peaking https://t.co/b1LS8t7tQb",
+    "url": "https://x.com/Reuters/status/2125210373984776530"
+   },
+   {
+    "id": "2125116281259004000",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-24",
+    "time": "07:36",
+    "text": "Washington cible la contrebande de puces vers la Chine, les Bourses rassurées sur Nvidia\n➡️ https://t.co/3bRjULG1T3 https://t.co/cjekaXRZ9F",
+    "url": "https://x.com/France24_fr/status/2125116281259004000"
+   },
+   {
+    "id": "2125114692989288875",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "07:30",
+    "text": "Japan is tapping its powerhouse auto industry's manufacturing expertise for its biggest military buildup since World War Two. Takaichi's government hopes this will speed its security transformation against nuclear-armed China, Russia and North Korea https://t.co/EWqijnyIrC https://t.co/zz7TFYPrTG",
+    "url": "https://x.com/Reuters/status/2125114692989288875"
+   },
+   {
+    "id": "2125089537575584077",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "05:50",
+    "text": "Singapore's Prime Minister Lawrence Wong said that his country would continue to investigate cloud company Megaspeed, an Nvidia-linked firm alleged by US authorities to have diverted advanced AI chips to China https://t.co/48s0HCaJFR",
+    "url": "https://x.com/Reuters/status/2125089537575584077"
+   },
+   {
+    "id": "2125087020829593688",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "05:40",
+    "text": "Taiwan's mayoral and county chief elections on November 28 are not directly about China, but the ruling party's nomination for Taipei mayor — a lawmaker wanted by Chinese police for ‘separatism’ — has sent Beijing into a flurry of denunciations https://t.co/kw6ZPPeOYq",
+    "url": "https://x.com/Reuters/status/2125087020829593688"
+   },
+   {
+    "id": "2125084773961875767",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "05:31",
+    "text": "For years, Japanese manufacturer Aster made its money supplying parts for Toyota vehicles. But as the country’s auto industry struggles in the face of fierce Chinese competition, Aster has found a new niche in defense technology https://t.co/08wJwpH2WK",
+    "url": "https://x.com/Reuters/status/2125084773961875767"
+   },
+   {
+    "id": "2125075707206275099",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "04:55",
+    "text": "China will launch its Shenzhou-24 spaceship on November 25 at 8:18 a.m. local time with a crew including a Pakistani national, who will be the first foreign astronaut to board China's space station https://t.co/nnW2o02XZd",
+    "url": "https://x.com/Reuters/status/2125075707206275099"
+   },
+   {
+    "id": "2125073197196329291",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "04:45",
+    "text": "The 1.3 million-member International Brotherhood of Teamsters union urged Congress to quickly pass a tougher US government ban on Chinese vehicles before adjourning in the coming weeks https://t.co/pCeyyi727z",
+    "url": "https://x.com/Reuters/status/2125073197196329291"
+   },
+   {
+    "id": "2125063782816764341",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-24",
+    "time": "04:07",
+    "text": "South Korea and China agree wider trade deal covering entertainment https://t.co/Pn8Jxyo5zB",
+    "url": "https://x.com/euronews/status/2125063782816764341"
+   },
+   {
+    "id": "2125050439750369493",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-24",
+    "time": "03:14",
+    "text": "China y Corea del Sur se acercan a un acuerdo comercial histórico\n➡️ https://t.co/qpzAcPGsH1 https://t.co/0RUxlVTxzz",
+    "url": "https://x.com/euronewses/status/2125050439750369493"
+   },
+   {
+    "id": "2125025596027867251",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-24",
+    "time": "01:35",
+    "text": "#EEUU incluye a Megaspeed en lista negra por desvío de chips a #China\n\nLa medida estadounidense contra la empresa Megaspeed se debe a un presunto desvío de chips de IA de #Nvidia  hacia China. (mg)\n\nLea el artículo completo haciendo clic en la imagen \nhttps://t.co/OIRDECa5PZ",
+    "url": "https://x.com/dw_espanol/status/2125025596027867251"
+   },
+   {
+    "id": "2125022417148141756",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-24",
+    "time": "01:23",
+    "text": "📊 Tras el escándalo de una relación extramarital con una supuesta espía china, ¿por qué crees que Nvidia reincorporó como CEO a Jensen Huang?",
+    "url": "https://x.com/France24_es/status/2125022417148141756"
+   },
+   {
+    "id": "2125016657814851731",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "01:00",
+    "text": "China, EU officials discuss exchange rates as central bank chief Pan urges cooperation https://t.co/Ttz5OqkuiD",
+    "url": "https://x.com/Reuters/status/2125016657814851731"
+   },
+   {
+    "id": "2125002299302977982",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-24",
+    "time": "00:03",
+    "text": "Encuesta: la mayoría de los alemanes rechaza enviar armas a Ucrania\n\nCada vez más alemanes creen que su país debería mantener un perfil bajo en política exterior y apuestan por la neutralidad en el conflicto EEUU - China. https://t.co/Gmd2XAfCQf (dz)",
+    "url": "https://x.com/dw_espanol/status/2125002299302977982"
+   },
    {
     "id": "2124994345107353999",
     "account": "dw_espanol",
@@ -1693,126 +1972,63 @@
     "time": "09:45",
     "text": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support', Xinhua reports https://t.co/cmy3TzlM54",
     "url": "https://x.com/Reuters/status/2120437651358544174"
-   },
-   {
-    "id": "2125116281259004000",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-24",
-    "time": "07:36",
-    "text": "Washington cible la contrebande de puces vers la Chine, les Bourses rassurées sur Nvidia\n➡️ https://t.co/3bRjULG1T3 https://t.co/cjekaXRZ9F",
-    "url": "https://x.com/France24_fr/status/2125116281259004000"
-   },
-   {
-    "id": "2125114692989288875",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "07:30",
-    "text": "Japan is tapping its powerhouse auto industry's manufacturing expertise for its biggest military buildup since World War Two. Takaichi's government hopes this will speed its security transformation against nuclear-armed China, Russia and North Korea https://t.co/EWqijnyIrC https://t.co/zz7TFYPrTG",
-    "url": "https://x.com/Reuters/status/2125114692989288875"
-   },
-   {
-    "id": "2125089537575584077",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "05:50",
-    "text": "Singapore's Prime Minister Lawrence Wong said that his country would continue to investigate cloud company Megaspeed, an Nvidia-linked firm alleged by US authorities to have diverted advanced AI chips to China https://t.co/48s0HCaJFR",
-    "url": "https://x.com/Reuters/status/2125089537575584077"
-   },
-   {
-    "id": "2125087020829593688",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "05:40",
-    "text": "Taiwan's mayoral and county chief elections on November 28 are not directly about China, but the ruling party's nomination for Taipei mayor — a lawmaker wanted by Chinese police for ‘separatism’ — has sent Beijing into a flurry of denunciations https://t.co/kw6ZPPeOYq",
-    "url": "https://x.com/Reuters/status/2125087020829593688"
-   },
-   {
-    "id": "2125084773961875767",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "05:31",
-    "text": "For years, Japanese manufacturer Aster made its money supplying parts for Toyota vehicles. But as the country’s auto industry struggles in the face of fierce Chinese competition, Aster has found a new niche in defense technology https://t.co/08wJwpH2WK",
-    "url": "https://x.com/Reuters/status/2125084773961875767"
-   },
-   {
-    "id": "2125075707206275099",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "04:55",
-    "text": "China will launch its Shenzhou-24 spaceship on November 25 at 8:18 a.m. local time with a crew including a Pakistani national, who will be the first foreign astronaut to board China's space station https://t.co/nnW2o02XZd",
-    "url": "https://x.com/Reuters/status/2125075707206275099"
-   },
-   {
-    "id": "2125073197196329291",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "04:45",
-    "text": "The 1.3 million-member International Brotherhood of Teamsters union urged Congress to quickly pass a tougher US government ban on Chinese vehicles before adjourning in the coming weeks https://t.co/pCeyyi727z",
-    "url": "https://x.com/Reuters/status/2125073197196329291"
-   },
-   {
-    "id": "2125063782816764341",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-24",
-    "time": "04:07",
-    "text": "South Korea and China agree wider trade deal covering entertainment https://t.co/Pn8Jxyo5zB",
-    "url": "https://x.com/euronews/status/2125063782816764341"
-   },
-   {
-    "id": "2125050439750369493",
-    "account": "euronewses",
-    "name": "euronews español",
-    "date": "2026-11-24",
-    "time": "03:14",
-    "text": "China y Corea del Sur se acercan a un acuerdo comercial histórico\n➡️ https://t.co/qpzAcPGsH1 https://t.co/0RUxlVTxzz",
-    "url": "https://x.com/euronewses/status/2125050439750369493"
-   },
-   {
-    "id": "2125025596027867251",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-24",
-    "time": "01:35",
-    "text": "#EEUU incluye a Megaspeed en lista negra por desvío de chips a #China\n\nLa medida estadounidense contra la empresa Megaspeed se debe a un presunto desvío de chips de IA de #Nvidia  hacia China. (mg)\n\nLea el artículo completo haciendo clic en la imagen \nhttps://t.co/OIRDECa5PZ",
-    "url": "https://x.com/dw_espanol/status/2125025596027867251"
-   },
-   {
-    "id": "2125022417148141756",
-    "account": "France24_es",
-    "name": "FRANCE 24 Español",
-    "date": "2026-11-24",
-    "time": "01:23",
-    "text": "📊 Tras el escándalo de una relación extramarital con una supuesta espía china, ¿por qué crees que Nvidia reincorporó como CEO a Jensen Huang?",
-    "url": "https://x.com/France24_es/status/2125022417148141756"
-   },
-   {
-    "id": "2125016657814851731",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "01:00",
-    "text": "China, EU officials discuss exchange rates as central bank chief Pan urges cooperation https://t.co/Ttz5OqkuiD",
-    "url": "https://x.com/Reuters/status/2125016657814851731"
-   },
-   {
-    "id": "2125002299302977982",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-24",
-    "time": "00:03",
-    "text": "Encuesta: la mayoría de los alemanes rechaza enviar armas a Ucrania\n\nCada vez más alemanes creen que su país debería mantener un perfil bajo en política exterior y apuestan por la neutralidad en el conflicto EEUU - China. https://t.co/Gmd2XAfCQf (dz)",
-    "url": "https://x.com/dw_espanol/status/2125002299302977982"
    }
   ],
   "india": [
+   {
+    "id": "2125290901228450094",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "19:10",
+    "text": "Sooryavanshi, 15, blasts 204 off 53 balls for India A https://t.co/0FwCSQayEW",
+    "url": "https://x.com/Reuters/status/2125290901228450094"
+   },
+   {
+    "id": "2125230492001661294",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "15:10",
+    "text": "India seizes Nepal flood crisis to rebuild influence as China gains ground https://t.co/vF0yEZgqNP",
+    "url": "https://x.com/Reuters/status/2125230492001661294"
+   },
+   {
+    "id": "2125210373984776530",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "13:50",
+    "text": "China, India set for record Russian oil imports in 2026, but demand seen peaking https://t.co/b1LS8t7tQb",
+    "url": "https://x.com/Reuters/status/2125210373984776530"
+   },
+   {
+    "id": "2125202830046732589",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "13:20",
+    "text": "Hyundai Motor India to raise prices by up to 8,000 rupees from December 1 https://t.co/Kr0wp9Ub6U",
+    "url": "https://x.com/Reuters/status/2125202830046732589"
+   },
+   {
+    "id": "2125086293419762071",
+    "account": "AP",
+    "name": "The Associated Press",
+    "date": "2026-11-24",
+    "time": "05:37",
+    "text": "Ousted Bangladeshi Prime Minister Sheikh Hasina plans to return home from exile in India on Dec. 16. She was sentenced to death in absentia for crimes against humanity involving a student-led mass uprising in which hundreds of protesters were killed.  https://t.co/nCQanVlkx6",
+    "url": "https://x.com/AP/status/2125086293419762071"
+   },
+   {
+    "id": "2125068364397580454",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "04:25",
+    "text": "Exclusive: Ousted Bangladeshi Prime Minister Sheikh Hasina plans to return home from more than two years of exile in India on December 16, the anniversary of the end of her country's 1971 liberation war with Pakistan, her spokesperson told Reuters https://t.co/yfZvGW7SmK",
+    "url": "https://x.com/Reuters/status/2125068364397580454"
+   },
    {
     "id": "2124997708150710401",
     "account": "Reuters",
@@ -2802,27 +3018,144 @@
     "time": "02:39",
     "text": "Qantas to outsource 850 local jobs with most roles moving to India https://t.co/nCRUtXPEoT",
     "url": "https://x.com/BBCWorld/status/2119968072714932598"
-   },
-   {
-    "id": "2125086293419762071",
-    "account": "AP",
-    "name": "The Associated Press",
-    "date": "2026-11-24",
-    "time": "05:37",
-    "text": "Ousted Bangladeshi Prime Minister Sheikh Hasina plans to return home from exile in India on Dec. 16. She was sentenced to death in absentia for crimes against humanity involving a student-led mass uprising in which hundreds of protesters were killed.  https://t.co/nCQanVlkx6",
-    "url": "https://x.com/AP/status/2125086293419762071"
-   },
-   {
-    "id": "2125068364397580454",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "04:25",
-    "text": "Exclusive: Ousted Bangladeshi Prime Minister Sheikh Hasina plans to return home from more than two years of exile in India on December 16, the anniversary of the end of her country's 1971 liberation war with Pakistan, her spokesperson told Reuters https://t.co/yfZvGW7SmK",
-    "url": "https://x.com/Reuters/status/2125068364397580454"
    }
   ],
   "morocco": [
+   {
+    "id": "2125306791852675279",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-24",
+    "time": "20:13",
+    "text": "#CAN2025 : “Le TAS a décidé de donner raison à l’arbitre qui a eu un rôle central dans cette finale ” ⚽\n\nDix mois après la finale #Sénégal - #Maroc, le Tribunal arbitral du sport a déclaré le Sénégal vainqueur de la CAN 2025 \n\nAnalyse de nos journalistes sports Benoit Perrochais https://t.co/TRLJaMD1AA",
+    "url": "https://x.com/France24_fr/status/2125306791852675279"
+   },
+   {
+    "id": "2125301432244920689",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-24",
+    "time": "19:52",
+    "text": "⚽ Le #Maroc veut déposer un recours, le #Sénégal célèbre son titre retrouvé, Sadio Mané remercie les supporters et ses partenaires... Suivez les réactions ⤵️\n \nhttps://t.co/XUHvn2mzdO",
+    "url": "https://x.com/France24_fr/status/2125301432244920689"
+   },
+   {
+    "id": "2125280544783286454",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-24",
+    "time": "18:29",
+    "text": "⚽ Le Tribunal arbitral du sport a décidé ce mardi \"à l'unanimité\" le sacre du Sénégal, vainqueur sur le terrain lors de la finale de la #CAN2025, aux dépens du Maroc qui avait obtenu le titre sur tapis vert.\n\n🎙️ \"C'est la justice sportive qui s'applique ; c'est la loi du https://t.co/AAMzzHaKi7",
+    "url": "https://x.com/France24_fr/status/2125280544783286454"
+   },
+   {
+    "id": "2125268263676375230",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "17:40",
+    "text": "Moroccan federation reports incident to CAS during Senegal AFCON appeal, source says https://t.co/gGMpPMAifo",
+    "url": "https://x.com/Reuters/status/2125268263676375230"
+   },
+   {
+    "id": "2125265588591411281",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-24",
+    "time": "17:29",
+    "text": "In March, the Confederation of African Football awarded Morocco a 3-0 victory, and the title, after many Senegalese players walked off the pitch in protest over a penalty. https://t.co/zfEkaRcoaW",
+    "url": "https://x.com/euronews/status/2125265588591411281"
+   },
+   {
+    "id": "2125254553205404091",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-24",
+    "time": "16:45",
+    "text": "⚽ Le Tribunal arbitral du sport (TAS) a décidé ce mardi \"à l'unanimité\" le sacre du Sénégal, vainqueur sur le terrain lors de la finale de la Coupe d'Afrique des nations 2025, aux dépens du Maroc qui avait obtenu le titre sur tapis vert.\n\n➡️ Dans un communiqué, la Fédération https://t.co/wrOtYgoin8",
+    "url": "https://x.com/France24_fr/status/2125254553205404091"
+   },
+   {
+    "id": "2125250797747274169",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-24",
+    "time": "16:30",
+    "text": "⚽🇲🇦🇸🇳 Le Tribunal arbitral du sport (TAS) a décidé mardi \"à l'unanimité\" le sacre du #Sénégal lors de la Coupe d'Afrique des nations 2025 (#CAN), aux dépens du #Maroc qui avait obtenu le titre sur tapis vert. \n\n➡️ Le Maroc dispose de 30 jours pour faire appel de la décision https://t.co/WIrz2y8mxC",
+    "url": "https://x.com/France24_fr/status/2125250797747274169"
+   },
+   {
+    "id": "2125243097194066376",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-24",
+    "time": "16:00",
+    "text": "🔴 ÚLTIMA HORA | El Tribunal de Arbitraje Deportivo da la razón a Senegal y confirma su triunfo en la última Copa África tras recurrir la decisión de la Confederación Africana de Fútbol de declarar campeón a Marruecos https://t.co/K2anLiF9Rx https://t.co/L8sBMSJuBr",
+    "url": "https://x.com/el_pais/status/2125243097194066376"
+   },
+   {
+    "id": "2125241033097125930",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-24",
+    "time": "15:52",
+    "text": "Verdict du TAS : existe-t-il un recours pour le Maroc  ?\n➡️ https://t.co/bYB3GYHNG2 https://t.co/4EiBC73ovN",
+    "url": "https://x.com/France24_fr/status/2125241033097125930"
+   },
+   {
+    "id": "2125235650857185683",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-24",
+    "time": "15:30",
+    "text": "🇸🇳⚽ Le Sénégal est champion d'Afrique.\n\nLe Tribunal arbitral du sport (TAS) basé à Lausanne, en Suisse, a rendu sa décision ce mardi dans le litige opposant le Sénégal et le Maroc. Ce sont les Lions de la Teranga qui ont été déclarés vainqueurs par la justice.\n\n🔗 Plus d'infos : https://t.co/tNLnmVkeyZ",
+    "url": "https://x.com/France24_fr/status/2125235650857185683"
+   },
+   {
+    "id": "2125219729983836341",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-24",
+    "time": "14:27",
+    "text": "⚽El Tribunal Arbitral del Deporte (TAS) se prepara para emitir un fallo que podría ratificar a #Marruecos como campeón de la Copa Africana de Naciones 2025 ⤵️\nhttps://t.co/DQmnPB5de4",
+    "url": "https://x.com/France24_es/status/2125219729983836341"
+   },
+   {
+    "id": "2125202510604640435",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-24",
+    "time": "13:18",
+    "text": "El TAS define hoy si mantiene a Marruecos como campeón de África o restituye el título a Senegal\n➡️ https://t.co/rb1vXbvkEJ https://t.co/Gdw8KVp96T",
+    "url": "https://x.com/France24_es/status/2125202510604640435"
+   },
+   {
+    "id": "2125198082841497883",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-24",
+    "time": "13:01",
+    "text": "⚽ La finale de la #CAN2025 va enfin connaître son dénouement.\n\n➡️ Le Tribunal arbitral du sport va rendre ce mardi son verdict sur le litige opposant le Sénégal, vainqueur sur le terrain, et le Maroc, vainqueur sur tapis vert, et ainsi officialiser le nom du champion. https://t.co/uAF89COTBS",
+    "url": "https://x.com/France24_fr/status/2125198082841497883"
+   },
+   {
+    "id": "2125192652333433174",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-24",
+    "time": "12:39",
+    "text": "CAN en direct : qui du Sénégal ou du Maroc sera déclaré champion ? Le verdict du TAS attendu\n➡️ https://t.co/Q5PE7MthaS https://t.co/gqy87cPIYr",
+    "url": "https://x.com/France24_fr/status/2125192652333433174"
+   },
+   {
+    "id": "2125189520412856770",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-24",
+    "time": "12:27",
+    "text": "CAN 2025 : avant le verdict du TAS, le Maroc sème déjà le doute en signalant un \"incident\"\n➡️ https://t.co/1CXbAEV5Dt https://t.co/jWQcwJha6E",
+    "url": "https://x.com/France24_fr/status/2125189520412856770"
+   },
    {
     "id": "2124918550636761286",
     "account": "France24_fr",
@@ -3086,6 +3419,42 @@
    }
   ],
   "cuba": [
+   {
+    "id": "2125314819205046369",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-24",
+    "time": "20:45",
+    "text": "La OMS ofrece ayuda a Cuba frente a la crisis de salud pública\n\nEl director general de la Organización Mundial de la Salud (OMS), Tedros Adhanom Ghebreyesus, ofreció movilizar fondos de ese organismo de las Naciones Unidas para ayudar a paliar la aguda crisis que padece el sector https://t.co/6Svgsgazze",
+    "url": "https://x.com/dw_espanol/status/2125314819205046369"
+   },
+   {
+    "id": "2125270150458876265",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-24",
+    "time": "17:47",
+    "text": "El director general de la OMS visita Cuba mientras el sistema de salud de la isla colapsa https://t.co/SebSQrB55H",
+    "url": "https://x.com/CNNEE/status/2125270150458876265"
+   },
+   {
+    "id": "2125099154410221955",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-24",
+    "time": "06:28",
+    "text": "#OMS ofrece movilizar ayuda a #Cuba ante crisis en la #salud pública\n\nDurante una visita a la isla, el director del organismo Tedros Adhanom #Ghebreyesus, reconoció que \"las necesidades son grandes\". (jc)\nhttps://t.co/UcC3fOENgP",
+    "url": "https://x.com/dw_espanol/status/2125099154410221955"
+   },
+   {
+    "id": "2125005464975098260",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-24",
+    "time": "00:15",
+    "text": "El director de la OMS visita Cuba en pleno colapso sanitario https://t.co/pjDYGn1KQ3",
+    "url": "https://x.com/euronewses/status/2125005464975098260"
+   },
    {
     "id": "2124099907900387534",
     "account": "BBCWorld",
@@ -3364,24 +3733,6 @@
     "time": "10:30",
     "text": "La administración Trump ha reiterado que su objetivo es provocar un cambio en la cúpula de La Habana; el propio Donald Trump ha asegurado que el país está «a punto de caer».\n➡️ https://t.co/YizGDNJRcv https://t.co/CKTLeJfihb",
     "url": "https://x.com/euronewses/status/2113911037997293692"
-   },
-   {
-    "id": "2125099154410221955",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-24",
-    "time": "06:28",
-    "text": "#OMS ofrece movilizar ayuda a #Cuba ante crisis en la #salud pública\n\nDurante una visita a la isla, el director del organismo Tedros Adhanom #Ghebreyesus, reconoció que \"las necesidades son grandes\". (jc)\nhttps://t.co/UcC3fOENgP",
-    "url": "https://x.com/dw_espanol/status/2125099154410221955"
-   },
-   {
-    "id": "2125005464975098260",
-    "account": "euronewses",
-    "name": "euronews español",
-    "date": "2026-11-24",
-    "time": "00:15",
-    "text": "El director de la OMS visita Cuba en pleno colapso sanitario https://t.co/pjDYGn1KQ3",
-    "url": "https://x.com/euronewses/status/2125005464975098260"
    }
   ]
  }
