@@ -435,14 +435,14 @@
   /* Fechas convertidas a calendario Europe/Madrid a partir de la fecha de publicación de YouTube. */
   const COUNTRY_NEWS = {
     china: [
-      { id: "vLNU1B0oCL8", title: "How do restricted Nvidia chips make it into China?", channel: "CNN", date: "2026-11-22" },
-      { id: "U9Vkj-H5OJQ", title: "EE. UU., China y Rusia: ¿guerra híbrida en medio de llamados de paz? • FRANCE 24 Español", channel: "FRANCE 24 Español", date: "2026-11-21" },
-      { id: "qDxjfdkzegY", title: "Trump Calls China Trip a Success Despite Little from Xi, Putin", channel: "CNN", date: "2026-11-20" },
-      { id: "vNiNewJGAes", title: "US, China, Russia hold unprecedented trilateral summit: Making history or just headlines? | DW News", channel: "DW News", date: "2026-11-20" },
-      { id: "Bjcu7SVapS8", title: "Líderes de EE. UU., China y Rusia celebran una inédita cumbre trilateral al margen de la APEC", channel: "DW Español", date: "2026-11-20" },
-      { id: "s4WRZIjVgaA", title: "Donald Trump appears to reach for Xi Jinping’s hand on an escalator", channel: "Associated Press", date: "2026-11-20" },
-      { id: "OI0lFh1MVKM", title: "Experts assess what was addressed and overlooked at trilateral meeting in China", channel: "PBS NewsHour", date: "2026-11-20" },
-      { id: "CL77AWeihNg", title: "Russian nuclear briefcase follows Putin to China", channel: "Reuters", date: "2026-11-19" }
+      { id: "bIc350mUzBk", title: "Pakistaní se convertira en el primer astronauta extranjero en participar en una misión china", channel: "DW Español", date: "2026-11-24" },
+      { id: "3QpQaTL7gOQ", title: "Pakistani astronaut joins China space mission | DW News", channel: "DW News", date: "2026-11-24" },
+      { id: "4zC65BijKJI", title: "Europe Tonight debriefs: can the EU budget compete with China and the US?", channel: "euronews", date: "2026-11-24" },
+      { id: "z367noyDQj0", title: "Did Nvidia knowingly send chips to China 'cutout'? Was there ‘pay-to-play’ involving Trump, Lutnick?", channel: "FRANCE 24 English", date: "2026-11-24" },
+      { id: "SAcxKwYof3E", title: "LIVE: China holds ceremony before launch of Shenzhou-24 spacecraft", channel: "Reuters", date: "2026-11-24" },
+      { id: "OR0s68ezlnA", title: "LIVE: China holds a send-off ceremony for its Shenzhou 24 astronauts", channel: "Associated Press", date: "2026-11-24" },
+      { id: "aR9ZWFNQjCE", title: "LIVE: China launches the first foreign astronaut to board its space station", channel: "Associated Press", date: "2026-11-24" },
+      { id: "XZ966rNQsi4", title: "What does China think of Nvidia, Jensen Huang and Trump? | Global News Podcast", channel: "BBC News", date: "2026-11-24" }
     ],
     india: [
       { id: "BGxVljhvdM0", title: "Protesters storm Meta office building in India", channel: "CNN", date: "2026-11-22" },
@@ -455,16 +455,17 @@
       { id: "cOLounJNUgw", title: "Delhi air as harmful as smoking 20 cigarettes a day", channel: "Reuters", date: "2026-11-09" }
     ],
     morocco: [
+      { id: "tojr5Y_SGW4", title: "Senegal reinstated as AFCON champions as Morocco vows to fight on", channel: "euronews", date: "2026-11-24" },
+      { id: "Um8Wvmb-KLs", title: "Senegal regain AFCON title on appeal at Morocco's expense • FRANCE 24 English", channel: "FRANCE 24 English", date: "2026-11-24" },
+      { id: "cLx1A9TPNb4", title: "CAN-2025 : devant le TAS, le Sénégal récupère son titre aux dépens du Maroc • FRANCE 24", channel: "FRANCE 24", date: "2026-11-24" },
       { id: "9TV7uyC3OtE", title: "Classement Fifa : la France termine l'année sur le podium, le Maroc dans le top 5 • FRANCE 24", channel: "FRANCE 24", date: "2026-11-19" },
       { id: "W0SHyWsjz6g", title: "JOJ Dakar 2026 : Ghali Bougja, un jeune cavalier marocain prêt à relever le défi • FRANCE 24", channel: "FRANCE 24", date: "2026-11-12" },
       { id: "gY3vBkbXiIE", title: "El desalojo del puerto de Ceuta acelera los retornos a Marruecos", channel: "euronews (en español)", date: "2026-11-10" },
       { id: "rdANsCrKkac", title: "What Morocco's first female premier means for the Arab world | DW News", channel: "DW News", date: "2026-09-30" },
-      { id: "ESuswUmhiSw", title: "Marruecos hace historia: Fatima Mansouri será la primera mujer en asumir como jefa de Gobierno", channel: "DW Español", date: "2026-09-30" },
-      { id: "KkCNeygybn8", title: "Morocco's King Mohammed VI appoints Fatima Mansouri as the country's first female prime minister", channel: "euronews", date: "2026-09-30" },
-      { id: "whr0jHBHIx4", title: "Morocco votes for a new parliament after Gen Z protests and migration crisis", channel: "Associated Press", date: "2026-09-23" },
-      { id: "29S-0SqjHcQ", title: "¿Cuál es el panorama en Marruecos en las elecciones legislativas?", channel: "FRANCE 24 Español", date: "2026-09-23" }
+      { id: "ESuswUmhiSw", title: "Marruecos hace historia: Fatima Mansouri será la primera mujer en asumir como jefa de Gobierno", channel: "DW Español", date: "2026-09-30" }
     ],
     cuba: [
+      { id: "_-Cbf9EQEJ0", title: "La OMS ofrece ayuda a Cuba frente a la crisis de salud pública", channel: "DW Español", date: "2026-11-24" },
       { id: "jr0HsN6DyTs", title: "Building collapses in Cuba create national emergency amid deepening economic crisis", channel: "NBC News", date: "2026-11-11" },
       { id: "Xmb5shZSbpA", title: "Shouting match between US and Cuba at UN assembly | DW News", channel: "DW News", date: "2026-10-28" },
       { id: "EyrxP3VtNHM", title: "La libreta de racionamiento, víctima de las reformas económicas en Cuba", channel: "DW Español", date: "2026-10-08" },
