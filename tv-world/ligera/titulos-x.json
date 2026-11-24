@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-24T00:01:35+01:00",
+ "fetched_at": "2026-11-24T08:00:59+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
  "accounts": [
@@ -1693,6 +1693,123 @@
     "time": "09:45",
     "text": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support', Xinhua reports https://t.co/cmy3TzlM54",
     "url": "https://x.com/Reuters/status/2120437651358544174"
+   },
+   {
+    "id": "2125116281259004000",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-24",
+    "time": "07:36",
+    "text": "Washington cible la contrebande de puces vers la Chine, les Bourses rassurées sur Nvidia\n➡️ https://t.co/3bRjULG1T3 https://t.co/cjekaXRZ9F",
+    "url": "https://x.com/France24_fr/status/2125116281259004000"
+   },
+   {
+    "id": "2125114692989288875",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "07:30",
+    "text": "Japan is tapping its powerhouse auto industry's manufacturing expertise for its biggest military buildup since World War Two. Takaichi's government hopes this will speed its security transformation against nuclear-armed China, Russia and North Korea https://t.co/EWqijnyIrC https://t.co/zz7TFYPrTG",
+    "url": "https://x.com/Reuters/status/2125114692989288875"
+   },
+   {
+    "id": "2125089537575584077",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "05:50",
+    "text": "Singapore's Prime Minister Lawrence Wong said that his country would continue to investigate cloud company Megaspeed, an Nvidia-linked firm alleged by US authorities to have diverted advanced AI chips to China https://t.co/48s0HCaJFR",
+    "url": "https://x.com/Reuters/status/2125089537575584077"
+   },
+   {
+    "id": "2125087020829593688",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "05:40",
+    "text": "Taiwan's mayoral and county chief elections on November 28 are not directly about China, but the ruling party's nomination for Taipei mayor — a lawmaker wanted by Chinese police for ‘separatism’ — has sent Beijing into a flurry of denunciations https://t.co/kw6ZPPeOYq",
+    "url": "https://x.com/Reuters/status/2125087020829593688"
+   },
+   {
+    "id": "2125084773961875767",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "05:31",
+    "text": "For years, Japanese manufacturer Aster made its money supplying parts for Toyota vehicles. But as the country’s auto industry struggles in the face of fierce Chinese competition, Aster has found a new niche in defense technology https://t.co/08wJwpH2WK",
+    "url": "https://x.com/Reuters/status/2125084773961875767"
+   },
+   {
+    "id": "2125075707206275099",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "04:55",
+    "text": "China will launch its Shenzhou-24 spaceship on November 25 at 8:18 a.m. local time with a crew including a Pakistani national, who will be the first foreign astronaut to board China's space station https://t.co/nnW2o02XZd",
+    "url": "https://x.com/Reuters/status/2125075707206275099"
+   },
+   {
+    "id": "2125073197196329291",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "04:45",
+    "text": "The 1.3 million-member International Brotherhood of Teamsters union urged Congress to quickly pass a tougher US government ban on Chinese vehicles before adjourning in the coming weeks https://t.co/pCeyyi727z",
+    "url": "https://x.com/Reuters/status/2125073197196329291"
+   },
+   {
+    "id": "2125063782816764341",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-24",
+    "time": "04:07",
+    "text": "South Korea and China agree wider trade deal covering entertainment https://t.co/Pn8Jxyo5zB",
+    "url": "https://x.com/euronews/status/2125063782816764341"
+   },
+   {
+    "id": "2125050439750369493",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-24",
+    "time": "03:14",
+    "text": "China y Corea del Sur se acercan a un acuerdo comercial histórico\n➡️ https://t.co/qpzAcPGsH1 https://t.co/0RUxlVTxzz",
+    "url": "https://x.com/euronewses/status/2125050439750369493"
+   },
+   {
+    "id": "2125025596027867251",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-24",
+    "time": "01:35",
+    "text": "#EEUU incluye a Megaspeed en lista negra por desvío de chips a #China\n\nLa medida estadounidense contra la empresa Megaspeed se debe a un presunto desvío de chips de IA de #Nvidia  hacia China. (mg)\n\nLea el artículo completo haciendo clic en la imagen \nhttps://t.co/OIRDECa5PZ",
+    "url": "https://x.com/dw_espanol/status/2125025596027867251"
+   },
+   {
+    "id": "2125022417148141756",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-24",
+    "time": "01:23",
+    "text": "📊 Tras el escándalo de una relación extramarital con una supuesta espía china, ¿por qué crees que Nvidia reincorporó como CEO a Jensen Huang?",
+    "url": "https://x.com/France24_es/status/2125022417148141756"
+   },
+   {
+    "id": "2125016657814851731",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "01:00",
+    "text": "China, EU officials discuss exchange rates as central bank chief Pan urges cooperation https://t.co/Ttz5OqkuiD",
+    "url": "https://x.com/Reuters/status/2125016657814851731"
+   },
+   {
+    "id": "2125002299302977982",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-24",
+    "time": "00:03",
+    "text": "Encuesta: la mayoría de los alemanes rechaza enviar armas a Ucrania\n\nCada vez más alemanes creen que su país debería mantener un perfil bajo en política exterior y apuestan por la neutralidad en el conflicto EEUU - China. https://t.co/Gmd2XAfCQf (dz)",
+    "url": "https://x.com/dw_espanol/status/2125002299302977982"
    }
   ],
   "india": [
@@ -2685,6 +2802,24 @@
     "time": "02:39",
     "text": "Qantas to outsource 850 local jobs with most roles moving to India https://t.co/nCRUtXPEoT",
     "url": "https://x.com/BBCWorld/status/2119968072714932598"
+   },
+   {
+    "id": "2125086293419762071",
+    "account": "AP",
+    "name": "The Associated Press",
+    "date": "2026-11-24",
+    "time": "05:37",
+    "text": "Ousted Bangladeshi Prime Minister Sheikh Hasina plans to return home from exile in India on Dec. 16. She was sentenced to death in absentia for crimes against humanity involving a student-led mass uprising in which hundreds of protesters were killed.  https://t.co/nCQanVlkx6",
+    "url": "https://x.com/AP/status/2125086293419762071"
+   },
+   {
+    "id": "2125068364397580454",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "04:25",
+    "text": "Exclusive: Ousted Bangladeshi Prime Minister Sheikh Hasina plans to return home from more than two years of exile in India on December 16, the anniversary of the end of her country's 1971 liberation war with Pakistan, her spokesperson told Reuters https://t.co/yfZvGW7SmK",
+    "url": "https://x.com/Reuters/status/2125068364397580454"
    }
   ],
   "morocco": [
@@ -3229,6 +3364,24 @@
     "time": "10:30",
     "text": "La administración Trump ha reiterado que su objetivo es provocar un cambio en la cúpula de La Habana; el propio Donald Trump ha asegurado que el país está «a punto de caer».\n➡️ https://t.co/YizGDNJRcv https://t.co/CKTLeJfihb",
     "url": "https://x.com/euronewses/status/2113911037997293692"
+   },
+   {
+    "id": "2125099154410221955",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-24",
+    "time": "06:28",
+    "text": "#OMS ofrece movilizar ayuda a #Cuba ante crisis en la #salud pública\n\nDurante una visita a la isla, el director del organismo Tedros Adhanom #Ghebreyesus, reconoció que \"las necesidades son grandes\". (jc)\nhttps://t.co/UcC3fOENgP",
+    "url": "https://x.com/dw_espanol/status/2125099154410221955"
+   },
+   {
+    "id": "2125005464975098260",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-24",
+    "time": "00:15",
+    "text": "El director de la OMS visita Cuba en pleno colapso sanitario https://t.co/pjDYGn1KQ3",
+    "url": "https://x.com/euronewses/status/2125005464975098260"
    }
   ]
  }
