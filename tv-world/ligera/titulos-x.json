@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-25T08:05:39+01:00",
+ "fetched_at": "2026-11-25T16:01:14+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
  "accounts": [
@@ -20,6 +20,393 @@
  ],
  "countries": {
   "china": [
+   {
+    "id": "2125604938868740553",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-25",
+    "time": "15:58",
+    "text": "UE, Chine, Brésil... l'administration Trump propose une nouvelle série de droits de douane\n➡️ https://t.co/ITY9sf4Aoh https://t.co/Mk9LBuMyRg",
+    "url": "https://x.com/France24_fr/status/2125604938868740553"
+   },
+   {
+    "id": "2125603473529905241",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-25",
+    "time": "15:52",
+    "text": "The Quantum Act is the EU’s latest bid in the race to deploy the next cutting-edge technology and stop it falling behind the US and China. https://t.co/JWzn5gDLpJ",
+    "url": "https://x.com/euronews/status/2125603473529905241"
+   },
+   {
+    "id": "2125603176980398167",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-25",
+    "time": "15:51",
+    "text": "🇺🇸💰 El presidente de Estados Unidos, #DonaldTrump, volvió a endurecer su política comercial con una nueva propuesta de aranceles para 14 socios comerciales, entre ellos China, la Unión Europea, Japón, Corea del Sur e India ➡️ https://t.co/4XMJQy9zWp https://t.co/4sEYLlJ2VO",
+    "url": "https://x.com/France24_es/status/2125603176980398167"
+   },
+   {
+    "id": "2125600885711524183",
+    "account": "FRANCE24",
+    "name": "FRANCE 24",
+    "date": "2026-11-25",
+    "time": "15:41",
+    "text": "Trump announces new tariffs on EU, China despite US midterms defeat\n➡️ https://t.co/SjHzgraz1S https://t.co/xEKhedtP1z",
+    "url": "https://x.com/FRANCE24/status/2125600885711524183"
+   },
+   {
+    "id": "2125598403568836810",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-25",
+    "time": "15:32",
+    "text": "🇨🇳🚀 La #Chine a lancé une nouvelle fusée vers sa station spatiale avec à son bord Muhammad Zeeshan Ali, le premier astronaute pakistanais à voyager jusqu'à l'ISS chinoise https://t.co/n7janPh1B8",
+    "url": "https://x.com/France24_fr/status/2125598403568836810"
+   },
+   {
+    "id": "2125593368495374545",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "15:12",
+    "text": "🔊 ‘China has made very clear over many years that it has a very important goal of becoming technologically independent.’ @alexalper on the Reuters World News podcast https://t.co/7Gsz6mZSVN https://t.co/egdsdUqB9H",
+    "url": "https://x.com/Reuters/status/2125593368495374545"
+   },
+   {
+    "id": "2125592882153197900",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "15:10",
+    "text": "Trump tariffs live: US proposes raising duties on China, India and other major trading partners https://t.co/rk5oUZLNgU https://t.co/UBl4WuoYKj",
+    "url": "https://x.com/Reuters/status/2125592882153197900"
+   },
+   {
+    "id": "2125587371991216306",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-11-25",
+    "time": "14:48",
+    "text": "Breaking news: The Trump administration proposed raising tariffs on China, the European Union, Japan and 11 other countries, moving to replace rates struck down by the Supreme Court earlier this year.\n\nChina faces the highest tariff rate of 20 percent. https://t.co/7EJeufamEG",
+    "url": "https://x.com/washingtonpost/status/2125587371991216306"
+   },
+   {
+    "id": "2125586593071198334",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "14:45",
+    "text": "EU plans €50 billion tech fund to challenge US and China, FT reports https://t.co/KCS2BP4NDz",
+    "url": "https://x.com/Reuters/status/2125586593071198334"
+   },
+   {
+    "id": "2125584861322776787",
+    "account": "BBCNews",
+    "name": "BBC News (UK)",
+    "date": "2026-11-25",
+    "time": "14:38",
+    "text": "US announces new tariff proposals on EU, China, and other trade partners https://t.co/bNZzbpuDwP",
+    "url": "https://x.com/BBCNews/status/2125584861322776787"
+   },
+   {
+    "id": "2125584486717116608",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-25",
+    "time": "14:36",
+    "text": "🔴 ÚLTIMA HORA | EE UU propone nuevos aranceles contra 14 socios comerciales: los gravámenes más altos se impondrán a China https://t.co/2Zy8aPV0dS https://t.co/Zye4RwGNaT",
+    "url": "https://x.com/el_pais/status/2125584486717116608"
+   },
+   {
+    "id": "2125584017692950706",
+    "account": "nytimes",
+    "name": "The New York Times",
+    "date": "2026-11-25",
+    "time": "14:34",
+    "text": "Breaking News: The Trump administration proposed new tariffs targeting countries including China, Japan and members of the European Union. https://t.co/vD5vTForRe",
+    "url": "https://x.com/nytimes/status/2125584017692950706"
+   },
+   {
+    "id": "2125581356751106503",
+    "account": "AP",
+    "name": "The Associated Press",
+    "date": "2026-11-25",
+    "time": "14:24",
+    "text": "BREAKING: President Trump plans a 20% tariff on Chinese goods and new import taxes for the EU and a dozen other major trading partners.  https://t.co/RMc4ydfMGv",
+    "url": "https://x.com/AP/status/2125581356751106503"
+   },
+   {
+    "id": "2125578291700469802",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "14:12",
+    "text": "🔊 On China’s access to US chips, hawks say to keep China out. Huang says let them in. 'They will become essentially dependent on US technology, and that's definitely the case that Jensen Huang makes.’ @alexalper on the Reuters World News podcast https://t.co/CnWoX4O96r https://t.co/67mmSAxSAJ",
+    "url": "https://x.com/Reuters/status/2125578291700469802"
+   },
+   {
+    "id": "2125572017579573524",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-25",
+    "time": "13:47",
+    "text": "Así fue el lanzamiento de Shenzhou-24, una nave espacial tripulada de China https://t.co/dOS6X72uf3",
+    "url": "https://x.com/CNNEE/status/2125572017579573524"
+   },
+   {
+    "id": "2125563935231299969",
+    "account": "AP",
+    "name": "The Associated Press",
+    "date": "2026-11-25",
+    "time": "13:15",
+    "text": "China on Wednesday launched the Shenzhou 24 spacecraft with three astronauts — two Chinese and a Pakistani — sending the first foreign crew member to its space station. https://t.co/bKmWaqpfzL",
+    "url": "https://x.com/AP/status/2125563935231299969"
+   },
+   {
+    "id": "2125562932578734469",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "13:11",
+    "text": "🔊 ‘People really make the case that allowing China to have access to the most advanced American technology, the most advanced American chips, will actually retard China's efforts at catching up.’ @alexalper on the Reuters World News podcast https://t.co/r1u6rpxPs4 https://t.co/ZZPFtnpLHU",
+    "url": "https://x.com/Reuters/status/2125562932578734469"
+   },
+   {
+    "id": "2125561083750502443",
+    "account": "bbcmundo",
+    "name": "BBC News Mundo",
+    "date": "2026-11-25",
+    "time": "13:03",
+    "text": "Cómo China mantiene su influencia en América Latina en pleno pulso geopolítico con EE.UU. https://t.co/i8s0nACwam",
+    "url": "https://x.com/bbcmundo/status/2125561083750502443"
+   },
+   {
+    "id": "2125560148848738725",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "13:00",
+    "text": "Companies tied to Alice Huang, whose affair with Nvidia CEO Jensen Huang triggered his short-lived exit, raised financing against AI servers for major China data centres, Reuters records show https://t.co/iikjeqIdaZ https://t.co/t9IRUJI2Ww",
+    "url": "https://x.com/Reuters/status/2125560148848738725"
+   },
+   {
+    "id": "2125555283480973766",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "12:40",
+    "text": "🔊 Reuters has exclusively uncovered a money trail linking firms connected to Alice Huang to AI servers inside China. 'Going forward, chip makers, cloud providers and financial institutions face intense scrutiny over end-user compliance’ https://t.co/q0cMwZ74Ic https://t.co/KAVeC4b4Zb",
+    "url": "https://x.com/Reuters/status/2125555283480973766"
+   },
+   {
+    "id": "2125517385784283220",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "10:10",
+    "text": "EU plans €50 billion tech fund to challenge US and China, FT reports https://t.co/hlxNZhjP7U",
+    "url": "https://x.com/Reuters/status/2125517385784283220"
+   },
+   {
+    "id": "2125514847257317464",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "10:00",
+    "text": "Taiwanese comic Huang Yi-hao turned being run over, threatened and targeted over his jokes into part of his act. Prosecutors say a plot to stop him performing failed, and he's back on stage using humor to confront the risks of speaking out about China https://t.co/nCWXxYpSgM https://t.co/1rCP4owsw5",
+    "url": "https://x.com/Reuters/status/2125514847257317464"
+   },
+   {
+    "id": "2125514697600602242",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-25",
+    "time": "09:59",
+    "text": "China califica de \"histórica\" la misión de la nave Shenzhou-24\n\nLa misión #espacial de la #nave tripulada #Shenzhou-24, que se acopló a la estación china Tiangong con el primer astronauta extranjero, fue calificada por #China de \"histórica\". (cp). https://t.co/JiUrzl6EaA",
+    "url": "https://x.com/dw_espanol/status/2125514697600602242"
+   },
+   {
+    "id": "2125514143692185858",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-25",
+    "time": "09:57",
+    "text": "Esta nación tenía un pacto de seguridad con China. Acaba de firmar un acuerdo con un aliado de Estados Unidos https://t.co/1aZYkC96aI",
+    "url": "https://x.com/CNNEE/status/2125514143692185858"
+   },
+   {
+    "id": "2125509835818963011",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "09:40",
+    "text": "Australia, Solomon Islands sign security pact in blow to China https://t.co/kK7CGFAf2L",
+    "url": "https://x.com/Reuters/status/2125509835818963011"
+   },
+   {
+    "id": "2125472105768661093",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-25",
+    "time": "07:10",
+    "text": "China launches Shenzhou 24 spacecraft carrying foreign crew https://t.co/e9Bw9CARsM",
+    "url": "https://x.com/euronews/status/2125472105768661093"
+   },
+   {
+    "id": "2125460750705574286",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "06:25",
+    "text": "Even a stand-up comedian now comes with a security detail to watch the exits and scan the crowd as he fires off jokes in democratic Taiwan, claimed by China as its own territory despite never having governed it https://t.co/zGwglk7tOS",
+    "url": "https://x.com/Reuters/status/2125460750705574286"
+   },
+   {
+    "id": "2125455345300742484",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-25",
+    "time": "06:03",
+    "text": "Europe Tonight: Can the EU’s new budget compete with China and the US? https://t.co/vvoScj5BjM",
+    "url": "https://x.com/euronews/status/2125455345300742484"
+   },
+   {
+    "id": "2125444390000705911",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "05:20",
+    "text": "Shanghai's senior Communist Party leadership pledged loyalty to Beijing and understanding of the need to ‘see things through to the end’ after their top official was put under investigation, the financial hub's official paper said https://t.co/ss45Og3iIC",
+    "url": "https://x.com/Reuters/status/2125444390000705911"
+   },
+   {
+    "id": "2125441894536622106",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "05:10",
+    "text": "Shanghai leadership pledges loyalty to Beijing as top official faces investigation https://t.co/YcaOH5YP6O",
+    "url": "https://x.com/Reuters/status/2125441894536622106"
+   },
+   {
+    "id": "2125439711166550221",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "05:01",
+    "text": "Australia and Solomon Islands signed a security pact that makes Canberra the country's defence partner of choice, marking a shift for the Pacific archipelago that previously signed a similar deal with China https://t.co/y0WQTki5MN",
+    "url": "https://x.com/Reuters/status/2125439711166550221"
+   },
+   {
+    "id": "2125439347360932188",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-11-25",
+    "time": "05:00",
+    "text": "As Asian stocks rallied over Jensen Huang’s reinstatement as Nvidia CEO, nowhere were the celebrations more energetic than in China and Taiwan, where tech leaders, investors and even street market vendors hailed the AI executive as a hometown hero. https://t.co/9abVGMQuPP",
+    "url": "https://x.com/washingtonpost/status/2125439347360932188"
+   },
+   {
+    "id": "2125437089009287246",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-25",
+    "time": "04:51",
+    "text": "El grupo chino Huawei es declarado culpable en EE. UU. de robar secretos comerciales\n➡️ https://t.co/57LW2VgDhd https://t.co/dvL1SjOaRn",
+    "url": "https://x.com/France24_es/status/2125437089009287246"
+   },
+   {
+    "id": "2125436859706642605",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "04:50",
+    "text": "Shenzhou-24 live: China launches crew including Pakistani to its space station https://t.co/lNENOX8rjL",
+    "url": "https://x.com/Reuters/status/2125436859706642605"
+   },
+   {
+    "id": "2125429113347273017",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-25",
+    "time": "04:19",
+    "text": "Solomon Islands ends controversial security pact with China for Australian treaty https://t.co/2sBqfzlCR8",
+    "url": "https://x.com/BBCWorld/status/2125429113347273017"
+   },
+   {
+    "id": "2125416758248906860",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-25",
+    "time": "03:30",
+    "text": "China has launched its Shenzhou-24 space mission on Wednesday to bring three astronauts to its Tiangong space station, including a Pakistani man. Read more: https://t.co/LMubWHdADo https://t.co/U89XV0uI0k",
+    "url": "https://x.com/BBCWorld/status/2125416758248906860"
+   },
+   {
+    "id": "2125406950343016657",
+    "account": "CNN",
+    "name": "CNN",
+    "date": "2026-11-25",
+    "time": "02:51",
+    "text": "Chinese telecommunications giant Huawei was convicted by a jury in New York City in a sprawling US criminal case on charges that it deceived banks about its business in Iran and conspired to steal trade secrets from American companies. https://t.co/I3Sr5y3dkS https://t.co/tgSsrXaNLV",
+    "url": "https://x.com/CNN/status/2125406950343016657"
+   },
+   {
+    "id": "2125394431343837377",
+    "account": "AP",
+    "name": "The Associated Press",
+    "date": "2026-11-25",
+    "time": "02:01",
+    "text": "The Trump administration is expected to soon announce plans to raise tariffs on China, the European Union and 14 other economies, according to two people familiar with the matter. https://t.co/cEKxAreOyb",
+    "url": "https://x.com/AP/status/2125394431343837377"
+   },
+   {
+    "id": "2125388910914134500",
+    "account": "AP",
+    "name": "The Associated Press",
+    "date": "2026-11-25",
+    "time": "01:39",
+    "text": "China launches the Shenzhou 24 spacecraft carrying Pakistani astronaut Muhammad Zeeshan Ali, its first foreign crew member. https://t.co/09QMgtFExE",
+    "url": "https://x.com/AP/status/2125388910914134500"
+   },
+   {
+    "id": "2125378375472812411",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-25",
+    "time": "00:57",
+    "text": "China and Singapore expand yuan financing for businesses\n➡️ https://t.co/9Qb7iJP5vs https://t.co/TD64Dok4ab",
+    "url": "https://x.com/euronews/status/2125378375472812411"
+   },
+   {
+    "id": "2125366252575027405",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-25",
+    "time": "00:09",
+    "text": "China-linked network using AI fakes to smear Taiwan election candidates, BBC Verify finds https://t.co/H4MpYZyQen",
+    "url": "https://x.com/BBCWorld/status/2125366252575027405"
+   },
+   {
+    "id": "2125360105499590930",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "23:45",
+    "text": "Nvidia's Huang returns to cheers in China, but political hurdles mount https://t.co/sQSOrYdOq1",
+    "url": "https://x.com/Reuters/status/2125360105499590930"
+   },
+   {
+    "id": "2125341249490051211",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "22:30",
+    "text": "China probes Shanghai party boss Chen Jining, marking fourth Politburo member to fall since 2025 https://t.co/g8bGQv5VXP",
+    "url": "https://x.com/Reuters/status/2125341249490051211"
+   },
    {
     "id": "2125339681080381871",
     "account": "FRANCE24",
@@ -57,6 +444,24 @@
     "url": "https://x.com/nytimes/status/2125328627210305866"
    },
    {
+    "id": "2125318669861273820",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "21:00",
+    "text": "China Southern Airlines unit to buy 50 Boeing 737-8 aircraft at $7.4 billion list price https://t.co/7ByX2THq4K",
+    "url": "https://x.com/Reuters/status/2125318669861273820"
+   },
+   {
+    "id": "2125298449402777936",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "19:40",
+    "text": "EU sets limits on hybrid vehicle imports from China and other countries https://t.co/K111VQSkKH",
+    "url": "https://x.com/Reuters/status/2125298449402777936"
+   },
+   {
     "id": "2125295887249449121",
     "account": "dw_espanol",
     "name": "DW Español",
@@ -64,6 +469,15 @@
     "time": "19:30",
     "text": "El inquietante efecto de los vídeos cortos en la mente adolescente\n\nMás de uno de cada cinco #adolescentes ve vídeos cortos más de dos horas al día, y un 17,3 % de los más de 18.000 jóvenes seguidos en China durante tres años declaró ideas suicidas. (few) https://t.co/cyXM57nknk",
     "url": "https://x.com/dw_espanol/status/2125295887249449121"
+   },
+   {
+    "id": "2125295962251841933",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "19:30",
+    "text": "Xiaomi profit falls as China auto downturn weighs, eyes Europe car market https://t.co/yZFlpsb5Xb",
+    "url": "https://x.com/Reuters/status/2125295962251841933"
    },
    {
     "id": "2125290240252539223",
@@ -1972,198 +2386,90 @@
     "time": "09:45",
     "text": "China backs Cuba in opposing sanctions, blockades; pledges 'firm support', Xinhua reports https://t.co/cmy3TzlM54",
     "url": "https://x.com/Reuters/status/2120437651358544174"
-   },
-   {
-    "id": "2125472105768661093",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-25",
-    "time": "07:10",
-    "text": "China launches Shenzhou 24 spacecraft carrying foreign crew https://t.co/e9Bw9CARsM",
-    "url": "https://x.com/euronews/status/2125472105768661093"
-   },
-   {
-    "id": "2125460750705574286",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-25",
-    "time": "06:25",
-    "text": "Even a stand-up comedian now comes with a security detail to watch the exits and scan the crowd as he fires off jokes in democratic Taiwan, claimed by China as its own territory despite never having governed it https://t.co/zGwglk7tOS",
-    "url": "https://x.com/Reuters/status/2125460750705574286"
-   },
-   {
-    "id": "2125455345300742484",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-25",
-    "time": "06:03",
-    "text": "Europe Tonight: Can the EU’s new budget compete with China and the US? https://t.co/vvoScj5BjM",
-    "url": "https://x.com/euronews/status/2125455345300742484"
-   },
-   {
-    "id": "2125444390000705911",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-25",
-    "time": "05:20",
-    "text": "Shanghai's senior Communist Party leadership pledged loyalty to Beijing and understanding of the need to ‘see things through to the end’ after their top official was put under investigation, the financial hub's official paper said https://t.co/ss45Og3iIC",
-    "url": "https://x.com/Reuters/status/2125444390000705911"
-   },
-   {
-    "id": "2125441894536622106",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-25",
-    "time": "05:10",
-    "text": "Shanghai leadership pledges loyalty to Beijing as top official faces investigation https://t.co/YcaOH5YP6O",
-    "url": "https://x.com/Reuters/status/2125441894536622106"
-   },
-   {
-    "id": "2125439711166550221",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-25",
-    "time": "05:01",
-    "text": "Australia and Solomon Islands signed a security pact that makes Canberra the country's defence partner of choice, marking a shift for the Pacific archipelago that previously signed a similar deal with China https://t.co/y0WQTki5MN",
-    "url": "https://x.com/Reuters/status/2125439711166550221"
-   },
-   {
-    "id": "2125439347360932188",
-    "account": "washingtonpost",
-    "name": "The Washington Post",
-    "date": "2026-11-25",
-    "time": "05:00",
-    "text": "As Asian stocks rallied over Jensen Huang’s reinstatement as Nvidia CEO, nowhere were the celebrations more energetic than in China and Taiwan, where tech leaders, investors and even street market vendors hailed the AI executive as a hometown hero. https://t.co/9abVGMQuPP",
-    "url": "https://x.com/washingtonpost/status/2125439347360932188"
-   },
-   {
-    "id": "2125437089009287246",
-    "account": "France24_es",
-    "name": "FRANCE 24 Español",
-    "date": "2026-11-25",
-    "time": "04:51",
-    "text": "El grupo chino Huawei es declarado culpable en EE. UU. de robar secretos comerciales\n➡️ https://t.co/57LW2VgDhd https://t.co/dvL1SjOaRn",
-    "url": "https://x.com/France24_es/status/2125437089009287246"
-   },
-   {
-    "id": "2125436859706642605",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-25",
-    "time": "04:50",
-    "text": "Shenzhou-24 live: China launches crew including Pakistani to its space station https://t.co/lNENOX8rjL",
-    "url": "https://x.com/Reuters/status/2125436859706642605"
-   },
-   {
-    "id": "2125429113347273017",
-    "account": "BBCWorld",
-    "name": "BBC News (World)",
-    "date": "2026-11-25",
-    "time": "04:19",
-    "text": "Solomon Islands ends controversial security pact with China for Australian treaty https://t.co/2sBqfzlCR8",
-    "url": "https://x.com/BBCWorld/status/2125429113347273017"
-   },
-   {
-    "id": "2125416758248906860",
-    "account": "BBCWorld",
-    "name": "BBC News (World)",
-    "date": "2026-11-25",
-    "time": "03:30",
-    "text": "China has launched its Shenzhou-24 space mission on Wednesday to bring three astronauts to its Tiangong space station, including a Pakistani man. Read more: https://t.co/LMubWHdADo https://t.co/U89XV0uI0k",
-    "url": "https://x.com/BBCWorld/status/2125416758248906860"
-   },
-   {
-    "id": "2125406950343016657",
-    "account": "CNN",
-    "name": "CNN",
-    "date": "2026-11-25",
-    "time": "02:51",
-    "text": "Chinese telecommunications giant Huawei was convicted by a jury in New York City in a sprawling US criminal case on charges that it deceived banks about its business in Iran and conspired to steal trade secrets from American companies. https://t.co/I3Sr5y3dkS https://t.co/tgSsrXaNLV",
-    "url": "https://x.com/CNN/status/2125406950343016657"
-   },
-   {
-    "id": "2125394431343837377",
-    "account": "AP",
-    "name": "The Associated Press",
-    "date": "2026-11-25",
-    "time": "02:01",
-    "text": "The Trump administration is expected to soon announce plans to raise tariffs on China, the European Union and 14 other economies, according to two people familiar with the matter. https://t.co/cEKxAreOyb",
-    "url": "https://x.com/AP/status/2125394431343837377"
-   },
-   {
-    "id": "2125388910914134500",
-    "account": "AP",
-    "name": "The Associated Press",
-    "date": "2026-11-25",
-    "time": "01:39",
-    "text": "China launches the Shenzhou 24 spacecraft carrying Pakistani astronaut Muhammad Zeeshan Ali, its first foreign crew member. https://t.co/09QMgtFExE",
-    "url": "https://x.com/AP/status/2125388910914134500"
-   },
-   {
-    "id": "2125378375472812411",
-    "account": "euronews",
-    "name": "euronews",
-    "date": "2026-11-25",
-    "time": "00:57",
-    "text": "China and Singapore expand yuan financing for businesses\n➡️ https://t.co/9Qb7iJP5vs https://t.co/TD64Dok4ab",
-    "url": "https://x.com/euronews/status/2125378375472812411"
-   },
-   {
-    "id": "2125366252575027405",
-    "account": "BBCWorld",
-    "name": "BBC News (World)",
-    "date": "2026-11-25",
-    "time": "00:09",
-    "text": "China-linked network using AI fakes to smear Taiwan election candidates, BBC Verify finds https://t.co/H4MpYZyQen",
-    "url": "https://x.com/BBCWorld/status/2125366252575027405"
-   },
-   {
-    "id": "2125360105499590930",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "23:45",
-    "text": "Nvidia's Huang returns to cheers in China, but political hurdles mount https://t.co/sQSOrYdOq1",
-    "url": "https://x.com/Reuters/status/2125360105499590930"
-   },
-   {
-    "id": "2125341249490051211",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "22:30",
-    "text": "China probes Shanghai party boss Chen Jining, marking fourth Politburo member to fall since 2025 https://t.co/g8bGQv5VXP",
-    "url": "https://x.com/Reuters/status/2125341249490051211"
-   },
-   {
-    "id": "2125318669861273820",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "21:00",
-    "text": "China Southern Airlines unit to buy 50 Boeing 737-8 aircraft at $7.4 billion list price https://t.co/7ByX2THq4K",
-    "url": "https://x.com/Reuters/status/2125318669861273820"
-   },
-   {
-    "id": "2125298449402777936",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "19:40",
-    "text": "EU sets limits on hybrid vehicle imports from China and other countries https://t.co/K111VQSkKH",
-    "url": "https://x.com/Reuters/status/2125298449402777936"
-   },
-   {
-    "id": "2125295962251841933",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "19:30",
-    "text": "Xiaomi profit falls as China auto downturn weighs, eyes Europe car market https://t.co/yZFlpsb5Xb",
-    "url": "https://x.com/Reuters/status/2125295962251841933"
    }
   ],
   "india": [
+   {
+    "id": "2125603176980398167",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-25",
+    "time": "15:51",
+    "text": "🇺🇸💰 El presidente de Estados Unidos, #DonaldTrump, volvió a endurecer su política comercial con una nueva propuesta de aranceles para 14 socios comerciales, entre ellos China, la Unión Europea, Japón, Corea del Sur e India ➡️ https://t.co/4XMJQy9zWp https://t.co/4sEYLlJ2VO",
+    "url": "https://x.com/France24_es/status/2125603176980398167"
+   },
+   {
+    "id": "2125599166797643991",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "15:35",
+    "text": "Allianz turns tactically positive on Indian rupee, sees less need for RBI rate defence https://t.co/uOkvuTGqA7",
+    "url": "https://x.com/Reuters/status/2125599166797643991"
+   },
+   {
+    "id": "2125592882153197900",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "15:10",
+    "text": "Trump tariffs live: US proposes raising duties on China, India and other major trading partners https://t.co/rk5oUZLNgU https://t.co/UBl4WuoYKj",
+    "url": "https://x.com/Reuters/status/2125592882153197900"
+   },
+   {
+    "id": "2125556388684235192",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "12:45",
+    "text": "Indian stocks close to wiping out 2026 losses as foreign money floods back https://t.co/xpt79t53Ci",
+    "url": "https://x.com/Reuters/status/2125556388684235192"
+   },
+   {
+    "id": "2125537564618588304",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "11:30",
+    "text": "Allianz turns tactically positive on Indian rupee, sees less need for RBI rate defence https://t.co/8vQSf5MLat",
+    "url": "https://x.com/Reuters/status/2125537564618588304"
+   },
+   {
+    "id": "2125494741798101088",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "08:40",
+    "text": "Indian stocks close to wiping out 2026 losses as foreign money floods back https://t.co/Yxyfz56gzd",
+    "url": "https://x.com/Reuters/status/2125494741798101088"
+   },
+   {
+    "id": "2125395155465220188",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-25",
+    "time": "02:04",
+    "text": "The rising cost of putting food on the table in India https://t.co/pPFSZyYVRu",
+    "url": "https://x.com/BBCWorld/status/2125395155465220188"
+   },
+   {
+    "id": "2125358840120029349",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "23:40",
+    "text": "Sooryavanshi, 15, blasts 204 off 53 balls for India A https://t.co/SdBDJBQNfm",
+    "url": "https://x.com/Reuters/status/2125358840120029349"
+   },
+   {
+    "id": "2125293415705268365",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "19:20",
+    "text": "India seizes Nepal flood crisis to rebuild influence as China gains ground https://t.co/Wx2EUV1zKw",
+    "url": "https://x.com/Reuters/status/2125293415705268365"
+   },
    {
     "id": "2125290901228450094",
     "account": "Reuters",
@@ -2172,6 +2478,24 @@
     "time": "19:10",
     "text": "Sooryavanshi, 15, blasts 204 off 53 balls for India A https://t.co/0FwCSQayEW",
     "url": "https://x.com/Reuters/status/2125290901228450094"
+   },
+   {
+    "id": "2125273377006874687",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "18:00",
+    "text": "China, India set for record Russian oil imports in 2026, but demand seen peaking https://t.co/qGpNJAVEkJ",
+    "url": "https://x.com/Reuters/status/2125273377006874687"
+   },
+   {
+    "id": "2125265753620320760",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "17:30",
+    "text": "Hyundai Motor India to raise prices by up to 8,000 rupees from December 1 https://t.co/Oa5I5Y8tlD",
+    "url": "https://x.com/Reuters/status/2125265753620320760"
    },
    {
     "id": "2125230492001661294",
@@ -3207,54 +3531,54 @@
     "time": "02:39",
     "text": "Qantas to outsource 850 local jobs with most roles moving to India https://t.co/nCRUtXPEoT",
     "url": "https://x.com/BBCWorld/status/2119968072714932598"
-   },
-   {
-    "id": "2125395155465220188",
-    "account": "BBCWorld",
-    "name": "BBC News (World)",
-    "date": "2026-11-25",
-    "time": "02:04",
-    "text": "The rising cost of putting food on the table in India https://t.co/pPFSZyYVRu",
-    "url": "https://x.com/BBCWorld/status/2125395155465220188"
-   },
-   {
-    "id": "2125358840120029349",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "23:40",
-    "text": "Sooryavanshi, 15, blasts 204 off 53 balls for India A https://t.co/SdBDJBQNfm",
-    "url": "https://x.com/Reuters/status/2125358840120029349"
-   },
-   {
-    "id": "2125293415705268365",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "19:20",
-    "text": "India seizes Nepal flood crisis to rebuild influence as China gains ground https://t.co/Wx2EUV1zKw",
-    "url": "https://x.com/Reuters/status/2125293415705268365"
-   },
-   {
-    "id": "2125273377006874687",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "18:00",
-    "text": "China, India set for record Russian oil imports in 2026, but demand seen peaking https://t.co/qGpNJAVEkJ",
-    "url": "https://x.com/Reuters/status/2125273377006874687"
-   },
-   {
-    "id": "2125265753620320760",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "17:30",
-    "text": "Hyundai Motor India to raise prices by up to 8,000 rupees from December 1 https://t.co/Oa5I5Y8tlD",
-    "url": "https://x.com/Reuters/status/2125265753620320760"
    }
   ],
   "morocco": [
+   {
+    "id": "2125493439160541257",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "08:35",
+    "text": "When Spain won a joint bid to host the 2030 World Cup, officials at the national football association took it as given that the final would be held on their soil. Co-host Portugal was not interested, while Spanish officials thought that Morocco, as a late addition to the bid,",
+    "url": "https://x.com/Reuters/status/2125493439160541257"
+   },
+   {
+    "id": "2125477274069664040",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-25",
+    "time": "07:30",
+    "text": "Sports - CAN 2025 : le Sénégal déclaré vainqueur par le TAS, le Maroc conteste\n➡️ https://t.co/zzOAGieUCq https://t.co/d0TRFLsTqn",
+    "url": "https://x.com/France24_fr/status/2125477274069664040"
+   },
+   {
+    "id": "2125475192445014339",
+    "account": "FRANCE24",
+    "name": "FRANCE24",
+    "date": "2026-11-25",
+    "time": "07:22",
+    "text": "Sports - 2025 AFCON: CAS gives title to Senegal as Morocco vows to challenge verdict\n➡️ https://t.co/odxRotqO0h https://t.co/kajN3gNMfq",
+    "url": "https://x.com/FRANCE24/status/2125475192445014339"
+   },
+   {
+    "id": "2125372675715428437",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "00:35",
+    "text": "Senegal reinstated as 2025 African champions, Morocco to contest decision https://t.co/glnpi53udz",
+    "url": "https://x.com/Reuters/status/2125372675715428437"
+   },
+   {
+    "id": "2125329899460178037",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-24",
+    "time": "21:45",
+    "text": "Moroccan federation reports incident to CAS during Senegal AFCON appeal, source says https://t.co/WSmz1odGRH",
+    "url": "https://x.com/Reuters/status/2125329899460178037"
+   },
    {
     "id": "2125306791852675279",
     "account": "France24_fr",
@@ -3362,6 +3686,15 @@
     "time": "13:18",
     "text": "El TAS define hoy si mantiene a Marruecos como campeón de África o restituye el título a Senegal\n➡️ https://t.co/rb1vXbvkEJ https://t.co/Gdw8KVp96T",
     "url": "https://x.com/France24_es/status/2125202510604640435"
+   },
+   {
+    "id": "2125201640059764815",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-24",
+    "time": "13:15",
+    "text": "⚽ La finale de la #CAN2025 va enfin connaître son dénouement, mardi 24 novembre.\n\nLe Tribunal arbitral du sport va rendre son verdict sur le litige opposant le #Sénégal, vainqueur sur le terrain, et le #Maroc, vainqueur sur tapis vert, et ainsi officialiser le nom du champion. https://t.co/GFOUMaOVQV",
+    "url": "https://x.com/France24_fr/status/2125201640059764815"
    },
    {
     "id": "2125198082841497883",
@@ -3650,54 +3983,45 @@
     "time": "11:45",
     "text": "Natalia Lartitegui (Bilbao, 26 años) lleva un año pedaleando por el continente africano en solitario, desde Marruecos hacia el sur, y ha recorrido ya 13 países. \"Este viaje es sinónimo de vivir mi vida como quiero\", cuenta https://t.co/cP4DgPSDVH",
     "url": "https://x.com/el_pais/status/2117568721233527108"
-   },
-   {
-    "id": "2125477274069664040",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-25",
-    "time": "07:30",
-    "text": "Sports - CAN 2025 : le Sénégal déclaré vainqueur par le TAS, le Maroc conteste\n➡️ https://t.co/zzOAGieUCq https://t.co/d0TRFLsTqn",
-    "url": "https://x.com/France24_fr/status/2125477274069664040"
-   },
-   {
-    "id": "2125475192445014339",
-    "account": "FRANCE24",
-    "name": "FRANCE24",
-    "date": "2026-11-25",
-    "time": "07:22",
-    "text": "Sports - 2025 AFCON: CAS gives title to Senegal as Morocco vows to challenge verdict\n➡️ https://t.co/odxRotqO0h https://t.co/kajN3gNMfq",
-    "url": "https://x.com/FRANCE24/status/2125475192445014339"
-   },
-   {
-    "id": "2125372675715428437",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-25",
-    "time": "00:35",
-    "text": "Senegal reinstated as 2025 African champions, Morocco to contest decision https://t.co/glnpi53udz",
-    "url": "https://x.com/Reuters/status/2125372675715428437"
-   },
-   {
-    "id": "2125329899460178037",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-24",
-    "time": "21:45",
-    "text": "Moroccan federation reports incident to CAS during Senegal AFCON appeal, source says https://t.co/WSmz1odGRH",
-    "url": "https://x.com/Reuters/status/2125329899460178037"
-   },
-   {
-    "id": "2125201640059764815",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-24",
-    "time": "13:15",
-    "text": "⚽ La finale de la #CAN2025 va enfin connaître son dénouement, mardi 24 novembre.\n\nLe Tribunal arbitral du sport va rendre son verdict sur le litige opposant le #Sénégal, vainqueur sur le terrain, et le #Maroc, vainqueur sur tapis vert, et ainsi officialiser le nom du champion. https://t.co/GFOUMaOVQV",
-    "url": "https://x.com/France24_fr/status/2125201640059764815"
    }
   ],
   "cuba": [
+   {
+    "id": "2125451950745440315",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "05:50",
+    "text": "WHO chief calls on US to lift oil blockade on Cuba, citing health impact https://t.co/ftf1XAGnFc",
+    "url": "https://x.com/Reuters/status/2125451950745440315"
+   },
+   {
+    "id": "2125392369638055970",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-25",
+    "time": "01:53",
+    "text": "Cae la #esperanza de #vida en #Cuba por primera desde 1950, alerta la #OMS\n\nLa expectativa de vida al nacer pasó de 78,8 años en 2020 a 74,4 años en 2025.  (jc)\nhttps://t.co/pgw7rTx7GF",
+    "url": "https://x.com/dw_espanol/status/2125392369638055970"
+   },
+   {
+    "id": "2125392186871292360",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-25",
+    "time": "01:52",
+    "text": "Cae la #esperanza de #vida en #Cuba por primera desde 1950, alerta la #OMS\n\nLa expectativa de vida al nacer pasó de de 78,8 años en 2020 a 74,4 años en 2025.  (jc)\nhttps://t.co/pgw7rTx7GF",
+    "url": "https://x.com/dw_espanol/status/2125392186871292360"
+   },
+   {
+    "id": "2125390314688991261",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-25",
+    "time": "01:45",
+    "text": "WHO chief calls on US to lift oil blockade on Cuba, citing health impact https://t.co/QHQAn4MUJ9",
+    "url": "https://x.com/Reuters/status/2125390314688991261"
+   },
    {
     "id": "2125314819205046369",
     "account": "dw_espanol",
@@ -4012,42 +4336,6 @@
     "time": "10:30",
     "text": "La administración Trump ha reiterado que su objetivo es provocar un cambio en la cúpula de La Habana; el propio Donald Trump ha asegurado que el país está «a punto de caer».\n➡️ https://t.co/YizGDNJRcv https://t.co/CKTLeJfihb",
     "url": "https://x.com/euronewses/status/2113911037997293692"
-   },
-   {
-    "id": "2125451950745440315",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-25",
-    "time": "05:50",
-    "text": "WHO chief calls on US to lift oil blockade on Cuba, citing health impact https://t.co/ftf1XAGnFc",
-    "url": "https://x.com/Reuters/status/2125451950745440315"
-   },
-   {
-    "id": "2125392369638055970",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-25",
-    "time": "01:53",
-    "text": "Cae la #esperanza de #vida en #Cuba por primera desde 1950, alerta la #OMS\n\nLa expectativa de vida al nacer pasó de 78,8 años en 2020 a 74,4 años en 2025.  (jc)\nhttps://t.co/pgw7rTx7GF",
-    "url": "https://x.com/dw_espanol/status/2125392369638055970"
-   },
-   {
-    "id": "2125392186871292360",
-    "account": "dw_espanol",
-    "name": "DW Español",
-    "date": "2026-11-25",
-    "time": "01:52",
-    "text": "Cae la #esperanza de #vida en #Cuba por primera desde 1950, alerta la #OMS\n\nLa expectativa de vida al nacer pasó de de 78,8 años en 2020 a 74,4 años en 2025.  (jc)\nhttps://t.co/pgw7rTx7GF",
-    "url": "https://x.com/dw_espanol/status/2125392186871292360"
-   },
-   {
-    "id": "2125390314688991261",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-25",
-    "time": "01:45",
-    "text": "WHO chief calls on US to lift oil blockade on Cuba, citing health impact https://t.co/QHQAn4MUJ9",
-    "url": "https://x.com/Reuters/status/2125390314688991261"
    }
   ]
  }
