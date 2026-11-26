@@ -438,21 +438,20 @@
       { id: "vYX_MnWSNoE", title: "Taiwan comedian stands up despite Beijing attack | DW News", channel: "DW News", date: "2026-11-26" },
       { id: "Eew4gQS6xtc", title: "EE. UU. reaviva la guerra comercial: Brasil y China, en la mira de nuevos aranceles • FRANCE 24", channel: "FRANCE 24 Español", date: "2026-11-26" },
       { id: "FlM-DV10zdY", title: "Trump targets China & EU with new tariffs; will he restart the trade war?", channel: "CNN", date: "2026-11-26" },
-      { id: "CFlD7aNekKU", title: "China, EU and India among trading partners targeted by the new US tariffs | DW News", channel: "DW News", date: "2026-11-25" },
-      { id: "O8m3BGTlL-U", title: "🟢 Trump golpeará a China, la UE y otros doce socios con nuevas tarifas comerciales", channel: "DW Español", date: "2026-11-25" },
-      { id: "8L9BP1M4-2A", title: "Primer astronauta extranjero se incorpora a la estación espacial china Tiangong", channel: "DW Español", date: "2026-11-25" },
-      { id: "XC1JYlzU3NQ", title: "Trump reaviva guerra arancelaria: gravámenes de hasta 20% a China y otros 13 mercados", channel: "FRANCE 24 Español", date: "2026-11-25" },
-      { id: "RnJkHzvZJoE", title: "Hong Kong, un año después del incendio: damnificados vuelven a despedir a sus seres queridos", channel: "FRANCE 24 Español", date: "2026-11-25" }
+      { id: "DU3ywN0mTHU", title: "Hong Kong marks one year since deadly tower fire", channel: "Reuters", date: "2026-11-26" },
+      { id: "7rTBsjlsDqM", title: "China and Japan hit back at Trump's new tariff plans", channel: "Associated Press", date: "2026-11-26" },
+      { id: "Teqk1UETpDI", title: "US to hike tariffs on China, EU, APAC; Beijing condemns trade wars • FRANCE 24 English", channel: "FRANCE 24 English", date: "2026-11-26" },
+      { id: "dVQbtu1BWV8", title: "I followed Putin to China for a historic summit | BBC News", channel: "BBC News", date: "2026-11-26" },
+      { id: "ZRTPMJ0J3kU", title: "Nouveaux droits de douane des États-Unis : un retour de la guerre commerciale avec la Chine ?", channel: "FRANCE 24", date: "2026-11-26" }
     ],
     india: [
+      { id: "cuV0wxDkVcU", title: "Amid Tensions in India, Sikhs and Hindus are building mosques for Muslims | DW News", channel: "DW News", date: "2026-11-26" },
       { id: "CFlD7aNekKU", title: "China, EU and India among trading partners targeted by the new US tariffs | DW News", channel: "DW News", date: "2026-11-25" },
       { id: "BGxVljhvdM0", title: "Protesters storm Meta office building in India", channel: "CNN", date: "2026-11-22" },
       { id: "1MQ0WnDAKls", title: "Indian man jailed for over 19 years for failed plot to kill Sikh leader | DW News", channel: "DW News", date: "2026-11-21" },
       { id: "DOJyP7h17as", title: "Cómo India abrió su sector espacial y desató una ola de startups", channel: "DW Español", date: "2026-11-21" },
-      { id: "yWWAKIfCZp0", title: "Amid Tensions in India, Sikhs and Hindus are building mosques for Muslims | DW News", channel: "DW News", date: "2026-11-20" },
       { id: "fSY9sIKScTk", title: "India's EV boom has a charging problem | DW News", channel: "DW News", date: "2026-11-20" },
-      { id: "ZDZoZzN-1ms", title: "What we learned from William and Kate's visit to India. #BBCNews", channel: "BBC News", date: "2026-11-19" },
-      { id: "NljbnyhvcSo", title: "India has a rice problem: it's growing too much of the stuff", channel: "Reuters", date: "2026-11-18" }
+      { id: "ZDZoZzN-1ms", title: "What we learned from William and Kate's visit to India. #BBCNews", channel: "BBC News", date: "2026-11-19" }
     ],
     morocco: [
       { id: "tojr5Y_SGW4", title: "Senegal reinstated as AFCON champions as Morocco vows to fight on", channel: "euronews", date: "2026-11-24" },
