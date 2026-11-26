@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-26T16:03:28+01:00",
+ "fetched_at": "2026-11-26T23:58:41+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
  "accounts": [
@@ -20,6 +20,18 @@
  ],
  "countries": {
   "china": [
+   {
+    "id": "2126028546036351093",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-26",
+    "time": "20:01",
+    "text": "🟢Por qué la UE quiere limitar las importaciones de vehículos chinos a 350.000 al año\n\nDesde el próximo 1 de diciembre, las importaciones de híbridos chinos estará sujeta a un tope máximo. Solo se podrán importar 350.000 autos híbridos desde China al año. Una medida que busca https://t.co/K97lcxBFzh",
+    "url": "https://x.com/dw_espanol/status/2126028546036351093",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
    {
     "id": "2125811821118357620",
     "account": "Reuters",
@@ -2947,99 +2959,105 @@
     "lang": "en",
     "role": "tv",
     "scope": "tv"
-   },
-   {
-    "id": "2125967940650484090",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-26",
-    "time": "16:00",
-    "text": "EXCLUSIVE: US chip curbs, distillation crackdown threaten Chinese AI model development, sources say https://t.co/2xQmjETXyj",
-    "url": "https://x.com/Reuters/status/2125967940650484090"
-   },
-   {
-    "id": "2125956535016722731",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-26",
-    "time": "15:15",
-    "text": "🔊 No formal investigation was opened into Jensen Huang before President Trump backed his return. Instead, the administration relied on separate probes into Nvidia clients suspected of smuggling advanced chips to China. More on Reuters World News https://t.co/g4AeAxLNwm https://t.co/jHJpSwwR9r",
-    "url": "https://x.com/Reuters/status/2125956535016722731"
-   },
-   {
-    "id": "2125948976633450553",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-26",
-    "time": "14:45",
-    "text": "EXCLUSIVE: Data from Chinese AI firm MiniMax accessed by unidentified parties, researcher says https://t.co/zPGhX2Hqrt",
-    "url": "https://x.com/Reuters/status/2125948976633450553"
-   },
-   {
-    "id": "2125947720342913535",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-26",
-    "time": "14:40",
-    "text": "China, Japan, South Korea and ASEAN launch talks on digital payments across borders https://t.co/tAy4CGTDbR",
-    "url": "https://x.com/Reuters/status/2125947720342913535"
-   },
-   {
-    "id": "2125904941545865231",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-26",
-    "time": "11:50",
-    "text": "EXCLUSIVE: US chip curbs, distillation crackdown threaten Chinese AI model development, sources say https://t.co/hD702389ra",
-    "url": "https://x.com/Reuters/status/2125904941545865231"
-   },
-   {
-    "id": "2125888870558674987",
-    "account": "France24_es",
-    "name": "FRANCE 24 Español",
-    "date": "2026-11-26",
-    "time": "10:46",
-    "text": "\"Inaceptables\": China, la UE y otras grandes economías rechazan los nuevos aranceles de EE. UU.\n➡️ https://t.co/m0DcDL5by9 https://t.co/yWqtru177G",
-    "url": "https://x.com/France24_es/status/2125888870558674987"
-   },
-   {
-    "id": "2125887330200302024",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-26",
-    "time": "10:40",
-    "text": "EXCLUSIVE: Data from Chinese AI firm MiniMax accessed by unidentified parties, researcher says https://t.co/v6TidIaRPK",
-    "url": "https://x.com/Reuters/status/2125887330200302024"
-   },
-   {
-    "id": "2125886063361040708",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-26",
-    "time": "10:35",
-    "text": "China, Japan, South Korea and ASEAN launch talks on digital payments across borders https://t.co/GOExFD8uvZ",
-    "url": "https://x.com/Reuters/status/2125886063361040708"
-   },
-   {
-    "id": "2125885285330563378",
-    "account": "France24_fr",
-    "name": "FRANCE 24 Français",
-    "date": "2026-11-26",
-    "time": "10:32",
-    "text": "🇺🇸 L'annonce par le gouvernement américain d'une nouvelle série de droits de douane soulève l'indignation des principaux partenaires commerciaux des États-Unis, Chine, Brésil, Japon et #UE. \n\nCes droits de douane n'entreront en vigueur que dans un mois https://t.co/N2ntg5hB2V",
-    "url": "https://x.com/France24_fr/status/2125885285330563378"
-   },
-   {
-    "id": "2125869729592025350",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-26",
-    "time": "09:30",
-    "text": "EXCLUSIVE: US officials divided over Chinese spying allegations following Jensen Huang's return https://t.co/Hgd9eJBXCX",
-    "url": "https://x.com/Reuters/status/2125869729592025350"
    }
   ],
   "india": [
+   {
+    "id": "2126084870401085868",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "23:45",
+    "text": "J.P. Morgan sees Indian stocks rise further in 2027 after 'great comeback' of 2026 https://t.co/H7JETdvZP1",
+    "url": "https://x.com/Reuters/status/2126084870401085868",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126035819739689416",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "20:30",
+    "text": "Explainer: Why are Indian rice prices rising despite record stocks? https://t.co/UZZ4LaNA1U",
+    "url": "https://x.com/Reuters/status/2126035819739689416",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126033285184713070",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "20:20",
+    "text": "India swaps, treasury bills signal possibility of outsized RBI rate hike next week https://t.co/i56VlW7Rkd",
+    "url": "https://x.com/Reuters/status/2126033285184713070",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126010642884620347",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "18:50",
+    "text": "J.P. Morgan sees Indian stocks rise further in 2027 after 'great comeback' of 2026 https://t.co/0RByAnlJgE",
+    "url": "https://x.com/Reuters/status/2126010642884620347",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125991753316475255",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "17:35",
+    "text": "How Trump's proposed tariffs for India compare with rival nations https://t.co/MwABzEGlOh",
+    "url": "https://x.com/Reuters/status/2125991753316475255",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125990516051279893",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "17:30",
+    "text": "Meta battles political storm in India as Congress party sues, stages protests https://t.co/PeXLkEMiGW",
+    "url": "https://x.com/Reuters/status/2125990516051279893",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125972914679730331",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "16:20",
+    "text": "Explainer: Why are Indian rice prices rising despite record stocks? https://t.co/oBfAVhUsrS",
+    "url": "https://x.com/Reuters/status/2125972914679730331",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125970378602246197",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "16:10",
+    "text": "India swaps, treasury bills signal possibility of outsized RBI rate hike next week https://t.co/12uC3Bx8LR",
+    "url": "https://x.com/Reuters/status/2125970378602246197",
+    "lang": "",
+    "role": "tv",
+    "scope": "tv"
+   },
    {
     "id": "2125844543626973572",
     "account": "Reuters",
@@ -4443,81 +4461,33 @@
     "url": "https://x.com/BBCWorld/status/2119968072714932598",
     "lang": "",
     "scope": "tv"
-   },
-   {
-    "id": "2125960326071947455",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-26",
-    "time": "15:30",
-    "text": "Indian court tightens food labelling proposal, asks global food firms to end 'double standards' https://t.co/hvVFlVlDqF",
-    "url": "https://x.com/Reuters/status/2125960326071947455"
-   },
-   {
-    "id": "2125940166489419976",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-26",
-    "time": "14:10",
-    "text": "India orders tougher surveillance of packaged water, scrutiny set to cover PepsiCo, Coca-Cola https://t.co/bVhw69u9md",
-    "url": "https://x.com/Reuters/status/2125940166489419976"
-   },
-   {
-    "id": "2125920041916915845",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-26",
-    "time": "12:50",
-    "text": "How Trump's proposed tariffs for India compare with rival nations https://t.co/EQjJKiudGe",
-    "url": "https://x.com/Reuters/status/2125920041916915845"
-   },
-   {
-    "id": "2125907503221293350",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-26",
-    "time": "12:00",
-    "text": "Indian farmers sell paddy stubble to biomass firms, reduce burning https://t.co/sI8gkdc8Bs",
-    "url": "https://x.com/Reuters/status/2125907503221293350"
-   },
-   {
-    "id": "2125902488167481396",
-    "account": "BBCWorld",
-    "name": "BBC News (World)",
-    "date": "2026-11-26",
-    "time": "11:40",
-    "text": "The big fat wedding of politician's daughter making headlines in India https://t.co/mafK2VwobY",
-    "url": "https://x.com/BBCWorld/status/2125902488167481396"
-   },
-   {
-    "id": "2125897411746746585",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-26",
-    "time": "11:20",
-    "text": "Indian court tightens food labelling proposal, asks global food firms to end 'double standards' https://t.co/Z8qwZ5aPWq",
-    "url": "https://x.com/Reuters/status/2125897411746746585"
-   },
-   {
-    "id": "2125877330249744777",
-    "account": "Reuters",
-    "name": "Reuters",
-    "date": "2026-11-26",
-    "time": "10:00",
-    "text": "India orders tougher surveillance of packaged water, scrutiny set to cover PepsiCo, Coca-Cola https://t.co/UDO7edSzaV",
-    "url": "https://x.com/Reuters/status/2125877330249744777"
-   },
-   {
-    "id": "2125870376152396215",
-    "account": "BBCWorld",
-    "name": "BBC News (World)",
-    "date": "2026-11-26",
-    "time": "09:32",
-    "text": "Two screenings of Pakistani TV show cancelled in India after backlash https://t.co/cQf3aWl9uQ",
-    "url": "https://x.com/BBCWorld/status/2125870376152396215"
    }
   ],
   "morocco": [
+   {
+    "id": "2126084150759166407",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-26",
+    "time": "23:42",
+    "text": "📺 DIRECTO #DebateA4 | Feijóo: \"La inmigración irregular ha subido un 40% y el problema es que la gente se muere. Yo quiero llevarme bien con Marruecos, pero respeto. Ceuta no se vende\" https://t.co/cAAgkS3hyc https://t.co/6vIxDGQPyr",
+    "url": "https://x.com/el_pais/status/2126084150759166407",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126009338120790018",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-26",
+    "time": "18:45",
+    "text": "El actual cónsul de España en Tetuán ha explicado a la magistrada María Tardón que informó al embajador en Rabat de que la frontera con Ceuta estaba “caliente” antes de la entrada masiva de los días 30 y 31 de julio. https://t.co/RuivQRdt9x",
+    "url": "https://x.com/el_pais/status/2126009338120790018",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
    {
     "id": "2125786059476734262",
     "account": "euronews",
@@ -5021,30 +4991,6 @@
     "url": "https://x.com/Reuters/status/2118204186332389535",
     "lang": "",
     "scope": "tv"
-   },
-   {
-    "id": "2118140020317913102",
-    "account": "Reuters",
-    "name": "Reuters",
-    "role": "tv",
-    "date": "2026-11-05",
-    "time": "01:35",
-    "text": "Morocco says it will uphold Western Sahara ceasefire after UN mission ends https://t.co/mBpkyiKbbN",
-    "url": "https://x.com/Reuters/status/2118140020317913102",
-    "lang": "",
-    "scope": "tv"
-   },
-   {
-    "id": "2117568721233527108",
-    "account": "el_pais",
-    "name": "EL PAÍS",
-    "role": "tv",
-    "date": "2026-11-03",
-    "time": "11:45",
-    "text": "Natalia Lartitegui (Bilbao, 26 años) lleva un año pedaleando por el continente africano en solitario, desde Marruecos hacia el sur, y ha recorrido ya 13 países. \"Este viaje es sinónimo de vivir mi vida como quiero\", cuenta https://t.co/cP4DgPSDVH",
-    "url": "https://x.com/el_pais/status/2117568721233527108",
-    "lang": "",
-    "scope": "tv"
    }
   ],
   "cuba": [
@@ -5443,15 +5389,6 @@
     "lang": "",
     "role": "tv",
     "scope": "tv"
-   },
-   {
-    "id": "2125912561841230088",
-    "account": "CNNEE",
-    "name": "CNN en Español",
-    "date": "2026-11-26",
-    "time": "12:20",
-    "text": "El fiasco de Trump en las elecciones intermedias no ha disminuido sus planes sobre Cuba. Ni los del \"presidente\" Rubio\nhttps://t.co/kcfupThS7n",
-    "url": "https://x.com/CNNEE/status/2125912561841230088"
    }
   ]
  }
