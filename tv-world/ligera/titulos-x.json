@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-26T00:03:36+01:00",
+ "fetched_at": "2026-11-26T07:58:03+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
  "accounts": [
@@ -20,6 +20,114 @@
  ],
  "countries": {
   "china": [
+   {
+    "id": "2125811821118357620",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "05:40",
+    "text": "How China got access to Nvidia's AI chips despite rules to stop them https://t.co/Wkb5e0O4Qz",
+    "url": "https://x.com/Reuters/status/2125811821118357620",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125787482155573283",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-26",
+    "time": "04:03",
+    "text": "El gigante chino BYD quiere fabricar coches eléctricos en Francia\n➡️ https://t.co/7bB8ZTT9Jj https://t.co/6OzuOd4y7x",
+    "url": "https://x.com/euronewses/status/2125787482155573283",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125756429587882109",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "02:00",
+    "text": "President Trump fired a new tariff salvo on 14 major trading partners, including China, Japan and the European Union, undeterred by the losses his Republican Party suffered in US midterm elections. David Lawder explains https://t.co/fCWMtvYYl5 https://t.co/VMWK9TH9RN",
+    "url": "https://x.com/Reuters/status/2125756429587882109",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125748996140400674",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "01:30",
+    "text": "How China got access to Nvidia's AI chips despite rules to stop them https://t.co/2jzFuKhgNi",
+    "url": "https://x.com/Reuters/status/2125748996140400674",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125748874057019715",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-26",
+    "time": "01:30",
+    "text": "EE UU propone nuevos aranceles contra 14 socios comerciales, entre ellos China y la UE\nhttps://t.co/2Zy8aPV0dS",
+    "url": "https://x.com/el_pais/status/2125748874057019715",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125747635256771047",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-26",
+    "time": "01:25",
+    "text": "Con la Ley de Cuántica, la UE busca situarse a la vanguardia de la próxima revolución tecnológica y evitar quedarse rezagada frente a Estados Unidos y China, como ha ocurrido en la carrera por la inteligencia artificial. https://t.co/EcF5BQv3Zx",
+    "url": "https://x.com/euronewses/status/2125747635256771047",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125747201548619843",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-26",
+    "time": "01:23",
+    "text": "El organismo anticorrupción de China inició una investigación contra el jefe del Partido Comunista en Shanghái, Chen Jining. Se trata de la cuarta investigación de este tipo en el Politburó desde 2025\nhttps://t.co/pApcsSAeAk",
+    "url": "https://x.com/France24_es/status/2125747201548619843",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125738056309194896",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-26",
+    "time": "00:47",
+    "text": "Astronauta pakistaní se convierte en el primer extranjero en entrar en la Estación Espacial China https://t.co/LAtg5zl0my",
+    "url": "https://x.com/CNNEE/status/2125738056309194896",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125729751172002228",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-26",
+    "time": "00:14",
+    "text": "Este es Pan Baobao, el leopardo gordito y viral de China https://t.co/bf86w6lHmk",
+    "url": "https://x.com/CNNEE/status/2125729751172002228",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
    {
     "id": "2125701097763299502",
     "account": "Reuters",
@@ -2843,6 +2951,18 @@
   ],
   "india": [
    {
+    "id": "2125844543626973572",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "07:50",
+    "text": "Indian farmers sell paddy stubble to biomass firms, reduce burning https://t.co/74y8P24d7T",
+    "url": "https://x.com/Reuters/status/2125844543626973572",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
     "id": "2125723741640413369",
     "account": "Reuters",
     "name": "Reuters",
@@ -4236,6 +4356,18 @@
    }
   ],
   "morocco": [
+   {
+    "id": "2125786059476734262",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-26",
+    "time": "03:57",
+    "text": "From upside-down houses to furniture built for giants, Jean-François Fourtou's sculpture park in the Moroccan city of Marrakech turns childhood memories into a surreal, immersive experience. #Art\n➡️ https://t.co/ikjIgp9YS3 https://t.co/dwhy5P7GXi",
+    "url": "https://x.com/euronews/status/2125786059476734262",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
    {
     "id": "2125669482354147676",
     "account": "France24_fr",
