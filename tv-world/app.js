@@ -435,24 +435,24 @@
   /* Fechas convertidas a calendario Europe/Madrid a partir de la fecha de publicación de YouTube. */
   const COUNTRY_NEWS = {
     china: [
-      { id: "bIc350mUzBk", title: "Pakistaní se convertira en el primer astronauta extranjero en participar en una misión china", channel: "DW Español", date: "2026-11-24" },
-      { id: "3QpQaTL7gOQ", title: "Pakistani astronaut joins China space mission | DW News", channel: "DW News", date: "2026-11-24" },
-      { id: "4zC65BijKJI", title: "Europe Tonight debriefs: can the EU budget compete with China and the US?", channel: "euronews", date: "2026-11-24" },
-      { id: "z367noyDQj0", title: "Did Nvidia knowingly send chips to China 'cutout'? Was there ‘pay-to-play’ involving Trump, Lutnick?", channel: "FRANCE 24 English", date: "2026-11-24" },
-      { id: "SAcxKwYof3E", title: "LIVE: China holds ceremony before launch of Shenzhou-24 spacecraft", channel: "Reuters", date: "2026-11-24" },
-      { id: "OR0s68ezlnA", title: "LIVE: China holds a send-off ceremony for its Shenzhou 24 astronauts", channel: "Associated Press", date: "2026-11-24" },
-      { id: "aR9ZWFNQjCE", title: "LIVE: China launches the first foreign astronaut to board its space station", channel: "Associated Press", date: "2026-11-24" },
-      { id: "XZ966rNQsi4", title: "What does China think of Nvidia, Jensen Huang and Trump? | Global News Podcast", channel: "BBC News", date: "2026-11-24" }
+      { id: "vYX_MnWSNoE", title: "Taiwan comedian stands up despite Beijing attack | DW News", channel: "DW News", date: "2026-11-26" },
+      { id: "Eew4gQS6xtc", title: "EE. UU. reaviva la guerra comercial: Brasil y China, en la mira de nuevos aranceles • FRANCE 24", channel: "FRANCE 24 Español", date: "2026-11-26" },
+      { id: "FlM-DV10zdY", title: "Trump targets China & EU with new tariffs; will he restart the trade war?", channel: "CNN", date: "2026-11-26" },
+      { id: "CFlD7aNekKU", title: "China, EU and India among trading partners targeted by the new US tariffs | DW News", channel: "DW News", date: "2026-11-25" },
+      { id: "O8m3BGTlL-U", title: "🟢 Trump golpeará a China, la UE y otros doce socios con nuevas tarifas comerciales", channel: "DW Español", date: "2026-11-25" },
+      { id: "8L9BP1M4-2A", title: "Primer astronauta extranjero se incorpora a la estación espacial china Tiangong", channel: "DW Español", date: "2026-11-25" },
+      { id: "XC1JYlzU3NQ", title: "Trump reaviva guerra arancelaria: gravámenes de hasta 20% a China y otros 13 mercados", channel: "FRANCE 24 Español", date: "2026-11-25" },
+      { id: "RnJkHzvZJoE", title: "Hong Kong, un año después del incendio: damnificados vuelven a despedir a sus seres queridos", channel: "FRANCE 24 Español", date: "2026-11-25" }
     ],
     india: [
+      { id: "CFlD7aNekKU", title: "China, EU and India among trading partners targeted by the new US tariffs | DW News", channel: "DW News", date: "2026-11-25" },
       { id: "BGxVljhvdM0", title: "Protesters storm Meta office building in India", channel: "CNN", date: "2026-11-22" },
       { id: "1MQ0WnDAKls", title: "Indian man jailed for over 19 years for failed plot to kill Sikh leader | DW News", channel: "DW News", date: "2026-11-21" },
       { id: "DOJyP7h17as", title: "Cómo India abrió su sector espacial y desató una ola de startups", channel: "DW Español", date: "2026-11-21" },
       { id: "yWWAKIfCZp0", title: "Amid Tensions in India, Sikhs and Hindus are building mosques for Muslims | DW News", channel: "DW News", date: "2026-11-20" },
       { id: "fSY9sIKScTk", title: "India's EV boom has a charging problem | DW News", channel: "DW News", date: "2026-11-20" },
       { id: "ZDZoZzN-1ms", title: "What we learned from William and Kate's visit to India. #BBCNews", channel: "BBC News", date: "2026-11-19" },
-      { id: "NljbnyhvcSo", title: "India has a rice problem: it's growing too much of the stuff", channel: "Reuters", date: "2026-11-18" },
-      { id: "cOLounJNUgw", title: "Delhi air as harmful as smoking 20 cigarettes a day", channel: "Reuters", date: "2026-11-09" }
+      { id: "NljbnyhvcSo", title: "India has a rice problem: it's growing too much of the stuff", channel: "Reuters", date: "2026-11-18" }
     ],
     morocco: [
       { id: "tojr5Y_SGW4", title: "Senegal reinstated as AFCON champions as Morocco vows to fight on", channel: "euronews", date: "2026-11-24" },

@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-26T00:03:36+01:00",
+ "fetched_at": "2026-11-26T07:58:03+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, official politician (government-verified) and official European/US TV-news accounts; start_time 2026-09-01T00:00:00Z (TV China/India/Morocco/Cuba from 2026-10-01T00:00:00Z); -is:retweet -is:reply; literal text only, country must appear in the post",
  "accounts": {
@@ -270,6 +270,138 @@
  },
  "countries": {
   "china": [
+   {
+    "id": "2125811821118357620",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "05:40",
+    "text": "How China got access to Nvidia's AI chips despite rules to stop them https://t.co/Wkb5e0O4Qz",
+    "url": "https://x.com/Reuters/status/2125811821118357620",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125787482155573283",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-26",
+    "time": "04:03",
+    "text": "El gigante chino BYD quiere fabricar coches eléctricos en Francia\n➡️ https://t.co/7bB8ZTT9Jj https://t.co/6OzuOd4y7x",
+    "url": "https://x.com/euronewses/status/2125787482155573283",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125786881732309031",
+    "account": "Chinamission2un",
+    "name": "Chinese Mission to UN",
+    "date": "2026-11-26",
+    "time": "04:01",
+    "text": "Foreigners on social media can’t stop talking about China’s 24-hour mega spas.\n#ChinaTravel #MegaSpa #ChinaTrend https://t.co/WLPeKxXbrQ",
+    "url": "https://x.com/Chinamission2un/status/2125786881732309031",
+    "lang": "en",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2125786573845266759",
+    "account": "Chinamission2un",
+    "name": "Chinese Mission to UN",
+    "date": "2026-11-26",
+    "time": "03:59",
+    "text": "From AI robots harvesting scallops to systems protecting submarine power cables — advanced maritime robotics are taking on the ocean’s toughest jobs and reshaping underwater exploration. https://t.co/zCZJqsz2fv",
+    "url": "https://x.com/Chinamission2un/status/2125786573845266759",
+    "lang": "en",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2125756429587882109",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "02:00",
+    "text": "President Trump fired a new tariff salvo on 14 major trading partners, including China, Japan and the European Union, undeterred by the losses his Republican Party suffered in US midterm elections. David Lawder explains https://t.co/fCWMtvYYl5 https://t.co/VMWK9TH9RN",
+    "url": "https://x.com/Reuters/status/2125756429587882109",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125748996140400674",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "01:30",
+    "text": "How China got access to Nvidia's AI chips despite rules to stop them https://t.co/2jzFuKhgNi",
+    "url": "https://x.com/Reuters/status/2125748996140400674",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125748874057019715",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-26",
+    "time": "01:30",
+    "text": "EE UU propone nuevos aranceles contra 14 socios comerciales, entre ellos China y la UE\nhttps://t.co/2Zy8aPV0dS",
+    "url": "https://x.com/el_pais/status/2125748874057019715",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125747635256771047",
+    "account": "euronewses",
+    "name": "euronews español",
+    "date": "2026-11-26",
+    "time": "01:25",
+    "text": "Con la Ley de Cuántica, la UE busca situarse a la vanguardia de la próxima revolución tecnológica y evitar quedarse rezagada frente a Estados Unidos y China, como ha ocurrido en la carrera por la inteligencia artificial. https://t.co/EcF5BQv3Zx",
+    "url": "https://x.com/euronewses/status/2125747635256771047",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125747201548619843",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-26",
+    "time": "01:23",
+    "text": "El organismo anticorrupción de China inició una investigación contra el jefe del Partido Comunista en Shanghái, Chen Jining. Se trata de la cuarta investigación de este tipo en el Politburó desde 2025\nhttps://t.co/pApcsSAeAk",
+    "url": "https://x.com/France24_es/status/2125747201548619843",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125738056309194896",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-26",
+    "time": "00:47",
+    "text": "Astronauta pakistaní se convierte en el primer extranjero en entrar en la Estación Espacial China https://t.co/LAtg5zl0my",
+    "url": "https://x.com/CNNEE/status/2125738056309194896",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125729751172002228",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-26",
+    "time": "00:14",
+    "text": "Este es Pan Baobao, el leopardo gordito y viral de China https://t.co/bf86w6lHmk",
+    "url": "https://x.com/CNNEE/status/2125729751172002228",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
    {
     "id": "2125701097763299502",
     "account": "Reuters",
@@ -5241,6 +5373,114 @@
   ],
   "india": [
    {
+    "id": "2125844543626973572",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "07:50",
+    "text": "Indian farmers sell paddy stubble to biomass firms, reduce burning https://t.co/74y8P24d7T",
+    "url": "https://x.com/Reuters/status/2125844543626973572",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2125839608311373849",
+    "account": "DrSJaishankar",
+    "name": "Dr. S. Jaishankar",
+    "date": "2026-11-26",
+    "time": "07:30",
+    "text": "A great pleasure to meet FM @RitishRamful of Mauritius on the sidelines of the @IORAofficial Council of Ministers meeting.\n\nReviewed key areas of our bilateral relationship, including progress under the Special Economic Package.\n\nReaffirmed our commitment to further strengthening https://t.co/8uquYy4plg",
+    "url": "https://x.com/DrSJaishankar/status/2125839608311373849",
+    "lang": "en",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2125801780495974404",
+    "account": "MEAIndia",
+    "name": "Randhir Jaiswal",
+    "date": "2026-11-26",
+    "time": "05:00",
+    "text": "Warm welcome to a trusted partner in the Indian Ocean Region! 🇮🇳🇸🇨\n\nMinister of Foreign Affairs and Diaspora of Seychelles, Barry Faure, arrives in New Delhi to participate in the 25th IORA Council of Ministers Meeting.\n\n#VisionMAHASAGAR\n#50yearsIndiaSeychelles https://t.co/wf6JsB4qwp",
+    "url": "https://x.com/MEAIndia/status/2125801780495974404",
+    "lang": "en",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2125795464255877233",
+    "account": "narendramodi",
+    "name": "Narendra Modi",
+    "date": "2026-11-26",
+    "time": "04:35",
+    "text": "In this OpEd, I highlight the following:\n\n UNIQUENESS of our Constitution and Constituent Assembly.\n\nHow the Constitution of India is an INSEPARABLE part of my journey.\n\nWays the NDA Government has STRENGTHENED the Constitution. \n\nEfforts towards boosting SOCIAL AND ECONOMIC",
+    "url": "https://x.com/narendramodi/status/2125795464255877233",
+    "lang": "en",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2125771707135009056",
+    "account": "narendramodi",
+    "name": "Narendra Modi",
+    "date": "2026-11-26",
+    "time": "03:00",
+    "text": "सभी देशवासियों को संविधान दिवस की हार्दिक शुभकामनाएं। \n\nइस पावन अवसर पर पूज्य बाबासाहेब एवं संविधान सभा की समस्त महान विभूतियों को मेरा नमन और वंदन। \n\nसंविधान के रूप में उनके द्वारा दी गई सौगात भारतीय लोकतंत्र की अनमोल धरोहर है, जो विकसित भारत के संकल्प को साकार करने में हमारा https://t.co/QBOcpyfuIU",
+    "url": "https://x.com/narendramodi/status/2125771707135009056",
+    "lang": "hi",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2125771009873920138",
+    "account": "MEAIndia",
+    "name": "Randhir Jaiswal",
+    "date": "2026-11-26",
+    "time": "02:57",
+    "text": "Strengthening our enduring partnership with a close friend and valued partner in the Indian Ocean 🇮🇳🇲🇺\n\nH.E. Mr. Dhananjay Ramful, Minister of Foreign Affairs, Regional Integration and International Cooperation of Mauritius, arrives in India for the 25th IORA Council of Ministers https://t.co/tply4P5ATj",
+    "url": "https://x.com/MEAIndia/status/2125771009873920138",
+    "lang": "en",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2125768812498969013",
+    "account": "MEAIndia",
+    "name": "Randhir Jaiswal",
+    "date": "2026-11-26",
+    "time": "02:49",
+    "text": "Strengthening our enduring partnership with a close friend and valued partner in the Indian Ocean 🇮🇳🇲🇺\n\nH.E. Mr. Dhananjay Ramful, Minister of Foreign Affairs, Regional Integration and International Trade of Mauritius, arrives in India for the 25th IORA Council of Ministers https://t.co/manjdmhY3P",
+    "url": "https://x.com/MEAIndia/status/2125768812498969013",
+    "lang": "en",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2125766423880593671",
+    "account": "DrSJaishankar",
+    "name": "Dr. S. Jaishankar",
+    "date": "2026-11-26",
+    "time": "02:39",
+    "text": "Remember innocent lives lost &amp; salute the brave security personnel who made the supreme sacrifice during 26/11 Mumbai terror attacks.\n\nCommitted to combating terrorism in all its forms &amp; manifestations and bringing those involved to justice. Zero tolerance for terrorism.",
+    "url": "https://x.com/DrSJaishankar/status/2125766423880593671",
+    "lang": "en",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2125766224487538891",
+    "account": "DrSJaishankar",
+    "name": "Dr. S. Jaishankar",
+    "date": "2026-11-26",
+    "time": "02:38",
+    "text": "On #ConstitutionDay today, pay tribute to the makers of our Constitution and their vision for our Republic. Reaffirm our commitment to its ideals and principles.",
+    "url": "https://x.com/DrSJaishankar/status/2125766224487538891",
+    "lang": "en",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
     "id": "2125723741640413369",
     "account": "Reuters",
     "name": "Reuters",
@@ -9107,6 +9347,18 @@
   ],
   "morocco": [
    {
+    "id": "2125786059476734262",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-26",
+    "time": "03:57",
+    "text": "From upside-down houses to furniture built for giants, Jean-François Fourtou's sculpture park in the Moroccan city of Marrakech turns childhood memories into a surreal, immersive experience. #Art\n➡️ https://t.co/ikjIgp9YS3 https://t.co/dwhy5P7GXi",
+    "url": "https://x.com/euronews/status/2125786059476734262",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
     "id": "2125669482354147676",
     "account": "France24_fr",
     "name": "FRANCE 24 Français",
@@ -10248,6 +10500,42 @@
    }
   ],
   "cuba": [
+   {
+    "id": "2125780180174319681",
+    "account": "BrunoRguezP",
+    "name": "Bruno Rodríguez P",
+    "date": "2026-11-26",
+    "time": "03:34",
+    "text": "Sostuve reunión con el estimado Canciller de #Panamá @javierachapma, de visita en #Cuba. Fue una excelente oportunidad de saludarlo y conversar sobre temas de interés bilateral.\n\nResaltamos nuestra voluntad de seguir profundizando vínculos entre ambos países, fundamentalmente en https://t.co/aqMTbYRT8o",
+    "url": "https://x.com/BrunoRguezP/status/2125780180174319681",
+    "lang": "es",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2125762936874701035",
+    "account": "PresidenciaCuba",
+    "name": "Presidencia Cuba 🇨🇺",
+    "date": "2026-11-26",
+    "time": "02:25",
+    "text": "🇨🇺| Ministerio de Trabajo y Seguridad Social: organismo líder del eje social de las Transformaciones\n\nEl Primer Secretario, @DiazCanelB, lideró las conclusiones de la visita que realizó el @PartidoPCC al @MTSS_CUBA.\n\n🔗| Detalles en la nota:\n\nhttps://t.co/TBJFx2GnDU https://t.co/7yATxyq4Xe",
+    "url": "https://x.com/PresidenciaCuba/status/2125762936874701035",
+    "lang": "es",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2125735376690041156",
+    "account": "DiazCanelB",
+    "name": "Miguel Díaz-Canel Bermúdez",
+    "date": "2026-11-26",
+    "time": "00:36",
+    "text": "Recibí al canciller de #Panamá, @javierachapma, con quien trasladé un cordial saludo al Presidente @JoseRaulMulino.\n\nDestacamos las oportunidades existentes para ampliar nuestras relaciones económico-comerciales.\n\nAgradecí la oposición de Panamá al #bloqueo impuesto a #Cuba. https://t.co/6SsVmdIqXx",
+    "url": "https://x.com/DiazCanelB/status/2125735376690041156",
+    "lang": "es",
+    "role": "politician",
+    "scope": "country"
+   },
    {
     "id": "2125557285187367225",
     "account": "PresidenciaCuba",
