@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-26T23:58:41+01:00",
+ "fetched_at": "2026-11-27T08:05:18+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
  "accounts": [
@@ -20,6 +20,54 @@
  ],
  "countries": {
   "china": [
+   {
+    "id": "2126151528612278659",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-27",
+    "time": "04:10",
+    "text": "Construyó un santuario al licor nacional de China, pero no puede beberlo: es alérgico al alcohol https://t.co/SnWnaCh5PF",
+    "url": "https://x.com/CNNEE/status/2126151528612278659",
+    "lang": null,
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126193563415228613",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "06:57",
+    "text": "China is staging a weeks-long amphibious landing drill in the province facing Taiwan, testing a new method to land troops ashore by linking civilian vessels into a makeshift floating bridge, satellite images and a research report showed https://t.co/If2Uj6xR84",
+    "url": "https://x.com/Reuters/status/2126193563415228613",
+    "lang": null,
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126194408357839194",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "07:00",
+    "text": "Mercedes-Benz plans new China JV for local auto part supplies https://t.co/19kcENIzYG",
+    "url": "https://x.com/Reuters/status/2126194408357839194",
+    "lang": null,
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126205661612548351",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "07:45",
+    "text": "Candidates fanned out across Taiwan on Friday, the final day of campaigning for local elections that China will closely follow, even if Beijing has not figured as a major campaign issue https://t.co/vfZJKXzOKI",
+    "url": "https://x.com/Reuters/status/2126205661612548351",
+    "lang": null,
+    "role": "tv",
+    "scope": "tv"
+   },
    {
     "id": "2126028546036351093",
     "account": "dw_espanol",
@@ -2963,6 +3011,30 @@
   ],
   "india": [
    {
+    "id": "2126116517137756404",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-27",
+    "time": "01:50",
+    "text": "Death-sentenced Sheikh Hasina's planned return puts Bangladesh on edge - and India in a bind https://t.co/eretuB97f4",
+    "url": "https://x.com/BBCWorld/status/2126116517137756404",
+    "lang": null,
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126146532546138514",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "03:50",
+    "text": "India win toss, elect to field in second test v New Zealand https://t.co/CaX4KbR5bH",
+    "url": "https://x.com/Reuters/status/2126146532546138514",
+    "lang": null,
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
     "id": "2126084870401085868",
     "account": "Reuters",
     "name": "Reuters",
@@ -4465,6 +4537,18 @@
   ],
   "morocco": [
    {
+    "id": "2126116292931326402",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "01:50",
+    "text": "Ghana's national amputee football team paraded through the streets of Accra with their first-ever Amputee Football World Cup trophy four days after beating Morocco 1-0 in the final in Mexico https://t.co/1iItgbkfwH",
+    "url": "https://x.com/Reuters/status/2126116292931326402",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
     "id": "2126084150759166407",
     "account": "el_pais",
     "name": "EL PAÍS",
@@ -4994,6 +5078,18 @@
    }
   ],
   "cuba": [
+   {
+    "id": "2126133392701894764",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-27",
+    "time": "02:57",
+    "text": "Gobierno de Panamá gestiona en Cuba la liberación de siete panameños presos\n\nEl canciller Javier Martínez-Acha se reunió en La Habana con su homólogo cubano y con el grupo de panameños detenidos. (gs)\nhttps://t.co/d1xQTrFXGP https://t.co/c21SAil1P6",
+    "url": "https://x.com/dw_espanol/status/2126133392701894764",
+    "lang": null,
+    "role": "tv",
+    "scope": "tv"
+   },
    {
     "id": "2125314819205046369",
     "account": "dw_espanol",

@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-26T23:58:41+01:00",
+ "fetched_at": "2026-11-27T08:05:18+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, official politician (government-verified) and official European/US TV-news accounts; start_time 2026-09-01T00:00:00Z (TV China/India/Morocco/Cuba from 2026-10-01T00:00:00Z); -is:retweet -is:reply; literal text only, country must appear in the post",
  "accounts": {
@@ -270,6 +270,54 @@
  },
  "countries": {
   "china": [
+   {
+    "id": "2126151528612278659",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-27",
+    "time": "04:10",
+    "text": "Construyó un santuario al licor nacional de China, pero no puede beberlo: es alérgico al alcohol https://t.co/SnWnaCh5PF",
+    "url": "https://x.com/CNNEE/status/2126151528612278659",
+    "lang": null,
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126193563415228613",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "06:57",
+    "text": "China is staging a weeks-long amphibious landing drill in the province facing Taiwan, testing a new method to land troops ashore by linking civilian vessels into a makeshift floating bridge, satellite images and a research report showed https://t.co/If2Uj6xR84",
+    "url": "https://x.com/Reuters/status/2126193563415228613",
+    "lang": null,
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126194408357839194",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "07:00",
+    "text": "Mercedes-Benz plans new China JV for local auto part supplies https://t.co/19kcENIzYG",
+    "url": "https://x.com/Reuters/status/2126194408357839194",
+    "lang": null,
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126205661612548351",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "07:45",
+    "text": "Candidates fanned out across Taiwan on Friday, the final day of campaigning for local elections that China will closely follow, even if Beijing has not figured as a major campaign issue https://t.co/vfZJKXzOKI",
+    "url": "https://x.com/Reuters/status/2126205661612548351",
+    "lang": null,
+    "role": "tv",
+    "scope": "tv"
+   },
    {
     "id": "2126028546036351093",
     "account": "dw_espanol",
@@ -5529,6 +5577,78 @@
   ],
   "india": [
    {
+    "id": "2126133909570408605",
+    "account": "narendramodi",
+    "name": "Narendra Modi",
+    "date": "2026-11-27",
+    "time": "03:00",
+    "text": "सतां प्रसङ्गान्मम वीर्यसंविदो\nभवन्ति हृत्कर्णरसायना: कथा: ।\n\nतज्जोषणादाश्वपवर्गवर्त्मनि\nश्रद्धा रतिर्भक्तिरनुक्रमिष्यति॥ https://t.co/2o39QQS5O6",
+    "url": "https://x.com/narendramodi/status/2126133909570408605",
+    "lang": null,
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2126136755292393494",
+    "account": "DrSJaishankar",
+    "name": "Dr. S. Jaishankar",
+    "date": "2026-11-27",
+    "time": "03:11",
+    "text": "Warm birthday wishes to my Cabinet colleague Shri Pralhad Joshi ji. \n\nMay he be blessed with a long life, good health, and continued success in public service.\n\n@JoshiPralhad",
+    "url": "https://x.com/DrSJaishankar/status/2126136755292393494",
+    "lang": null,
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2126163520228348207",
+    "account": "narendramodi",
+    "name": "Narendra Modi",
+    "date": "2026-11-27",
+    "time": "04:57",
+    "text": "Birthday wishes to Union Minister Shri Pralhad Joshi Ji. He is playing a pivotal role in strengthening India’s education apparatus. At the same time, his work in furthering sustainability is also commendable. May he lead a long and healthy life in service of the people.",
+    "url": "https://x.com/narendramodi/status/2126163520228348207",
+    "lang": null,
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2126202276356510153",
+    "account": "DrSJaishankar",
+    "name": "Dr. S. Jaishankar",
+    "date": "2026-11-27",
+    "time": "07:31",
+    "text": "Opening remarks at the Indian Ocean Rim Association @IORAOfficial Council of Ministers meeting 2026 #NewDelhi https://t.co/wNwqzg96eQ",
+    "url": "https://x.com/DrSJaishankar/status/2126202276356510153",
+    "lang": null,
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2126116517137756404",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-27",
+    "time": "01:50",
+    "text": "Death-sentenced Sheikh Hasina's planned return puts Bangladesh on edge - and India in a bind https://t.co/eretuB97f4",
+    "url": "https://x.com/BBCWorld/status/2126116517137756404",
+    "lang": null,
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126146532546138514",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "03:50",
+    "text": "India win toss, elect to field in second test v New Zealand https://t.co/CaX4KbR5bH",
+    "url": "https://x.com/Reuters/status/2126146532546138514",
+    "lang": null,
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
     "id": "2126084870401085868",
     "account": "Reuters",
     "name": "Reuters",
@@ -9863,6 +9983,18 @@
   ],
   "morocco": [
    {
+    "id": "2126116292931326402",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "01:50",
+    "text": "Ghana's national amputee football team paraded through the streets of Accra with their first-ever Amputee Football World Cup trophy four days after beating Morocco 1-0 in the final in Mexico https://t.co/1iItgbkfwH",
+    "url": "https://x.com/Reuters/status/2126116292931326402",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
     "id": "2126084150759166407",
     "account": "el_pais",
     "name": "EL PAÍS",
@@ -11076,6 +11208,30 @@
    }
   ],
   "cuba": [
+   {
+    "id": "2126163295606628519",
+    "account": "PresidenciaCuba",
+    "name": "Presidencia Cuba 🇨🇺",
+    "date": "2026-11-27",
+    "time": "04:56",
+    "text": "🇨🇺| En la escalinata de la Universidad de La Habana, donde el joven #Fidel se hizo revolucionario, se realizó la velada político-cultural por los 10 años de su partida física. El Presidente @DiazCanelB asistió al homenaje. \n\n1/3 https://t.co/c0cjcfP5CF",
+    "url": "https://x.com/PresidenciaCuba/status/2126163295606628519",
+    "lang": "es",
+    "role": "politician",
+    "scope": "country"
+   },
+   {
+    "id": "2126133392701894764",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-27",
+    "time": "02:57",
+    "text": "Gobierno de Panamá gestiona en Cuba la liberación de siete panameños presos\n\nEl canciller Javier Martínez-Acha se reunió en La Habana con su homólogo cubano y con el grupo de panameños detenidos. (gs)\nhttps://t.co/d1xQTrFXGP https://t.co/c21SAil1P6",
+    "url": "https://x.com/dw_espanol/status/2126133392701894764",
+    "lang": null,
+    "role": "tv",
+    "scope": "tv"
+   },
    {
     "id": "2125967257688064356",
     "account": "PresidenciaCuba",
