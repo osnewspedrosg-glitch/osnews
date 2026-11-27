@@ -398,7 +398,7 @@
     { id: "cctv", group: "china-live", prefer: ["zh"], name: { es: "CCTV (YouTube oficial)", en: "CCTV (official YouTube)", fr: "CCTV (YouTube officiel)", de: "CCTV (offizielles YouTube)", pt: "CCTV (YouTube oficial)", it: "CCTV (YouTube ufficiale)", ar: "CCTV (يوتيوب رسمي)", zh: "CCTV（官方 YouTube）" }, type: "link", official: "https://tv.cctv.com/", youtube: "https://www.youtube.com/@CCTV", kind: "none" },
     { id: "dd-india", group: "india-live", prefer: ["en"], name: { es: "DD India", en: "DD India", fr: "DD India", de: "DD India", pt: "DD India", it: "DD India", ar: "DD India", zh: "DD India" }, type: "yt-live", channel: "UCGDQNvybfDDeGTf4GtigXaw", official: "https://www.youtube.com/@DDIndia/live", youtube: "https://www.youtube.com/@DDIndia", kind: "24h" },
     { id: "wion", group: "india-live", prefer: ["en"], name: { es: "WION", en: "WION", fr: "WION", de: "WION", pt: "WION", it: "WION", ar: "WION", zh: "WION" }, type: "yt-live", channel: "UC_gUM8rL-Lrg6O3adPW9K1g", official: "https://www.wionews.com/", youtube: "https://www.youtube.com/@WION", kind: "event" },
-    { id: "ndtv", group: "india-live", prefer: ["en"], name: { es: "NDTV", en: "NDTV", fr: "NDTV", de: "NDTV", pt: "NDTV", it: "NDTV", ar: "NDTV", zh: "NDTV" }, type: "yt-live", channel: "UCZFMm1mMw0F81Z37aaEzTUA", official: "https://www.ndtv.com/", youtube: "https://www.youtube.com/@NDTV", kind: "event" },
+    { id: "ndtv", group: "india-live", prefer: ["en"], name: { es: "NDTV", en: "NDTV", fr: "NDTV", de: "NDTV", pt: "NDTV", it: "NDTV", ar: "NDTV", zh: "NDTV" }, type: "link", official: "https://www.ndtv.com/", youtube: "https://www.youtube.com/@NDTV", kind: "none" },
     { id: "india-today", group: "india-live", prefer: ["en"], name: { es: "India Today", en: "India Today", fr: "India Today", de: "India Today", pt: "India Today", it: "India Today", ar: "India Today", zh: "India Today" }, type: "yt-live", channel: "UCYPvAwZP8pZhSMW8qs7cVCw", official: "https://www.indiatoday.in/", youtube: "https://www.youtube.com/@IndiaToday", kind: "event" }
   ];
 
@@ -435,6 +435,7 @@
   /* Fechas convertidas a calendario Europe/Madrid a partir de la fecha de publicación de YouTube. */
   const COUNTRY_NEWS = {
     china: [
+      { id: "-3iriaqazbo", title: "Why China is watching Taiwan's elections so closely | DW News", channel: "DW News", date: "2026-11-27" },
       { id: "dyjWVT4g6a8", title: "Donaldt Trump on China: We spy on them, too.", channel: "euronews", date: "2026-11-27" },
       { id: "wctExblHCjY", title: "I followed Putin to China for a historic summit | BBC News", channel: "BBC News", date: "2026-11-27" },
       { id: "vYX_MnWSNoE", title: "Taiwan comedian stands up despite Beijing attack | DW News", channel: "DW News", date: "2026-11-26" },
@@ -442,7 +443,8 @@
       { id: "FlM-DV10zdY", title: "Trump targets China & EU with new tariffs; will he restart the trade war?", channel: "CNN", date: "2026-11-26" },
       { id: "DU3ywN0mTHU", title: "Hong Kong marks one year since deadly tower fire", channel: "Reuters", date: "2026-11-26" },
       { id: "7rTBsjlsDqM", title: "China and Japan hit back at Trump's new tariff plans", channel: "Associated Press", date: "2026-11-26" },
-      { id: "Teqk1UETpDI", title: "US to hike tariffs on China, EU, APAC; Beijing condemns trade wars • FRANCE 24 English", channel: "FRANCE 24 English", date: "2026-11-26" }
+      { id: "Teqk1UETpDI", title: "US to hike tariffs on China, EU, APAC; Beijing condemns trade wars • FRANCE 24 English", channel: "FRANCE 24 English", date: "2026-11-26" },
+      { id: "O8m3BGTlL-U", title: "🟢 Trump golpeará a China, la UE y otros doce socios con nuevas tarifas comerciales", channel: "DW Español", date: "2026-11-25" }
     ],
     india: [
       { id: "2Ytky3ey8lI", title: "Why is India so afraid of Pakistan's new Netflix series? • FRANCE 24 English", channel: "FRANCE 24 English", date: "2026-11-27" },
@@ -450,6 +452,7 @@
       { id: "eUVFBJQyAHg", title: "The Indian wedding that had 400,000 guests", channel: "CNN", date: "2026-11-27" },
       { id: "cuV0wxDkVcU", title: "Amid Tensions in India, Sikhs and Hindus are building mosques for Muslims | DW News", channel: "DW News", date: "2026-11-26" },
       { id: "CFlD7aNekKU", title: "China, EU and India among trading partners targeted by the new US tariffs | DW News", channel: "DW News", date: "2026-11-25" },
+      { id: "zuXXYar0SBc", title: "Nepal's pivot to India | DW News", channel: "DW News", date: "2026-11-23" },
       { id: "BGxVljhvdM0", title: "Protesters storm Meta office building in India", channel: "CNN", date: "2026-11-22" },
       { id: "1MQ0WnDAKls", title: "Indian man jailed for over 19 years for failed plot to kill Sikh leader | DW News", channel: "DW News", date: "2026-11-21" },
       { id: "DOJyP7h17as", title: "Cómo India abrió su sector espacial y desató una ola de startups", channel: "DW Español", date: "2026-11-21" }
@@ -459,10 +462,10 @@
       { id: "tojr5Y_SGW4", title: "Senegal reinstated as AFCON champions as Morocco vows to fight on", channel: "euronews", date: "2026-11-24" },
       { id: "Um8Wvmb-KLs", title: "Senegal regain AFCON title on appeal at Morocco's expense • FRANCE 24 English", channel: "FRANCE 24 English", date: "2026-11-24" },
       { id: "cLx1A9TPNb4", title: "CAN-2025 : devant le TAS, le Sénégal récupère son titre aux dépens du Maroc • FRANCE 24", channel: "FRANCE 24", date: "2026-11-24" },
+      { id: "onIiprD3Zt0", title: "CAN 2025 : le TAS va trancher entre le Sénégal et le Maroc • FRANCE 24", channel: "FRANCE 24", date: "2026-11-24" },
+      { id: "YxPLEdnbLDU", title: "Au Maroc, un artiste français transforme ses souvenirs en sculptures géantes", channel: "euronews (en français)", date: "2026-11-22" },
+      { id: "WwJFHSPbmUE", title: "Marruecos: un parque de esculturas surrealistas pone el mundo del revés", channel: "euronews (en español)", date: "2026-11-22" },
       { id: "9TV7uyC3OtE", title: "Classement Fifa : la France termine l'année sur le podium, le Maroc dans le top 5 • FRANCE 24", channel: "FRANCE 24", date: "2026-11-19" },
-      { id: "W0SHyWsjz6g", title: "JOJ Dakar 2026 : Ghali Bougja, un jeune cavalier marocain prêt à relever le défi • FRANCE 24", channel: "FRANCE 24", date: "2026-11-12" },
-      { id: "gY3vBkbXiIE", title: "El desalojo del puerto de Ceuta acelera los retornos a Marruecos", channel: "euronews (en español)", date: "2026-11-10" },
-      { id: "rdANsCrKkac", title: "What Morocco's first female premier means for the Arab world | DW News", channel: "DW News", date: "2026-09-30" }
     ],
     cuba: [
       { id: "mDlbPltbRFw", title: "Cuba marks 10 years since Fidel Castro's death", channel: "Reuters", date: "2026-11-27" },
