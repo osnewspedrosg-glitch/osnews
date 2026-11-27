@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-27T16:00:31+01:00",
+ "fetched_at": "2026-11-28T00:01:08+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
  "accounts": [
@@ -20,6 +20,66 @@
  ],
  "countries": {
   "china": [
+   {
+    "id": "2126341559033495895",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "16:45",
+    "text": "🔊 Chinese authorities are stepping in to support markets after the recent AI-led selloff. Reuters Morning Bid looks at whether investors are ready to buy back in https://t.co/kZd1eDbqZE https://t.co/TJ7H1VgSlQ",
+    "url": "https://x.com/Reuters/status/2126341559033495895",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126345303750316514",
+    "account": "el_pais",
+    "name": "EL PAÍS",
+    "date": "2026-11-27",
+    "time": "17:00",
+    "text": "Vídeo | IA y derechos de autor: ¿quién protege la creatividad humana? Europa intenta defender la propiedad intelectual sin quedarse atrás en la carrera tecnológica con Estados Unidos y China. En @ARTEesp  https://t.co/Z5iuvUBJci",
+    "url": "https://x.com/el_pais/status/2126345303750316514",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126350376500637919",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "17:20",
+    "text": "VIEW China markets surge as Beijing unleashes 'national team' https://t.co/y3eZc7oOf1",
+    "url": "https://x.com/Reuters/status/2126350376500637919",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126360568227418567",
+    "account": "washingtonpost",
+    "name": "The Washington Post",
+    "date": "2026-11-27",
+    "time": "18:00",
+    "text": "Despite Jensen Huang’s return, the future for Nvidia and the AI revolution it has helped drive remains uncertain.\n\nHow he navigates the coming months could impact the AI boom and the global competition over the tech between the U.S. and China. https://t.co/0QSM7tkljD",
+    "url": "https://x.com/washingtonpost/status/2126360568227418567",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126394984853074284",
+    "account": "dw_espanol",
+    "name": "DW Español",
+    "date": "2026-11-27",
+    "time": "20:17",
+    "text": "Por qué resiste la economía de EE. UU. pese a los pronósticos de caída\n\nDurante 250 años, muchas ventajas le han permitido a EE. UU. desafiar los pronósticos de declive.  Pero con una deuda creciente, el auge de la IA y el ascenso de China, ¿será distinto esta vez?\n #Dominomics https://t.co/Da81Qgysfr",
+    "url": "https://x.com/dw_espanol/status/2126394984853074284",
+    "lang": "es",
+    "role": "tv",
+    "scope": "tv"
+   },
    {
     "id": "2126151528612278659",
     "account": "CNNEE",
@@ -3164,6 +3224,78 @@
   ],
   "india": [
    {
+    "id": "2126332763007512731",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "16:10",
+    "text": "EXCLUSIVE: Volkswagen drags rivals Mercedes, BMW into $1.2 billion India tax fight https://t.co/6XprOhgYMz",
+    "url": "https://x.com/Reuters/status/2126332763007512731",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126345537423126942",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "17:00",
+    "text": "EXCLUSIVE: Global fashion brands shift orders from Bangladesh to India amid unrest https://t.co/gPmJigOINp",
+    "url": "https://x.com/Reuters/status/2126345537423126942",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126371788078698742",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "18:45",
+    "text": "Indian court allows Tata Sons board meeting on listing to proceed https://t.co/uefHinT6OF",
+    "url": "https://x.com/Reuters/status/2126371788078698742",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126395668507828226",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "20:20",
+    "text": "EXCLUSIVE: Volkswagen drags rivals Mercedes, BMW into $1.2 billion India tax fight https://t.co/reJE8CvQx2",
+    "url": "https://x.com/Reuters/status/2126395668507828226",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126408254200664491",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "21:10",
+    "text": "EXCLUSIVE: Global fashion brands shift orders from Bangladesh to India amid unrest https://t.co/L2RbuZKWbJ",
+    "url": "https://x.com/Reuters/status/2126408254200664491",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126433420054065597",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "22:50",
+    "text": "Indian court allows Tata Sons board meeting on listing to proceed https://t.co/n91VXdAQD5",
+    "url": "https://x.com/Reuters/status/2126433420054065597",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
     "id": "2126116517137756404",
     "account": "BBCWorld",
     "name": "BBC News (World)",
@@ -5366,6 +5498,30 @@
    }
   ],
   "cuba": [
+   {
+    "id": "2126438474127425897",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "23:10",
+    "text": "Cargo ship sinks off Cuba, leaving one dead and three missing https://t.co/EvV0eV2jpu",
+    "url": "https://x.com/Reuters/status/2126438474127425897",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
+   {
+    "id": "2126449783493607554",
+    "account": "CNN",
+    "name": "CNN",
+    "date": "2026-11-27",
+    "time": "23:55",
+    "text": "The Pentagon spent more than $81 million transferring and holding migrants at Naval Station Guantanamo Bay in Cuba — despite having held only 849 individuals since the start of its mission supporting the Department of Homeland Security, according to a recent watchdog report. https://t.co/xiIYgvSocW",
+    "url": "https://x.com/CNN/status/2126449783493607554",
+    "lang": "en",
+    "role": "tv",
+    "scope": "tv"
+   },
    {
     "id": "2126133392701894764",
     "account": "dw_espanol",
