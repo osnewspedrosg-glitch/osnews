@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-27T08:05:18+01:00",
+ "fetched_at": "2026-11-27T16:00:31+01:00",
  "timezone": "Europe/Madrid",
  "method": "x.search_posts_all, cuentas oficiales, desde 2026-10-01T00:00:00Z, -is:retweet -is:reply",
  "accounts": [
@@ -3007,6 +3007,159 @@
     "lang": "en",
     "role": "tv",
     "scope": "tv"
+   },
+   {
+    "id": "2126322715854291162",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "15:30",
+    "text": "China stocks surge most in two years as Beijing vows stronger market support https://t.co/wV01Wn9mpr",
+    "url": "https://x.com/Reuters/status/2126322715854291162"
+   },
+   {
+    "id": "2126309103433625663",
+    "account": "euronews",
+    "name": "euronews",
+    "date": "2026-11-27",
+    "time": "14:36",
+    "text": "\"We spy on them, too. Maybe we spy better than they do.\"\n\nUS President Donald Trump commented on his recent meeting with Chinese President Xi Jinping. https://t.co/MRvaUBHJWw",
+    "url": "https://x.com/euronews/status/2126309103433625663"
+   },
+   {
+    "id": "2126281174989386050",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "12:45",
+    "text": "VIEW China markets surge as Beijing unleashes 'national team' https://t.co/MLYjUZMUkA",
+    "url": "https://x.com/Reuters/status/2126281174989386050"
+   },
+   {
+    "id": "2126267321618501679",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "11:50",
+    "text": "Taiwan local election campaigns enter final day; China sends warplanes https://t.co/3JYVKf1gxv",
+    "url": "https://x.com/Reuters/status/2126267321618501679"
+   },
+   {
+    "id": "2126263544219869512",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "11:35",
+    "text": "Mercedes-Benz plans new China JV for local auto part supplies https://t.co/SACtA8lBex",
+    "url": "https://x.com/Reuters/status/2126263544219869512"
+   },
+   {
+    "id": "2126262305843183771",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "11:30",
+    "text": "Chinese military tests new Taiwan landing tactics in coastal drills https://t.co/snvGxeSdAY",
+    "url": "https://x.com/Reuters/status/2126262305843183771"
+   },
+   {
+    "id": "2126259786970808619",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "11:20",
+    "text": "China stocks surge most in two years as Beijing vows stronger market support https://t.co/muybu3LSsM",
+    "url": "https://x.com/Reuters/status/2126259786970808619"
+   },
+   {
+    "id": "2125967940650484090",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "16:00",
+    "text": "EXCLUSIVE: US chip curbs, distillation crackdown threaten Chinese AI model development, sources say https://t.co/2xQmjETXyj",
+    "url": "https://x.com/Reuters/status/2125967940650484090"
+   },
+   {
+    "id": "2125956535016722731",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "15:15",
+    "text": "🔊 No formal investigation was opened into Jensen Huang before President Trump backed his return. Instead, the administration relied on separate probes into Nvidia clients suspected of smuggling advanced chips to China. More on Reuters World News https://t.co/g4AeAxLNwm https://t.co/jHJpSwwR9r",
+    "url": "https://x.com/Reuters/status/2125956535016722731"
+   },
+   {
+    "id": "2125948976633450553",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "14:45",
+    "text": "EXCLUSIVE: Data from Chinese AI firm MiniMax accessed by unidentified parties, researcher says https://t.co/zPGhX2Hqrt",
+    "url": "https://x.com/Reuters/status/2125948976633450553"
+   },
+   {
+    "id": "2125947720342913535",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "14:40",
+    "text": "China, Japan, South Korea and ASEAN launch talks on digital payments across borders https://t.co/tAy4CGTDbR",
+    "url": "https://x.com/Reuters/status/2125947720342913535"
+   },
+   {
+    "id": "2125904941545865231",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "11:50",
+    "text": "EXCLUSIVE: US chip curbs, distillation crackdown threaten Chinese AI model development, sources say https://t.co/hD702389ra",
+    "url": "https://x.com/Reuters/status/2125904941545865231"
+   },
+   {
+    "id": "2125888870558674987",
+    "account": "France24_es",
+    "name": "FRANCE 24 Español",
+    "date": "2026-11-26",
+    "time": "10:46",
+    "text": "\"Inaceptables\": China, la UE y otras grandes economías rechazan los nuevos aranceles de EE. UU.\n➡️ https://t.co/m0DcDL5by9 https://t.co/yWqtru177G",
+    "url": "https://x.com/France24_es/status/2125888870558674987"
+   },
+   {
+    "id": "2125887330200302024",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "10:40",
+    "text": "EXCLUSIVE: Data from Chinese AI firm MiniMax accessed by unidentified parties, researcher says https://t.co/v6TidIaRPK",
+    "url": "https://x.com/Reuters/status/2125887330200302024"
+   },
+   {
+    "id": "2125886063361040708",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "10:35",
+    "text": "China, Japan, South Korea and ASEAN launch talks on digital payments across borders https://t.co/GOExFD8uvZ",
+    "url": "https://x.com/Reuters/status/2125886063361040708"
+   },
+   {
+    "id": "2125885285330563378",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-26",
+    "time": "10:32",
+    "text": "🇺🇸 L'annonce par le gouvernement américain d'une nouvelle série de droits de douane soulève l'indignation des principaux partenaires commerciaux des États-Unis, Chine, Brésil, Japon et #UE. \n\nCes droits de douane n'entreront en vigueur que dans un mois https://t.co/N2ntg5hB2V",
+    "url": "https://x.com/France24_fr/status/2125885285330563378"
+   },
+   {
+    "id": "2125869729592025350",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "09:30",
+    "text": "EXCLUSIVE: US officials divided over Chinese spying allegations following Jensen Huang's return https://t.co/Hgd9eJBXCX",
+    "url": "https://x.com/Reuters/status/2125869729592025350"
    }
   ],
   "india": [
@@ -4533,6 +4686,141 @@
     "url": "https://x.com/BBCWorld/status/2119968072714932598",
     "lang": "",
     "scope": "tv"
+   },
+   {
+    "id": "2126329726814028241",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "15:58",
+    "text": "Meta's content restrictions in India surged more than 130-fold in the first half of this year after a new government rule meant single takedown orders initiated an automated sweep to root out copies, embroiling Meta in a political battle with the Congress party",
+    "url": "https://x.com/Reuters/status/2126329726814028241"
+   },
+   {
+    "id": "2126311366717780216",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "14:45",
+    "text": "India-US trade deal is nearing completion, minister says https://t.co/HTYnkuGp0G",
+    "url": "https://x.com/Reuters/status/2126311366717780216"
+   },
+   {
+    "id": "2126310111786205264",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "14:40",
+    "text": "Coal India unit Mahanadi valued at $9.7 billion after subdued debut https://t.co/81yZuU9wJZ",
+    "url": "https://x.com/Reuters/status/2126310111786205264"
+   },
+   {
+    "id": "2126302557647585624",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "14:10",
+    "text": "Indian central bank lets rupee rise to break one-way bets on depreciation https://t.co/b3JpqTFhuc",
+    "url": "https://x.com/Reuters/status/2126302557647585624"
+   },
+   {
+    "id": "2126255219818262577",
+    "account": "BBCWorld",
+    "name": "BBC News (World)",
+    "date": "2026-11-27",
+    "time": "11:02",
+    "text": "India busts cyberfraud and trafficking network rescuing 164 foreigners https://t.co/YIbfmJcOcH",
+    "url": "https://x.com/BBCWorld/status/2126255219818262577"
+   },
+   {
+    "id": "2126254801969090565",
+    "account": "FRANCE24",
+    "name": "FRANCE 24",
+    "date": "2026-11-27",
+    "time": "11:00",
+    "text": "Press Review - Why is India so afraid of Pakistan's new Netflix series?\n➡️ https://t.co/zKxRzXm63n https://t.co/9DxcMIyaSK",
+    "url": "https://x.com/FRANCE24/status/2126254801969090565"
+   },
+   {
+    "id": "2126251834868486407",
+    "account": "France24_fr",
+    "name": "FRANCE 24 Français",
+    "date": "2026-11-27",
+    "time": "10:48",
+    "text": "Dans la presse - Sur Netflix Inde, une série pakistanaise interdit par le gouvernement Modi\n➡️ https://t.co/7EY8gUdKvb https://t.co/XeMtxhNcOe",
+    "url": "https://x.com/France24_fr/status/2126251834868486407"
+   },
+   {
+    "id": "2126249719374516431",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "10:40",
+    "text": "India-US trade deal is nearing completion, minister says https://t.co/RcXs8Gfzz8",
+    "url": "https://x.com/Reuters/status/2126249719374516431"
+   },
+   {
+    "id": "2126239729746153920",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "10:00",
+    "text": "Indian central bank lets rupee rise to break one-way bets on depreciation https://t.co/UtBAxkRasL",
+    "url": "https://x.com/Reuters/status/2126239729746153920"
+   },
+   {
+    "id": "2126237125381149012",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "09:50",
+    "text": "Coal India unit Mahanadi valued at $9.7 billion after subdued debut https://t.co/s7mKI1cdlB",
+    "url": "https://x.com/Reuters/status/2126237125381149012"
+   },
+   {
+    "id": "2126219506531860644",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-27",
+    "time": "08:40",
+    "text": "India win toss, elect to field in second test v New Zealand https://t.co/U516tn2FBR",
+    "url": "https://x.com/Reuters/status/2126219506531860644"
+   },
+   {
+    "id": "2125960326071947455",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "15:30",
+    "text": "Indian court tightens food labelling proposal, asks global food firms to end 'double standards' https://t.co/hvVFlVlDqF",
+    "url": "https://x.com/Reuters/status/2125960326071947455"
+   },
+   {
+    "id": "2125940166489419976",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "14:10",
+    "text": "India orders tougher surveillance of packaged water, scrutiny set to cover PepsiCo, Coca-Cola https://t.co/bVhw69u9md",
+    "url": "https://x.com/Reuters/status/2125940166489419976"
+   },
+   {
+    "id": "2125920041916915845",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "12:50",
+    "text": "How Trump's proposed tariffs for India compare with rival nations https://t.co/EQjJKiudGe",
+    "url": "https://x.com/Reuters/status/2125920041916915845"
+   },
+   {
+    "id": "2125907503221293350",
+    "account": "Reuters",
+    "name": "Reuters",
+    "date": "2026-11-26",
+    "time": "12:00",
+    "text": "Indian farmers sell paddy stubble to biomass firms, reduce burning https://t.co/sI8gkdc8Bs",
+    "url": "https://x.com/Reuters/status/2125907503221293350"
    }
   ],
   "morocco": [
@@ -5485,6 +5773,15 @@
     "lang": "",
     "role": "tv",
     "scope": "tv"
+   },
+   {
+    "id": "2125912561841230088",
+    "account": "CNNEE",
+    "name": "CNN en Español",
+    "date": "2026-11-26",
+    "time": "12:20",
+    "text": "El fiasco de Trump en las elecciones intermedias no ha disminuido sus planes sobre Cuba. Ni los del \"presidente\" Rubio\nhttps://t.co/kcfupThS7n",
+    "url": "https://x.com/CNNEE/status/2125912561841230088"
    }
   ]
  }
