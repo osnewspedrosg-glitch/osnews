@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-28T00:04:22+01:00",
-  "x_fetched_at": "2026-11-28T00:01:08+01:00",
+  "generated_at": "2026-11-28T08:11:12+01:00",
+  "x_fetched_at": "2026-11-28T08:06:03+01:00",
   "errors": [],
   "counts": {
     "es": {
@@ -19,11 +19,11 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 65,
-        "decl_tv_all": 133,
-        "local": 196
+        "decl_tv_all": 137,
+        "local": 200
       },
       "morocco": {
-        "news": 4,
+        "news": 3,
         "videos": 6,
         "decl_pol": 6,
         "decl_tv": 6,
@@ -37,8 +37,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 33,
-        "decl_tv_all": 36,
-        "local": 116
+        "decl_tv_all": 37,
+        "local": 117
       }
     },
     "en": {
@@ -57,11 +57,11 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 65,
-        "decl_tv_all": 133,
-        "local": 196
+        "decl_tv_all": 137,
+        "local": 200
       },
       "morocco": {
-        "news": 4,
+        "news": 3,
         "videos": 6,
         "decl_pol": 6,
         "decl_tv": 6,
@@ -75,8 +75,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 33,
-        "decl_tv_all": 36,
-        "local": 116
+        "decl_tv_all": 37,
+        "local": 117
       }
     },
     "fr": {
@@ -95,11 +95,11 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 65,
-        "decl_tv_all": 133,
-        "local": 196
+        "decl_tv_all": 137,
+        "local": 200
       },
       "morocco": {
-        "news": 4,
+        "news": 3,
         "videos": 6,
         "decl_pol": 6,
         "decl_tv": 6,
@@ -113,8 +113,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 33,
-        "decl_tv_all": 36,
-        "local": 116
+        "decl_tv_all": 37,
+        "local": 117
       }
     },
     "de": {
@@ -133,11 +133,11 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 65,
-        "decl_tv_all": 133,
-        "local": 196
+        "decl_tv_all": 137,
+        "local": 200
       },
       "morocco": {
-        "news": 4,
+        "news": 3,
         "videos": 6,
         "decl_pol": 6,
         "decl_tv": 6,
@@ -151,8 +151,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 33,
-        "decl_tv_all": 36,
-        "local": 116
+        "decl_tv_all": 37,
+        "local": 117
       }
     },
     "pt": {
@@ -171,11 +171,11 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 65,
-        "decl_tv_all": 133,
-        "local": 196
+        "decl_tv_all": 137,
+        "local": 200
       },
       "morocco": {
-        "news": 4,
+        "news": 3,
         "videos": 6,
         "decl_pol": 6,
         "decl_tv": 6,
@@ -189,8 +189,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 33,
-        "decl_tv_all": 36,
-        "local": 116
+        "decl_tv_all": 37,
+        "local": 117
       }
     },
     "it": {
@@ -209,11 +209,11 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 65,
-        "decl_tv_all": 133,
-        "local": 196
+        "decl_tv_all": 137,
+        "local": 200
       },
       "morocco": {
-        "news": 4,
+        "news": 3,
         "videos": 6,
         "decl_pol": 6,
         "decl_tv": 6,
@@ -227,8 +227,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 33,
-        "decl_tv_all": 36,
-        "local": 116
+        "decl_tv_all": 37,
+        "local": 117
       }
     },
     "ar": {
@@ -247,11 +247,11 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 65,
-        "decl_tv_all": 133,
-        "local": 196
+        "decl_tv_all": 137,
+        "local": 200
       },
       "morocco": {
-        "news": 4,
+        "news": 3,
         "videos": 6,
         "decl_pol": 6,
         "decl_tv": 6,
@@ -265,8 +265,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 33,
-        "decl_tv_all": 36,
-        "local": 116
+        "decl_tv_all": 37,
+        "local": 117
       }
     },
     "zh": {
@@ -285,11 +285,11 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 65,
-        "decl_tv_all": 133,
-        "local": 196
+        "decl_tv_all": 137,
+        "local": 200
       },
       "morocco": {
-        "news": 4,
+        "news": 3,
         "videos": 6,
         "decl_pol": 6,
         "decl_tv": 6,
@@ -303,8 +303,8 @@
         "decl_pol": 6,
         "decl_tv": 6,
         "decl_pol_all": 33,
-        "decl_tv_all": 36,
-        "local": 116
+        "decl_tv_all": 37,
+        "local": 117
       }
     }
   }
