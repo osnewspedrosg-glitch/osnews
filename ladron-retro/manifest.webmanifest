@@ -1,0 +1,13 @@
+{
+  "name": "El Ladrón · Maquinita 1980",
+  "short_name": "El Ladrón",
+  "description": "Recreación de una maquinita LCD de los años 80: el ladrón cruza la calle, los chalets y el pasillo hasta el botín.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#1a1510",
+  "theme_color": "#b03a2e",
+  "lang": "es",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
