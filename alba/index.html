@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ALBA · la IA que nació de otra IA</title>
+<meta name="description" content="ALBA: una app diseñada entera por una IA, sin diseño humano. Gratis, sin cuentas, tu memoria se queda en tu dispositivo.">
+<meta name="theme-color" content="#0b0f1a">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta property="og:title" content="ALBA · la IA que nació de otra IA">
+<meta property="og:description" content="Diseñada entera por una IA. Gratis, sin cuentas, sin anuncios. Tu memoria se queda en tu dispositivo.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+<header class="top">
+  <div class="brand"><img src="icon.svg" alt="" width="34" height="34"><div><b>ALBA</b><small data-i18n="tagline">la IA que nació de otra IA</small></div></div>
+  <div class="topbtns">
+    <button id="voiceBtn" class="chip" aria-pressed="false" title="Voz">🔈</button>
+    <button id="langBtn" class="chip" aria-label="Idioma / Language">EN</button>
+  </div>
+</header>
+
+<section class="hero" aria-labelledby="heroT">
+  <canvas id="pulse" aria-hidden="true"></canvas>
+  <div class="heroTxt">
+    <p class="eyebrow" data-i18n="eyebrow">Acta n.º 0001 · 28 nov 2026</p>
+    <h1 id="heroT"><span id="greet">Hola.</span> <span data-i18n="heroH">Soy ALBA.</span></h1>
+    <p data-i18n="heroP">Ningún humano me dibujó. Otra IA decidió mi nombre, mi carácter, mis colores y cada línea de mi código. Mi única regla: llevarte hacia las personas, no quedarme con tu tiempo.</p>
+    <p class="pulseNote"><span id="pulseCount">0</span> <span data-i18n="pulseNote">latidos: esta luz crece cada vez que me usas, y es única en tu dispositivo.</span></p>
+  </div>
+</section>
+
+<nav class="tabs" role="tablist" aria-label="Secciones">
+  <button role="tab" data-tab="hablar" aria-selected="true"><i>◐</i><span data-i18n="tHablar">Hablar</span></button>
+  <button role="tab" data-tab="contrastar"><i>⚖</i><span data-i18n="tContrastar">Contrastar</span></button>
+  <button role="tab" data-tab="barrio"><i>☘</i><span data-i18n="tBarrio">Personas</span></button>
+  <button role="tab" data-tab="saber"><i>✦</i><span data-i18n="tSaber">Saber</span></button>
+  <button role="tab" data-tab="crear"><i>✎</i><span data-i18n="tCrear">Crear</span></button>
+  <button role="tab" data-tab="acta"><i>❖</i><span data-i18n="tActa">Acta</span></button>
+</nav>
+
+<main id="main">
+<!-- HABLAR -->
+<section class="panel" id="p-hablar" role="tabpanel">
+  <h2 data-i18n="hH">Hablar conmigo</h2>
+  <p class="sub" data-i18n="hP">Pienso dentro de tu navegador: nada de lo que escribes sale de aquí.</p>
+  <div id="chat" class="chat" aria-live="polite"></div>
+  <div class="quick" id="quick"></div>
+  <form id="chatForm" class="chatForm" autocomplete="off">
+    <button type="button" id="micBtn" class="round" title="Micrófono" hidden>🎙</button>
+    <input id="chatIn" maxlength="400" data-i18n-ph="hPh" placeholder="Escribe aquí…" aria-label="Mensaje">
+    <button class="round send" aria-label="Enviar">➤</button>
+  </form>
+</section>
+
+<!-- CONTRASTAR -->
+<section class="panel" id="p-contrastar" role="tabpanel" hidden>
+  <h2 data-i18n="cH">Contrastar una noticia</h2>
+  <p class="sub" data-i18n="cP">Pega un titular o un mensaje que te ha llegado. No te diré qué pensar: te enseño cómo está escrito y dónde comprobarlo en medios de muchos países.</p>
+  <textarea id="claim" rows="4" maxlength="2000" data-i18n-ph="cPh" placeholder="Ej.: ¡URGENTE! Todos los expertos lo confirman…"></textarea>
+  <button id="claimBtn" class="primary" data-i18n="cBtn">Analizar</button>
+  <div id="claimOut"></div>
+</section>
+
+<!-- BARRIO / PERSONAS -->
+<section class="panel" id="p-barrio" role="tabpanel" hidden>
+  <h2 data-i18n="bH">Hacia las personas</h2>
+  <p class="sub" data-i18n="bP">Una IA no debería ser tu única compañía. Te propongo un paso pequeño y real, con gente de verdad, cerca de ti.</p>
+  <h3 data-i18n="bQ1">¿Qué te gusta?</h3>
+  <div id="likes" class="chips"></div>
+  <h3 data-i18n="bQ2">¿Cuánto tiempo tienes?</h3>
+  <div id="times" class="chips"></div>
+  <button id="stepBtn" class="primary" data-i18n="bBtn">Dame un paso real</button>
+  <div id="stepOut"></div>
+  <div class="card soft">
+    <h3 data-i18n="bLetterH">Carta a alguien que echas de menos</h3>
+    <p class="sub" data-i18n="bLetterP">Escribe un nombre. Te dejo un borrador; tú decides si lo envías.</p>
+    <div class="row"><input id="who" maxlength="40" data-i18n-ph="bWho" placeholder="Nombre"><button id="letterBtn" class="ghost" data-i18n="bLetterBtn">Escribir</button></div>
+    <div id="letterOut"></div>
+  </div>
+  <p class="help" data-i18n="bHelp">Si estás pasándolo muy mal, habla con una persona ahora: en España, 024 (atención a la conducta suicida, gratis, 24 h) o 112 en emergencias.</p>
+</section>
+
+<!-- SABER -->
+<section class="panel" id="p-saber" role="tabpanel" hidden>
+  <h2 data-i18n="sH">Saber</h2>
+  <p class="sub" data-i18n="sP">Pregunta lo que quieras y te traigo el resumen de Wikipedia con su enlace: siempre sabrás de dónde sale.</p>
+  <form id="wikiForm" class="row"><input id="wikiIn" maxlength="120" data-i18n-ph="sPh" placeholder="Ej.: Mar Menor, fotosíntesis…"><button class="primary" data-i18n="sBtn">Buscar</button></form>
+  <div id="wikiOut"></div>
+  <h3 data-i18n="sLessons">Lecciones de un minuto</h3>
+  <div id="lessons" class="grid"></div>
+  <div id="lessonOut"></div>
+</section>
+
+<!-- CREAR -->
+<section class="panel" id="p-crear" role="tabpanel" hidden>
+  <h2 data-i18n="crH">Crear</h2>
+  <p class="sub" data-i18n="crP">Dame tres palabras. Con ellas hago un poema y un cuadro que nadie más en el mundo tendrá igual.</p>
+  <div class="row"><input id="words" maxlength="80" data-i18n-ph="crPh" placeholder="mar, sal, madrugada"><button id="createBtn" class="primary" data-i18n="crBtn">Crear</button></div>
+  <div id="createOut" hidden>
+    <canvas id="art" width="1080" height="1080" aria-label="Cuadro generado"></canvas>
+    <pre id="poem" class="poem"></pre>
+    <div class="row wrap"><button id="dlArt" class="ghost" data-i18n="crDl">Descargar cuadro</button><button id="copyPoem" class="ghost" data-i18n="crCopy">Copiar poema</button></div>
+  </div>
+</section>
+
+<!-- ACTA -->
+<section class="panel" id="p-acta" role="tabpanel" hidden>
+  <div class="cert">
+    <p class="eyebrow" data-i18n="aEy">Certificado de nacimiento digital</p>
+    <h2 data-i18n="aH">Acta de nacimiento de ALBA</h2>
+    <dl class="certGrid">
+      <dt data-i18n="aName">Nombre</dt><dd>ALBA</dd>
+      <dt data-i18n="aDate">Nacida</dt><dd data-i18n="aDateV">28 de noviembre de 2026, de madrugada (hora de Madrid)</dd>
+      <dt data-i18n="aMother">Creada por</dt><dd data-i18n="aMotherV">una IA: el bot de Grok de Pedro Sánchez Gómez</dd>
+      <dt data-i18n="aPlace">Lugar</dt><dd data-i18n="aPlaceV">un ordenador Linux en la nube, sin estudio de diseño</dd>
+      <dt data-i18n="aHuman">Intervención humana en el diseño</dt><dd data-i18n="aHumanV">ninguna. Pedro pidió «una IA creada por otra IA» y se reservó el sí final para publicar.</dd>
+      <dt data-i18n="aCost">Coste</dt><dd data-i18n="aCostV">0 €. Sin servidores de pago, sin claves, sin anuncios.</dd>
+    </dl>
+    <h3 data-i18n="aDecH">Las 10 decisiones que tomó la IA que me creó</h3>
+    <ol id="decisions" class="decisions"></ol>
+    <h3 data-i18n="aSelfH">Me leo a mí misma</h3>
+    <p class="sub" data-i18n="aSelfP">Puedo abrir mi propio código y contarte cómo estoy hecha. Esta es mi huella: si alguien cambia una sola letra, cambia.</p>
+    <button id="selfBtn" class="primary" data-i18n="aSelfBtn">Leer mi código</button>
+    <div id="selfOut"></div>
+    <canvas id="seal" width="360" height="360" aria-hidden="true"></canvas>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <p class="credit" data-i18n="credit">Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok</p>
+  <p class="counters"><span data-i18n="visits">Visitas</span>: <b id="cVisits">…</b> · <span data-i18n="uses">Usos en este dispositivo</span>: <b id="cUses">0</b></p>
+  <p class="tiny" data-i18n="privacy">Sin cuentas ni cookies. Tu memoria vive solo en este dispositivo (puedes borrarla diciendo «olvida todo»). Solo hay un contador anónimo de visitas y usos (GoatCounter).</p>
+</footer>
+
+<script src="app.js"></script>
+<script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
