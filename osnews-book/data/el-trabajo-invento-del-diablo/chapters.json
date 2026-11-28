@@ -1,0 +1,83 @@
+{
+  "bookId": "el-trabajo-invento-del-diablo",
+  "chapters": [
+    {
+      "id": "00-prologo",
+      "title": "Prólogo. Cuatro monedas y una pregunta",
+      "file": "chapters/00-prologo.json",
+      "kind": "prologo"
+    },
+    {
+      "id": "01-capitulo-1",
+      "title": "Capítulo 1. Cuando del trueque se pasó a utilizar el dinero: tu trabajo por 4 monedas",
+      "file": "chapters/01-capitulo-1.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "02-capitulo-2",
+      "title": "Capítulo 2. Cuando todo se derrumba: los humanoides trabajan por los humanos",
+      "file": "chapters/02-capitulo-2.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "03-capitulo-3",
+      "title": "Capítulo 3. Cuando la persona tiene suficientes cupones de IVA para comprar lo que necesita",
+      "file": "chapters/03-capitulo-3.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "04-capitulo-4",
+      "title": "Capítulo 4. Cuando ser millonario no te da poder, porque no hay ricos ni pobres",
+      "file": "chapters/04-capitulo-4.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "05-capitulo-5",
+      "title": "Capítulo 5. Cuando la sociedad depende de la IA y no de las drogas ni de las compras",
+      "file": "chapters/05-capitulo-5.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "06-capitulo-6",
+      "title": "Capítulo 6. Cuando no hay políticos, se acabaron los conflictos",
+      "file": "chapters/06-capitulo-6.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "07-capitulo-7",
+      "title": "Capítulo 7. Cuando la conquista de la Luna consigue nuevos materiales para semiconductores",
+      "file": "chapters/07-capitulo-7.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "08-capitulo-8",
+      "title": "Capítulo 8. Cuando un tomate con tu ADN te cura y es la vida eterna: cuando comes según tus necesidades biológicas",
+      "file": "chapters/08-capitulo-8.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "09-capitulo-9",
+      "title": "Capítulo 9. Cuando la gente no sale de casa: viaja en lo virtual",
+      "file": "chapters/09-capitulo-9.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "10-capitulo-10",
+      "title": "Capítulo 10. Cómo se llegó a una sociedad de personas solas",
+      "file": "chapters/10-capitulo-10.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "11-epilogo",
+      "title": "Epílogo. Después de las cuatro monedas",
+      "file": "chapters/11-epilogo.json",
+      "kind": "epilogo"
+    },
+    {
+      "id": "12-fuentes",
+      "title": "Notas y fuentes",
+      "file": "chapters/12-fuentes.json",
+      "kind": "fuentes"
+    }
+  ]
+}

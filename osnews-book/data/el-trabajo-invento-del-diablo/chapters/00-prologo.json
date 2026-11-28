@@ -1,0 +1,42 @@
+{
+  "id": "00-prologo",
+  "title": "Prólogo. Cuatro monedas y una pregunta",
+  "kind": "prologo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Este libro nace de una frase de Pedro Sánchez Gómez, dicha como se dicen las cosas que uno lleva años pensando: «Cuando del trueque se pasó a utilizar el dinero: tu trabajo por 4 monedas.» No es una cotización. Es una imagen. Cuatro monedas caben en la mano y, sin embargo, han llegado a tasarnos enteros.",
+      "html": "Este libro nace de una frase de Pedro Sánchez Gómez, dicha como se dicen las cosas que uno lleva años pensando: «Cuando del trueque se pasó a utilizar el dinero: tu trabajo por 4 monedas.» No es una cotización. Es una imagen. Cuatro monedas caben en la mano y, sin embargo, han llegado a tasarnos enteros."
+    },
+    {
+      "type": "p",
+      "text": "El título es duro a propósito. El trabajo, el invento del diablo: el dinero. No se trata de odiar el hacer. Hacer un pan, cuidar una huerta, reparar un tejado, escribir un libro, acompañar a alguien, pescar en la laguna: eso no es un invento del diablo. Eso es una forma digna de estar en el mundo. El invento, si se puede llamar así, es otro: convertir ese hacer en una mercancía, pagarlo con un puñado de metal o con un número en una pantalla, y acabar midiendo a la persona por lo que gana y por lo que gasta.",
+      "html": "El título es duro a propósito. <em>El trabajo, el invento del diablo: el dinero.</em> No se trata de odiar el hacer. Hacer un pan, cuidar una huerta, reparar un tejado, escribir un libro, acompañar a alguien, pescar en la laguna: eso no es un invento del diablo. Eso es una forma digna de estar en el mundo. El invento, si se puede llamar así, es otro: convertir ese hacer en una mercancía, pagarlo con un puñado de metal o con un número en una pantalla, y acabar midiendo a la persona por lo que gana y por lo que gasta."
+    },
+    {
+      "type": "p",
+      "text": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok. El libro está escrito en la voz de Pedro, con sus ideas, desde esta orilla del Mar Menor, con Cartagena al fondo y con la memoria de los fenicios, que a él le gustan. El bot ayuda a ordenar, a comprobar los datos y a no inventar lo que no se sabe. Cuando se cita a alguien, se cita en serio: con autor, obra o fecha y fuente. Si hay duda, no se cita. La historia y la ciencia van con lo que se puede sostener; los sueños van presentados como sueños, no como hechos.",
+      "html": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok. El libro está escrito en la voz de Pedro, con sus ideas, desde esta orilla del Mar Menor, con Cartagena al fondo y con la memoria de los fenicios, que a él le gustan. El bot ayuda a ordenar, a comprobar los datos y a no inventar lo que no se sabe. Cuando se cita a alguien, se cita en serio: con autor, obra o fecha y fuente. Si hay duda, no se cita. La historia y la ciencia van con lo que se puede sostener; los sueños van presentados como sueños, no como hechos."
+    },
+    {
+      "type": "p",
+      "text": "El recorrido es sencillo de enunciar y largo de pensar. Primero, el paso del trueque a la moneda, desde la Mesopotamia que ya medía el trabajo en plata y en cebada hasta Lidia, que acuñó, y hasta los fenicios y Cartago, que trajeron el trato hasta estas costas. Después, cuando ese arreglo se derrumba, los humanoides trabajan por los humanos. Después, la persona tiene suficientes cupones de IVA para comprar lo que necesita. Después, ser millonario ya no da poder, porque no hay ricos ni pobres.",
+      "html": "El recorrido es sencillo de enunciar y largo de pensar. Primero, el paso del trueque a la moneda, desde la Mesopotamia que ya medía el trabajo en plata y en cebada hasta Lidia, que acuñó, y hasta los fenicios y Cartago, que trajeron el trato hasta estas costas. Después, cuando ese arreglo se derrumba, los humanoides trabajan por los humanos. Después, la persona tiene suficientes cupones de IVA para comprar lo que necesita. Después, ser millonario ya no da poder, porque no hay ricos ni pobres."
+    },
+    {
+      "type": "p",
+      "text": "A partir de ahí, Pedro imagina también otras salidas, dichas en voz alta, no como un decreto. Que la sociedad dependa de la inteligencia artificial y no de las drogas ni de las compras que hoy llenan el vacío, sin cambiar una cadena por otra. Que, sin la lucha por el dinero y el poder económico, deje de hacer falta una clase política profesional, y que la gente vote en directo, con la IA ayudando a decidir, no mandando. Que la conquista de la Luna aporte materiales y energía para los chips y para los humanoides, y que eso cierre un círculo de abundancia. Que se coma según las necesidades biológicas de cada cual, con la huerta y la dieta mediterránea bajo los pies, y con el sueño —el sueño, no el anuncio— de un alimento que cure y alargue la vida. Que se pueda viajar, visitar museos y conocer gente en lo virtual, sin dejar de salir al sol de la laguna. Y que se entienda cómo se llegó a una sociedad de personas solas, para no dar por natural el rellano donde ya no se saluda.",
+      "html": "A partir de ahí, Pedro imagina también otras salidas, dichas en voz alta, no como un decreto. Que la sociedad dependa de la inteligencia artificial y no de las drogas ni de las compras que hoy llenan el vacío, sin cambiar una cadena por otra. Que, sin la lucha por el dinero y el poder económico, deje de hacer falta una clase política profesional, y que la gente vote en directo, con la IA ayudando a decidir, no mandando. Que la conquista de la Luna aporte materiales y energía para los chips y para los humanoides, y que eso cierre un círculo de abundancia. Que se coma según las necesidades biológicas de cada cual, con la huerta y la dieta mediterránea bajo los pies, y con el sueño —el sueño, no el anuncio— de un alimento que cure y alargue la vida. Que se pueda viajar, visitar museos y conocer gente en lo virtual, sin dejar de salir al sol de la laguna. Y que se entienda cómo se llegó a una sociedad de personas solas, para no dar por natural el rellano donde ya no se saluda."
+    },
+    {
+      "type": "p",
+      "text": "Quien busque en estas páginas un manual de economía no lo encontrará. Quien busque una queja sin horizonte, tampoco. Este ensayo quiere mirar de frente las cuatro monedas y preguntar, con calma y con terquedad, si una vida puede medirse de otra manera. La pregunta queda abierta. El libro es el intento de no dejarla sola.",
+      "html": "Quien busque en estas páginas un manual de economía no lo encontrará. Quien busque una queja sin horizonte, tampoco. Este ensayo quiere mirar de frente las cuatro monedas y preguntar, con calma y con terquedad, si una vida puede medirse de otra manera. La pregunta queda abierta. El libro es el intento de no dejarla sola."
+    },
+    {
+      "type": "p",
+      "text": "Este prólogo no pide fe. Pide atención. El Mar Menor, herido y hermoso, está al lado de quien escribe, y enseña una lección que el dinero no sabe dar: hay realidades que se cuidan o se pierden, pero no se compran del todo. La laguna no se acaba de poseer. Se habita, se mira, se defiende. Una vida, también. Si estas páginas consiguen que esa evidencia se oiga entre tantas cifras, habrán hecho su trabajo. El resto lo hará el lector, que es quien, al fin, decide qué medida usar cuando se pregunte lo que vale un día.",
+      "html": "Este prólogo no pide fe. Pide atención. El Mar Menor, herido y hermoso, está al lado de quien escribe, y enseña una lección que el dinero no sabe dar: hay realidades que se cuidan o se pierden, pero no se compran del todo. La laguna no se acaba de poseer. Se habita, se mira, se defiende. Una vida, también. Si estas páginas consiguen que esa evidencia se oiga entre tantas cifras, habrán hecho su trabajo. El resto lo hará el lector, que es quien, al fin, decide qué medida usar cuando se pregunte lo que vale un día."
+    }
+  ]
+}

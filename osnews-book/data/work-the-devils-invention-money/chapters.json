@@ -1,0 +1,83 @@
+{
+  "bookId": "work-the-devils-invention-money",
+  "chapters": [
+    {
+      "id": "00-prologue",
+      "title": "Prologue. Four coins and a question",
+      "file": "chapters/00-prologue.json",
+      "kind": "prologo"
+    },
+    {
+      "id": "01-chapter-1",
+      "title": "Chapter 1. When barter gave way to money: your work for 4 coins",
+      "file": "chapters/01-chapter-1.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "02-chapter-2",
+      "title": "Chapter 2. When everything collapses: humanoids work for humans",
+      "file": "chapters/02-chapter-2.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "03-chapter-3",
+      "title": "Chapter 3. When a person has enough VAT coupons to buy what they need",
+      "file": "chapters/03-chapter-3.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "04-chapter-4",
+      "title": "Chapter 4. When being a millionaire gives you no power, because there are no rich or poor",
+      "file": "chapters/04-chapter-4.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "05-chapter-5",
+      "title": "Chapter 5. When society depends on AI and not on drugs or shopping",
+      "file": "chapters/05-chapter-5.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "06-chapter-6",
+      "title": "Chapter 6. When there are no politicians, conflicts come to an end",
+      "file": "chapters/06-chapter-6.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "07-chapter-7",
+      "title": "Chapter 7. When the conquest of the Moon yields new materials for semiconductors",
+      "file": "chapters/07-chapter-7.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "08-chapter-8",
+      "title": "Chapter 8. When a tomato with your DNA heals you and is eternal life: when you eat according to your biological needs",
+      "file": "chapters/08-chapter-8.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "09-chapter-9",
+      "title": "Chapter 9. When people do not leave home: they travel in the virtual",
+      "file": "chapters/09-chapter-9.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "10-chapter-10",
+      "title": "Chapter 10. How we arrived at a society of people living alone",
+      "file": "chapters/10-chapter-10.json",
+      "kind": "capitulo"
+    },
+    {
+      "id": "11-epilogue",
+      "title": "Epilogue. After the four coins",
+      "file": "chapters/11-epilogue.json",
+      "kind": "epilogo"
+    },
+    {
+      "id": "12-sources",
+      "title": "Notes and sources",
+      "file": "chapters/12-sources.json",
+      "kind": "fuentes"
+    }
+  ]
+}

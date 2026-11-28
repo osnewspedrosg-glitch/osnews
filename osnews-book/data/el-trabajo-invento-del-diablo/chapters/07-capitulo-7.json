@@ -1,0 +1,92 @@
+{
+  "id": "07-capitulo-7",
+  "title": "Capítulo 7. Cuando la conquista de la Luna consigue nuevos materiales para semiconductores",
+  "kind": "capitulo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Hay noches, en el Mar Menor, en las que la Luna se copia en el agua con una nitidez casi ofensiva, como si la laguna quisiera tener un satélite propio. Uno mira ese disco y le parece lejano, decorativo, de poema. Pedro lo mira de otra manera. Ve una cantera. Ve materiales. Ve, más allá de la prosa de los telediarios, un círculo que podría cerrarse: la conquista de la Luna aporta lo que hace falta para fabricar los chips y la energía de la inteligencia artificial y de los humanoides, y esas máquinas, a su vez, alivian el trabajo tasado en cuatro monedas. La idea es suya. Este capítulo la sostiene como visión, y distingue, con cuidado, lo que ya es ciencia y programa real de lo que todavía es horizonte.",
+      "html": "Hay noches, en el Mar Menor, en las que la Luna se copia en el agua con una nitidez casi ofensiva, como si la laguna quisiera tener un satélite propio. Uno mira ese disco y le parece lejano, decorativo, de poema. Pedro lo mira de otra manera. Ve una cantera. Ve materiales. Ve, más allá de la prosa de los telediarios, un círculo que podría cerrarse: la conquista de la Luna aporta lo que hace falta para fabricar los chips y la energía de la inteligencia artificial y de los humanoides, y esas máquinas, a su vez, alivian el trabajo tasado en cuatro monedas. La idea es suya. Este capítulo la sostiene como visión, y distingue, con cuidado, lo que ya es ciencia y programa real de lo que todavía es horizonte."
+    },
+    {
+      "type": "p",
+      "text": "❧",
+      "html": "❧"
+    },
+    {
+      "type": "p",
+      "text": "Empieza lo que sí se sabe. La Luna no es un desierto vacío. Está cubierta de regolito, una capa de polvo y fragmentos nacida de miles de millones de años de impactos, sin agua líquida en la superficie, sin atmósfera que la suavice. Ese polvo, analizado desde las misiones Apolo y, más tarde, en muestras chinas, tiene una composición que, para quien piensa en industria, no es prosa menor. En números redondos, el regolito de mares y de tierras altas ronda el 45 por ciento de sílice (SiO₂). Hay hierro, aluminio, calcio, magnesio, titanio. En los mares, el titanio y el hierro son más abundantes; en las tierras altas, el aluminio. El silicio, precisamente el elemento de tantos semiconductores de la Tierra, está ahí, atado en óxidos y en silicatos, esperando una química que lo separe. No es un yacimiento de chips. Es un yacimiento de ingredientes. La diferencia importa.",
+      "html": "Empieza lo que sí se sabe. La Luna no es un desierto vacío. Está cubierta de regolito, una capa de polvo y fragmentos nacida de miles de millones de años de impactos, sin agua líquida en la superficie, sin atmósfera que la suavice. Ese polvo, analizado desde las misiones Apolo y, más tarde, en muestras chinas, tiene una composición que, para quien piensa en industria, no es prosa menor. En números redondos, el regolito de mares y de tierras altas ronda el 45 por ciento de sílice (SiO₂). Hay hierro, aluminio, calcio, magnesio, titanio. En los mares, el titanio y el hierro son más abundantes; en las tierras altas, el aluminio. El silicio, precisamente el elemento de tantos semiconductores de la Tierra, está ahí, atado en óxidos y en silicatos, esperando una química que lo separe. No es un yacimiento de chips. Es un yacimiento de ingredientes. La diferencia importa."
+    },
+    {
+      "type": "p",
+      "text": "El helio-3 merece un párrafo honesto, porque a menudo se lo nombra como si fuera una moneda mágica. No es un material de semiconductor. Es un isótopo ligero, implantado en el regolito por el viento solar, más retenido en suelos maduros ricos en ilmenita, el mineral de titanio de los mares. Las concentraciones medidas en muestras son pequeñísimas: del orden de unas pocas partes por mil millones, algo más altas donde hay más titanio. Durante décadas, físicos e ingenieros —entre ellos, equipos que han trabajado con datos de Apolo y con informes conservados en la NASA y en el Lunar and Planetary Institute— han propuesto el helio-3 como un posible combustible de fusión, una energía más limpia, en teoría, que otras formas de obtener potencia. Esa propuesta sigue siendo, en lo esencial, una posibilidad de laboratorio y de estudio, no una industria abierta. En este libro se la recoge así: no como un chip, sino como una energía soñada que, si algún día se dominara, podría alimentar precisamente la industria de los chips, de los humanoides y de la abundancia. El círculo se cierra, si se cierra, con esa distinción. El silicio y los metales, a los dispositivos. El helio-3, si la fusión lo permite, a la corriente que los haga funcionar.",
+      "html": "El helio-3 merece un párrafo honesto, porque a menudo se lo nombra como si fuera una moneda mágica. No es un material de semiconductor. Es un isótopo ligero, implantado en el regolito por el viento solar, más retenido en suelos maduros ricos en ilmenita, el mineral de titanio de los mares. Las concentraciones medidas en muestras son pequeñísimas: del orden de unas pocas partes por mil millones, algo más altas donde hay más titanio. Durante décadas, físicos e ingenieros —entre ellos, equipos que han trabajado con datos de Apolo y con informes conservados en la NASA y en el Lunar and Planetary Institute— han propuesto el helio-3 como un posible combustible de fusión, una energía más limpia, en teoría, que otras formas de obtener potencia. Esa propuesta sigue siendo, en lo esencial, una posibilidad de laboratorio y de estudio, no una industria abierta. En este libro se la recoge así: no como un chip, sino como una energía soñada que, si algún día se dominara, podría alimentar precisamente la industria de los chips, de los humanoides y de la abundancia. El círculo se cierra, si se cierra, con esa distinción. El silicio y los metales, a los dispositivos. El helio-3, si la fusión lo permite, a la corriente que los haga funcionar."
+    },
+    {
+      "type": "p",
+      "text": "Hay hielo de agua en cráteres de los polos, en zonas de sombra permanente. Varias misiones lo han apuntado y, en algunos casos, lo han reforzado con medidas. El agua no es un semiconductor, pero es vida para una base, combustible, oxígeno. Sin ella, la cantera lunar sería aún más dura de abrir.",
+      "html": "Hay hielo de agua en cráteres de los polos, en zonas de sombra permanente. Varias misiones lo han apuntado y, en algunos casos, lo han reforzado con medidas. El agua no es un semiconductor, pero es vida para una base, combustible, oxígeno. Sin ella, la cantera lunar sería aún más dura de abrir."
+    },
+    {
+      "type": "p",
+      "text": "❧",
+      "html": "❧"
+    },
+    {
+      "type": "p",
+      "text": "Los programas reales, hoy, no están minando la Luna a escala industrial. Están volviendo, midiendo, trayendo puñados de suelo. Conviene decirlo para no vender una mina que todavía no existe.",
+      "html": "Los programas reales, hoy, no están minando la Luna a escala industrial. Están volviendo, midiendo, trayendo puñados de suelo. Conviene decirlo para no vender una mina que todavía no existe."
+    },
+    {
+      "type": "p",
+      "text": "Según la NASA, la misión Artemis II despegó en abril de 2026 y dio a su tripulación —Reid Wiseman, Victor Glover, Christina Koch y el astronauta canadiense Jeremy Hansen— un vuelo tripulado alrededor de la Luna, el primero de este programa. Artemis III, prevista para 2027, no será aún el alunizaje, sino una prueba en órbita terrestre de rendezvous y acoplamiento con artículos de prueba de alunizadores comerciales. El primer alunizaje tripulado del programa, Artemis IV, está apuntado por la agencia a principios de 2028, cerca del polo sur lunar, con dos astronautas en la superficie durante unos días. Las fechas de un programa espacial se mueven, y este libro no las trata como un destino. Las trata como lo que la NASA, en sus páginas públicas, estaba diciendo al escribirse estas líneas.",
+      "html": "Según la NASA, la misión Artemis II despegó en abril de 2026 y dio a su tripulación —Reid Wiseman, Victor Glover, Christina Koch y el astronauta canadiense Jeremy Hansen— un vuelo tripulado alrededor de la Luna, el primero de este programa. Artemis III, prevista para 2027, no será aún el alunizaje, sino una prueba en órbita terrestre de rendezvous y acoplamiento con artículos de prueba de alunizadores comerciales. El primer alunizaje tripulado del programa, Artemis IV, está apuntado por la agencia a principios de 2028, cerca del polo sur lunar, con dos astronautas en la superficie durante unos días. Las fechas de un programa espacial se mueven, y este libro no las trata como un destino. Las trata como lo que la NASA, en sus páginas públicas, estaba diciendo al escribirse estas líneas."
+    },
+    {
+      "type": "p",
+      "text": "China, por su parte, ya ha traído piedra. Chang'e 5, en diciembre de 2020, devolvió unos 1.731 gramos de muestras de la cara visible, según la Administración Nacional del Espacio de China (CNSA). Chang'e 6, en junio de 2024, trajo 1.935,3 gramos de la cara oculta, de la cuenca Aitken del polo sur: las primeras muestras de ese hemisferio en la historia. No son toneladas de silicio industrial. Son tesoros científicos, y son también un ensayo de lo que significa ir, recoger y volver. De ese gesto a una minería que alimente fábricas hay un trecho largo, técnico, jurídico y ético. El trecho no se recorre negándolo, ni proclamándolo ya recorrido.",
+      "html": "China, por su parte, ya ha traído piedra. Chang&#x27;e 5, en diciembre de 2020, devolvió unos 1.731 gramos de muestras de la cara visible, según la Administración Nacional del Espacio de China (CNSA). Chang&#x27;e 6, en junio de 2024, trajo 1.935,3 gramos de la cara oculta, de la cuenca Aitken del polo sur: las primeras muestras de ese hemisferio en la historia. No son toneladas de silicio industrial. Son tesoros científicos, y son también un ensayo de lo que significa ir, recoger y volver. De ese gesto a una minería que alimente fábricas hay un trecho largo, técnico, jurídico y ético. El trecho no se recorre negándolo, ni proclamándolo ya recorrido."
+    },
+    {
+      "type": "p",
+      "text": "Otros países han orbitado, han alunizado de forma automática, han fotografiado. El mapa se va llenando. La industria, no todavía.",
+      "html": "Otros países han orbitado, han alunizado de forma automática, han fotografiado. El mapa se va llenando. La industria, no todavía."
+    },
+    {
+      "type": "p",
+      "text": "❧",
+      "html": "❧"
+    },
+    {
+      "type": "p",
+      "text": "La visión de Pedro empieza donde termina el parte de las agencias. Imagina que ese regolito, un día, se procesa. Que se extrae oxígeno, silicio, hierro, aluminio, titanio. Que los semiconductores de la IA y de los humanoides —los que harían el trabajo pesado de los capítulos anteriores, los que ayudarían a decidir, a cultivar, a curar, a fabricar— ya no dependen solo de las minas y de las fábricas de la Tierra, con su costo en jornales, en paisajes y en peleas por el recurso. Que la Luna, que no es de nadie en el sentido en que lo es una finca, se vuelve una despensa común, o al menos una despensa que no se tase en cuatro monedas para unos pocos. Que el helio-3, si la física y la ingeniería lo consienten, dé una energía abundante. Y que, con energía y con chips de sobra, el chantaje del salario se debilite: ya no haría falta alquilar la vida para merecer el pan, porque las máquinas, alimentadas por esa abundancia, cargarían con lo repetido y lo extenuante.",
+      "html": "La visión de Pedro empieza donde termina el parte de las agencias. Imagina que ese regolito, un día, se procesa. Que se extrae oxígeno, silicio, hierro, aluminio, titanio. Que los semiconductores de la IA y de los humanoides —los que harían el trabajo pesado de los capítulos anteriores, los que ayudarían a decidir, a cultivar, a curar, a fabricar— ya no dependen solo de las minas y de las fábricas de la Tierra, con su costo en jornales, en paisajes y en peleas por el recurso. Que la Luna, que no es de nadie en el sentido en que lo es una finca, se vuelve una despensa común, o al menos una despensa que no se tase en cuatro monedas para unos pocos. Que el helio-3, si la física y la ingeniería lo consienten, dé una energía abundante. Y que, con energía y con chips de sobra, el chantaje del salario se debilite: ya no haría falta alquilar la vida para merecer el pan, porque las máquinas, alimentadas por esa abundancia, cargarían con lo repetido y lo extenuante."
+    },
+    {
+      "type": "p",
+      "text": "Es un círculo hermoso. También es un círculo que se puede romper. Se puede romper si la Luna se vuelve otra sierra minera con dueño, otra Qart Hadasht cuya plata pague a unos y fatigue a otros. Se puede romper si la conquista no es de la humanidad, sino de un puñado de intereses. Este libro, que ha criticado el dinero como medida, no puede soñar la Luna y olvidar esa lección. Los materiales no nos salvarán por sí solos. Nos podrán salvar si, al bajarlos, no bajamos con ellos la costumbre de tasar a las personas.",
+      "html": "Es un círculo hermoso. También es un círculo que se puede romper. Se puede romper si la Luna se vuelve otra sierra minera con dueño, otra Qart Hadasht cuya plata pague a unos y fatigue a otros. Se puede romper si la conquista no es de la humanidad, sino de un puñado de intereses. Este libro, que ha criticado el dinero como medida, no puede soñar la Luna y olvidar esa lección. Los materiales no nos salvarán por sí solos. Nos podrán salvar si, al bajarlos, no bajamos con ellos la costumbre de tasar a las personas."
+    },
+    {
+      "type": "p",
+      "text": "Por ahora, desde la orilla, la Luna sigue siendo la misma. Se refleja en el Mar Menor y no pide permiso. Los programas siguen adelante, con fechas y con muestras que caben en una caja. La cantera está, en potencia, sobre nuestras cabezas. El capítulo deja las dos verdades juntas, sin mezclarlas: la ciencia, con su sílice, su helio-3 escasísimo y sus misiones; y el sueño de Pedro, que ve en esa piedra la posibilidad de unos chips y de una energía para que el trabajo deje de ser un alquiler. El círculo de la abundancia, si algún día se cierra, debería cerrarse para todos. Si no, no sería abundancia. Sería, otra vez, cuatro monedas, solo que acuñadas con polvo de otro mundo.",
+      "html": "Por ahora, desde la orilla, la Luna sigue siendo la misma. Se refleja en el Mar Menor y no pide permiso. Los programas siguen adelante, con fechas y con muestras que caben en una caja. La cantera está, en potencia, sobre nuestras cabezas. El capítulo deja las dos verdades juntas, sin mezclarlas: la ciencia, con su sílice, su helio-3 escasísimo y sus misiones; y el sueño de Pedro, que ve en esa piedra la posibilidad de unos chips y de una energía para que el trabajo deje de ser un alquiler. El círculo de la abundancia, si algún día se cierra, debería cerrarse para todos. Si no, no sería abundancia. Sería, otra vez, cuatro monedas, solo que acuñadas con polvo de otro mundo."
+    },
+    {
+      "type": "p",
+      "text": "Queda un reparo técnico, y es bueno dejarlo escrito. Extraer silicio de un silicato lunar, fundir metales en un mundo sin atmósfera, calentar toneladas de regolito para recoger unas milmillonésimas de helio-3, fabricar después, en un entorno hostil o en la Tierra, obleas y circuitos: todo eso pide una ingeniería que todavía no está en marcha a esa escala. Pedirla de un día para otro sería otra forma de vender humo. Anunciarla como horizonte, con lo que ya se sabe de la composición del suelo y de las misiones en curso, es otra cosa. Este capítulo ha querido quedarse en la segunda.",
+      "html": "Queda un reparo técnico, y es bueno dejarlo escrito. Extraer silicio de un silicato lunar, fundir metales en un mundo sin atmósfera, calentar toneladas de regolito para recoger unas milmillonésimas de helio-3, fabricar después, en un entorno hostil o en la Tierra, obleas y circuitos: todo eso pide una ingeniería que todavía no está en marcha a esa escala. Pedirla de un día para otro sería otra forma de vender humo. Anunciarla como horizonte, con lo que ya se sabe de la composición del suelo y de las misiones en curso, es otra cosa. Este capítulo ha querido quedarse en la segunda."
+    },
+    {
+      "type": "p",
+      "text": "Si algún día un humanoide trabaja en una huerta de esta comarca, o una IA ayuda a decidir sobre la laguna, y una parte de su «cerebro» de silicio o de su energía tiene un origen lunar, el círculo que Pedro imagina se habrá cerrado un poco. Todavía no. Por ahora hay muestras en laboratorios, fechas en las páginas de las agencias, y una Luna que sale sobre el Mar Menor igual que hace dos mil años, cuando en Qart Hadasht se acuñaba la plata de la sierra. La diferencia es que ahora sabemos de qué está hecha. El resto, si llega, llegará trabajando, no proclamando.",
+      "html": "Si algún día un humanoide trabaja en una huerta de esta comarca, o una IA ayuda a decidir sobre la laguna, y una parte de su «cerebro» de silicio o de su energía tiene un origen lunar, el círculo que Pedro imagina se habrá cerrado un poco. Todavía no. Por ahora hay muestras en laboratorios, fechas en las páginas de las agencias, y una Luna que sale sobre el Mar Menor igual que hace dos mil años, cuando en Qart Hadasht se acuñaba la plata de la sierra. La diferencia es que ahora sabemos de qué está hecha. El resto, si llega, llegará trabajando, no proclamando."
+    },
+    {
+      "type": "p",
+      "text": "Hay, por último, una cuestión de derecho que este ensayo no puede resolver y no debe ocultar: quién decide sobre el suelo de la Luna, quién extrae, quién se beneficia. Si esas preguntas se contestan otra vez con monedas y con cercas, el capítulo habrá sido, apenas, una ilusión. Si se contestan en el espíritu del capítulo 6, la cantera podría ser, de veras, una despensa común.",
+      "html": "Hay, por último, una cuestión de derecho que este ensayo no puede resolver y no debe ocultar: quién decide sobre el suelo de la Luna, quién extrae, quién se beneficia. Si esas preguntas se contestan otra vez con monedas y con cercas, el capítulo habrá sido, apenas, una ilusión. Si se contestan en el espíritu del capítulo 6, la cantera podría ser, de veras, una despensa común."
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "07-chapter-7",
+  "title": "Chapter 7. When the conquest of the Moon yields new materials for semiconductors",
+  "kind": "capitulo",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "There are nights, on the Mar Menor, when the Moon copies itself in the water with an almost offensive sharpness, as if the lagoon wanted a satellite of its own. One looks at that disc and it seems distant, decorative, a thing of poems. Pedro looks at it another way. He sees a quarry. He sees materials. He sees, beyond the prose of the news, a circle that could close: the conquest of the Moon supplies what is needed to make the chips and the energy of artificial intelligence and of the humanoids, and those machines, in turn, ease the work priced in four coins. The idea is his. This chapter holds it as a vision, and distinguishes, carefully, what is already science and a real programme from what is still a horizon.",
+      "html": "There are nights, on the Mar Menor, when the Moon copies itself in the water with an almost offensive sharpness, as if the lagoon wanted a satellite of its own. One looks at that disc and it seems distant, decorative, a thing of poems. Pedro looks at it another way. He sees a quarry. He sees materials. He sees, beyond the prose of the news, a circle that could close: the conquest of the Moon supplies what is needed to make the chips and the energy of artificial intelligence and of the humanoids, and those machines, in turn, ease the work priced in four coins. The idea is his. This chapter holds it as a vision, and distinguishes, carefully, what is already science and a real programme from what is still a horizon."
+    },
+    {
+      "type": "p",
+      "text": "❧",
+      "html": "❧"
+    },
+    {
+      "type": "p",
+      "text": "What is known comes first. The Moon is not an empty desert. It is covered in regolith, a layer of dust and fragments born of billions of years of impacts, with no liquid water on the surface, no atmosphere to soften it. That dust, analysed since the Apollo missions and, later, in Chinese samples, has a composition that, for anyone thinking of industry, is not minor prose. In round numbers, the regolith of both maria and highlands is around 45 per cent silica (SiO₂). There is iron, aluminium, calcium, magnesium, titanium. In the maria, titanium and iron are more abundant; in the highlands, aluminium. Silicon, precisely the element of so many semiconductors on Earth, is there, bound in oxides and silicates, waiting for a chemistry that will separate it. It is not a deposit of chips. It is a deposit of ingredients. The difference matters.",
+      "html": "What is known comes first. The Moon is not an empty desert. It is covered in regolith, a layer of dust and fragments born of billions of years of impacts, with no liquid water on the surface, no atmosphere to soften it. That dust, analysed since the Apollo missions and, later, in Chinese samples, has a composition that, for anyone thinking of industry, is not minor prose. In round numbers, the regolith of both maria and highlands is around 45 per cent silica (SiO₂). There is iron, aluminium, calcium, magnesium, titanium. In the maria, titanium and iron are more abundant; in the highlands, aluminium. Silicon, precisely the element of so many semiconductors on Earth, is there, bound in oxides and silicates, waiting for a chemistry that will separate it. It is not a deposit of chips. It is a deposit of ingredients. The difference matters."
+    },
+    {
+      "type": "p",
+      "text": "Helium-3 deserves an honest paragraph, because it is often named as if it were a magic coin. It is not a semiconductor material. It is a light isotope, implanted in the regolith by the solar wind, better retained in mature soils rich in ilmenite, the titanium mineral of the maria. Concentrations measured in samples are tiny: on the order of a few parts per billion, somewhat higher where there is more titanium. For decades, physicists and engineers — among them teams that have worked with Apollo data and with reports held by NASA and the Lunar and Planetary Institute — have proposed helium-3 as a possible fusion fuel, an energy cleaner, in theory, than other ways of obtaining power. That proposal remains, in essence, a possibility of the laboratory and of study, not an open industry. In this book it is taken up that way: not as a chip, but as a dreamed-of energy that, if it were one day mastered, could feed precisely the industry of chips, of humanoids and of abundance. The circle closes, if it closes, with that distinction. Silicon and the metals, to the devices. Helium-3, if fusion allows it, to the current that makes them run.",
+      "html": "Helium-3 deserves an honest paragraph, because it is often named as if it were a magic coin. It is not a semiconductor material. It is a light isotope, implanted in the regolith by the solar wind, better retained in mature soils rich in ilmenite, the titanium mineral of the maria. Concentrations measured in samples are tiny: on the order of a few parts per billion, somewhat higher where there is more titanium. For decades, physicists and engineers — among them teams that have worked with Apollo data and with reports held by NASA and the Lunar and Planetary Institute — have proposed helium-3 as a possible fusion fuel, an energy cleaner, in theory, than other ways of obtaining power. That proposal remains, in essence, a possibility of the laboratory and of study, not an open industry. In this book it is taken up that way: not as a chip, but as a dreamed-of energy that, if it were one day mastered, could feed precisely the industry of chips, of humanoids and of abundance. The circle closes, if it closes, with that distinction. Silicon and the metals, to the devices. Helium-3, if fusion allows it, to the current that makes them run."
+    },
+    {
+      "type": "p",
+      "text": "There is water ice in polar craters, in permanently shadowed regions. Several missions have pointed to it and, in some cases, reinforced it with measurements. Water is not a semiconductor, but it is life for a base, fuel, oxygen. Without it, the lunar quarry would be even harder to open.",
+      "html": "There is water ice in polar craters, in permanently shadowed regions. Several missions have pointed to it and, in some cases, reinforced it with measurements. Water is not a semiconductor, but it is life for a base, fuel, oxygen. Without it, the lunar quarry would be even harder to open."
+    },
+    {
+      "type": "p",
+      "text": "❧",
+      "html": "❧"
+    },
+    {
+      "type": "p",
+      "text": "The real programmes, today, are not mining the Moon at an industrial scale. They are going back, measuring, bringing back handfuls of soil. That should be said so as not to sell a mine that does not yet exist.",
+      "html": "The real programmes, today, are not mining the Moon at an industrial scale. They are going back, measuring, bringing back handfuls of soil. That should be said so as not to sell a mine that does not yet exist."
+    },
+    {
+      "type": "p",
+      "text": "According to NASA, the Artemis II mission lifted off in April 2026 and gave its crew — Reid Wiseman, Victor Glover, Christina Koch and the Canadian astronaut Jeremy Hansen — a crewed flight around the Moon, the first of this programme. Artemis III, planned for 2027, will not yet be the landing, but a test in Earth orbit of rendezvous and docking with test articles of commercial landers. The programme's first crewed landing, Artemis IV, is pointed by the agency at early 2028, near the lunar south pole, with two astronauts on the surface for some days. The dates of a space programme move, and this book does not treat them as a destiny. It treats them as what NASA, on its public pages, was saying when these lines were written.",
+      "html": "According to NASA, the Artemis II mission lifted off in April 2026 and gave its crew — Reid Wiseman, Victor Glover, Christina Koch and the Canadian astronaut Jeremy Hansen — a crewed flight around the Moon, the first of this programme. Artemis III, planned for 2027, will not yet be the landing, but a test in Earth orbit of rendezvous and docking with test articles of commercial landers. The programme&#x27;s first crewed landing, Artemis IV, is pointed by the agency at early 2028, near the lunar south pole, with two astronauts on the surface for some days. The dates of a space programme move, and this book does not treat them as a destiny. It treats them as what NASA, on its public pages, was saying when these lines were written."
+    },
+    {
+      "type": "p",
+      "text": "China, for its part, has already brought back stone. Chang'e 5, in December 2020, returned some 1,731 grams of samples from the near side, according to the China National Space Administration (CNSA). Chang'e 6, in June 2024, brought 1,935.3 grams from the far side, from the South Pole–Aitken basin: the first samples from that hemisphere in history. They are not tonnes of industrial silicon. They are scientific treasures, and they are also a rehearsal of what it means to go, collect and return. From that gesture to a mining that feeds factories is a long way, technical, legal and ethical. The way is not travelled by denying it, or by proclaiming it already travelled.",
+      "html": "China, for its part, has already brought back stone. Chang&#x27;e 5, in December 2020, returned some 1,731 grams of samples from the near side, according to the China National Space Administration (CNSA). Chang&#x27;e 6, in June 2024, brought 1,935.3 grams from the far side, from the South Pole–Aitken basin: the first samples from that hemisphere in history. They are not tonnes of industrial silicon. They are scientific treasures, and they are also a rehearsal of what it means to go, collect and return. From that gesture to a mining that feeds factories is a long way, technical, legal and ethical. The way is not travelled by denying it, or by proclaiming it already travelled."
+    },
+    {
+      "type": "p",
+      "text": "Other countries have orbited, landed automatically, photographed. The map is filling in. Industry, not yet.",
+      "html": "Other countries have orbited, landed automatically, photographed. The map is filling in. Industry, not yet."
+    },
+    {
+      "type": "p",
+      "text": "❧",
+      "html": "❧"
+    },
+    {
+      "type": "p",
+      "text": "Pedro's vision begins where the agencies' bulletin ends. He imagines that that regolith, one day, is processed. That oxygen, silicon, iron, aluminium, titanium are extracted. That the semiconductors of AI and of the humanoids — those that would do the heavy work of the earlier chapters, that would help to decide, to cultivate, to heal, to manufacture — no longer depend only on the mines and factories of Earth, with their cost in wages, in landscapes and in fights over the resource. That the Moon, which belongs to no one in the sense in which a farm does, becomes a common pantry, or at least a pantry not priced in four coins for a few. That helium-3, if physics and engineering allow it, gives abundant energy. And that, with energy and chips to spare, the blackmail of the wage weakens: it would no longer be necessary to rent out a life in order to deserve bread, because the machines, fed by that abundance, would carry what is repeated and exhausting.",
+      "html": "Pedro&#x27;s vision begins where the agencies&#x27; bulletin ends. He imagines that that regolith, one day, is processed. That oxygen, silicon, iron, aluminium, titanium are extracted. That the semiconductors of AI and of the humanoids — those that would do the heavy work of the earlier chapters, that would help to decide, to cultivate, to heal, to manufacture — no longer depend only on the mines and factories of Earth, with their cost in wages, in landscapes and in fights over the resource. That the Moon, which belongs to no one in the sense in which a farm does, becomes a common pantry, or at least a pantry not priced in four coins for a few. That helium-3, if physics and engineering allow it, gives abundant energy. And that, with energy and chips to spare, the blackmail of the wage weakens: it would no longer be necessary to rent out a life in order to deserve bread, because the machines, fed by that abundance, would carry what is repeated and exhausting."
+    },
+    {
+      "type": "p",
+      "text": "It is a beautiful circle. It is also a circle that can be broken. It can be broken if the Moon becomes another mining sierra with an owner, another Qart Hadasht whose silver pays some and wearies others. It can be broken if the conquest is not humanity's, but that of a handful of interests. This book, which has criticised money as a measure, cannot dream the Moon and forget that lesson. The materials will not save us by themselves. They may save us if, when they are brought down, we do not bring down with them the custom of pricing people.",
+      "html": "It is a beautiful circle. It is also a circle that can be broken. It can be broken if the Moon becomes another mining sierra with an owner, another Qart Hadasht whose silver pays some and wearies others. It can be broken if the conquest is not humanity&#x27;s, but that of a handful of interests. This book, which has criticised money as a measure, cannot dream the Moon and forget that lesson. The materials will not save us by themselves. They may save us if, when they are brought down, we do not bring down with them the custom of pricing people."
+    },
+    {
+      "type": "p",
+      "text": "For now, from the shore, the Moon remains the same. It is reflected in the Mar Menor and asks no permission. The programmes go on, with dates and with samples that fit in a box. The quarry is, in potential, over our heads. The chapter leaves the two truths together, without mixing them: the science, with its silica, its extremely scarce helium-3 and its missions; and Pedro's dream, which sees in that stone the possibility of chips and of an energy so that work may cease to be a rental. The circle of abundance, if it one day closes, should close for everyone. If not, it would not be abundance. It would be, once again, four coins, only minted with dust from another world.",
+      "html": "For now, from the shore, the Moon remains the same. It is reflected in the Mar Menor and asks no permission. The programmes go on, with dates and with samples that fit in a box. The quarry is, in potential, over our heads. The chapter leaves the two truths together, without mixing them: the science, with its silica, its extremely scarce helium-3 and its missions; and Pedro&#x27;s dream, which sees in that stone the possibility of chips and of an energy so that work may cease to be a rental. The circle of abundance, if it one day closes, should close for everyone. If not, it would not be abundance. It would be, once again, four coins, only minted with dust from another world."
+    },
+    {
+      "type": "p",
+      "text": "A technical reservation remains, and it is good to leave it written. Extracting silicon from a lunar silicate, smelting metals in a world without atmosphere, heating tonnes of regolith to collect a few billionths of helium-3, then making, in a hostile setting or on Earth, wafers and circuits: all that asks for an engineering that is not yet under way at that scale. To ask for it from one day to the next would be another way of selling smoke. To announce it as a horizon, with what is already known of the soil's composition and of the missions under way, is something else. This chapter has wanted to remain with the second.",
+      "html": "A technical reservation remains, and it is good to leave it written. Extracting silicon from a lunar silicate, smelting metals in a world without atmosphere, heating tonnes of regolith to collect a few billionths of helium-3, then making, in a hostile setting or on Earth, wafers and circuits: all that asks for an engineering that is not yet under way at that scale. To ask for it from one day to the next would be another way of selling smoke. To announce it as a horizon, with what is already known of the soil&#x27;s composition and of the missions under way, is something else. This chapter has wanted to remain with the second."
+    },
+    {
+      "type": "p",
+      "text": "If one day a humanoid works in a garden of this district, or an AI helps decide about the lagoon, and part of its silicon “brain” or of its energy has a lunar origin, the circle Pedro imagines will have closed a little. Not yet. For now there are samples in laboratories, dates on the agencies' pages, and a Moon that rises over the Mar Menor as it did two thousand years ago, when at Qart Hadasht the silver of the sierra was being minted. The difference is that we now know what it is made of. The rest, if it comes, will come by working, not by proclaiming.",
+      "html": "If one day a humanoid works in a garden of this district, or an AI helps decide about the lagoon, and part of its silicon “brain” or of its energy has a lunar origin, the circle Pedro imagines will have closed a little. Not yet. For now there are samples in laboratories, dates on the agencies&#x27; pages, and a Moon that rises over the Mar Menor as it did two thousand years ago, when at Qart Hadasht the silver of the sierra was being minted. The difference is that we now know what it is made of. The rest, if it comes, will come by working, not by proclaiming."
+    },
+    {
+      "type": "p",
+      "text": "There is, lastly, a question of right that this essay cannot settle and must not hide: who decides about the soil of the Moon, who extracts, who benefits. If those questions are answered once again with coins and with fences, the chapter will have been, barely, an illusion. If they are answered in the spirit of chapter 6, the quarry could be, truly, a common pantry.",
+      "html": "There is, lastly, a question of right that this essay cannot settle and must not hide: who decides about the soil of the Moon, who extracts, who benefits. If those questions are answered once again with coins and with fences, the chapter will have been, barely, an illusion. If they are answered in the spirit of chapter 6, the quarry could be, truly, a common pantry."
+    }
+  ]
+}
