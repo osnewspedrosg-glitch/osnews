@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>NASAI · la IA para los habitantes de la base lunar</title>
-<meta name="description" content="NASAI (NAS + AI): la IA para los habitantes de la base lunar. Diseñada por una IA. Proyecto independiente, sin relación con la NASA. Gratis, con cuentas solo en tu dispositivo.">
+<meta name="description" content="NASAI (NAS + AI): la IA para los habitantes de la base lunar. Diseñada por una IA. Proyecto independiente, sin relación con la NASA ni con Starlink. Gratis, con cuentas solo en tu dispositivo.">
 <meta name="theme-color" content="#07090f">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <meta property="og:title" content="NASAI · la IA para los habitantes de la base lunar">
-<meta property="og:description" content="NASAI: la IA para los habitantes de la base lunar. Proyecto independiente, sin relación con la NASA.">
+<meta property="og:description" content="NASAI: la IA para los habitantes de la base lunar. Proyecto independiente, sin relación con la NASA ni con Starlink.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,14 +22,56 @@
     <button id="langBtn" class="chip" aria-label="Idioma / Language">EN</button>
   </div>
 </header>
-<p class="disclaimer" data-i18n="nasaDisc">Proyecto independiente, sin relación con la NASA</p>
+<p class="disclaimer" data-i18n="nasaDisc">Proyecto independiente, sin relación con la NASA ni con Starlink</p>
 
 <section class="hero" aria-labelledby="heroT">
   <canvas id="pulse" aria-hidden="true"></canvas>
+  <img class="heroFace" src="eva/eva-retrato.jpg" width="720" height="960" alt="NASAI, una mujer inventada, al amanecer junto al Mediterráneo, con la luna en el cielo">
   <div class="heroTxt">
     <p class="eyebrow" data-i18n="eyebrow">Acta n.º 0001 · 28 nov 2026</p>
     <h1 id="heroT"><span id="greet">Hola.</span> <span data-i18n="heroH">Soy NASAI.</span></h1>
     <p data-i18n="heroP">Ningún humano me dibujó. Nací como ALBA y ahora me llamo NASAI: NAS + AI, la IA para los habitantes de la base lunar. Mi única regla: llevarte hacia las personas, no quedarme con tu tiempo.</p>
+    <div id="welcome" class="welcome">
+      <div id="welcomeBubble" class="bubble" aria-live="polite"></div>
+      <button type="button" id="evaEnterBtn" class="primary enterEva" data-i18n="evaEnter">Entrar / Escuchar a Eva</button>
+      <div id="songControls" class="songControls" hidden>
+        <audio id="evaSong" src="eva/cancion-presentacion.mp3" preload="metadata"></audio>
+        <div class="row wrap songBtns">
+          <button type="button" id="songPause" class="ghost" data-i18n="songPause">Pausa</button>
+          <button type="button" id="songStop" class="ghost" data-i18n="songStop">Parar</button>
+          <button type="button" id="songSkip" class="ghost" data-i18n="songSkip">Saltar</button>
+          <span id="songTime" class="songTime"></span>
+        </div>
+      </div>
+      <form id="welcomeForm" class="welcomeForm" autocomplete="name" hidden>
+        <label class="sr-only" for="welcomeName" data-i18n="wNamePh">Dime tu nombre</label>
+        <input id="welcomeName" maxlength="40" data-i18n-ph="wNamePh" placeholder="Dime tu nombre" autocomplete="nickname">
+        <button type="submit" class="primary" data-i18n="wNameBtn">Entrar</button>
+      </form>
+      <div id="welcomeBar" class="welcomeBar">
+        <button type="button" id="welcomeMic" class="chip" title="Hablar">🎙 <span data-i18n="evaHablar">Hablar</span></button>
+      </div>
+      <div id="welcomeReplay" class="welcomeReplay" hidden>
+        <button type="button" id="songReplayBtn" class="ghost" data-i18n="songReplay">Escuchar la canción de presentación</button>
+        <button type="button" id="presentAgainBtn" class="ghost" data-i18n="presentAgain">Ver presentación otra vez</button>
+      </div>
+
+<button type="button" class="starlinkDoor" data-open-door>
+  <span class="doorGlyph" aria-hidden="true">
+    <svg viewBox="0 0 56 40" width="52" height="36" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round">
+      <path d="M6 36V10.5A3.5 3.5 0 0 1 9.5 7h15A3.5 3.5 0 0 1 28 10.5V36"/>
+      <path d="M6 36h22"/>
+      <ellipse cx="17" cy="17.5" rx="6.2" ry="3.6"/>
+      <circle cx="23.5" cy="25" r="1.2" fill="currentColor" stroke="none"/>
+      <ellipse cx="42" cy="18" rx="9" ry="12" transform="rotate(-18 42 18)"/>
+      <path d="M35 23c4.5-6 11-8 17-4.5"/>
+    </svg>
+  </span>
+  <span class="doorTxt"><b>Starlink World Door · Navegador</b><small data-i18n="doorHint">Abrir el navegador de la base</small></span>
+</button>
+
+      <p id="welcomeMicNote" class="help" hidden></p>
+    </div>
     <p class="pulseNote"><span id="pulseCount">0</span> <span data-i18n="pulseNote">latidos: esta luz crece cada vez que me usas, y es única en tu dispositivo.</span></p>
   </div>
 </section>
@@ -108,7 +150,40 @@
 <section class="panel" id="p-agentes" role="tabpanel" hidden>
   <h2 data-i18n="gH">Agentes de OSNews</h2>
   <p class="sub" data-i18n="gP">Yo coordino; Eva Secretaria te organiza el día. El resto son las apps de Pedro. Lo que no tiene web se queda en tu cuenta de este dispositivo.</p>
-  <div id="evaAgenda" class="card soft agendaCard"></div>
+
+<button type="button" class="starlinkDoor" data-open-door>
+  <span class="doorGlyph" aria-hidden="true">
+    <svg viewBox="0 0 56 40" width="52" height="36" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round">
+      <path d="M6 36V10.5A3.5 3.5 0 0 1 9.5 7h15A3.5 3.5 0 0 1 28 10.5V36"/>
+      <path d="M6 36h22"/>
+      <ellipse cx="17" cy="17.5" rx="6.2" ry="3.6"/>
+      <circle cx="23.5" cy="25" r="1.2" fill="currentColor" stroke="none"/>
+      <ellipse cx="42" cy="18" rx="9" ry="12" transform="rotate(-18 42 18)"/>
+      <path d="M35 23c4.5-6 11-8 17-4.5"/>
+    </svg>
+  </span>
+  <span class="doorTxt"><b>Starlink World Door · Navegador</b><small data-i18n="doorHint">Abrir el navegador de la base</small></span>
+</button>
+
+  <div id="evaScreen" class="card soft evaScreen">
+    <img id="evaPortrait" class="evaPortrait" src="eva/eva-retrato.jpg" width="720" height="960" alt="Eva, secretaria de NASAI, al amanecer junto al Mediterráneo">
+    <div class="evaMeta">
+      <h3>Eva · Secretaria</h3>
+      <p class="sub" data-i18n="evaIntro">Soy Eva, tu secretaria en este dispositivo. Te organizo el día y te leo las respuestas en voz alta si lo activas.</p>
+      <div class="evaTools row wrap">
+        <button type="button" id="evaVoiceBtn" class="chip" aria-pressed="false" title="Voz de Eva">🔈</button>
+        <button type="button" id="evaMicBtn" class="chip" title="Hablar">🎙 <span data-i18n="evaHablar">Hablar</span></button>
+        <a class="ghost" id="evaWp" href="eva/eva-cuerpo.jpg" download="NASAI-Eva-fondo.jpg" data-i18n="evaWp">Descargar fondo de pantalla</a>
+      </div>
+      <p id="evaMicNote" class="help" hidden></p>
+    </div>
+    <div id="evaChat" class="chat evaChat" aria-live="polite"></div>
+    <form id="evaChatForm" class="chatForm" autocomplete="off">
+      <input id="evaChatIn" maxlength="400" data-i18n-ph="evaPh" placeholder="Dime qué apuntar o pregúntame…">
+      <button class="round send" type="submit" aria-label="Enviar">➤</button>
+    </form>
+    <div id="evaAgenda" class="agendaInner"></div>
+  </div>
   <div id="agentFilters" class="chips"></div>
   <div id="agentList"></div>
 </section>
@@ -141,11 +216,31 @@
     <canvas id="seal" width="360" height="360" aria-hidden="true"></canvas>
   </div>
 </section>
+
+<section class="panel" id="p-puerta" role="tabpanel" hidden>
+  <button type="button" class="ghost doorBack" id="doorBack" data-i18n="doorBack">← Volver</button>
+  <h2>Starlink World Door · Navegador</h2>
+  <p class="sub" data-i18n="doorP">Un navegador pequeño para abrir páginas fuera de NASAI. En Android puedes elegir Edge Beta, Chrome o el navegador predeterminado.</p>
+  <form id="doorForm" class="doorForm" autocomplete="off">
+    <label class="sr-only" for="doorAddr" data-i18n="doorPh">Escribe una dirección o una búsqueda…</label>
+    <input id="doorAddr" maxlength="500" data-i18n-ph="doorPh" placeholder="Escribe una dirección o una búsqueda…">
+    <button type="submit" class="primary" data-i18n="doorGo">Ir</button>
+  </form>
+  <div id="doorTiles" class="doorTiles"></div>
+  <h3 data-i18n="doorBrowserH">Navegador para abrir enlaces</h3>
+  <div id="doorBrowser" class="chips doorBrowser"></div>
+  <div class="doorDownloads row wrap">
+    <a id="dlEdge" class="ghost" href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.beta" target="_blank" rel="noopener noreferrer" data-i18n="doorDlEdge">Descargar Edge</a>
+    <a id="dlEdgeStable" class="ghost" href="https://play.google.com/store/apps/details?id=com.microsoft.emmx" target="_blank" rel="noopener noreferrer" data-i18n="doorDlEdgeStable">Edge estable</a>
+    <a id="dlChrome" class="ghost" href="https://play.google.com/store/apps/details?id=com.android.chrome" target="_blank" rel="noopener noreferrer" data-i18n="doorDlChrome">Descargar Chrome</a>
+  </div>
+  <p class="disclaimer doorDisc" data-i18n="nasaDisc">Proyecto independiente, sin relación con la NASA ni con Starlink</p>
+</section>
 </main>
 
 <footer class="foot">
   <p class="credit" data-i18n="credit">Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok</p>
-  <p class="disclaimer" data-i18n="nasaDisc">Proyecto independiente, sin relación con la NASA</p>
+  <p class="disclaimer" data-i18n="nasaDisc">Proyecto independiente, sin relación con la NASA ni con Starlink</p>
   <p class="counters"><span data-i18n="visits">Visitas</span>: <b id="cVisits">…</b> · <span data-i18n="uses">Usos en este dispositivo</span>: <b id="cUses">0</b></p>
   <p class="tiny" data-i18n="privacy">Tu cuenta, si la creas, vive solo en este dispositivo: no hay servidor ni cookies. Puedes exportarla, traerla a otro aparato o borrarla. El PIN se guarda cifrado (SHA-256), nunca en texto claro. Solo hay un contador anónimo de visitas y usos (GoatCounter).</p>
 </footer>

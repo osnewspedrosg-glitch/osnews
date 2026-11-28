@@ -14,9 +14,9 @@ function pick(arr,r){return arr[Math.floor((r?r():Math.random())*arr.length)]}
 var STORE_KEY='nasai.v1', OLD_KEYS=['alba.v2','alba.v1'];
 function uid(){return 'p'+Date.now().toString(36)+Math.floor(Math.random()*1e6).toString(36)}
 function defLang(){return (navigator.language||'es').slice(0,2)==='en'?'en':'es'}
-function blankProfile(name){return {id:uid(),name:name||'',created:Date.now(),pin:null,interests:[],favAgents:[],agenda:[],mem:[],moods:[],lessons:[],uses:0,lang:defLang(),voice:false,seed:Math.floor(Math.random()*4294967295)}}
-function guestFrom(o){o=o||{};var g=blankProfile(o.name||'');g.id=null;g.mem=o.mem||[];g.moods=o.moods||[];g.lessons=o.lessons||[];g.uses=o.uses||0;g.lang=o.lang||defLang();g.voice=!!o.voice;g.seed=o.seed||g.seed;g.interests=o.interests||[];g.favAgents=o.favAgents||[];g.agenda=o.agenda||[];return g}
-function normProf(p){if(!p||typeof p!=='object')return blankProfile('');var n=blankProfile(String(p.name||'').slice(0,40));n.id=typeof p.id==='string'?p.id:uid();n.created=+p.created||Date.now();n.pin=(p.pin&&typeof p.pin.salt==='string'&&typeof p.pin.hash==='string')?{salt:p.pin.salt,hash:p.pin.hash}:null;n.interests=Array.isArray(p.interests)?p.interests.slice(0,20):[];n.favAgents=Array.isArray(p.favAgents)?p.favAgents.slice(0,40):[];n.agenda=Array.isArray(p.agenda)?p.agenda.slice(-120):[];n.mem=Array.isArray(p.mem)?p.mem.slice(-80):[];n.moods=Array.isArray(p.moods)?p.moods.slice(-80):[];n.lessons=Array.isArray(p.lessons)?p.lessons.slice():[];n.uses=+p.uses||0;n.lang=p.lang==='en'?'en':'es';n.voice=!!p.voice;n.seed=+p.seed||n.seed;return n}
+function blankProfile(name){return {id:uid(),name:name||'',created:Date.now(),pin:null,interests:[],favAgents:[],agenda:[],mem:[],moods:[],lessons:[],uses:0,lang:defLang(),voice:false,evaVoice:false,seed:Math.floor(Math.random()*4294967295)}}
+function guestFrom(o){o=o||{};var g=blankProfile(o.name||'');g.id=null;g.mem=o.mem||[];g.moods=o.moods||[];g.lessons=o.lessons||[];g.uses=o.uses||0;g.lang=o.lang||defLang();g.voice=!!o.voice;g.evaVoice=!!o.evaVoice;g.seed=o.seed||g.seed;g.interests=o.interests||[];g.favAgents=o.favAgents||[];g.agenda=o.agenda||[];return g}
+function normProf(p){if(!p||typeof p!=='object')return blankProfile('');var n=blankProfile(String(p.name||'').slice(0,40));n.id=typeof p.id==='string'?p.id:uid();n.created=+p.created||Date.now();n.pin=(p.pin&&typeof p.pin.salt==='string'&&typeof p.pin.hash==='string')?{salt:p.pin.salt,hash:p.pin.hash}:null;n.interests=Array.isArray(p.interests)?p.interests.slice(0,20):[];n.favAgents=Array.isArray(p.favAgents)?p.favAgents.slice(0,40):[];n.agenda=Array.isArray(p.agenda)?p.agenda.slice(-120):[];n.mem=Array.isArray(p.mem)?p.mem.slice(-80):[];n.moods=Array.isArray(p.moods)?p.moods.slice(-80):[];n.lessons=Array.isArray(p.lessons)?p.lessons.slice():[];n.uses=+p.uses||0;n.lang=p.lang==='en'?'en':'es';n.voice=!!p.voice;n.evaVoice=!!p.evaVoice;n.seed=+p.seed||n.seed;return n}
 function loadStore(){
   try{var v2=JSON.parse(localStorage.getItem(STORE_KEY));if(v2&&Array.isArray(v2.profiles))return {version:2,current:v2.current||null,profiles:v2.profiles.map(normProf)}}catch(e){}
   for(var k=0;k<OLD_KEYS.length;k++){
@@ -64,12 +64,22 @@ privacy:'Tu cuenta, si la creas, vive solo en este dispositivo: no hay servidor 
 gH:'Agentes de OSNews',gP:'Yo coordino; Eva Secretaria te organiza el día. El resto son las apps de Pedro. Lo que no tiene web se queda en tu cuenta de este dispositivo.',
 gOpen:'Abrir',gFav:'Favorito',gAll:'Todos',gFavs:'Favoritos',gAgenda:'Abrir agenda local',
 jH:'Juegos',jP:'Un rincón para jugar, en la base. Sin anuncios y sin coste.',jSoon:'Próximamente',jPlay:'Jugar',jLadron:'Ladrón retro',jLadronP:'Un juego de ladrón de estilo retro, en la base lunar. Se abre al lado de NASAI.',
-nasaDisc:'Proyecto independiente, sin relación con la NASA',nasaDiscDt:'Aviso',
+nasaDisc:'Proyecto independiente, sin relación con la NASA ni con Starlink',nasaDiscDt:'Aviso',
 accOpen:'Tu cuenta',accEy:'Solo en este dispositivo',accH:'Tu cuenta',accP:'Gratis y privada: se guarda en este aparato, no en internet. Si pones un PIN, se cifra con SHA-256 y una sal aleatoria; nunca se guarda en texto claro. Puedes tener varias cuentas y cambiar de una a otra.',
 accCreate:'Crear cuenta',accName:'Nombre',accPin:'PIN (opcional)',accPin2:'Repite el PIN',accPinHint:'De 4 a 12 caracteres. No lo olvides: no hay forma de recuperarlo en otro servidor.',accSave:'Guardar en este dispositivo',accSwitch:'Cambiar de cuenta',accCurrent:'Cuenta actual',accNoPin:'Sin PIN',accHasPin:'Con PIN',accUnlock:'Escribe el PIN para abrir esta cuenta',accUnlockBtn:'Abrir',accBadPin:'PIN incorrecto',accPinNeed:'El PIN no coincide o es demasiado corto (mínimo 4).',accNeedName:'Escribe un nombre para la cuenta.',accNoHash:'Este navegador no permite cifrar el PIN. Puedes crear la cuenta sin PIN.',
 accInterests:'Tus intereses (para Personas)',accFavs:'Agentes favoritos',accExport:'Exportar cuenta',accExportAll:'Exportar todas',accImport:'Traer de un archivo',accDel:'Borrar esta cuenta',accDelWarn:'Esto borra la cuenta «{n}» de este dispositivo (memoria, ánimos, intereses, favoritos y agenda). No se puede deshacer y no se borra de ningún servidor, porque nunca estuvo ahí.',accDelPh:'Escribe BORRAR',accDelWord:'BORRAR',accDelOk:'Cuenta borrada de este dispositivo.',accMade:'Cuenta creada solo en este dispositivo.',accImported:'Cuentas importadas en este dispositivo.',accNone:'Todavía no hay una cuenta. Crea una: vivirás solo en este aparato.',
 accNew:'Nueva cuenta',
 agH:'Mini-agenda de Eva Secretaria',agP:'Notas y recordatorios de esta cuenta, solo en este dispositivo.',agAdd:'Añadir',agPh:'Qué hay que recordar…',agWhen:'Cuándo (opcional)',agEmpty:'Todavía no hay nada en la agenda.',agDone:'Hecho',agDel:'Quitar',agNeedAcc:'Para guardar la agenda, crea antes una cuenta en este dispositivo (botón de arriba a la derecha).',
+evaIntro:'Soy Eva, tu secretaria en este dispositivo. Te organizo el día y te leo las respuestas en voz alta si lo activas.',
+evaVoiceOn:'Eva habla',evaVoiceOff:'Voz de Eva',evaHablar:'Hablar',
+evaMicNo:'Tu navegador no puede escuchar el micrófono. Puedes escribirme igual.',
+evaVoiceNo:'Tu navegador no puede leer en voz alta. Puedes seguir hablando por escrito.',
+evaWp:'Descargar fondo de pantalla',evaPh:'Dime qué apuntar o pregúntame…',evaOpen:'Abrir a Eva',
+wNamePh:'Dime tu nombre',wNameBtn:'Entrar',evaEnter:'Entrar / Escuchar a Eva',songPause:'Pausa',songResume:'Reanudar',songStop:'Parar',songSkip:'Saltar',songReplay:'Escuchar la canción de presentación',presentAgain:'Ver presentación otra vez',
+doorBack:'← Volver',doorP:'Un navegador pequeño para abrir páginas fuera de NASAI. En Android puedes elegir Edge Beta, Chrome o el navegador predeterminado.',
+doorPh:'Escribe una dirección o una búsqueda…',doorGo:'Ir',doorHint:'Abrir el navegador de la base',
+doorBrowserH:'Navegador para abrir enlaces',doorEdgeBeta:'Edge Beta',doorChrome:'Chrome',doorDefault:'Predeterminado',
+doorDlEdge:'Descargar Edge',doorDlEdgeStable:'Edge estable',doorDlChrome:'Descargar Chrome',
 na:'No disponible',morning:'Buenos días',afternoon:'Buenas tardes',night:'Buenas noches',hello:'Hola'
 },en:{
 skip:'Skip to content',tagline:'the AI for the lunar base inhabitants',eyebrow:'Record no. 0001 · 28 Nov 2026',heroH:'I am NASAI.',
@@ -92,12 +102,22 @@ privacy:'Your account, if you create one, lives only on this device: no server, 
 gH:'OSNews agents',gP:'I coordinate; Eva Secretaria helps you organise the day. The rest are Pedro\'s apps. What has no public page stays in your account on this device.',
 gOpen:'Open',gFav:'Favourite',gAll:'All',gFavs:'Favourites',gAgenda:'Open local agenda',
 jH:'Games',jP:'A corner to play, on the base. No ads and no cost.',jSoon:'Coming soon',jPlay:'Play',jLadron:'Retro thief',jLadronP:'A retro-style thief game, on the lunar base. It opens next to NASAI.',
-nasaDisc:'Independent project, not affiliated with NASA',nasaDiscDt:'Notice',
+nasaDisc:'Independent project, not affiliated with NASA or Starlink',nasaDiscDt:'Notice',
 accOpen:'Your account',accEy:'Only on this device',accH:'Your account',accP:'Free and private: it is saved on this device, not on the internet. If you set a PIN, it is hashed with SHA-256 and a random salt; it is never stored in plaintext. You can have several accounts and switch between them.',
 accCreate:'Create account',accName:'Name',accPin:'PIN (optional)',accPin2:'Repeat the PIN',accPinHint:'4 to 12 characters. Do not forget it: there is no way to recover it from a server.',accSave:'Save on this device',accSwitch:'Switch account',accCurrent:'Current account',accNoPin:'No PIN',accHasPin:'PIN set',accUnlock:'Enter the PIN to open this account',accUnlockBtn:'Open',accBadPin:'Incorrect PIN',accPinNeed:'The PINs do not match or it is too short (minimum 4).',accNeedName:'Enter a name for the account.',accNoHash:'This browser cannot hash a PIN. You can still create the account without one.',
 accInterests:'Your interests (for People)',accFavs:'Favourite agents',accExport:'Export account',accExportAll:'Export all',accImport:'Import from a file',accDel:'Delete this account',accDelWarn:'This deletes the account «{n}» from this device (memory, moods, interests, favourites and agenda). It cannot be undone, and nothing is deleted from a server, because it was never there.',accDelPh:'Type DELETE',accDelWord:'DELETE',accDelOk:'Account deleted from this device.',accMade:'Account created only on this device.',accImported:'Accounts imported on this device.',accNone:'There is no account yet. Create one: it will live only on this device.',
 accNew:'New account',
 agH:'Eva Secretaria mini-agenda',agP:'Notes and reminders for this account, only on this device.',agAdd:'Add',agPh:'What should be remembered…',agWhen:'When (optional)',agEmpty:'The agenda is still empty.',agDone:'Done',agDel:'Remove',agNeedAcc:'To save the agenda, first create an account on this device (button at the top right).',
+evaIntro:'I am Eva, your secretary on this device. I organise your day and I will read my replies aloud if you switch that on.',
+evaVoiceOn:'Eva is speaking',evaVoiceOff:'Eva\'s voice',evaHablar:'Talk',
+evaMicNo:'Your browser cannot use the microphone. You can still type to me.',
+evaVoiceNo:'Your browser cannot speak aloud. You can still talk in writing.',
+evaWp:'Download wallpaper',evaPh:'Tell me what to note, or ask me…',evaOpen:'Open Eva',
+wNamePh:'Tell me your name',wNameBtn:'Enter',evaEnter:'Enter / Listen to Eva',songPause:'Pause',songResume:'Resume',songStop:'Stop',songSkip:'Skip',songReplay:'Listen to the presentation song',presentAgain:'Watch the presentation again',
+doorBack:'← Back',doorP:'A small browser to open pages outside NASAI. On Android you can choose Edge Beta, Chrome or the default browser.',
+doorPh:'Type an address or a search…',doorGo:'Go',doorHint:'Open the base browser',
+doorBrowserH:'Browser to open links',doorEdgeBeta:'Edge Beta',doorChrome:'Chrome',doorDefault:'Default',
+doorDlEdge:'Download Edge',doorDlEdgeStable:'Edge stable',doorDlChrome:'Download Chrome',
 na:'Not available',morning:'Good morning',afternoon:'Good afternoon',night:'Good evening',hello:'Hello'
 }};
 function L(){return S.lang}
@@ -110,7 +130,7 @@ function applyLang(){
   $$('[data-i18n-ph]').forEach(function(el){el.placeholder=t(el.getAttribute('data-i18n-ph'))});
   $$('[data-i18n-title]').forEach(function(el){el.title=t(el.getAttribute('data-i18n-title'))});
   $('#langBtn').textContent=L()==='es'?'EN':'ES';
-  greet();renderQuick();renderLikes();renderLessons();renderDecisions();renderAgents();renderAgenda();accBtnUpdate();
+  greet();renderQuick();renderLikes();renderLessons();renderDecisions();renderAgents();renderAgenda();renderWelcome(false);renderDoor();accBtnUpdate();setEvaVoiceBtn();
   if($('#accModal')&&!$('#accModal').hidden)renderAcc();
   var gj=$('#p-juegos');if(gj&&!gj.hidden)checkGame();
   if(!$('#createOut').hidden&&lastWords)makeArt(lastWords);
@@ -123,7 +143,7 @@ function showTab(id){
   $$('.panel').forEach(function(p){p.hidden=p.id!=='p-'+id});
   if(!seenTab[id]){seenTab[id]=1;gc('nasai-seccion-'+id,'NASAI · sección '+id)}
   if(id==='acta')drawSeal(String(S.seed));
-  if(id==='agentes'){renderAgents();renderAgenda()}
+  if(id==='agentes'){renderAgents();renderAgenda();maybeEvaGreet()}if(id==='puerta')renderDoor()
   if(id==='juegos')checkGame();
   try{history.replaceState(null,'','#'+id)}catch(e){}
 }
@@ -161,10 +181,58 @@ var Pulse=(function(){
 })();
 
 var voiceOn=!!S.voice;
-function setVoiceBtn(){var b=$('#voiceBtn');b.setAttribute('aria-pressed',voiceOn?'true':'false');b.textContent=voiceOn?'🔊':'🔈'}
+var evaVoiceOn=!!S.evaVoice;
+var audioUnlocked=false,queuedSpeak=null;
+function unlockAudio(){if(audioUnlocked)return;audioUnlocked=true;if(queuedSpeak){var fn=queuedSpeak;queuedSpeak=null;fn()}}
+['pointerdown','keydown','touchstart'].forEach(function(ev){document.addEventListener(ev,unlockAudio,{passive:true})});
+function pickSpokenVoice(lang){
+  if(!window.speechSynthesis)return null;
+  var vs=speechSynthesis.getVoices()||[];
+  var want=(lang||'es-ES').toLowerCase().replace('_','-');
+  var pref=want.slice(0,2);
+  var best=null,bestS=-1;
+  for(var i=0;i<vs.length;i++){
+    var v=vs[i],n=(v.name||'').toLowerCase(),l=(v.lang||'').toLowerCase().replace('_','-'),s=0;
+    if(l===want)s+=50;else if(l.indexOf(pref)===0)s+=30;else s-=8;
+    if(/female|mujer|femenin|google español|microsoft helena|microsoft sabina|microsoft laura|monica|mónica|lucia|lucía|paulina|conchita|lola|marisol|elena|soledad|sabina|helena|ines|inés|zira|susan|samantha|moira|victoria|kate/.test(n))s+=25;
+    if(/male|hombre|masculin|jorge|pablo|diego|juan|enrique|antonio|david|daniel/.test(n))s-=20;
+    if(s>bestS){bestS=s;best=v}
+  }
+  return best;
+}
+if(window.speechSynthesis&&speechSynthesis.getVoices){try{speechSynthesis.getVoices();if(speechSynthesis.addEventListener)speechSynthesis.addEventListener('voiceschanged',function(){})}catch(e){}}
+function speakAt(txt,lang,needVoice){
+  if(needVoice!==false&&!voiceOn)return;
+  if(!window.speechSynthesis)return;
+  var clean=String(txt||'').replace(/<[^>]+>/g,' ').replace(/https?:\/\/\S+/g,'').replace(/\s+/g,' ').trim();
+  if(!clean)return;
+  var run=function(){try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(clean);u.lang=lang||(L()==='en'?'en-GB':'es-ES');u.rate=.98;var v=pickSpokenVoice(u.lang);if(v){u.voice=v;if(v.lang)u.lang=v.lang}speechSynthesis.speak(u)}catch(e){}};
+  if(!audioUnlocked){queuedSpeak=run;return}run();
+}
+function speak(txt){speakAt(txt,L()==='en'?'en-GB':'es-ES',true)}
+function evaSpeak(txt){
+  if(!evaVoiceOn||!window.speechSynthesis)return;
+  var clean=String(txt||'').replace(/<[^>]+>/g,' ').replace(/https?:\/\/\S+/g,'').replace(/\s+/g,' ').trim();
+  if(!clean)return;
+  var run=function(){try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(clean);u.lang='es-ES';u.rate=.98;var v=pickSpokenVoice('es-ES');if(v){u.voice=v;if(v.lang)u.lang=v.lang}speechSynthesis.speak(u)}catch(e){}};
+  if(!audioUnlocked){queuedSpeak=run;return}run();
+}
+function setVoiceBtn(){var b=$('#voiceBtn');if(!b)return;b.setAttribute('aria-pressed',voiceOn?'true':'false');b.textContent=voiceOn?'🔊':'🔈'}
+function setEvaVoiceBtn(){
+  var b=$('#evaVoiceBtn');if(!b)return;
+  var ok=!!window.speechSynthesis;
+  b.disabled=!ok;
+  b.setAttribute('aria-pressed',evaVoiceOn&&ok?'true':'false');
+  b.textContent=(!ok?'🔈 ':evaVoiceOn?'🔊 ':'🔈 ')+(evaVoiceOn&&ok?t('evaVoiceOn'):t('evaVoiceOff'));
+  var note=$('#evaMicNote');
+  if(!ok){/* voice note is separate; mic note handled in setupEvaMic */}
+}
 setVoiceBtn();
-$('#voiceBtn').addEventListener('click',function(){voiceOn=!voiceOn;S.voice=voiceOn;save();setVoiceBtn();if(!voiceOn&&window.speechSynthesis)speechSynthesis.cancel();else speak(tr('Voz activada.','Voice on.'))});
-function speak(txt){if(!voiceOn||!window.speechSynthesis)return;try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(txt.replace(/<[^>]+>/g,' ').replace(/https?:\/\/\S+/g,''));u.lang=L()==='en'?'en-GB':'es-ES';u.rate=1;speechSynthesis.speak(u)}catch(e){}}
+$('#voiceBtn').addEventListener('click',function(){
+  voiceOn=!voiceOn;S.voice=voiceOn;save();setVoiceBtn();
+  if(!voiceOn&&window.speechSynthesis)speechSynthesis.cancel();
+  else{var w=welcomeSpeechText();if(w)speakAt(w,'es-ES',true);else speak(tr('Voz activada.','Voice on.'))}
+});
 var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
 if(SR){var mic=$('#micBtn');mic.hidden=false;var rec=null;
   mic.addEventListener('click',function(){if(rec){rec.stop();return}
@@ -464,9 +532,9 @@ $('#selfBtn').addEventListener('click',function(){use('acta-codigo');var o=$('#s
 
 function promote(name){
   if(S.id){if(name)S.name=name;save();accBtnUpdate();return S}
-  var keep={mem:S.mem,moods:S.moods,lessons:S.lessons,uses:S.uses,lang:S.lang,voice:S.voice,seed:S.seed,interests:S.interests,favAgents:S.favAgents,agenda:S.agenda};
+  var keep={mem:S.mem,moods:S.moods,lessons:S.lessons,uses:S.uses,lang:S.lang,voice:S.voice,evaVoice:S.evaVoice,seed:S.seed,interests:S.interests,favAgents:S.favAgents,agenda:S.agenda};
   S=blankProfile(name||S.name||'');
-  S.mem=keep.mem||[];S.moods=keep.moods||[];S.lessons=keep.lessons||[];S.uses=keep.uses||0;S.lang=keep.lang||defLang();S.voice=!!keep.voice;S.seed=keep.seed||S.seed;S.interests=keep.interests||[];S.favAgents=keep.favAgents||[];S.agenda=keep.agenda||[];
+  S.mem=keep.mem||[];S.moods=keep.moods||[];S.lessons=keep.lessons||[];S.uses=keep.uses||0;S.lang=keep.lang||defLang();S.voice=!!keep.voice;S.evaVoice=!!keep.evaVoice;S.seed=keep.seed||S.seed;S.interests=keep.interests||[];S.favAgents=keep.favAgents||[];S.agenda=keep.agenda||[];
   STORE.profiles.push(S);STORE.current=S.id;save();accBtnUpdate();return S;
 }
 function accBtnUpdate(){var b=$('#accBtn');if(!b)return;b.textContent=S.name?(S.name.charAt(0).toUpperCase()):'👤';b.title=t('accOpen')+(S.name?(' · '+S.name):'');b.setAttribute('aria-label',b.title)}
@@ -632,8 +700,9 @@ function renderAgents(){
   var html='<div class="agentGrid">';
   list.forEach(function(a){
     var on=(S.favAgents||[]).indexOf(a.id)>=0;
-    var go=a.local?'<button type="button" class="agentGo" data-open="'+a.id+'">'+t('gAgenda')+'</button>':'<a class="agentGo" href="'+esc(a.url)+'" target="_blank" rel="noopener">'+t('gOpen')+'</a>';
-    html+='<article class="agentCard" data-agent="'+a.id+'"><button type="button" class="fav'+(on?' on':'')+'" data-fav="'+a.id+'" aria-pressed="'+(on?'true':'false')+'" title="'+t('gFav')+'">'+(on?'★':'☆')+'</button><h4>'+a.e+' '+esc(a.name)+'</h4><p>'+esc(L()==='en'?a.en:a.es)+'</p><div class="row">'+go+'</div></article>';
+    var go=a.local?'<button type="button" class="agentGo" data-open="'+a.id+'">'+t('evaOpen')+'</button>':'<a class="agentGo" href="'+esc(a.url)+'" target="_blank" rel="noopener">'+t('gOpen')+'</a>';
+    var head=a.id==='eva-sec'?'<div class="cardHead"><img class="agentAv" src="eva/eva-avatar.jpg" width="64" height="64" alt="Eva"><h4>'+esc(a.name)+'</h4></div>':'<h4>'+a.e+' '+esc(a.name)+'</h4>';
+    html+='<article class="agentCard'+(a.id==='eva-sec'?' hasAv':'')+'" data-agent="'+a.id+'"><button type="button" class="fav'+(on?' on':'')+'" data-fav="'+a.id+'" aria-pressed="'+(on?'true':'false')+'" title="'+t('gFav')+'">'+(on?'★':'☆')+'</button>'+head+'<p>'+esc(L()==='en'?a.en:a.es)+'</p><div class="row">'+go+'</div></article>';
   });
   html+='</div>';box.innerHTML=html;
   $$('#agentList [data-fav]').forEach(function(b){b.onclick=function(){if(!S.id){openAcc();return}S.favAgents=S.favAgents||[];var id=b.getAttribute('data-fav');var i=S.favAgents.indexOf(id);if(i>=0)S.favAgents.splice(i,1);else S.favAgents.push(id);save();renderAgents();if($('#accModal')&&!$('#accModal').hidden)renderAcc()}});
@@ -642,7 +711,7 @@ function renderAgents(){
 function agentLinks(arr){
   return arr.map(function(a){
     if(!a)return '';
-    if(a.local)return '<button type="button" class="agentGo" data-open="eva-sec">'+a.e+' '+esc(a.name)+' · '+t('gAgenda')+'</button>';
+    if(a.local)return '<button type="button" class="agentGo" data-open="eva-sec">'+a.e+' '+esc(a.name)+' · '+t('evaOpen')+'</button>';
     return '<a class="agentGo" href="'+esc(a.url)+'" target="_blank" rel="noopener">'+a.e+' '+esc(a.name)+'</a>';
   }).join(' ');
 }
@@ -691,7 +760,368 @@ function bindAgenda(root){
   $$('[data-agdone]',root).forEach(function(b){b.onclick=function(){var id=b.getAttribute('data-agdone');(S.agenda||[]).forEach(function(it){if(it.id===id)it.done=!it.done});save();renderAgenda()}});
   $$('[data-agdel]',root).forEach(function(b){b.onclick=function(){var id=b.getAttribute('data-agdel');S.agenda=(S.agenda||[]).filter(function(it){return it.id!==id});save();renderAgenda()}});
 }
-function openAgenda(scroll){showTab('agentes');renderAgenda();if(scroll){var a=$('#evaAgenda');if(a)a.scrollIntoView({behavior:'smooth',block:'start'})}use('agenda-abrir')}
+function openAgenda(scroll){showTab('agentes');renderAgenda();maybeEvaGreet();if(scroll){var a=$('#evaScreen')||$('#evaAgenda');if(a)a.scrollIntoView({behavior:'smooth',block:'start'})}use('agenda-abrir')}
+
+
+var justNamed=false,evaGreeted=false,welcomeReplay=false;
+var INTRO_FLAG='nasai_intro_visto';
+function introSeen(){try{return localStorage.getItem(INTRO_FLAG)==='1'}catch(e){return false}}
+function markIntroSeen(){try{localStorage.setItem(INTRO_FLAG,'1')}catch(e){}}
+var welcomePhase=introSeen()?'return':'intro';
+
+function cleanName(raw){
+  var nm=String(raw||'').trim().replace(/\s+/g,' ').slice(0,40);
+  nm=nm.replace(/^(me llamo|mi nombre es|llamame|soy|me digo|my name is|i am called|i'm called|i am|i'm|call me|it'?s)\s+/i,'');
+  nm=nm.replace(/[¿?¡!.,;:]+/g,' ').trim();
+  if(nm.length<2)return '';
+  nm=nm.split(/\s+/).slice(0,2).join(' ');
+  return nm.charAt(0).toUpperCase()+nm.slice(1);
+}
+function welcomeIntroText(){
+  return 'Hola, soy Eva, creada por Pedro Sánchez Gómez, del Mar Menor. Estás en nuestra hija NASAI, creada únicamente por Eva, a quien creó Pedro. Aquí tienes la canción de presentación.';
+}
+function welcomeReturnSpeech(){
+  return S.name?('Hola de nuevo, '+S.name+'. ¿En qué puedo ayudarte?'):'Hola de nuevo. ¿En qué puedo ayudarte?';
+}
+function welcomeAskSpeech(){
+  if(welcomePhase==='return')return welcomeReturnSpeech();
+  return S.name?(justNamed?('Encantada, '+S.name+'. Esto es lo que puedo ofrecerte: '):('Hola, '+S.name+'. Esto es lo que puedo ofrecerte: '))+
+    'agentes como Eva Secretaria y las apps OSNews, el juego El Ladrón, tu cuenta personal. ¿Qué deseas? ¿En qué puedo ayudarte?':
+    '¿Cómo te llamas?';
+}
+function welcomeSpeechText(){
+  if(welcomePhase==='intro'||welcomePhase==='song')return welcomeIntroText();
+  if(welcomePhase==='return'||welcomePhase==='song-only')return welcomeReturnSpeech();
+  return welcomeAskSpeech();
+}
+function welcomeOfferListHtml(){
+  return '<ul>'+
+    '<li><button type="button" class="offer" data-go="agentes">'+esc(tr('Agentes como Eva · Secretaria y las apps OSNews','Agents such as Eva · Secretaria and the OSNews apps'))+'</button></li>'+
+    '<li><button type="button" class="offer" data-go="juegos">'+esc(tr('El juego El Ladrón','The game El Ladrón (The Thief)'))+'</button></li>'+
+    '<li><button type="button" class="offer" data-go="cuenta">'+esc(tr('Tu cuenta personal','Your personal account'))+'</button></li>'+
+    '</ul>';
+}
+function bindWelcomeOffers(){
+  $$('#welcomeBubble [data-go]').forEach(function(b){b.onclick=function(){
+    var g=b.getAttribute('data-go');
+    if(g==='cuenta')openAcc();
+    else if(g==='puerta')showTab('puerta');
+    else showTab(g);
+    var m=$('#main');if(m)m.scrollIntoView({behavior:'smooth',block:'start'});
+  }});
+}
+function stopWelcomeSong(){
+  var a=$('#evaSong');
+  if(a){try{a.pause();a.currentTime=0}catch(e){}}
+  var pb=$('#songPause');if(pb)pb.textContent=t('songPause');
+}
+function fmtSongTime(s){
+  if(!isFinite(s)||s<0)s=0;
+  var m=Math.floor(s/60),sec=Math.floor(s%60);
+  return m+':'+(sec<10?'0':'')+sec;
+}
+function updateSongTime(){
+  var a=$('#evaSong'),el=$('#songTime');if(!el||!a)return;
+  var d=isFinite(a.duration)?a.duration:178;
+  el.textContent=fmtSongTime(a.currentTime||0)+' / '+fmtSongTime(d);
+}
+function finishWelcomeSong(){
+  if(window.speechSynthesis)try{speechSynthesis.cancel()}catch(e){}
+  stopWelcomeSong();
+  markIntroSeen();
+  if(welcomeReplay){
+    welcomeReplay=false;
+    welcomePhase='return';
+    renderWelcome(false);
+  }else{
+    welcomePhase=S.name?'offers':'ask';
+    renderWelcome(true);
+  }
+}
+function playWelcomeSong(){
+  var enter=$('#evaEnterBtn'),box=$('#songControls'),a=$('#evaSong'),rep=$('#welcomeReplay');
+  if(enter)enter.hidden=true;
+  if(rep)rep.hidden=true;
+  if(box)box.hidden=false;
+  if(!a||!a.getAttribute('src')){finishWelcomeSong();return}
+  a.onended=function(){if(welcomePhase==='song'||welcomePhase==='song-only')finishWelcomeSong()};
+  a.ontimeupdate=updateSongTime;
+  updateSongTime();
+  var p=a.play();
+  if(p&&p.catch)p.catch(function(){});
+  var pb=$('#songPause');if(pb)pb.textContent=t('songPause');
+}
+function startWelcomeShow(){
+  unlockAudio();
+  use('bienvenida-escuchar');
+  var enter=$('#evaEnterBtn');if(enter)enter.hidden=true;
+  var box=$('#songControls');if(box)box.hidden=false;
+  var rep=$('#welcomeReplay');if(rep)rep.hidden=true;
+  welcomePhase='song';
+  var goSong=function(){if(welcomePhase!=='song')return;playWelcomeSong()};
+  if(window.speechSynthesis){
+    try{
+      speechSynthesis.cancel();
+      var clean=welcomeIntroText();
+      var u=new SpeechSynthesisUtterance(clean);
+      u.lang='es-ES';u.rate=.98;
+      var v=pickSpokenVoice('es-ES');if(v){u.voice=v;if(v.lang)u.lang=v.lang}
+      var started=false;
+      var go=function(){if(started)return;started=true;goSong()};
+      u.onend=go;u.onerror=go;
+      setTimeout(go,Math.min(22000,900+clean.length*75));
+      speechSynthesis.speak(u);
+    }catch(e){goSong()}
+  }else goSong();
+}
+function replayWelcomeSong(){
+  unlockAudio();
+  use('bienvenida-cancion');
+  welcomeReplay=true;
+  welcomePhase='song-only';
+  playWelcomeSong();
+}
+function replayWelcomePresentation(){
+  welcomeReplay=true;
+  var bubble=$('#welcomeBubble');
+  if(bubble)bubble.innerHTML='<p>'+esc(welcomeIntroText())+'</p>';
+  startWelcomeShow();
+}
+function renderWelcome(doSpeak){
+  var bubble=$('#welcomeBubble'),form=$('#welcomeForm'),enter=$('#evaEnterBtn'),ctrl=$('#songControls'),bar=$('#welcomeBar'),rep=$('#welcomeReplay');
+  if(!bubble)return;
+  if(welcomePhase==='intro'||welcomePhase==='song'){
+    bubble.innerHTML='<p>'+esc(welcomeIntroText())+'</p>';
+    if(form)form.hidden=true;
+    if(enter)enter.hidden=welcomePhase!=='intro';
+    if(ctrl)ctrl.hidden=welcomePhase==='intro';
+    if(bar)bar.hidden=true;
+    if(rep)rep.hidden=true;
+  }else if(welcomePhase==='song-only'){
+    if(enter)enter.hidden=true;
+    if(ctrl)ctrl.hidden=false;
+    if(rep)rep.hidden=true;
+    if(bar)bar.hidden=false;
+    if(form)form.hidden=!S.name?false:true;
+  }else if(welcomePhase==='ask'){
+    bubble.innerHTML='<p>'+esc('¿Cómo te llamas?')+'</p>';
+    if(form)form.hidden=false;
+    if(enter)enter.hidden=true;
+    if(ctrl)ctrl.hidden=true;
+    if(bar)bar.hidden=false;
+    if(rep)rep.hidden=false;
+  }else if(welcomePhase==='return'){
+    var greetTxt=welcomeReturnSpeech();
+    var intro='Esto es lo que puedo ofrecerte:';
+    if(S.name){
+      bubble.innerHTML='<p>'+esc('Hola de nuevo, ')+'<b>'+esc(S.name)+'</b>. '+esc('¿En qué puedo ayudarte?')+'</p><p>'+esc(intro)+'</p>'+welcomeOfferListHtml();
+    }else{
+      bubble.innerHTML='<p>'+esc(greetTxt)+'</p><p>'+esc(intro)+'</p>'+welcomeOfferListHtml();
+    }
+    bindWelcomeOffers();
+    if(form)form.hidden=!!S.name;
+    if(enter)enter.hidden=true;
+    if(ctrl)ctrl.hidden=true;
+    if(bar)bar.hidden=false;
+    if(rep)rep.hidden=false;
+  }else{
+    if(form)form.hidden=true;
+    if(enter)enter.hidden=true;
+    if(ctrl)ctrl.hidden=true;
+    if(bar)bar.hidden=false;
+    if(rep)rep.hidden=false;
+    var hello=justNamed?'Encantada, ':'Hola, ';
+    var intro='Esto es lo que puedo ofrecerte:';
+    var q='¿Qué deseas? ¿En qué puedo ayudarte?';
+    bubble.innerHTML='<p>'+hello+'<b>'+esc(S.name)+'</b>. '+intro+'</p>'+welcomeOfferListHtml()+'<p>'+q+'</p>';
+    bindWelcomeOffers();
+  }
+  if(doSpeak&&(welcomePhase==='ask'||welcomePhase==='offers'||welcomePhase==='return'))speakAt(welcomeSpeechText(),'es-ES',true);
+}
+function takeWelcomeName(raw){
+  var nm=cleanName(raw);
+  if(!nm){var n=$('#welcomeName');if(n){n.focus();n.setAttribute('aria-invalid','true')}return}
+  promote(nm);greet();accBtnUpdate();justNamed=true;
+  welcomePhase=introSeen()?'return':'offers';
+  use('bienvenida-nombre');
+  renderWelcome(true);
+}
+function bindWelcome(){
+  var f=$('#welcomeForm');if(f&&!f._bound){f._bound=1;f.addEventListener('submit',function(e){e.preventDefault();takeWelcomeName($('#welcomeName').value)})}
+  var enter=$('#evaEnterBtn');
+  if(enter&&!enter._bound){enter._bound=1;enter.addEventListener('click',startWelcomeShow)}
+  var pause=$('#songPause'),stop=$('#songStop'),skip=$('#songSkip'),a=$('#evaSong');
+  if(pause&&!pause._bound){pause._bound=1;pause.addEventListener('click',function(){
+    var audio=$('#evaSong');if(!audio)return;
+    if(audio.paused){var p=audio.play();if(p&&p.catch)p.catch(function(){});pause.textContent=t('songPause')}
+    else{audio.pause();pause.textContent=t('songResume')}
+  })}
+  if(stop&&!stop._bound){stop._bound=1;stop.addEventListener('click',function(){stopWelcomeSong();updateSongTime()})}
+  if(skip&&!skip._bound){skip._bound=1;skip.addEventListener('click',finishWelcomeSong)}
+  if(a&&!a._boundTime){a._boundTime=1;a.addEventListener('timeupdate',updateSongTime);a.addEventListener('loadedmetadata',updateSongTime)}
+  var replay=$('#songReplayBtn');if(replay&&!replay._bound){replay._bound=1;replay.addEventListener('click',replayWelcomeSong)}
+  var again=$('#presentAgainBtn');if(again&&!again._bound){again._bound=1;again.addEventListener('click',replayWelcomePresentation)}
+  var mic=$('#welcomeMic'),note=$('#welcomeMicNote');
+  var Rec=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(mic&&!mic._bound){
+    mic._bound=1;
+    if(!Rec){mic.disabled=true;mic.setAttribute('aria-disabled','true');if(note){note.hidden=false;note.textContent=t('evaMicNo')}}
+    else{
+      if(note)note.hidden=true;
+      var rec=null;
+      mic.addEventListener('click',function(){
+        if(rec){try{rec.stop()}catch(e){}return}
+        rec=new Rec();rec.lang='es-ES';rec.interimResults=false;mic.classList.add('rec');
+        rec.onresult=function(e){
+          var s=e.results[0][0].transcript;
+          if(!S.name||welcomePhase==='ask'||(welcomePhase==='return'&&!S.name)){var inp=$('#welcomeName');if(inp)inp.value=s;takeWelcomeName(s)}
+          else send(s);
+        };
+        rec.onend=rec.onerror=function(){mic.classList.remove('rec');rec=null};
+        try{rec.start()}catch(e){mic.classList.remove('rec');rec=null}
+      });
+    }
+  }else if(mic&&!Rec&&note&&welcomePhase!=='intro'){note.hidden=false;note.textContent=t('evaMicNo')}
+}
+
+function evaAdd(html,who){var box=$('#evaChat');if(!box)return null;var d=document.createElement('div');d.className='msg '+(who||'a');d.innerHTML=html;box.appendChild(d);box.scrollTop=box.scrollHeight;return d}
+function evaBot(html,delay){var ty=evaAdd('…','a typing');setTimeout(function(){if(!ty)return;ty.className='msg a';ty.innerHTML=html;var box=$('#evaChat');if(box)box.scrollTop=box.scrollHeight;evaSpeak(ty.textContent)},delay||400)}
+function maybeEvaGreet(){
+  if(evaGreeted)return;evaGreeted=true;
+  evaBot(tr('Hola'+(S.name?', '+esc(S.name):'')+'. Soy Eva, tu secretaria en este dispositivo. Puedo apuntar la agenda y leerte las respuestas en voz alta. ¿Qué organizamos hoy?',
+            'Hi'+(S.name?', '+esc(S.name):'')+'. I am Eva, your secretary on this device. I can take notes for your agenda and read my replies aloud. What shall we organise today?'),200);
+}
+function refreshAgendaBoxes(){renderAgenda();if($('#chatAgenda')){$('#chatAgenda').innerHTML=agendaFormHtml();bindAgenda($('#chatAgenda'))}}
+function evaSend(text){
+  text=String(text||'').trim();if(!text)return;
+  var inp=$('#evaChatIn');if(inp)inp.value='';
+  evaAdd(esc(text),'u');use('eva-hablar');
+  var n=norm(text);
+  if(has(n,CRISIS)){evaBot(tr(HELP_ES,HELP_EN),300);return}
+  var m;
+  if((m=text.match(/^(?:¿)?\s*(?:apunta(?:me)?|anota(?:me)?|recuerda(?: que)?|añade|pon(?:me)?|apuntame|add|remember(?: that)?|note(?: that)?)\s+(.{2,200})$/i))){
+    if(!S.id){evaBot(t('agNeedAcc'),200);return}
+    S.agenda=S.agenda||[];S.agenda.push({id:uid(),t:m[1].trim(),when:null,done:false,d:Date.now()});save();use('agenda-alta');refreshAgendaBoxes();
+    evaBot(tr('Apuntado: «'+esc(m[1].trim())+'». Lo guardo en tu agenda de este dispositivo.','Noted: «'+esc(m[1].trim())+'». I saved it in your agenda on this device.'),200);return}
+  if(has(n,['agenda','que tengo','qué tengo','recordatorio','recordatorios','hoy','what do i have','my agenda','reminders'])){
+    var items=agendaList();
+    if(!S.id){evaBot(t('agNeedAcc'),200);return}
+    if(!items.length){evaBot(t('agEmpty'),200);return}
+    evaBot(tr('Esto tienes en la agenda:','Here is your agenda:')+'<br>'+items.map(function(it){return '• '+esc(it.t)+(it.when?' <small>('+esc(fmtWhen(it.when))+')</small>':'')+(it.done?' ✓':'')}).join('<br>'),200);return}
+  if(has(n,['quien eres','quién eres','que eres','who are you','what are you'])){
+    evaBot(tr('Soy Eva, secretaria de NASAI. Te organizo el día en este dispositivo: la agenda se queda en tu cuenta, sin servidor. Si activas mi voz, te leo las respuestas.','I am Eva, NASAI\'s secretary. I organise your day on this device: the agenda stays in your account, with no server. If you turn my voice on, I read my replies aloud.'),200);return}
+  evaBot(tr('Dime qué quieres apuntar (por ejemplo: «apunta llamar a Ana»), o escribe «agenda» para ver lo que ya tienes.','Tell me what to note (for example: «note call Ana»), or type «agenda» to see what you already have.'),200);
+}
+function bindEva(){
+  setEvaVoiceBtn();
+  var vb=$('#evaVoiceBtn');
+  if(vb&&!vb._bound){
+    vb._bound=1;
+    vb.addEventListener('click',function(){
+      if(!window.speechSynthesis)return;
+      evaVoiceOn=!evaVoiceOn;S.evaVoice=evaVoiceOn;save();setEvaVoiceBtn();
+      if(!evaVoiceOn&&window.speechSynthesis)speechSynthesis.cancel();
+      else evaSpeak(tr('Voz de Eva activada.','Eva\'s voice is on.'));
+    });
+  }
+  var f=$('#evaChatForm');
+  if(f&&!f._bound){f._bound=1;f.addEventListener('submit',function(e){e.preventDefault();evaSend($('#evaChatIn').value)})}
+  var mic=$('#evaMicBtn'),note=$('#evaMicNote');
+  var Rec=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(mic&&!mic._bound){
+    mic._bound=1;
+    if(!Rec){mic.disabled=true;mic.setAttribute('aria-disabled','true');if(note){note.hidden=false;note.textContent=t('evaMicNo')}}
+    else{
+      if(note)note.hidden=true;
+      var rec=null;
+      mic.addEventListener('click',function(){
+        if(rec){try{rec.stop()}catch(e){}return}
+        rec=new Rec();rec.lang='es-ES';rec.interimResults=false;mic.classList.add('rec');
+        rec.onresult=function(e){var s=e.results[0][0].transcript;var inp=$('#evaChatIn');if(inp)inp.value=s;evaSend(s)};
+        rec.onend=rec.onerror=function(){mic.classList.remove('rec');rec=null};
+        try{rec.start()}catch(e){mic.classList.remove('rec');rec=null}
+      });
+    }
+  }else if(mic&&!Rec&&note){note.hidden=false;note.textContent=t('evaMicNo')}
+}
+
+var DOOR_KEY='nasai.doorBrowser';
+var DOOR_TILES=[
+  {id:'starlink',name:'Starlink',url:'https://www.starlink.com/'},
+  {id:'x',name:'X',url:'https://x.com/'},
+  {id:'grok',name:'Grok',url:'https://grok.com/'},
+  {id:'osnews',name:'OSNews',url:'https://osnewspedrosg-glitch.github.io/osnews/',short:'osnews'}
+];
+function isAndroid(){return /android/i.test(navigator.userAgent||'')}
+function doorBrowser(){try{var v=localStorage.getItem(DOOR_KEY);if(v==='chrome'||v==='default'||v==='edge-beta')return v}catch(e){}return 'edge-beta'}
+function setDoorBrowser(v){try{localStorage.setItem(DOOR_KEY,v)}catch(e){}renderDoorBrowser()}
+function looksLikeUrl(s){
+  s=String(s||'').trim();
+  if(!s||/\s/.test(s))return false;
+  if(/^(javascript|data|vbscript|file|blob):/i.test(s))return false;
+  if(/^https?:\/\//i.test(s))return true;
+  if(/^(localhost|(\d{1,3}\.){3}\d{1,3})(:\d+)?(\/.*)?$/i.test(s))return true;
+  return /^[\w-]+(\.[\w-]+)+(:\d+)?([\/?#].*)?$/i.test(s);
+}
+function toOpenUrl(s){
+  s=String(s||'').trim();
+  if(!s)return null;
+  if(/^(javascript|data|vbscript|file|blob):/i.test(s))return null;
+  if(looksLikeUrl(s)){
+    if(!/^https?:\/\//i.test(s))s='https://'+s;
+    s=s.replace(/^http:\/\//i,'https://');
+    try{var u=new URL(s);if(u.protocol!=='https:')return null;return u.href}catch(e){return null}
+  }
+  return 'https://duckduckgo.com/?q='+encodeURIComponent(s);
+}
+function openExternal(url){
+  url=toOpenUrl(url)||url;
+  if(!url||!/^https:\/\//i.test(url))return;
+  var android=isAndroid(),mode=doorBrowser();
+  if(android&&mode!=='default'){
+    var pkg=mode==='chrome'?'com.android.chrome':'com.microsoft.emmx.beta';
+    var u;try{u=new URL(url)}catch(e){return}
+    var hostpath=u.host+u.pathname+u.search+u.hash;
+    location.href='intent://'+hostpath+'#Intent;scheme=https;package='+pkg+';S.browser_fallback_url='+encodeURIComponent(url)+';end';
+  }else{
+    window.open(url,'_blank','noopener,noreferrer');
+  }
+  use('starlink-door');
+}
+function wireDoorDownloads(){
+  var android=isAndroid();
+  var e=$('#dlEdge'),es=$('#dlEdgeStable'),c=$('#dlChrome');
+  if(e)e.href=android?'https://play.google.com/store/apps/details?id=com.microsoft.emmx.beta':'https://www.microsoft.com/edge/download';
+  if(es)es.href=android?'https://play.google.com/store/apps/details?id=com.microsoft.emmx':'https://www.microsoft.com/edge/download';
+  if(c)c.href=android?'https://play.google.com/store/apps/details?id=com.android.chrome':'https://www.google.com/chrome/';
+  [e,es,c].forEach(function(a){if(a){a.target='_blank';a.rel='noopener noreferrer'}});
+}
+function renderDoorTiles(){
+  var box=$('#doorTiles');if(!box)return;
+  box.innerHTML=DOOR_TILES.map(function(tile){
+    return '<button type="button" class="doorTile" data-url="'+esc(tile.url)+'"><b>'+esc(tile.name)+'</b><small>'+esc(tile.short||tile.url.replace(/^https:\/\//,'').replace(/\/$/,''))+'</small></button>';
+  }).join('');
+  $$('#doorTiles [data-url]').forEach(function(b){b.onclick=function(){openExternal(b.getAttribute('data-url'))}});
+}
+function renderDoorBrowser(){
+  var box=$('#doorBrowser');if(!box)return;
+  var cur=doorBrowser();
+  var opts=[{id:'edge-beta',lab:t('doorEdgeBeta')},{id:'chrome',lab:t('doorChrome')},{id:'default',lab:t('doorDefault')}];
+  box.innerHTML='';
+  opts.forEach(function(o){
+    var b=document.createElement('button');b.type='button';b.textContent=o.lab;
+    b.setAttribute('aria-pressed',cur===o.id?'true':'false');
+    b.onclick=function(){setDoorBrowser(o.id)};
+    box.appendChild(b);
+  });
+}
+function renderDoor(){wireDoorDownloads();renderDoorTiles();renderDoorBrowser()}
+function bindDoor(){
+  renderDoor();
+  $$('[data-open-door]').forEach(function(b){if(b._bound)return;b._bound=1;b.addEventListener('click',function(){showTab('puerta');var m=$('#main');if(m)m.scrollIntoView({behavior:'smooth',block:'start'});use('starlink-door-abrir')})});
+  var back=$('#doorBack');if(back&&!back._bound){back._bound=1;back.addEventListener('click',function(){showTab('hablar')})}
+  var f=$('#doorForm');if(f&&!f._bound){f._bound=1;f.addEventListener('submit',function(e){e.preventDefault();var v=$('#doorAddr').value;var url=toOpenUrl(v);if(url)openExternal(url)})}
+}
 
 var gameState=null;
 function checkGame(){
@@ -713,8 +1143,10 @@ function gameCard(ok){
 $('#langBtn').addEventListener('click',function(){S.lang=L()==='es'?'en':'es';save();applyLang();gc('nasai-idioma-'+S.lang,'NASAI · idioma '+S.lang)});
 $('#cUses').textContent=S.uses;$('#pulseCount').textContent=S.uses;
 applyLang();
-var start=(location.hash||'').slice(1);showTab(['hablar','contrastar','barrio','saber','crear','agentes','juegos','acta'].indexOf(start)>=0?start:'hablar');
-setTimeout(function(){bot(S.name?tr('Hola de nuevo, '+esc(S.name)+'. ¿Cómo estás hoy, del 1 al 10?','Welcome back, '+esc(S.name)+'. How are you today, from 1 to 10?')
-  :tr('Hola. Soy NASAI, la IA para los habitantes de la base lunar. Nací como ALBA, diseñada por otra IA. Puedes contarme cómo estás, pedirme que te ayude a decidir algo o preguntarme qué es cualquier cosa. ¿Cómo te llamas?','Hi. I am NASAI, the AI for the lunar base inhabitants. I was born as ALBA, designed by another AI. Tell me how you are, ask me to help you decide something, or ask me what anything is. What is your name?'),300)},300);
+var start=(location.hash||'').slice(1);showTab(['hablar','contrastar','barrio','saber','crear','agentes','juegos','acta','puerta'].indexOf(start)>=0?start:'hablar');
+bindWelcome();
+bindEva();
+bindDoor();
+renderWelcome(welcomePhase==='return');
 if('serviceWorker' in navigator&&location.protocol==='https:')window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})});
 })();
