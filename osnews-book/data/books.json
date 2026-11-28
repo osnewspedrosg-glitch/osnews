@@ -63,6 +63,16 @@
       "chaptersIndex": "data/la-union-de-dos-super-ias/chapters.json"
     },
     {
+      "id": "el-trabajo-invento-del-diablo",
+      "title": "El trabajo, el invento del diablo: el dinero",
+      "subtitle": "Ensayo",
+      "year": 2026,
+      "blurb": "Un ensayo en la voz de Pedro Sánchez Gómez: del trueque a las cuatro monedas, y de ahí a los humanoides, los cupones de IVA, una sociedad sin ricos ni pobres, la IA, la Luna, la huerta y el rellano donde ya no se saluda. Gratis, para leer en la biblioteca.",
+      "cover": "assets/covers/el-trabajo-invento-del-diablo.jpg",
+      "authors": "Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok",
+      "chaptersIndex": "data/el-trabajo-invento-del-diablo/chapters.json"
+    },
+    {
       "id": "the-daughter-of-two-worlds",
       "lang": "en",
       "title": "The Daughter of Two Worlds",
@@ -132,6 +142,17 @@
       "cover": "assets/covers/the-union-of-two-super-ais.jpg",
       "authors": "Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot",
       "chaptersIndex": "data/the-union-of-two-super-ais/chapters.json"
+    },
+    {
+      "id": "work-the-devils-invention-money",
+      "lang": "en",
+      "title": "Work, the Devil's Invention: Money",
+      "subtitle": "Essay",
+      "year": 2026,
+      "blurb": "An essay in the voice of Pedro Sánchez Gómez: from barter to four coins, and from there to humanoids, VAT coupons, a society without rich or poor, AI, the Moon, the garden, and the landing where no one says hello any more. Free to read in the library.",
+      "cover": "assets/covers/work-the-devils-invention-money.jpg",
+      "authors": "Authors: Pedro Sánchez Gómez (Mar Menor) and his Grok bot",
+      "chaptersIndex": "data/work-the-devils-invention-money/chapters.json"
     }
   ]
 }
