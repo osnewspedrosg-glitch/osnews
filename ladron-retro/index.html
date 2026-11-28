@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>El Ladrón · Maquinita 1980</title>
+<meta name="description" content="Recreación de una maquinita LCD de los años 80: el ladrón entra desde la calle, cruza los chalets y el pasillo, esquiva perros y policías y se lleva el botín. 5 vidas y 100 movimientos.">
+<meta name="theme-color" content="#b03a2e">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta property="og:title" content="El Ladrón · Maquinita 1980">
+<meta property="og:description" content="Maquinita LCD: calle, chalets, pasillo con perros y policías, y el botín en la casa. 5 vidas y 100 movimientos.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#juego" data-i18n="skip">Saltar al juego</a>
+
+<header class="bar">
+  <div class="brandline">
+    <img src="icon.svg" alt="" width="32" height="32">
+    <div>
+      <b>El Ladrón</b>
+      <small data-i18n="tagline">Maquinita 1980</small>
+    </div>
+  </div>
+  <div class="barbtns">
+    <button type="button" id="muteBtn" class="chip" aria-pressed="false" title="Sonido" data-i18n-title="muteOn">🔈</button>
+    <button type="button" id="langBtn" class="chip" aria-label="Idioma / Language">EN</button>
+  </div>
+</header>
+
+<main id="juego" class="stage">
+  <div class="device" aria-label="Maquinita El Ladrón">
+    <div class="case">
+      <span class="screw s1" aria-hidden="true"></span>
+      <span class="screw s2" aria-hidden="true"></span>
+      <span class="screw s3" aria-hidden="true"></span>
+      <span class="screw s4" aria-hidden="true"></span>
+
+      <div class="casehead">
+        <span class="logo">OSNEWS</span>
+        <span class="model">MG-80 · LCD</span>
+      </div>
+      <h1 class="printed">EL LADRÓN</h1>
+      <p class="printedsub">ELECTRONIC LCD GAME · 1980</p>
+
+      <div class="console">
+        <div class="side left">
+          <div class="dpad" role="group" aria-label="Dirección">
+            <button type="button" class="pad up" id="btnUp" data-move="up" aria-label="Arriba">▲</button>
+            <button type="button" class="pad left" id="btnLeft" data-move="left" aria-label="Izquierda">◀</button>
+            <button type="button" class="pad center" tabindex="-1" aria-hidden="true"></button>
+            <button type="button" class="pad right" id="btnRight" data-move="right" aria-label="Derecha">▶</button>
+            <button type="button" class="pad down" id="btnDown" data-move="down" aria-label="Abajo">▼</button>
+          </div>
+        </div>
+
+        <div class="bezel">
+          <div class="ledwrap" aria-hidden="true"><span class="led" id="led"></span><span class="ledlab">PWR</span></div>
+          <div class="glass">
+            <canvas id="lcd" width="800" height="480" aria-label="Pantalla LCD del juego"></canvas>
+          </div>
+        </div>
+
+        <div class="side right">
+          <button type="button" id="startBtn" class="start" data-i18n="play">JUGAR</button>
+          <span class="startlab" data-i18n="playLab">partida</span>
+        </div>
+      </div>
+
+      <div class="grille" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <section class="howto" aria-labelledby="howT">
+    <h2 id="howT" data-i18n="howH">Cómo se juega</h2>
+    <p data-i18n="howP">Eres el ladrón. Sales de la calle, cruzas los chalets y el pasillo, esquivas a los perros y a los policías y entras en la casa a llevarte el botín. Cada paso gasta 1 de 100 movimientos. Si te atrapan, pierdes una de las 5 vidas y vuelves a la calle. Si llegas a la casa, sumas puntos y los enemigos se vuelven más rápidos. Se acaba la partida cuando te quedas sin vidas o sin movimientos. Flechas del teclado o los botones grandes de la maquinita.</p>
+  </section>
+</main>
+
+<footer>
+  <p class="credit" data-i18n="credit">Autores: Pedro Sánchez Gómez (Mar Menor) y su bot de Grok</p>
+  <p class="counters"><span data-i18n="visits">Visitas</span>: <b id="cVisits">…</b> · <span data-i18n="uses">Usos en este dispositivo</span>: <b id="cUses">0</b></p>
+  <p class="tiny" data-i18n="privacy">El récord, el idioma, el silencio y el recuento de usos se guardan solo en este dispositivo. Hay un contador anónimo de visitas y usos (GoatCounter). No hay cuentas ni anuncios.</p>
+</footer>
+
+<script src="game.js"></script>
+<script data-goatcounter="https://osnews-may.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

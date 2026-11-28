@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="El Ladrón">
+  <rect width="64" height="64" rx="12" fill="#e6d4b3"/>
+  <rect x="6" y="8" width="52" height="48" rx="6" fill="#b03a2e"/>
+  <rect x="11" y="14" width="42" height="28" rx="3" fill="#2a2a26"/>
+  <rect x="13" y="16" width="38" height="24" rx="2" fill="#9aa873"/>
+  <!-- thief silhouette -->
+  <g fill="#1c1f14">
+    <rect x="28" y="18" width="10" height="3" rx="1"/>
+    <rect x="29" y="21" width="8" height="5"/>
+    <rect x="29" y="22" width="8" height="2"/>
+    <rect x="24" y="26" width="6" height="5"/>
+    <rect x="30" y="26" width="8" height="7"/>
+    <rect x="31" y="33" width="3" height="5"/>
+    <rect x="35" y="33" width="3" height="5"/>
+  </g>
+  <circle cx="20" cy="50" r="3.2" fill="#3a3a36"/>
+  <circle cx="32" cy="50" r="3.2" fill="#3a3a36"/>
+  <circle cx="44" cy="50" r="3.2" fill="#8b2e24"/>
+</svg>
