@@ -435,6 +435,7 @@
   /* Fechas convertidas a calendario Europe/Madrid a partir de la fecha de publicación de YouTube. */
   const COUNTRY_NEWS = {
     china: [
+      { id: "eFhljvQvbmM", title: "This Taiwanese comedian mocked Xi Jinping. Then came the threats | DW News", channel: "DW News", date: "2026-11-28" },
       { id: "-3iriaqazbo", title: "Why China is watching Taiwan's elections so closely | DW News", channel: "DW News", date: "2026-11-27" },
       { id: "dyjWVT4g6a8", title: "Donaldt Trump on China: We spy on them, too.", channel: "euronews", date: "2026-11-27" },
       { id: "wctExblHCjY", title: "I followed Putin to China for a historic summit | BBC News", channel: "BBC News", date: "2026-11-27" },
@@ -443,8 +444,7 @@
       { id: "FlM-DV10zdY", title: "Trump targets China & EU with new tariffs; will he restart the trade war?", channel: "CNN", date: "2026-11-26" },
       { id: "DU3ywN0mTHU", title: "Hong Kong marks one year since deadly tower fire", channel: "Reuters", date: "2026-11-26" },
       { id: "7rTBsjlsDqM", title: "China and Japan hit back at Trump's new tariff plans", channel: "Associated Press", date: "2026-11-26" },
-      { id: "Teqk1UETpDI", title: "US to hike tariffs on China, EU, APAC; Beijing condemns trade wars • FRANCE 24 English", channel: "FRANCE 24 English", date: "2026-11-26" },
-      { id: "O8m3BGTlL-U", title: "🟢 Trump golpeará a China, la UE y otros doce socios con nuevas tarifas comerciales", channel: "DW Español", date: "2026-11-25" }
+      { id: "Teqk1UETpDI", title: "US to hike tariffs on China, EU, APAC; Beijing condemns trade wars • FRANCE 24 English", channel: "FRANCE 24 English", date: "2026-11-26" }
     ],
     india: [
       { id: "2Ytky3ey8lI", title: "Why is India so afraid of Pakistan's new Netflix series? • FRANCE 24 English", channel: "FRANCE 24 English", date: "2026-11-27" },
