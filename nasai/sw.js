@@ -1,4 +1,4 @@
-const C='nasai-v1';const F=['./','index.html','style.css','app.js','icon.svg','manifest.webmanifest'];
+const C='nasai-v2';const F=['./','index.html','style.css','app.js','icon.svg','manifest.webmanifest','eva/eva-avatar.jpg','eva/eva-retrato.jpg','eva/eva-cuerpo.jpg'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(F)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==C).map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.origin!==location.origin)return;
